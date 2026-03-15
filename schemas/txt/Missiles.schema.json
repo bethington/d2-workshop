@@ -1,0 +1,108 @@
+{
+  "file": "Missiles.txt",
+  "description": "Missile definitions — projectiles, spells, effects, and their visual/damage properties.",
+  "columns": {
+    "Missile": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Internal missile name (referenced by skills.txt and other tables)"
+    },
+    "Id": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0,
+      "description": "Unique numeric missile ID"
+    },
+    "Vel": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base velocity"
+    },
+    "MaxVel": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum velocity"
+    },
+    "Accel": {
+      "type": "integer",
+      "description": "Acceleration per frame"
+    },
+    "Range": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum range in frames"
+    },
+    "LevRange": {
+      "type": "integer",
+      "description": "Additional range per skill level"
+    },
+    "Light": {
+      "type": "integer",
+      "min": 0,
+      "description": "Light radius"
+    },
+    "Anim": {
+      "type": "string",
+      "description": "Animation token"
+    },
+    "SubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile spawned on creation"
+    },
+    "HitSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile spawned on hit"
+    },
+    "CltSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile on creation"
+    },
+    "CltHitSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile on hit"
+    },
+    "EType": {
+      "type": "enum",
+      "values": ["", "fire", "ltng", "cold", "pois", "mag", "life", "mana", "stam", "stun", "rand", "burn", "frze"],
+      "description": "Element type for damage"
+    },
+    "MinDamage": {
+      "type": "integer",
+      "description": "Minimum damage"
+    },
+    "MaxDamage": {
+      "type": "integer",
+      "description": "Maximum damage"
+    },
+    "SrvCalc": {
+      "type": "string",
+      "description": "Server damage calculation function"
+    },
+    "Skill": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Associated skill"
+    },
+    "LastCollide": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Can only hit the last target (1 = yes)"
+    },
+    "Pierce": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Passes through targets (1 = yes)"
+    }
+  }
+}

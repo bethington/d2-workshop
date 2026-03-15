@@ -1,0 +1,35 @@
+{
+  "file": "example.txt",
+  "description": "Template schema — copy and customize for new .txt files",
+  "columns": {
+    "ColumnName": {
+      "type": "string",
+      "required": false,
+      "description": "Description of what this column contains"
+    },
+    "NumericColumn": {
+      "type": "integer",
+      "required": false,
+      "min": 0,
+      "max": 999,
+      "description": "A numeric column with range validation"
+    },
+    "EnumColumn": {
+      "type": "enum",
+      "values": ["value1", "value2", "value3"],
+      "description": "A column with a fixed set of valid values"
+    },
+    "ReferenceColumn": {
+      "type": "ref",
+      "target": "OtherFile.txt",
+      "targetColumn": "KeyColumn",
+      "description": "A column that references a row in another .txt file"
+    },
+    "AssetColumn": {
+      "type": "asset",
+      "assetType": "dc6",
+      "basePath": "data/global/ui/",
+      "description": "A column that references a DC6 image asset"
+    }
+  }
+}

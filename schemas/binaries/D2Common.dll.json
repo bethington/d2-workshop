@@ -1,0 +1,104 @@
+{
+  "file": "D2Common.dll",
+  "version": "1.13c",
+  "globals": {
+    "Data Tables": [
+      {
+        "name": "g_dwMonsterCount",
+        "address": "0x6FDF0A78",
+        "rva": "0x9A078",
+        "type": "dword",
+        "description": "Number of entries loaded from monstats.txt"
+      },
+      {
+        "name": "g_dwSkillDataCount",
+        "address": "0x6FDEFB94",
+        "rva": "0x99B94",
+        "type": "dword",
+        "description": "Number of entries loaded from skills.txt"
+      },
+      {
+        "name": "g_dwMissileDataCount",
+        "address": "0x6FDF0A44",
+        "rva": "0x9A044",
+        "type": "dword",
+        "description": "Number of entries loaded from Missiles.txt"
+      },
+      {
+        "name": "g_dwItemStatCostCount",
+        "address": "0x6FDF0AA4",
+        "rva": "0x9A0A4",
+        "type": "dword",
+        "description": "Number of entries loaded from ItemStatCost.txt"
+      },
+      {
+        "name": "g_dwPropertyCount",
+        "address": "0x6FDF0AAC",
+        "rva": "0x9A0AC",
+        "type": "dword",
+        "description": "Number of entries loaded from Properties.txt"
+      },
+      {
+        "name": "g_dwObjectTypeCount",
+        "address": "0x6FDF0B98",
+        "rva": "0x9A198",
+        "type": "dword",
+        "description": "Number of object types loaded"
+      },
+      {
+        "name": "g_dwSuperUniqueMonsterCount",
+        "address": "0x6FDF0898",
+        "rva": "0x99E98",
+        "type": "dword",
+        "description": "Number of super unique monsters"
+      },
+      {
+        "name": "g_dwSkillsTableMaxCount",
+        "address": "0x6FDF0A98",
+        "rva": "0x9A098",
+        "type": "dword",
+        "description": "Maximum skill table entries"
+      }
+    ],
+    "Configuration": [
+      {
+        "name": "g_dwCurrentCodePage",
+        "address": "0x6FDF15E4",
+        "rva": "0x9ABE4",
+        "type": "dword",
+        "description": "Current text code page (locale)"
+      },
+      {
+        "name": "g_dwLocaleId",
+        "address": "0x6FDF14C4",
+        "rva": "0x9AAC4",
+        "type": "dword",
+        "description": "Locale identifier"
+      },
+      {
+        "name": "g_dwMaxFileHandles",
+        "address": "0x6FDF1714",
+        "rva": "0x9AD14",
+        "type": "dword",
+        "description": "Maximum concurrent file handles"
+      }
+    ],
+    "Game State": [
+      {
+        "name": "g_dwGameState",
+        "address": "0x6FDF1424",
+        "rva": "0x9AA24",
+        "type": "dword",
+        "description": "Current game state"
+      },
+      {
+        "name": "g_dwGameResult",
+        "address": "0x6FDF1420",
+        "rva": "0x9AA20",
+        "type": "pointer",
+        "description": "Game result pointer"
+      }
+    ]
+  },
+  "patchGroups": []
+}

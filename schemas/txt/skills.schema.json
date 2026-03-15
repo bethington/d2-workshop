@@ -1,0 +1,109 @@
+{
+  "file": "skills.txt",
+  "description": "Skill definitions — controls all skill properties including damage, mana cost, synergies, and visual effects.",
+  "columns": {
+    "skill": {
+      "type": "string",
+      "required": true,
+      "description": "Internal skill name (used by other tables to reference this skill)"
+    },
+    "Id": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0,
+      "description": "Unique numeric skill ID"
+    },
+    "charclass": {
+      "type": "enum",
+      "values": ["ama", "sor", "nec", "pal", "bar", "dru", "ass", ""],
+      "description": "Character class this skill belongs to (empty = all classes)"
+    },
+    "skilldesc": {
+      "type": "ref",
+      "target": "skilldesc.txt",
+      "targetColumn": "skilldesc",
+      "description": "Reference to skill description entry"
+    },
+    "srvmissile": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Server-side missile spawned by skill"
+    },
+    "cltmissile": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side missile (visual effect)"
+    },
+    "srvmissilea": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Server-side missile A (alternate)"
+    },
+    "cltmissilea": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side missile A (alternate visual)"
+    },
+    "InGame": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Whether skill appears in-game (1 = yes)"
+    },
+    "mana": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base mana cost"
+    },
+    "lvlmana": {
+      "type": "integer",
+      "description": "Additional mana cost per skill level"
+    },
+    "reqlevel": {
+      "type": "integer",
+      "min": 0,
+      "max": 99,
+      "description": "Required character level to learn"
+    },
+    "maxlvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum skill level"
+    },
+    "reqskill1": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Prerequisite skill 1"
+    },
+    "reqskill2": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Prerequisite skill 2"
+    },
+    "reqskill3": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Prerequisite skill 3"
+    },
+    "anim": {
+      "type": "string",
+      "description": "Animation mode (e.g., 'SC' for spell cast)"
+    },
+    "seqtrans": {
+      "type": "string",
+      "description": "Sequence transition mode"
+    },
+    "range": {
+      "type": "enum",
+      "values": ["none", "h2h", "rng", "both"],
+      "description": "Attack range type"
+    }
+  }
+}

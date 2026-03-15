@@ -1,0 +1,224 @@
+{
+  "name": "d2-workshop",
+  "displayName": "D2 Workshop",
+  "description": "A complete Diablo II 1.13c modding workbench — browse MPQ archives, edit game data tables, view/edit DC6 sprites, patch binaries, and share mods.",
+  "version": "0.1.0",
+  "publisher": "xebyte",
+  "author": "Ben Ethington",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bethington/d2-workshop"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/*.mpq",
+    "workspaceContains:**/Game.exe",
+    "workspaceContains:**/Diablo II.exe"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "d2-explorer",
+          "title": "D2 Workshop",
+          "icon": "resources/icons/d2-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "d2-explorer": [
+        {
+          "id": "d2ExplorerView",
+          "name": "Game Files"
+        },
+        {
+          "id": "d2SaveQueueView",
+          "name": "Save Queue"
+        }
+      ]
+    },
+    "customEditors": [
+      {
+        "viewType": "d2workshop.tableEditor",
+        "displayName": "D2 Table Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.txt"
+          }
+        ],
+        "priority": "option"
+      },
+      {
+        "viewType": "d2workshop.dc6Viewer",
+        "displayName": "D2 DC6 Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.dc6"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "d2workshop.binaryEditor",
+        "displayName": "D2 Binary Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.dll"
+          },
+          {
+            "filenamePattern": "*.exe"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "d2workshop.publishQueue",
+        "title": "D2 Workshop: Publish Pending Changes",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "d2workshop.launchGame",
+        "title": "D2 Workshop: Launch Game"
+      },
+      {
+        "command": "d2workshop.exportMod",
+        "title": "D2 Workshop: Export Mod Package"
+      },
+      {
+        "command": "d2workshop.importMod",
+        "title": "D2 Workshop: Import Mod Package"
+      },
+      {
+        "command": "d2workshop.openInGimp",
+        "title": "D2 Workshop: Open in GIMP"
+      },
+      {
+        "command": "d2workshop.importFromGimp",
+        "title": "D2 Workshop: Import from GIMP"
+      },
+      {
+        "command": "d2workshop.restoreBackup",
+        "title": "D2 Workshop: Restore from Backup"
+      },
+      {
+        "command": "d2workshop.revealInExplorer",
+        "title": "D2 Workshop: Reveal in D2 Explorer"
+      },
+      {
+        "command": "d2workshop.removeQueueItem",
+        "title": "Remove",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "d2workshop.clearQueue",
+        "title": "Clear All",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "d2workshop.refreshQueue",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "d2workshop.publishQueue",
+          "when": "view == d2SaveQueueView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "d2workshop.clearQueue",
+          "when": "view == d2SaveQueueView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "d2workshop.refreshQueue",
+          "when": "view == d2SaveQueueView",
+          "group": "navigation@3"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "d2workshop.removeQueueItem",
+          "when": "view == d2SaveQueueView && viewItem == queuedChange",
+          "group": "inline"
+        },
+        {
+          "command": "d2workshop.restoreBackup",
+          "when": "view == d2ExplorerView && viewItem =~ /_hasBackup$/",
+          "group": "2_modification"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "d2workshop.revealInExplorer",
+          "when": "resourceScheme == d2mpq",
+          "group": "2_files"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "D2 Workshop",
+      "properties": {
+        "d2workshop.gimpPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to GIMP executable."
+        },
+        "d2workshop.autoDetectGimpChanges": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically detect when GIMP saves changes to composite PNGs."
+        },
+        "d2workshop.launchFlags": {
+          "type": "string",
+          "default": "-w",
+          "description": "Command-line flags to pass to Game.exe when launching."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:all",
+    "build": "node esbuild.mjs && node esbuild.webviews.mjs",
+    "build:prod": "node esbuild.mjs --production",
+    "build:webviews": "node esbuild.webviews.mjs",
+    "build:webviews:prod": "node esbuild.webviews.mjs --production",
+    "build:all": "node esbuild.mjs --production && node esbuild.webviews.mjs --production",
+    "watch": "node esbuild.mjs --watch",
+    "watch:webviews": "node esbuild.webviews.mjs --watch",
+    "lint": "eslint src --ext ts,tsx",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "esbuild": "^0.19.11",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "@tanstack/react-table": "^8.11.6",
+    "@vscode/webview-ui-toolkit": "^1.4.0",
+    "jszip": "^3.10.1",
+    "pngjs": "^7.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "description": "Maps MPQ file paths to palette names for auto-detection",
+  "rules": [
+    { "pattern": "data/global/ui/", "palette": "act1" },
+    { "pattern": "data/global/chars/", "palette": "act1" },
+    { "pattern": "data/global/items/", "palette": "act1" },
+    { "pattern": "data/global/monsters/", "palette": "act1" },
+    { "pattern": "data/global/tiles/act1/", "palette": "act1" },
+    { "pattern": "data/global/tiles/act2/", "palette": "act2" },
+    { "pattern": "data/global/tiles/act3/", "palette": "act3" },
+    { "pattern": "data/global/tiles/act4/", "palette": "act4" },
+    { "pattern": "data/global/tiles/act5/", "palette": "act5" },
+    { "pattern": "data/local/font/", "palette": "act1" }
+  ],
+  "palettes": {
+    "act1": {
+      "source": "data/global/palette/act1/pal.dat",
+      "description": "Act 1 - Rogue Encampment (default)"
+    },
+    "act2": {
+      "source": "data/global/palette/act2/pal.dat",
+      "description": "Act 2 - Lut Gholein"
+    },
+    "act3": {
+      "source": "data/global/palette/act3/pal.dat",
+      "description": "Act 3 - Kurast Docks"
+    },
+    "act4": {
+      "source": "data/global/palette/act4/pal.dat",
+      "description": "Act 4 - Pandemonium Fortress"
+    },
+    "act5": {
+      "source": "data/global/palette/act5/pal.dat",
+      "description": "Act 5 - Harrogath"
+    }
+  }
+}

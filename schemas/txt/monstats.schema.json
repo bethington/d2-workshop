@@ -1,0 +1,189 @@
+{
+  "file": "monstats.txt",
+  "description": "Monster statistics — defines all monster types, their stats, AI, drops, and visual properties. 229 columns.",
+  "columns": {
+    "Class": {
+      "type": "string",
+      "required": true,
+      "description": "Internal monster class name (referenced by other tables)"
+    },
+    "namco": {
+      "type": "string",
+      "description": "String table key for display name"
+    },
+    "Type": {
+      "type": "ref",
+      "target": "MonType.txt",
+      "targetColumn": "type",
+      "description": "Monster type classification"
+    },
+    "BaseId": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Class",
+      "description": "Base monster class (for variants)"
+    },
+    "Code": {
+      "type": "string",
+      "required": true,
+      "description": "2-character token used in animation file paths"
+    },
+    "Spawned": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Can be spawned by other monsters (1 = yes)"
+    },
+    "SizeX": {
+      "type": "integer",
+      "min": 0,
+      "description": "Tile footprint width"
+    },
+    "SizeY": {
+      "type": "integer",
+      "min": 0,
+      "description": "Tile footprint height"
+    },
+    "Velocity": {
+      "type": "integer",
+      "min": 0,
+      "description": "Walk speed"
+    },
+    "Run": {
+      "type": "integer",
+      "min": 0,
+      "description": "Run speed"
+    },
+    "Level": {
+      "type": "integer",
+      "min": 0,
+      "max": 110,
+      "description": "Monster level (Normal difficulty)"
+    },
+    "Level(N)": {
+      "type": "integer",
+      "min": 0,
+      "max": 110,
+      "description": "Monster level (Nightmare difficulty)"
+    },
+    "Level(H)": {
+      "type": "integer",
+      "min": 0,
+      "max": 110,
+      "description": "Monster level (Hell difficulty)"
+    },
+    "MinHP": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum hit points (Normal)"
+    },
+    "MaxHP": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum hit points (Normal)"
+    },
+    "MinHP(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum hit points (Nightmare)"
+    },
+    "MaxHP(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum hit points (Nightmare)"
+    },
+    "MinHP(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum hit points (Hell)"
+    },
+    "MaxHP(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum hit points (Hell)"
+    },
+    "AC": {
+      "type": "integer",
+      "min": 0,
+      "description": "Armor class / defense (Normal)"
+    },
+    "Exp": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base experience points (Normal)"
+    },
+    "Exp(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base experience points (Nightmare)"
+    },
+    "Exp(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base experience points (Hell)"
+    },
+    "A1MinD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 minimum damage (Normal)"
+    },
+    "A1MaxD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 maximum damage (Normal)"
+    },
+    "El1Mode": {
+      "type": "string",
+      "description": "Elemental attack 1 mode"
+    },
+    "El1Type": {
+      "type": "enum",
+      "values": ["", "fire", "ltng", "cold", "pois", "mag"],
+      "description": "Elemental attack 1 damage type"
+    },
+    "TreasureClass1": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Drop table (Normal difficulty)"
+    },
+    "TreasureClass1(N)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Drop table (Nightmare difficulty)"
+    },
+    "TreasureClass1(H)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Drop table (Hell difficulty)"
+    },
+    "Drain": {
+      "type": "integer",
+      "description": "Life/mana drain effectiveness (%)"
+    },
+    "ColdEffect": {
+      "type": "integer",
+      "description": "How cold slows this monster (0-5, 0=immune)"
+    },
+    "AI": {
+      "type": "string",
+      "description": "AI behavior type"
+    },
+    "boss": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Is a boss monster (1 = yes)"
+    },
+    "npc": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Is an NPC (1 = yes)"
+    },
+    "killable": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "description": "Can be killed (1 = yes)"
+    }
+  }
+}

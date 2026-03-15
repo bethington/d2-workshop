@@ -1,0 +1,124 @@
+{
+  "file": "D2Client.dll",
+  "version": "1.13c",
+  "globals": {
+    "Screen Config": [
+      {
+        "name": "g_dwScreenWidth",
+        "address": "0x6FBAE0E4",
+        "rva": "0xDBC48",
+        "type": "dword",
+        "description": "Screen width in pixels (640 or 800)"
+      },
+      {
+        "name": "g_dwScreenHeight",
+        "address": "0x6FBAE0E8",
+        "rva": "0xDBC4C",
+        "type": "dword",
+        "description": "Screen height in pixels (480 or 600)"
+      },
+      {
+        "name": "g_dwScreenLeftBoundary",
+        "address": "0x6FBCEC38",
+        "rva": "0x11EC38",
+        "type": "dword",
+        "description": "Left boundary for screen rendering"
+      }
+    ],
+    "UI Panels": [
+      {
+        "name": "g_pUIPanelBorderArchive",
+        "address": "0x6FBCA77C",
+        "rva": "0x11A77C",
+        "type": "pointer",
+        "description": "Pointer to Panel\\800BorderFrame archive"
+      },
+      {
+        "name": "g_pBottomPanelArchiveNormal",
+        "address": "0x6FBCA780",
+        "rva": "0x11A780",
+        "type": "pointer",
+        "description": "Pointer to bottom panel archive (normal)"
+      },
+      {
+        "name": "g_pBottomPanelArchiveExpanded",
+        "address": "0x6FBCA7D8",
+        "rva": "0x11A7D8",
+        "type": "pointer",
+        "description": "Pointer to bottom panel archive (expansion)"
+      }
+    ],
+    "Game State": [
+      {
+        "name": "g_dwGameMode",
+        "address": "0x6FBB7548",
+        "rva": "0x107548",
+        "type": "dword",
+        "description": "Current game mode"
+      },
+      {
+        "name": "g_dwGameRunning",
+        "address": "0x6FEB5A9C",
+        "rva": "0x405A9C",
+        "type": "dword",
+        "description": "Game running flag"
+      },
+      {
+        "name": "g_dwExpansionModeActive",
+        "address": "0x6FBFFA44",
+        "rva": "0x14FA44",
+        "type": "dword",
+        "description": "Whether expansion mode is active"
+      }
+    ],
+    "Cursor": [
+      {
+        "name": "g_dwCursorScreenX",
+        "address": "0x6FBB36F0",
+        "rva": "0x1036F0",
+        "type": "dword",
+        "description": "Cursor X position in screen coordinates"
+      },
+      {
+        "name": "g_dwCursorScreenY",
+        "address": "0x6FBB36F4",
+        "rva": "0x1036F4",
+        "type": "dword",
+        "description": "Cursor Y position in screen coordinates"
+      }
+    ]
+  },
+  "patchGroups": [
+    {
+      "name": "Widescreen 1068x600",
+      "description": "Patches resolution from 640x480/800x600 to 1068x600 widescreen. Requires matching patches in D2gfx.dll and renderer DLLs.",
+      "dlls": {
+        "D2Client.dll": [
+          { "rva": "0x10E09", "orig": "b820030000", "patch": "b82c040000", "desc": "Res mode 2 width: 800->1068" },
+          { "rva": "0x10E29", "orig": "b880020000", "patch": "b82c040000", "desc": "Res mode 0 width: 640->1068" },
+          { "rva": "0x10E39", "orig": "e0010000", "patch": "58020000", "desc": "Res mode 0 height: 480->600" },
+          { "rva": "0x10E43", "orig": "00000000", "patch": "01000000", "desc": "Res mode 0 ArrangeMode: 0->1" },
+          { "rva": "0x10DF5", "orig": "3bf00f8489000000", "patch": "9090909090909090", "desc": "NOP early-exit check" },
+          { "rva": "0x10E02", "orig": "7425", "patch": "7405", "desc": "Force mode 0 into 600-height path" },
+          { "rva": "0x45219", "orig": "b880020000", "patch": "b82c040000", "desc": "Fallback width: 640->1068" },
+          { "rva": "0x4522A", "orig": "e0010000", "patch": "58020000", "desc": "Fallback height: 480->600" },
+          { "rva": "0x4523F", "orig": "b8010000", "patch": "30020000", "desc": "Fallback sec height: 440->560" },
+          { "rva": "0x45332", "orig": "b820030000", "patch": "b82c040000", "desc": "Fallback mode 2 width: 800->1068" },
+          { "rva": "0xDBC48", "orig": "80020000", "patch": "2c040000", "desc": ".data ScreenSizeX: 640->1068" },
+          { "rva": "0xDBC4C", "orig": "e0010000", "patch": "58020000", "desc": ".data ScreenSizeY: 480->600" },
+          { "rva": "0x2926A", "orig": "7528", "patch": "9090", "desc": "Force panel border rendering (NOP mode 2 check)" }
+        ],
+        "D2gfx.dll": [
+          { "rva": "0x7FEA", "orig": "80020000", "patch": "2c040000", "desc": "GetDisplaySize mode 0 W: 640->1068" },
+          { "rva": "0x7FF0", "orig": "e0010000", "patch": "58020000", "desc": "GetDisplaySize mode 0 H: 480->600" },
+          { "rva": "0x8001", "orig": "20030000", "patch": "2c040000", "desc": "GetDisplaySize mode 2 W: 800->1068" },
+          { "rva": "0x8142", "orig": "20030000", "patch": "2c040000", "desc": "EnumDisplayModes cap 1: 800->1068" },
+          { "rva": "0x83F1", "orig": "20030000", "patch": "2c040000", "desc": "EnumDisplayModes cap 2: 800->1068" },
+          { "rva": "0x8748", "orig": "20030000", "patch": "2c040000", "desc": "Screen width check: 800->1068" },
+          { "rva": "0x8751", "orig": "20030000", "patch": "2c040000", "desc": "Min width fallback: 800->1068" },
+          { "rva": "0x876C", "orig": "20030000", "patch": "2c040000", "desc": "Screen width gate: 800->1068" }
+        ]
+      }
+    }
+  ]
+}
