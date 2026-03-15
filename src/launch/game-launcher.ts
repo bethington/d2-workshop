@@ -7,7 +7,11 @@ import { exec } from "child_process";
  * Launches Game.exe with configurable command-line flags.
  */
 export class GameLauncher {
-  constructor(private readonly workspaceRoot: string) {}
+  constructor(private workspaceRoot: string) {}
+
+  setRoot(newRoot: string): void {
+    this.workspaceRoot = newRoot;
+  }
 
   async launch(): Promise<void> {
     const gameExe = this.findGameExe();

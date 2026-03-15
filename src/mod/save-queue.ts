@@ -88,20 +88,35 @@ export function computeTableDiffs(original: string, modified: string): CellDiff[
  */
 export class SaveQueue {
   private changes: QueuedChange[] = [];
-  private readonly queueDir: string;
-  private readonly queueFile: string;
-  private readonly backupDir: string;
+  private queueDir: string;
+  private queueFile: string;
+  private backupDir: string;
   private readonly _onDidChange = new vscode.EventEmitter<void>();
   readonly onDidChange = this._onDidChange.event;
 
   constructor(
-    private readonly workspaceRoot: string,
-    private readonly mpqManager?: MpqManager
+    private workspaceRoot: string,
+    private mpqManager?: MpqManager
   ) {
     this.queueDir = path.join(workspaceRoot, ".d2workshop", "queue");
     this.queueFile = path.join(this.queueDir, "pending-changes.json");
     this.backupDir = path.join(workspaceRoot, ".d2workshop", "backups");
     this.loadQueue();
+  }
+
+  /**
+   * Switch to a different mod's queue.
+   * Saves current queue, switches paths, loads new queue.
+   */
+  switchRoot(newRoot: string, newMpqManager?: MpqManager): void {
+    this.saveQueue();
+    this.workspaceRoot = newRoot;
+    if (newMpqManager) this.mpqManager = newMpqManager;
+    this.queueDir = path.join(newRoot, ".d2workshop", "queue");
+    this.queueFile = path.join(this.queueDir, "pending-changes.json");
+    this.backupDir = path.join(newRoot, ".d2workshop", "backups");
+    this.loadQueue();
+    this._onDidChange.fire();
   }
 
   queueChange(change: QueuedChange): void {

@@ -16,7 +16,12 @@ export class MpqManager {
     }
   >();
 
-  constructor(private readonly workspaceRoot: string) {}
+  constructor(private workspaceRoot: string) {}
+
+  setRoot(newRoot: string): void {
+    this.closeAll();
+    this.workspaceRoot = newRoot;
+  }
 
   /**
    * Get list of MPQ files in the workspace root.

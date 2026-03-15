@@ -8,6 +8,7 @@ const webviewEntryPoints = [
   "src/webviews/dc6-viewer/index.tsx",
   "src/webviews/binary-editor/index.tsx",
   "src/webviews/mod-manager/index.tsx",
+  "src/webviews/cof-viewer/index.tsx",
 ];
 
 /** @type {esbuild.BuildOptions} */

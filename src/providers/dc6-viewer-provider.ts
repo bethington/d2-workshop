@@ -3,6 +3,7 @@ import * as path from "path";
 import * as fs from "fs";
 import { getWebviewContent } from "./webview-utils";
 import { parseDC6, DC6File, DC6Frame } from "../dc6/dc6-parser";
+import { parseDCC, isDCCFile } from "../dc6/dcc-parser";
 import { encodeDC6 } from "../dc6/dc6-encoder";
 import { parsePalette, applyPalette, detectPalette, findClosestPaletteIndex, Palette } from "../dc6/palette";
 import { PNG } from "pngjs";
@@ -89,16 +90,17 @@ export class DC6ViewerProvider implements vscode.CustomReadonlyEditorProvider {
     });
 
     try {
-      console.log(`[D2 Workshop] Loading DC6: ${document.uri.toString()}`);
+      console.log(`[D2 Workshop] Loading sprite: ${document.uri.toString()}`);
 
-      // Read DC6 binary
+      // Read binary data
       const dc6Data = await vscode.workspace.fs.readFile(document.uri);
-      console.log(`[D2 Workshop] DC6 binary: ${dc6Data.length} bytes`);
+      console.log(`[D2 Workshop] Sprite binary: ${dc6Data.length} bytes`);
 
-      // Parse DC6
-      storedDc6 = parseDC6(dc6Data);
+      // Parse as DCC or DC6
+      const isDcc = isDCCFile(dc6Data);
+      storedDc6 = isDcc ? parseDCC(dc6Data) : parseDC6(dc6Data);
       console.log(
-        `[D2 Workshop] DC6 parsed: ${storedDc6.header.directions} dirs, ` +
+        `[D2 Workshop] ${isDcc ? "DCC" : "DC6"} parsed: ${storedDc6.header.directions} dirs, ` +
           `${storedDc6.header.framesPerDirection} frames/dir, ` +
           `${storedDc6.frames.length} total frames`
       );

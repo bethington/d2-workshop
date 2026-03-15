@@ -5,6 +5,7 @@ import { D2TreeProvider } from "./providers/d2-tree-provider";
 import { MpqFileSystemProvider } from "./providers/mpq-filesystem";
 import { TableEditorProvider } from "./providers/table-editor-provider";
 import { DC6ViewerProvider } from "./providers/dc6-viewer-provider";
+import { COFViewerProvider } from "./providers/cof-viewer-provider";
 import { BinaryEditorProvider } from "./providers/binary-editor-provider";
 import { SaveQueueTreeProvider } from "./providers/save-queue-tree-provider";
 import { SaveQueue } from "./mod/save-queue";
@@ -12,6 +13,7 @@ import { GameLauncher } from "./launch/game-launcher";
 import { ModPackageManager } from "./mod/mod-package";
 import { initStormLib } from "./mpq/stormlib-wasm";
 import { MpqManager } from "./mpq/mpq-manager";
+import { ModProfileManager } from "./mod/mod-profiles";
 
 let saveQueue: SaveQueue;
 let mpqManager: MpqManager;
@@ -75,9 +77,24 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     BinaryEditorProvider.register(context, saveQueue)
   );
+  context.subscriptions.push(
+    COFViewerProvider.register(context, mpqManager)
+  );
+
+  // Initialize mod profile manager
+  const modProfiles = new ModProfileManager(workspaceRoot);
+  const activeRoot = modProfiles.activePath;
+
+  // Point components at the active mod's root
+  mpqManager.setRoot(activeRoot);
+  treeProvider.setRoot(activeRoot);
+  saveQueue.switchRoot(activeRoot, mpqManager);
+
+  // Update tree view title to show active mod
+  treeView.description = modProfiles.activeProfile.name;
 
   // Register commands
-  const launcher = new GameLauncher(workspaceRoot);
+  const launcher = new GameLauncher(activeRoot);
   const modManager = new ModPackageManager(workspaceRoot, saveQueue);
 
   context.subscriptions.push(
@@ -128,6 +145,44 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand("d2workshop.refreshQueue", () => {
       queueTreeProvider.refresh();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.switchMod", async () => {
+      const profiles = modProfiles.getProfiles();
+      const items = profiles.map((p) => ({
+        label: p.name,
+        description: p.isBase ? "Base installation" : p.rootPath,
+        profile: p,
+        picked: p.rootPath === modProfiles.activeProfile.rootPath,
+      }));
+
+      const selected = await vscode.window.showQuickPick(items, {
+        placeHolder: "Select a mod to work with",
+        title: "Switch Mod",
+      });
+
+      if (!selected || selected.profile.rootPath === modProfiles.activeProfile.rootPath) return;
+
+      // Close editors from the previous mod
+      for (const tab of vscode.window.tabGroups.all.flatMap((g) => g.tabs)) {
+        const input = tab.input as { uri?: vscode.Uri };
+        if (input?.uri?.scheme === "d2mpq") {
+          await vscode.window.tabGroups.close(tab);
+        }
+      }
+
+      // Switch all components to the new mod
+      const newRoot = selected.profile.rootPath;
+      await modProfiles.switchProfile(selected.profile);
+      mpqManager.setRoot(newRoot);
+      treeProvider.setRoot(newRoot);
+      saveQueue.switchRoot(newRoot, mpqManager);
+      launcher.setRoot(newRoot);
+      treeView.description = selected.profile.name;
+
+      vscode.window.showInformationMessage(`Switched to: ${selected.profile.name}`);
     })
   );
 

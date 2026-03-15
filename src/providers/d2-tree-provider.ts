@@ -10,6 +10,13 @@ export enum D2FileType {
   Exe = "exe",
   Txt = "txt",
   Dc6 = "dc6",
+  Dcc = "dcc",
+  Cof = "cof",
+  Dt1 = "dt1",
+  Ds1 = "ds1",
+  Pl2 = "pl2",
+  Dat = "dat",
+  D2 = "d2",
   Bin = "bin",
   Tbl = "tbl",
   Unknown = "unknown",
@@ -42,7 +49,20 @@ export class D2TreeItem extends vscode.TreeItem {
         this.iconPath = new vscode.ThemeIcon("table");
         break;
       case D2FileType.Dc6:
+      case D2FileType.Dcc:
+      case D2FileType.Dt1:
         this.iconPath = new vscode.ThemeIcon("file-media");
+        break;
+      case D2FileType.Cof:
+      case D2FileType.D2:
+        this.iconPath = new vscode.ThemeIcon("symbol-event");
+        break;
+      case D2FileType.Ds1:
+        this.iconPath = new vscode.ThemeIcon("map");
+        break;
+      case D2FileType.Pl2:
+      case D2FileType.Dat:
+        this.iconPath = new vscode.ThemeIcon("symbol-color");
         break;
       case D2FileType.Bin:
         this.iconPath = new vscode.ThemeIcon("file-code");
@@ -69,11 +89,17 @@ export class D2TreeItem extends vscode.TreeItem {
           title: "Open Table",
           arguments: [mpqUri, "d2workshop.tableEditor"],
         };
-      } else if (fileType === D2FileType.Dc6) {
+      } else if (fileType === D2FileType.Dc6 || fileType === D2FileType.Dcc) {
         this.command = {
           command: "vscode.openWith",
-          title: "Open DC6",
+          title: "Open Sprite",
           arguments: [mpqUri, "d2workshop.dc6Viewer"],
+        };
+      } else if (fileType === D2FileType.Cof) {
+        this.command = {
+          command: "vscode.openWith",
+          title: "Open COF",
+          arguments: [mpqUri, "d2workshop.cofViewer"],
         };
       }
     } else if (fileType === D2FileType.Dll || fileType === D2FileType.Exe) {
@@ -99,6 +125,20 @@ function detectMpqFileType(fileName: string): D2FileType {
       return D2FileType.Txt;
     case ".dc6":
       return D2FileType.Dc6;
+    case ".dcc":
+      return D2FileType.Dcc;
+    case ".cof":
+      return D2FileType.Cof;
+    case ".dt1":
+      return D2FileType.Dt1;
+    case ".ds1":
+      return D2FileType.Ds1;
+    case ".pl2":
+      return D2FileType.Pl2;
+    case ".dat":
+      return D2FileType.Dat;
+    case ".d2":
+      return D2FileType.D2;
     case ".bin":
       return D2FileType.Bin;
     case ".tbl":
@@ -115,9 +155,14 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
   readonly onDidChangeTreeData = this._onDidChangeTreeData.event;
 
   constructor(
-    private readonly workspaceRoot: string,
+    private workspaceRoot: string,
     private readonly mpqManager: MpqManager
   ) {}
+
+  setRoot(newRoot: string): void {
+    this.workspaceRoot = newRoot;
+    this.refresh();
+  }
 
   refresh(): void {
     this._onDidChangeTreeData.fire();

@@ -57,10 +57,23 @@
       },
       {
         "viewType": "d2workshop.dc6Viewer",
-        "displayName": "D2 DC6 Viewer",
+        "displayName": "D2 Sprite Viewer",
         "selector": [
           {
             "filenamePattern": "*.dc6"
+          },
+          {
+            "filenamePattern": "*.dcc"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "d2workshop.cofViewer",
+        "displayName": "D2 COF Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.cof"
           }
         ],
         "priority": "default"
@@ -106,6 +119,11 @@
         "title": "D2 Workshop: Import from GIMP"
       },
       {
+        "command": "d2workshop.switchMod",
+        "title": "D2 Workshop: Switch Mod",
+        "icon": "$(folder-library)"
+      },
+      {
         "command": "d2workshop.restoreBackup",
         "title": "D2 Workshop: Restore from Backup"
       },
@@ -131,6 +149,11 @@
     ],
     "menus": {
       "view/title": [
+        {
+          "command": "d2workshop.switchMod",
+          "when": "view == d2ExplorerView",
+          "group": "navigation@0"
+        },
         {
           "command": "d2workshop.publishQueue",
           "when": "view == d2SaveQueueView",
@@ -184,6 +207,11 @@
           "type": "string",
           "default": "-w",
           "description": "Command-line flags to pass to Game.exe when launching."
+        },
+        "d2workshop.activeModPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the active mod folder. Managed by the mod switcher."
         }
       }
     }
