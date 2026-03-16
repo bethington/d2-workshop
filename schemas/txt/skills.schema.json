@@ -1,6 +1,6 @@
 {
   "file": "skills.txt",
-  "description": "Skill definitions — controls all skill properties including damage, mana cost, synergies, and visual effects.",
+  "description": "Skill definitions \u00e2\u20ac\u201d controls all skill properties including damage, mana cost, synergies, and visual effects.",
   "columns": {
     "skill": {
       "type": "string",
@@ -59,11 +59,7 @@
       "description": "Client-side missile A (alternate visual)"
     },
     "InGame": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Whether skill appears in-game (1 = yes)"
     },
     "mana": {

@@ -56,12 +56,14 @@
       "description": "Melee range extension (grid spaces)"
     },
     "StrBonus": {
-      "type": "boolean",
-      "description": "Strength damage bonus (percentage per 100 str)"
+      "type": "integer",
+      "description": "Strength damage bonus (percentage per 100 str)",
+      "min": 0
     },
     "DexBonus": {
-      "type": "boolean",
-      "description": "Dexterity damage bonus (percentage per 100 dex)"
+      "type": "integer",
+      "description": "Dexterity damage bonus (percentage per 100 dex)",
+      "min": 0
     },
     "speed": {
       "type": "integer",
@@ -87,7 +89,8 @@
       "description": "Maximum throwing/missile damage"
     },
     "misspeed": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "basespeed": {
       "type": "integer",
@@ -157,7 +160,8 @@
       "description": "Base NPC gold cost"
     },
     "replenish": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "code": {
       "type": "string",
@@ -229,8 +233,9 @@
       "description": "Can be wielded in one or two hands (Barbarian)"
     },
     "spelloffset": {
-      "type": "boolean",
-      "description": "Spell effect offset index"
+      "type": "integer",
+      "description": "Spell effect offset index",
+      "min": 0
     },
     "hit class": {
       "type": "enum",
@@ -436,8 +441,9 @@
       "description": "Light radius around item/character"
     },
     "belt": {
-      "type": "boolean",
-      "description": "Belt type index"
+      "type": "integer",
+      "description": "Belt type index",
+      "min": 0
     },
     "quest": {
       "type": "integer",
@@ -448,7 +454,6 @@
     "missiletype": {
       "type": "enum",
       "values": [
-        "#REF!",
         "0",
         "1",
         "178",
@@ -503,10 +508,12 @@
       "max": 120
     },
     "tohitvsundead": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "tohitvsdemon": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "tohitvslarge": {
       "type": "integer",
@@ -524,8 +531,9 @@
       "max": 0
     },
     "gemoffset": {
-      "type": "boolean",
-      "description": "Gem/rune starting index in Gems.txt"
+      "type": "integer",
+      "description": "Gem/rune starting index in Gems.txt",
+      "min": 0
     },
     "bitfield1": {
       "type": "integer",
@@ -545,12 +553,14 @@
       "description": "charsi maximum value"
     },
     "CharsiMagicMin": {
-      "type": "boolean",
-      "description": "Charsi magic stock minimum"
+      "type": "integer",
+      "description": "Charsi magic stock minimum",
+      "min": 0
     },
     "CharsiMagicMax": {
-      "type": "boolean",
-      "description": "Charsi magic stock maximum"
+      "type": "integer",
+      "description": "Charsi magic stock maximum",
+      "min": 0
     },
     "CharsiMagicLvl": {
       "type": "integer",
@@ -559,8 +569,9 @@
       "description": "Charsi magic stock level"
     },
     "GheedMin": {
-      "type": "boolean",
-      "description": "gheed minimum value"
+      "type": "integer",
+      "description": "gheed minimum value",
+      "min": 0
     },
     "GheedMax": {
       "type": "integer",
@@ -569,12 +580,14 @@
       "description": "gheed maximum value"
     },
     "GheedMagicMin": {
-      "type": "boolean",
-      "description": "gheedmagic minimum value"
+      "type": "integer",
+      "description": "gheedmagic minimum value",
+      "min": 0
     },
     "GheedMagicMax": {
-      "type": "boolean",
-      "description": "gheedmagic maximum value"
+      "type": "integer",
+      "description": "gheedmagic maximum value",
+      "min": 0
     },
     "GheedMagicLvl": {
       "type": "integer",
@@ -623,12 +636,14 @@
       "description": "fara maximum value"
     },
     "FaraMagicMin": {
-      "type": "boolean",
-      "description": "faramagic minimum value"
+      "type": "integer",
+      "description": "faramagic minimum value",
+      "min": 0
     },
     "FaraMagicMax": {
-      "type": "boolean",
-      "description": "faramagic maximum value"
+      "type": "integer",
+      "description": "faramagic maximum value",
+      "min": 0
     },
     "FaraMagicLvl": {
       "type": "integer",
@@ -694,20 +709,24 @@
       "max": 255
     },
     "HraltiMin": {
-      "type": "boolean",
-      "description": "hralti minimum value"
+      "type": "integer",
+      "description": "hralti minimum value",
+      "min": 0
     },
     "HraltiMax": {
-      "type": "boolean",
-      "description": "hralti maximum value"
+      "type": "integer",
+      "description": "hralti maximum value",
+      "min": 0
     },
     "HraltiMagicMin": {
-      "type": "boolean",
-      "description": "hraltimagic minimum value"
+      "type": "integer",
+      "description": "hraltimagic minimum value",
+      "min": 0
     },
     "HraltiMagicMax": {
-      "type": "boolean",
-      "description": "hraltimagic maximum value"
+      "type": "integer",
+      "description": "hraltimagic maximum value",
+      "min": 0
     },
     "HratliMagicLvl": {
       "type": "integer",
@@ -785,12 +804,14 @@
       "description": "elzix maximum value"
     },
     "ElzixMagicMin": {
-      "type": "boolean",
-      "description": "elzixmagic minimum value"
+      "type": "integer",
+      "description": "elzixmagic minimum value",
+      "min": 0
     },
     "ElzixMagicMax": {
-      "type": "boolean",
-      "description": "elzixmagic maximum value"
+      "type": "integer",
+      "description": "elzixmagic maximum value",
+      "min": 0
     },
     "ElzixMagicLvl": {
       "type": "integer",
@@ -798,8 +819,9 @@
       "max": 255
     },
     "AshearaMin": {
-      "type": "boolean",
-      "description": "asheara minimum value"
+      "type": "integer",
+      "description": "asheara minimum value",
+      "min": 0
     },
     "AshearaMax": {
       "type": "integer",
@@ -808,12 +830,14 @@
       "description": "asheara maximum value"
     },
     "AshearaMagicMin": {
-      "type": "boolean",
-      "description": "ashearamagic minimum value"
+      "type": "integer",
+      "description": "ashearamagic minimum value",
+      "min": 0
     },
     "AshearaMagicMax": {
-      "type": "boolean",
-      "description": "ashearamagic maximum value"
+      "type": "integer",
+      "description": "ashearamagic maximum value",
+      "min": 0
     },
     "AshearaMagicLvl": {
       "type": "integer",
@@ -833,12 +857,14 @@
       "description": "cain maximum value"
     },
     "CainMagicMin": {
-      "type": "boolean",
-      "description": "cainmagic minimum value"
+      "type": "integer",
+      "description": "cainmagic minimum value",
+      "min": 0
     },
     "CainMagicMax": {
-      "type": "boolean",
-      "description": "cainmagic maximum value"
+      "type": "integer",
+      "description": "cainmagic maximum value",
+      "min": 0
     },
     "CainMagicLvl": {
       "type": "integer",
@@ -846,8 +872,9 @@
       "max": 255
     },
     "HalbuMin": {
-      "type": "boolean",
-      "description": "halbu minimum value"
+      "type": "integer",
+      "description": "halbu minimum value",
+      "min": 0
     },
     "HalbuMax": {
       "type": "integer",
@@ -856,12 +883,14 @@
       "description": "halbu maximum value"
     },
     "HalbuMagicMin": {
-      "type": "boolean",
-      "description": "halbumagic minimum value"
+      "type": "integer",
+      "description": "halbumagic minimum value",
+      "min": 0
     },
     "HalbuMagicMax": {
-      "type": "boolean",
-      "description": "halbumagic maximum value"
+      "type": "integer",
+      "description": "halbumagic maximum value",
+      "min": 0
     },
     "HalbuMagicLvl": {
       "type": "integer",
@@ -940,11 +969,11 @@
       "description": "Skip base name display on uniques"
     },
     "NightmareUpgrade": {
-      "type": "boolean",
+      "type": "string",
       "description": "Nightmare difficulty replacement code"
     },
     "HellUpgrade": {
-      "type": "boolean",
+      "type": "string",
       "description": "Hell difficulty replacement code"
     }
   }

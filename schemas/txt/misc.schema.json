@@ -31,8 +31,9 @@
       "description": "Item completion flag"
     },
     "speed": {
-      "type": "boolean",
-      "description": "Speed reduction modifier (negative = faster)"
+      "type": "integer",
+      "description": "Speed reduction modifier (negative = faster)",
+      "min": 0
     },
     "nodurability": {
       "type": "boolean",
@@ -56,8 +57,9 @@
       "description": "Alternate character graphics code"
     },
     "spelloffset": {
-      "type": "boolean",
-      "description": "Spell effect offset index"
+      "type": "integer",
+      "description": "Spell effect offset index",
+      "min": 0
     },
     "component": {
       "type": "integer",
@@ -205,8 +207,9 @@
       "description": "Light radius around item/character"
     },
     "belt": {
-      "type": "boolean",
-      "description": "Belt type index"
+      "type": "integer",
+      "description": "Belt type index",
+      "min": 0
     },
     "autobelt": {
       "type": "boolean",
@@ -235,8 +238,9 @@
       "description": "Quest item class identifier"
     },
     "missiletype": {
-      "type": "boolean",
-      "description": "Throwing weapon missile type reference"
+      "type": "integer",
+      "description": "Throwing weapon missile type reference",
+      "min": 0
     },
     "spellicon": {
       "type": "integer",
@@ -244,23 +248,27 @@
       "max": -1
     },
     "durwarning": {
-      "type": "boolean",
-      "description": "Low durability warning threshold"
+      "type": "integer",
+      "description": "Low durability warning threshold",
+      "min": 0
     },
     "qntwarning": {
-      "type": "boolean",
-      "description": "Low quantity warning threshold"
+      "type": "integer",
+      "description": "Low quantity warning threshold",
+      "min": 0
     },
     "gemoffset": {
-      "type": "boolean",
-      "description": "Gem/rune starting index in Gems.txt"
+      "type": "integer",
+      "description": "Gem/rune starting index in Gems.txt",
+      "min": 0
     },
     "BetterGem": {
       "type": "string",
       "description": "Upgraded gem/rune code"
     },
     "bitfield1": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "CharsiMin": {
       "type": "integer",
@@ -275,12 +283,14 @@
       "description": "charsi maximum value"
     },
     "CharsiMagicMin": {
-      "type": "boolean",
-      "description": "Charsi magic stock minimum"
+      "type": "integer",
+      "description": "Charsi magic stock minimum",
+      "min": 0
     },
     "CharsiMagicMax": {
-      "type": "boolean",
-      "description": "Charsi magic stock maximum"
+      "type": "integer",
+      "description": "Charsi magic stock maximum",
+      "min": 0
     },
     "CharsiMagicLvl": {
       "type": "integer",
@@ -330,8 +340,9 @@
       "description": "akara maximum value"
     },
     "AkaraMagicMin": {
-      "type": "boolean",
-      "description": "akaramagic minimum value"
+      "type": "integer",
+      "description": "akaramagic minimum value",
+      "min": 0
     },
     "AkaraMagicMax": {
       "type": "integer",
@@ -473,12 +484,14 @@
       "description": "alkor maximum value"
     },
     "AlkorMagicMin": {
-      "type": "boolean",
-      "description": "alkormagic minimum value"
+      "type": "integer",
+      "description": "alkormagic minimum value",
+      "min": 0
     },
     "AlkorMagicMax": {
-      "type": "boolean",
-      "description": "alkormagic maximum value"
+      "type": "integer",
+      "description": "alkormagic maximum value",
+      "min": 0
     },
     "AlkorMagicLvl": {
       "type": "integer",
@@ -527,12 +540,14 @@
       "description": "elzix maximum value"
     },
     "ElzixMagicMin": {
-      "type": "boolean",
-      "description": "elzixmagic minimum value"
+      "type": "integer",
+      "description": "elzixmagic minimum value",
+      "min": 0
     },
     "ElzixMagicMax": {
-      "type": "boolean",
-      "description": "elzixmagic maximum value"
+      "type": "integer",
+      "description": "elzixmagic maximum value",
+      "min": 0
     },
     "ElzixMagicLvl": {
       "type": "integer",
@@ -552,12 +567,14 @@
       "description": "asheara maximum value"
     },
     "AshearaMagicMin": {
-      "type": "boolean",
-      "description": "ashearamagic minimum value"
+      "type": "integer",
+      "description": "ashearamagic minimum value",
+      "min": 0
     },
     "AshearaMagicMax": {
-      "type": "boolean",
-      "description": "ashearamagic maximum value"
+      "type": "integer",
+      "description": "ashearamagic maximum value",
+      "min": 0
     },
     "AshearaMagicLvl": {
       "type": "integer",
@@ -577,12 +594,14 @@
       "description": "cain maximum value"
     },
     "CainMagicMin": {
-      "type": "boolean",
-      "description": "cainmagic minimum value"
+      "type": "integer",
+      "description": "cainmagic minimum value",
+      "min": 0
     },
     "CainMagicMax": {
-      "type": "boolean",
-      "description": "cainmagic maximum value"
+      "type": "integer",
+      "description": "cainmagic maximum value",
+      "min": 0
     },
     "CainMagicLvl": {
       "type": "integer",
@@ -602,12 +621,14 @@
       "description": "halbu maximum value"
     },
     "HalbuMagicMin": {
-      "type": "boolean",
-      "description": "halbumagic minimum value"
+      "type": "integer",
+      "description": "halbumagic minimum value",
+      "min": 0
     },
     "HalbuMagicMax": {
-      "type": "boolean",
-      "description": "halbumagic maximum value"
+      "type": "integer",
+      "description": "halbumagic maximum value",
+      "min": 0
     },
     "HalbuMagicLvl": {
       "type": "integer",
@@ -627,12 +648,14 @@
       "description": "jamella maximum value"
     },
     "JamellaMagicMin": {
-      "type": "boolean",
-      "description": "jamellamagic minimum value"
+      "type": "integer",
+      "description": "jamellamagic minimum value",
+      "min": 0
     },
     "JamellaMagicMax": {
-      "type": "boolean",
-      "description": "jamellamagic maximum value"
+      "type": "integer",
+      "description": "jamellamagic maximum value",
+      "min": 0
     },
     "JamellaMagicLvl": {
       "type": "integer",
@@ -672,8 +695,9 @@
       "max": 1
     },
     "InvTrans": {
-      "type": "boolean",
-      "description": "Inventory color transform palette index"
+      "type": "integer",
+      "description": "Inventory color transform palette index",
+      "min": 0
     },
     "SkipName": {
       "type": "boolean",
@@ -692,12 +716,14 @@
       "description": "Hell difficulty replacement code"
     },
     "mindam": {
-      "type": "boolean",
-      "description": "Minimum one-handed physical damage"
+      "type": "integer",
+      "description": "Minimum one-handed physical damage",
+      "min": 0
     },
     "maxdam": {
-      "type": "boolean",
-      "description": "Maximum one-handed physical damage"
+      "type": "integer",
+      "description": "Maximum one-handed physical damage",
+      "min": 0
     }
   }
 }

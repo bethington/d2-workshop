@@ -155,7 +155,7 @@
         "res-cold",
         "res-pois"
       ],
-      "description": "Property 1 code for tier 1"
+      "description": "Runeword property 1 code"
     },
     "T1Param1": {
       "type": "integer",
@@ -197,7 +197,7 @@
         "res-cold",
         "res-fire"
       ],
-      "description": "Property 1 code for tier 2"
+      "description": "Runeword property 2 code"
     },
     "T1Param2": {
       "type": "integer",
@@ -239,7 +239,7 @@
         "swing2",
         "swing3"
       ],
-      "description": "Property 1 code for tier 3"
+      "description": "Runeword property 3 code"
     },
     "T1Param3": {
       "type": "integer",
@@ -278,7 +278,7 @@
         "str",
         "thorns"
       ],
-      "description": "Property 1 code for tier 4"
+      "description": "Runeword property 4 code"
     },
     "T1Param4": {
       "type": "integer",
@@ -309,7 +309,7 @@
         "slow",
         "str"
       ],
-      "description": "Property 1 code for tier 5"
+      "description": "Runeword property 5 code"
     },
     "T1Param5": {
       "type": "integer",
@@ -331,7 +331,7 @@
     },
     "T1Code6": {
       "type": "string",
-      "description": "Property 1 code for tier 6"
+      "description": "Runeword property 6 code"
     },
     "T1Param6": {
       "type": "integer",

@@ -1,6 +1,6 @@
 {
   "file": "Missiles.txt",
-  "description": "Missile definitions — projectiles, spells, effects, and their visual/damage properties.",
+  "description": "Missile definitions \u00e2\u20ac\u201d projectiles, spells, effects, and their visual/damage properties.",
   "columns": {
     "Missile": {
       "type": "string",
@@ -109,19 +109,11 @@
       "description": "Associated skill"
     },
     "LastCollide": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Can only hit the last target (1 = yes)"
     },
     "Pierce": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Passes through targets (1 = yes)"
     }
   }

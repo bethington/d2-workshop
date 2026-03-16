@@ -1,6 +1,6 @@
 {
   "file": "monstats.txt",
-  "description": "Monster statistics — defines all monster types, their stats, AI, drops, and visual properties. 229 columns.",
+  "description": "Monster statistics \u00e2\u20ac\u201d defines all monster types, their stats, AI, drops, and visual properties. 229 columns.",
   "columns": {
     "Class": {
       "type": "string",
@@ -29,11 +29,7 @@
       "description": "2-character token used in animation file paths"
     },
     "Spawned": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Can be spawned by other monsters (1 = yes)"
     },
     "SizeX": {
@@ -200,27 +196,15 @@
       "description": "AI behavior type"
     },
     "boss": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Is a boss monster (1 = yes)"
     },
     "npc": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Is an NPC (1 = yes)"
     },
     "killable": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1"
-      ],
+      "type": "boolean",
       "description": "Can be killed (1 = yes)"
     }
   }

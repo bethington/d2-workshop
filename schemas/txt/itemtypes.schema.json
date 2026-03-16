@@ -1,6 +1,6 @@
 {
   "file": "itemtypes.txt",
-  "description": "Item type hierarchy — defines equipment categories, socket rules, and class restrictions.",
+  "description": "Item type hierarchy \u00e2\u20ac\u201d defines equipment categories, socket rules, and class restrictions.",
   "columns": {
     "ItemType": {
       "type": "string",
@@ -12,12 +12,15 @@
       "description": "Unique 3-4 character item code"
     },
     "Order": {
-      "type": "boolean",
-      "description": "Sort order priority for inventory display"
+      "type": "integer",
+      "description": "Sort order priority for inventory display",
+      "min": 0
     },
     "Equiv1": {
-      "type": "string",
-      "description": "Primary parent item type code in the type hierarchy"
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Equivalent item type 1 (parent in type hierarchy)"
     },
     "Equiv2": {
       "type": "enum",

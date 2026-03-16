@@ -1,6 +1,6 @@
 {
   "file": "levels.txt",
-  "description": "Level/area definitions — monster levels, density, waypoints, and act assignments.",
+  "description": "Level/area definitions \u00e2\u20ac\u201d monster levels, density, waypoints, and act assignments.",
   "columns": {
     "Name": {
       "type": "string",
@@ -254,7 +254,7 @@
       "type": "integer",
       "min": 0,
       "max": 11,
-      "description": "Quest item class identifier"
+      "description": "Associated quest ID for this level"
     },
     "WarpDist": {
       "type": "integer",
@@ -270,13 +270,13 @@
     },
     "MonLvl2": {
       "type": "integer",
-      "min": 25,
+      "min": 0,
       "max": 53,
       "description": "Nightmare difficulty monster level"
     },
     "MonLvl3": {
       "type": "integer",
-      "min": 50,
+      "min": 0,
       "max": 78,
       "description": "Hell difficulty monster level"
     },
