@@ -3,49 +3,13 @@
   "description": "Set item definitions \u2014 individual and set bonus properties.",
   "columns": {
     "Name": {
-      "type": "enum",
-      "values": [
-        "Angelical Raiment",
-        "Arcanna's Tricks",
-        "Arctic Gear",
-        "Berserker's Garb",
-        "Cathan's Traps",
-        "Civerb's Vestments",
-        "Cleglaw's Brace",
-        "Death's Disguise",
-        "Hsarus' Trim",
-        "Infernal Tools",
-        "Iratha's Finery",
-        "Isenhart's Armory",
-        "Milabrega's Regalia",
-        "Sigon's Complete Steel",
-        "Tancred's Battlegear",
-        "Vidala's Rig"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Internal name identifier"
     },
     "Prefix": {
-      "type": "enum",
-      "values": [
-        "Angelical",
-        "Arcanna's",
-        "Arctic",
-        "Berserker's",
-        "Cathan's",
-        "Civerb's",
-        "Cleglaw's",
-        "Death's",
-        "Hsarus'",
-        "Infernal",
-        "Iratha's",
-        "Isenhart's",
-        "Milabrega's",
-        "Sigon's",
-        "Tancred's",
-        "Vidala's"
-      ]
+      "type": "string"
     },
     "level": {
       "type": "integer",

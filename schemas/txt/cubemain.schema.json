@@ -729,14 +729,17 @@
       "type": "string"
     },
     "mod1bchance": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod1bparam": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod1bmin": {
-      "type": "string",
-      "description": "mod1b minimum value"
+      "type": "integer",
+      "description": "mod1b minimum value",
+      "min": 0
     },
     "mod1bmax": {
       "type": "string",
@@ -746,14 +749,17 @@
       "type": "string"
     },
     "mod2bchance": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod2bparam": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod2bmin": {
-      "type": "string",
-      "description": "mod2b minimum value"
+      "type": "integer",
+      "description": "mod2b minimum value",
+      "min": 0
     },
     "mod2bmax": {
       "type": "string",
@@ -763,14 +769,17 @@
       "type": "string"
     },
     "mod3bchance": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod3bparam": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod3bmin": {
-      "type": "string",
-      "description": "mod3b minimum value"
+      "type": "integer",
+      "description": "mod3b minimum value",
+      "min": 0
     },
     "mod3bmax": {
       "type": "string",
@@ -780,14 +789,17 @@
       "type": "string"
     },
     "mod4bchance": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod4bparam": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod4bmin": {
-      "type": "string",
-      "description": "mod4b minimum value"
+      "type": "integer",
+      "description": "mod4b minimum value",
+      "min": 0
     },
     "mod4bmax": {
       "type": "integer",
@@ -799,14 +811,17 @@
       "type": "string"
     },
     "mod5bchance": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod5bparam": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "mod5bmin": {
-      "type": "string",
-      "description": "mod5b minimum value"
+      "type": "integer",
+      "description": "mod5b minimum value",
+      "min": 0
     },
     "mod5bmax": {
       "type": "integer",

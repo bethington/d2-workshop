@@ -82,24 +82,34 @@
       "description": "Required item type 4"
     },
     "itype5": {
-      "type": "string",
-      "description": "Required item type 5"
+      "type": "ref",
+      "description": "Required item type (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "itype6": {
-      "type": "string",
-      "description": "Required item type 6"
+      "type": "ref",
+      "description": "Required item type (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "etype1": {
-      "type": "string",
-      "description": "Excluded item type 1"
+      "type": "ref",
+      "description": "Excluded item type (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "etype2": {
-      "type": "string",
-      "description": "Excluded item type 2"
+      "type": "ref",
+      "description": "Excluded item type (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "etype3": {
-      "type": "string",
-      "description": "Excluded item type 3"
+      "type": "ref",
+      "description": "Excluded item type (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "Rune1": {
       "type": "string"
@@ -190,8 +200,9 @@
       "description": "Property 1 code for tier 2"
     },
     "T1Param2": {
-      "type": "string",
-      "description": "Property 1 param for tier 2"
+      "type": "integer",
+      "description": "Property 1 param for tier 2",
+      "min": 0
     },
     "T1Min2": {
       "type": "integer",
@@ -323,8 +334,9 @@
       "description": "Property 1 code for tier 6"
     },
     "T1Param6": {
-      "type": "string",
-      "description": "Property 1 param for tier 6"
+      "type": "integer",
+      "description": "Property 1 param for tier 6",
+      "min": 0
     },
     "T1Min6": {
       "type": "integer",
