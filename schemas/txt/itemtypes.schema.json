@@ -194,27 +194,10 @@
       "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)"
     },
     "Class": {
-      "type": "enum",
-      "values": [
-        "",
-        "all",
-        "ama",
-        "amazon",
-        "ass",
-        "assassin",
-        "bar",
-        "barbarian",
-        "dru",
-        "druid",
-        "monster",
-        "nec",
-        "necromancer",
-        "pal",
-        "paladin",
-        "sor",
-        "sorceress"
-      ],
-      "description": "Character class restriction (classic uses full names, patch uses codes)"
+      "type": "ref",
+      "target": "PlayerClass.txt",
+      "targetColumn": "Player Class",
+      "description": "Character class restriction"
     },
     "VarInvGfx": {
       "type": "integer",

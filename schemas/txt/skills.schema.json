@@ -15,26 +15,9 @@
       "description": "Unique numeric skill ID"
     },
     "charclass": {
-      "type": "enum",
-      "values": [
-        "",
-        "all",
-        "ama",
-        "amazon",
-        "ass",
-        "assassin",
-        "bar",
-        "barbarian",
-        "dru",
-        "druid",
-        "monster",
-        "nec",
-        "necromancer",
-        "pal",
-        "paladin",
-        "sor",
-        "sorceress"
-      ],
+      "type": "ref",
+      "target": "PlayerClass.txt",
+      "targetColumn": "Player Class",
       "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama)."
     },
     "skilldesc": {

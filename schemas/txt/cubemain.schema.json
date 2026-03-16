@@ -46,27 +46,10 @@
       "description": "Day of week restriction for recipe availability"
     },
     "playerclass": {
-      "type": "enum",
-      "values": [
-        "",
-        "all",
-        "ama",
-        "amazon",
-        "ass",
-        "assassin",
-        "bar",
-        "barbarian",
-        "dru",
-        "druid",
-        "monster",
-        "nec",
-        "necromancer",
-        "pal",
-        "paladin",
-        "sor",
-        "sorceress"
-      ],
-      "description": "Character class required to use this recipe (classic uses full names, patch uses codes)"
+      "type": "ref",
+      "target": "PlayerClass.txt",
+      "targetColumn": "Player Class",
+      "description": "Character class required to use this recipe"
     },
     "require a": {
       "type": "enum",

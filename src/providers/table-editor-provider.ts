@@ -269,11 +269,25 @@ export class TableEditorProvider
         if (colIdx < 0) continue;
 
         const values = new Set<string>();
+        // For small lookup tables (≤5 columns), extract values from ALL columns
+        // This handles cases like PlayerClass.txt where both "Player Class" (full name)
+        // and "Code" (3-letter) are valid values for the same field across game versions
+        const isSmallLookup = headers.length <= 5;
+        const colsToExtract = isSmallLookup
+          ? headers.map((_, i) => i)
+          : [colIdx];
+
         for (let i = 1; i < lines.length; i++) {
           const cells = lines[i].split("\t");
-          const val = cells[colIdx]?.trim();
-          if (val && val !== "Expansion" && val !== "expansion") {
-            values.add(val);
+          for (const ci of colsToExtract) {
+            const val = cells[ci]?.trim();
+            if (val && val !== "Expansion" && val !== "expansion") {
+              values.add(val);
+              // Also add lowercase variant for case-insensitive matching
+              if (val !== val.toLowerCase()) {
+                values.add(val.toLowerCase());
+              }
+            }
           }
         }
         resolvedValues.set(key, Array.from(values).sort());
