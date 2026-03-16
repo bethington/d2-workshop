@@ -140,16 +140,18 @@ export class TableEditorProvider
     }
 
     // Handle messages from webview
-    webviewPanel.webview.onDidReceiveMessage((message) => {
+    webviewPanel.webview.onDidReceiveMessage(async (message) => {
       switch (message.type) {
         case "ready": {
           // Webview is ready to receive data — send it now
           console.log(`[D2 Workshop] Webview ready, sending ${fileName}`);
+          // Resolve ref column values from MPQ before sending
+          const enrichedSchema = schema ? await this.resolveRefValues(schema, document.uri) : null;
           webviewPanel.webview.postMessage({
             type: "load",
             content: text,
             fileName,
-            schema,
+            schema: enrichedSchema,
           });
           // Check for pending row navigation from search
           const uriKey = document.uri.toString();
@@ -219,6 +221,83 @@ export class TableEditorProvider
     const headerLine = headers.join("\t");
     const dataLines = rows.map((row) => row.join("\t"));
     return [headerLine, ...dataLines].join("\r\n") + "\r\n";
+  }
+
+  /**
+   * Resolve ref column values by reading target files from MPQ.
+   * Populates schema.columns[x].values with actual values from the referenced file.
+   */
+  private async resolveRefValues(schema: TxtSchema, sourceUri: vscode.Uri): Promise<TxtSchema> {
+    // Collect unique target files needed
+    const targets = new Map<string, { file: string; column: string }>();
+    for (const [colName, col] of Object.entries(schema.columns)) {
+      if (col.type === "ref" && col.target && col.targetColumn && !col.values?.length) {
+        const key = `${col.target}:${col.targetColumn}`;
+        if (!targets.has(key)) {
+          targets.set(key, { file: col.target, column: col.targetColumn });
+        }
+      }
+    }
+
+    if (targets.size === 0) return schema;
+
+    // Determine which MPQ to read from based on source URI
+    const mpqName = sourceUri.scheme === "d2mpq" ? sourceUri.authority : "d2exp.mpq";
+
+    // Read each target file and extract the column values
+    const resolvedValues = new Map<string, string[]>();
+    for (const [key, { file, column }] of targets) {
+      try {
+        const targetPath = `data\\global\\excel\\${file}`;
+        // Try multiple MPQs: patch_d2 first, then d2exp, then d2data
+        let data: Uint8Array | undefined;
+        for (const mpq of ["patch_d2.mpq", "d2exp.mpq", "d2data.mpq"]) {
+          try {
+            const uri = vscode.Uri.parse(`d2mpq://${mpq}/${targetPath.replace(/\\/g, "/")}`);
+            data = await vscode.workspace.fs.readFile(uri);
+            if (data.length > 0) break;
+          } catch { /* try next */ }
+        }
+        if (!data || data.length === 0) continue;
+
+        const text = new TextDecoder("latin1").decode(data);
+        const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+        if (lines.length < 2) continue;
+
+        const headers = lines[0].split("\t");
+        const colIdx = headers.findIndex(h => h.toLowerCase() === column.toLowerCase());
+        if (colIdx < 0) continue;
+
+        const values = new Set<string>();
+        for (let i = 1; i < lines.length; i++) {
+          const cells = lines[i].split("\t");
+          const val = cells[colIdx]?.trim();
+          if (val && val !== "Expansion" && val !== "expansion") {
+            values.add(val);
+          }
+        }
+        resolvedValues.set(key, Array.from(values).sort());
+      } catch (err) {
+        console.log(`[D2 Workshop] Could not resolve ref ${key}: ${err}`);
+      }
+    }
+
+    if (resolvedValues.size === 0) return schema;
+
+    // Clone schema and inject values
+    const enriched: TxtSchema = JSON.parse(JSON.stringify(schema));
+    for (const [colName, col] of Object.entries(enriched.columns)) {
+      if (col.type === "ref" && col.target && col.targetColumn) {
+        const key = `${col.target}:${col.targetColumn}`;
+        const vals = resolvedValues.get(key);
+        if (vals) {
+          col.values = vals;
+        }
+      }
+    }
+
+    console.log(`[D2 Workshop] Resolved ${resolvedValues.size} ref targets with ${Array.from(resolvedValues.values()).reduce((s, v) => s + v.length, 0)} total values`);
+    return enriched;
   }
 
   private getFileName(uri: vscode.Uri): string {
