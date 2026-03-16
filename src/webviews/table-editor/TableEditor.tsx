@@ -96,9 +96,13 @@ function validateCell(
       if (isNaN(num)) return "Must be a number";
       break;
     }
-    case "enum": {
-      if (schema.values && !schema.values.includes(value)) {
-        return `Must be one of: ${schema.values.join(", ")}`;
+    case "enum":
+    case "ref": {
+      if (schema.values && schema.values.length > 0 && !schema.values.includes(value)) {
+        if (schema.values.length <= 20) {
+          return `Must be one of: ${schema.values.join(", ")}`;
+        }
+        return `Unknown value "${value}" (${schema.values.length} valid options)`;
       }
       break;
     }
@@ -331,6 +335,102 @@ export function TableEditor() {
   );
 }
 
+/** Threshold: enums with more values than this get autocomplete instead of dropdown */
+const AUTOCOMPLETE_THRESHOLD = 20;
+
+function AutocompleteInput({
+  value,
+  options,
+  onCommit,
+  onCancel,
+}: {
+  value: string;
+  options: string[];
+  onCommit: (val: string) => void;
+  onCancel: () => void;
+}) {
+  const [text, setText] = useState(value);
+  const [highlightIdx, setHighlightIdx] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  const filtered = useMemo(() => {
+    if (!text) return options.slice(0, 50);
+    const lower = text.toLowerCase();
+    return options.filter((o) => o.toLowerCase().includes(lower)).slice(0, 50);
+  }, [text, options]);
+
+  // Scroll highlighted item into view
+  useEffect(() => {
+    if (highlightIdx >= 0 && listRef.current) {
+      const item = listRef.current.children[highlightIdx] as HTMLElement;
+      if (item) item.scrollIntoView({ block: "nearest" });
+    }
+  }, [highlightIdx]);
+
+  const commit = (val: string) => {
+    onCommit(val);
+  };
+
+  return (
+    <div className="autocomplete-wrapper">
+      <input
+        ref={inputRef}
+        className="cell-input"
+        value={text}
+        onChange={(e) => {
+          setText(e.target.value);
+          setHighlightIdx(-1);
+        }}
+        onBlur={(e) => {
+          // Delay to allow click on dropdown item
+          setTimeout(() => {
+            commit(text);
+          }, 150);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setHighlightIdx((prev) => Math.min(prev + 1, filtered.length - 1));
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setHighlightIdx((prev) => Math.max(prev - 1, 0));
+          } else if (e.key === "Enter") {
+            e.preventDefault();
+            if (highlightIdx >= 0 && filtered[highlightIdx]) {
+              commit(filtered[highlightIdx]);
+            } else {
+              commit(text);
+            }
+          } else if (e.key === "Escape") {
+            onCancel();
+          } else if (e.key === "Tab") {
+            commit(text);
+          }
+        }}
+        autoFocus
+      />
+      {filtered.length > 0 && (
+        <div ref={listRef} className="autocomplete-dropdown">
+          {filtered.map((opt, i) => (
+            <div
+              key={opt}
+              className={`autocomplete-item ${i === highlightIdx ? "highlighted" : ""}`}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                commit(opt);
+              }}
+              onMouseEnter={() => setHighlightIdx(i)}
+            >
+              {opt}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function EditableCell({
   value,
   error,
@@ -351,8 +451,11 @@ function EditableCell({
   }, [value, editing]);
 
   if (editing) {
-    // Enum columns get a dropdown
-    if (schema?.type === "enum" && schema.values) {
+    const enumValues = schema?.values;
+    const hasValues = enumValues && enumValues.length > 0;
+
+    // Small enum: dropdown select
+    if (schema?.type === "enum" && hasValues && enumValues.length <= AUTOCOMPLETE_THRESHOLD) {
       return (
         <select
           className="cell-select"
@@ -367,12 +470,44 @@ function EditableCell({
           autoFocus
         >
           <option value="">—</option>
-          {schema.values.map((v) => (
+          {enumValues.map((v) => (
             <option key={v} value={v}>
               {v}
             </option>
           ))}
         </select>
+      );
+    }
+
+    // Large enum or ref with values: autocomplete
+    if (hasValues && enumValues.length > AUTOCOMPLETE_THRESHOLD) {
+      return (
+        <AutocompleteInput
+          value={editValue}
+          options={enumValues}
+          onCommit={(val) => {
+            setEditValue(val);
+            if (val !== value) onChange(val);
+            setEditing(false);
+          }}
+          onCancel={() => {
+            setEditing(false);
+            setEditValue(value);
+          }}
+        />
+      );
+    }
+
+    // Boolean: simple toggle
+    if (schema?.type === "boolean") {
+      const newVal = value === "1" ? "0" : "1";
+      onChange(newVal);
+      setEditValue(newVal);
+      setEditing(false);
+      return (
+        <span className="cell-value">
+          {newVal}
+        </span>
       );
     }
 
@@ -413,7 +548,7 @@ function EditableCell({
   return (
     <span
       className={`cell-value ${error ? "cell-error" : ""}`}
-      title={error || undefined}
+      title={error || schema?.description || undefined}
       onDoubleClick={() => setEditing(true)}
     >
       {value || "\u00A0"}
