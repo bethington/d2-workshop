@@ -181,10 +181,35 @@ export function TableEditor() {
 
   const columnHelper = createColumnHelper<string[]>();
 
+  // Merge schema enum values with unique values found in the actual data.
+  // This prevents false validation errors when mods use different values than vanilla.
+  const mergedColumnSchemas = useMemo(() => {
+    if (!schema) return {};
+    const result: Record<string, ColumnSchema> = {};
+    for (const [i, header] of data.headers.entries()) {
+      const colSchema = schema.columns[header];
+      if (!colSchema) continue;
+      if ((colSchema.type === "enum" || colSchema.type === "ref") && colSchema.values?.length) {
+        // Collect unique non-empty values from this column's data
+        const dataValues = new Set<string>();
+        for (const row of data.rows) {
+          const v = row[i]?.trim();
+          if (v) dataValues.add(v);
+        }
+        // Merge: schema values + data values (deduped, sorted)
+        const merged = new Set([...colSchema.values, ...dataValues]);
+        result[header] = { ...colSchema, values: Array.from(merged).sort() };
+      } else {
+        result[header] = colSchema;
+      }
+    }
+    return result;
+  }, [schema, data]);
+
   const columns = useMemo(
     () =>
       data.headers.map((header, index) => {
-        const colSchema = schema?.columns[header];
+        const colSchema = mergedColumnSchemas[header] || schema?.columns[header];
 
         return columnHelper.accessor((row) => row[index] || "", {
           id: header || `col_${index}`,
@@ -213,7 +238,7 @@ export function TableEditor() {
           size: Math.max(80, Math.min(200, header.length * 9)),
         });
       }),
-    [data.headers, schema, updateCell]
+    [data.headers, schema, mergedColumnSchemas, updateCell]
   );
 
   const table = useReactTable({
