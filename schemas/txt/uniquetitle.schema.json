@@ -26,7 +26,8 @@
         "Overlord",
         "Prince",
         "Warlord"
-      ]
+      ],
+      "description": "Display title for unique monsters"
     },
     "MonType1": {
       "type": "boolean",

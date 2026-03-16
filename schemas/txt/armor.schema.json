@@ -23,7 +23,8 @@
       "description": "Item completion flag"
     },
     "uniqueonly": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Only spawns as unique quality"
     },
     "minac": {
       "type": "integer",
@@ -92,7 +93,8 @@
       "description": "Alternate character graphics code"
     },
     "OpenBetaGfx": {
-      "type": "string"
+      "type": "string",
+      "description": "Open Beta graphics code (legacy)"
     },
     "ubercode": {
       "type": "string",
@@ -200,32 +202,38 @@
     "rArm": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Right arm animation component layer"
     },
     "lArm": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Left arm animation component layer"
     },
     "Torso": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Torso animation component layer"
     },
     "Legs": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Legs animation component layer"
     },
     "rSPad": {
       "type": "integer",
       "min": 1,
-      "max": 2
+      "max": 2,
+      "description": "Right shoulder pad animation component layer"
     },
     "lSPad": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Left shoulder pad animation component layer"
     },
     "useable": {
       "type": "boolean",
@@ -260,7 +268,8 @@
     "sound": {
       "type": "integer",
       "min": 2,
-      "max": 36
+      "max": 36,
+      "description": "Sound effect index when item is used or dropped"
     },
     "unique": {
       "type": "boolean",
@@ -277,7 +286,8 @@
       "description": "Transparency type code"
     },
     "quivered": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item uses quiver ammunition"
     },
     "lightradius": {
       "type": "integer",
@@ -329,7 +339,8 @@
     "bitfield1": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Bitfield flags for item properties"
     },
     "CharsiMin": {
       "type": "integer",
@@ -380,7 +391,8 @@
     "GheedMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Gheed magic stock level"
     },
     "AkaraMin": {
       "type": "integer",
@@ -405,7 +417,8 @@
     "AkaraMagicLvl": {
       "type": "integer",
       "min": 255,
-      "max": 255
+      "max": 255,
+      "description": "Akara magic stock level"
     },
     "FaraMin": {
       "type": "integer",
@@ -431,7 +444,8 @@
     "FaraMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Fara magic stock level"
     },
     "LysanderMin": {
       "type": "integer",
@@ -456,7 +470,8 @@
     "LysanderMagicLvl": {
       "type": "integer",
       "min": 255,
-      "max": 255
+      "max": 255,
+      "description": "Lysander magic stock level"
     },
     "DrognanMin": {
       "type": "integer",
@@ -481,7 +496,8 @@
     "DrognanMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Drognan magic stock level"
     },
     "HraltiMin": {
       "type": "integer",
@@ -508,7 +524,8 @@
     "HratliMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Hratli magic stock level"
     },
     "AlkorMin": {
       "type": "integer",
@@ -533,7 +550,8 @@
     "AlkorMagicLvl": {
       "type": "integer",
       "min": 255,
-      "max": 255
+      "max": 255,
+      "description": "Alkor magic stock level"
     },
     "OrmusMin": {
       "type": "integer",
@@ -558,7 +576,8 @@
     "OrmusMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Ormus magic stock level"
     },
     "ElzixMin": {
       "type": "integer",
@@ -574,7 +593,8 @@
     "ElzixMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Elzix magic stock level"
     },
     "ElzixMagicMin": {
       "type": "integer",
@@ -610,7 +630,8 @@
     "AshearaMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Asheara magic stock level"
     },
     "CainMin": {
       "type": "integer",
@@ -636,7 +657,8 @@
     "CainMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Cain magic stock level"
     },
     "HalbuMin": {
       "type": "integer",
@@ -661,7 +683,8 @@
     "HalbuMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Halbu magic stock level"
     },
     "JamellaMin": {
       "type": "integer",
@@ -686,13 +709,16 @@
     "JamellaMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Jamella magic stock level"
     },
     "Source Art": {
-      "type": "string"
+      "type": "string",
+      "description": "Source art reference (development use)"
     },
     "Game Art": {
-      "type": "string"
+      "type": "string",
+      "description": "Game art reference (development use)"
     },
     "Amazon": {
       "type": "boolean",

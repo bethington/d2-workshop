@@ -34,7 +34,8 @@
         "object",
         "objects",
         "test"
-      ]
+      ],
+      "description": "Character or entity type this overlay applies to"
     },
     "PreDraw": {
       "type": "boolean",
@@ -61,32 +62,38 @@
     "Xoffset": {
       "type": "integer",
       "min": -10,
-      "max": 10
+      "max": 10,
+      "description": "Horizontal position offset in pixels"
     },
     "Yoffset": {
       "type": "integer",
       "min": -15,
-      "max": 1
+      "max": 1,
+      "description": "Vertical position offset in pixels"
     },
     "Height1": {
       "type": "integer",
       "min": -30,
-      "max": 14
+      "max": 14,
+      "description": "Height offset for overhead overlays"
     },
     "Height2": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Height offset for medium overlays"
     },
     "Height3": {
       "type": "integer",
       "min": -14,
-      "max": 0
+      "max": 0,
+      "description": "Height offset for low overlays"
     },
     "Height4": {
       "type": "integer",
       "min": -60,
-      "max": 0
+      "max": 0,
+      "description": "Height offset for ground-level overlays"
     },
     "AnimRate": {
       "type": "integer",

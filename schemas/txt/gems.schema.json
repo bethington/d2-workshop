@@ -304,7 +304,8 @@
     "weaponMod1Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for weapon modifier 1"
     },
     "weaponMod1Min": {
       "type": "integer",
@@ -596,7 +597,8 @@
     "weaponMod2Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for weapon modifier 2"
     },
     "weaponMod2Min": {
       "type": "integer",
@@ -888,7 +890,8 @@
     "weaponMod3Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for weapon modifier 3"
     },
     "weaponMod3Min": {
       "type": "integer",
@@ -1180,7 +1183,8 @@
     "helmMod1Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for helm modifier 1"
     },
     "helmMod1Min": {
       "type": "integer",
@@ -1472,7 +1476,8 @@
     "helmMod2Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for helm modifier 2"
     },
     "helmMod2Min": {
       "type": "integer",
@@ -1764,7 +1769,8 @@
     "helmMod3Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for helm modifier 3"
     },
     "helmMod3Min": {
       "type": "integer",
@@ -2056,7 +2062,8 @@
     "shieldMod1Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for shield modifier 1"
     },
     "shieldMod1Min": {
       "type": "integer",
@@ -2348,7 +2355,8 @@
     "shieldMod2Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for shield modifier 2"
     },
     "shieldMod2Min": {
       "type": "integer",
@@ -2640,7 +2648,8 @@
     "shieldMod3Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter offset for shield modifier 3"
     },
     "shieldMod3Min": {
       "type": "integer",

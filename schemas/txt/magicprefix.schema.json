@@ -905,7 +905,8 @@
       "description": "Modifier 3 maximum value"
     },
     "effect1": {
-      "type": "string"
+      "type": "string",
+      "description": "Visual effect 1 description"
     },
     "effect2": {
       "type": "enum",
@@ -920,7 +921,8 @@
         "dam% 166 180",
         "dam% 181 200",
         "noblock"
-      ]
+      ],
+      "description": "Visual effect 2 description"
     },
     "transform": {
       "type": "integer",
@@ -987,7 +989,8 @@
       "description": "Applies to amulets"
     },
     "charm": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to charms"
     },
     "orb": {
       "type": "boolean",

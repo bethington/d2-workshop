@@ -20,7 +20,8 @@
         "Sorceress Fire",
         "Sorceress Lightning"
       ],
-      "required": true
+      "required": true,
+      "description": "Template name identifier"
     },
     "Name": {
       "type": "string",
@@ -70,7 +71,8 @@
     "tot": {
       "type": "integer",
       "min": 80,
-      "max": 105
+      "max": 105,
+      "description": "Total starting stat points allocated"
     },
     "LifePerLevel": {
       "type": "integer",
@@ -99,43 +101,52 @@
     "Hitpoints": {
       "type": "integer",
       "min": 24,
-      "max": 89
+      "max": 89,
+      "description": "Starting hit points"
     },
     "Mana": {
       "type": "integer",
       "min": 10,
-      "max": 56
+      "max": 56,
+      "description": "Starting mana points"
     },
     "ManaRegenBonus": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Bonus mana regeneration rate"
     },
     "Velocity": {
       "type": "integer",
       "min": 100,
-      "max": 100
+      "max": 100,
+      "description": "Movement speed multiplier (percentage)"
     },
     "AttackRate": {
       "type": "integer",
       "min": 100,
-      "max": 100
+      "max": 100,
+      "description": "Attack speed multiplier (percentage)"
     },
     "OtherRate": {
       "type": "integer",
       "min": 100,
-      "max": 100
+      "max": 100,
+      "description": "Other animation speed multiplier (percentage)"
     },
     "RightSkill": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Default right-click skill ID"
     },
     "Total Skills": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Total number of pre-assigned skills"
     },
     "SkillName": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill display name"
     },
     "Skill1": {
       "type": "integer",
@@ -146,7 +157,8 @@
     "SkillLevel1": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Skill 1 level"
     },
     "Skill2": {
       "type": "integer",
@@ -156,7 +168,8 @@
     },
     "SkillLevel2": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 2 level"
     },
     "Skill3": {
       "type": "integer",
@@ -165,7 +178,8 @@
     },
     "SkillLevel3": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 3 level"
     },
     "Skill4": {
       "type": "integer",
@@ -174,7 +188,8 @@
     },
     "SkillLevel4": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 4 level"
     },
     "Skill5": {
       "type": "integer",
@@ -183,7 +198,8 @@
     },
     "SkillLevel5": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 5 level"
     },
     "Skill6": {
       "type": "integer",
@@ -192,7 +208,8 @@
     },
     "SkillLevel6": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 6 level"
     },
     "Skill7": {
       "type": "integer",
@@ -201,7 +218,8 @@
     },
     "SkillLevel7": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 7 level"
     },
     "Skill8": {
       "type": "integer",
@@ -210,7 +228,8 @@
     },
     "SkillLevel8": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 8 level"
     },
     "Skill9": {
       "type": "integer",
@@ -219,10 +238,12 @@
     },
     "SkillLevel9": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Skill 9 level"
     },
     "baseWClass": {
-      "type": "string"
+      "type": "string",
+      "description": "Base weapon class for animations"
     },
     "item1": {
       "type": "enum",

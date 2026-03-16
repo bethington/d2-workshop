@@ -649,14 +649,16 @@
         "improved damage",
         "improved durability",
         "improved to hit"
-      ]
+      ],
+      "description": "Quality effect 1 description"
     },
     "effect2": {
       "type": "enum",
       "values": [
         "improved damage",
         "improved durability"
-      ]
+      ],
+      "description": "Quality effect 2 description"
     },
     "armor": {
       "type": "boolean",

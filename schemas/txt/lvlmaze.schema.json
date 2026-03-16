@@ -16,7 +16,8 @@
     "Rooms": {
       "type": "integer",
       "min": 1,
-      "max": 61
+      "max": 61,
+      "description": "Number of rooms in the maze"
     },
     "SizeX": {
       "type": "integer",
@@ -33,7 +34,8 @@
     "Merge": {
       "type": "integer",
       "min": 0,
-      "max": 1000
+      "max": 1000,
+      "description": "Room merge probability (0-1000)"
     },
     "Beta": {
       "type": "boolean",

@@ -23,7 +23,8 @@
       "description": "Item completion flag"
     },
     "uniqueonly": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Only spawns as unique quality"
     },
     "mindam": {
       "type": "integer",
@@ -74,7 +75,8 @@
     "weaponspeedenum": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Weapon speed enumeration index"
     },
     "minmisdam": {
       "type": "integer",
@@ -90,12 +92,14 @@
     },
     "misspeed": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Missile travel speed"
     },
     "basespeed": {
       "type": "integer",
       "min": 7,
-      "max": 20
+      "max": 20,
+      "description": "Base weapon attack speed"
     },
     "modspeed": {
       "type": "enum",
@@ -120,10 +124,12 @@
         "7.2",
         "8",
         "9"
-      ]
+      ],
+      "description": "Modified weapon speed value"
     },
     "dam/frame": {
-      "type": "string"
+      "type": "string",
+      "description": "Damage per frame calculation"
     },
     "reqstr": {
       "type": "integer",
@@ -161,7 +167,8 @@
     },
     "replenish": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Quantity replenishment rate"
     },
     "code": {
       "type": "string",
@@ -172,7 +179,8 @@
       "description": "Alternate character graphics code"
     },
     "OpenBetaGfx": {
-      "type": "string"
+      "type": "string",
+      "description": "Open Beta graphics code (legacy)"
     },
     "ubercode": {
       "type": "string",
@@ -226,7 +234,8 @@
     "weapongroupenum": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Weapon group enumeration index"
     },
     "1or2handed": {
       "type": "boolean",
@@ -297,7 +306,8 @@
     "reload": {
       "type": "integer",
       "min": 3,
-      "max": 12
+      "max": 12,
+      "description": "Reload time in frames"
     },
     "range": {
       "type": "enum",
@@ -309,7 +319,8 @@
         "1.25*d*d",
         "1.5*d*d",
         "d*d"
-      ]
+      ],
+      "description": "Missile range formula"
     },
     "component": {
       "type": "integer",
@@ -398,7 +409,8 @@
         "magically charged",
         "primarily thrown",
         "reload lag between shots"
-      ]
+      ],
+      "description": "Special weapon property description"
     },
     "useable": {
       "type": "boolean",
@@ -415,7 +427,8 @@
     "sound": {
       "type": "integer",
       "min": 5,
-      "max": 30
+      "max": 30,
+      "description": "Sound effect index when item is used or dropped"
     },
     "unique": {
       "type": "boolean",
@@ -432,7 +445,8 @@
       "description": "Transparency type code"
     },
     "quivered": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item uses quiver ammunition"
     },
     "lightradius": {
       "type": "integer",
@@ -485,50 +499,60 @@
     "damvsundead": {
       "type": "integer",
       "min": 33,
-      "max": 150
+      "max": 150,
+      "description": "Bonus damage percentage vs undead"
     },
     "damvsdemon": {
       "type": "integer",
       "min": 33,
-      "max": 150
+      "max": 150,
+      "description": "Bonus damage percentage vs demons"
     },
     "damvslarge": {
       "type": "integer",
       "min": 33,
-      "max": 150
+      "max": 150,
+      "description": "Bonus damage percentage vs large monsters"
     },
     "damvssmall": {
       "type": "integer",
       "min": 33,
-      "max": 150
+      "max": 150,
+      "description": "Bonus damage percentage vs small monsters"
     },
     "damvsflying": {
       "type": "integer",
       "min": 33,
-      "max": 120
+      "max": 120,
+      "description": "Bonus damage percentage vs flying monsters"
     },
     "tohitvsundead": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Attack rating bonus vs undead"
     },
     "tohitvsdemon": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Attack rating bonus vs demons"
     },
     "tohitvslarge": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Attack rating bonus vs large monsters"
     },
     "tohitvssmall": {
       "type": "integer",
       "min": -15,
-      "max": 0
+      "max": 0,
+      "description": "Attack rating bonus vs small monsters"
     },
     "tohitvsflying": {
       "type": "integer",
       "min": -15,
-      "max": 0
+      "max": 0,
+      "description": "Attack rating bonus vs flying monsters"
     },
     "gemoffset": {
       "type": "integer",
@@ -538,7 +562,8 @@
     "bitfield1": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Bitfield flags for item properties"
     },
     "CharsiMin": {
       "type": "integer",
@@ -592,7 +617,8 @@
     "GheedMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Gheed magic stock level"
     },
     "AkaraMin": {
       "type": "integer",
@@ -621,7 +647,8 @@
     "AkaraMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Akara magic stock level"
     },
     "FaraMin": {
       "type": "integer",
@@ -648,7 +675,8 @@
     "FaraMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Fara magic stock level"
     },
     "LysanderMin": {
       "type": "integer",
@@ -677,7 +705,8 @@
     "LysanderMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Lysander magic stock level"
     },
     "DrognanMin": {
       "type": "integer",
@@ -706,7 +735,8 @@
     "DrognanMagicLvl": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Drognan magic stock level"
     },
     "HraltiMin": {
       "type": "integer",
@@ -731,7 +761,8 @@
     "HratliMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Hratli magic stock level"
     },
     "AlkorMin": {
       "type": "integer",
@@ -760,7 +791,8 @@
     "AlkorMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Alkor magic stock level"
     },
     "OrmusMin": {
       "type": "integer",
@@ -789,7 +821,8 @@
     "OrmusMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Ormus magic stock level"
     },
     "ElzixMin": {
       "type": "integer",
@@ -816,7 +849,8 @@
     "ElzixMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Elzix magic stock level"
     },
     "AshearaMin": {
       "type": "integer",
@@ -842,7 +876,8 @@
     "AshearaMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Asheara magic stock level"
     },
     "CainMin": {
       "type": "integer",
@@ -869,7 +904,8 @@
     "CainMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Cain magic stock level"
     },
     "HalbuMin": {
       "type": "integer",
@@ -895,7 +931,8 @@
     "HalbuMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Halbu magic stock level"
     },
     "JamellaMin": {
       "type": "integer",
@@ -924,13 +961,16 @@
     "JamellaMagicLvl": {
       "type": "integer",
       "min": 1,
-      "max": 255
+      "max": 255,
+      "description": "Jamella magic stock level"
     },
     "Source Art": {
-      "type": "string"
+      "type": "string",
+      "description": "Source art reference (development use)"
     },
     "Game Art": {
-      "type": "string"
+      "type": "string",
+      "description": "Game art reference (development use)"
     },
     "Amazon": {
       "type": "boolean",

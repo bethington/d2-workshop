@@ -36,12 +36,14 @@
     "Fade In": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "Fade-in duration in frames"
     },
     "Fade Out": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "Fade-out duration in frames"
     },
     "Defer Inst": {
       "type": "boolean",
@@ -84,13 +86,16 @@
     "Priority": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Playback priority (0-255, higher = more important)"
     },
     "Stream": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Stream from disk instead of loading into memory"
     },
     "Stereo": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Stereo audio playback"
     },
     "Tracking": {
       "type": "boolean",
