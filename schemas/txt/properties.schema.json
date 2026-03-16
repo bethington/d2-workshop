@@ -6,7 +6,7 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Unique 3-4 character item code"
+      "description": "Unique property code identifier"
     },
     "Done": {
       "type": "boolean"
@@ -16,7 +16,7 @@
     },
     "Description": {
       "type": "string",
-      "description": "Recipe description/identifier"
+      "description": "Human-readable description of the property"
     },
     "Param": {
       "type": "enum",

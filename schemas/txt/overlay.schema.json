@@ -11,7 +11,7 @@
     },
     "Filename": {
       "type": "string",
-      "description": "Audio file reference"
+      "description": "DCC/DC6 animation file reference"
     },
     "Frames": {
       "type": "integer",
@@ -70,7 +70,9 @@
       "max": 14
     },
     "Height2": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "Height3": {
       "type": "integer",

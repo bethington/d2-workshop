@@ -16,8 +16,10 @@
       "description": "Applies to helms"
     },
     "shield": {
-      "type": "boolean",
-      "description": "Applies to shields"
+      "type": "integer",
+      "description": "Applies to shields",
+      "min": 0,
+      "max": 1
     },
     "sword": {
       "type": "boolean",

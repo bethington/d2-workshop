@@ -34,8 +34,10 @@
       "description": "Modifier 1 property code"
     },
     "mod1offset": {
-      "type": "boolean",
-      "description": "Modifier 1 value offset"
+      "type": "integer",
+      "description": "Modifier 1 value offset",
+      "min": 0,
+      "max": 1
     },
     "mod1min": {
       "type": "integer",
@@ -58,8 +60,10 @@
       "description": "Modifier 2 property code"
     },
     "mod2offset": {
-      "type": "boolean",
-      "description": "Modifier 2 value offset"
+      "type": "integer",
+      "description": "Modifier 2 value offset",
+      "min": 0,
+      "max": 1
     },
     "mod2min": {
       "type": "integer",
@@ -78,8 +82,10 @@
       "description": "Modifier 3 property code"
     },
     "mod3offset": {
-      "type": "boolean",
-      "description": "Modifier 3 value offset"
+      "type": "integer",
+      "description": "Modifier 3 value offset",
+      "min": 0,
+      "max": 1
     },
     "mod3min": {
       "type": "string",
@@ -108,8 +114,10 @@
       ]
     },
     "transform": {
-      "type": "boolean",
-      "description": "Character model color palette transform"
+      "type": "integer",
+      "description": "Character model color palette transform",
+      "min": 0,
+      "max": 1
     },
     "transformcolor": {
       "type": "integer",
@@ -126,8 +134,10 @@
       "description": "Applies to weapons"
     },
     "shield": {
-      "type": "boolean",
-      "description": "Applies to shields"
+      "type": "integer",
+      "description": "Applies to shields",
+      "min": 0,
+      "max": 1
     },
     "thrown": {
       "type": "boolean",

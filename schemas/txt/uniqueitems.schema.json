@@ -17,19 +17,25 @@
       "description": "Beta content flag (unused)"
     },
     "code": {
-      "type": "string",
-      "description": "Unique 3-4 character item code"
+      "type": "ref",
+      "description": "Base item code (references Armor/Weapons/Misc code)",
+      "target": "armor.txt",
+      "targetColumn": "code"
     },
     "type": {
       "type": "string",
       "description": "Primary item type code (references ItemTypes.txt)"
     },
     "transform": {
-      "type": "boolean",
-      "description": "Character model color palette transform"
+      "type": "integer",
+      "description": "Character model color palette transform",
+      "min": 0,
+      "max": 1
     },
     "invtransform": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "transformcolor": {
       "type": "integer",
@@ -47,7 +53,9 @@
       "type": "string"
     },
     "ItemMod1Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod1Min": {
       "type": "integer",
@@ -65,7 +73,9 @@
       "type": "string"
     },
     "ItemMod2Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod2Min": {
       "type": "integer",
@@ -83,7 +93,9 @@
       "type": "string"
     },
     "ItemMod3Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod3Min": {
       "type": "integer",
@@ -101,7 +113,9 @@
       "type": "string"
     },
     "ItemMod4Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod4Min": {
       "type": "integer",
@@ -119,7 +133,9 @@
       "type": "string"
     },
     "ItemMod5Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod5Min": {
       "type": "integer",
@@ -155,7 +171,9 @@
       ]
     },
     "ItemMod6Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod6Min": {
       "type": "integer",
@@ -181,7 +199,9 @@
       ]
     },
     "ItemMod7Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod7Min": {
       "type": "integer",
@@ -199,43 +219,61 @@
       "type": "string"
     },
     "ItemMod8Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod8Min": {
-      "type": "boolean",
-      "description": "itemmod8 minimum value"
+      "type": "integer",
+      "description": "itemmod8 minimum value",
+      "min": 0,
+      "max": 1
     },
     "ItemMod8Max": {
-      "type": "boolean",
-      "description": "itemmod8 maximum value"
+      "type": "integer",
+      "description": "itemmod8 maximum value",
+      "min": 0,
+      "max": 1
     },
     "ItemMod9Code": {
       "type": "string"
     },
     "ItemMod9Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod9Min": {
-      "type": "boolean",
-      "description": "itemmod9 minimum value"
+      "type": "integer",
+      "description": "itemmod9 minimum value",
+      "min": 0,
+      "max": 1
     },
     "ItemMod9Max": {
-      "type": "boolean",
-      "description": "itemmod9 maximum value"
+      "type": "integer",
+      "description": "itemmod9 maximum value",
+      "min": 0,
+      "max": 1
     },
     "ItemMod10Code": {
       "type": "string"
     },
     "ItemMod10Offset": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "ItemMod10Min": {
-      "type": "boolean",
-      "description": "itemmod10 minimum value"
+      "type": "integer",
+      "description": "itemmod10 minimum value",
+      "min": 0,
+      "max": 1
     },
     "ItemMod10Max": {
-      "type": "boolean",
-      "description": "itemmod10 maximum value"
+      "type": "integer",
+      "description": "itemmod10 maximum value",
+      "min": 0,
+      "max": 1
     }
   }
 }

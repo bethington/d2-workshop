@@ -3,10 +3,12 @@
   "description": "Experience requirements per level for each character class.",
   "columns": {
     "Level": {
-      "type": "string",
+      "type": "integer",
       "required": true,
       "unique": true,
-      "description": "Base item level"
+      "description": "Character level (1-99)",
+      "min": 0,
+      "max": 99
     },
     "Amazon": {
       "type": "integer",

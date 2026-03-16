@@ -22,7 +22,7 @@
       "type": "integer",
       "min": 271,
       "max": 561,
-      "description": "Character class restriction"
+      "description": "Monster class animation index"
     },
     "Act": {
       "type": "integer",
@@ -40,7 +40,7 @@
       "type": "integer",
       "min": 3,
       "max": 75,
-      "description": "Base item level"
+      "description": "Hireling base level"
     },
     "Seller": {
       "type": "integer",
@@ -205,16 +205,10 @@
       "max": 75
     },
     "Skill1": {
-      "type": "enum",
-      "values": [
-        "Bash",
-        "Charged Bolt",
-        "Glacial Spike",
-        "Inferno",
-        "Inner Sight",
-        "Jab"
-      ],
-      "description": "Skill 1 reference"
+      "type": "ref",
+      "description": "Skill 1 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode1": {
       "type": "integer",
@@ -310,7 +304,9 @@
       "description": "Skill 3 usage probability (%)"
     },
     "ChancePerLevel3": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "Level3": {
       "type": "integer",
@@ -406,8 +402,10 @@
       "description": "Applies to weapons"
     },
     "Shield": {
-      "type": "boolean",
-      "description": "Applies to shields"
+      "type": "integer",
+      "description": "Applies to shields",
+      "min": 0,
+      "max": 1
     }
   }
 }

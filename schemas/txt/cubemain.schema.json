@@ -18,7 +18,9 @@
       "description": "Number of required input items"
     },
     "min difficulty": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "expansion": {
       "type": "boolean",
@@ -35,7 +37,9 @@
       "max": 31
     },
     "day of week": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "playerclass": {
       "type": "enum",
@@ -89,10 +93,14 @@
       "max": 4
     },
     "param2 a": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "sockets a": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 a": {
       "type": "string"
@@ -162,10 +170,14 @@
       "max": 5
     },
     "param2 b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "sockets b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 b": {
       "type": "string"
@@ -210,7 +222,9 @@
       ]
     },
     "param1 c": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "param2 c": {
       "type": "integer",
@@ -218,7 +232,9 @@
       "max": 122
     },
     "sockets c": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 c": {
       "type": "string"
@@ -264,7 +280,9 @@
       ]
     },
     "number of d": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "modifier d": {
       "type": "enum",
@@ -277,13 +295,19 @@
       ]
     },
     "param1 d": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "param2 d": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "sockets d": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 d": {
       "type": "string"
@@ -320,19 +344,27 @@
       ]
     },
     "number of e": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "modifier e": {
       "type": "string"
     },
     "param1 e": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "param2 e": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "sockets e": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 e": {
       "type": "string"
@@ -359,19 +391,27 @@
       "type": "string"
     },
     "number of f": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "modifier f": {
       "type": "string"
     },
     "param1 f": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "param2 f": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "sockets f": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "gem 1 f": {
       "type": "string"
@@ -398,13 +438,17 @@
       "type": "string"
     },
     "number of g": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "modifier g": {
       "type": "string"
     },
     "param1 g": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "param 2 g": {
       "type": "boolean"
@@ -428,19 +472,27 @@
       "type": "string"
     },
     "function": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "product a": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "product code a": {
       "type": "string"
     },
     "mods a": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "uses a": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "fixedlevel a": {
       "type": "integer",
@@ -632,25 +684,37 @@
       "description": "mod5a maximum value"
     },
     "product b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "product code b": {
       "type": "string"
     },
     "mods b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "uses b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "fixedlevel b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "playerlevel pct b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "itemlevel pct b": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0,
+      "max": 1
     },
     "pmod1b": {
       "type": "string"
@@ -726,8 +790,10 @@
       "description": "mod4b minimum value"
     },
     "mod4bmax": {
-      "type": "boolean",
-      "description": "mod4b maximum value"
+      "type": "integer",
+      "description": "mod4b maximum value",
+      "min": 0,
+      "max": 1
     },
     "mod5b": {
       "type": "string"
@@ -743,8 +809,10 @@
       "description": "mod5b minimum value"
     },
     "mod5bmax": {
-      "type": "boolean",
-      "description": "mod5b maximum value"
+      "type": "integer",
+      "description": "mod5b maximum value",
+      "min": 0,
+      "max": 1
     }
   }
 }

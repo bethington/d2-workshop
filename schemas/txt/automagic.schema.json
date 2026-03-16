@@ -133,8 +133,10 @@
       "description": "Modifier 3 maximum value"
     },
     "transform": {
-      "type": "boolean",
-      "description": "Character model color palette transform"
+      "type": "integer",
+      "description": "Character model color palette transform",
+      "min": 0,
+      "max": 1
     },
     "transformcolor": {
       "type": "enum",

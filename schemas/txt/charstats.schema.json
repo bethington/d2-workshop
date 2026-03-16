@@ -3,7 +3,7 @@
   "description": "Character class base stats \u2014 starting attributes, growth rates, and default equipment.",
   "columns": {
     "class": {
-      "type": "enum",
+      "type": "string",
       "values": [
         "Amazon",
         "Barbarian",
@@ -13,7 +13,7 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Character class restriction"
+      "description": "Character class identifier"
     },
     "str": {
       "type": "integer",
@@ -176,7 +176,12 @@
       "description": "Base block percentage"
     },
     "StartSkill": {
-      "type": "boolean"
+      "type": "ref",
+      "min": 0,
+      "max": 1,
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Default right-hand skill"
     },
     "baseWClass": {
       "type": "string"
@@ -199,8 +204,10 @@
       "description": "Item 1 equipment slot"
     },
     "item1count": {
-      "type": "boolean",
-      "description": "Item 1 stack quantity"
+      "type": "integer",
+      "description": "Item 1 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item2": {
       "type": "enum",
@@ -231,8 +238,10 @@
       "description": "Starting item 3 code"
     },
     "item3loc": {
-      "type": "boolean",
-      "description": "Item 3 equipment slot"
+      "type": "integer",
+      "description": "Item 3 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item3count": {
       "type": "integer",
@@ -249,12 +258,16 @@
       "description": "Starting item 4 code"
     },
     "item4loc": {
-      "type": "boolean",
-      "description": "Item 4 equipment slot"
+      "type": "integer",
+      "description": "Item 4 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item4count": {
-      "type": "boolean",
-      "description": "Item 4 stack quantity"
+      "type": "integer",
+      "description": "Item 4 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item5": {
       "type": "enum",
@@ -265,72 +278,96 @@
       "description": "Starting item 5 code"
     },
     "item5loc": {
-      "type": "boolean",
-      "description": "Item 5 equipment slot"
+      "type": "integer",
+      "description": "Item 5 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item5count": {
-      "type": "boolean",
-      "description": "Item 5 stack quantity"
+      "type": "integer",
+      "description": "Item 5 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item6": {
       "type": "boolean",
       "description": "Starting item 6 code"
     },
     "item6loc": {
-      "type": "boolean",
-      "description": "Item 6 equipment slot"
+      "type": "integer",
+      "description": "Item 6 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item6count": {
-      "type": "boolean",
-      "description": "Item 6 stack quantity"
+      "type": "integer",
+      "description": "Item 6 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item7": {
       "type": "boolean",
       "description": "Starting item 7 code"
     },
     "item7loc": {
-      "type": "boolean",
-      "description": "Item 7 equipment slot"
+      "type": "integer",
+      "description": "Item 7 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item7count": {
-      "type": "boolean",
-      "description": "Item 7 stack quantity"
+      "type": "integer",
+      "description": "Item 7 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item8": {
       "type": "boolean",
       "description": "Starting item 8 code"
     },
     "item8loc": {
-      "type": "boolean",
-      "description": "Item 8 equipment slot"
+      "type": "integer",
+      "description": "Item 8 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item8count": {
-      "type": "boolean",
-      "description": "Item 8 stack quantity"
+      "type": "integer",
+      "description": "Item 8 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item9": {
       "type": "boolean",
       "description": "Starting item 9 code"
     },
     "item9loc": {
-      "type": "boolean",
-      "description": "Item 9 equipment slot"
+      "type": "integer",
+      "description": "Item 9 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item9count": {
-      "type": "boolean",
-      "description": "Item 9 stack quantity"
+      "type": "integer",
+      "description": "Item 9 stack quantity",
+      "min": 0,
+      "max": 1
     },
     "item10": {
       "type": "boolean",
       "description": "Starting item 10 code"
     },
     "item10loc": {
-      "type": "boolean",
-      "description": "Item 10 equipment slot"
+      "type": "integer",
+      "description": "Item 10 equipment slot",
+      "min": 0,
+      "max": 1
     },
     "item10count": {
-      "type": "boolean",
-      "description": "Item 10 stack quantity"
+      "type": "integer",
+      "description": "Item 10 stack quantity",
+      "min": 0,
+      "max": 1
     }
   }
 }

@@ -64,8 +64,10 @@
       "max": 16
     },
     "transform": {
-      "type": "boolean",
-      "description": "Character model color palette transform"
+      "type": "integer",
+      "description": "Character model color palette transform",
+      "min": 0,
+      "max": 1
     },
     "transformcolor": {
       "type": "integer",
@@ -841,12 +843,16 @@
       "max": -1
     },
     "PropertyMod17Min": {
-      "type": "boolean",
-      "description": "propertymod17 minimum value"
+      "type": "integer",
+      "description": "propertymod17 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod17Max": {
-      "type": "boolean",
-      "description": "propertymod17 maximum value"
+      "type": "integer",
+      "description": "propertymod17 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod18Code": {
       "type": "string"
@@ -857,12 +863,16 @@
       "max": -1
     },
     "PropertyMod18Min": {
-      "type": "boolean",
-      "description": "propertymod18 minimum value"
+      "type": "integer",
+      "description": "propertymod18 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod18Max": {
-      "type": "boolean",
-      "description": "propertymod18 maximum value"
+      "type": "integer",
+      "description": "propertymod18 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod19Code": {
       "type": "string"
@@ -873,12 +883,16 @@
       "max": -1
     },
     "PropertyMod19Min": {
-      "type": "boolean",
-      "description": "propertymod19 minimum value"
+      "type": "integer",
+      "description": "propertymod19 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod19Max": {
-      "type": "boolean",
-      "description": "propertymod19 maximum value"
+      "type": "integer",
+      "description": "propertymod19 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod20Code": {
       "type": "string"
@@ -889,12 +903,16 @@
       "max": -1
     },
     "PropertyMod20Min": {
-      "type": "boolean",
-      "description": "propertymod20 minimum value"
+      "type": "integer",
+      "description": "propertymod20 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod20Max": {
-      "type": "boolean",
-      "description": "propertymod20 maximum value"
+      "type": "integer",
+      "description": "propertymod20 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod21Code": {
       "type": "string"
@@ -905,12 +923,16 @@
       "max": -1
     },
     "PropertyMod21Min": {
-      "type": "boolean",
-      "description": "propertymod21 minimum value"
+      "type": "integer",
+      "description": "propertymod21 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod21Max": {
-      "type": "boolean",
-      "description": "propertymod21 maximum value"
+      "type": "integer",
+      "description": "propertymod21 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod22Code": {
       "type": "string"
@@ -921,12 +943,16 @@
       "max": -1
     },
     "PropertyMod22Min": {
-      "type": "boolean",
-      "description": "propertymod22 minimum value"
+      "type": "integer",
+      "description": "propertymod22 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod22Max": {
-      "type": "boolean",
-      "description": "propertymod22 maximum value"
+      "type": "integer",
+      "description": "propertymod22 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod23Code": {
       "type": "string"
@@ -937,12 +963,16 @@
       "max": -1
     },
     "PropertyMod23Min": {
-      "type": "boolean",
-      "description": "propertymod23 minimum value"
+      "type": "integer",
+      "description": "propertymod23 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod23Max": {
-      "type": "boolean",
-      "description": "propertymod23 maximum value"
+      "type": "integer",
+      "description": "propertymod23 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod24Code": {
       "type": "string"
@@ -953,12 +983,16 @@
       "max": -1
     },
     "PropertyMod24Min": {
-      "type": "boolean",
-      "description": "propertymod24 minimum value"
+      "type": "integer",
+      "description": "propertymod24 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod24Max": {
-      "type": "boolean",
-      "description": "propertymod24 maximum value"
+      "type": "integer",
+      "description": "propertymod24 maximum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod25Code": {
       "type": "string"
@@ -969,12 +1003,16 @@
       "max": -1
     },
     "PropertyMod25Min": {
-      "type": "boolean",
-      "description": "propertymod25 minimum value"
+      "type": "integer",
+      "description": "propertymod25 minimum value",
+      "min": 0,
+      "max": 1
     },
     "PropertyMod25Max": {
-      "type": "boolean",
-      "description": "propertymod25 maximum value"
+      "type": "integer",
+      "description": "propertymod25 maximum value",
+      "min": 0,
+      "max": 1
     }
   }
 }
