@@ -22,6 +22,8 @@ export interface MpqFileChange {
   content: string;
   /** Cell-level diffs computed at queue time */
   diffs?: CellDiff[];
+  /** If true, content is base64-encoded binary (e.g., TBL files) */
+  isBinary?: boolean;
 }
 
 export interface BinaryGlobalChange {
@@ -176,28 +178,77 @@ export class SaveQueue {
       // Create backups first
       await this.createBackups();
 
-      // Apply MPQ changes
       const mpqChanges = this.changes.filter(
         (c): c is MpqFileChange => c.type === "mpq-file"
       );
-      if (mpqChanges.length > 0) {
-        await this.publishMpqChanges(mpqChanges);
-      }
-
-      // Apply binary global changes
       const binaryChanges = this.changes.filter(
         (c): c is BinaryGlobalChange => c.type === "binary-global"
       );
-      if (binaryChanges.length > 0) {
-        await this.publishBinaryChanges(binaryChanges);
+
+      let mpqPublished = 0;
+      let binaryPublished = 0;
+      const errors: string[] = [];
+
+      // Apply MPQ changes — continue on individual failures
+      for (const change of mpqChanges) {
+        try {
+          await this.publishSingleMpqChange(change);
+          mpqPublished++;
+        } catch (err) {
+          const uri = vscode.Uri.parse(change.uri);
+          const fileName = uri.path.split("/").pop() || change.uri;
+          errors.push(`${fileName}: ${err instanceof Error ? err.message : err}`);
+        }
       }
 
-      this.clearQueue();
-      vscode.window.showInformationMessage(
-        `Successfully published ${mpqChanges.length + binaryChanges.length} change(s).`
-      );
+      // Invalidate MPQ cache after writes
+      if (mpqPublished > 0 && this.mpqManager) {
+        const mpqNames = new Set(mpqChanges.map(c => {
+          const uri = vscode.Uri.parse(c.uri);
+          return decodeURIComponent(uri.authority);
+        }));
+        for (const name of mpqNames) {
+          this.mpqManager.invalidate(name);
+        }
+      }
+
+      // Apply binary changes
+      if (binaryChanges.length > 0) {
+        try {
+          await this.publishBinaryChanges(binaryChanges);
+          binaryPublished = binaryChanges.length;
+        } catch (err) {
+          errors.push(`Binary patches: ${err instanceof Error ? err.message : err}`);
+        }
+      }
+
+      // Only clear successfully published changes
+      const totalPublished = mpqPublished + binaryPublished;
+      if (errors.length === 0) {
+        this.clearQueue();
+        vscode.window.showInformationMessage(
+          `Successfully published ${totalPublished} change(s).`
+        );
+      } else if (totalPublished > 0) {
+        // Partial success — remove published, keep failed
+        this.changes = this.changes.filter(c => {
+          if (c.type === "mpq-file") return errors.some(e => e.includes(c.uri));
+          if (c.type === "binary-global") return binaryPublished === 0;
+          return true;
+        });
+        this.saveQueue();
+        this._onDidChange.fire();
+        vscode.window.showWarningMessage(
+          `Published ${totalPublished} change(s) but ${errors.length} failed:\n${errors.join("\n")}`
+        );
+      } else {
+        vscode.window.showErrorMessage(
+          `Publish failed:\n${errors.join("\n")}`
+        );
+      }
     } catch (err) {
-      vscode.window.showErrorMessage(`Publish failed: ${err}`);
+      const msg = err instanceof Error ? err.message : String(err);
+      vscode.window.showErrorMessage(`Publish failed: ${msg}`);
     }
   }
 
@@ -228,22 +279,22 @@ export class SaveQueue {
     }
   }
 
-  private async publishMpqChanges(changes: MpqFileChange[]): Promise<void> {
+  private async publishSingleMpqChange(change: MpqFileChange): Promise<void> {
     if (!this.mpqManager) {
       throw new Error("MPQ manager not available — cannot write to MPQ archives.");
     }
 
-    for (const change of changes) {
-      const uri = vscode.Uri.parse(change.uri);
-      const mpqName = decodeURIComponent(uri.authority);
-      const internalPath = uri.path.replace(/^\//, "");
+    const uri = vscode.Uri.parse(change.uri);
+    const mpqName = decodeURIComponent(uri.authority);
+    const internalPath = uri.path.replace(/^\//, "");
 
-      // Encode content as latin1 (D2 text file encoding)
-      const data = Buffer.from(change.content, "latin1");
+    // Encode content: binary (base64) for TBL files, latin1 for text files
+    const data = change.isBinary
+      ? Buffer.from(change.content, "base64")
+      : Buffer.from(change.content, "latin1");
 
-      this.mpqManager.writeFile(mpqName, internalPath, new Uint8Array(data));
-      console.log(`[D2 Workshop] Published ${internalPath} to ${mpqName}`);
-    }
+    this.mpqManager.writeFile(mpqName, internalPath, new Uint8Array(data));
+    console.log(`[D2 Workshop] Published ${internalPath} to ${mpqName}`);
   }
 
   private async publishBinaryChanges(
@@ -268,6 +319,12 @@ export class SaveQueue {
           );
         }
 
+        if (offset + change.size > data.length) {
+          throw new Error(
+            `Write at offset ${offset} + ${change.size} bytes exceeds file size ${data.length} in ${path.basename(filePath)}`
+          );
+        }
+
         switch (change.size) {
           case 1:
             data.writeUInt8(change.value, offset);
@@ -288,10 +345,13 @@ export class SaveQueue {
   }
 
   private rvaToFileOffset(peData: Buffer, rva: number): number {
+    if (peData.length < 0x40) return -1;
     const peOffset = peData.readUInt32LE(0x3c);
+    if (peOffset + 24 > peData.length) return -1;
     const numSections = peData.readUInt16LE(peOffset + 6);
     const optHeaderSize = peData.readUInt16LE(peOffset + 20);
     const sectionTableOffset = peOffset + 24 + optHeaderSize;
+    if (sectionTableOffset + numSections * 40 > peData.length) return -1;
 
     for (let i = 0; i < numSections; i++) {
       const secOffset = sectionTableOffset + i * 40;
@@ -310,15 +370,38 @@ export class SaveQueue {
   private loadQueue(): void {
     try {
       if (fs.existsSync(this.queueFile)) {
-        this.changes = JSON.parse(fs.readFileSync(this.queueFile, "utf-8"));
+        const raw = fs.readFileSync(this.queueFile, "utf-8");
+        this.changes = JSON.parse(raw);
+        if (!Array.isArray(this.changes)) {
+          throw new Error("Queue data is not an array");
+        }
       }
-    } catch {
+    } catch (err) {
+      console.error(`[D2 Workshop] Failed to load queue: ${err}`);
+      // Preserve the corrupted file for recovery
+      if (fs.existsSync(this.queueFile)) {
+        const backupPath = this.queueFile + ".corrupted";
+        try {
+          fs.copyFileSync(this.queueFile, backupPath);
+          console.warn(`[D2 Workshop] Corrupted queue saved to ${backupPath}`);
+        } catch { /* ignore */ }
+      }
       this.changes = [];
+      vscode.window.showWarningMessage(
+        "D2 Workshop: Failed to load pending changes. Queue has been reset."
+      );
     }
   }
 
   private saveQueue(): void {
-    fs.mkdirSync(this.queueDir, { recursive: true });
-    fs.writeFileSync(this.queueFile, JSON.stringify(this.changes, null, 2));
+    try {
+      fs.mkdirSync(this.queueDir, { recursive: true });
+      // Write to temp file then rename for atomicity
+      const tmpFile = this.queueFile + ".tmp";
+      fs.writeFileSync(tmpFile, JSON.stringify(this.changes, null, 2));
+      fs.renameSync(tmpFile, this.queueFile);
+    } catch (err) {
+      console.error(`[D2 Workshop] Failed to save queue: ${err}`);
+    }
   }
 }

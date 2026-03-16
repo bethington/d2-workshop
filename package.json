@@ -51,6 +51,9 @@
         "selector": [
           {
             "filenamePattern": "*.txt"
+          },
+          {
+            "filenamePattern": "*.tbl"
           }
         ],
         "priority": "option"
@@ -74,6 +77,16 @@
         "selector": [
           {
             "filenamePattern": "*.dt1"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "d2workshop.pl2Viewer",
+        "displayName": "D2 Palette Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.pl2"
           }
         ],
         "priority": "default"

@@ -7,6 +7,7 @@ import { TableEditorProvider } from "./providers/table-editor-provider";
 import { DC6ViewerProvider } from "./providers/dc6-viewer-provider";
 import { COFViewerProvider } from "./providers/cof-viewer-provider";
 import { DT1ViewerProvider } from "./providers/dt1-viewer-provider";
+import { PL2ViewerProvider } from "./providers/pl2-viewer-provider";
 import { BinaryEditorProvider } from "./providers/binary-editor-provider";
 import { SaveQueueTreeProvider } from "./providers/save-queue-tree-provider";
 import { SaveQueue } from "./mod/save-queue";
@@ -83,6 +84,9 @@ export async function activate(context: vscode.ExtensionContext) {
   );
   context.subscriptions.push(
     DT1ViewerProvider.register(context, workspaceRoot)
+  );
+  context.subscriptions.push(
+    PL2ViewerProvider.register(context)
   );
 
   // Initialize mod profile manager

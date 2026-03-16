@@ -83,7 +83,7 @@ export class D2TreeItem extends vscode.TreeItem {
         `d2mpq://${encodeURIComponent(mpqName)}/${mpqInternalPath}`
       );
 
-      if (fileType === D2FileType.Txt) {
+      if (fileType === D2FileType.Txt || fileType === D2FileType.Tbl) {
         this.command = {
           command: "vscode.openWith",
           title: "Open Table",
@@ -106,6 +106,12 @@ export class D2TreeItem extends vscode.TreeItem {
           command: "vscode.openWith",
           title: "Open Tiles",
           arguments: [mpqUri, "d2workshop.dt1Viewer"],
+        };
+      } else if (fileType === D2FileType.Pl2) {
+        this.command = {
+          command: "vscode.openWith",
+          title: "Open Palette",
+          arguments: [mpqUri, "d2workshop.pl2Viewer"],
         };
       }
     } else if (fileType === D2FileType.Dll || fileType === D2FileType.Exe) {

@@ -86,6 +86,12 @@ export function parseDT1(data: Uint8Array): DT1File {
   const numberOfTiles = view.getInt32(offset, true); offset += 4;
   const bodyPosition = view.getInt32(offset, true); offset += 4;
 
+  // Only version 7.6 is fully supported. Other versions have different header layouts.
+  if (majorVersion !== 7 || minorVersion !== 6) {
+    console.warn(`[DT1] Unsupported version ${majorVersion}.${minorVersion} (only 7.6 is supported)`);
+    return { majorVersion, minorVersion, tiles: [] };
+  }
+
   // Seek to body
   offset = bodyPosition;
 
@@ -93,6 +99,7 @@ export function parseDT1(data: Uint8Array): DT1File {
 
   // Read tile headers (96 bytes each)
   for (let i = 0; i < numberOfTiles; i++) {
+    if (offset + 96 > data.length) break;
     const direction = view.getInt32(offset, true); offset += 4;
     const roofHeight = view.getInt16(offset, true); offset += 2;
     const matFlagBits = view.getUint16(offset, true); offset += 2;
@@ -140,8 +147,24 @@ export function parseDT1(data: Uint8Array): DT1File {
     const blockPtr = (tile as any)._blockPtr as number;
     delete (tile as any)._blockPtr;
 
+    // Validate block pointer is within file bounds
+    if (blockPtr < 0 || blockPtr >= data.length) {
+      tile.blocks = [];
+      continue;
+    }
+
     let bOffset = blockPtr;
+    const blockHeaderEnd = bOffset + tile.blocks.length * 20; // 20 bytes per block header
+    if (blockHeaderEnd > data.length) {
+      tile.blocks = [];
+      continue;
+    }
+
     for (let b = 0; b < tile.blocks.length; b++) {
+      if (bOffset + 20 > data.length) {
+        tile.blocks = tile.blocks.slice(0, b);
+        break;
+      }
       const x = view.getInt16(bOffset, true); bOffset += 2;
       const y = view.getInt16(bOffset, true); bOffset += 2;
       bOffset += 2; // unknown
@@ -159,6 +182,10 @@ export function parseDT1(data: Uint8Array): DT1File {
     for (let b = 0; b < tile.blocks.length; b++) {
       const block = tile.blocks[b];
       const dataStart = blockPtr + block.fileOffset;
+      if (dataStart < 0 || dataStart + block.length > data.length) {
+        block.encodedData = new Uint8Array(0);
+        continue;
+      }
       block.encodedData = data.slice(dataStart, dataStart + block.length);
     }
   }

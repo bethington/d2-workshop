@@ -3,6 +3,7 @@ import * as path from "path";
 import * as fs from "fs";
 import { SaveQueue, computeTableDiffs } from "../mod/save-queue";
 import { getWebviewContent } from "./webview-utils";
+import { parseTBL, encodeTBL, tblToTabDelimited, tabDelimitedToTbl } from "../dc6/tbl-parser";
 
 interface TxtSchema {
   file: string;
@@ -83,6 +84,7 @@ export class TableEditorProvider
     // Pre-load the data while webview initializes
     const fileName = this.getFileName(document.uri);
     const schema = this.loadSchema(fileName);
+    const isTbl = fileName.toLowerCase().endsWith(".tbl");
     let text: string;
 
     try {
@@ -90,10 +92,20 @@ export class TableEditorProvider
         `[D2 Workshop] Loading table: ${document.uri.toString()}`
       );
       const data = await vscode.workspace.fs.readFile(document.uri);
-      text = new TextDecoder("latin1").decode(data);
-      console.log(
-        `[D2 Workshop] Loaded ${text.length} bytes for ${fileName}`
-      );
+
+      if (isTbl) {
+        // Parse binary TBL and convert to tab-delimited for the editor
+        const tbl = parseTBL(data);
+        text = tblToTabDelimited(tbl.entries);
+        console.log(
+          `[D2 Workshop] TBL parsed: ${tbl.entries.length} string entries for ${fileName}`
+        );
+      } else {
+        text = new TextDecoder("latin1").decode(data);
+        console.log(
+          `[D2 Workshop] Loaded ${text.length} bytes for ${fileName}`
+        );
+      }
     } catch (err) {
       console.error(`[D2 Workshop] Failed to load table: ${err}`);
       text = `Error loading file: ${err}`;
@@ -114,16 +126,24 @@ export class TableEditorProvider
           break;
         }
         case "save": {
+          let contentToSave = message.content as string;
+
+          if (isTbl) {
+            // Convert tab-delimited back to TBL binary, then base64 for queue storage
+            const tblEntries = tabDelimitedToTbl(contentToSave);
+            const tblBinary = encodeTBL(tblEntries);
+            contentToSave = Buffer.from(tblBinary).toString("base64");
+          }
+
           // Normalize original through same parse/serialize pipeline
-          // so structural differences (trailing tabs, Expansion rows) don't
-          // produce false diffs
           const normalizedOriginal = this.normalizeTabContent(text);
           const diffs = computeTableDiffs(normalizedOriginal, message.content);
           this.saveQueue.queueChange({
             type: "mpq-file",
             uri: document.uri.toString(),
-            content: message.content,
+            content: contentToSave,
             diffs,
+            isBinary: isTbl,
           });
           vscode.window.showInformationMessage(
             `${fileName} queued for save (${diffs.length} change${diffs.length !== 1 ? "s" : ""}). Use "Publish" to write to MPQ.`

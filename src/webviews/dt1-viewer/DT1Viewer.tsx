@@ -247,7 +247,8 @@ export function DT1Viewer() {
   // ─── Error / Loading ──────────────────────────────────────────────────────
 
   if (error) return <div style={{ padding: 20, color: "var(--vscode-errorForeground)" }}>Failed to load DT1: {error}</div>;
-  if (tiles.length === 0) return <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "var(--vscode-descriptionForeground)" }}>Loading DT1...</div>;
+  if (tiles.length === 0 && !error && !companion) return <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "var(--vscode-descriptionForeground)" }}>Loading DT1...</div>;
+  if (tiles.length === 0 && !error) return <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "var(--vscode-descriptionForeground)" }}>No tiles found. This DT1 file may use an unsupported format version.</div>;
 
   // ─── Render ───────────────────────────────────────────────────────────────
 
