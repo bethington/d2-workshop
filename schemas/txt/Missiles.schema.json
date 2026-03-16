@@ -1,6 +1,6 @@
 {
   "file": "Missiles.txt",
-  "description": "Missile definitions \u00e2\u20ac\u201d projectiles, spells, effects, and their visual/damage properties.",
+  "description": "Missile definitions â€” projectiles, spells, effects, and their visual/damage properties.",
   "columns": {
     "Missile": {
       "type": "string",
@@ -15,6 +15,154 @@
       "min": 0,
       "description": "Unique numeric missile ID"
     },
+    "pCltDoFunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client do function ID - visual behavior while missile travels"
+    },
+    "pCltHitFunc": {
+      "type": "string",
+      "description": "Client hit function ID - visual effect on collision"
+    },
+    "pSrvDoFunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server do function ID - server-side behavior while missile travels"
+    },
+    "pSrvHitFunc": {
+      "type": "string",
+      "description": "Server hit function ID - server-side effect on collision"
+    },
+    "pSrvDmgFunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server damage function ID - special damage calculation"
+    },
+    "SrvCalc1": {
+      "type": "enum",
+      "values": [
+        "",
+        "0",
+        "3",
+        "lvl*2"
+      ],
+      "description": "Server-side calculation 1 for missile behavior"
+    },
+    "Param1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 1 for server calculation/function"
+    },
+    "Param2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 2 for server calculation/function"
+    },
+    "Param3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 3 for server calculation/function"
+    },
+    "Param4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 4 for server calculation/function"
+    },
+    "Param5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 5 for server calculation/function"
+    },
+    "CltCalc1": {
+      "type": "enum",
+      "values": [
+        "",
+        "0",
+        "lvl*2"
+      ],
+      "description": "Client-side calculation 1 for visual behavior"
+    },
+    "CltParam1": {
+      "type": "integer",
+      "description": "Parameter 1 for client calculation/function"
+    },
+    "CltParam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 2 for client calculation/function"
+    },
+    "CltParam3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 3 for client calculation/function"
+    },
+    "CltParam4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 4 for client calculation/function"
+    },
+    "CltParam5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Parameter 5 for client calculation/function"
+    },
+    "SHitCalc1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server collision calculation"
+    },
+    "sHitPar1": {
+      "type": "integer",
+      "description": "Server collision parameter 1"
+    },
+    "sHitPar2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server collision parameter 2"
+    },
+    "sHitPar3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server collision parameter 3"
+    },
+    "CHitCalc1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client collision calculation"
+    },
+    "cHitPar1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client collision parameter 1"
+    },
+    "cHitPar2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client collision parameter 2"
+    },
+    "cHitPar3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client collision parameter 3"
+    },
+    "DmgCalc1": {
+      "type": "enum",
+      "values": [
+        "",
+        "dl12"
+      ],
+      "description": "Damage modification calculation"
+    },
+    "dParam1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Damage calculation parameter 1"
+    },
+    "dParam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Damage calculation parameter 2"
+    },
     "Vel": {
       "type": "integer",
       "min": 0,
@@ -24,6 +172,11 @@
       "type": "integer",
       "min": 0,
       "description": "Maximum velocity"
+    },
+    "VelLev": {
+      "type": "integer",
+      "min": 0,
+      "description": "Velocity increase per skill level"
     },
     "Accel": {
       "type": "integer",
@@ -43,33 +196,319 @@
       "min": 0,
       "description": "Light radius"
     },
-    "Anim": {
+    "Flicker": {
+      "type": "integer",
+      "min": 0,
+      "description": "Random light radius variation (0=none)"
+    },
+    "Red": {
+      "type": "integer",
+      "min": 0,
+      "description": "Red component of missile light color (0-255)"
+    },
+    "Green": {
+      "type": "integer",
+      "min": 0,
+      "description": "Green component of missile light color (0-255)"
+    },
+    "Blue": {
+      "type": "integer",
+      "min": 0,
+      "description": "Blue component of missile light color (0-255)"
+    },
+    "InitSteps": {
+      "type": "integer",
+      "min": 0,
+      "description": "Number of initial movement steps on creation (used to skip travel time)"
+    },
+    "Activate": {
+      "type": "integer",
+      "min": 0,
+      "description": "Frame on which special activation occurs"
+    },
+    "LoopAnim": {
+      "type": "integer",
+      "min": 0,
+      "description": "Animation looping mode (0=no loop, 1=loop, 2=once)"
+    },
+    "CelFile": {
       "type": "string",
-      "description": "Animation token"
+      "description": "Animation cel file path (DCC/DC6)"
     },
-    "SubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Sub-missile spawned on creation"
+    "animrate": {
+      "type": "integer",
+      "min": 0,
+      "description": "Animation playback rate (256=normal speed)"
     },
-    "HitSubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Sub-missile spawned on hit"
+    "AnimLen": {
+      "type": "integer",
+      "min": 0,
+      "description": "Total animation length in frames"
     },
-    "CltSubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Client-side sub-missile on creation"
+    "AnimSpeed": {
+      "type": "integer",
+      "min": 0,
+      "description": "Animation speed divisor"
     },
-    "CltHitSubMissile1": {
+    "RandStart": {
+      "type": "integer",
+      "min": 0,
+      "description": "Random start frame range for visual variety"
+    },
+    "SubLoop": {
+      "type": "boolean",
+      "description": "Animation has a looping sub-section (1 = yes)"
+    },
+    "SubStart": {
+      "type": "integer",
+      "min": 0,
+      "description": "Frame where sub-loop begins"
+    },
+    "SubStop": {
+      "type": "integer",
+      "min": 0,
+      "description": "Frame where sub-loop ends"
+    },
+    "CollideType": {
+      "type": "integer",
+      "min": 0,
+      "description": "Collision detection type (1=floor, 3=normal, 6=z-axis, 8=fire)"
+    },
+    "CollideKill": {
+      "type": "boolean",
+      "description": "Missile is destroyed on collision (1 = yes)"
+    },
+    "CollideFriend": {
+      "type": "boolean",
+      "description": "Can collide with friendly units (1 = yes)"
+    },
+    "LastCollide": {
+      "type": "boolean",
+      "description": "Can only hit the last target (1 = yes)"
+    },
+    "Collision": {
+      "type": "boolean",
+      "description": "Has standard collision detection (1 = yes)"
+    },
+    "ClientCol": {
+      "type": "boolean",
+      "description": "Client-side collision detection (1 = yes)"
+    },
+    "ClientSend": {
+      "type": "boolean",
+      "description": "Client notifies server of collision (1 = yes)"
+    },
+    "NextHit": {
+      "type": "boolean",
+      "description": "Can trigger next-hit delay on target (1 = yes)"
+    },
+    "NextDelay": {
+      "type": "integer",
+      "min": 0,
+      "description": "Next-hit delay in frames applied to target"
+    },
+    "xoffset": {
+      "type": "string",
+      "description": "X offset from source position in subtiles"
+    },
+    "yoffset": {
+      "type": "integer",
+      "description": "Y offset from source position in subtiles"
+    },
+    "zoffset": {
+      "type": "integer",
+      "description": "Z (height) offset from source position"
+    },
+    "Size": {
+      "type": "integer",
+      "min": 0,
+      "description": "Collision size (1=small, 2=medium, 3=large)"
+    },
+    "SrcTown": {
+      "type": "boolean",
+      "description": "Can be created in town on server (1 = yes)"
+    },
+    "CltSrcTown": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client-side town behavior mode"
+    },
+    "CanDestroy": {
+      "type": "boolean",
+      "description": "Can destroy destructible objects (1 = yes)"
+    },
+    "ToHit": {
+      "type": "boolean",
+      "description": "Uses attack rating check (1 = yes)"
+    },
+    "AlwaysExplode": {
+      "type": "boolean",
+      "description": "Always plays explosion animation even on miss (1 = yes)"
+    },
+    "Explosion": {
+      "type": "integer",
+      "min": 0,
+      "description": "Explosion type (1=standard, 2=nova)"
+    },
+    "Town": {
+      "type": "boolean",
+      "description": "Missile functions in town (1 = yes)"
+    },
+    "NoUniqueMod": {
+      "type": "boolean",
+      "description": "Cannot be modified by unique monster affixes (1 = yes)"
+    },
+    "NoMultiShot": {
+      "type": "integer",
+      "min": 0,
+      "description": "Cannot be affected by multi-shot modifier (1=normal, 2=strict)"
+    },
+    "Holy": {
+      "type": "integer",
+      "min": 0,
+      "description": "Holy missile type (1=default, 3=hits undead only)"
+    },
+    "CanSlow": {
+      "type": "boolean",
+      "description": "Can be slowed by cold/chill effects (1 = yes)"
+    },
+    "ReturnFire": {
+      "type": "boolean",
+      "description": "Target returns fire at missile source (1 = yes)"
+    },
+    "GetHit": {
+      "type": "boolean",
+      "description": "Target plays hit recovery animation (1 = yes)"
+    },
+    "SoftHit": {
+      "type": "boolean",
+      "description": "Soft hit - reduced stagger effect (1 = yes)"
+    },
+    "KnockBack": {
+      "type": "integer",
+      "min": 0,
+      "description": "Knockback distance in subtiles on hit"
+    },
+    "Trans": {
+      "type": "integer",
+      "min": 0,
+      "description": "Transparency mode (1=alpha, 2=additive blend)"
+    },
+    "Qty": {
+      "type": "boolean",
+      "description": "Missile uses ammunition quantity (1 = yes)"
+    },
+    "Pierce": {
+      "type": "boolean",
+      "description": "Passes through targets (1 = yes)"
+    },
+    "SpecialSetup": {
+      "type": "boolean",
+      "description": "Uses special setup function (1 = yes)"
+    },
+    "MissileSkill": {
+      "type": "boolean",
+      "description": "Missile acts as a skill for damage purposes (1 = yes)"
+    },
+    "Skill": {
       "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Client-side sub-missile on hit"
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Associated skill"
+    },
+    "ResultFlags": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bitfield for hit result flags (4=default hit, 9=stun)"
+    },
+    "HitFlags": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bitfield for additional hit behavior"
+    },
+    "HitShift": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bit shift for damage precision (typically 8 = 256ths)"
+    },
+    "ApplyMastery": {
+      "type": "boolean",
+      "description": "Apply elemental mastery damage bonus (1 = yes)"
+    },
+    "SrcDamage": {
+      "type": "integer",
+      "description": "Percentage of source weapon damage (128=100%, -1=none)"
+    },
+    "Half2HSrc": {
+      "type": "boolean",
+      "description": "Halve two-handed weapon source damage (1 = yes)"
+    },
+    "SrcMissDmg": {
+      "type": "integer",
+      "min": 0,
+      "description": "Inherit damage from source missile (128=100%)"
+    },
+    "MinDamage": {
+      "type": "integer",
+      "description": "Minimum damage"
+    },
+    "MinLevDam1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 2-8)"
+    },
+    "MinLevDam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 9-16)"
+    },
+    "MinLevDam3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 17-22)"
+    },
+    "MinLevDam4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 23-28)"
+    },
+    "MinLevDam5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 29+)"
+    },
+    "MaxDamage": {
+      "type": "integer",
+      "description": "Maximum damage"
+    },
+    "MaxLevDam1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 2-8)"
+    },
+    "MaxLevDam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 9-16)"
+    },
+    "MaxLevDam3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 17-22)"
+    },
+    "MaxLevDam4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 23-28)"
+    },
+    "MaxLevDam5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 29+)"
+    },
+    "DmgSymPerCalc": {
+      "type": "string",
+      "description": "Synergy calculation for physical damage bonus"
     },
     "EType": {
       "type": "enum",
@@ -90,31 +529,252 @@
       ],
       "description": "Element type for damage"
     },
-    "MinDamage": {
+    "EMin": {
       "type": "integer",
-      "description": "Minimum damage"
+      "min": 0,
+      "description": "Minimum elemental damage at base level"
     },
-    "MaxDamage": {
+    "MinELev1": {
       "type": "integer",
-      "description": "Maximum damage"
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 2-8)"
     },
-    "SrvCalc": {
+    "MinELev2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 9-16)"
+    },
+    "MinELev3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 17-22)"
+    },
+    "MinELev4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 23-28)"
+    },
+    "MinELev5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 29+)"
+    },
+    "Emax": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum elemental damage at base level"
+    },
+    "MaxELev1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 2-8)"
+    },
+    "MaxELev2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 9-16)"
+    },
+    "MaxELev3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 17-22)"
+    },
+    "MaxELev4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 23-28)"
+    },
+    "MaxELev5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 29+)"
+    },
+    "EDmgSymPerCalc": {
+      "type": "enum",
+      "values": [
+        "",
+        "(skill('Blades of Ice'.blvl))*10",
+        "(skill('Claws of Thunder'.blvl))*13",
+        "(skill('Firestorm'.blvl)+skill('Molten Boulder'.blvl)+skill('Volcano'.blvl))*7",
+        "(skill('Fists of Fire'.blvl)) * 10",
+        "(skill('Fists of Fire'.blvl)) * 6",
+        "(skill('Royal Strike'.blvl)) * 6",
+        "(skill('Royal Strike'.blvl)) * 8",
+        "skill('Fire Arrow'.blvl) * 5",
+        "skill('Firestorm'.blvl)*8",
+        "skill('Holy Bolt'.blvl) * 15",
+        "skill('Inferno'.blvl)*3"
+      ],
+      "description": "Synergy calculation for elemental damage bonus"
+    },
+    "ELen": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base elemental effect duration in frames (poison/cold/stun)"
+    },
+    "ELevLen1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 2-8)"
+    },
+    "ELevLen2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 9-16)"
+    },
+    "ELevLen3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 17-22)"
+    },
+    "HitClass": {
+      "type": "integer",
+      "min": 0,
+      "description": "Hit class controlling sound and visual on impact"
+    },
+    "NumDirections": {
+      "type": "integer",
+      "min": 0,
+      "description": "Number of animation directions (1, 4, 8, 16, or 32)"
+    },
+    "LocalBlood": {
+      "type": "boolean",
+      "description": "Show blood effect on hit (1 = yes)"
+    },
+    "DamageRate": {
+      "type": "integer",
+      "min": 0,
+      "description": "Damage rate for periodic-damage missiles (frames between ticks)"
+    },
+    "TravelSound": {
       "type": "string",
-      "description": "Server damage calculation function"
+      "description": "Sound played while missile travels"
     },
-    "Skill": {
+    "HitSound": {
+      "type": "string",
+      "description": "Sound played on missile impact"
+    },
+    "ProgSound": {
+      "type": "enum",
+      "values": [
+        "",
+        "andariel_fire_end",
+        "necromancer_corpseexp_1",
+        "sorceress_fireball_1",
+        "sorceress_meteor_impact"
+      ],
+      "description": "Sound played during progressive/charge phase"
+    },
+    "ProgOverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "diablolightning",
+        "doubledamage1",
+        "fingermagespiderexplode",
+        "fire_hit",
+        "healing",
+        "ice_explode",
+        "lightning",
+        "steallife",
+        "stealmana",
+        "vampiresteal"
+      ],
+      "description": "Overlay effect during progressive/charge phase"
+    },
+    "ExplosionMissile": {
       "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Associated skill"
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile spawned as explosion effect on impact"
     },
-    "LastCollide": {
-      "type": "boolean",
-      "description": "Can only hit the last target (1 = yes)"
+    "SubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile spawned on creation"
     },
-    "Pierce": {
+    "SubMissile2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile 2 spawned on creation"
+    },
+    "SubMissile3": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile 3 spawned on creation"
+    },
+    "HitSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile spawned on hit"
+    },
+    "HitSubMissile2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile 2 spawned on hit"
+    },
+    "HitSubMissile3": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile 3 spawned on hit"
+    },
+    "HitSubMissile4": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Sub-missile 4 spawned on hit"
+    },
+    "CltSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile on creation"
+    },
+    "CltSubMissile2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile 2 on creation"
+    },
+    "CltSubMissile3": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile 3 on creation"
+    },
+    "CltHitSubMissile1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile on hit"
+    },
+    "CltHitSubMissile2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile 2 on hit"
+    },
+    "CltHitSubMissile3": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile 3 on hit"
+    },
+    "CltHitSubMissile4": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side sub-missile 4 on hit"
+    },
+    "EOL": {
       "type": "boolean",
-      "description": "Passes through targets (1 = yes)"
+      "description": "End of line marker (always 0)"
     }
   }
 }

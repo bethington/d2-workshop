@@ -1,6 +1,6 @@
 {
   "file": "skills.txt",
-  "description": "Skill definitions \u00e2\u20ac\u201d controls all skill properties including damage, mana cost, synergies, and visual effects.",
+  "description": "Skill definitions â€” controls all skill properties including damage, mana cost, synergies, and visual effects.",
   "columns": {
     "skill": {
       "type": "string",
@@ -26,17 +26,81 @@
       "targetColumn": "skilldesc",
       "description": "Reference to skill description entry"
     },
+    "srvstfunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server start function ID - executed when skill is first activated"
+    },
+    "srvdofunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server do function ID - executed when start function completes or periodically while held"
+    },
+    "prgstack": {
+      "type": "boolean",
+      "description": "Whether progressive charges stack (1 = yes)"
+    },
+    "srvprgfunc1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server progressive function 1 - called when charges are released"
+    },
+    "srvprgfunc2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server progressive function 2"
+    },
+    "srvprgfunc3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server progressive function 3"
+    },
+    "prgcalc1": {
+      "type": "enum",
+      "values": [
+        "",
+        "par1+lvl/par2+skill('Fire Trauma'.blvl)/3",
+        "par4"
+      ],
+      "description": "Calculation for progressive function 1 parameter"
+    },
+    "prgcalc2": {
+      "type": "enum",
+      "values": [
+        "",
+        "par1",
+        "par6"
+      ],
+      "description": "Calculation for progressive function 2 parameter"
+    },
+    "prgcalc3": {
+      "type": "enum",
+      "values": [
+        "",
+        "par1",
+        "par2",
+        "par5"
+      ],
+      "description": "Calculation for progressive function 3 parameter"
+    },
+    "prgdam": {
+      "type": "integer",
+      "min": 0,
+      "description": "Progressive damage type (1=other/physical, 2=fire, 3=lightning, 4=magic)"
+    },
     "srvmissile": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
       "description": "Server-side missile spawned by skill"
     },
-    "cltmissile": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Client-side missile (visual effect)"
+    "decquant": {
+      "type": "boolean",
+      "description": "Decreases ammunition quantity when used (1 = yes)"
+    },
+    "lob": {
+      "type": "boolean",
+      "description": "Missile uses lobbed arc trajectory (1 = yes)"
     },
     "srvmissilea": {
       "type": "ref",
@@ -44,24 +108,926 @@
       "targetColumn": "Missile",
       "description": "Server-side missile A (alternate)"
     },
+    "srvmissileb": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Server-side missile B (alternate)"
+    },
+    "srvmissilec": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Server-side missile C (alternate)"
+    },
+    "srvoverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "bash",
+        "curseattract",
+        "doubledamage1",
+        "fire_hit",
+        "handofgod",
+        "receiving",
+        "spawnedflames"
+      ],
+      "description": "Server-side overlay effect applied when skill is used"
+    },
+    "aurafilter": {
+      "type": "integer",
+      "min": 0,
+      "description": "Binary filter controlling which unit types are affected by this aura"
+    },
+    "aurastate": {
+      "type": "ref",
+      "target": "states.txt",
+      "targetColumn": "state",
+      "description": "State applied to the caster by this aura"
+    },
+    "auratargetstate": {
+      "type": "ref",
+      "target": "states.txt",
+      "targetColumn": "state",
+      "description": "State applied to targets within aura range"
+    },
+    "auralencalc": {
+      "type": "string",
+      "description": "Calculation for aura length/duration"
+    },
+    "aurarangecalc": {
+      "type": "string",
+      "description": "Calculation for aura radius in subtiles"
+    },
+    "aurastat1": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 1 granted by aura"
+    },
+    "aurastatcalc1": {
+      "type": "string",
+      "description": "Calculation for aura stat 1 value"
+    },
+    "aurastat2": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 2 granted by aura"
+    },
+    "aurastatcalc2": {
+      "type": "string",
+      "description": "Calculation for aura stat 2 value"
+    },
+    "aurastat3": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 3 granted by aura"
+    },
+    "aurastatcalc3": {
+      "type": "string",
+      "description": "Calculation for aura stat 3 value"
+    },
+    "aurastat4": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 4 granted by aura"
+    },
+    "aurastatcalc4": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"-min(ln34,150)\"",
+        "\"min((lvl+skill('Dopplezon'.blvl))*par7,85)\"",
+        "\"min(ln78,85)\"",
+        "\"min(lvl*par7,85)\"",
+        "-dm56",
+        "dm12",
+        "edmx",
+        "lvl*10",
+        "par2+skill('Shape Shifting'.ln34)",
+        "par5",
+        "par6"
+      ],
+      "description": "Calculation for aura stat 4 value"
+    },
+    "aurastat5": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 5 granted by aura"
+    },
+    "aurastatcalc5": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min((lvl+skill('Dopplezon'.blvl))*par7,85)\"",
+        "dm34"
+      ],
+      "description": "Calculation for aura stat 5 value"
+    },
+    "aurastat6": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Stat 6 granted by aura"
+    },
+    "aurastatcalc6": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min((lvl+skill('Dopplezon'.blvl))*par7,85)\"",
+        "ln78"
+      ],
+      "description": "Calculation for aura stat 6 value"
+    },
+    "auraevent1": {
+      "type": "enum",
+      "values": [
+        "",
+        "absorbdamage",
+        "attackedinmelee",
+        "damagedinmelee",
+        "domeleedamage",
+        "hitbymissile"
+      ],
+      "description": "Event 1 that triggers the aura event function"
+    },
+    "auraeventfunc1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Function ID called when aura event 1 triggers"
+    },
+    "auraevent2": {
+      "type": "enum",
+      "values": [
+        "",
+        "damagedbymissile",
+        "damagedinmelee"
+      ],
+      "description": "Event 2 that triggers the aura event function"
+    },
+    "auraeventfunc2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Function ID called when aura event 2 triggers"
+    },
+    "auraevent3": {
+      "type": "enum",
+      "values": [
+        "",
+        "damagedbymissile"
+      ],
+      "description": "Event 3 that triggers the aura event function"
+    },
+    "auraeventfunc3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Function ID called when aura event 3 triggers"
+    },
+    "auratgtevent": {
+      "type": "string",
+      "description": "Event triggered on aura targets"
+    },
+    "auratgteventfunc": {
+      "type": "string",
+      "description": "Function ID called when aura target event triggers"
+    },
+    "passivestate": {
+      "type": "ref",
+      "target": "states.txt",
+      "targetColumn": "state",
+      "description": "State applied when this passive skill is learned"
+    },
+    "passiveitype": {
+      "type": "enum",
+      "values": [
+        "",
+        "axe",
+        "blun",
+        "h2h",
+        "pole",
+        "spea",
+        "swor",
+        "thro"
+      ],
+      "description": "Item type code restricting passive to specific weapon types (ref ItemTypes.txt)"
+    },
+    "passivestat1": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Passive stat 1 modified by this skill"
+    },
+    "passivecalc1": {
+      "type": "string",
+      "description": "Calculation for passive stat 1 value"
+    },
+    "passivestat2": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Passive stat 2 modified by this skill"
+    },
+    "passivecalc2": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(lvl*4,75)\"",
+        "100",
+        "dm12",
+        "dm34",
+        "exms*par5/256",
+        "ln12",
+        "ln34",
+        "skill('Golem Mastery'.ln56) + (lvl*par8)",
+        "skill('Golem Mastery'.ln56)+skill('Clay Golem'.blvl)*skill('Clay Golem'.par8)",
+        "skill('Skeleton Mastery'.lvl) * skill('Skeleton Mastery'.par2) + edmn",
+        "skill('Summon Spirit Wolf'.ln12)",
+        "stat('passive_fire_pierce'.accr)",
+        "toht"
+      ],
+      "description": "Calculation for passive stat 2 value"
+    },
+    "passivestat3": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Passive stat 3 modified by this skill"
+    },
+    "passivecalc3": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(lvl*4,75)\"",
+        "dm12",
+        "dm34",
+        "dm56",
+        "lvl*par8",
+        "par2 * (lvl - 1) + (skill('FireGolem'.blvl)*skill('FireGolem'.par8))",
+        "par4 * (lvl - 1) + (skill('FireGolem'.blvl)*skill('FireGolem'.par8))",
+        "skill('IronGolem'.blvl)*skill('IronGolem'.par8)",
+        "skill('Summon Grizzly'.ln12)",
+        "skill('Summon Spirit Wolf'.ln56)"
+      ],
+      "description": "Calculation for passive stat 3 value"
+    },
+    "passivestat4": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Passive stat 4 modified by this skill"
+    },
+    "passivecalc4": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(lvl*4,75)\"",
+        "(skill('FireGolem'.blvl)*skill('FireGolem'.par8))",
+        "dm12",
+        "dm34",
+        "skill('IronGolem'.blvl)*skill('IronGolem'.par8)"
+      ],
+      "description": "Calculation for passive stat 4 value"
+    },
+    "passivestat5": {
+      "type": "ref",
+      "target": "ItemStatCost.txt",
+      "targetColumn": "Stat",
+      "description": "Passive stat 5 modified by this skill"
+    },
+    "passivecalc5": {
+      "type": "string",
+      "description": "Calculation for passive stat 5 value"
+    },
+    "passiveevent": {
+      "type": "string",
+      "description": "Event that triggers the passive event function"
+    },
+    "passiveeventfunc": {
+      "type": "string",
+      "description": "Function ID called when passive event triggers"
+    },
+    "summon": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Id",
+      "description": "Monster summoned by this skill (ref monstats.txt)"
+    },
+    "pettype": {
+      "type": "ref",
+      "target": "PetType.txt",
+      "targetColumn": "pet type",
+      "description": "Summon group controlling coexistence, UI icon, and warp behavior"
+    },
+    "petmax": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(lvl,par2)\"",
+        "\"min(lvl,par3)\"",
+        "(lvl < 4) ?lvl:(2+lvl/3)",
+        "1",
+        "5",
+        "99",
+        "lvl"
+      ],
+      "description": "Maximum number of summons allowed (can be a calculation)"
+    },
+    "summode": {
+      "type": "enum",
+      "values": [
+        "",
+        "NU",
+        "S1",
+        "S2"
+      ],
+      "description": "Animation mode the summon plays when created (e.g. NU, S1, S2)"
+    },
+    "sumskill1": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 1 granted to the summoned creature"
+    },
+    "sumsk1calc": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(ln56,30)\"",
+        "lvl",
+        "skill('Dodge'.blvl)",
+        "skill('Skeleton Mastery'.lvl) + ((lvl < 4)?0:((lvl-2)/2))"
+      ],
+      "description": "Skill level calculation for summon skill 1"
+    },
+    "sumskill2": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 2 granted to the summoned creature"
+    },
+    "sumsk2calc": {
+      "type": "enum",
+      "values": [
+        "",
+        "lvl",
+        "skill('Avoid'.blvl)",
+        "skill('Fire Bolt'.blvl)",
+        "skill('Fire Trauma'.blvl)",
+        "skill('Shock Field'.blvl)"
+      ],
+      "description": "Skill level calculation for summon skill 2"
+    },
+    "sumskill3": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 3 granted to the summoned creature"
+    },
+    "sumsk3calc": {
+      "type": "enum",
+      "values": [
+        "",
+        "skill('Charged Bolt Sentry'.blvl)",
+        "skill('Evade'.blvl)",
+        "skill('Fire Ball'.blvl)",
+        "skill('Fire Trauma'.blvl)",
+        "skill('Inferno Sentry'.blvl)",
+        "skill('Shock Field'.blvl)",
+        "skill('Wake of Fire Sentry'.blvl)"
+      ],
+      "description": "Skill level calculation for summon skill 3"
+    },
+    "sumskill4": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 4 granted to the summoned creature"
+    },
+    "sumsk4calc": {
+      "type": "enum",
+      "values": [
+        "",
+        "skill('Critical Strike'.blvl)",
+        "skill('Death Sentry'.blvl)",
+        "skill('Lightning Sentry'.blvl)"
+      ],
+      "description": "Skill level calculation for summon skill 4"
+    },
+    "sumskill5": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 5 granted to the summoned creature"
+    },
+    "sumsk5calc": {
+      "type": "enum",
+      "values": [
+        "",
+        "skill('Death Sentry'.blvl)"
+      ],
+      "description": "Skill level calculation for summon skill 5"
+    },
+    "sumumod": {
+      "type": "integer",
+      "min": 0,
+      "description": "Unique modifier applied to summoned creature"
+    },
+    "sumoverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "dopllezon_appear",
+        "spawnedminion"
+      ],
+      "description": "Overlay effect displayed when summon appears"
+    },
+    "stsuccessonly": {
+      "type": "boolean",
+      "description": "Sound plays only on successful cast (1 = yes)"
+    },
+    "stsound": {
+      "type": "string",
+      "description": "Sound played when skill starts casting"
+    },
+    "stsoundclass": {
+      "type": "enum",
+      "values": [
+        "",
+        "amazon_jab_1",
+        "barbarian_battlecry_1",
+        "barbarian_battleorders_1",
+        "barbarian_command_1",
+        "barbarian_findobject_1",
+        "barbarian_grunt_large_1",
+        "barbarian_grunt_small_1",
+        "barbarian_howl_1",
+        "barbarian_leap_1",
+        "barbarian_leapattack_1",
+        "barbarian_shout_1",
+        "barbarian_taunt_1",
+        "barbarian_warcry_1",
+        "barbarian_whirlwind"
+      ],
+      "description": "Class-specific sound played on skill start"
+    },
+    "stsounddelay": {
+      "type": "boolean",
+      "description": "Whether the start sound is delayed (1 = yes)"
+    },
+    "weaponsnd": {
+      "type": "boolean",
+      "description": "Play weapon swing sound (1 = yes)"
+    },
+    "dosound": {
+      "type": "enum",
+      "values": [
+        "",
+        "barbarian_findheart_1",
+        "druidpod_attack_1",
+        "necromancer_corpseexp_1",
+        "sorceress_energyshield",
+        "sorceress_frozenarmor",
+        "sorceress_meteor",
+        "sorceress_shiverarmor",
+        "sorceress_telekinesis",
+        "weapon_giant_1",
+        "weapon_throw_1"
+      ],
+      "description": "Sound played when skill do function executes"
+    },
+    "dosound a": {
+      "type": "enum",
+      "values": [
+        "",
+        "druidpod_walk1_1",
+        "paladin_charge",
+        "weapon_1ht_1"
+      ],
+      "description": "Alternate do sound A"
+    },
+    "dosound b": {
+      "type": "enum",
+      "values": [
+        "",
+        "druidpod_neutral_1",
+        "weapon_2ht_1"
+      ],
+      "description": "Alternate do sound B"
+    },
+    "tgtoverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "assassinfootimpact",
+        "dragonflight",
+        "fist_will_cast",
+        "psychic_hammer_hit",
+        "receiving"
+      ],
+      "description": "Overlay effect displayed on target"
+    },
+    "tgtsound": {
+      "type": "enum",
+      "values": [
+        "",
+        "barbarian_findheart_1",
+        "barbarian_grimward_1",
+        "necromancer_corpseexp_1",
+        "necromancer_revive_target",
+        "paladin_holybolt_impact_1"
+      ],
+      "description": "Sound played on target when hit by this skill"
+    },
+    "prgoverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "arctic_blast_cast",
+        "cobrastrike1",
+        "energyshieldhit0",
+        "lightning",
+        "steallife",
+        "tigerstrike1"
+      ],
+      "description": "Overlay effect for progressive/charge-up display"
+    },
+    "prgsound": {
+      "type": "enum",
+      "values": [
+        "",
+        "assassin_chargeup_cobra_1",
+        "assassin_chargeup_tiger_1",
+        "druid_hurricane",
+        "druid_windcast",
+        "monster_baal_taunt_1",
+        "necromancer_corpseexp_1"
+      ],
+      "description": "Sound played during progressive/charge-up"
+    },
+    "castoverlay": {
+      "type": "string",
+      "description": "Overlay effect displayed on caster during cast"
+    },
+    "cltoverlaya": {
+      "type": "enum",
+      "values": [
+        "",
+        "bear_into",
+        "chillarmor_hit",
+        "frozenarmor_hit",
+        "shiverarmor_hit",
+        "wolf_into"
+      ],
+      "description": "Client overlay A (e.g. shapeshift transformation in)"
+    },
+    "cltoverlayb": {
+      "type": "enum",
+      "values": [
+        "",
+        "bear_undo",
+        "wolf_undo"
+      ],
+      "description": "Client overlay B (e.g. shapeshift transformation out)"
+    },
+    "cltstfunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client start function ID - visual counterpart of srvstfunc"
+    },
+    "cltdofunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client do function ID - visual counterpart of srvdofunc"
+    },
+    "cltprgfunc1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client progressive function 1 - visual effect for charge release"
+    },
+    "cltprgfunc2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client progressive function 2"
+    },
+    "cltprgfunc3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client progressive function 3"
+    },
+    "cltmissile": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side missile (visual effect)"
+    },
     "cltmissilea": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
       "description": "Client-side missile A (alternate visual)"
     },
-    "InGame": {
-      "type": "boolean",
-      "description": "Whether skill appears in-game (1 = yes)"
+    "cltmissileb": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side missile B (alternate visual)"
     },
-    "mana": {
+    "cltmissilec": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Client-side missile C (alternate visual)"
+    },
+    "cltmissiled": {
+      "type": "enum",
+      "values": [
+        "",
+        "vine beast neutral"
+      ],
+      "description": "Client-side missile D (alternate visual)"
+    },
+    "cltcalc1": {
+      "type": "enum",
+      "values": [
+        "",
+        "\"min(12,ln12)\"",
+        "-37",
+        "0",
+        "10",
+        "16",
+        "25",
+        "3",
+        "40",
+        "8",
+        "par1 * (lvl-1)",
+        "par5"
+      ],
+      "description": "Client calculation 1 for visual parameters"
+    },
+    "cltcalc2": {
+      "type": "enum",
+      "values": [
+        "",
+        "25",
+        "35",
+        "5",
+        "75",
+        "lvl-1"
+      ],
+      "description": "Client calculation 2 for visual parameters"
+    },
+    "cltcalc3": {
       "type": "integer",
       "min": 0,
-      "description": "Base mana cost"
+      "description": "Client calculation 3 for visual parameters"
     },
-    "lvlmana": {
+    "warp": {
+      "type": "boolean",
+      "description": "Skill teleports the caster (1 = yes)"
+    },
+    "immediate": {
+      "type": "boolean",
+      "description": "Skill activates immediately without animation (1 = yes)"
+    },
+    "enhanceable": {
+      "type": "boolean",
+      "description": "Damage can be enhanced by +% damage modifiers (1 = yes)"
+    },
+    "attackrank": {
       "type": "integer",
-      "description": "Additional mana cost per skill level"
+      "min": 0,
+      "description": "Priority rank for attack rating calculation (0-10)"
+    },
+    "noammo": {
+      "type": "boolean",
+      "description": "Skill does not consume ammunition (1 = yes)"
+    },
+    "range": {
+      "type": "enum",
+      "values": [
+        "none",
+        "h2h",
+        "rng",
+        "both"
+      ],
+      "description": "Attack range type"
+    },
+    "weapsel": {
+      "type": "integer",
+      "min": 0,
+      "description": "Weapon selection mode (1=left, 2=either, 3=both, 4=armor)"
+    },
+    "itypea1": {
+      "type": "enum",
+      "values": [
+        "",
+        "h2h",
+        "jave",
+        "knif",
+        "mele",
+        "miss",
+        "shld",
+        "spea",
+        "thro",
+        "weap"
+      ],
+      "description": "Required item type A1 for weapon set A (ref ItemTypes.txt)"
+    },
+    "itypea2": {
+      "type": "enum",
+      "values": [
+        "",
+        "miss"
+      ],
+      "description": "Required item type A2 for weapon set A (ref ItemTypes.txt)"
+    },
+    "itypea3": {
+      "type": "string",
+      "description": "Required item type A3 for weapon set A (ref ItemTypes.txt)"
+    },
+    "etypea1": {
+      "type": "enum",
+      "values": [
+        "",
+        "tpot"
+      ],
+      "description": "Excluded item type A1 for weapon set A (ref ItemTypes.txt)"
+    },
+    "etypea2": {
+      "type": "string",
+      "description": "Excluded item type A2 for weapon set A (ref ItemTypes.txt)"
+    },
+    "itypeb1": {
+      "type": "enum",
+      "values": [
+        "",
+        "h2h",
+        "mele",
+        "thro"
+      ],
+      "description": "Required item type B1 for weapon set B (ref ItemTypes.txt)"
+    },
+    "itypeb2": {
+      "type": "string",
+      "description": "Required item type B2 for weapon set B (ref ItemTypes.txt)"
+    },
+    "itypeb3": {
+      "type": "string",
+      "description": "Required item type B3 for weapon set B (ref ItemTypes.txt)"
+    },
+    "etypeb1": {
+      "type": "string",
+      "description": "Excluded item type B1 for weapon set B (ref ItemTypes.txt)"
+    },
+    "etypeb2": {
+      "type": "string",
+      "description": "Excluded item type B2 for weapon set B (ref ItemTypes.txt)"
+    },
+    "anim": {
+      "type": "string",
+      "description": "Animation mode (e.g., 'SC' for spell cast)"
+    },
+    "seqtrans": {
+      "type": "string",
+      "description": "Sequence transition mode"
+    },
+    "monanim": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "A2",
+        "NU",
+        "S1",
+        "S2",
+        "S3",
+        "SC",
+        "xx"
+      ],
+      "description": "Monster animation mode when using this skill"
+    },
+    "seqnum": {
+      "type": "integer",
+      "min": 0,
+      "description": "Player animation sequence ID (used when anim=SQ)"
+    },
+    "seqinput": {
+      "type": "integer",
+      "min": 0,
+      "description": "Sequence input frame for transitioning between animations"
+    },
+    "durability": {
+      "type": "boolean",
+      "description": "Skill drains weapon durability (1 = yes)"
+    },
+    "UseAttackRate": {
+      "type": "boolean",
+      "description": "Use weapon attack rate for animation speed (1 = yes)"
+    },
+    "LineOfSight": {
+      "type": "integer",
+      "min": 0,
+      "description": "Line-of-sight check mode (4 = standard wall check)"
+    },
+    "TargetableOnly": {
+      "type": "boolean",
+      "description": "Can only target targetable units (1 = yes)"
+    },
+    "SearchEnemyXY": {
+      "type": "boolean",
+      "description": "Search for enemy at cursor position (1 = yes)"
+    },
+    "SearchEnemyNear": {
+      "type": "boolean",
+      "description": "Search for nearest enemy to caster (1 = yes)"
+    },
+    "SearchOpenXY": {
+      "type": "boolean",
+      "description": "Search for open position at target XY (1 = yes)"
+    },
+    "SelectProc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Target selection procedure (1-6, various targeting modes)"
+    },
+    "TargetCorpse": {
+      "type": "boolean",
+      "description": "Can target corpses (1 = yes)"
+    },
+    "TargetPet": {
+      "type": "boolean",
+      "description": "Can target pets/summons (1 = yes)"
+    },
+    "TargetAlly": {
+      "type": "boolean",
+      "description": "Can target allies (1 = yes)"
+    },
+    "TargetItem": {
+      "type": "boolean",
+      "description": "Can target items on ground (1 = yes)"
+    },
+    "AttackNoMana": {
+      "type": "boolean",
+      "description": "Attack continues even when mana runs out (1 = yes)"
+    },
+    "TgtPlaceCheck": {
+      "type": "boolean",
+      "description": "Check if target location is valid placement (1 = yes)"
+    },
+    "ItemEffect": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server function ID when skill is triggered by item (chance-to-cast)"
+    },
+    "ItemCltEffect": {
+      "type": "integer",
+      "min": 0,
+      "description": "Client function ID when skill is triggered by item"
+    },
+    "ItemTgtDo": {
+      "type": "boolean",
+      "description": "Apply item target do function (1 = yes)"
+    },
+    "ItemTarget": {
+      "type": "integer",
+      "min": 0,
+      "description": "Item cast target (1=self, 2=random pos, 3=random corpse, 4=last attacker)"
+    },
+    "ItemCheckStart": {
+      "type": "boolean",
+      "description": "Server-side check on item-triggered skill start (1 = yes)"
+    },
+    "ItemCltCheckStart": {
+      "type": "boolean",
+      "description": "Client-side check on item-triggered skill start (1 = yes)"
+    },
+    "ItemCastSound": {
+      "type": "string",
+      "description": "Sound played when skill is cast from an item"
+    },
+    "ItemCastOverlay": {
+      "type": "enum",
+      "values": [
+        "",
+        "cast_innersight",
+        "cast_slowmissiles",
+        "cast_undead",
+        "druid_fire_cast_1",
+        "druid_fire_cast_2",
+        "fire_cast_2",
+        "ice_cast_1",
+        "ice_cast_3",
+        "teleport"
+      ],
+      "description": "Overlay effect when skill is cast from an item"
+    },
+    "skpoints": {
+      "type": "string",
+      "description": "Skill points column (unused in 1.10+)"
     },
     "reqlevel": {
       "type": "integer",
@@ -73,6 +1039,22 @@
       "type": "integer",
       "min": 0,
       "description": "Maximum skill level"
+    },
+    "reqstr": {
+      "type": "string",
+      "description": "Required strength (unused, always blank)"
+    },
+    "reqdex": {
+      "type": "string",
+      "description": "Required dexterity (unused, always blank)"
+    },
+    "reqint": {
+      "type": "string",
+      "description": "Required intelligence (unused, always blank)"
+    },
+    "reqvit": {
+      "type": "string",
+      "description": "Required vitality (unused, always blank)"
     },
     "reqskill1": {
       "type": "ref",
@@ -92,23 +1074,450 @@
       "targetColumn": "skill",
       "description": "Prerequisite skill 3"
     },
-    "anim": {
-      "type": "string",
-      "description": "Animation mode (e.g., 'SC' for spell cast)"
+    "restrict": {
+      "type": "integer",
+      "min": 0,
+      "description": "Class restriction (1=class-specific, 2=class-specific alternate)"
     },
-    "seqtrans": {
-      "type": "string",
-      "description": "Sequence transition mode"
-    },
-    "range": {
+    "State1": {
       "type": "enum",
       "values": [
-        "none",
-        "h2h",
-        "rng",
-        "both"
+        "",
+        "bear",
+        "wolf"
       ],
-      "description": "Attack range type"
+      "description": "Required state 1 to use this skill (e.g. bear, wolf)"
+    },
+    "State2": {
+      "type": "enum",
+      "values": [
+        "",
+        "bear"
+      ],
+      "description": "Required state 2 to use this skill"
+    },
+    "State3": {
+      "type": "string",
+      "description": "Required state 3 to use this skill"
+    },
+    "delay": {
+      "type": "integer",
+      "min": 0,
+      "description": "Cooldown delay in frames (25 frames = 1 second)"
+    },
+    "leftskill": {
+      "type": "boolean",
+      "description": "Can be assigned to left mouse button (1 = yes)"
+    },
+    "repeat": {
+      "type": "boolean",
+      "description": "Skill repeats while mouse is held (1 = yes)"
+    },
+    "checkfunc": {
+      "type": "integer",
+      "min": 0,
+      "description": "Pre-cast check function ID (1-6, various conditions)"
+    },
+    "nocostinstate": {
+      "type": "boolean",
+      "description": "No mana cost while in a specific state (1 = yes)"
+    },
+    "usemanaondo": {
+      "type": "boolean",
+      "description": "Mana is spent on do function rather than start (1 = yes)"
+    },
+    "startmana": {
+      "type": "integer",
+      "min": 0,
+      "description": "Initial mana cost multiplier on first cast"
+    },
+    "minmana": {
+      "type": "boolean",
+      "description": "Minimum mana cost (floor)"
+    },
+    "manashift": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bit shift for mana cost precision (higher = finer granularity)"
+    },
+    "mana": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base mana cost"
+    },
+    "lvlmana": {
+      "type": "integer",
+      "description": "Additional mana cost per skill level"
+    },
+    "interrupt": {
+      "type": "boolean",
+      "description": "Skill can be interrupted by hit recovery (1 = yes)"
+    },
+    "InTown": {
+      "type": "boolean",
+      "description": "Skill can be used in town (1 = yes)"
+    },
+    "aura": {
+      "type": "boolean",
+      "description": "Skill is an aura (1 = yes)"
+    },
+    "periodic": {
+      "type": "boolean",
+      "description": "Skill triggers periodically while active (1 = yes)"
+    },
+    "perdelay": {
+      "type": "enum",
+      "values": [
+        "",
+        "(100-dm56) * par4/100 + par3",
+        "50",
+        "par3"
+      ],
+      "description": "Delay between periodic triggers (in frames or calculation)"
+    },
+    "finishing": {
+      "type": "boolean",
+      "description": "Skill is a finishing move that consumes charges (1 = yes)"
+    },
+    "passive": {
+      "type": "boolean",
+      "description": "Skill is passive and always active (1 = yes)"
+    },
+    "progressive": {
+      "type": "boolean",
+      "description": "Skill is a charge-up/progressive skill (1 = yes)"
+    },
+    "general": {
+      "type": "boolean",
+      "description": "General skill available to all classes (1 = yes)"
+    },
+    "scroll": {
+      "type": "boolean",
+      "description": "Skill can be used from a scroll (1 = yes)"
+    },
+    "calc1": {
+      "type": "string",
+      "description": "General calculation 1 used by skill functions"
+    },
+    "calc2": {
+      "type": "string",
+      "description": "General calculation 2 used by skill functions"
+    },
+    "calc3": {
+      "type": "enum",
+      "values": [
+        "",
+        "2",
+        "2+lvl/4",
+        "25",
+        "3",
+        "50",
+        "dm34",
+        "dm56",
+        "ln12+skill('Resist Lightning'.blvl)*par8+skill('Salvation'.blvl)*par7",
+        "ln56",
+        "ln56/4",
+        "par3",
+        "par5"
+      ],
+      "description": "General calculation 3 used by skill functions"
+    },
+    "calc4": {
+      "type": "enum",
+      "values": [
+        "",
+        "100",
+        "20",
+        "dm56",
+        "ln12",
+        "par1",
+        "par1 + skill('Lightning Sentry'.blvl)/4",
+        "par2",
+        "par8",
+        "par8 + skill('Fire Trauma'.blvl)/3",
+        "par8 + skill('Lightning Sentry'.blvl)/4",
+        "skill('Berserk'.blvl)"
+      ],
+      "description": "General calculation 4 used by skill functions"
+    },
+    "Param1": {
+      "type": "integer",
+      "description": "Numeric parameter 1 passed to skill functions"
+    },
+    "Param2": {
+      "type": "integer",
+      "description": "Numeric parameter 2 passed to skill functions"
+    },
+    "Param3": {
+      "type": "integer",
+      "description": "Numeric parameter 3 passed to skill functions"
+    },
+    "Param4": {
+      "type": "integer",
+      "description": "Numeric parameter 4 passed to skill functions"
+    },
+    "Param5": {
+      "type": "integer",
+      "description": "Numeric parameter 5 passed to skill functions"
+    },
+    "Param6": {
+      "type": "integer",
+      "description": "Numeric parameter 6 passed to skill functions"
+    },
+    "Param7": {
+      "type": "integer",
+      "description": "Numeric parameter 7 passed to skill functions"
+    },
+    "Param8": {
+      "type": "integer",
+      "min": 0,
+      "description": "Numeric parameter 8 passed to skill functions"
+    },
+    "InGame": {
+      "type": "boolean",
+      "description": "Whether skill appears in-game (1 = yes)"
+    },
+    "ToHit": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base attack rating bonus"
+    },
+    "LevToHit": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack rating bonus per skill level"
+    },
+    "ToHitCalc": {
+      "type": "enum",
+      "values": [
+        "",
+        "10+lvl*5+skill('Concentrate'.blvl)*par7",
+        "15+lvl*5+skill('Concentrate'.blvl)*par7",
+        "40*lvl+40*skill('Penetrate'.blvl)"
+      ],
+      "description": "Calculation overriding ToHit/LevToHit when present"
+    },
+    "ResultFlags": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bitfield controlling hit results (1=knockback, 4=stun, etc.)"
+    },
+    "HitFlags": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bitfield for hit behavior flags"
+    },
+    "HitClass": {
+      "type": "integer",
+      "min": 0,
+      "description": "Hit class controlling hit sound and visual effect"
+    },
+    "Kick": {
+      "type": "boolean",
+      "description": "Skill uses kick attack (1 = yes)"
+    },
+    "HitShift": {
+      "type": "integer",
+      "min": 0,
+      "description": "Bit shift for damage precision (typically 8 = 256ths)"
+    },
+    "SrcDam": {
+      "type": "integer",
+      "min": 0,
+      "description": "Percentage of weapon damage applied (128=100%, 64=50%)"
+    },
+    "MinDam": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum physical damage at base level"
+    },
+    "MinLevDam1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 2-8)"
+    },
+    "MinLevDam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 9-16)"
+    },
+    "MinLevDam3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 17-22)"
+    },
+    "MinLevDam4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 23-28)"
+    },
+    "MinLevDam5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min damage bonus per level (levels 29+)"
+    },
+    "MaxDam": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum physical damage at base level"
+    },
+    "MaxLevDam1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 2-8)"
+    },
+    "MaxLevDam2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 9-16)"
+    },
+    "MaxLevDam3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 17-22)"
+    },
+    "MaxLevDam4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 23-28)"
+    },
+    "MaxLevDam5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max damage bonus per level (levels 29+)"
+    },
+    "DmgSymPerCalc": {
+      "type": "enum",
+      "values": [
+        "",
+        "(skill('Cyclone Armor'.blvl)+skill('Twister'.blvl)+skill('Hurricane'.blvl))*par8",
+        "(skill('Howl'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8",
+        "(skill('Tornado'.blvl)+skill('Hurricane'.blvl))*par8",
+        "skill('Maul'.blvl)*par8",
+        "skill('Molten Boulder'.blvl)*par7",
+        "skill('Volcano'.blvl)*par7"
+      ],
+      "description": "Synergy calculation for physical damage bonus"
+    },
+    "EType": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Elemental damage type"
+    },
+    "EMin": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum elemental damage at base level"
+    },
+    "EMinLev1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 2-8)"
+    },
+    "EMinLev2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 9-16)"
+    },
+    "EMinLev3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 17-22)"
+    },
+    "EMinLev4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 23-28)"
+    },
+    "EMinLev5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Min elemental damage bonus per level (levels 29+)"
+    },
+    "EMax": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum elemental damage at base level"
+    },
+    "EMaxLev1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 2-8)"
+    },
+    "EMaxLev2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 9-16)"
+    },
+    "EMaxLev3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 17-22)"
+    },
+    "EMaxLev4": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 23-28)"
+    },
+    "EMaxLev5": {
+      "type": "integer",
+      "min": 0,
+      "description": "Max elemental damage bonus per level (levels 29+)"
+    },
+    "EDmgSymPerCalc": {
+      "type": "string",
+      "description": "Synergy calculation for elemental damage bonus"
+    },
+    "ELen": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base elemental effect duration in frames (poison/cold/stun)"
+    },
+    "ELevLen1": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 2-8)"
+    },
+    "ELevLen2": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 9-16)"
+    },
+    "ELevLen3": {
+      "type": "integer",
+      "min": 0,
+      "description": "Duration bonus per level (levels 17-22)"
+    },
+    "ELenSymPerCalc": {
+      "type": "enum",
+      "values": [
+        "",
+        "(skill('Freezing Arrow'.blvl)) * par7",
+        "(skill('Glacial Spike'.blvl))*par7",
+        "(skill('Ice Arrow'.blvl)) * par7",
+        "skill('War Cry'.blvl)*par6"
+      ],
+      "description": "Synergy calculation for elemental duration bonus"
+    },
+    "aitype": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI targeting type for this skill"
+    },
+    "aibonus": {
+      "type": "integer",
+      "description": "AI bonus parameter for targeting priority"
+    },
+    "cost mult": {
+      "type": "integer",
+      "min": 0,
+      "description": "Mana cost multiplier for this skill"
+    },
+    "cost add": {
+      "type": "integer",
+      "min": 0,
+      "description": "Flat mana cost added to base cost"
     }
   }
 }

@@ -1,21 +1,16 @@
 {
   "file": "monstats.txt",
-  "description": "Monster statistics \u00e2\u20ac\u201d defines all monster types, their stats, AI, drops, and visual properties. 229 columns.",
+  "description": "Monster statistics — defines all monster types, their stats, AI, drops, and visual properties.",
   "columns": {
-    "Class": {
+    "Id": {
       "type": "string",
       "required": true,
       "description": "Internal monster class name (referenced by other tables)"
     },
-    "namco": {
-      "type": "string",
-      "description": "String table key for display name"
-    },
-    "Type": {
-      "type": "ref",
-      "target": "MonType.txt",
-      "targetColumn": "type",
-      "description": "Monster type classification"
+    "hcIdx": {
+      "type": "integer",
+      "min": 0,
+      "description": "Hardcoded index used internally by the game engine"
     },
     "BaseId": {
       "type": "ref",
@@ -23,24 +18,142 @@
       "targetColumn": "Class",
       "description": "Base monster class (for variants)"
     },
+    "NextInClass": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Id",
+      "description": "Next monster in class chain (for superunique variants)"
+    },
+    "TransLvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Transform level controlling color palette variation (0-7)"
+    },
+    "NameStr": {
+      "type": "string",
+      "description": "String table key for display name"
+    },
+    "MonStatsEx": {
+      "type": "string",
+      "description": "Reference to extended stats entry in MonStats2.txt"
+    },
+    "MonProp": {
+      "type": "enum",
+      "values": [
+        "",
+        "baalhighpriest",
+        "baboon6",
+        "bloodraven",
+        "blunderbore",
+        "councilmember1",
+        "councilmember2",
+        "councilmember3",
+        "druidhawk",
+        "mephisto",
+        "quillrat6",
+        "quillrat7",
+        "quillrat8"
+      ],
+      "description": "Reference to monster property set in MonProp.txt"
+    },
+    "MonType": {
+      "type": "ref",
+      "target": "MonType.txt",
+      "targetColumn": "type",
+      "description": "Monster type classification"
+    },
+    "AI": {
+      "type": "string",
+      "description": "AI behavior type"
+    },
+    "DescStr": {
+      "type": "string",
+      "description": "String table key for monster description text"
+    },
     "Code": {
       "type": "string",
       "required": true,
       "description": "2-character token used in animation file paths"
     },
-    "Spawned": {
+    "enabled": {
       "type": "boolean",
-      "description": "Can be spawned by other monsters (1 = yes)"
+      "description": "Monster is enabled in the game (1 = yes)"
     },
-    "SizeX": {
+    "rangedtype": {
+      "type": "boolean",
+      "description": "Monster uses ranged attacks (1 = yes)"
+    },
+    "placespawn": {
+      "type": "boolean",
+      "description": "Monster can be placed by level spawning (1 = yes)"
+    },
+    "spawn": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Id",
+      "description": "Monster spawned by this monster"
+    },
+    "spawnx": {
+      "type": "integer",
+      "description": "X offset for spawned monster position"
+    },
+    "spawny": {
+      "type": "integer",
+      "description": "Y offset for spawned monster position"
+    },
+    "spawnmode": {
+      "type": "enum",
+      "values": [
+        "",
+        "NU",
+        "S1"
+      ],
+      "description": "Animation mode for spawn (NU=neutral, S1=skill 1)"
+    },
+    "minion1": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Id",
+      "description": "Minion type 1 that accompanies this monster"
+    },
+    "minion2": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Id",
+      "description": "Minion type 2 that accompanies this monster"
+    },
+    "SetBoss": {
+      "type": "boolean",
+      "description": "Is a set boss with fixed affixes (1 = yes)"
+    },
+    "BossXfer": {
+      "type": "boolean",
+      "description": "Boss transfers aura/buffs to minions (1 = yes)"
+    },
+    "PartyMin": {
       "type": "integer",
       "min": 0,
-      "description": "Tile footprint width"
+      "description": "Minimum number of minions in group"
     },
-    "SizeY": {
+    "PartyMax": {
       "type": "integer",
       "min": 0,
-      "description": "Tile footprint height"
+      "description": "Maximum number of minions in group"
+    },
+    "MinGrp": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum number of monsters spawned together"
+    },
+    "MaxGrp": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum number of monsters spawned together"
+    },
+    "sparsePopulate": {
+      "type": "integer",
+      "min": 0,
+      "description": "Sparse population density percentage"
     },
     "Velocity": {
       "type": "integer",
@@ -51,6 +164,11 @@
       "type": "integer",
       "min": 0,
       "description": "Run speed"
+    },
+    "Rarity": {
+      "type": "integer",
+      "min": 0,
+      "description": "Spawn rarity weight (0=common, higher=rarer)"
     },
     "Level": {
       "type": "integer",
@@ -70,35 +188,657 @@
       "max": 110,
       "description": "Monster level (Hell difficulty)"
     },
-    "MinHP": {
+    "MonSound": {
+      "type": "ref",
+      "target": "MonSounds.txt",
+      "targetColumn": "Id",
+      "description": "Sound set for normal version"
+    },
+    "UMonSound": {
+      "type": "ref",
+      "target": "MonSounds.txt",
+      "targetColumn": "Id",
+      "description": "Sound set for unique/champion version"
+    },
+    "threat": {
+      "type": "integer",
+      "min": 0,
+      "description": "Threat level affecting AI targeting priority (1-14)"
+    },
+    "aidel": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI action delay in frames (Normal)"
+    },
+    "aidel(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI action delay in frames (Nightmare)"
+    },
+    "aidel(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI action delay in frames (Hell)"
+    },
+    "aidist": {
+      "type": "string",
+      "description": "AI engagement distance (Normal)"
+    },
+    "aidist(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI engagement distance (Nightmare)"
+    },
+    "aidist(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI engagement distance (Hell)"
+    },
+    "aip1": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 1 (Normal) - meaning varies by AI type"
+    },
+    "aip1(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 1 (Nightmare)"
+    },
+    "aip1(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 1 (Hell)"
+    },
+    "aip2": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 2 (Normal)"
+    },
+    "aip2(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 2 (Nightmare)"
+    },
+    "aip2(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 2 (Hell)"
+    },
+    "aip3": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 3 (Normal)"
+    },
+    "aip3(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 3 (Nightmare)"
+    },
+    "aip3(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 3 (Hell)"
+    },
+    "aip4": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 4 (Normal)"
+    },
+    "aip4(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 4 (Nightmare)"
+    },
+    "aip4(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 4 (Hell)"
+    },
+    "aip5": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 5 (Normal)"
+    },
+    "aip5(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 5 (Nightmare)"
+    },
+    "aip5(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 5 (Hell)"
+    },
+    "aip6": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 6 (Normal)"
+    },
+    "aip6(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 6 (Nightmare)"
+    },
+    "aip6(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 6 (Hell)"
+    },
+    "aip7": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 7 (Normal)"
+    },
+    "aip7(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 7 (Nightmare)"
+    },
+    "aip7(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 7 (Hell)"
+    },
+    "aip8": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 8 (Normal)"
+    },
+    "aip8(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 8 (Nightmare)"
+    },
+    "aip8(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "AI parameter 8 (Hell)"
+    },
+    "MissA1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for attack 1 (ranged)"
+    },
+    "MissA2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for attack 2 (ranged)"
+    },
+    "MissS1": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for skill 1"
+    },
+    "MissS2": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for skill 2"
+    },
+    "MissS3": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for skill 3"
+    },
+    "MissS4": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for skill 4"
+    },
+    "MissC": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for special/charge attack"
+    },
+    "MissSQ": {
+      "type": "ref",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile",
+      "description": "Missile used for sequence attack"
+    },
+    "Align": {
+      "type": "integer",
+      "min": 0,
+      "description": "Alignment (0=enemy, 1=allied/friendly, 2=neutral)"
+    },
+    "isSpawn": {
+      "type": "boolean",
+      "description": "Can be spawned by other monsters (1 = yes)"
+    },
+    "isMelee": {
+      "type": "boolean",
+      "description": "Is a melee attacker (1 = yes)"
+    },
+    "npc": {
+      "type": "boolean",
+      "description": "Is an NPC (1 = yes)"
+    },
+    "interact": {
+      "type": "boolean",
+      "description": "Can be interacted with (1 = yes)"
+    },
+    "inventory": {
+      "type": "boolean",
+      "description": "Has an inventory for trading (1 = yes)"
+    },
+    "inTown": {
+      "type": "boolean",
+      "description": "Appears in town (1 = yes)"
+    },
+    "lUndead": {
+      "type": "boolean",
+      "description": "Is a low undead (skeleton, zombie) (1 = yes)"
+    },
+    "hUndead": {
+      "type": "boolean",
+      "description": "Is a high undead (ghost, mummy) (1 = yes)"
+    },
+    "demon": {
+      "type": "boolean",
+      "description": "Is a demon (1 = yes)"
+    },
+    "flying": {
+      "type": "boolean",
+      "description": "Is a flying monster (1 = yes)"
+    },
+    "opendoors": {
+      "type": "boolean",
+      "description": "Can open doors (1 = yes)"
+    },
+    "boss": {
+      "type": "boolean",
+      "description": "Is a boss monster (1 = yes)"
+    },
+    "primeevil": {
+      "type": "boolean",
+      "description": "Is a prime evil (Diablo, Mephisto, Baal) (1 = yes)"
+    },
+    "killable": {
+      "type": "boolean",
+      "description": "Can be killed (1 = yes)"
+    },
+    "switchai": {
+      "type": "boolean",
+      "description": "Can switch AI behavior (1 = yes)"
+    },
+    "noAura": {
+      "type": "boolean",
+      "description": "Cannot receive aura effects (1 = yes)"
+    },
+    "nomultishot": {
+      "type": "boolean",
+      "description": "Cannot use multishot modifier (1 = yes)"
+    },
+    "neverCount": {
+      "type": "boolean",
+      "description": "Not counted for area monster population (1 = yes)"
+    },
+    "petIgnore": {
+      "type": "boolean",
+      "description": "Ignored by pets/summons (1 = yes)"
+    },
+    "deathDmg": {
+      "type": "boolean",
+      "description": "Deals damage on death (1 = yes)"
+    },
+    "genericSpawn": {
+      "type": "boolean",
+      "description": "Can be generically spawned in random areas (1 = yes)"
+    },
+    "zoo": {
+      "type": "boolean",
+      "description": "Spawns in monster den/zoo areas (1 = yes)"
+    },
+    "SendSkills": {
+      "type": "integer",
+      "min": 0,
+      "description": "Server sends skill data to client (2 = full sync)"
+    },
+    "Skill1": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 1 used by this monster"
+    },
+    "Sk1mode": {
+      "type": "string",
+      "description": "Animation mode for skill 1 (e.g. A1, S1, SC)"
+    },
+    "Sk1lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 1"
+    },
+    "Skill2": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 2 used by this monster"
+    },
+    "Sk2mode": {
+      "type": "string",
+      "description": "Animation mode for skill 2"
+    },
+    "Sk2lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 2"
+    },
+    "Skill3": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 3 used by this monster"
+    },
+    "Sk3mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "A2",
+        "S1",
+        "S2",
+        "S3",
+        "SC",
+        "seq_durielsmite",
+        "seq_fetishres",
+        "seq_maggotlay",
+        "seq_mummyres",
+        "seq_swtigerfist"
+      ],
+      "description": "Animation mode for skill 3"
+    },
+    "Sk3lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 3"
+    },
+    "Skill4": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 4 used by this monster"
+    },
+    "Sk4mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "A2",
+        "NU",
+        "S1",
+        "S2",
+        "S3",
+        "SC",
+        "seq_genericspawner",
+        "seq_nihlathakarctic",
+        "seq_queendeath",
+        "seq_swtigerfist"
+      ],
+      "description": "Animation mode for skill 4"
+    },
+    "Sk4lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 4"
+    },
+    "Skill5": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 5 used by this monster"
+    },
+    "Sk5mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "A2",
+        "S2",
+        "SC",
+        "seq_diablorun",
+        "seq_impinferno",
+        "seq_swdragonflight",
+        "seq_undeadbestow"
+      ],
+      "description": "Animation mode for skill 5"
+    },
+    "Sk5lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 5"
+    },
+    "Skill6": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 6 used by this monster"
+    },
+    "Sk6mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A2",
+        "S2",
+        "S3",
+        "seq_swtigerfist"
+      ],
+      "description": "Animation mode for skill 6"
+    },
+    "Sk6lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 6"
+    },
+    "Skill7": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 7 used by this monster"
+    },
+    "Sk7mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A2",
+        "S3"
+      ],
+      "description": "Animation mode for skill 7"
+    },
+    "Sk7lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 7"
+    },
+    "Skill8": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill 8 used by this monster"
+    },
+    "Sk8mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "S3"
+      ],
+      "description": "Animation mode for skill 8"
+    },
+    "Sk8lvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill level for skill 8"
+    },
+    "Drain": {
+      "type": "integer",
+      "description": "Life/mana drain effectiveness (%)"
+    },
+    "Drain(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Life/mana drain effectiveness % (Nightmare)"
+    },
+    "Drain(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Life/mana drain effectiveness % (Hell)"
+    },
+    "coldeffect": {
+      "type": "integer",
+      "description": "How cold slows this monster (0-5, 0=immune)"
+    },
+    "coldeffect(N)": {
+      "type": "integer",
+      "description": "Cold slow effectiveness (Nightmare)"
+    },
+    "coldeffect(H)": {
+      "type": "integer",
+      "description": "Cold slow effectiveness (Hell)"
+    },
+    "ResDm": {
+      "type": "integer",
+      "min": 0,
+      "description": "Physical damage resistance % (Normal)"
+    },
+    "ResMa": {
+      "type": "integer",
+      "min": 0,
+      "description": "Magic damage resistance % (Normal)"
+    },
+    "ResFi": {
+      "type": "integer",
+      "description": "Fire resistance % (Normal)"
+    },
+    "ResLi": {
+      "type": "integer",
+      "min": 0,
+      "description": "Lightning resistance % (Normal)"
+    },
+    "ResCo": {
+      "type": "integer",
+      "min": 0,
+      "description": "Cold resistance % (Normal)"
+    },
+    "ResPo": {
+      "type": "integer",
+      "description": "Poison resistance % (Normal)"
+    },
+    "ResDm(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Physical damage resistance % (Nightmare)"
+    },
+    "ResMa(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Magic damage resistance % (Nightmare)"
+    },
+    "ResFi(N)": {
+      "type": "integer",
+      "description": "Fire resistance % (Nightmare)"
+    },
+    "ResLi(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Lightning resistance % (Nightmare)"
+    },
+    "ResCo(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Cold resistance % (Nightmare)"
+    },
+    "ResPo(N)": {
+      "type": "integer",
+      "description": "Poison resistance % (Nightmare)"
+    },
+    "ResDm(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Physical damage resistance % (Hell)"
+    },
+    "ResMa(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Magic damage resistance % (Hell)"
+    },
+    "ResFi(H)": {
+      "type": "integer",
+      "description": "Fire resistance % (Hell)"
+    },
+    "ResLi(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Lightning resistance % (Hell)"
+    },
+    "ResCo(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Cold resistance % (Hell)"
+    },
+    "ResPo(H)": {
+      "type": "integer",
+      "description": "Poison resistance % (Hell)"
+    },
+    "DamageRegen": {
+      "type": "integer",
+      "min": 0,
+      "description": "Health regeneration rate (frames per HP recovered)"
+    },
+    "SkillDamage": {
+      "type": "enum",
+      "values": [
+        "",
+        "Raven",
+        "Summon Fenris",
+        "Summon Grizzly",
+        "Summon Spirit Wolf"
+      ],
+      "description": "Skill used for damage calculation override"
+    },
+    "noRatio": {
+      "type": "boolean",
+      "description": "Ignores level-based damage reduction ratio (1 = yes)"
+    },
+    "NoShldBlock": {
+      "type": "boolean",
+      "description": "Player cannot block attacks from this monster (1 = yes)"
+    },
+    "ToBlock": {
+      "type": "integer",
+      "min": 0,
+      "description": "Block chance % (Normal)"
+    },
+    "ToBlock(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Block chance % (Nightmare)"
+    },
+    "ToBlock(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Block chance % (Hell)"
+    },
+    "Crit": {
+      "type": "integer",
+      "min": 0,
+      "description": "Critical hit chance % (double damage)"
+    },
+    "minHP": {
       "type": "integer",
       "min": 0,
       "description": "Minimum hit points (Normal)"
     },
-    "MaxHP": {
+    "maxHP": {
       "type": "integer",
       "min": 0,
       "description": "Maximum hit points (Normal)"
-    },
-    "MinHP(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum hit points (Nightmare)"
-    },
-    "MaxHP(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum hit points (Nightmare)"
-    },
-    "MinHP(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum hit points (Hell)"
-    },
-    "MaxHP(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum hit points (Hell)"
     },
     "AC": {
       "type": "integer",
@@ -110,16 +850,6 @@
       "min": 0,
       "description": "Base experience points (Normal)"
     },
-    "Exp(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base experience points (Nightmare)"
-    },
-    "Exp(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base experience points (Hell)"
-    },
     "A1MinD": {
       "type": "integer",
       "min": 0,
@@ -129,6 +859,171 @@
       "type": "integer",
       "min": 0,
       "description": "Attack 1 maximum damage (Normal)"
+    },
+    "A1TH": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 to-hit rating (Normal)"
+    },
+    "A2MinD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 minimum damage (Normal)"
+    },
+    "A2MaxD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 maximum damage (Normal)"
+    },
+    "A2TH": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 to-hit rating (Normal)"
+    },
+    "S1MinD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 minimum damage (Normal)"
+    },
+    "S1MaxD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 maximum damage (Normal)"
+    },
+    "S1TH": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 to-hit rating (Normal)"
+    },
+    "MinHP(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum hit points (Nightmare)"
+    },
+    "MaxHP(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum hit points (Nightmare)"
+    },
+    "AC(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Armor class / defense (Nightmare)"
+    },
+    "Exp(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base experience points (Nightmare)"
+    },
+    "A1MinD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 minimum damage (Nightmare)"
+    },
+    "A1MaxD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 maximum damage (Nightmare)"
+    },
+    "A1TH(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 to-hit rating (Nightmare)"
+    },
+    "A2MinD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 minimum damage (Nightmare)"
+    },
+    "A2MaxD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 maximum damage (Nightmare)"
+    },
+    "A2TH(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 to-hit rating (Nightmare)"
+    },
+    "S1MinD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 minimum damage (Nightmare)"
+    },
+    "S1MaxD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 maximum damage (Nightmare)"
+    },
+    "S1TH(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 to-hit rating (Nightmare)"
+    },
+    "MinHP(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Minimum hit points (Hell)"
+    },
+    "MaxHP(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Maximum hit points (Hell)"
+    },
+    "AC(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Armor class / defense (Hell)"
+    },
+    "Exp(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Base experience points (Hell)"
+    },
+    "A1MinD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 minimum damage (Hell)"
+    },
+    "A1MaxD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 maximum damage (Hell)"
+    },
+    "A1TH(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 1 to-hit rating (Hell)"
+    },
+    "A2MinD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 minimum damage (Hell)"
+    },
+    "A2MaxD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 maximum damage (Hell)"
+    },
+    "A2TH(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Attack 2 to-hit rating (Hell)"
+    },
+    "S1MinD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 minimum damage (Hell)"
+    },
+    "S1MaxD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 maximum damage (Hell)"
+    },
+    "S1TH(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Skill 1 to-hit rating (Hell)"
     },
     "El1Mode": {
       "type": "enum",
@@ -165,11 +1060,223 @@
       ],
       "description": "Elemental attack 1 damage type"
     },
+    "El1Pct": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 chance % (Normal)"
+    },
+    "El1MinD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 minimum damage (Normal)"
+    },
+    "El1MaxD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 maximum damage (Normal)"
+    },
+    "El1Dur": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 duration in frames (Normal)"
+    },
+    "El1Pct(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 chance % (Nightmare)"
+    },
+    "El1MinD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 minimum damage (Nightmare)"
+    },
+    "El1MaxD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 maximum damage (Nightmare)"
+    },
+    "El1Dur(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 duration in frames (Nightmare)"
+    },
+    "El1Pct(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 chance % (Hell)"
+    },
+    "El1MinD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 minimum damage (Hell)"
+    },
+    "El1MaxD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 maximum damage (Hell)"
+    },
+    "El1Dur(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 1 duration in frames (Hell)"
+    },
+    "El2Mode": {
+      "type": "enum",
+      "values": [
+        "",
+        "A1",
+        "A2",
+        "SC"
+      ],
+      "description": "Elemental attack 2 animation mode"
+    },
+    "El2Type": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Elemental attack 2 damage type"
+    },
+    "El2Pct": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 chance % (Normal)"
+    },
+    "El2MinD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 minimum damage (Normal)"
+    },
+    "El2MaxD": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 maximum damage (Normal)"
+    },
+    "El2Dur": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 duration in frames (Normal)"
+    },
+    "El2Pct(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 chance % (Nightmare)"
+    },
+    "El2MinD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 minimum damage (Nightmare)"
+    },
+    "El2MaxD(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 maximum damage (Nightmare)"
+    },
+    "El2Dur(N)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 duration in frames (Nightmare)"
+    },
+    "El2Pct(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 chance % (Hell)"
+    },
+    "El2MinD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 minimum damage (Hell)"
+    },
+    "El2MaxD(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 maximum damage (Hell)"
+    },
+    "El2Dur(H)": {
+      "type": "integer",
+      "min": 0,
+      "description": "Elemental attack 2 duration in frames (Hell)"
+    },
+    "El3Mode": {
+      "type": "string",
+      "description": "Elemental attack 3 animation mode"
+    },
+    "El3Type": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Elemental attack 3 damage type"
+    },
+    "El3Pct": {
+      "type": "string",
+      "description": "Elemental attack 3 chance % (Normal)"
+    },
+    "El3MinD": {
+      "type": "string",
+      "description": "Elemental attack 3 minimum damage (Normal)"
+    },
+    "El3MaxD": {
+      "type": "string",
+      "description": "Elemental attack 3 maximum damage (Normal)"
+    },
+    "El3Dur": {
+      "type": "string",
+      "description": "Elemental attack 3 duration in frames (Normal)"
+    },
+    "El3Pct(N)": {
+      "type": "string",
+      "description": "Elemental attack 3 chance % (Nightmare)"
+    },
+    "El3MinD(N)": {
+      "type": "string",
+      "description": "Elemental attack 3 minimum damage (Nightmare)"
+    },
+    "El3MaxD(N)": {
+      "type": "string",
+      "description": "Elemental attack 3 maximum damage (Nightmare)"
+    },
+    "El3Dur(N)": {
+      "type": "string",
+      "description": "Elemental attack 3 duration in frames (Nightmare)"
+    },
+    "El3Pct(H)": {
+      "type": "string",
+      "description": "Elemental attack 3 chance % (Hell)"
+    },
+    "El3MinD(H)": {
+      "type": "string",
+      "description": "Elemental attack 3 minimum damage (Hell)"
+    },
+    "El3MaxD(H)": {
+      "type": "string",
+      "description": "Elemental attack 3 maximum damage (Hell)"
+    },
+    "El3Dur(H)": {
+      "type": "string",
+      "description": "Elemental attack 3 duration in frames (Hell)"
+    },
     "TreasureClass1": {
       "type": "ref",
       "target": "TreasureClassEx.txt",
       "targetColumn": "Treasure Class",
       "description": "Drop table (Normal difficulty)"
+    },
+    "TreasureClass2": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Champion drop table (Normal)"
+    },
+    "TreasureClass3": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Unique/boss drop table (Normal)"
+    },
+    "TreasureClass4": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Quest boss drop table (Normal)"
     },
     "TreasureClass1(N)": {
       "type": "ref",
@@ -177,35 +1284,74 @@
       "targetColumn": "Treasure Class",
       "description": "Drop table (Nightmare difficulty)"
     },
+    "TreasureClass2(N)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Champion drop table (Nightmare)"
+    },
+    "TreasureClass3(N)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Unique/boss drop table (Nightmare)"
+    },
+    "TreasureClass4(N)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Quest boss drop table (Nightmare)"
+    },
     "TreasureClass1(H)": {
       "type": "ref",
       "target": "TreasureClassEx.txt",
       "targetColumn": "Treasure Class",
       "description": "Drop table (Hell difficulty)"
     },
-    "Drain": {
+    "TreasureClass2(H)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Champion drop table (Hell)"
+    },
+    "TreasureClass3(H)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Unique/boss drop table (Hell)"
+    },
+    "TreasureClass4(H)": {
+      "type": "ref",
+      "target": "TreasureClassEx.txt",
+      "targetColumn": "Treasure Class",
+      "description": "Quest boss drop table (Hell)"
+    },
+    "TCQuestId": {
       "type": "integer",
-      "description": "Life/mana drain effectiveness (%)"
+      "min": 0,
+      "description": "Quest ID that activates TreasureClass4 drops"
     },
-    "ColdEffect": {
+    "TCQuestCP": {
       "type": "integer",
-      "description": "How cold slows this monster (0-5, 0=immune)"
+      "min": 0,
+      "description": "Quest checkpoint that activates TreasureClass4 drops"
     },
-    "AI": {
-      "type": "string",
-      "description": "AI behavior type"
+    "SplEndDeath": {
+      "type": "integer",
+      "min": 0,
+      "description": "Special end-death behavior (1=standard, 2=special)"
     },
-    "boss": {
+    "SplGetModeChart": {
       "type": "boolean",
-      "description": "Is a boss monster (1 = yes)"
+      "description": "Use special mode chart for animation (1 = yes)"
     },
-    "npc": {
+    "SplEndGeneric": {
       "type": "boolean",
-      "description": "Is an NPC (1 = yes)"
+      "description": "Special generic end behavior (1 = yes)"
     },
-    "killable": {
+    "SplClientEnd": {
       "type": "boolean",
-      "description": "Can be killed (1 = yes)"
+      "description": "Special client-side end behavior (1 = yes)"
     }
   }
 }
