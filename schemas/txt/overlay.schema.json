@@ -3,11 +3,10 @@
   "description": "Visual overlay definitions \u2014 particle effects, auras, and status indicators.",
   "columns": {
     "Overlay": {
-      "type": "ref",
-      "target": "overlay.txt",
-      "targetColumn": "Overlay",
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Overlay identifier"
     },
     "Filename": {
       "type": "string",
@@ -16,7 +15,8 @@
     "Frames": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "Number of animation frames"
     },
     "Character": {
       "type": "enum",
@@ -37,18 +37,22 @@
       ]
     },
     "PreDraw": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Pre-draw flag for rendering order"
     },
     "1ofN": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Random variant selection (1 of N)"
     },
     "Dir": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Number of directions"
     },
     "Open": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Open/expanded state flag"
     },
     "Beta": {
       "type": "boolean",
@@ -87,27 +91,32 @@
     "AnimRate": {
       "type": "integer",
       "min": 2,
-      "max": 24
+      "max": 24,
+      "description": "Animation playback rate"
     },
     "LoopWaitTime": {
       "type": "integer",
       "min": 0,
-      "max": 7000
+      "max": 7000,
+      "description": "Wait time between loop iterations (frames)"
     },
     "Trans": {
       "type": "integer",
       "min": 3,
-      "max": 8
+      "max": 8,
+      "description": "Transparency blend mode"
     },
     "InitRadius": {
       "type": "integer",
       "min": 0,
-      "max": 14
+      "max": 14,
+      "description": "Initial effect radius"
     },
     "Radius": {
       "type": "integer",
       "min": 0,
-      "max": 14
+      "max": 14,
+      "description": "Effect radius"
     },
     "Red": {
       "type": "integer",
@@ -130,10 +139,12 @@
     "NumDirections": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Number of animation directions"
     },
     "LocalBlood": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Local blood effect flag"
     }
   }
 }

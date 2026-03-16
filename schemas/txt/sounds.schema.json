@@ -4,7 +4,8 @@
   "columns": {
     "Handle": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Sound effect name/handle identifier"
     },
     "Index": {
       "type": "integer",
@@ -25,7 +26,8 @@
     "Group Size": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "Maximum simultaneous playback instances"
     },
     "Loop": {
       "type": "boolean",
@@ -42,34 +44,42 @@
       "max": 125
     },
     "Defer Inst": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Deferred instantiation flag"
     },
     "Stop Inst": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Stop other instances when playing"
     },
     "Duration": {
       "type": "integer",
       "min": 0,
-      "max": 150
+      "max": 150,
+      "description": "Playback duration (milliseconds)"
     },
     "Compound": {
       "type": "integer",
       "min": -1,
-      "max": 24
+      "max": 24,
+      "description": "Compound sound priority"
     },
     "Reverb": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Reverb effect enabled"
     },
     "Falloff": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Distance falloff rate"
     },
     "Cache": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Cache sound in memory"
     },
     "Async Only": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Asynchronous playback only"
     },
     "Priority": {
       "type": "integer",
@@ -83,28 +93,34 @@
       "type": "boolean"
     },
     "Tracking": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Position tracking enabled"
     },
     "Solo": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Solo playback (mute others)"
     },
     "Music Vol": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Use music volume slider"
     },
     "Block 1": {
       "type": "integer",
       "min": -1,
-      "max": 6381568
+      "max": 6381568,
+      "description": "Sound block 1 reference"
     },
     "Block 2": {
       "type": "integer",
       "min": -1,
-      "max": 7000000
+      "max": 7000000,
+      "description": "Sound block 2 reference"
     },
     "Block 3": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Sound block 3 reference"
     }
   }
 }

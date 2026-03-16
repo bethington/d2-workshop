@@ -320,70 +320,91 @@
       "description": "Skill 3 level per character level"
     },
     "Skill4": {
-      "type": "string",
-      "description": "Skill 4 reference"
+      "type": "ref",
+      "description": "Skill 4 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode4": {
-      "type": "string",
-      "description": "Skill 4 usage mode"
+      "type": "integer",
+      "description": "Skill 4 usage mode",
+      "min": 0
     },
     "Chance4": {
-      "type": "string",
-      "description": "Skill 4 usage probability (%)"
+      "type": "integer",
+      "description": "Skill 4 usage probability (%)",
+      "min": 0
     },
     "ChancePerLevel4": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "Level4": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "LvlPerLvl4": {
-      "type": "string",
-      "description": "Skill 4 level per character level"
+      "type": "integer",
+      "description": "Skill 4 level per character level",
+      "min": 0
     },
     "Skill5": {
-      "type": "string",
-      "description": "Skill 5 reference"
+      "type": "ref",
+      "description": "Skill 5 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode5": {
-      "type": "string",
-      "description": "Skill 5 usage mode"
+      "type": "integer",
+      "description": "Skill 5 usage mode",
+      "min": 0
     },
     "Chance5": {
-      "type": "string",
-      "description": "Skill 5 usage probability (%)"
+      "type": "integer",
+      "description": "Skill 5 usage probability (%)",
+      "min": 0
     },
     "ChancePerLevel5": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "Level5": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "LvlPerLvl5": {
-      "type": "string",
-      "description": "Skill 5 level per character level"
+      "type": "integer",
+      "description": "Skill 5 level per character level",
+      "min": 0
     },
     "Skill6": {
-      "type": "string",
-      "description": "Skill 6 reference"
+      "type": "ref",
+      "description": "Skill 6 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode6": {
-      "type": "string",
-      "description": "Skill 6 usage mode"
+      "type": "integer",
+      "description": "Skill 6 usage mode",
+      "min": 0
     },
     "Chance6": {
-      "type": "string",
-      "description": "Skill 6 usage probability (%)"
+      "type": "integer",
+      "description": "Skill 6 usage probability (%)",
+      "min": 0
     },
     "ChancePerLevel6": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "Level6": {
-      "type": "string"
+      "type": "integer",
+      "min": 0
     },
     "LvlPerLvl6": {
-      "type": "string",
-      "description": "Skill 6 level per character level"
+      "type": "integer",
+      "description": "Skill 6 level per character level",
+      "min": 0
     },
     "Head": {
       "type": "integer",
