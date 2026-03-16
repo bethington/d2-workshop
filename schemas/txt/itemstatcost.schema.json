@@ -1,48 +1,240 @@
 {
   "file": "itemstatcost.txt",
-  "description": "Stat definitions — controls how stats are stored, transmitted, displayed, and affect item costs.",
+  "description": "Stat definitions — controls how stats are stored, transmitted, saved, displayed on items, and how they interact via operators for derived bonuses.",
   "columns": {
+    "Stat": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Unique stat identifier used by properties.txt, skills.txt, states.txt and other files to reference this stat"
+    },
     "ID": {
       "type": "integer",
       "min": 0,
-      "max": 176,
+      "max": 358,
       "required": true,
       "unique": true,
-      "description": "Unique numeric ID"
+      "description": "Unique sequential numeric ID for this stat, must match the row index"
+    },
+    "Send Other": {
+      "type": "boolean",
+      "description": "Whether this stat is sent to other players in multiplayer (used for stats affecting visuals like faster cast rate)"
+    },
+    "Signed": {
+      "type": "boolean",
+      "description": "Whether the stat value is signed (can be negative). Unsigned stats are always >= 0"
+    },
+    "Send Bits": {
+      "type": "integer",
+      "description": "Number of bits used to transmit this stat between client and server during gameplay"
+    },
+    "Send Param Bits": {
+      "type": "integer",
+      "description": "Number of bits used to transmit the stat parameter (e.g., skill ID for per-skill stats) between client and server"
+    },
+    "UpdateAnimRate": {
+      "type": "boolean",
+      "description": "Whether changing this stat triggers a recalculation of animation speeds (used by IAS, FCR, FHR, FBR)"
+    },
+    "Saved": {
+      "type": "boolean",
+      "description": "Whether this stat is saved to the character/item save file. Unsaved stats are recalculated at load"
+    },
+    "CSvSigned": {
+      "type": "boolean",
+      "description": "Whether the stat is signed when saved to the character save file"
+    },
+    "CSvBits": {
+      "type": "integer",
+      "description": "Number of bits allocated for this stat in the character save file"
+    },
+    "CSvParam": {
+      "type": "integer",
+      "description": "Number of bits allocated for the stat parameter in the character save file"
+    },
+    "fCallback": {
+      "type": "boolean",
+      "description": "Whether the game calls a callback function when this stat changes (used for stats that trigger special behavior)"
+    },
+    "fMin": {
+      "type": "boolean",
+      "description": "Whether the stat has a minimum value that it cannot go below"
+    },
+    "MinAccr": {
+      "type": "integer",
+      "description": "Minimum accumulation value — the minimum the stat can be reduced to by negative modifiers"
+    },
+    "Encode": {
+      "type": "integer",
+      "description": "Encoding type for compound stats: 0=normal, 1=encode as (value * param), 2=encode with skill/level/charge, 3=encode with skill/level/chance"
     },
     "Add": {
       "type": "integer",
-      "min": 0,
-      "max": 1000,
-      "description": "Flat cost modification value"
+      "description": "Flat gold cost addition per stat point when this stat appears on an item"
     },
     "Multiply": {
       "type": "integer",
-      "min": 0,
-      "max": 300,
-      "description": "Multiplicative cost modifier"
+      "description": "Multiplicative cost modifier per stat point when this stat appears on an item (in 1024ths)"
     },
     "Divide": {
       "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Division factor for calculations"
+      "description": "Divisor applied to the stat value before the cost multiply calculation"
     },
-    "CodeName": {
-      "type": "string",
-      "description": "Internal code name used to reference this stat in other data files"
+    "ValShift": {
+      "type": "integer",
+      "description": "Bit shift applied to the stat value for fixed-point representation (e.g., 8 means value is in 256ths)"
     },
-    "English like name": {
-      "type": "string",
-      "description": "Human-readable English description of the stat for documentation"
+    "1.09-Save Bits": {
+      "type": "integer",
+      "description": "Number of bits allocated for this stat in v1.09 save files (legacy compatibility)"
     },
-    "WeirdCode": {
-      "type": "string",
-      "description": "Alternate or legacy internal code reference"
+    "1.09-Save Add": {
+      "type": "integer",
+      "description": "Offset added to saved value in v1.09 save files to allow negative values (legacy compatibility)"
     },
-    "ItemSpecific": {
+    "Save Bits": {
+      "type": "integer",
+      "description": "Number of bits allocated for this stat value in item save data. Maximum stat value = 2^SaveBits - 1"
+    },
+    "Save Add": {
+      "type": "integer",
+      "description": "Offset added when saving to allow negative stat ranges. Effective range: -SaveAdd to 2^SaveBits - 1 - SaveAdd"
+    },
+    "Save Param Bits": {
+      "type": "integer",
+      "description": "Number of bits allocated for the stat parameter in item save data (e.g., skill index for per-skill bonuses)"
+    },
+    "keepzero": {
       "type": "boolean",
-      "description": "Whether this stat is stored per-item rather than per-character"
+      "description": "Whether to keep this stat on the item even when its value is zero (prevents pruning of zero-value stats)"
+    },
+    "op": {
+      "type": "integer",
+      "min": 0,
+      "max": 13,
+      "description": "Operator type for derived stat bonuses: 1=adds opstat by val*base/2^param, 2=time-based, 3=time-based %, 4=time-based add, 5=time-based mod, 6=is-event, 7=is-event percent, 8=per-level, 9=per-level %, 10=per-level add, 11=by-time %, 13=by-time add"
+    },
+    "op param": {
+      "type": "integer",
+      "description": "Parameter for the operator formula — typically a bit shift divisor, so the formula is statvalue * opbase / 2^opparam"
+    },
+    "op base": {
+      "type": "string",
+      "description": "Base stat whose value is used in the operator calculation. Must not be the same as op stat1 (causes crash)"
+    },
+    "op stat1": {
+      "type": "ref",
+      "description": "First stat that receives the operator bonus calculated from this stat and op base",
+      "target": "itemstatcost.txt",
+      "targetColumn": "Stat"
+    },
+    "op stat2": {
+      "type": "ref",
+      "description": "Second stat that receives the operator bonus (optional)",
+      "target": "itemstatcost.txt",
+      "targetColumn": "Stat"
+    },
+    "op stat3": {
+      "type": "ref",
+      "description": "Third stat that receives the operator bonus (optional)",
+      "target": "itemstatcost.txt",
+      "targetColumn": "Stat"
+    },
+    "direct": {
+      "type": "boolean",
+      "description": "Whether this stat is applied directly to the character rather than being stored on the item"
+    },
+    "maxstat": {
+      "type": "ref",
+      "description": "Associated maximum stat (e.g., maxhp for hitpoints, maxmana for mana) — used for stats that have current/max pairs",
+      "target": "itemstatcost.txt",
+      "targetColumn": "Stat"
+    },
+    "itemspecific": {
+      "type": "boolean",
+      "description": "Whether this stat is stored per-item rather than aggregated on the character (e.g., item durability)"
+    },
+    "damagerelated": {
+      "type": "boolean",
+      "description": "Whether this stat is damage-related and should be recalculated when weapon setup changes"
+    },
+    "itemevent1": {
+      "type": "string",
+      "description": "First item event trigger (e.g., 'kill', 'hit', 'gethit') that activates this stat's callback"
+    },
+    "itemeventfunc1": {
+      "type": "integer",
+      "description": "Function ID executed when itemevent1 triggers"
+    },
+    "itemevent2": {
+      "type": "string",
+      "description": "Second item event trigger that activates this stat's callback"
+    },
+    "itemeventfunc2": {
+      "type": "integer",
+      "description": "Function ID executed when itemevent2 triggers"
+    },
+    "descpriority": {
+      "type": "integer",
+      "description": "Display priority on item tooltips — higher values are shown earlier/higher on the item description"
+    },
+    "descfunc": {
+      "type": "integer",
+      "min": 0,
+      "max": 28,
+      "description": "Function ID controlling how this stat is formatted in item descriptions (e.g., 1=+value, 2=value%, 3=value, 4=+value%, etc.)"
+    },
+    "descval": {
+      "type": "integer",
+      "min": 0,
+      "max": 2,
+      "description": "Where the numeric value appears in the description: 0=hidden, 1=before the string, 2=after the string"
+    },
+    "descstrpos": {
+      "type": "string",
+      "description": "TBL string key used when the stat value is positive (e.g., 'strModEnhancedDamage')"
+    },
+    "descstrneg": {
+      "type": "string",
+      "description": "TBL string key used when the stat value is negative"
+    },
+    "descstr2": {
+      "type": "string",
+      "description": "Secondary TBL string key appended after the main description (e.g., used for 'to Mana after each Kill')"
+    },
+    "dgrp": {
+      "type": "integer",
+      "description": "Description group ID — stats sharing the same dgrp are combined into a single description line (e.g., all resistances)"
+    },
+    "dgrpfunc": {
+      "type": "integer",
+      "description": "Function ID used to format the grouped description when all stats in the dgrp have equal values"
+    },
+    "dgrpval": {
+      "type": "integer",
+      "min": 0,
+      "max": 2,
+      "description": "Where the numeric value appears in the grouped description: 0=hidden, 1=before string, 2=after string"
+    },
+    "dgrpstrpos": {
+      "type": "string",
+      "description": "TBL string key for the grouped description when the combined value is positive"
+    },
+    "dgrpstrneg": {
+      "type": "string",
+      "description": "TBL string key for the grouped description when the combined value is negative"
+    },
+    "dgrpstr2": {
+      "type": "string",
+      "description": "Secondary TBL string key appended after the grouped description"
+    },
+    "stuff": {
+      "type": "string",
+      "description": "Unused padding column"
+    },
+    "*eol": {
+      "type": "integer",
+      "description": "End of line marker — always 0, used by the game to detect row termination"
     }
   }
 }

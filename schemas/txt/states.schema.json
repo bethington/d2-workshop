@@ -1,12 +1,330 @@
 {
   "file": "states.txt",
-  "description": "Character/monster state definitions \u2014 buffs, debuffs, auras, and visual effects.",
+  "description": "Character/monster state definitions — buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
   "columns": {
     "state": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "State identifier"
+      "description": "Unique state identifier used by skills.txt, missiles.txt, and other files to reference this state"
+    },
+    "id": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "description": "Sequential numeric ID for this state, must match the row index"
+    },
+    "group": {
+      "type": "integer",
+      "description": "Group ID for mutually exclusive states — states in the same group cannot stack (e.g., cold armors share a group)"
+    },
+    "remhit": {
+      "type": "boolean",
+      "description": "Whether this state is dispelled when the unit is hit (only works for monsters, not players)"
+    },
+    "nosend": {
+      "type": "boolean",
+      "description": "Whether the server skips sending this state to other clients (used for internal-only states that do not affect other players)"
+    },
+    "transform": {
+      "type": "boolean",
+      "description": "Whether this state transforms the unit appearance (e.g., werewolf, werebear, Holy Shield)"
+    },
+    "aura": {
+      "type": "boolean",
+      "description": "Whether this is an aura state — auras cycle on-screen display and are dispelled by conversion effects"
+    },
+    "curable": {
+      "type": "boolean",
+      "description": "Whether a heal-enabled NPC (e.g., Akara) can remove this state when you talk to them"
+    },
+    "curse": {
+      "type": "boolean",
+      "description": "Whether this is a curse — curse states cannot stack and a new curse replaces the previous one"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Whether the state has an active ongoing effect (e.g., Shiver Armor's retaliation)"
+    },
+    "immed": {
+      "type": "boolean",
+      "description": "Whether the state takes effect immediately upon application without waiting for the next game tick"
+    },
+    "restrict": {
+      "type": "boolean",
+      "description": "Whether the state restricts player actions (related to werewolf/werebear transformation restrictions)"
+    },
+    "disguise": {
+      "type": "boolean",
+      "description": "Whether the state changes the unit graphic entirely (e.g., werewolf/werebear/valkyrie appearance swap)"
+    },
+    "blue": {
+      "type": "boolean",
+      "description": "Whether the state is considered a positive (blue) modifier for UI display purposes"
+    },
+    "attblue": {
+      "type": "boolean",
+      "description": "Whether to display the attack rating modifier from this state in blue (positive) color"
+    },
+    "damblue": {
+      "type": "boolean",
+      "description": "Whether to display the damage modifier from this state in blue (positive) color"
+    },
+    "armblue": {
+      "type": "boolean",
+      "description": "Whether to display the armor/defense modifier from this state in blue (positive) color"
+    },
+    "rfblue": {
+      "type": "boolean",
+      "description": "Whether to display the fire resistance modifier from this state in blue (positive) color"
+    },
+    "rlblue": {
+      "type": "boolean",
+      "description": "Whether to display the lightning resistance modifier from this state in blue (positive) color"
+    },
+    "rcblue": {
+      "type": "boolean",
+      "description": "Whether to display the cold resistance modifier from this state in blue (positive) color"
+    },
+    "stambarblue": {
+      "type": "boolean",
+      "description": "Whether to display the stamina bar effect from this state in blue (positive) color"
+    },
+    "rpblue": {
+      "type": "boolean",
+      "description": "Whether to display the poison resistance modifier from this state in blue (positive) color"
+    },
+    "attred": {
+      "type": "boolean",
+      "description": "Whether to display the attack rating modifier from this state in red (negative) color"
+    },
+    "damred": {
+      "type": "boolean",
+      "description": "Whether to display the damage modifier from this state in red (negative) color"
+    },
+    "armred": {
+      "type": "boolean",
+      "description": "Whether to display the armor/defense modifier from this state in red (negative) color"
+    },
+    "rfred": {
+      "type": "boolean",
+      "description": "Whether to display the fire resistance modifier from this state in red (negative) color"
+    },
+    "rlred": {
+      "type": "boolean",
+      "description": "Whether to display the lightning resistance modifier from this state in red (negative) color"
+    },
+    "rcred": {
+      "type": "boolean",
+      "description": "Whether to display the cold resistance modifier from this state in red (negative) color"
+    },
+    "rpred": {
+      "type": "boolean",
+      "description": "Whether to display the poison resistance modifier from this state in red (negative) color"
+    },
+    "exp": {
+      "type": "boolean",
+      "description": "Whether this state is an expansion-only state (Lord of Destruction content)"
+    },
+    "plrstaydeath": {
+      "type": "boolean",
+      "description": "Whether this state persists on a player after death (not removed on resurrection)"
+    },
+    "monstaydeath": {
+      "type": "boolean",
+      "description": "Whether this state persists on a monster after death (e.g., for corpse-related effects)"
+    },
+    "bossstaydeath": {
+      "type": "boolean",
+      "description": "Whether this state persists on a boss monster after death"
+    },
+    "hide": {
+      "type": "boolean",
+      "description": "Whether the state is hidden from the player UI and buff/debuff display"
+    },
+    "shatter": {
+      "type": "boolean",
+      "description": "Whether a unit killed while in this state shatters (ice death animation, no corpse left)"
+    },
+    "udead": {
+      "type": "boolean",
+      "description": "Whether the state marks the unit as undead for purposes of holy damage and other undead-specific effects"
+    },
+    "life": {
+      "type": "boolean",
+      "description": "Whether this state affects the life display or life-related behavior"
+    },
+    "green": {
+      "type": "boolean",
+      "description": "Whether the state is displayed in green color in the UI (set bonus style)"
+    },
+    "pgsv": {
+      "type": "boolean",
+      "description": "Whether this state is associated with progressive (charge-up) skills and triggers when charges activate"
+    },
+    "nooverlays": {
+      "type": "boolean",
+      "description": "Whether to suppress overlay graphics while this state is active on the unit"
+    },
+    "noclear": {
+      "type": "boolean",
+      "description": "Whether this state cannot be cleared by normal means (e.g., town portal or death)"
+    },
+    "bossinv": {
+      "type": "boolean",
+      "description": "Whether the state uses the minion owner's inventory client-side (makes Decoy display your current equipment)"
+    },
+    "meleeonly": {
+      "type": "boolean",
+      "description": "Whether the state restricts the unit to melee attacks only (prevents shapeshifted druids from firing missiles with bows)"
+    },
+    "notondead": {
+      "type": "boolean",
+      "description": "Whether this state cannot be applied to dead units"
+    },
+    "overlay1": {
+      "type": "ref",
+      "description": "First persistent overlay displayed on the unit while this state is active",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "overlay2": {
+      "type": "ref",
+      "description": "Second persistent overlay displayed on the unit while this state is active",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "overlay3": {
+      "type": "ref",
+      "description": "Third persistent overlay displayed on the unit while this state is active",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "overlay4": {
+      "type": "ref",
+      "description": "Fourth persistent overlay displayed on the unit while this state is active",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "pgsvoverlay": {
+      "type": "ref",
+      "description": "Overlay shown on the target of a progressive skill when the charge-up triggers",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "castoverlay": {
+      "type": "ref",
+      "description": "Overlay displayed once when the state is initially applied (cast effect)",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "removerlay": {
+      "type": "ref",
+      "description": "Overlay displayed once when the state is removed",
+      "target": "overlay.txt",
+      "targetColumn": "Overlay"
+    },
+    "stat": {
+      "type": "ref",
+      "description": "Stat from itemstatcost.txt associated with this state (used to link state duration or strength to a stat)",
+      "target": "itemstatcost.txt",
+      "targetColumn": "Stat"
+    },
+    "setfunc": {
+      "type": "integer",
+      "description": "Server function ID called when this state is applied to a unit"
+    },
+    "remfunc": {
+      "type": "integer",
+      "description": "Server function ID called when this state is removed from a unit"
+    },
+    "missile": {
+      "type": "ref",
+      "description": "Missile spawned while this state is active (e.g., Blaze fire trail)",
+      "target": "Missiles.txt",
+      "targetColumn": "Missile"
+    },
+    "skill": {
+      "type": "ref",
+      "description": "Skill associated with this state (used to link back to the skill that created it)",
+      "target": "skills.txt",
+      "targetColumn": "skill"
+    },
+    "itemtype": {
+      "type": "string",
+      "description": "Item type restriction — limits which item types can grant this state (references ItemTypes.txt Code)"
+    },
+    "itemtrans": {
+      "type": "ref",
+      "description": "Color transform applied to items while this state is active",
+      "target": "colors.txt",
+      "targetColumn": "Code"
+    },
+    "colorpri": {
+      "type": "integer",
+      "description": "Priority for the color transform — higher priority overrides lower when multiple states are active"
+    },
+    "colorshift": {
+      "type": "integer",
+      "description": "Palette shift index applied to the unit graphic while this state is active"
+    },
+    "light-r": {
+      "type": "integer",
+      "min": 0,
+      "max": 255,
+      "description": "Red component of the light radius color emitted while this state is active"
+    },
+    "light-g": {
+      "type": "integer",
+      "min": 0,
+      "max": 255,
+      "description": "Green component of the light radius color emitted while this state is active"
+    },
+    "light-b": {
+      "type": "integer",
+      "min": 0,
+      "max": 255,
+      "description": "Blue component of the light radius color emitted while this state is active"
+    },
+    "onsound": {
+      "type": "ref",
+      "description": "Sound played when this state is applied",
+      "target": "sounds.txt",
+      "targetColumn": "Handle"
+    },
+    "offsound": {
+      "type": "ref",
+      "description": "Sound played when this state expires or is removed",
+      "target": "sounds.txt",
+      "targetColumn": "Handle"
+    },
+    "gfxtype": {
+      "type": "integer",
+      "description": "Graphics type used for the state visual effect (determines which graphic class to use)"
+    },
+    "gfxclass": {
+      "type": "integer",
+      "description": "Graphics class index selecting the specific visual variant within the gfxtype"
+    },
+    "cltevent": {
+      "type": "string",
+      "description": "Client event name that triggers clteventfunc (e.g., 'hit', 'kill')"
+    },
+    "clteventfunc": {
+      "type": "integer",
+      "description": "Client-side function ID executed when the cltevent fires"
+    },
+    "cltactivefunc": {
+      "type": "integer",
+      "description": "Client-side function ID called every frame while the state is active on the unit"
+    },
+    "srvactivefunc": {
+      "type": "integer",
+      "description": "Server-side function ID called every frame while the state is active on the unit"
+    },
+    "eol": {
+      "type": "integer",
+      "description": "End of line marker — always 0, used by the game to detect row termination"
     }
   }
 }
