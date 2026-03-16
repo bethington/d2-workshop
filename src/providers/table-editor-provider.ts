@@ -35,6 +35,8 @@ export class TableEditorProvider
   implements vscode.CustomReadonlyEditorProvider
 {
   private static readonly viewType = "d2workshop.tableEditor";
+  /** Pending row navigation: uri → row number */
+  static pendingNavigation = new Map<string, number>();
 
   constructor(
     private readonly context: vscode.ExtensionContext,
@@ -140,6 +142,15 @@ export class TableEditorProvider
             fileName,
             schema,
           });
+          // Check for pending row navigation from search
+          const uriKey = document.uri.toString();
+          const pendingRow = TableEditorProvider.pendingNavigation.get(uriKey);
+          if (pendingRow !== undefined) {
+            TableEditorProvider.pendingNavigation.delete(uriKey);
+            setTimeout(() => {
+              webviewPanel.webview.postMessage({ type: "navigateToRow", row: pendingRow });
+            }, 200);
+          }
           break;
         }
         case "save": {

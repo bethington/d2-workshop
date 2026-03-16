@@ -160,6 +160,39 @@ td {
   padding-right: 6px;
   user-select: none;
   font-size: 0.8em;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--vscode-editor-background);
+}
+
+thead .row-number {
+  z-index: 12;
+  background: var(--vscode-editorGroupHeader-tabsBackground);
+}
+
+/* Frozen first data column */
+td:nth-child(2),
+th:nth-child(2) {
+  position: sticky;
+  left: 40px;
+  z-index: 2;
+  background: var(--vscode-editor-background);
+}
+
+thead th:nth-child(2) {
+  z-index: 12;
+  background: var(--vscode-editorGroupHeader-tabsBackground);
+}
+
+tr:hover td:nth-child(2),
+tr:hover .row-number {
+  background: var(--vscode-list-hoverBackground);
+}
+
+tr.selected td:nth-child(2),
+tr.selected .row-number {
+  background: var(--vscode-list-activeSelectionBackground);
 }
 
 tr:hover {

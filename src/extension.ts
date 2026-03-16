@@ -8,6 +8,7 @@ import { DC6ViewerProvider } from "./providers/dc6-viewer-provider";
 import { COFViewerProvider } from "./providers/cof-viewer-provider";
 import { DT1ViewerProvider } from "./providers/dt1-viewer-provider";
 import { PL2ViewerProvider } from "./providers/pl2-viewer-provider";
+import { SearchProvider } from "./providers/search-provider";
 import { BinaryEditorProvider } from "./providers/binary-editor-provider";
 import { SaveQueueTreeProvider } from "./providers/save-queue-tree-provider";
 import { SaveQueue } from "./mod/save-queue";
@@ -66,6 +67,37 @@ export async function activate(context: vscode.ExtensionContext) {
     vscode.window.registerTreeDataProvider(
       "d2SaveQueueView",
       queueTreeProvider
+    )
+  );
+
+  // Register search view
+  const searchProvider = new SearchProvider(mpqManager, workspaceRoot);
+  context.subscriptions.push(
+    vscode.window.registerTreeDataProvider("d2SearchView", searchProvider)
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.searchMpq", async () => {
+      const query = await vscode.window.showInputBox({
+        placeHolder: "Search game files...",
+        prompt: "Enter text to search across all MPQ file names, .txt tables, and .tbl strings",
+      });
+      if (query) {
+        await vscode.window.withProgress(
+          { location: vscode.ProgressLocation.Notification, title: `Searching for "${query}"...` },
+          () => searchProvider.search(query)
+        );
+      }
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "d2workshop.openAndNavigate",
+      async (uri: vscode.Uri, row: number) => {
+        TableEditorProvider.pendingNavigation.set(uri.toString(), row);
+        await vscode.commands.executeCommand("vscode.openWith", uri, "d2workshop.tableEditor");
+      }
     )
   );
 

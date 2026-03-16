@@ -41,6 +41,10 @@
         {
           "id": "d2SaveQueueView",
           "name": "Save Queue"
+        },
+        {
+          "id": "d2SearchView",
+          "name": "Search"
         }
       ]
     },
@@ -145,6 +149,15 @@
         "title": "D2 Workshop: Import from GIMP"
       },
       {
+        "command": "d2workshop.openAndNavigate",
+        "title": "D2 Workshop: Open and Navigate to Row"
+      },
+      {
+        "command": "d2workshop.searchMpq",
+        "title": "D2 Workshop: Search Game Files",
+        "icon": "$(search)"
+      },
+      {
         "command": "d2workshop.switchMod",
         "title": "D2 Workshop: Switch Mod",
         "icon": "$(folder-library)"
@@ -175,6 +188,11 @@
     ],
     "menus": {
       "view/title": [
+        {
+          "command": "d2workshop.searchMpq",
+          "when": "view == d2SearchView",
+          "group": "navigation@0"
+        },
         {
           "command": "d2workshop.switchMod",
           "when": "view == d2ExplorerView",

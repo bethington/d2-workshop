@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState, useCallback } from "react";
+import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import {
   createColumnHelper,
   flexRender,
@@ -112,6 +112,7 @@ function validateCell(
 }
 
 export function TableEditor() {
+  const tableRef = useRef<HTMLTableElement>(null);
   const [data, setData] = useState<TableData>({ headers: [], rows: [] });
   const [originalData, setOriginalData] = useState<string>("");
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
@@ -141,6 +142,17 @@ export function TableEditor() {
       }
       if (msg.type === "schema") {
         setSchema(msg.schema as TxtSchema);
+      }
+      if (msg.type === "navigateToRow") {
+        const rowIdx = msg.row as number;
+        setSelectedRow(rowIdx);
+        // Scroll to the row after a brief delay to ensure render
+        setTimeout(() => {
+          const row = tableRef.current?.querySelector(`tbody tr:nth-child(${rowIdx + 1})`);
+          if (row) {
+            row.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }, 100);
       }
     });
 
@@ -254,7 +266,7 @@ export function TableEditor() {
       </div>
       <div className="content-area">
         <div className="grid-container">
-          <table>
+          <table ref={tableRef}>
             <thead>
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
