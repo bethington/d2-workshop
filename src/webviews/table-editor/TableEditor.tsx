@@ -492,8 +492,8 @@ function EditableCell({
     const enumValues = schema?.values;
     const hasValues = enumValues && enumValues.length > 0;
 
-    // Small enum: dropdown select
-    if (schema?.type === "enum" && hasValues && enumValues.length <= AUTOCOMPLETE_THRESHOLD) {
+    // Small enum or ref: dropdown select
+    if ((schema?.type === "enum" || schema?.type === "ref") && hasValues && enumValues.length <= AUTOCOMPLETE_THRESHOLD) {
       return (
         <select
           className="cell-select"
