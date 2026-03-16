@@ -124,7 +124,7 @@ function CardField({
       )}
       {editing ? (
         <div className="field-edit">
-          {schema?.type === "enum" && schema.values ? (
+          {(schema?.type === "enum" || schema?.type === "ref") && schema?.values?.length ? (
             <select
               value={editValue}
               onChange={(e) => {
@@ -141,6 +141,20 @@ function CardField({
                   {v}
                 </option>
               ))}
+            </select>
+          ) : schema?.type === "boolean" ? (
+            <select
+              value={editValue}
+              onChange={(e) => {
+                setEditValue(e.target.value);
+                onChange(e.target.value);
+                setEditing(false);
+              }}
+              onBlur={() => setEditing(false)}
+              autoFocus
+            >
+              <option value="0">0 (false)</option>
+              <option value="1">1 (true)</option>
             </select>
           ) : (
             <input

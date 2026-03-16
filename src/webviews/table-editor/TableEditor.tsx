@@ -136,7 +136,14 @@ export function TableEditor() {
         setOriginalData(content);
         setFileName(msg.fileName as string);
         if (msg.schema) {
-          setSchema(msg.schema as TxtSchema);
+          const s = msg.schema as TxtSchema;
+          // Debug: log ref columns with values
+          for (const [k, v] of Object.entries(s.columns)) {
+            if (v.type === "ref" && v.values?.length) {
+              console.log(`[D2W] Schema ref col '${k}': ${v.values.length} values, first 5:`, v.values.slice(0, 5));
+            }
+          }
+          setSchema(s);
         }
         setDirty(false);
       }
@@ -348,7 +355,7 @@ export function TableEditor() {
             headers={data.headers}
             row={data.rows[selectedRow]}
             rowIndex={selectedRow}
-            schema={schema}
+            schema={schema ? { ...schema, columns: { ...schema.columns, ...mergedColumnSchemas } } : null}
             onClose={() => setSelectedRow(null)}
             onChange={(colIndex, value) =>
               updateCell(selectedRow, colIndex, value)
