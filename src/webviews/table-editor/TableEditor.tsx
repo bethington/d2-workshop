@@ -338,6 +338,13 @@ export function TableEditor() {
 /** Threshold: enums with more values than this get autocomplete instead of dropdown */
 const AUTOCOMPLETE_THRESHOLD = 20;
 
+function BooleanToggle({ value, onToggle }: { value: string; onToggle: (v: string) => void }) {
+  useEffect(() => {
+    onToggle(value === "1" ? "0" : "1");
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  return <span className="cell-value">{value === "1" ? "0" : "1"}</span>;
+}
+
 function AutocompleteInput({
   value,
   options,
@@ -351,13 +358,15 @@ function AutocompleteInput({
 }) {
   const [text, setText] = useState(value);
   const [highlightIdx, setHighlightIdx] = useState(-1);
+  const [showDropdown, setShowDropdown] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
+  const committedRef = useRef(false);
 
   const filtered = useMemo(() => {
-    if (!text) return options.slice(0, 50);
+    if (!text) return options.slice(0, 30);
     const lower = text.toLowerCase();
-    return options.filter((o) => o.toLowerCase().includes(lower)).slice(0, 50);
+    return options.filter((o) => o.toLowerCase().includes(lower)).slice(0, 30);
   }, [text, options]);
 
   // Scroll highlighted item into view
@@ -368,9 +377,11 @@ function AutocompleteInput({
     }
   }, [highlightIdx]);
 
-  const commit = (val: string) => {
+  const commit = useCallback((val: string) => {
+    if (committedRef.current) return;
+    committedRef.current = true;
     onCommit(val);
-  };
+  }, [onCommit]);
 
   return (
     <div className="autocomplete-wrapper">
@@ -381,16 +392,18 @@ function AutocompleteInput({
         onChange={(e) => {
           setText(e.target.value);
           setHighlightIdx(-1);
+          setShowDropdown(true);
         }}
-        onBlur={(e) => {
-          // Delay to allow click on dropdown item
+        onBlur={() => {
+          // Delay to allow mouseDown on dropdown items to fire first
           setTimeout(() => {
-            commit(text);
-          }, 150);
+            if (!committedRef.current) commit(text);
+          }, 200);
         }}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") {
             e.preventDefault();
+            setShowDropdown(true);
             setHighlightIdx((prev) => Math.min(prev + 1, filtered.length - 1));
           } else if (e.key === "ArrowUp") {
             e.preventDefault();
@@ -410,7 +423,7 @@ function AutocompleteInput({
         }}
         autoFocus
       />
-      {filtered.length > 0 && (
+      {showDropdown && filtered.length > 0 && (
         <div ref={listRef} className="autocomplete-dropdown">
           {filtered.map((opt, i) => (
             <div
@@ -498,16 +511,17 @@ function EditableCell({
       );
     }
 
-    // Boolean: simple toggle
+    // Boolean: simple toggle (use effect to avoid state update during render)
     if (schema?.type === "boolean") {
-      const newVal = value === "1" ? "0" : "1";
-      onChange(newVal);
-      setEditValue(newVal);
-      setEditing(false);
       return (
-        <span className="cell-value">
-          {newVal}
-        </span>
+        <BooleanToggle
+          value={value}
+          onToggle={(newVal) => {
+            onChange(newVal);
+            setEditValue(newVal);
+            setEditing(false);
+          }}
+        />
       );
     }
 
