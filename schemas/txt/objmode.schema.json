@@ -1,0 +1,34 @@
+{
+  "file": "objmode.txt",
+  "description": "Auto-generated schema for objmode.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Neutral",
+        "Opened",
+        "Operating",
+        "Special1",
+        "Special2",
+        "Special3",
+        "Special4",
+        "Special5"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Token": {
+      "type": "enum",
+      "values": [
+        "NU",
+        "ON",
+        "OP",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ]
+    }
+  }
+}

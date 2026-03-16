@@ -1,0 +1,26 @@
+{
+  "file": "storepage.txt",
+  "description": "Auto-generated schema for storepage.txt",
+  "columns": {
+    "Store Page": {
+      "type": "enum",
+      "values": [
+        "Armor Page",
+        "Magic Page",
+        "Misc Page",
+        "Weapons Page"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "armo",
+        "mag",
+        "misc",
+        "weap"
+      ]
+    }
+  }
+}

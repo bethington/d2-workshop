@@ -95,8 +95,17 @@ export async function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       "d2workshop.openAndNavigate",
       async (uri: vscode.Uri, row: number) => {
-        TableEditorProvider.pendingNavigation.set(uri.toString(), row);
-        await vscode.commands.executeCommand("vscode.openWith", uri, "d2workshop.tableEditor");
+        const uriKey = uri.toString();
+        const existingPanel = TableEditorProvider.activeWebviews.get(uriKey);
+        if (existingPanel) {
+          // File already open — send navigation directly
+          existingPanel.reveal();
+          existingPanel.webview.postMessage({ type: "navigateToRow", row });
+        } else {
+          // File not open — set pending navigation and open it
+          TableEditorProvider.pendingNavigation.set(uriKey, row);
+          await vscode.commands.executeCommand("vscode.openWith", uri, "d2workshop.tableEditor");
+        }
       }
     )
   );

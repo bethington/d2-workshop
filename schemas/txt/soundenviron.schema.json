@@ -1,0 +1,122 @@
+{
+  "file": "soundenviron.txt",
+  "description": "Auto-generated schema for soundenviron.txt",
+  "columns": {
+    "Handle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Index": {
+      "type": "integer",
+      "min": 0,
+      "max": 35
+    },
+    "Song": {
+      "type": "integer",
+      "min": 0,
+      "max": 3576
+    },
+    "Day Ambience": {
+      "type": "integer",
+      "min": 0,
+      "max": 63
+    },
+    "Night Ambience": {
+      "type": "integer",
+      "min": 0,
+      "max": 64
+    },
+    "Day Event": {
+      "type": "integer",
+      "min": 0,
+      "max": 185
+    },
+    "Night Event": {
+      "type": "integer",
+      "min": 0,
+      "max": 190
+    },
+    "Event Delay": {
+      "type": "integer",
+      "min": 150,
+      "max": 800
+    },
+    "Indoors": {
+      "type": "boolean"
+    },
+    "Material 1": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "Material 2": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "EAX Environ": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "EAX Env Size": {
+      "type": "integer",
+      "min": 0,
+      "max": 100000
+    },
+    "EAX Env Diff": {
+      "type": "integer",
+      "min": 0,
+      "max": 1000
+    },
+    "EAX Room Vol": {
+      "type": "integer",
+      "min": -10000,
+      "max": -1000
+    },
+    "EAX Room HF": {
+      "type": "integer",
+      "min": -10000,
+      "max": -237
+    },
+    "EAX Decay Time": {
+      "type": "integer",
+      "min": 0,
+      "max": 4750
+    },
+    "EAX Decay HF": {
+      "type": "integer",
+      "min": 0,
+      "max": 1167
+    },
+    "EAX Reflect": {
+      "type": "integer",
+      "min": -2780,
+      "max": 0
+    },
+    "EAX Reflect Delay": {
+      "type": "integer",
+      "min": 0,
+      "max": 226
+    },
+    "EAX Reverb": {
+      "type": "integer",
+      "min": -1434,
+      "max": 441
+    },
+    "EAX Rev Delay": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "EAX Room Roll": {
+      "type": "boolean"
+    },
+    "EAX Air Absorb": {
+      "type": "integer",
+      "min": -5000,
+      "max": 0
+    }
+  }
+}

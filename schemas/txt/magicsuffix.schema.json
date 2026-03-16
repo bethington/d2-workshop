@@ -1,0 +1,158 @@
+{
+  "file": "magicsuffix.txt",
+  "description": "Auto-generated schema for magicsuffix.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "spawnable": {
+      "type": "boolean"
+    },
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "max": 70
+    },
+    "group": {
+      "type": "integer",
+      "min": 1,
+      "max": 35
+    },
+    "nummods": {
+      "type": "integer",
+      "min": 2,
+      "max": 3
+    },
+    "mod1code": {
+      "type": "string"
+    },
+    "mod1offset": {
+      "type": "boolean"
+    },
+    "mod1min": {
+      "type": "integer",
+      "min": -40,
+      "max": 80
+    },
+    "mod1max": {
+      "type": "integer",
+      "min": -40,
+      "max": 120
+    },
+    "mod2code": {
+      "type": "enum",
+      "values": [
+        "dc01",
+        "df01",
+        "dl01",
+        "dp01"
+      ]
+    },
+    "mod2offset": {
+      "type": "boolean"
+    },
+    "mod2min": {
+      "type": "integer",
+      "min": 1,
+      "max": 72
+    },
+    "mod2max": {
+      "type": "integer",
+      "min": 4,
+      "max": 72
+    },
+    "mod3code": {
+      "type": "enum",
+      "values": [
+        "dc03",
+        "dp02"
+      ]
+    },
+    "mod3offset": {
+      "type": "boolean"
+    },
+    "mod3min": {
+      "type": "integer",
+      "min": 75,
+      "max": 150
+    },
+    "mod3max": {
+      "type": "integer",
+      "min": 75,
+      "max": 150
+    },
+    "effect1": {
+      "type": "string"
+    },
+    "effect2": {
+      "type": "enum",
+      "values": [
+        "freeze for 2 frames",
+        "freeze for 8 frames"
+      ]
+    },
+    "transform": {
+      "type": "boolean"
+    },
+    "transformcolor": {
+      "type": "integer",
+      "min": 0,
+      "max": 19
+    },
+    "armor": {
+      "type": "boolean"
+    },
+    "weapon": {
+      "type": "boolean"
+    },
+    "shield": {
+      "type": "boolean"
+    },
+    "thrown": {
+      "type": "boolean"
+    },
+    "scepter": {
+      "type": "boolean"
+    },
+    "wand": {
+      "type": "boolean"
+    },
+    "staff": {
+      "type": "boolean"
+    },
+    "bow": {
+      "type": "boolean"
+    },
+    "boots": {
+      "type": "boolean"
+    },
+    "gloves": {
+      "type": "boolean"
+    },
+    "belt": {
+      "type": "boolean"
+    },
+    "ring": {
+      "type": "boolean"
+    },
+    "amulet": {
+      "type": "boolean"
+    },
+    "charm": {
+      "type": "boolean"
+    },
+    "orb": {
+      "type": "boolean"
+    },
+    "divide": {
+      "type": "boolean"
+    },
+    "multiply": {
+      "type": "boolean"
+    },
+    "add": {
+      "type": "boolean"
+    }
+  }
+}

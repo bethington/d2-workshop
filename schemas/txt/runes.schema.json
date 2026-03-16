@@ -1,0 +1,305 @@
+{
+  "file": "runes.txt",
+  "description": "Auto-generated schema for runes.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Rune Name": {
+      "type": "string"
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "server": {
+      "type": "boolean"
+    },
+    "itype1": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "club",
+        "h2h",
+        "hamm",
+        "helm",
+        "knif",
+        "mace",
+        "mele",
+        "miss",
+        "scep",
+        "shld",
+        "spea",
+        "staf",
+        "swor",
+        "tors",
+        "wand",
+        "weap"
+      ]
+    },
+    "itype2": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "club",
+        "hamm",
+        "knif",
+        "mace",
+        "scep",
+        "swor",
+        "wand"
+      ]
+    },
+    "itype3": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "club",
+        "hamm",
+        "knif",
+        "mace",
+        "pole",
+        "scep",
+        "spea",
+        "swor"
+      ]
+    },
+    "itype4": {
+      "type": "enum",
+      "values": [
+        "hamm",
+        "scep",
+        "spea"
+      ]
+    },
+    "itype5": {
+      "type": "string"
+    },
+    "itype6": {
+      "type": "string"
+    },
+    "etype1": {
+      "type": "string"
+    },
+    "etype2": {
+      "type": "string"
+    },
+    "etype3": {
+      "type": "string"
+    },
+    "Rune1": {
+      "type": "string"
+    },
+    "Rune2": {
+      "type": "string"
+    },
+    "Rune3": {
+      "type": "string"
+    },
+    "Rune4": {
+      "type": "string"
+    },
+    "Rune5": {
+      "type": "string"
+    },
+    "Rune6": {
+      "type": "enum",
+      "values": [
+        "r01",
+        "r02",
+        "r06",
+        "r10",
+        "r16",
+        "r17",
+        "r18",
+        "r20",
+        "r29"
+      ]
+    },
+    "T1Code1": {
+      "type": "enum",
+      "values": [
+        "ac%",
+        "att-undead",
+        "deadly",
+        "dmg%",
+        "dmg-pois",
+        "dmg-undead",
+        "light",
+        "mag%",
+        "pois-max",
+        "res-cold",
+        "res-pois"
+      ]
+    },
+    "T1Param1": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "T1Min1": {
+      "type": "integer",
+      "min": 1,
+      "max": 200
+    },
+    "T1Max1": {
+      "type": "integer",
+      "min": 1,
+      "max": 200
+    },
+    "T1Code2": {
+      "type": "enum",
+      "values": [
+        "ac",
+        "att",
+        "att-undead",
+        "balance3",
+        "crush",
+        "dmg%",
+        "dmg-cold",
+        "dmg-fire",
+        "dmg-undead",
+        "gold%",
+        "lifesteal",
+        "light",
+        "mag%",
+        "manasteal",
+        "openwounds",
+        "res-all",
+        "res-cold",
+        "res-fire"
+      ]
+    },
+    "T1Param2": {
+      "type": "string"
+    },
+    "T1Min2": {
+      "type": "integer",
+      "min": 3,
+      "max": 300
+    },
+    "T1Max2": {
+      "type": "integer",
+      "min": 3,
+      "max": 300
+    },
+    "T1Code3": {
+      "type": "enum",
+      "values": [
+        "ac%",
+        "allskills",
+        "att",
+        "balance2",
+        "deadly",
+        "dex",
+        "dmg%",
+        "ignore-ac",
+        "mana-kill",
+        "manasteal",
+        "noheal",
+        "openwounds",
+        "res-fire",
+        "res-ltng",
+        "skilltab",
+        "str",
+        "stupidity",
+        "swing2",
+        "swing3"
+      ]
+    },
+    "T1Param3": {
+      "type": "integer",
+      "min": 11,
+      "max": 11
+    },
+    "T1Min3": {
+      "type": "integer",
+      "min": 1,
+      "max": 250
+    },
+    "T1Max3": {
+      "type": "integer",
+      "min": 1,
+      "max": 250
+    },
+    "T1Code4": {
+      "type": "enum",
+      "values": [
+        "att%",
+        "dmg%",
+        "dmg-fire",
+        "dmg-pois",
+        "dmg-to-mana",
+        "dmg-undead",
+        "gethit-skill",
+        "hp",
+        "lifesteal",
+        "manasteal",
+        "move1",
+        "res-cold",
+        "res-pois",
+        "str",
+        "thorns"
+      ]
+    },
+    "T1Param4": {
+      "type": "integer",
+      "min": 25,
+      "max": 38
+    },
+    "T1Min4": {
+      "type": "integer",
+      "min": 3,
+      "max": 200
+    },
+    "T1Max4": {
+      "type": "integer",
+      "min": 3,
+      "max": 200
+    },
+    "T1Code5": {
+      "type": "enum",
+      "values": [
+        "att",
+        "dmg-demon",
+        "lifesteal",
+        "res-ltng",
+        "skilltab",
+        "slow",
+        "str"
+      ]
+    },
+    "T1Param5": {
+      "type": "integer",
+      "min": 7,
+      "max": 7
+    },
+    "T1Min5": {
+      "type": "integer",
+      "min": 3,
+      "max": 200
+    },
+    "T1Max5": {
+      "type": "integer",
+      "min": 3,
+      "max": 200
+    },
+    "T1Code6": {
+      "type": "string"
+    },
+    "T1Param6": {
+      "type": "string"
+    },
+    "T1Min6": {
+      "type": "integer",
+      "min": -3,
+      "max": -3
+    },
+    "T1Max6": {
+      "type": "integer",
+      "min": -3,
+      "max": -3
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "file": "itemstatcost.txt",
+  "description": "Auto-generated schema for itemstatcost.txt",
+  "columns": {
+    "ID": {
+      "type": "integer",
+      "min": 0,
+      "max": 176,
+      "required": true,
+      "unique": true
+    },
+    "Add": {
+      "type": "integer",
+      "min": 0,
+      "max": 1000
+    },
+    "Multiply": {
+      "type": "integer",
+      "min": 0,
+      "max": 300
+    },
+    "Divide": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "CodeName": {
+      "type": "string"
+    },
+    "English like name": {
+      "type": "string"
+    },
+    "WeirdCode": {
+      "type": "string"
+    },
+    "ItemSpecific": {
+      "type": "boolean"
+    }
+  }
+}

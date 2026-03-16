@@ -1,0 +1,234 @@
+{
+  "file": "itemtypes.txt",
+  "description": "Auto-generated schema for itemtypes.txt",
+  "columns": {
+    "ItemType": {
+      "type": "string",
+      "required": true
+    },
+    "Code": {
+      "type": "string"
+    },
+    "Order": {
+      "type": "boolean"
+    },
+    "Equiv1": {
+      "type": "string"
+    },
+    "Equiv2": {
+      "type": "enum",
+      "values": [
+        "amaz",
+        "assn",
+        "axe",
+        "barb",
+        "drui",
+        "knif",
+        "mpot",
+        "necr",
+        "pala",
+        "seco",
+        "sorc",
+        "spea",
+        "thro"
+      ]
+    },
+    "Identify": {
+      "type": "boolean"
+    },
+    "Repair": {
+      "type": "boolean"
+    },
+    "Mods": {
+      "type": "boolean"
+    },
+    "Body": {
+      "type": "boolean"
+    },
+    "BodyLoc1": {
+      "type": "enum",
+      "values": [
+        "belt",
+        "feet",
+        "glov",
+        "head",
+        "neck",
+        "rarm",
+        "rrin",
+        "tors"
+      ]
+    },
+    "BodyLoc2": {
+      "type": "enum",
+      "values": [
+        "belt",
+        "feet",
+        "glov",
+        "head",
+        "larm",
+        "lrin",
+        "neck",
+        "tors"
+      ]
+    },
+    "Shoots": {
+      "type": "enum",
+      "values": [
+        "bowq",
+        "xboq"
+      ]
+    },
+    "Quiver": {
+      "type": "enum",
+      "values": [
+        "bow",
+        "xbow"
+      ]
+    },
+    "Throwable": {
+      "type": "boolean"
+    },
+    "Reload": {
+      "type": "boolean"
+    },
+    "ReEquip": {
+      "type": "boolean"
+    },
+    "AutoStack": {
+      "type": "boolean"
+    },
+    "Magic": {
+      "type": "boolean"
+    },
+    "Rare": {
+      "type": "boolean"
+    },
+    "Normal": {
+      "type": "boolean"
+    },
+    "Charm": {
+      "type": "boolean"
+    },
+    "Gem": {
+      "type": "boolean"
+    },
+    "Beltable": {
+      "type": "boolean"
+    },
+    "MaxSock1": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "MaxSock25": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "MaxSock40": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "TreasureClass": {
+      "type": "boolean"
+    },
+    "Rarity": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "StaffMods": {
+      "type": "enum",
+      "values": [
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "sor"
+      ]
+    },
+    "CostFormula": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Class": {
+      "type": "enum",
+      "values": [
+        "ama",
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "sor"
+      ]
+    },
+    "VarInvGfx": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "InvGfx1": {
+      "type": "enum",
+      "values": [
+        "invamu1",
+        "invch1",
+        "invch2",
+        "invch3",
+        "invjw1",
+        "invrin1"
+      ]
+    },
+    "InvGfx2": {
+      "type": "enum",
+      "values": [
+        "invamu2",
+        "invch4",
+        "invch5",
+        "invch6",
+        "invjw2",
+        "invrin2"
+      ]
+    },
+    "InvGfx3": {
+      "type": "enum",
+      "values": [
+        "invamu3",
+        "invch7",
+        "invch8",
+        "invch9",
+        "invjw3",
+        "invrin3"
+      ]
+    },
+    "InvGfx4": {
+      "type": "enum",
+      "values": [
+        "invjw4",
+        "invrin4"
+      ]
+    },
+    "InvGfx5": {
+      "type": "enum",
+      "values": [
+        "invjw5",
+        "invrin5"
+      ]
+    },
+    "InvGfx6": {
+      "type": "string"
+    },
+    "StorePage": {
+      "type": "enum",
+      "values": [
+        "armo",
+        "mag",
+        "misc",
+        "weap"
+      ]
+    }
+  }
+}

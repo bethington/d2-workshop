@@ -1,0 +1,45 @@
+{
+  "file": "hitclass.txt",
+  "description": "Auto-generated schema for hitclass.txt",
+  "columns": {
+    "Hit Class": {
+      "type": "enum",
+      "values": [
+        "Bow",
+        "Claw",
+        "Club",
+        "Crossbow",
+        "Hand To Hand",
+        "None",
+        "One Hand Swing vs. Large",
+        "One Hand Swing vs. Small",
+        "One Hand Thrust",
+        "Overlay",
+        "Staff",
+        "Two Hand Swing vs. Large",
+        "Two Hand Swing vs. Small",
+        "Two Hand Thrust"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "1hsl",
+        "1hss",
+        "1ht",
+        "2hsl",
+        "2hss",
+        "2ht",
+        "bow",
+        "claw",
+        "club",
+        "hth",
+        "over",
+        "staf",
+        "xbow"
+      ]
+    }
+  }
+}

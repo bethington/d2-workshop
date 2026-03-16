@@ -1,0 +1,194 @@
+{
+  "file": "gems.txt",
+  "description": "Auto-generated schema for gems.txt",
+  "columns": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "transform": {
+      "type": "integer",
+      "min": 0,
+      "max": 18
+    },
+    "code": {
+      "type": "string"
+    },
+    "nummods": {
+      "type": "integer",
+      "min": 3,
+      "max": 3
+    },
+    "weaponMod1Code": {
+      "type": "enum",
+      "values": [
+        "dc00",
+        "df00",
+        "dl00",
+        "dp00",
+        "ht00",
+        "md01",
+        "mm03"
+      ]
+    },
+    "weaponMod1Offset": {
+      "type": "boolean"
+    },
+    "weaponMod1Min": {
+      "type": "integer",
+      "min": 1,
+      "max": 56
+    },
+    "weaponMod1Max": {
+      "type": "integer",
+      "min": 1,
+      "max": 70
+    },
+    "weaponMod2Code": {
+      "type": "enum",
+      "values": [
+        "dc01",
+        "df01",
+        "dl01",
+        "dp01",
+        "mh03"
+      ]
+    },
+    "weaponMod2Offset": {
+      "type": "boolean"
+    },
+    "weaponMod2Min": {
+      "type": "integer",
+      "min": 2,
+      "max": 20
+    },
+    "weaponMod2Max": {
+      "type": "integer",
+      "min": 2,
+      "max": 20
+    },
+    "weaponMod3Code": {
+      "type": "enum",
+      "values": [
+        "dc03",
+        "dp02"
+      ]
+    },
+    "weaponMod3Offset": {
+      "type": "boolean"
+    },
+    "weaponMod3Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "weaponMod3Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "helmMod1Code": {
+      "type": "enum",
+      "values": [
+        "dx00",
+        "ht00",
+        "ib01",
+        "lf00",
+        "mh00",
+        "mm00",
+        "st00"
+      ]
+    },
+    "helmMod1Offset": {
+      "type": "boolean"
+    },
+    "helmMod1Min": {
+      "type": "integer",
+      "min": 2,
+      "max": 30
+    },
+    "helmMod1Max": {
+      "type": "integer",
+      "min": 2,
+      "max": 30
+    },
+    "helmMod2Code": {
+      "type": "string"
+    },
+    "helmMod2Offset": {
+      "type": "boolean"
+    },
+    "helmMod2Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 16
+    },
+    "helmMod2Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "helmMod3Code": {
+      "type": "string"
+    },
+    "helmMod3Offset": {
+      "type": "boolean"
+    },
+    "helmMod3Min": {
+      "type": "boolean"
+    },
+    "helmMod3Max": {
+      "type": "boolean"
+    },
+    "shieldMod1Code": {
+      "type": "enum",
+      "values": [
+        "ar00",
+        "at00",
+        "ra00",
+        "rc00",
+        "rf00",
+        "rl00",
+        "rp00"
+      ]
+    },
+    "shieldMod1Offset": {
+      "type": "boolean"
+    },
+    "shieldMod1Min": {
+      "type": "integer",
+      "min": 2,
+      "max": 26
+    },
+    "shieldMod1Max": {
+      "type": "integer",
+      "min": 2,
+      "max": 30
+    },
+    "shieldMod2Code": {
+      "type": "string"
+    },
+    "shieldMod2Offset": {
+      "type": "boolean"
+    },
+    "shieldMod2Min": {
+      "type": "boolean"
+    },
+    "shieldMod2Max": {
+      "type": "boolean"
+    },
+    "shieldMod3Code": {
+      "type": "string"
+    },
+    "shieldMod3Offset": {
+      "type": "boolean"
+    },
+    "shieldMod3Min": {
+      "type": "boolean"
+    },
+    "shieldMod3Max": {
+      "type": "boolean"
+    }
+  }
+}

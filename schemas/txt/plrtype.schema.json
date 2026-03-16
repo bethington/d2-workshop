@@ -1,0 +1,28 @@
+{
+  "file": "plrtype.txt",
+  "description": "Auto-generated schema for plrtype.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Amazon",
+        "Barbarian",
+        "Necromancer",
+        "Paladin",
+        "Sorceress"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Token": {
+      "type": "enum",
+      "values": [
+        "AM",
+        "BA",
+        "NE",
+        "PA",
+        "SO"
+      ]
+    }
+  }
+}

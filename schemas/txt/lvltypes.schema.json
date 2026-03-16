@@ -1,0 +1,351 @@
+{
+  "file": "lvltypes.txt",
+  "description": "Auto-generated schema for lvltypes.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Id": {
+      "type": "integer",
+      "min": 0,
+      "max": 28
+    },
+    "File 1": {
+      "type": "string"
+    },
+    "File 2": {
+      "type": "string"
+    },
+    "File 3": {
+      "type": "string"
+    },
+    "File 4": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/floor.dt1",
+        "Act1/Catacomb/Upstr.dt1",
+        "Act1/Court/Archwall.dt1",
+        "Act1/Outdoors/Fence.dt1",
+        "Act1/Outdoors/River.dt1",
+        "Act2/BigCliff/CliffRight.dt1",
+        "Act2/Palace/HaremStair.dt1",
+        "Act2/Sewer/Radament.dt1",
+        "Act2/Tomb/Statuerm.dt1",
+        "Act2/Town/Canal.dt1",
+        "Act3/Docktown/Huts.dt1",
+        "Act3/Ground/DryMud.dt1",
+        "Act3/Kurast/Floors.dt1",
+        "Act4/Diab/Walls.dt1",
+        "Act4/Fort/ForeGate.dt1",
+        "Act4/Mesa/Brick_Walls.dt1"
+      ]
+    },
+    "File 5": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Catacomb/floor.dt1",
+        "Act1/Cathedrl/column.dt1",
+        "Act1/Court/Outwall.dt1",
+        "Act1/Court/Plants2.dt1",
+        "Act1/Outdoors/Objects.dt1",
+        "Act1/Outdoors/TreeGroups.dt1",
+        "Act1/Outdoors/stonewall.dt1",
+        "Act2/BigCliff/CliffLeft.dt1",
+        "Act2/Palace/Sub-Har.dt1",
+        "Act2/Tomb/Treasure.dt1",
+        "Act2/Town/Curbs.dt1",
+        "Act3/Docktown/Market.dt1",
+        "Act3/Ground/GreenMud.dt1",
+        "Act3/Kurast/Huts.dt1",
+        "Act4/Diab/Bridge.dt1",
+        "Act4/Mesa/Chain_Walls.dt1",
+        "Act4/Mesa/Floor.dt1"
+      ]
+    },
+    "File 6": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/Torture.dt1",
+        "Act1/Catacomb/andariel.dt1",
+        "Act1/Court/Outwall.dt1",
+        "Act1/Court/Pboxwall.dt1",
+        "Act1/Monastry/Facade.dt1",
+        "Act1/Outdoors/River.dt1",
+        "Act1/Outdoors/TreeGroups.dt1",
+        "Act1/Town/trees.dt1",
+        "Act2/BigCliff/CliffMesa.dt1",
+        "Act2/Palace/Sub-HarFlr.dt1",
+        "Act2/Tomb/Stairs.dt1",
+        "Act2/Town/Gate.dt1",
+        "Act3/Docktown/Pyramid.dt1",
+        "Act3/Jungle/Trees.dt1",
+        "Act3/Kurast/Interior.dt1",
+        "Act4/Lava/Extwalls.dt1",
+        "Act4/Mesa/Dist_Wall.dt1",
+        "Act4/Mesa/Inv_Wall.dt1"
+      ]
+    },
+    "File 7": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/basewall.dt1",
+        "Act1/Barracks/objects.dt1",
+        "Act1/Court/Floor.dt1",
+        "Act1/Outdoors/Bridge.dt1",
+        "Act1/Outdoors/stonewall.dt1",
+        "Act2/Outdoors/Head.dt1",
+        "Act2/Palace/InvisWal.dt1",
+        "Act2/Tomb/Duriel.dt1",
+        "Act2/Town/Guard.dt1",
+        "Act3/Docktown/RuinFlr.dt1",
+        "Act3/Jungle/TreeGrp.dt1",
+        "Act3/Kurast/Roofs.dt1",
+        "Act4/Lava/Intwalls.dt1",
+        "Act4/Mesa/Inv_Wall.dt1",
+        "Act4/Mesa/Stairs.dt1"
+      ]
+    },
+    "File 8": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/barset.dt1",
+        "Act1/Cathedrl/Frescoes.dt1",
+        "Act1/Court/Floor.dt1",
+        "Act1/Outdoors/Cairn.dt1",
+        "Act1/Outdoors/Objects.dt1",
+        "Act1/Town/trees.dt1",
+        "Act2/Outdoors/Bone.dt1",
+        "Act2/Tomb/Tombsteps.dt1",
+        "Act2/Town/Shop.dt1",
+        "Act3/Docktown/RuinWall.dt1",
+        "Act3/Kurast/Sets.dt1",
+        "Act3/River/RivBank.dt1",
+        "Act4/Lava/Floornew.dt1",
+        "Act4/Mesa/Surf_Wall.dt1"
+      ]
+    },
+    "File 9": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/exitdn.dt1",
+        "Act1/Barracks/stairup.dt1",
+        "Act1/Cathedrl/rugs.dt1",
+        "Act1/Outdoors/Objects.dt1",
+        "Act1/Outdoors/TreeGroups.dt1",
+        "Act2/Outdoors/Mesa.dt1",
+        "Act2/Tomb/Secret.dt1",
+        "Act2/Town/Tavern.dt1",
+        "Act3/DockTown/Bridge.dt1",
+        "Act3/Docktown/Shack.dt1",
+        "Act3/Kurast/Terraces.dt1",
+        "Act4/Lava/Rocks.dt1",
+        "Act4/Mesa/Surf_Struct.dt1"
+      ]
+    },
+    "File 10": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Barracks/objects.dt1",
+        "Act1/Outdoors/Bridge.dt1",
+        "Act1/Outdoors/Cliff2.dt1",
+        "Act2/BigCliff/Stairs.dt1",
+        "Act2/Tomb/Talrasha.dt1",
+        "Act2/Town/Wagon.dt1",
+        "Act3/Jungle/Ruin.dt1",
+        "Act3/Jungle/Trees.dt1",
+        "Act3/Kurast/Walls.dt1",
+        "Act4/Lava/Specials.dt1"
+      ]
+    },
+    "File 11": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Cliff1.dt1",
+        "Act2/Outdoors/SmCliff.dt1",
+        "Act2/Palace/Palace.dt1",
+        "Act2/Tomb/Serpent.dt1",
+        "Act3/Jungle/Trees.dt1",
+        "Act3/Spider/SpiderEnt.dt1",
+        "Act4/Mesa/Surf_Wall.dt1"
+      ]
+    },
+    "File 12": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Graveyard/graveyrd.dt1",
+        "Act2/BigCliff/TalTombR.dt1",
+        "Act2/Outdoors/Palm.dt1",
+        "Act3/Jungle/DungEnt.dt1",
+        "Act3/Jungle/TreeGrp.dt1"
+      ]
+    },
+    "File 13": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Corner.dt1",
+        "Act2/Outdoors/Mesa.dt1",
+        "Act2/Town/Curbs.dt1",
+        "Act3/River/Pool.dt1",
+        "Act3/Travincal/Floors.dt1"
+      ]
+    },
+    "File 14": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Ruin.dt1",
+        "Act2/BigCliff/TalTombL.dt1",
+        "Act3/Jungle/Pygmy.dt1",
+        "Act3/Travincal/Gate.dt1"
+      ]
+    },
+    "File 15": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Stones.dt1",
+        "Act2/Outdoors/Oasis.dt1",
+        "Act3/Travincal/Terraces.dt1"
+      ]
+    },
+    "File 16": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Tower.dt1",
+        "Act2/BigCliff/TombCor.dt1",
+        "Act3/Travincal/Walls.dt1"
+      ]
+    },
+    "File 17": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Fallen.dt1",
+        "Act2/Ruin/Ground.dt1"
+      ]
+    },
+    "File 18": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/pond.dt1",
+        "Act2/BigCliff/Corner.dt1"
+      ]
+    },
+    "File 19": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/puddle.dt1",
+        "Act2/Outdoors/Palm.dt1"
+      ]
+    },
+    "File 20": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/TowerB.dt1",
+        "Act2/Outdoors/Prickly.dt1"
+      ]
+    },
+    "File 21": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Caves/Cavedr.dt1",
+        "Act2/Outdoors/Scrub.dt1"
+      ]
+    },
+    "File 22": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/tome.dt1",
+        "Act2/Maggot/Entrance.dt1"
+      ]
+    },
+    "File 23": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Swamp.dt1",
+        "Act2/Maggot/Hole.dt1"
+      ]
+    },
+    "File 24": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Town/Fence.dt1",
+        "Act2/Outdoors/Wagon.dt1"
+      ]
+    },
+    "File 25": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Cottages.dt1",
+        "Act2/Ruin/Column.dt1"
+      ]
+    },
+    "File 26": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Town/Objects.dt1",
+        "Act2/Outdoors/Village.dt1"
+      ]
+    },
+    "File 27": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act2/Outdoors/TombEnt.dt1"
+      ]
+    },
+    "File 28": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act2/Outdoors/Viper.dt1"
+      ]
+    },
+    "File 29": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act2/Tomb/Tomb.dt1"
+      ]
+    },
+    "File 30": {
+      "type": "boolean"
+    },
+    "File 31": {
+      "type": "boolean"
+    },
+    "File 32": {
+      "type": "boolean"
+    },
+    "Beta": {
+      "type": "boolean"
+    },
+    "Act": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    }
+  }
+}

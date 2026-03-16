@@ -1,0 +1,74 @@
+{
+  "file": "properties.txt",
+  "description": "Auto-generated schema for properties.txt",
+  "columns": {
+    "Code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Done": {
+      "type": "boolean"
+    },
+    "ModFuncOffset": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Param": {
+      "type": "enum",
+      "values": [
+        "(8ths)",
+        "Length (Frames)",
+        "Skill #",
+        "ac%/lvl (8ths)",
+        "ac/lvl (8ths)",
+        "att%/lvl (8ths)",
+        "att/lvl (1)",
+        "center period",
+        "hp/lvl (8ths)",
+        "item type",
+        "monster",
+        "skill",
+        "speed (see note)"
+      ]
+    },
+    "Min": {
+      "type": "enum",
+      "values": [
+        "% Chance",
+        "Min",
+        "level",
+        "min",
+        "min %",
+        "min amt",
+        "min chance",
+        "min count"
+      ]
+    },
+    "Max": {
+      "type": "enum",
+      "values": [
+        "Max",
+        "charges",
+        "max",
+        "max %",
+        "max amt",
+        "max chance",
+        "max count"
+      ]
+    },
+    "Additional Notes": {
+      "type": "enum",
+      "values": [
+        "\"max at center period, min at opposite period, linear progression\"",
+        "none",
+        "random amount from min to max is assigned to item",
+        "random chance from min to max is assigned to item",
+        "regenerates 1 durability point per 100/lvl seconds",
+        "regenerates 1 quantity per 100/lvl seconds"
+      ]
+    }
+  }
+}

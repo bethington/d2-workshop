@@ -1,0 +1,635 @@
+{
+  "file": "objects.txt",
+  "description": "Auto-generated schema for objects.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "description - not loaded": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "integer",
+      "min": 0,
+      "max": 409
+    },
+    "Token": {
+      "type": "string"
+    },
+    "SpawnMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Selectable0": {
+      "type": "boolean"
+    },
+    "Selectable1": {
+      "type": "boolean"
+    },
+    "Selectable2": {
+      "type": "boolean"
+    },
+    "Selectable3": {
+      "type": "boolean"
+    },
+    "Selectable4": {
+      "type": "boolean"
+    },
+    "Selectable5": {
+      "type": "boolean"
+    },
+    "Selectable6": {
+      "type": "boolean"
+    },
+    "Selectable7": {
+      "type": "boolean"
+    },
+    "TrapProb": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "SizeX": {
+      "type": "integer",
+      "min": 0,
+      "max": 32
+    },
+    "SizeY": {
+      "type": "integer",
+      "min": 0,
+      "max": 32
+    },
+    "nTgtFX": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "nTgtFY": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "nTgtBX": {
+      "type": "boolean"
+    },
+    "nTgtBY": {
+      "type": "boolean"
+    },
+    "FrameCnt0": {
+      "type": "integer",
+      "min": 0,
+      "max": 39
+    },
+    "FrameCnt1": {
+      "type": "integer",
+      "min": 0,
+      "max": 49
+    },
+    "FrameCnt2": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "FrameCnt3": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "FrameCnt4": {
+      "type": "integer",
+      "min": 0,
+      "max": 25
+    },
+    "FrameCnt5": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "FrameCnt6": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "FrameCnt7": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "FrameDelta0": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta1": {
+      "type": "integer",
+      "min": 0,
+      "max": 640
+    },
+    "FrameDelta2": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta3": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta4": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta5": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta6": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "FrameDelta7": {
+      "type": "integer",
+      "min": 0,
+      "max": 256
+    },
+    "CycleAnim0": {
+      "type": "boolean"
+    },
+    "CycleAnim1": {
+      "type": "boolean"
+    },
+    "CycleAnim2": {
+      "type": "boolean"
+    },
+    "CycleAnim3": {
+      "type": "boolean"
+    },
+    "CycleAnim4": {
+      "type": "boolean"
+    },
+    "CycleAnim5": {
+      "type": "boolean"
+    },
+    "CycleAnim6": {
+      "type": "boolean"
+    },
+    "CycleAnim7": {
+      "type": "boolean"
+    },
+    "Lit0": {
+      "type": "integer",
+      "min": 0,
+      "max": 25
+    },
+    "Lit1": {
+      "type": "integer",
+      "min": 0,
+      "max": 25
+    },
+    "Lit2": {
+      "type": "integer",
+      "min": 0,
+      "max": 25
+    },
+    "Lit3": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "Lit4": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "Lit5": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "Lit6": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "Lit7": {
+      "type": "integer",
+      "min": 0,
+      "max": 17
+    },
+    "BlocksLight0": {
+      "type": "boolean"
+    },
+    "BlocksLight1": {
+      "type": "boolean"
+    },
+    "BlocksLight2": {
+      "type": "boolean"
+    },
+    "BlocksLight3": {
+      "type": "boolean"
+    },
+    "BlocksLight4": {
+      "type": "boolean"
+    },
+    "BlocksLight5": {
+      "type": "boolean"
+    },
+    "BlocksLight6": {
+      "type": "boolean"
+    },
+    "BlocksLight7": {
+      "type": "boolean"
+    },
+    "HasCollision0": {
+      "type": "boolean"
+    },
+    "HasCollision1": {
+      "type": "boolean"
+    },
+    "HasCollision2": {
+      "type": "boolean"
+    },
+    "HasCollision3": {
+      "type": "boolean"
+    },
+    "HasCollision4": {
+      "type": "boolean"
+    },
+    "HasCollision5": {
+      "type": "boolean"
+    },
+    "HasCollision6": {
+      "type": "boolean"
+    },
+    "HasCollision7": {
+      "type": "boolean"
+    },
+    "IsAttackable0": {
+      "type": "boolean"
+    },
+    "Start0": {
+      "type": "boolean"
+    },
+    "Start1": {
+      "type": "boolean"
+    },
+    "Start2": {
+      "type": "integer",
+      "min": 0,
+      "max": 28
+    },
+    "Start3": {
+      "type": "integer",
+      "min": 0,
+      "max": 29
+    },
+    "Start4": {
+      "type": "boolean"
+    },
+    "Start5": {
+      "type": "boolean"
+    },
+    "Start6": {
+      "type": "boolean"
+    },
+    "Start7": {
+      "type": "boolean"
+    },
+    "EnvEffect": {
+      "type": "boolean"
+    },
+    "IsDoor": {
+      "type": "boolean"
+    },
+    "BlocksVis": {
+      "type": "boolean"
+    },
+    "Orientation": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "Trans": {
+      "type": "integer",
+      "min": 0,
+      "max": 7
+    },
+    "OrderFlag0": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag1": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag2": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag3": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag4": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag5": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag6": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OrderFlag7": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "PreOperate": {
+      "type": "boolean"
+    },
+    "Mode0": {
+      "type": "boolean"
+    },
+    "Mode1": {
+      "type": "boolean"
+    },
+    "Mode2": {
+      "type": "boolean"
+    },
+    "Mode3": {
+      "type": "boolean"
+    },
+    "Mode4": {
+      "type": "boolean"
+    },
+    "Mode5": {
+      "type": "boolean"
+    },
+    "Mode6": {
+      "type": "boolean"
+    },
+    "Mode7": {
+      "type": "boolean"
+    },
+    "Yoffset": {
+      "type": "integer",
+      "min": -38,
+      "max": 20
+    },
+    "Xoffset": {
+      "type": "integer",
+      "min": -45,
+      "max": 20
+    },
+    "Draw": {
+      "type": "boolean"
+    },
+    "Red": {
+      "type": "integer",
+      "min": 100,
+      "max": 255
+    },
+    "Green": {
+      "type": "integer",
+      "min": 55,
+      "max": 255
+    },
+    "Blue": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "HD": {
+      "type": "boolean"
+    },
+    "TR": {
+      "type": "boolean"
+    },
+    "LG": {
+      "type": "boolean"
+    },
+    "RA": {
+      "type": "boolean"
+    },
+    "LA": {
+      "type": "boolean"
+    },
+    "RH": {
+      "type": "boolean"
+    },
+    "LH": {
+      "type": "boolean"
+    },
+    "SH": {
+      "type": "boolean"
+    },
+    "S1": {
+      "type": "boolean"
+    },
+    "S2": {
+      "type": "boolean"
+    },
+    "S3": {
+      "type": "boolean"
+    },
+    "S4": {
+      "type": "boolean"
+    },
+    "S5": {
+      "type": "boolean"
+    },
+    "S6": {
+      "type": "boolean"
+    },
+    "S7": {
+      "type": "boolean"
+    },
+    "S8": {
+      "type": "boolean"
+    },
+    "TotalPieces": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "SubClass": {
+      "type": "integer",
+      "min": 0,
+      "max": 128
+    },
+    "Xspace": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "Yspace": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "NameOffset": {
+      "type": "integer",
+      "min": -250,
+      "max": 0
+    },
+    "MonsterOK": {
+      "type": "boolean"
+    },
+    "OperateRange": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "ShrineFunction": {
+      "type": "boolean"
+    },
+    "Restore": {
+      "type": "boolean"
+    },
+    "Parm0": {
+      "type": "integer",
+      "min": -20,
+      "max": 750
+    },
+    "Parm1": {
+      "type": "integer",
+      "min": -80,
+      "max": 344
+    },
+    "Parm2": {
+      "type": "integer",
+      "min": 0,
+      "max": 40
+    },
+    "Parm3": {
+      "type": "integer",
+      "min": 0,
+      "max": 40
+    },
+    "Parm4": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Parm5": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "Parm6": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Parm7": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Act": {
+      "type": "integer",
+      "min": 0,
+      "max": 16
+    },
+    "Lockable": {
+      "type": "boolean"
+    },
+    "Gore": {
+      "type": "boolean"
+    },
+    "Sync": {
+      "type": "boolean"
+    },
+    "Flicker": {
+      "type": "boolean"
+    },
+    "Damage": {
+      "type": "integer",
+      "min": 100,
+      "max": 100
+    },
+    "Beta": {
+      "type": "boolean"
+    },
+    "Overlay": {
+      "type": "boolean"
+    },
+    "CollisionSubst": {
+      "type": "boolean"
+    },
+    "Left": {
+      "type": "integer",
+      "min": -50,
+      "max": 750
+    },
+    "Top": {
+      "type": "integer",
+      "min": -100,
+      "max": 301
+    },
+    "Width": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Height": {
+      "type": "integer",
+      "min": 0,
+      "max": 110
+    },
+    "OperateFn": {
+      "type": "integer",
+      "min": 0,
+      "max": 59
+    },
+    "PopulateFn": {
+      "type": "integer",
+      "min": 0,
+      "max": 9
+    },
+    "InitFn": {
+      "type": "integer",
+      "min": 0,
+      "max": 61
+    },
+    "ClientFn": {
+      "type": "integer",
+      "min": 0,
+      "max": 7
+    },
+    "RestoreVirgins": {
+      "type": "boolean"
+    },
+    "BlockMissile": {
+      "type": "boolean"
+    },
+    "DrawUnder": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "OpenWarp": {
+      "type": "boolean"
+    },
+    "AutoMap": {
+      "type": "integer",
+      "min": 0,
+      "max": 694
+    }
+  }
+}

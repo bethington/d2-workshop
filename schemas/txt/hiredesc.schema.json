@@ -1,0 +1,35 @@
+{
+  "file": "hiredesc.txt",
+  "description": "Auto-generated schema for hiredesc.txt",
+  "columns": {
+    "Hireling Description": {
+      "type": "enum",
+      "values": [
+        "Cold Arrow",
+        "Cold Spells",
+        "Combat",
+        "Defensive Auras",
+        "Fire Arrow",
+        "Fire Spells",
+        "Lightning Spells",
+        "None",
+        "Offensive Auras"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "carw",
+        "cold",
+        "comb",
+        "def",
+        "farw",
+        "fire",
+        "ltng",
+        "off"
+      ]
+    }
+  }
+}

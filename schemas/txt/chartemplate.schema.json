@@ -1,0 +1,352 @@
+{
+  "file": "chartemplate.txt",
+  "description": "Auto-generated schema for chartemplate.txt",
+  "columns": {
+    "Template": {
+      "type": "enum",
+      "values": [
+        "Amazon Bow",
+        "Amazon Javelin",
+        "Amazon Spear",
+        "Barbarian",
+        "Barbarian axe",
+        "Barbarian mace",
+        "Barbarian sword",
+        "Necromancer",
+        "Paladin",
+        "Paladin fighter",
+        "Paladin heal",
+        "Sorceress Cold",
+        "Sorceress Fire",
+        "Sorceress Lightning"
+      ],
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Level": {
+      "type": "integer",
+      "min": 3,
+      "max": 9
+    },
+    "Act": {
+      "type": "string"
+    },
+    "Class": {
+      "type": "enum",
+      "values": [
+        "ama",
+        "bar",
+        "nec",
+        "pal",
+        "sor"
+      ]
+    },
+    "str": {
+      "type": "integer",
+      "min": 10,
+      "max": 40
+    },
+    "dex": {
+      "type": "integer",
+      "min": 15,
+      "max": 32
+    },
+    "int": {
+      "type": "integer",
+      "min": 10,
+      "max": 40
+    },
+    "vit": {
+      "type": "integer",
+      "min": 10,
+      "max": 42
+    },
+    "tot": {
+      "type": "integer",
+      "min": 80,
+      "max": 105
+    },
+    "LifePerLevel": {
+      "type": "integer",
+      "min": 12,
+      "max": 24
+    },
+    "ManaPerLevel": {
+      "type": "integer",
+      "min": 2,
+      "max": 8
+    },
+    "LifePerVitality": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "ManaPerMagic": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "Hitpoints": {
+      "type": "integer",
+      "min": 24,
+      "max": 89
+    },
+    "Mana": {
+      "type": "integer",
+      "min": 10,
+      "max": 56
+    },
+    "ManaRegenBonus": {
+      "type": "boolean"
+    },
+    "Velocity": {
+      "type": "integer",
+      "min": 100,
+      "max": 100
+    },
+    "AttackRate": {
+      "type": "integer",
+      "min": 100,
+      "max": 100
+    },
+    "OtherRate": {
+      "type": "integer",
+      "min": 100,
+      "max": 100
+    },
+    "RightSkill": {
+      "type": "boolean"
+    },
+    "Total Skills": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "SkillName": {
+      "type": "boolean"
+    },
+    "Skill1": {
+      "type": "integer",
+      "min": 0,
+      "max": 98
+    },
+    "SkillLevel1": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "Skill2": {
+      "type": "integer",
+      "min": 0,
+      "max": 37
+    },
+    "SkillLevel2": {
+      "type": "boolean"
+    },
+    "Skill3": {
+      "type": "boolean"
+    },
+    "SkillLevel3": {
+      "type": "boolean"
+    },
+    "Skill4": {
+      "type": "boolean"
+    },
+    "SkillLevel4": {
+      "type": "boolean"
+    },
+    "Skill5": {
+      "type": "boolean"
+    },
+    "SkillLevel5": {
+      "type": "boolean"
+    },
+    "Skill6": {
+      "type": "boolean"
+    },
+    "SkillLevel6": {
+      "type": "boolean"
+    },
+    "Skill7": {
+      "type": "boolean"
+    },
+    "SkillLevel7": {
+      "type": "boolean"
+    },
+    "Skill8": {
+      "type": "boolean"
+    },
+    "SkillLevel8": {
+      "type": "boolean"
+    },
+    "Skill9": {
+      "type": "boolean"
+    },
+    "SkillLevel9": {
+      "type": "boolean"
+    },
+    "baseWClass": {
+      "type": "string"
+    },
+    "item1": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "dgr",
+        "jav",
+        "lax",
+        "lsd",
+        "mac",
+        "sbr",
+        "sbw",
+        "scm",
+        "spr",
+        "ssd",
+        "sst"
+      ]
+    },
+    "item1loc": {
+      "type": "integer",
+      "min": 4,
+      "max": 4
+    },
+    "item1count": {
+      "type": "boolean"
+    },
+    "item2": {
+      "type": "enum",
+      "values": [
+        "0",
+        "aqv",
+        "buc"
+      ]
+    },
+    "item2loc": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "item2count": {
+      "type": "boolean"
+    },
+    "item3": {
+      "type": "boolean"
+    },
+    "item3loc": {
+      "type": "boolean"
+    },
+    "item3count": {
+      "type": "boolean"
+    },
+    "item4": {
+      "type": "boolean"
+    },
+    "item4loc": {
+      "type": "boolean"
+    },
+    "item4count": {
+      "type": "boolean"
+    },
+    "item5": {
+      "type": "boolean"
+    },
+    "item5loc": {
+      "type": "boolean"
+    },
+    "item5count": {
+      "type": "boolean"
+    },
+    "item6": {
+      "type": "boolean"
+    },
+    "item6loc": {
+      "type": "boolean"
+    },
+    "item6count": {
+      "type": "boolean"
+    },
+    "item7": {
+      "type": "boolean"
+    },
+    "item7loc": {
+      "type": "boolean"
+    },
+    "item7count": {
+      "type": "boolean"
+    },
+    "item8": {
+      "type": "boolean"
+    },
+    "item8loc": {
+      "type": "boolean"
+    },
+    "item8count": {
+      "type": "boolean"
+    },
+    "item9": {
+      "type": "boolean"
+    },
+    "item9loc": {
+      "type": "boolean"
+    },
+    "item9count": {
+      "type": "boolean"
+    },
+    "item10": {
+      "type": "boolean"
+    },
+    "item10loc": {
+      "type": "boolean"
+    },
+    "item10count": {
+      "type": "boolean"
+    },
+    "item11": {
+      "type": "boolean"
+    },
+    "item11loc": {
+      "type": "boolean"
+    },
+    "item11count": {
+      "type": "boolean"
+    },
+    "item12": {
+      "type": "boolean"
+    },
+    "item12loc": {
+      "type": "boolean"
+    },
+    "item12count": {
+      "type": "boolean"
+    },
+    "item13": {
+      "type": "boolean"
+    },
+    "item13loc": {
+      "type": "boolean"
+    },
+    "item13count": {
+      "type": "boolean"
+    },
+    "item14": {
+      "type": "boolean"
+    },
+    "item14loc": {
+      "type": "boolean"
+    },
+    "item14count": {
+      "type": "boolean"
+    },
+    "item15": {
+      "type": "boolean"
+    },
+    "item15loc": {
+      "type": "boolean"
+    },
+    "item15count": {
+      "type": "boolean"
+    }
+  }
+}

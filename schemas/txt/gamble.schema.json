@@ -1,0 +1,14 @@
+{
+  "file": "gamble.txt",
+  "description": "Auto-generated schema for gamble.txt",
+  "columns": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}

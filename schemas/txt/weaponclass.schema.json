@@ -1,0 +1,47 @@
+{
+  "file": "weaponclass.txt",
+  "description": "Auto-generated schema for weaponclass.txt",
+  "columns": {
+    "Weapon Class": {
+      "type": "enum",
+      "values": [
+        "1 Hand Swing",
+        "1 Hand Thrust",
+        "2 Hand Swing",
+        "2 Hand Thrust",
+        "Bow",
+        "Crossbow",
+        "Hand To Hand",
+        "Left Jab Right Swing",
+        "Left Jab Right Thrust",
+        "Left Swing Right Swing",
+        "Left Swing Right Thrust",
+        "None",
+        "One Hand-to-Hand",
+        "Staff",
+        "Two Hand-to-Hand"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "1hs",
+        "1ht",
+        "1js",
+        "1jt",
+        "1ss",
+        "1st",
+        "2hs",
+        "2ht",
+        "bow",
+        "ht1",
+        "ht2",
+        "hth",
+        "stf",
+        "xbw"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "file": "armtype.txt",
+  "description": "Auto-generated schema for armtype.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Heavy",
+        "Lite",
+        "Medium"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Token": {
+      "type": "enum",
+      "values": [
+        "hvy",
+        "lit",
+        "med"
+      ]
+    }
+  }
+}

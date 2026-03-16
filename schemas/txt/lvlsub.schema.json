@@ -1,0 +1,112 @@
+{
+  "file": "lvlsub.txt",
+  "description": "Auto-generated schema for lvlsub.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "integer",
+      "min": 0,
+      "max": 9
+    },
+    "File": {
+      "type": "string"
+    },
+    "CheckAll": {
+      "type": "boolean"
+    },
+    "BordType": {
+      "type": "integer",
+      "min": -1,
+      "max": 2
+    },
+    "GridSize": {
+      "type": "boolean"
+    },
+    "Dt1Mask": {
+      "type": "integer",
+      "min": 0,
+      "max": 4194305
+    },
+    "Prob0": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Trials0": {
+      "type": "integer",
+      "min": -1,
+      "max": 20
+    },
+    "Max0": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "Prob1": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Trials1": {
+      "type": "integer",
+      "min": -1,
+      "max": 10
+    },
+    "Max1": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "Prob2": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Trials2": {
+      "type": "integer",
+      "min": -1,
+      "max": 20
+    },
+    "Max2": {
+      "type": "integer",
+      "min": 0,
+      "max": 12
+    },
+    "Prob3": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Trials3": {
+      "type": "integer",
+      "min": -1,
+      "max": 20
+    },
+    "Max3": {
+      "type": "integer",
+      "min": 0,
+      "max": 12
+    },
+    "Prob4": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "Trials4": {
+      "type": "integer",
+      "min": -1,
+      "max": 20
+    },
+    "Max4": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "Beta": {
+      "type": "boolean"
+    }
+  }
+}

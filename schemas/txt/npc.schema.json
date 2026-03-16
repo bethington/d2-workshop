@@ -1,0 +1,95 @@
+{
+  "file": "npc.txt",
+  "description": "Auto-generated schema for npc.txt",
+  "columns": {
+    "npc": {
+      "type": "ref",
+      "target": "npc.txt",
+      "targetColumn": "npc",
+      "required": true,
+      "unique": true
+    },
+    "buy mult": {
+      "type": "integer",
+      "min": 512,
+      "max": 512
+    },
+    "sell mult": {
+      "type": "integer",
+      "min": 960,
+      "max": 2048
+    },
+    "rep mult": {
+      "type": "integer",
+      "min": 128,
+      "max": 128
+    },
+    "questflag A": {
+      "type": "integer",
+      "min": 4,
+      "max": 41
+    },
+    "questbuymult A": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024
+    },
+    "questsellmult A": {
+      "type": "integer",
+      "min": 922,
+      "max": 922
+    },
+    "questrepmult A": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024
+    },
+    "questflag B": {
+      "type": "integer",
+      "min": 35,
+      "max": 35
+    },
+    "questbuymult B": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024
+    },
+    "questsellmult B": {
+      "type": "integer",
+      "min": 512,
+      "max": 512
+    },
+    "questrepmult B": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024
+    },
+    "questflag C": {
+      "type": "string"
+    },
+    "questbuymult C": {
+      "type": "string"
+    },
+    "questsellmult C": {
+      "type": "string"
+    },
+    "questrepmult C": {
+      "type": "string"
+    },
+    "max buy": {
+      "type": "integer",
+      "min": 5000,
+      "max": 25000
+    },
+    "max buy (N)": {
+      "type": "integer",
+      "min": 25000,
+      "max": 25000
+    },
+    "max buy (H)": {
+      "type": "integer",
+      "min": 25000,
+      "max": 25000
+    }
+  }
+}

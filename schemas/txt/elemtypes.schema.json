@@ -1,0 +1,41 @@
+{
+  "file": "elemtypes.txt",
+  "description": "Auto-generated schema for elemtypes.txt",
+  "columns": {
+    "Elemental Type": {
+      "type": "enum",
+      "values": [
+        "Burning",
+        "Cold",
+        "Fire",
+        "Life Drain",
+        "Lightning",
+        "Magic",
+        "Mana Drain",
+        "None",
+        "Poison",
+        "Random",
+        "Stamina Drain",
+        "Stun"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "burn",
+        "cold",
+        "fire",
+        "life",
+        "ltng",
+        "mag",
+        "mana",
+        "pois",
+        "rand",
+        "stam",
+        "stun"
+      ]
+    }
+  }
+}

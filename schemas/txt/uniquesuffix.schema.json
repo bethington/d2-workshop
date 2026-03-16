@@ -1,0 +1,119 @@
+{
+  "file": "uniquesuffix.txt",
+  "description": "Auto-generated schema for uniquesuffix.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "MonType1": {
+      "type": "boolean"
+    },
+    "MonType2": {
+      "type": "boolean"
+    },
+    "MonType3": {
+      "type": "boolean"
+    },
+    "MonType4": {
+      "type": "boolean"
+    },
+    "MonType5": {
+      "type": "boolean"
+    },
+    "MonType6": {
+      "type": "boolean"
+    },
+    "MonType7": {
+      "type": "boolean"
+    },
+    "MonType8": {
+      "type": "boolean"
+    },
+    "MonType9": {
+      "type": "boolean"
+    },
+    "MonType10": {
+      "type": "boolean"
+    },
+    "MonType11": {
+      "type": "boolean"
+    },
+    "MonType12": {
+      "type": "boolean"
+    },
+    "MonType13": {
+      "type": "boolean"
+    },
+    "MonType14": {
+      "type": "boolean"
+    },
+    "MonType15": {
+      "type": "boolean"
+    },
+    "MonType16": {
+      "type": "boolean"
+    },
+    "MonType17": {
+      "type": "boolean"
+    },
+    "MonType18": {
+      "type": "boolean"
+    },
+    "MonType19": {
+      "type": "boolean"
+    },
+    "MonType20": {
+      "type": "boolean"
+    },
+    "MonType21": {
+      "type": "boolean"
+    },
+    "MonType22": {
+      "type": "boolean"
+    },
+    "MonType23": {
+      "type": "boolean"
+    },
+    "MonType24": {
+      "type": "boolean"
+    },
+    "MonType25": {
+      "type": "boolean"
+    },
+    "MonType26": {
+      "type": "boolean"
+    },
+    "MonType27": {
+      "type": "boolean"
+    },
+    "MonType28": {
+      "type": "boolean"
+    },
+    "MonType29": {
+      "type": "boolean"
+    },
+    "MonType30": {
+      "type": "boolean"
+    },
+    "MonType31": {
+      "type": "boolean"
+    },
+    "MonType32": {
+      "type": "boolean"
+    },
+    "MonType33": {
+      "type": "boolean"
+    },
+    "MonType34": {
+      "type": "boolean"
+    },
+    "MonType35": {
+      "type": "boolean"
+    },
+    "MonType36": {
+      "type": "boolean"
+    }
+  }
+}

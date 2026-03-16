@@ -1,0 +1,10 @@
+{
+  "file": "a3npc.txt",
+  "description": "Auto-generated schema for a3npc.txt",
+  "columns": {
+    "\u00ff\u00fe/\u0000/\u0000D\u0000I\u0000A\u0000B\u0000L\u0000O\u0000 \u0000I\u0000I\u0000\r\u0000": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

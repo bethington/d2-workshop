@@ -1,0 +1,365 @@
+{
+  "file": "hireling.txt",
+  "description": "Auto-generated schema for hireling.txt",
+  "columns": {
+    "Hireling": {
+      "type": "ref",
+      "target": "hireling.txt",
+      "targetColumn": "Hireling",
+      "required": true
+    },
+    "SubType": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "integer",
+      "min": 0,
+      "max": 29
+    },
+    "Class": {
+      "type": "integer",
+      "min": 271,
+      "max": 561
+    },
+    "Act": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    },
+    "Difficulty": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "Level": {
+      "type": "integer",
+      "min": 3,
+      "max": 75
+    },
+    "Seller": {
+      "type": "integer",
+      "min": 150,
+      "max": 515
+    },
+    "NameFirst": {
+      "type": "enum",
+      "values": [
+        "MercX101",
+        "merc01",
+        "merca201",
+        "merca222"
+      ]
+    },
+    "NameLast": {
+      "type": "enum",
+      "values": [
+        "MercX167",
+        "merc41",
+        "merca221",
+        "merca241"
+      ]
+    },
+    "Gold": {
+      "type": "integer",
+      "min": 100,
+      "max": 32000
+    },
+    "Exp/Lvl": {
+      "type": "integer",
+      "min": 100,
+      "max": 125
+    },
+    "HP": {
+      "type": "integer",
+      "min": 45,
+      "max": 852
+    },
+    "HP/Lvl": {
+      "type": "integer",
+      "min": 6,
+      "max": 12
+    },
+    "Defense": {
+      "type": "integer",
+      "min": 15,
+      "max": 509
+    },
+    "Def/Lvl": {
+      "type": "integer",
+      "min": 4,
+      "max": 9
+    },
+    "Str": {
+      "type": "integer",
+      "min": 35,
+      "max": 190
+    },
+    "Str/Lvl": {
+      "type": "integer",
+      "min": 10,
+      "max": 15
+    },
+    "Dex": {
+      "type": "integer",
+      "min": 40,
+      "max": 137
+    },
+    "Dex/Lvl": {
+      "type": "integer",
+      "min": 8,
+      "max": 16
+    },
+    "AR": {
+      "type": "integer",
+      "min": 0,
+      "max": 432
+    },
+    "AR/Lvl": {
+      "type": "integer",
+      "min": 0,
+      "max": 12
+    },
+    "Share": {
+      "type": "integer",
+      "min": 1,
+      "max": 6
+    },
+    "Dmg-Min": {
+      "type": "integer",
+      "min": 1,
+      "max": 60
+    },
+    "Dmg-Max": {
+      "type": "integer",
+      "min": 3,
+      "max": 64
+    },
+    "Dmg/Lvl": {
+      "type": "integer",
+      "min": 2,
+      "max": 8
+    },
+    "Resist": {
+      "type": "integer",
+      "min": 0,
+      "max": 139
+    },
+    "Resist/Lvl": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "WType1": {
+      "type": "enum",
+      "values": [
+        "bow",
+        "pole",
+        "swor"
+      ]
+    },
+    "WType2": {
+      "type": "enum",
+      "values": [
+        "shie",
+        "spea"
+      ]
+    },
+    "HireDesc": {
+      "type": "enum",
+      "values": [
+        "carw",
+        "cold",
+        "comb",
+        "def",
+        "farw",
+        "fire",
+        "ltng",
+        "off"
+      ]
+    },
+    "DefaultChance": {
+      "type": "integer",
+      "min": 10,
+      "max": 75
+    },
+    "Skill1": {
+      "type": "enum",
+      "values": [
+        "Bash",
+        "Charged Bolt",
+        "Glacial Spike",
+        "Inferno",
+        "Inner Sight",
+        "Jab"
+      ]
+    },
+    "Mode1": {
+      "type": "integer",
+      "min": 4,
+      "max": 14
+    },
+    "Chance1": {
+      "type": "integer",
+      "min": 10,
+      "max": 208
+    },
+    "ChancePerLevel1": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "Level1": {
+      "type": "integer",
+      "min": 1,
+      "max": 20
+    },
+    "LvlPerLvl1": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "Skill2": {
+      "type": "enum",
+      "values": [
+        "Blessed Aim",
+        "Cold Arrow",
+        "Defiance",
+        "Fire Arrow",
+        "Fire Ball",
+        "Frozen Armor",
+        "Lightning",
+        "Prayer",
+        "Stun"
+      ]
+    },
+    "Mode2": {
+      "type": "integer",
+      "min": 1,
+      "max": 7
+    },
+    "Chance2": {
+      "type": "integer",
+      "min": 10,
+      "max": 1000
+    },
+    "ChancePerLevel2": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Level2": {
+      "type": "integer",
+      "min": 1,
+      "max": 18
+    },
+    "LvlPerLvl2": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "Skill3": {
+      "type": "enum",
+      "values": [
+        "Holy Freeze",
+        "Ice Blast",
+        "Might",
+        "Thorns"
+      ]
+    },
+    "Mode3": {
+      "type": "integer",
+      "min": 1,
+      "max": 7
+    },
+    "Chance3": {
+      "type": "integer",
+      "min": 5,
+      "max": 240
+    },
+    "ChancePerLevel3": {
+      "type": "boolean"
+    },
+    "Level3": {
+      "type": "integer",
+      "min": 1,
+      "max": 20
+    },
+    "LvlPerLvl3": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "Skill4": {
+      "type": "string"
+    },
+    "Mode4": {
+      "type": "string"
+    },
+    "Chance4": {
+      "type": "string"
+    },
+    "ChancePerLevel4": {
+      "type": "string"
+    },
+    "Level4": {
+      "type": "string"
+    },
+    "LvlPerLvl4": {
+      "type": "string"
+    },
+    "Skill5": {
+      "type": "string"
+    },
+    "Mode5": {
+      "type": "string"
+    },
+    "Chance5": {
+      "type": "string"
+    },
+    "ChancePerLevel5": {
+      "type": "string"
+    },
+    "Level5": {
+      "type": "string"
+    },
+    "LvlPerLvl5": {
+      "type": "string"
+    },
+    "Skill6": {
+      "type": "string"
+    },
+    "Mode6": {
+      "type": "string"
+    },
+    "Chance6": {
+      "type": "string"
+    },
+    "ChancePerLevel6": {
+      "type": "string"
+    },
+    "Level6": {
+      "type": "string"
+    },
+    "LvlPerLvl6": {
+      "type": "string"
+    },
+    "Head": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Torso": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Weapon": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Shield": {
+      "type": "boolean"
+    }
+  }
+}

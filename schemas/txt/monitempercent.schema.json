@@ -1,0 +1,29 @@
+{
+  "file": "monitempercent.txt",
+  "description": "Auto-generated schema for monitempercent.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Composited",
+        "NonComposited"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "HeartPercent": {
+      "type": "boolean"
+    },
+    "BodyPartPercent": {
+      "type": "boolean"
+    },
+    "TreasureClassPercent": {
+      "type": "integer",
+      "min": 20,
+      "max": 20
+    },
+    "ComponentPercent": {
+      "type": "boolean"
+    }
+  }
+}

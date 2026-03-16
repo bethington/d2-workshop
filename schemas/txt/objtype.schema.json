@@ -1,0 +1,16 @@
+{
+  "file": "objtype.txt",
+  "description": "Auto-generated schema for objtype.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Token": {
+      "type": "string"
+    },
+    "Beta": {
+      "type": "boolean"
+    }
+  }
+}

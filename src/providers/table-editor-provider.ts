@@ -37,6 +37,8 @@ export class TableEditorProvider
   private static readonly viewType = "d2workshop.tableEditor";
   /** Pending row navigation: uri → row number */
   static pendingNavigation = new Map<string, number>();
+  /** Active webview panels: uri → webview panel (for sending messages to already-open editors) */
+  static activeWebviews = new Map<string, vscode.WebviewPanel>();
 
   constructor(
     private readonly context: vscode.ExtensionContext,
@@ -83,6 +85,13 @@ export class TableEditorProvider
       this.context.extensionUri,
       "table-editor"
     );
+
+    // Track active webview for navigation from search results
+    const uriKey = document.uri.toString();
+    TableEditorProvider.activeWebviews.set(uriKey, webviewPanel);
+    webviewPanel.onDidDispose(() => {
+      TableEditorProvider.activeWebviews.delete(uriKey);
+    });
 
     // Pre-load the data while webview initializes
     const fileName = this.getFileName(document.uri);

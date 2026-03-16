@@ -1,0 +1,68 @@
+{
+  "file": "shrines.txt",
+  "description": "Auto-generated schema for shrines.txt",
+  "columns": {
+    "Shrine Type": {
+      "type": "enum",
+      "values": [
+        "Booster",
+        "Magic",
+        "None",
+        "Recharge"
+      ],
+      "required": true
+    },
+    "Shrine name": {
+      "type": "string"
+    },
+    "Effect": {
+      "type": "string"
+    },
+    "Code": {
+      "type": "integer",
+      "min": 0,
+      "max": 22
+    },
+    "Arg0": {
+      "type": "integer",
+      "min": 0,
+      "max": 400
+    },
+    "Arg1": {
+      "type": "integer",
+      "min": 0,
+      "max": 2000
+    },
+    "Duration in frames": {
+      "type": "integer",
+      "min": 0,
+      "max": 4800
+    },
+    "reset time in minutes": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "rarity": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "view name": {
+      "type": "string"
+    },
+    "niftyphrase": {
+      "type": "string"
+    },
+    "effectclass": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "LevelMin": {
+      "type": "integer",
+      "min": 0,
+      "max": 32
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "file": "superuniques.txt",
+  "description": "Auto-generated schema for superuniques.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Class": {
+      "type": "integer",
+      "min": 0,
+      "max": 409
+    },
+    "Mod1": {
+      "type": "integer",
+      "min": 5,
+      "max": 30
+    },
+    "Mod2": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "Mod3": {
+      "type": "integer",
+      "min": 0,
+      "max": 24
+    },
+    "MinGrp": {
+      "type": "integer",
+      "min": 0,
+      "max": 9
+    },
+    "MaxGrp": {
+      "type": "integer",
+      "min": 0,
+      "max": 9
+    }
+  }
+}

@@ -1,0 +1,689 @@
+{
+  "file": "levels.txt",
+  "description": "Auto-generated schema for levels.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Id": {
+      "type": "integer",
+      "min": 0,
+      "max": 108
+    },
+    "Pal": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "Act": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "Layer": {
+      "type": "integer",
+      "min": 0,
+      "max": 78
+    },
+    "SizeX": {
+      "type": "integer",
+      "min": 0,
+      "max": 200
+    },
+    "SizeY": {
+      "type": "integer",
+      "min": 0,
+      "max": 200
+    },
+    "OffsetX": {
+      "type": "integer",
+      "min": -4,
+      "max": 5000
+    },
+    "OffsetY": {
+      "type": "integer",
+      "min": -40,
+      "max": 3100
+    },
+    "Depend": {
+      "type": "integer",
+      "min": 0,
+      "max": 32
+    },
+    "Rain": {
+      "type": "boolean"
+    },
+    "Mud": {
+      "type": "boolean"
+    },
+    "NoPer": {
+      "type": "boolean"
+    },
+    "LOSDraw": {
+      "type": "boolean"
+    },
+    "IsInside": {
+      "type": "boolean"
+    },
+    "DrlgType": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "LevelType": {
+      "type": "integer",
+      "min": 0,
+      "max": 28
+    },
+    "SubType": {
+      "type": "integer",
+      "min": -1,
+      "max": 9
+    },
+    "SubTheme": {
+      "type": "integer",
+      "min": -1,
+      "max": 4
+    },
+    "SubWaypoint": {
+      "type": "integer",
+      "min": -1,
+      "max": 7
+    },
+    "SubShrine": {
+      "type": "integer",
+      "min": -1,
+      "max": 8
+    },
+    "Vis0": {
+      "type": "integer",
+      "min": 0,
+      "max": 107
+    },
+    "Vis1": {
+      "type": "integer",
+      "min": 0,
+      "max": 108
+    },
+    "Vis2": {
+      "type": "integer",
+      "min": 0,
+      "max": 101
+    },
+    "Vis3": {
+      "type": "integer",
+      "min": 0,
+      "max": 101
+    },
+    "Vis4": {
+      "type": "integer",
+      "min": 0,
+      "max": 93
+    },
+    "Vis5": {
+      "type": "integer",
+      "min": 0,
+      "max": 70
+    },
+    "Vis6": {
+      "type": "integer",
+      "min": 0,
+      "max": 71
+    },
+    "Vis7": {
+      "type": "integer",
+      "min": 0,
+      "max": 72
+    },
+    "Warp0": {
+      "type": "integer",
+      "min": -1,
+      "max": 70
+    },
+    "Warp1": {
+      "type": "integer",
+      "min": -1,
+      "max": 69
+    },
+    "Warp2": {
+      "type": "integer",
+      "min": -1,
+      "max": 65
+    },
+    "Warp3": {
+      "type": "integer",
+      "min": -1,
+      "max": 66
+    },
+    "Warp4": {
+      "type": "integer",
+      "min": -1,
+      "max": 60
+    },
+    "Warp5": {
+      "type": "integer",
+      "min": -1,
+      "max": 42
+    },
+    "Warp6": {
+      "type": "integer",
+      "min": -1,
+      "max": 43
+    },
+    "Warp7": {
+      "type": "integer",
+      "min": -1,
+      "max": 44
+    },
+    "Intensity": {
+      "type": "integer",
+      "min": 0,
+      "max": 140
+    },
+    "Red": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Green": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Blue": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Portal": {
+      "type": "boolean"
+    },
+    "Position": {
+      "type": "boolean"
+    },
+    "SaveMonsters": {
+      "type": "boolean"
+    },
+    "Quest": {
+      "type": "integer",
+      "min": 0,
+      "max": 11
+    },
+    "WarpDist": {
+      "type": "integer",
+      "min": 0,
+      "max": 3900
+    },
+    "MonLvl1": {
+      "type": "integer",
+      "min": 0,
+      "max": 28
+    },
+    "MonLvl2": {
+      "type": "integer",
+      "min": 25,
+      "max": 53
+    },
+    "MonLvl3": {
+      "type": "integer",
+      "min": 50,
+      "max": 78
+    },
+    "MonDen": {
+      "type": "integer",
+      "min": 0,
+      "max": 2200
+    },
+    "MonUMin": {
+      "type": "boolean"
+    },
+    "MonUMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "MonWndr": {
+      "type": "boolean"
+    },
+    "MonSpcWalk": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "Mtot": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "M1": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "M2": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "M3": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "M4": {
+      "type": "integer",
+      "min": 0,
+      "max": 394
+    },
+    "M5": {
+      "type": "integer",
+      "min": 0,
+      "max": 397
+    },
+    "M6": {
+      "type": "integer",
+      "min": 0,
+      "max": 362
+    },
+    "M7": {
+      "type": "integer",
+      "min": 0,
+      "max": 398
+    },
+    "M8": {
+      "type": "integer",
+      "min": 0,
+      "max": 214
+    },
+    "M9": {
+      "type": "boolean"
+    },
+    "M10": {
+      "type": "boolean"
+    },
+    "M11": {
+      "type": "boolean"
+    },
+    "M12": {
+      "type": "boolean"
+    },
+    "M13": {
+      "type": "boolean"
+    },
+    "M14": {
+      "type": "boolean"
+    },
+    "M15": {
+      "type": "boolean"
+    },
+    "M16": {
+      "type": "boolean"
+    },
+    "M17": {
+      "type": "boolean"
+    },
+    "M18": {
+      "type": "boolean"
+    },
+    "M19": {
+      "type": "boolean"
+    },
+    "M20": {
+      "type": "boolean"
+    },
+    "M21": {
+      "type": "boolean"
+    },
+    "M22": {
+      "type": "boolean"
+    },
+    "M23": {
+      "type": "boolean"
+    },
+    "M24": {
+      "type": "boolean"
+    },
+    "M25": {
+      "type": "boolean"
+    },
+    "S1": {
+      "type": "integer",
+      "min": 0,
+      "max": 208
+    },
+    "S2": {
+      "type": "integer",
+      "min": 0,
+      "max": 207
+    },
+    "S3": {
+      "type": "integer",
+      "min": 0,
+      "max": 206
+    },
+    "S4": {
+      "type": "boolean"
+    },
+    "S5": {
+      "type": "boolean"
+    },
+    "S6": {
+      "type": "boolean"
+    },
+    "S7": {
+      "type": "boolean"
+    },
+    "S8": {
+      "type": "boolean"
+    },
+    "S9": {
+      "type": "boolean"
+    },
+    "S10": {
+      "type": "boolean"
+    },
+    "S11": {
+      "type": "boolean"
+    },
+    "S12": {
+      "type": "boolean"
+    },
+    "S13": {
+      "type": "boolean"
+    },
+    "S14": {
+      "type": "boolean"
+    },
+    "S15": {
+      "type": "boolean"
+    },
+    "S16": {
+      "type": "boolean"
+    },
+    "S17": {
+      "type": "boolean"
+    },
+    "S18": {
+      "type": "boolean"
+    },
+    "S19": {
+      "type": "boolean"
+    },
+    "S20": {
+      "type": "boolean"
+    },
+    "S21": {
+      "type": "boolean"
+    },
+    "S22": {
+      "type": "boolean"
+    },
+    "S23": {
+      "type": "boolean"
+    },
+    "S24": {
+      "type": "boolean"
+    },
+    "S25": {
+      "type": "boolean"
+    },
+    "Utot": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "U1": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "U2": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "U3": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "U4": {
+      "type": "integer",
+      "min": 0,
+      "max": 394
+    },
+    "U5": {
+      "type": "integer",
+      "min": 0,
+      "max": 397
+    },
+    "U6": {
+      "type": "integer",
+      "min": 0,
+      "max": 361
+    },
+    "U7": {
+      "type": "integer",
+      "min": 0,
+      "max": 398
+    },
+    "U8": {
+      "type": "integer",
+      "min": 0,
+      "max": 214
+    },
+    "U9": {
+      "type": "boolean"
+    },
+    "U10": {
+      "type": "boolean"
+    },
+    "U11": {
+      "type": "boolean"
+    },
+    "U12": {
+      "type": "boolean"
+    },
+    "U13": {
+      "type": "boolean"
+    },
+    "U14": {
+      "type": "boolean"
+    },
+    "U15": {
+      "type": "boolean"
+    },
+    "U16": {
+      "type": "boolean"
+    },
+    "U17": {
+      "type": "boolean"
+    },
+    "U18": {
+      "type": "boolean"
+    },
+    "U19": {
+      "type": "boolean"
+    },
+    "U20": {
+      "type": "boolean"
+    },
+    "U21": {
+      "type": "boolean"
+    },
+    "U22": {
+      "type": "boolean"
+    },
+    "U23": {
+      "type": "boolean"
+    },
+    "U24": {
+      "type": "boolean"
+    },
+    "U25": {
+      "type": "boolean"
+    },
+    "C1": {
+      "type": "integer",
+      "min": 0,
+      "max": 339
+    },
+    "C2": {
+      "type": "integer",
+      "min": 0,
+      "max": 319
+    },
+    "C3": {
+      "type": "integer",
+      "min": 0,
+      "max": 269
+    },
+    "C4": {
+      "type": "integer",
+      "min": 0,
+      "max": 283
+    },
+    "C5": {
+      "type": "boolean"
+    },
+    "CA1": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "CA2": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "CA3": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "CA4": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "CA5": {
+      "type": "boolean"
+    },
+    "CD1": {
+      "type": "boolean"
+    },
+    "CD2": {
+      "type": "boolean"
+    },
+    "CD3": {
+      "type": "boolean"
+    },
+    "CD4": {
+      "type": "boolean"
+    },
+    "CD5": {
+      "type": "boolean"
+    },
+    "Themes": {
+      "type": "integer",
+      "min": 0,
+      "max": 60
+    },
+    "SoundEnv": {
+      "type": "integer",
+      "min": 0,
+      "max": 34
+    },
+    "Waypoint": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "LevelName": {
+      "type": "string"
+    },
+    "LevelWarp": {
+      "type": "string"
+    },
+    "EntryFile": {
+      "type": "string"
+    },
+    "ObjGrp0": {
+      "type": "integer",
+      "min": 0,
+      "max": 66
+    },
+    "ObjGrp1": {
+      "type": "integer",
+      "min": 0,
+      "max": 76
+    },
+    "ObjGrp2": {
+      "type": "integer",
+      "min": 0,
+      "max": 77
+    },
+    "ObjGrp3": {
+      "type": "integer",
+      "min": 0,
+      "max": 78
+    },
+    "ObjGrp4": {
+      "type": "integer",
+      "min": 0,
+      "max": 72
+    },
+    "ObjGrp5": {
+      "type": "integer",
+      "min": 0,
+      "max": 69
+    },
+    "ObjGrp6": {
+      "type": "boolean"
+    },
+    "ObjGrp7": {
+      "type": "boolean"
+    },
+    "ObjPrb0": {
+      "type": "integer",
+      "min": 0,
+      "max": 90
+    },
+    "ObjPrb1": {
+      "type": "integer",
+      "min": 0,
+      "max": 80
+    },
+    "ObjPrb2": {
+      "type": "integer",
+      "min": 0,
+      "max": 70
+    },
+    "ObjPrb3": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "ObjPrb4": {
+      "type": "integer",
+      "min": 0,
+      "max": 50
+    },
+    "ObjPrb5": {
+      "type": "integer",
+      "min": 0,
+      "max": 35
+    },
+    "ObjPrb6": {
+      "type": "boolean"
+    },
+    "ObjPrb7": {
+      "type": "boolean"
+    },
+    "Beta": {
+      "type": "boolean"
+    }
+  }
+}

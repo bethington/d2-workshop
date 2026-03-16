@@ -1,0 +1,132 @@
+{
+  "file": "treasureclassex.txt",
+  "description": "Auto-generated schema for treasureclassex.txt",
+  "columns": {
+    "Treasure Class": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Picks": {
+      "type": "integer",
+      "min": -3,
+      "max": 7
+    },
+    "Unique": {
+      "type": "integer",
+      "min": 800,
+      "max": 983
+    },
+    "Set": {
+      "type": "integer",
+      "min": 800,
+      "max": 983
+    },
+    "Rare": {
+      "type": "integer",
+      "min": 800,
+      "max": 983
+    },
+    "Magic": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024
+    },
+    "NoDrop": {
+      "type": "integer",
+      "min": 0,
+      "max": 250
+    },
+    "Item1": {
+      "type": "string"
+    },
+    "Prob1": {
+      "type": "integer",
+      "min": 1,
+      "max": 60
+    },
+    "Item2": {
+      "type": "string"
+    },
+    "Prob2": {
+      "type": "integer",
+      "min": 1,
+      "max": 32770
+    },
+    "Item3": {
+      "type": "string"
+    },
+    "Prob3": {
+      "type": "integer",
+      "min": 1,
+      "max": 81880
+    },
+    "Item4": {
+      "type": "string"
+    },
+    "Prob4": {
+      "type": "integer",
+      "min": 1,
+      "max": 42
+    },
+    "Item5": {
+      "type": "string"
+    },
+    "Prob5": {
+      "type": "integer",
+      "min": 1,
+      "max": 28
+    },
+    "Item6": {
+      "type": "string"
+    },
+    "Prob6": {
+      "type": "integer",
+      "min": 1,
+      "max": 14
+    },
+    "Item7": {
+      "type": "string"
+    },
+    "Prob7": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    },
+    "Item8": {
+      "type": "string"
+    },
+    "Prob8": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    },
+    "Item9": {
+      "type": "string"
+    },
+    "Prob9": {
+      "type": "integer",
+      "min": 1,
+      "max": 310
+    },
+    "Item10": {
+      "type": "enum",
+      "values": [
+        "Act 5 (N) Bow B",
+        "Act 5 (N) Equip C",
+        "Act 5 (N) Melee B",
+        "Act 5 Bow B",
+        "Act 5 Equip B",
+        "Act 5 Melee B"
+      ]
+    },
+    "Prob10": {
+      "type": "integer",
+      "min": 100,
+      "max": 1000
+    },
+    "Term": {
+      "type": "boolean"
+    }
+  }
+}

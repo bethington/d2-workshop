@@ -1,0 +1,108 @@
+{
+  "file": "lvlprest.txt",
+  "description": "Auto-generated schema for lvlprest.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Def": {
+      "type": "integer",
+      "min": 0,
+      "max": 862
+    },
+    "LevelId": {
+      "type": "string"
+    },
+    "Populate": {
+      "type": "boolean"
+    },
+    "Logicals": {
+      "type": "boolean"
+    },
+    "Outdoors": {
+      "type": "boolean"
+    },
+    "Animate": {
+      "type": "boolean"
+    },
+    "KillEdge": {
+      "type": "boolean"
+    },
+    "FillBlanks": {
+      "type": "boolean"
+    },
+    "SizeX": {
+      "type": "integer",
+      "min": 0,
+      "max": 64
+    },
+    "SizeY": {
+      "type": "integer",
+      "min": 0,
+      "max": 56
+    },
+    "AutoMap": {
+      "type": "boolean"
+    },
+    "Scan": {
+      "type": "boolean"
+    },
+    "Pops": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "PopPad": {
+      "type": "integer",
+      "min": -5,
+      "max": 0
+    },
+    "Files": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "File1": {
+      "type": "string"
+    },
+    "File2": {
+      "type": "string"
+    },
+    "File3": {
+      "type": "string"
+    },
+    "File4": {
+      "type": "string"
+    },
+    "File5": {
+      "type": "string"
+    },
+    "File6": {
+      "type": "enum",
+      "values": [
+        "0",
+        "Act1/Outdoors/Cott6.ds1",
+        "Act1/Outdoors/Cott6A.ds1",
+        "Act2/Maggot/MagEW6.ds1",
+        "Act2/Maggot/MagNEW4.ds1",
+        "Act2/Maggot/MagNS6.ds1",
+        "Act2/Maggot/MagNSE4.ds1",
+        "Act2/Maggot/MagNSW4.ds1",
+        "Act2/Maggot/MagSEW4.ds1",
+        "Act2/Ruin/Ruin6.ds1",
+        "Act3/Jungle/DungRm6A.ds1",
+        "Act3/Jungle/DungRm6B.ds1"
+      ]
+    },
+    "Dt1Mask": {
+      "type": "integer",
+      "min": 0,
+      "max": 268435456
+    },
+    "Beta": {
+      "type": "boolean"
+    }
+  }
+}

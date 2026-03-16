@@ -1,0 +1,14 @@
+{
+  "file": "colors.txt",
+  "description": "Auto-generated schema for colors.txt",
+  "columns": {
+    "Transform Color": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "string"
+    }
+  }
+}

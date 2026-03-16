@@ -1,0 +1,141 @@
+{
+  "file": "objgroup.txt",
+  "description": "Auto-generated schema for objgroup.txt",
+  "columns": {
+    "GroupName": {
+      "type": "string",
+      "required": true
+    },
+    "Offset": {
+      "type": "integer",
+      "min": 0,
+      "max": 96
+    },
+    "ID0": {
+      "type": "integer",
+      "min": 0,
+      "max": 387
+    },
+    "DENSITY0": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "PROB0": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "ID1": {
+      "type": "integer",
+      "min": 0,
+      "max": 388
+    },
+    "DENSITY1": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "PROB1": {
+      "type": "integer",
+      "min": 0,
+      "max": 50
+    },
+    "ID2": {
+      "type": "integer",
+      "min": 0,
+      "max": 389
+    },
+    "DENSITY2": {
+      "type": "integer",
+      "min": 0,
+      "max": 80
+    },
+    "PROB2": {
+      "type": "integer",
+      "min": 0,
+      "max": 80
+    },
+    "ID3": {
+      "type": "integer",
+      "min": 0,
+      "max": 390
+    },
+    "DENSITY3": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "PROB3": {
+      "type": "integer",
+      "min": 0,
+      "max": 25
+    },
+    "ID4": {
+      "type": "integer",
+      "min": 0,
+      "max": 391
+    },
+    "DENSITY4": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "PROB4": {
+      "type": "integer",
+      "min": 0,
+      "max": 24
+    },
+    "ID5": {
+      "type": "integer",
+      "min": 0,
+      "max": 380
+    },
+    "DENSITY5": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "PROB5": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "ID6": {
+      "type": "integer",
+      "min": 0,
+      "max": 316
+    },
+    "DENSITY6": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "PROB6": {
+      "type": "integer",
+      "min": 0,
+      "max": 13
+    },
+    "ID7": {
+      "type": "integer",
+      "min": 0,
+      "max": 317
+    },
+    "DENSITY7": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "PROB7": {
+      "type": "integer",
+      "min": 0,
+      "max": 14
+    },
+    "SHRINES": {
+      "type": "boolean"
+    },
+    "WELLS": {
+      "type": "boolean"
+    }
+  }
+}

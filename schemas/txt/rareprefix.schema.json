@@ -1,0 +1,67 @@
+{
+  "file": "rareprefix.txt",
+  "description": "Auto-generated schema for rareprefix.txt",
+  "columns": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "armor": {
+      "type": "boolean"
+    },
+    "helm": {
+      "type": "boolean"
+    },
+    "shield": {
+      "type": "boolean"
+    },
+    "sword": {
+      "type": "boolean"
+    },
+    "axe": {
+      "type": "boolean"
+    },
+    "mace": {
+      "type": "boolean"
+    },
+    "spear": {
+      "type": "boolean"
+    },
+    "scepter": {
+      "type": "boolean"
+    },
+    "wand": {
+      "type": "boolean"
+    },
+    "staff": {
+      "type": "boolean"
+    },
+    "bow": {
+      "type": "boolean"
+    },
+    "boots": {
+      "type": "boolean"
+    },
+    "gloves": {
+      "type": "boolean"
+    },
+    "belt": {
+      "type": "boolean"
+    },
+    "ring": {
+      "type": "boolean"
+    },
+    "amulet": {
+      "type": "boolean"
+    },
+    "add": {
+      "type": "boolean"
+    },
+    "multiply": {
+      "type": "boolean"
+    },
+    "divide": {
+      "type": "boolean"
+    }
+  }
+}

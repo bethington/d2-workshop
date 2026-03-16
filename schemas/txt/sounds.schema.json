@@ -1,0 +1,106 @@
+{
+  "file": "sounds.txt",
+  "description": "Auto-generated schema for sounds.txt",
+  "columns": {
+    "Handle": {
+      "type": "string",
+      "required": true
+    },
+    "Index": {
+      "type": "integer",
+      "min": 0,
+      "max": 3586
+    },
+    "FileName": {
+      "type": "string"
+    },
+    "Volume": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Group Size": {
+      "type": "integer",
+      "min": 0,
+      "max": 8
+    },
+    "Loop": {
+      "type": "boolean"
+    },
+    "Fade In": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "Fade Out": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "Defer Inst": {
+      "type": "boolean"
+    },
+    "Stop Inst": {
+      "type": "boolean"
+    },
+    "Duration": {
+      "type": "integer",
+      "min": 0,
+      "max": 150
+    },
+    "Compound": {
+      "type": "integer",
+      "min": -1,
+      "max": 24
+    },
+    "Reverb": {
+      "type": "boolean"
+    },
+    "Falloff": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "Cache": {
+      "type": "boolean"
+    },
+    "Async Only": {
+      "type": "boolean"
+    },
+    "Priority": {
+      "type": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "Stream": {
+      "type": "boolean"
+    },
+    "Stereo": {
+      "type": "boolean"
+    },
+    "Tracking": {
+      "type": "boolean"
+    },
+    "Solo": {
+      "type": "boolean"
+    },
+    "Music Vol": {
+      "type": "boolean"
+    },
+    "Block 1": {
+      "type": "integer",
+      "min": -1,
+      "max": 6381568
+    },
+    "Block 2": {
+      "type": "integer",
+      "min": -1,
+      "max": 7000000
+    },
+    "Block 3": {
+      "type": "integer",
+      "min": -1,
+      "max": -1
+    }
+  }
+}

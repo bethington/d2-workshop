@@ -1,0 +1,11 @@
+{
+  "file": "gateways.txt",
+  "description": "Auto-generated schema for gateways.txt",
+  "columns": {
+    "[Server List Version]": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "file": "lowqualityitems.txt",
+  "description": "Auto-generated schema for lowqualityitems.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Cracked",
+        "Crude",
+        "Damaged",
+        "Low Quality"
+      ],
+      "required": true,
+      "unique": true
+    }
+  }
+}

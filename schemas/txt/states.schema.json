@@ -1,0 +1,11 @@
+{
+  "file": "states.txt",
+  "description": "Auto-generated schema for states.txt",
+  "columns": {
+    "state": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

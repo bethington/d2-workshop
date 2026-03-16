@@ -1,0 +1,47 @@
+{
+  "file": "cubetype.txt",
+  "description": "Auto-generated schema for cubetype.txt",
+  "columns": {
+    "cube item class": {
+      "type": "enum",
+      "values": [
+        "Amulet",
+        "Armor",
+        "Axe",
+        "Belt",
+        "Dagger",
+        "Gem",
+        "Health Potion",
+        "Item",
+        "Mana Potion",
+        "None",
+        "Ring",
+        "Spear",
+        "Staff",
+        "Sword",
+        "Weapon"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "amu",
+        "arm",
+        "axe",
+        "blt",
+        "dag",
+        "gem",
+        "hpt",
+        "itm",
+        "mpt",
+        "rin",
+        "spr",
+        "stf",
+        "swr",
+        "wep"
+      ]
+    }
+  }
+}

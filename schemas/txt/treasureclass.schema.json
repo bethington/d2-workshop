@@ -1,0 +1,228 @@
+{
+  "file": "treasureclass.txt",
+  "description": "Auto-generated schema for treasureclass.txt",
+  "columns": {
+    "TreasureClass": {
+      "type": "ref",
+      "target": "treasureclass.txt",
+      "targetColumn": "TreasureClass",
+      "required": true
+    },
+    "Beta": {
+      "type": "boolean"
+    },
+    "NumCodes": {
+      "type": "integer",
+      "min": 0,
+      "max": 30
+    },
+    "Code1": {
+      "type": "string"
+    },
+    "Code2": {
+      "type": "string"
+    },
+    "Code3": {
+      "type": "string"
+    },
+    "Code4": {
+      "type": "string"
+    },
+    "Code5": {
+      "type": "string"
+    },
+    "Code6": {
+      "type": "string"
+    },
+    "Code7": {
+      "type": "string"
+    },
+    "Code8": {
+      "type": "string"
+    },
+    "Code9": {
+      "type": "string"
+    },
+    "Code10": {
+      "type": "string"
+    },
+    "Code11": {
+      "type": "string"
+    },
+    "Code12": {
+      "type": "string"
+    },
+    "Code13": {
+      "type": "string"
+    },
+    "Code14": {
+      "type": "string"
+    },
+    "Code15": {
+      "type": "string"
+    },
+    "Code16": {
+      "type": "string"
+    },
+    "Code17": {
+      "type": "string"
+    },
+    "Code18": {
+      "type": "string"
+    },
+    "Code19": {
+      "type": "string"
+    },
+    "Code20": {
+      "type": "string"
+    },
+    "Code21": {
+      "type": "string"
+    },
+    "Code22": {
+      "type": "string"
+    },
+    "Code23": {
+      "type": "enum",
+      "values": [
+        "brn",
+        "cbw",
+        "fld",
+        "glv",
+        "hal",
+        "hla",
+        "kri",
+        "lbw",
+        "mgl",
+        "mp3",
+        "pik",
+        "qui",
+        "sbb",
+        "scy",
+        "spt",
+        "tri",
+        "wax"
+      ]
+    },
+    "Code24": {
+      "type": "enum",
+      "values": [
+        "bar",
+        "bsw",
+        "btx",
+        "flb",
+        "hal",
+        "hbw",
+        "lbw",
+        "mau",
+        "mbt",
+        "mpi",
+        "mxb",
+        "pax",
+        "sbw",
+        "scy",
+        "skp",
+        "vou",
+        "wsc"
+      ]
+    },
+    "Code25": {
+      "type": "enum",
+      "values": [
+        "2ax",
+        "bsd",
+        "clb",
+        "fla",
+        "flb",
+        "gax",
+        "gcw",
+        "gfw",
+        "gsw",
+        "hla",
+        "lsd",
+        "mac",
+        "mbl",
+        "pax",
+        "spc"
+      ]
+    },
+    "Code26": {
+      "type": "enum",
+      "values": [
+        "bal",
+        "clm",
+        "flc",
+        "gcr",
+        "gfr",
+        "gsr",
+        "mp2",
+        "mpi",
+        "mst",
+        "scm",
+        "sml",
+        "ssd",
+        "tax",
+        "whm",
+        "wsd"
+      ]
+    },
+    "Code27": {
+      "type": "enum",
+      "values": [
+        "bar",
+        "brn",
+        "flc",
+        "gcg",
+        "gfg",
+        "gsg",
+        "hax",
+        "spr",
+        "spt",
+        "vgl",
+        "wax",
+        "whm"
+      ]
+    },
+    "Code28": {
+      "type": "enum",
+      "values": [
+        "2hs",
+        "bkf",
+        "gcb",
+        "gfb",
+        "gsb",
+        "jav",
+        "pik",
+        "ssp",
+        "tax",
+        "tkf"
+      ]
+    },
+    "Code29": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "dgr",
+        "gcy",
+        "gfy",
+        "gsy",
+        "lax",
+        "pil"
+      ]
+    },
+    "Code30": {
+      "type": "enum",
+      "values": [
+        "gcv",
+        "gfv",
+        "gld",
+        "gsv",
+        "pil",
+        "sbr"
+      ]
+    },
+    "Comment": {
+      "type": "string"
+    }
+  }
+}

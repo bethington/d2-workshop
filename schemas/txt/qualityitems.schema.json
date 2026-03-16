@@ -1,0 +1,156 @@
+{
+  "file": "qualityitems.txt",
+  "description": "Auto-generated schema for qualityitems.txt",
+  "columns": {
+    "nummods": {
+      "type": "integer",
+      "min": 1,
+      "max": 2,
+      "required": true
+    },
+    "mod1code": {
+      "type": "enum",
+      "values": [
+        "ar02",
+        "dm02",
+        "du01",
+        "ht00"
+      ]
+    },
+    "mod1offset": {
+      "type": "boolean"
+    },
+    "mod1min": {
+      "type": "integer",
+      "min": 1,
+      "max": 10
+    },
+    "mod1max": {
+      "type": "integer",
+      "min": 3,
+      "max": 15
+    },
+    "mod2code": {
+      "type": "enum",
+      "values": [
+        "dm02",
+        "du01"
+      ]
+    },
+    "mod2offset": {
+      "type": "boolean"
+    },
+    "mod2min": {
+      "type": "integer",
+      "min": 5,
+      "max": 10
+    },
+    "mod2max": {
+      "type": "integer",
+      "min": 15,
+      "max": 15
+    },
+    "ToHitMin": {
+      "type": "boolean"
+    },
+    "ToHitMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "Dam%Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "Dam%Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 15
+    },
+    "AC%Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "AC%Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 15
+    },
+    "Dur%Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "Dur%Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 15
+    },
+    "effect1": {
+      "type": "enum",
+      "values": [
+        "improved armor class",
+        "improved damage",
+        "improved durability",
+        "improved to hit"
+      ]
+    },
+    "effect2": {
+      "type": "enum",
+      "values": [
+        "improved damage",
+        "improved durability"
+      ]
+    },
+    "armor": {
+      "type": "boolean"
+    },
+    "weapon": {
+      "type": "boolean"
+    },
+    "shield": {
+      "type": "boolean"
+    },
+    "thrown": {
+      "type": "boolean"
+    },
+    "scepter": {
+      "type": "boolean"
+    },
+    "wand": {
+      "type": "boolean"
+    },
+    "staff": {
+      "type": "boolean"
+    },
+    "bow": {
+      "type": "boolean"
+    },
+    "boots": {
+      "type": "boolean"
+    },
+    "gloves": {
+      "type": "boolean"
+    },
+    "belt": {
+      "type": "boolean"
+    },
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "multiply": {
+      "type": "integer",
+      "min": 2,
+      "max": 5
+    },
+    "add": {
+      "type": "integer",
+      "min": 100,
+      "max": 350
+    }
+  }
+}

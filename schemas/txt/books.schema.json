@@ -1,0 +1,59 @@
+{
+  "file": "books.txt",
+  "description": "Auto-generated schema for books.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Namco": {
+      "type": "enum",
+      "values": [
+        "of Identify",
+        "of Ressurect",
+        "of Town Portal"
+      ]
+    },
+    "Completed": {
+      "type": "boolean"
+    },
+    "ScrollSpellCode": {
+      "type": "enum",
+      "values": [
+        "isc",
+        "tsc"
+      ]
+    },
+    "BookSpellCode": {
+      "type": "enum",
+      "values": [
+        "ibk",
+        "tbk"
+      ]
+    },
+    "SpellOffset": {
+      "type": "boolean"
+    },
+    "SpellIcon": {
+      "type": "integer",
+      "min": -1,
+      "max": 0
+    },
+    "SkillScrollOffset": {
+      "type": "boolean"
+    },
+    "SkillBookOffset": {
+      "type": "boolean"
+    },
+    "BaseCost": {
+      "type": "integer",
+      "min": 200,
+      "max": 500
+    },
+    "CostPerCharge": {
+      "type": "integer",
+      "min": 40,
+      "max": 100
+    }
+  }
+}

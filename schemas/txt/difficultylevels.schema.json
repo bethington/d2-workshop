@@ -1,0 +1,56 @@
+{
+  "file": "difficultylevels.txt",
+  "description": "Auto-generated schema for difficultylevels.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Hell",
+        "Nightmare",
+        "Normal"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "ResistPenalty": {
+      "type": "integer",
+      "min": -50,
+      "max": 0
+    },
+    "DeathExpPenalty": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "UberCodeOddsNormal": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "UberCodeOddsGood": {
+      "type": "integer",
+      "min": 0,
+      "max": 40
+    },
+    "MonsterSkillBonus": {
+      "type": "integer",
+      "min": 0,
+      "max": 7
+    },
+    "MonsterFreezeDivisor": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "MonsterColdDivisor": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "AiCurseDivisor": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    }
+  }
+}

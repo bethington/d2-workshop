@@ -1,0 +1,10 @@
+{
+  "file": "aiparms.txt",
+  "description": "Auto-generated schema for aiparms.txt",
+  "columns": {
+    "Description of Ai Parameters": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

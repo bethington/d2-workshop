@@ -1,0 +1,93 @@
+{
+  "file": "montype.txt",
+  "description": "Auto-generated schema for montype.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Token": {
+      "type": "string"
+    },
+    "DT_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 16
+    },
+    "NU_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 16
+    },
+    "WL_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "GH_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "A1_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 16
+    },
+    "A2_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "BL_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "SC_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "S1_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "S2_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "S3_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "S4_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "DD_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 16
+    },
+    "KB_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "SQ_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "RN_Dir": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    }
+  }
+}

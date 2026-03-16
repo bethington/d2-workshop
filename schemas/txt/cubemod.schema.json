@@ -1,0 +1,41 @@
+{
+  "file": "cubemod.txt",
+  "description": "Auto-generated schema for cubemod.txt",
+  "columns": {
+    "cube modifier type": {
+      "type": "enum",
+      "values": [
+        "None",
+        "amethyst",
+        "crafted",
+        "diamond",
+        "emerald",
+        "magic",
+        "rare",
+        "ruby",
+        "sapphire",
+        "skull",
+        "topaz",
+        "unique"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "ame",
+        "crf",
+        "dim",
+        "eme",
+        "mag",
+        "rar",
+        "rub",
+        "sap",
+        "sku",
+        "top",
+        "unq"
+      ]
+    }
+  }
+}

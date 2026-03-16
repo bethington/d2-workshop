@@ -1,0 +1,32 @@
+{
+  "file": "playerclass.txt",
+  "description": "Auto-generated schema for playerclass.txt",
+  "columns": {
+    "Player Class": {
+      "type": "enum",
+      "values": [
+        "Amazon",
+        "Assassin",
+        "Barbarian",
+        "Druid",
+        "Necromancer",
+        "Paladin",
+        "Sorceress"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "ama",
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "sor"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "file": "lvlmaze.txt",
+  "description": "Auto-generated schema for lvlmaze.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Level": {
+      "type": "string"
+    },
+    "Rooms": {
+      "type": "integer",
+      "min": 1,
+      "max": 61
+    },
+    "SizeX": {
+      "type": "integer",
+      "min": 8,
+      "max": 24
+    },
+    "SizeY": {
+      "type": "integer",
+      "min": 8,
+      "max": 24
+    },
+    "Merge": {
+      "type": "integer",
+      "min": 0,
+      "max": 1000
+    },
+    "Beta": {
+      "type": "boolean"
+    }
+  }
+}

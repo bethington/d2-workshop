@@ -1,0 +1,162 @@
+{
+  "file": "automagic.txt",
+  "description": "Auto-generated schema for automagic.txt",
+  "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "version": {
+      "type": "integer",
+      "min": 100,
+      "max": 100
+    },
+    "spawnable": {
+      "type": "boolean"
+    },
+    "rare": {
+      "type": "boolean"
+    },
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "max": 75
+    },
+    "maxlevel": {
+      "type": "string"
+    },
+    "levelreq": {
+      "type": "integer",
+      "min": 2,
+      "max": 67
+    },
+    "class": {
+      "type": "string"
+    },
+    "classlevelreq": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "integer",
+      "min": 1,
+      "max": 8
+    },
+    "group": {
+      "type": "integer",
+      "min": 300,
+      "max": 305
+    },
+    "mod1code": {
+      "type": "enum",
+      "values": [
+        "att",
+        "hp",
+        "mana",
+        "pois-min",
+        "res-all",
+        "skilltab"
+      ]
+    },
+    "mod1param": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "mod1min": {
+      "type": "integer",
+      "min": 1,
+      "max": 101
+    },
+    "mod1max": {
+      "type": "integer",
+      "min": 1,
+      "max": 121
+    },
+    "mod2code": {
+      "type": "enum",
+      "values": [
+        "dmg%",
+        "pois-max"
+      ]
+    },
+    "mod2param": {
+      "type": "string"
+    },
+    "mod2min": {
+      "type": "integer",
+      "min": 10,
+      "max": 128
+    },
+    "mod2max": {
+      "type": "integer",
+      "min": 20,
+      "max": 128
+    },
+    "mod3code": {
+      "type": "string"
+    },
+    "mod3param": {
+      "type": "string"
+    },
+    "mod3min": {
+      "type": "integer",
+      "min": 75,
+      "max": 100
+    },
+    "mod3max": {
+      "type": "integer",
+      "min": 75,
+      "max": 100
+    },
+    "transform": {
+      "type": "boolean"
+    },
+    "transformcolor": {
+      "type": "enum",
+      "values": [
+        "cblu",
+        "dgld"
+      ]
+    },
+    "itype1": {
+      "type": "string"
+    },
+    "itype2": {
+      "type": "string"
+    },
+    "itype3": {
+      "type": "string"
+    },
+    "itype4": {
+      "type": "string"
+    },
+    "itype5": {
+      "type": "string"
+    },
+    "itype6": {
+      "type": "string"
+    },
+    "itype7": {
+      "type": "string"
+    },
+    "etype1": {
+      "type": "string"
+    },
+    "etype2": {
+      "type": "string"
+    },
+    "etype3": {
+      "type": "string"
+    },
+    "divide": {
+      "type": "boolean"
+    },
+    "multiply": {
+      "type": "boolean"
+    },
+    "add": {
+      "type": "boolean"
+    }
+  }
+}

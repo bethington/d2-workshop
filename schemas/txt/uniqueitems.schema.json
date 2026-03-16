@@ -1,0 +1,213 @@
+{
+  "file": "uniqueitems.txt",
+  "description": "Auto-generated schema for uniqueitems.txt",
+  "columns": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "beta": {
+      "type": "boolean"
+    },
+    "code": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "transform": {
+      "type": "boolean"
+    },
+    "invtransform": {
+      "type": "boolean"
+    },
+    "transformcolor": {
+      "type": "integer",
+      "min": 0,
+      "max": 19
+    },
+    "NumMods": {
+      "type": "integer",
+      "min": 2,
+      "max": 10
+    },
+    "ItemMod1Code": {
+      "type": "string"
+    },
+    "ItemMod1Offset": {
+      "type": "boolean"
+    },
+    "ItemMod1Min": {
+      "type": "integer",
+      "min": -50,
+      "max": 200
+    },
+    "ItemMod1Max": {
+      "type": "integer",
+      "min": -50,
+      "max": 200
+    },
+    "ItemMod2Code": {
+      "type": "string"
+    },
+    "ItemMod2Offset": {
+      "type": "boolean"
+    },
+    "ItemMod2Min": {
+      "type": "integer",
+      "min": 1,
+      "max": 128
+    },
+    "ItemMod2Max": {
+      "type": "integer",
+      "min": 1,
+      "max": 128
+    },
+    "ItemMod3Code": {
+      "type": "string"
+    },
+    "ItemMod3Offset": {
+      "type": "boolean"
+    },
+    "ItemMod3Min": {
+      "type": "integer",
+      "min": -10,
+      "max": 75
+    },
+    "ItemMod3Max": {
+      "type": "integer",
+      "min": -10,
+      "max": 75
+    },
+    "ItemMod4Code": {
+      "type": "string"
+    },
+    "ItemMod4Offset": {
+      "type": "boolean"
+    },
+    "ItemMod4Min": {
+      "type": "integer",
+      "min": -20,
+      "max": 100
+    },
+    "ItemMod4Max": {
+      "type": "integer",
+      "min": -20,
+      "max": 100
+    },
+    "ItemMod5Code": {
+      "type": "string"
+    },
+    "ItemMod5Offset": {
+      "type": "boolean"
+    },
+    "ItemMod5Min": {
+      "type": "integer",
+      "min": -5,
+      "max": 150
+    },
+    "ItemMod5Max": {
+      "type": "integer",
+      "min": -5,
+      "max": 150
+    },
+    "ItemMod6Code": {
+      "type": "enum",
+      "values": [
+        "dc01",
+        "dc03",
+        "df00",
+        "df01",
+        "dl01",
+        "dp02",
+        "dx00",
+        "hl12",
+        "ht00",
+        "lf00",
+        "lt00",
+        "mh03",
+        "mm00",
+        "mm03",
+        "rf00",
+        "rl00"
+      ]
+    },
+    "ItemMod6Offset": {
+      "type": "boolean"
+    },
+    "ItemMod6Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "ItemMod6Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 125
+    },
+    "ItemMod7Code": {
+      "type": "enum",
+      "values": [
+        "dc03",
+        "df01",
+        "dp02",
+        "lf00",
+        "rf00",
+        "rp00"
+      ]
+    },
+    "ItemMod7Offset": {
+      "type": "boolean"
+    },
+    "ItemMod7Min": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "ItemMod7Max": {
+      "type": "integer",
+      "min": 0,
+      "max": 300
+    },
+    "ItemMod8Code": {
+      "type": "string"
+    },
+    "ItemMod8Offset": {
+      "type": "boolean"
+    },
+    "ItemMod8Min": {
+      "type": "boolean"
+    },
+    "ItemMod8Max": {
+      "type": "boolean"
+    },
+    "ItemMod9Code": {
+      "type": "string"
+    },
+    "ItemMod9Offset": {
+      "type": "boolean"
+    },
+    "ItemMod9Min": {
+      "type": "boolean"
+    },
+    "ItemMod9Max": {
+      "type": "boolean"
+    },
+    "ItemMod10Code": {
+      "type": "string"
+    },
+    "ItemMod10Offset": {
+      "type": "boolean"
+    },
+    "ItemMod10Min": {
+      "type": "boolean"
+    },
+    "ItemMod10Max": {
+      "type": "boolean"
+    }
+  }
+}

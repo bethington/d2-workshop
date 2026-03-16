@@ -1,0 +1,355 @@
+{
+  "file": "belts.txt",
+  "description": "Auto-generated schema for belts.txt",
+  "columns": {
+    "name": {
+      "type": "enum",
+      "values": [
+        "belt",
+        "default",
+        "girdle",
+        "heavy belt",
+        "light belt",
+        "sash",
+        "uber belt"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "numboxes": {
+      "type": "integer",
+      "min": 4,
+      "max": 16
+    },
+    "boxwidth": {
+      "type": "integer",
+      "min": 29,
+      "max": 29
+    },
+    "boxheight": {
+      "type": "integer",
+      "min": 29,
+      "max": 29
+    },
+    "box1left": {
+      "type": "integer",
+      "min": 343,
+      "max": 343
+    },
+    "box1right": {
+      "type": "integer",
+      "min": 372,
+      "max": 372
+    },
+    "box1top": {
+      "type": "integer",
+      "min": 442,
+      "max": 442
+    },
+    "box1bottom": {
+      "type": "integer",
+      "min": 471,
+      "max": 471
+    },
+    "box2left": {
+      "type": "integer",
+      "min": 374,
+      "max": 374
+    },
+    "box2right": {
+      "type": "integer",
+      "min": 403,
+      "max": 403
+    },
+    "box2top": {
+      "type": "integer",
+      "min": 442,
+      "max": 442
+    },
+    "box2bottom": {
+      "type": "integer",
+      "min": 471,
+      "max": 471
+    },
+    "box3left": {
+      "type": "integer",
+      "min": 405,
+      "max": 405
+    },
+    "box3right": {
+      "type": "integer",
+      "min": 434,
+      "max": 434
+    },
+    "box3top": {
+      "type": "integer",
+      "min": 442,
+      "max": 442
+    },
+    "box3bottom": {
+      "type": "integer",
+      "min": 471,
+      "max": 471
+    },
+    "box4left": {
+      "type": "integer",
+      "min": 436,
+      "max": 436
+    },
+    "box4right": {
+      "type": "integer",
+      "min": 465,
+      "max": 465
+    },
+    "box4top": {
+      "type": "integer",
+      "min": 442,
+      "max": 442
+    },
+    "box4bottom": {
+      "type": "integer",
+      "min": 471,
+      "max": 471
+    },
+    "box5left": {
+      "type": "integer",
+      "min": 343,
+      "max": 343
+    },
+    "box5right": {
+      "type": "integer",
+      "min": 372,
+      "max": 372
+    },
+    "box5top": {
+      "type": "integer",
+      "min": 410,
+      "max": 410
+    },
+    "box5bottom": {
+      "type": "integer",
+      "min": 439,
+      "max": 439
+    },
+    "box6left": {
+      "type": "integer",
+      "min": 374,
+      "max": 374
+    },
+    "box6right": {
+      "type": "integer",
+      "min": 403,
+      "max": 403
+    },
+    "box6top": {
+      "type": "integer",
+      "min": 410,
+      "max": 410
+    },
+    "box6bottom": {
+      "type": "integer",
+      "min": 439,
+      "max": 439
+    },
+    "box7left": {
+      "type": "integer",
+      "min": 405,
+      "max": 405
+    },
+    "box7right": {
+      "type": "integer",
+      "min": 434,
+      "max": 434
+    },
+    "box7top": {
+      "type": "integer",
+      "min": 410,
+      "max": 410
+    },
+    "box7bottom": {
+      "type": "integer",
+      "min": 439,
+      "max": 439
+    },
+    "box8left": {
+      "type": "integer",
+      "min": 436,
+      "max": 436
+    },
+    "box8right": {
+      "type": "integer",
+      "min": 465,
+      "max": 465
+    },
+    "box8top": {
+      "type": "integer",
+      "min": 410,
+      "max": 410
+    },
+    "box8bottom": {
+      "type": "integer",
+      "min": 439,
+      "max": 439
+    },
+    "box9left": {
+      "type": "integer",
+      "min": 343,
+      "max": 343
+    },
+    "box9right": {
+      "type": "integer",
+      "min": 372,
+      "max": 372
+    },
+    "box9top": {
+      "type": "integer",
+      "min": 378,
+      "max": 378
+    },
+    "box9bottom": {
+      "type": "integer",
+      "min": 407,
+      "max": 407
+    },
+    "box10left": {
+      "type": "integer",
+      "min": 374,
+      "max": 374
+    },
+    "box10right": {
+      "type": "integer",
+      "min": 403,
+      "max": 403
+    },
+    "box10top": {
+      "type": "integer",
+      "min": 378,
+      "max": 378
+    },
+    "box10bottom": {
+      "type": "integer",
+      "min": 407,
+      "max": 407
+    },
+    "box11left": {
+      "type": "integer",
+      "min": 405,
+      "max": 405
+    },
+    "box11right": {
+      "type": "integer",
+      "min": 434,
+      "max": 434
+    },
+    "box11top": {
+      "type": "integer",
+      "min": 378,
+      "max": 378
+    },
+    "box11bottom": {
+      "type": "integer",
+      "min": 407,
+      "max": 407
+    },
+    "box12left": {
+      "type": "integer",
+      "min": 436,
+      "max": 436
+    },
+    "box12right": {
+      "type": "integer",
+      "min": 465,
+      "max": 465
+    },
+    "box12top": {
+      "type": "integer",
+      "min": 378,
+      "max": 378
+    },
+    "box12bottom": {
+      "type": "integer",
+      "min": 407,
+      "max": 407
+    },
+    "box13left": {
+      "type": "integer",
+      "min": 343,
+      "max": 343
+    },
+    "box13right": {
+      "type": "integer",
+      "min": 372,
+      "max": 372
+    },
+    "box13top": {
+      "type": "integer",
+      "min": 346,
+      "max": 346
+    },
+    "box13bottom": {
+      "type": "integer",
+      "min": 375,
+      "max": 375
+    },
+    "box14left": {
+      "type": "integer",
+      "min": 374,
+      "max": 374
+    },
+    "box14right": {
+      "type": "integer",
+      "min": 403,
+      "max": 403
+    },
+    "box14top": {
+      "type": "integer",
+      "min": 346,
+      "max": 346
+    },
+    "box14bottom": {
+      "type": "integer",
+      "min": 375,
+      "max": 375
+    },
+    "box15left": {
+      "type": "integer",
+      "min": 405,
+      "max": 405
+    },
+    "box15right": {
+      "type": "integer",
+      "min": 434,
+      "max": 434
+    },
+    "box15top": {
+      "type": "integer",
+      "min": 346,
+      "max": 346
+    },
+    "box15bottom": {
+      "type": "integer",
+      "min": 375,
+      "max": 375
+    },
+    "box16left": {
+      "type": "integer",
+      "min": 436,
+      "max": 436
+    },
+    "box16right": {
+      "type": "integer",
+      "min": 465,
+      "max": 465
+    },
+    "box16top": {
+      "type": "integer",
+      "min": 346,
+      "max": 346
+    },
+    "box16bottom": {
+      "type": "integer",
+      "min": 375,
+      "max": 375
+    }
+  }
+}

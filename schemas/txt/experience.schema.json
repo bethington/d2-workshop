@@ -1,0 +1,36 @@
+{
+  "file": "experience.txt",
+  "description": "Auto-generated schema for experience.txt",
+  "columns": {
+    "Level": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Amazon": {
+      "type": "integer",
+      "min": 0,
+      "max": 3837739017
+    },
+    "Sorceress": {
+      "type": "integer",
+      "min": 0,
+      "max": 3837739017
+    },
+    "Necromancer": {
+      "type": "integer",
+      "min": 0,
+      "max": 3837739017
+    },
+    "Paladin": {
+      "type": "integer",
+      "min": 0,
+      "max": 3837739017
+    },
+    "Barbarian": {
+      "type": "integer",
+      "min": 0,
+      "max": 3837739017
+    }
+  }
+}

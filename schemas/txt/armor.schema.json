@@ -1,0 +1,541 @@
+{
+  "file": "armor.txt",
+  "description": "Auto-generated schema for armor.txt",
+  "columns": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "rarity": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "spawnable": {
+      "type": "boolean"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "uniqueonly": {
+      "type": "boolean"
+    },
+    "minac": {
+      "type": "integer",
+      "min": 2,
+      "max": 417
+    },
+    "maxac": {
+      "type": "integer",
+      "min": 2,
+      "max": 450
+    },
+    "absorbs": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "speed": {
+      "type": "integer",
+      "min": 0,
+      "max": 10
+    },
+    "reqstr": {
+      "type": "integer",
+      "min": 0,
+      "max": 170
+    },
+    "block": {
+      "type": "integer",
+      "min": 0,
+      "max": 24
+    },
+    "durability": {
+      "type": "integer",
+      "min": 12,
+      "max": 70
+    },
+    "nodurability": {
+      "type": "boolean"
+    },
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "max": 55
+    },
+    "cost": {
+      "type": "integer",
+      "min": 64,
+      "max": 193926
+    },
+    "code": {
+      "type": "string"
+    },
+    "alternategfx": {
+      "type": "string"
+    },
+    "OpenBetaGfx": {
+      "type": "string"
+    },
+    "ubercode": {
+      "type": "string"
+    },
+    "spelloffset": {
+      "type": "boolean"
+    },
+    "component": {
+      "type": "integer",
+      "min": 0,
+      "max": 16
+    },
+    "bodyLoc1": {
+      "type": "integer",
+      "min": 1,
+      "max": 10
+    },
+    "bodyLoc2": {
+      "type": "integer",
+      "min": 1,
+      "max": 10
+    },
+    "invwidth": {
+      "type": "integer",
+      "min": 2,
+      "max": 2
+    },
+    "invheight": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "hasinv": {
+      "type": "boolean"
+    },
+    "gemsockets": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "flippyfile": {
+      "type": "string"
+    },
+    "invfile": {
+      "type": "string"
+    },
+    "uniqueinvfile": {
+      "type": "enum",
+      "values": [
+        "invaaru",
+        "invbhmu",
+        "invbshu",
+        "invbucu",
+        "invcapu",
+        "invfhlu",
+        "invfulu",
+        "invgtsu",
+        "invhlmu",
+        "invkitu",
+        "invlrgu",
+        "invsmlu",
+        "invspku",
+        "invtowu"
+      ]
+    },
+    "rArm": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "lArm": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Torso": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "Legs": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "rSPad": {
+      "type": "integer",
+      "min": 1,
+      "max": 2
+    },
+    "lSPad": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "useable": {
+      "type": "boolean"
+    },
+    "throwable": {
+      "type": "boolean"
+    },
+    "stackable": {
+      "type": "boolean"
+    },
+    "minstack": {
+      "type": "boolean"
+    },
+    "maxstack": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "integer",
+      "min": 2,
+      "max": 37
+    },
+    "sound": {
+      "type": "integer",
+      "min": 2,
+      "max": 36
+    },
+    "unique": {
+      "type": "boolean"
+    },
+    "transparent": {
+      "type": "boolean"
+    },
+    "transtbl": {
+      "type": "integer",
+      "min": 5,
+      "max": 5
+    },
+    "quivered": {
+      "type": "boolean"
+    },
+    "lightradius": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "belt": {
+      "type": "boolean"
+    },
+    "quest": {
+      "type": "boolean"
+    },
+    "missiletype": {
+      "type": "boolean"
+    },
+    "durwarning": {
+      "type": "integer",
+      "min": 1,
+      "max": 6
+    },
+    "qntwarning": {
+      "type": "boolean"
+    },
+    "mindam": {
+      "type": "boolean"
+    },
+    "maxdam": {
+      "type": "boolean"
+    },
+    "gemoffset": {
+      "type": "boolean"
+    },
+    "bitfield1": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "CharsiMin": {
+      "type": "boolean"
+    },
+    "CharsiMax": {
+      "type": "boolean"
+    },
+    "CharsiMagicMin": {
+      "type": "boolean"
+    },
+    "CharsiMagicMax": {
+      "type": "boolean"
+    },
+    "CharsiMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "GheedMin": {
+      "type": "boolean"
+    },
+    "GheedMax": {
+      "type": "boolean"
+    },
+    "GheedMagicMin": {
+      "type": "boolean"
+    },
+    "GheedMagicMax": {
+      "type": "boolean"
+    },
+    "GheedMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "AkaraMin": {
+      "type": "boolean"
+    },
+    "AkaraMax": {
+      "type": "boolean"
+    },
+    "AkaraMagicMin": {
+      "type": "boolean"
+    },
+    "AkaraMagicMax": {
+      "type": "boolean"
+    },
+    "AkaraMagicLvl": {
+      "type": "integer",
+      "min": 255,
+      "max": 255
+    },
+    "FaraMin": {
+      "type": "boolean"
+    },
+    "FaraMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "FaraMagicMin": {
+      "type": "boolean"
+    },
+    "FaraMagicMax": {
+      "type": "boolean"
+    },
+    "FaraMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "LysanderMin": {
+      "type": "boolean"
+    },
+    "LysanderMax": {
+      "type": "boolean"
+    },
+    "LysanderMagicMin": {
+      "type": "boolean"
+    },
+    "LysanderMagicMax": {
+      "type": "boolean"
+    },
+    "LysanderMagicLvl": {
+      "type": "integer",
+      "min": 255,
+      "max": 255
+    },
+    "DrognanMin": {
+      "type": "boolean"
+    },
+    "DrognanMax": {
+      "type": "boolean"
+    },
+    "DrognanMagicMin": {
+      "type": "boolean"
+    },
+    "DrognanMagicMax": {
+      "type": "boolean"
+    },
+    "DrognanMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "HraltiMin": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "HraltiMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "HraltiMagicMin": {
+      "type": "boolean"
+    },
+    "HraltiMagicMax": {
+      "type": "boolean"
+    },
+    "HratliMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "AlkorMin": {
+      "type": "boolean"
+    },
+    "AlkorMax": {
+      "type": "boolean"
+    },
+    "AlkorMagicMin": {
+      "type": "boolean"
+    },
+    "AlkorMagicMax": {
+      "type": "boolean"
+    },
+    "AlkorMagicLvl": {
+      "type": "integer",
+      "min": 255,
+      "max": 255
+    },
+    "OrmusMin": {
+      "type": "boolean"
+    },
+    "OrmusMax": {
+      "type": "boolean"
+    },
+    "OrmusMagicMin": {
+      "type": "boolean"
+    },
+    "OrmusMagicMax": {
+      "type": "boolean"
+    },
+    "OrmusMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "ElzixMin": {
+      "type": "boolean"
+    },
+    "ElzixMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "ElzixMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "ElzixMagicMin": {
+      "type": "boolean"
+    },
+    "ElzixMagicMax": {
+      "type": "boolean"
+    },
+    "AshearaMin": {
+      "type": "boolean"
+    },
+    "AshearaMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "AshearaMagicMin": {
+      "type": "boolean"
+    },
+    "AshearaMagicMax": {
+      "type": "boolean"
+    },
+    "AshearaMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "CainMin": {
+      "type": "boolean"
+    },
+    "CainMax": {
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "CainMagicMin": {
+      "type": "boolean"
+    },
+    "CainMagicMax": {
+      "type": "boolean"
+    },
+    "CainMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "HalbuMin": {
+      "type": "boolean"
+    },
+    "HalbuMax": {
+      "type": "boolean"
+    },
+    "HalbuMagicMin": {
+      "type": "boolean"
+    },
+    "HalbuMagicMax": {
+      "type": "boolean"
+    },
+    "HalbuMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "JamellaMin": {
+      "type": "boolean"
+    },
+    "JamellaMax": {
+      "type": "boolean"
+    },
+    "JamellaMagicMin": {
+      "type": "boolean"
+    },
+    "JamellaMagicMax": {
+      "type": "boolean"
+    },
+    "JamellaMagicLvl": {
+      "type": "integer",
+      "min": 1,
+      "max": 255
+    },
+    "Source Art": {
+      "type": "string"
+    },
+    "Game Art": {
+      "type": "string"
+    },
+    "Amazon": {
+      "type": "boolean"
+    },
+    "Paladin": {
+      "type": "boolean"
+    },
+    "Barbarian": {
+      "type": "boolean"
+    },
+    "Necromancer": {
+      "type": "boolean"
+    },
+    "Sorceress": {
+      "type": "boolean"
+    },
+    "Transform": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "InvTrans": {
+      "type": "integer",
+      "min": 2,
+      "max": 8
+    },
+    "SkipName": {
+      "type": "boolean"
+    },
+    "NightmareUpgrade": {
+      "type": "boolean"
+    },
+    "HellUpgrade": {
+      "type": "boolean"
+    }
+  }
+}

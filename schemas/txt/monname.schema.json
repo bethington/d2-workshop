@@ -1,0 +1,13 @@
+{
+  "file": "monname.txt",
+  "description": "Auto-generated schema for monname.txt",
+  "columns": {
+    "MonName": {
+      "type": "ref",
+      "target": "monname.txt",
+      "targetColumn": "MonName",
+      "required": true,
+      "unique": true
+    }
+  }
+}

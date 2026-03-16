@@ -1,0 +1,385 @@
+{
+  "file": "inventory.txt",
+  "description": "Auto-generated schema for inventory.txt",
+  "columns": {
+    "class": {
+      "type": "enum",
+      "values": [
+        "Amazon",
+        "Bank Page 1",
+        "Barbarian",
+        "Guild Vault Page 1",
+        "Monster",
+        "Necromancer",
+        "Paladin",
+        "Sorceress",
+        "Trade Page 1",
+        "Trade Page 2",
+        "Transmogrify Box Page 1",
+        "Trophy Case Page 1"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "invLeft": {
+      "type": "integer",
+      "min": 0,
+      "max": 320
+    },
+    "invRight": {
+      "type": "integer",
+      "min": 321,
+      "max": 640
+    },
+    "invTop": {
+      "type": "integer",
+      "min": 0,
+      "max": 220
+    },
+    "invBottom": {
+      "type": "integer",
+      "min": 219,
+      "max": 442
+    },
+    "gridRows": {
+      "type": "integer",
+      "min": 3,
+      "max": 10
+    },
+    "gridCols": {
+      "type": "integer",
+      "min": 4,
+      "max": 10
+    },
+    "gridLeft": {
+      "type": "integer",
+      "min": 16,
+      "max": 339
+    },
+    "gridRight": {
+      "type": "integer",
+      "min": 205,
+      "max": 626
+    },
+    "gridTop": {
+      "type": "integer",
+      "min": 41,
+      "max": 273
+    },
+    "gridBottom": {
+      "type": "integer",
+      "min": 148,
+      "max": 386
+    },
+    "gridBoxWidth": {
+      "type": "integer",
+      "min": 29,
+      "max": 29
+    },
+    "gridBoxHeight": {
+      "type": "integer",
+      "min": 29,
+      "max": 29
+    },
+    "rArmLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 340
+    },
+    "rArmRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 395
+    },
+    "rArmTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 47
+    },
+    "rArmBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 159
+    },
+    "rArmWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 55
+    },
+    "rArmHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 112
+    },
+    "torsoLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 453
+    },
+    "torsoRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 509
+    },
+    "torsoTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 77
+    },
+    "torsoBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 159
+    },
+    "torsoWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 56
+    },
+    "torsoHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 82
+    },
+    "lArmLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 571
+    },
+    "lArmRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 626
+    },
+    "lArmTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 47
+    },
+    "lArmBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 159
+    },
+    "lArmWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 55
+    },
+    "lArmHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 112
+    },
+    "headLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 455
+    },
+    "headRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 509
+    },
+    "headTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 8
+    },
+    "headBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 59
+    },
+    "headWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 54
+    },
+    "headHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 51
+    },
+    "neckLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 529
+    },
+    "neckRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 552
+    },
+    "neckTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 35
+    },
+    "neckBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 59
+    },
+    "neckWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 23
+    },
+    "neckHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 24
+    },
+    "rHandLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 415
+    },
+    "rHandRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 438
+    },
+    "rHandTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 180
+    },
+    "rHandBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 204
+    },
+    "rHandWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 23
+    },
+    "rHandHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 24
+    },
+    "lHandLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 529
+    },
+    "lHandRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 552
+    },
+    "lHandTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 180
+    },
+    "lHandBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 204
+    },
+    "lHandWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 23
+    },
+    "lHandHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 24
+    },
+    "beltLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 456
+    },
+    "beltRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 508
+    },
+    "beltTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 179
+    },
+    "beltBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 204
+    },
+    "beltWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 52
+    },
+    "beltHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 25
+    },
+    "feetLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 572
+    },
+    "feetRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 626
+    },
+    "feetTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 182
+    },
+    "feetBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 234
+    },
+    "feetWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 54
+    },
+    "feetHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 52
+    },
+    "glovesLeft": {
+      "type": "integer",
+      "min": -1,
+      "max": 341
+    },
+    "glovesRight": {
+      "type": "integer",
+      "min": -1,
+      "max": 395
+    },
+    "glovesTop": {
+      "type": "integer",
+      "min": -1,
+      "max": 181
+    },
+    "glovesBottom": {
+      "type": "integer",
+      "min": -1,
+      "max": 234
+    },
+    "glovesWidth": {
+      "type": "integer",
+      "min": -1,
+      "max": 54
+    },
+    "glovesHeight": {
+      "type": "integer",
+      "min": -1,
+      "max": 53
+    }
+  }
+}

@@ -1,0 +1,726 @@
+{
+  "file": "cubemain.txt",
+  "description": "Auto-generated schema for cubemain.txt",
+  "columns": {
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "numinputs": {
+      "type": "integer",
+      "min": 2,
+      "max": 7
+    },
+    "min difficulty": {
+      "type": "boolean"
+    },
+    "expansion": {
+      "type": "boolean"
+    },
+    "start day": {
+      "type": "integer",
+      "min": 0,
+      "max": 23
+    },
+    "stop day": {
+      "type": "integer",
+      "min": 0,
+      "max": 31
+    },
+    "day of week": {
+      "type": "boolean"
+    },
+    "playerclass": {
+      "type": "enum",
+      "values": [
+        "ama",
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "sor"
+      ]
+    },
+    "require a": {
+      "type": "enum",
+      "values": [
+        "axe",
+        "gem",
+        "hpt",
+        "itm",
+        "spr",
+        "swr",
+        "wep"
+      ]
+    },
+    "code a": {
+      "type": "string"
+    },
+    "number of a": {
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "modifier a": {
+      "type": "enum",
+      "values": [
+        "ame",
+        "dim",
+        "eme",
+        "mag",
+        "rar",
+        "rub",
+        "sap",
+        "sku",
+        "top"
+      ]
+    },
+    "param1 a": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "param2 a": {
+      "type": "boolean"
+    },
+    "sockets a": {
+      "type": "boolean"
+    },
+    "gem 1 a": {
+      "type": "string"
+    },
+    "gem 2 a": {
+      "type": "string"
+    },
+    "gem 3 a": {
+      "type": "string"
+    },
+    "gem 4 a": {
+      "type": "string"
+    },
+    "gem 5 a": {
+      "type": "string"
+    },
+    "gem 6 a": {
+      "type": "string"
+    },
+    "require b": {
+      "type": "enum",
+      "values": [
+        "dag",
+        "gem",
+        "hpt",
+        "itm",
+        "mpt"
+      ]
+    },
+    "code b": {
+      "type": "enum",
+      "values": [
+        "aqv",
+        "gpv",
+        "jew",
+        "kri",
+        "qhr",
+        "r01",
+        "r03",
+        "r04",
+        "r05",
+        "r06",
+        "r07",
+        "spc",
+        "tbk",
+        "vip"
+      ]
+    },
+    "number of b": {
+      "type": "integer",
+      "min": 0,
+      "max": 6
+    },
+    "modifier b": {
+      "type": "enum",
+      "values": [
+        "eme",
+        "rub",
+        "sap",
+        "sku",
+        "top"
+      ]
+    },
+    "param1 b": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "param2 b": {
+      "type": "boolean"
+    },
+    "sockets b": {
+      "type": "boolean"
+    },
+    "gem 1 b": {
+      "type": "string"
+    },
+    "gem 2 b": {
+      "type": "string"
+    },
+    "gem 3 b": {
+      "type": "string"
+    },
+    "gem 4 b": {
+      "type": "string"
+    },
+    "gem 5 b": {
+      "type": "string"
+    },
+    "gem 6 b": {
+      "type": "string"
+    },
+    "require c": {
+      "type": "enum",
+      "values": [
+        "gem",
+        "hpt",
+        "itm",
+        "stf"
+      ]
+    },
+    "code c": {
+      "type": "string"
+    },
+    "number of c": {
+      "type": "integer",
+      "min": 0,
+      "max": 4
+    },
+    "modifier c": {
+      "type": "enum",
+      "values": [
+        "sku",
+        "unq"
+      ]
+    },
+    "param1 c": {
+      "type": "boolean"
+    },
+    "param2 c": {
+      "type": "integer",
+      "min": 0,
+      "max": 122
+    },
+    "sockets c": {
+      "type": "boolean"
+    },
+    "gem 1 c": {
+      "type": "string"
+    },
+    "gem 2 c": {
+      "type": "string"
+    },
+    "gem 3 c": {
+      "type": "string"
+    },
+    "gem 4 c": {
+      "type": "string"
+    },
+    "gem 5 c": {
+      "type": "string"
+    },
+    "gem 6 c": {
+      "type": "string"
+    },
+    "require d": {
+      "type": "enum",
+      "values": [
+        "blt",
+        "gem",
+        "itm"
+      ]
+    },
+    "code d": {
+      "type": "enum",
+      "values": [
+        "gpb",
+        "qbr",
+        "r08",
+        "r09",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r14",
+        "r15",
+        "r16",
+        "r17"
+      ]
+    },
+    "number of d": {
+      "type": "boolean"
+    },
+    "modifier d": {
+      "type": "enum",
+      "values": [
+        "ame",
+        "eme",
+        "rub",
+        "sap",
+        "sku"
+      ]
+    },
+    "param1 d": {
+      "type": "boolean"
+    },
+    "param2 d": {
+      "type": "boolean"
+    },
+    "sockets d": {
+      "type": "boolean"
+    },
+    "gem 1 d": {
+      "type": "string"
+    },
+    "gem 2 d": {
+      "type": "string"
+    },
+    "gem 3 d": {
+      "type": "string"
+    },
+    "gem 4 d": {
+      "type": "string"
+    },
+    "gem 5 d": {
+      "type": "string"
+    },
+    "gem 6 d": {
+      "type": "string"
+    },
+    "require e": {
+      "type": "string"
+    },
+    "code e": {
+      "type": "enum",
+      "values": [
+        "gpy",
+        "r16",
+        "r17",
+        "r18",
+        "r19",
+        "r20",
+        "r21",
+        "r22"
+      ]
+    },
+    "number of e": {
+      "type": "boolean"
+    },
+    "modifier e": {
+      "type": "string"
+    },
+    "param1 e": {
+      "type": "boolean"
+    },
+    "param2 e": {
+      "type": "boolean"
+    },
+    "sockets e": {
+      "type": "boolean"
+    },
+    "gem 1 e": {
+      "type": "string"
+    },
+    "gem 2 e": {
+      "type": "string"
+    },
+    "gem 3 e": {
+      "type": "string"
+    },
+    "gem 4 e": {
+      "type": "string"
+    },
+    "gem 5 e": {
+      "type": "string"
+    },
+    "gem 6 e": {
+      "type": "string"
+    },
+    "require f": {
+      "type": "string"
+    },
+    "code f": {
+      "type": "string"
+    },
+    "number of f": {
+      "type": "boolean"
+    },
+    "modifier f": {
+      "type": "string"
+    },
+    "param1 f": {
+      "type": "boolean"
+    },
+    "param2 f": {
+      "type": "boolean"
+    },
+    "sockets f": {
+      "type": "boolean"
+    },
+    "gem 1 f": {
+      "type": "string"
+    },
+    "gem 2 f": {
+      "type": "string"
+    },
+    "gem 3 f": {
+      "type": "string"
+    },
+    "gem 4 f": {
+      "type": "string"
+    },
+    "gem 5 f": {
+      "type": "string"
+    },
+    "gem 6 f": {
+      "type": "string"
+    },
+    "require g": {
+      "type": "string"
+    },
+    "code g": {
+      "type": "string"
+    },
+    "number of g": {
+      "type": "boolean"
+    },
+    "modifier g": {
+      "type": "string"
+    },
+    "param1 g": {
+      "type": "boolean"
+    },
+    "param 2 g": {
+      "type": "boolean"
+    },
+    "gem 1 g": {
+      "type": "string"
+    },
+    "gem 2 g": {
+      "type": "string"
+    },
+    "gem 3 g": {
+      "type": "string"
+    },
+    "gem 4 g": {
+      "type": "string"
+    },
+    "gem 5 g": {
+      "type": "string"
+    },
+    "gem 6 g": {
+      "type": "string"
+    },
+    "function": {
+      "type": "boolean"
+    },
+    "product a": {
+      "type": "boolean"
+    },
+    "product code a": {
+      "type": "string"
+    },
+    "mods a": {
+      "type": "boolean"
+    },
+    "uses a": {
+      "type": "boolean"
+    },
+    "fixedlevel a": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "playerlevel pct a": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "itemlevel pct a": {
+      "type": "integer",
+      "min": 0,
+      "max": 75
+    },
+    "pmod1a": {
+      "type": "enum",
+      "values": [
+        "crf",
+        "mag",
+        "rar"
+      ]
+    },
+    "pmod2a": {
+      "type": "string"
+    },
+    "psocketsa": {
+      "type": "integer",
+      "min": 0,
+      "max": 3
+    },
+    "mod1a": {
+      "type": "string"
+    },
+    "mod1achance": {
+      "type": "integer",
+      "min": 75,
+      "max": 75
+    },
+    "mod1aparam": {
+      "type": "integer",
+      "min": 0,
+      "max": 44
+    },
+    "mod1amin": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "mod1amax": {
+      "type": "integer",
+      "min": 0,
+      "max": 250
+    },
+    "mod2a": {
+      "type": "enum",
+      "values": [
+        "ac",
+        "ama",
+        "ass",
+        "bar",
+        "deadly",
+        "dmg%",
+        "dru",
+        "hp",
+        "mana",
+        "nec",
+        "pal",
+        "pois-len",
+        "red-mag",
+        "res-cold",
+        "sor",
+        "thorns"
+      ]
+    },
+    "mod2achance": {
+      "type": "integer",
+      "min": 10,
+      "max": 33
+    },
+    "mod2aparam": {
+      "type": "boolean"
+    },
+    "mod2amin": {
+      "type": "integer",
+      "min": 1,
+      "max": 120
+    },
+    "mod2amax": {
+      "type": "integer",
+      "min": 1,
+      "max": 120
+    },
+    "mod3a": {
+      "type": "string"
+    },
+    "mod3achance": {
+      "type": "integer",
+      "min": 33,
+      "max": 40
+    },
+    "mod3aparam": {
+      "type": "boolean"
+    },
+    "mod3amin": {
+      "type": "integer",
+      "min": -5,
+      "max": 50
+    },
+    "mod3amax": {
+      "type": "integer",
+      "min": -50,
+      "max": 200
+    },
+    "mod4a": {
+      "type": "enum",
+      "values": [
+        "ac%",
+        "ama",
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "res-pois",
+        "sor",
+        "swing1"
+      ]
+    },
+    "mod4achance": {
+      "type": "integer",
+      "min": 33,
+      "max": 33
+    },
+    "mod4aparam": {
+      "type": "boolean"
+    },
+    "mod4amin": {
+      "type": "integer",
+      "min": 0,
+      "max": 20
+    },
+    "mod4amax": {
+      "type": "integer",
+      "min": 1,
+      "max": 101
+    },
+    "mod5a": {
+      "type": "enum",
+      "values": [
+        "allskills",
+        "ama",
+        "ass",
+        "bar",
+        "dru",
+        "nec",
+        "pal",
+        "res-pois",
+        "sor"
+      ]
+    },
+    "mod5achance": {
+      "type": "integer",
+      "min": 25,
+      "max": 50
+    },
+    "mod5aparam": {
+      "type": "boolean"
+    },
+    "mod5amin": {
+      "type": "integer",
+      "min": 1,
+      "max": 6
+    },
+    "mod5amax": {
+      "type": "integer",
+      "min": 1,
+      "max": 36
+    },
+    "product b": {
+      "type": "boolean"
+    },
+    "product code b": {
+      "type": "string"
+    },
+    "mods b": {
+      "type": "boolean"
+    },
+    "uses b": {
+      "type": "boolean"
+    },
+    "fixedlevel b": {
+      "type": "boolean"
+    },
+    "playerlevel pct b": {
+      "type": "boolean"
+    },
+    "itemlevel pct b": {
+      "type": "boolean"
+    },
+    "pmod1b": {
+      "type": "string"
+    },
+    "pmod2b": {
+      "type": "string"
+    },
+    "psocketsb": {
+      "type": "boolean"
+    },
+    "mod1b": {
+      "type": "string"
+    },
+    "mod1bchance": {
+      "type": "string"
+    },
+    "mod1bparam": {
+      "type": "string"
+    },
+    "mod1bmin": {
+      "type": "string"
+    },
+    "mod1bmax": {
+      "type": "string"
+    },
+    "mod2b": {
+      "type": "string"
+    },
+    "mod2bchance": {
+      "type": "string"
+    },
+    "mod2bparam": {
+      "type": "string"
+    },
+    "mod2bmin": {
+      "type": "string"
+    },
+    "mod2bmax": {
+      "type": "string"
+    },
+    "mod3b": {
+      "type": "string"
+    },
+    "mod3bchance": {
+      "type": "string"
+    },
+    "mod3bparam": {
+      "type": "string"
+    },
+    "mod3bmin": {
+      "type": "string"
+    },
+    "mod3bmax": {
+      "type": "string"
+    },
+    "mod4b": {
+      "type": "string"
+    },
+    "mod4bchance": {
+      "type": "string"
+    },
+    "mod4bparam": {
+      "type": "string"
+    },
+    "mod4bmin": {
+      "type": "string"
+    },
+    "mod4bmax": {
+      "type": "boolean"
+    },
+    "mod5b": {
+      "type": "string"
+    },
+    "mod5bchance": {
+      "type": "string"
+    },
+    "mod5bparam": {
+      "type": "string"
+    },
+    "mod5bmin": {
+      "type": "string"
+    },
+    "mod5bmax": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "file": "bodylocs.txt",
+  "description": "Auto-generated schema for bodylocs.txt",
+  "columns": {
+    "Body Location": {
+      "type": "enum",
+      "values": [
+        "Belt",
+        "Feet",
+        "Gloves",
+        "Head",
+        "Left Arm",
+        "Left Ring",
+        "Neck",
+        "None",
+        "Right Arm",
+        "Right Ring",
+        "Torso"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Code": {
+      "type": "enum",
+      "values": [
+        "belt",
+        "feet",
+        "glov",
+        "head",
+        "larm",
+        "lrin",
+        "neck",
+        "rarm",
+        "rrin",
+        "tors"
+      ]
+    }
+  }
+}

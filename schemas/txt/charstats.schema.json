@@ -1,0 +1,288 @@
+{
+  "file": "charstats.txt",
+  "description": "Auto-generated schema for charstats.txt",
+  "columns": {
+    "class": {
+      "type": "enum",
+      "values": [
+        "Amazon",
+        "Barbarian",
+        "Necromancer",
+        "Paladin",
+        "Sorceress"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "str": {
+      "type": "integer",
+      "min": 10,
+      "max": 30
+    },
+    "dex": {
+      "type": "integer",
+      "min": 20,
+      "max": 25
+    },
+    "int": {
+      "type": "integer",
+      "min": 10,
+      "max": 35
+    },
+    "vit": {
+      "type": "integer",
+      "min": 10,
+      "max": 25
+    },
+    "tot": {
+      "type": "integer",
+      "min": 80,
+      "max": 85
+    },
+    "hpadd": {
+      "type": "integer",
+      "min": 30,
+      "max": 30
+    },
+    "PercentStr": {
+      "type": "integer",
+      "min": 20,
+      "max": 35
+    },
+    "PercentDex": {
+      "type": "integer",
+      "min": 20,
+      "max": 35
+    },
+    "PercentInt": {
+      "type": "integer",
+      "min": 10,
+      "max": 30
+    },
+    "PercentVit": {
+      "type": "integer",
+      "min": 15,
+      "max": 30
+    },
+    "ManaRegen": {
+      "type": "integer",
+      "min": 120,
+      "max": 120
+    },
+    "ToHitFactor": {
+      "type": "integer",
+      "min": 80,
+      "max": 120
+    },
+    "WalkVelocity": {
+      "type": "integer",
+      "min": 7,
+      "max": 7
+    },
+    "RunVelocity": {
+      "type": "integer",
+      "min": 11,
+      "max": 11
+    },
+    "RunDrain": {
+      "type": "integer",
+      "min": 20,
+      "max": 20
+    },
+    "Comment": {
+      "type": "string"
+    },
+    "LifePerLevel": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "StaminaPerLevel": {
+      "type": "integer",
+      "min": 4,
+      "max": 4
+    },
+    "ManaPerLevel": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "LifePerVitality": {
+      "type": "integer",
+      "min": 8,
+      "max": 16
+    },
+    "StaminaPerVitality": {
+      "type": "integer",
+      "min": 4,
+      "max": 4
+    },
+    "ManaPerMagic": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "#walk": {
+      "type": "integer",
+      "min": 6,
+      "max": 9
+    },
+    "#run": {
+      "type": "integer",
+      "min": 4,
+      "max": 5
+    },
+    "#swing": {
+      "type": "integer",
+      "min": 15,
+      "max": 20
+    },
+    "#spell": {
+      "type": "integer",
+      "min": 14,
+      "max": 22
+    },
+    "#gethit": {
+      "type": "integer",
+      "min": 4,
+      "max": 8
+    },
+    "#bow": {
+      "type": "integer",
+      "min": 14,
+      "max": 18
+    },
+    "BlockFactor": {
+      "type": "integer",
+      "min": 20,
+      "max": 30
+    },
+    "StartSkill": {
+      "type": "boolean"
+    },
+    "baseWClass": {
+      "type": "string"
+    },
+    "item1": {
+      "type": "enum",
+      "values": [
+        "hax",
+        "jav",
+        "ssd",
+        "sst",
+        "wnd"
+      ]
+    },
+    "item1loc": {
+      "type": "integer",
+      "min": 4,
+      "max": 4
+    },
+    "item1count": {
+      "type": "boolean"
+    },
+    "item2": {
+      "type": "enum",
+      "values": [
+        "buc",
+        "hp1"
+      ]
+    },
+    "item2loc": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "item2count": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "item3": {
+      "type": "enum",
+      "values": [
+        "hp1",
+        "tsc"
+      ]
+    },
+    "item3loc": {
+      "type": "boolean"
+    },
+    "item3count": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "item4": {
+      "type": "enum",
+      "values": [
+        "isc",
+        "tsc"
+      ]
+    },
+    "item4loc": {
+      "type": "boolean"
+    },
+    "item4count": {
+      "type": "boolean"
+    },
+    "item5": {
+      "type": "enum",
+      "values": [
+        "0",
+        "isc"
+      ]
+    },
+    "item5loc": {
+      "type": "boolean"
+    },
+    "item5count": {
+      "type": "boolean"
+    },
+    "item6": {
+      "type": "boolean"
+    },
+    "item6loc": {
+      "type": "boolean"
+    },
+    "item6count": {
+      "type": "boolean"
+    },
+    "item7": {
+      "type": "boolean"
+    },
+    "item7loc": {
+      "type": "boolean"
+    },
+    "item7count": {
+      "type": "boolean"
+    },
+    "item8": {
+      "type": "boolean"
+    },
+    "item8loc": {
+      "type": "boolean"
+    },
+    "item8count": {
+      "type": "boolean"
+    },
+    "item9": {
+      "type": "boolean"
+    },
+    "item9loc": {
+      "type": "boolean"
+    },
+    "item9count": {
+      "type": "boolean"
+    },
+    "item10": {
+      "type": "boolean"
+    },
+    "item10loc": {
+      "type": "boolean"
+    },
+    "item10count": {
+      "type": "boolean"
+    }
+  }
+}

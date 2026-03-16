@@ -1,0 +1,49 @@
+{
+  "file": "monmode.txt",
+  "description": "Auto-generated schema for monmode.txt",
+  "columns": {
+    "Name": {
+      "type": "enum",
+      "values": [
+        "Attack1",
+        "Attack2",
+        "Block",
+        "Cast",
+        "Dead",
+        "Death",
+        "Get Hit",
+        "Knockback",
+        "Neutral",
+        "Run",
+        "Sequence",
+        "Skill1",
+        "Skill2",
+        "Skill3",
+        "Skill4",
+        "Walk"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "Token": {
+      "type": "enum",
+      "values": [
+        "A1",
+        "A2",
+        "BL",
+        "DD",
+        "DT",
+        "GH",
+        "NU",
+        "RN",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "SC",
+        "WL",
+        "xx"
+      ]
+    }
+  }
+}

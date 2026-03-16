@@ -1,0 +1,89 @@
+{
+  "file": "automap.txt",
+  "description": "Auto-generated schema for automap.txt",
+  "columns": {
+    "LevelName": {
+      "type": "string",
+      "required": true
+    },
+    "TileName": {
+      "type": "enum",
+      "values": [
+        "co",
+        "fl",
+        "wbl",
+        "wbr",
+        "wl",
+        "wld",
+        "wle",
+        "wr",
+        "wrd",
+        "wre",
+        "wtll",
+        "wtlr",
+        "wtr"
+      ]
+    },
+    "Style": {
+      "type": "integer",
+      "min": 0,
+      "max": 49
+    },
+    "StartSequence": {
+      "type": "integer",
+      "min": -1,
+      "max": 63
+    },
+    "EndSequence": {
+      "type": "integer",
+      "min": -1,
+      "max": 63
+    },
+    "Type1": {
+      "type": "string"
+    },
+    "Cel1": {
+      "type": "integer",
+      "min": 0,
+      "max": 1254
+    },
+    "Type2": {
+      "type": "enum",
+      "values": [
+        "C_WL c",
+        "C_WR c",
+        "Cave LC",
+        "Cave RC",
+        "Floor Path C",
+        "River M C",
+        "River_C",
+        "rock4",
+        "tree03"
+      ]
+    },
+    "Cel2": {
+      "type": "integer",
+      "min": -1,
+      "max": 534
+    },
+    "Cel3": {
+      "type": "integer",
+      "min": -1,
+      "max": 522
+    },
+    "Type4": {
+      "type": "enum",
+      "values": [
+        "C_WL d",
+        "C_WR d",
+        "Floor Path D",
+        "tree04"
+      ]
+    },
+    "Cel4": {
+      "type": "integer",
+      "min": -1,
+      "max": 475
+    }
+  }
+}
