@@ -249,9 +249,10 @@ export class TableEditorProvider
     for (const [key, { file, column }] of targets) {
       try {
         const targetPath = `data\\global\\excel\\${file}`;
-        // Try multiple MPQs: patch_d2 first, then d2exp, then d2data
+        // Try multiple MPQs: d2exp first (has most txt files), then d2data
+        // Note: patch_d2.mpq has no excel txt files in vanilla 1.13c
         let data: Uint8Array | undefined;
-        for (const mpq of ["patch_d2.mpq", "d2exp.mpq", "d2data.mpq"]) {
+        for (const mpq of ["d2exp.mpq", "d2data.mpq"]) {
           try {
             const uri = vscode.Uri.parse(`d2mpq://${mpq}/${targetPath.replace(/\\/g, "/")}`);
             data = await vscode.workspace.fs.readFile(uri);

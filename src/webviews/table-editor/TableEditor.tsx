@@ -115,6 +115,22 @@ function validateCell(
   return null;
 }
 
+/** Case-insensitive column schema lookup */
+function getColumnSchema(
+  columns: Record<string, ColumnSchema> | undefined,
+  header: string
+): ColumnSchema | undefined {
+  if (!columns) return undefined;
+  // Try exact match first
+  if (columns[header]) return columns[header];
+  // Try case-insensitive
+  const lower = header.toLowerCase();
+  for (const [k, v] of Object.entries(columns)) {
+    if (k.toLowerCase() === lower) return v;
+  }
+  return undefined;
+}
+
 export function TableEditor() {
   const tableRef = useRef<HTMLTableElement>(null);
   const [data, setData] = useState<TableData>({ headers: [], rows: [] });
@@ -194,7 +210,7 @@ export function TableEditor() {
     if (!schema) return {};
     const result: Record<string, ColumnSchema> = {};
     for (const [i, header] of data.headers.entries()) {
-      const colSchema = schema.columns[header];
+      const colSchema = getColumnSchema(schema.columns, header);
       if (!colSchema) continue;
       if ((colSchema.type === "enum" || colSchema.type === "ref") && colSchema.values?.length) {
         // Collect unique non-empty values from this column's data
@@ -216,7 +232,7 @@ export function TableEditor() {
   const columns = useMemo(
     () =>
       data.headers.map((header, index) => {
-        const colSchema = mergedColumnSchemas[header] || schema?.columns[header];
+        const colSchema = mergedColumnSchemas[header] || getColumnSchema(schema?.columns, header);
 
         return columnHelper.accessor((row) => row[index] || "", {
           id: header || `col_${index}`,

@@ -1,5 +1,19 @@
 import React, { useState } from "react";
 
+/** Case-insensitive column schema lookup */
+function getColumnSchema(
+  columns: Record<string, ColumnSchema> | undefined,
+  header: string
+): ColumnSchema | undefined {
+  if (!columns) return undefined;
+  if (columns[header]) return columns[header];
+  const lower = header.toLowerCase();
+  for (const [k, v] of Object.entries(columns)) {
+    if (k.toLowerCase() === lower) return v;
+  }
+  return undefined;
+}
+
 interface ColumnSchema {
   type: string;
   required?: boolean;
@@ -71,7 +85,7 @@ export function CardPanel({
       </div>
       <div className="card-content">
         {filteredFields.map(({ header, index, value }) => {
-          const colSchema = schema?.columns[header];
+          const colSchema = getColumnSchema(schema?.columns, header);
           return (
             <CardField
               key={index}
