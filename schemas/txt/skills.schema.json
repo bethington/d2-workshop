@@ -17,16 +17,25 @@
     "charclass": {
       "type": "enum",
       "values": [
+        "",
+        "all",
         "ama",
-        "sor",
-        "nec",
-        "pal",
-        "bar",
-        "dru",
+        "amazon",
         "ass",
-        ""
+        "assassin",
+        "bar",
+        "barbarian",
+        "dru",
+        "druid",
+        "monster",
+        "nec",
+        "necromancer",
+        "pal",
+        "paladin",
+        "sor",
+        "sorceress"
       ],
-      "description": "Character class this skill belongs to (empty = all classes)"
+      "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama)."
     },
     "skilldesc": {
       "type": "ref",

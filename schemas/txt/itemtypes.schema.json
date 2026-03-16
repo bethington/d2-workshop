@@ -196,15 +196,25 @@
     "Class": {
       "type": "enum",
       "values": [
+        "",
+        "all",
         "ama",
+        "amazon",
         "ass",
+        "assassin",
         "bar",
+        "barbarian",
         "dru",
+        "druid",
+        "monster",
         "nec",
+        "necromancer",
         "pal",
-        "sor"
+        "paladin",
+        "sor",
+        "sorceress"
       ],
-      "description": "Character class restriction"
+      "description": "Character class restriction (classic uses full names, patch uses codes)"
     },
     "VarInvGfx": {
       "type": "integer",
