@@ -532,8 +532,9 @@
       "description": "First parameter for input G requirements"
     },
     "param 2 g": {
-      "type": "boolean",
-      "description": "Second parameter for input G requirements"
+      "type": "integer",
+      "description": "Second parameter for input G requirements",
+      "min": 0
     },
     "gem 1 g": {
       "type": "string",
@@ -2160,8 +2161,9 @@
       "description": "Secondary quality modifier for output B"
     },
     "psocketsb": {
-      "type": "boolean",
-      "description": "Number of sockets added to output item B"
+      "type": "integer",
+      "description": "Number of sockets added to output item B",
+      "min": 0
     },
     "mod1b": {
       "type": "enum",

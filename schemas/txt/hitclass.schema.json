@@ -41,7 +41,7 @@
         "staf",
         "xbow"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Hit class code identifier"
     }
   }
 }

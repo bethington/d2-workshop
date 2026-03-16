@@ -27,8 +27,9 @@
       "description": "Percentage of victim score transferred to killer on player kill"
     },
     "MonsterKill": {
-      "type": "boolean",
-      "description": "Score awarded for killing a monster in arena mode"
+      "type": "integer",
+      "description": "Score awarded for killing a monster in arena mode",
+      "min": 0
     },
     "PlayerDeath": {
       "type": "integer",

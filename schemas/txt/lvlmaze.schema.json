@@ -9,8 +9,9 @@
       "description": "Internal name identifier"
     },
     "Level": {
-      "type": "string",
-      "description": "Base item level"
+      "type": "integer",
+      "description": "Level ID this maze configuration applies to",
+      "min": 0
     },
     "Rooms": {
       "type": "integer",

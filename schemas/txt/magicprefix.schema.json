@@ -943,10 +943,8 @@
       "description": "Applies to weapons"
     },
     "shield": {
-      "type": "integer",
-      "description": "Applies to shields",
-      "min": 0,
-      "max": 1
+      "type": "boolean",
+      "description": "Applies to shields"
     },
     "thrown": {
       "type": "boolean",
@@ -978,7 +976,7 @@
     },
     "belt": {
       "type": "boolean",
-      "description": "Belt type index"
+      "description": "Applies to belts"
     },
     "ring": {
       "type": "boolean",
@@ -996,16 +994,19 @@
       "description": "Applies to orbs"
     },
     "divide": {
-      "type": "boolean",
-      "description": "Division factor for calculations"
+      "type": "integer",
+      "description": "Division factor for calculations",
+      "min": 0
     },
     "multiply": {
-      "type": "boolean",
-      "description": "Multiplicative cost modifier"
+      "type": "integer",
+      "description": "Multiplicative cost modifier",
+      "min": 0
     },
     "add": {
-      "type": "boolean",
-      "description": "Flat cost modification value"
+      "type": "integer",
+      "description": "Flat cost modification value",
+      "min": 0
     }
   }
 }

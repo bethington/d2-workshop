@@ -23,23 +23,10 @@
       "description": "Equivalent item type 1 (parent in type hierarchy)"
     },
     "Equiv2": {
-      "type": "enum",
-      "values": [
-        "amaz",
-        "assn",
-        "axe",
-        "barb",
-        "drui",
-        "knif",
-        "mpot",
-        "necr",
-        "pala",
-        "seco",
-        "sorc",
-        "spea",
-        "thro"
-      ],
-      "description": "Secondary parent item type code in the type hierarchy"
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Equivalent item type 2 (parent in type hierarchy)"
     },
     "Identify": {
       "type": "boolean",

@@ -1,6 +1,6 @@
 {
   "file": "states.txt",
-  "description": "Character/monster state definitions — buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
+  "description": "Character/monster state definitions \u00e2\u20ac\u201d buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
   "columns": {
     "state": {
       "type": "string",
@@ -16,7 +16,7 @@
     },
     "group": {
       "type": "integer",
-      "description": "Group ID for mutually exclusive states — states in the same group cannot stack (e.g., cold armors share a group)"
+      "description": "Group ID for mutually exclusive states \u00e2\u20ac\u201d states in the same group cannot stack (e.g., cold armors share a group)"
     },
     "remhit": {
       "type": "boolean",
@@ -32,7 +32,7 @@
     },
     "aura": {
       "type": "boolean",
-      "description": "Whether this is an aura state — auras cycle on-screen display and are dispelled by conversion effects"
+      "description": "Whether this is an aura state \u00e2\u20ac\u201d auras cycle on-screen display and are dispelled by conversion effects"
     },
     "curable": {
       "type": "boolean",
@@ -40,7 +40,7 @@
     },
     "curse": {
       "type": "boolean",
-      "description": "Whether this is a curse — curse states cannot stack and a new curse replaces the previous one"
+      "description": "Whether this is a curse \u00e2\u20ac\u201d curse states cannot stack and a new curse replaces the previous one"
     },
     "active": {
       "type": "boolean",
@@ -251,8 +251,10 @@
       "targetColumn": "skill"
     },
     "itemtype": {
-      "type": "string",
-      "description": "Item type restriction — limits which item types can grant this state (references ItemTypes.txt Code)"
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Item type restriction \u00e2\u20ac\u201d limits which item types can grant this state (references ItemTypes.txt Code)"
     },
     "itemtrans": {
       "type": "ref",
@@ -262,7 +264,7 @@
     },
     "colorpri": {
       "type": "integer",
-      "description": "Priority for the color transform — higher priority overrides lower when multiple states are active"
+      "description": "Priority for the color transform \u00e2\u20ac\u201d higher priority overrides lower when multiple states are active"
     },
     "colorshift": {
       "type": "integer",
@@ -324,7 +326,7 @@
     },
     "eol": {
       "type": "integer",
-      "description": "End of line marker — always 0, used by the game to detect row termination"
+      "description": "End of line marker \u00e2\u20ac\u201d always 0, used by the game to detect row termination"
     }
   }
 }

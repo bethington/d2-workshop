@@ -21,64 +21,27 @@
       "description": "Server-side only flag"
     },
     "itype1": {
-      "type": "enum",
-      "values": [
-        "axe",
-        "club",
-        "h2h",
-        "hamm",
-        "helm",
-        "knif",
-        "mace",
-        "mele",
-        "miss",
-        "scep",
-        "shld",
-        "spea",
-        "staf",
-        "swor",
-        "tors",
-        "wand",
-        "weap"
-      ],
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 1"
     },
     "itype2": {
-      "type": "enum",
-      "values": [
-        "axe",
-        "club",
-        "hamm",
-        "knif",
-        "mace",
-        "scep",
-        "swor",
-        "wand"
-      ],
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 2"
     },
     "itype3": {
-      "type": "enum",
-      "values": [
-        "axe",
-        "club",
-        "hamm",
-        "knif",
-        "mace",
-        "pole",
-        "scep",
-        "spea",
-        "swor"
-      ],
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 3"
     },
     "itype4": {
-      "type": "enum",
-      "values": [
-        "hamm",
-        "scep",
-        "spea"
-      ],
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 4"
     },
     "itype5": {
@@ -112,33 +75,40 @@
       "targetColumn": "Code"
     },
     "Rune1": {
-      "type": "string"
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 1 item code"
     },
     "Rune2": {
-      "type": "string"
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 2 item code"
     },
     "Rune3": {
-      "type": "string"
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 3 item code"
     },
     "Rune4": {
-      "type": "string"
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 4 item code"
     },
     "Rune5": {
-      "type": "string"
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 5 item code"
     },
     "Rune6": {
-      "type": "enum",
-      "values": [
-        "r01",
-        "r02",
-        "r06",
-        "r10",
-        "r16",
-        "r17",
-        "r18",
-        "r20",
-        "r29"
-      ]
+      "type": "ref",
+      "target": "misc.txt",
+      "targetColumn": "code",
+      "description": "Rune 6 item code"
     },
     "T1Code1": {
       "type": "enum",
@@ -201,20 +171,20 @@
     },
     "T1Param2": {
       "type": "integer",
-      "description": "Property 1 param for tier 2",
+      "description": "Property 2 param for tier 2",
       "min": 0
     },
     "T1Min2": {
       "type": "integer",
       "min": 3,
       "max": 300,
-      "description": "Property 1 min for tier 2"
+      "description": "Property 2 min for tier 2"
     },
     "T1Max2": {
       "type": "integer",
       "min": 3,
       "max": 300,
-      "description": "Property 1 max for tier 2"
+      "description": "Property 2 max for tier 2"
     },
     "T1Code3": {
       "type": "enum",
@@ -245,19 +215,19 @@
       "type": "integer",
       "min": 11,
       "max": 11,
-      "description": "Property 1 param for tier 3"
+      "description": "Property 3 param for tier 3"
     },
     "T1Min3": {
       "type": "integer",
       "min": 1,
       "max": 250,
-      "description": "Property 1 min for tier 3"
+      "description": "Property 3 min for tier 3"
     },
     "T1Max3": {
       "type": "integer",
       "min": 1,
       "max": 250,
-      "description": "Property 1 max for tier 3"
+      "description": "Property 3 max for tier 3"
     },
     "T1Code4": {
       "type": "enum",
@@ -284,19 +254,19 @@
       "type": "integer",
       "min": 25,
       "max": 38,
-      "description": "Property 1 param for tier 4"
+      "description": "Property 4 param for tier 4"
     },
     "T1Min4": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 1 min for tier 4"
+      "description": "Property 4 min for tier 4"
     },
     "T1Max4": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 1 max for tier 4"
+      "description": "Property 4 max for tier 4"
     },
     "T1Code5": {
       "type": "enum",
@@ -315,19 +285,19 @@
       "type": "integer",
       "min": 7,
       "max": 7,
-      "description": "Property 1 param for tier 5"
+      "description": "Property 5 param for tier 5"
     },
     "T1Min5": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 1 min for tier 5"
+      "description": "Property 5 min for tier 5"
     },
     "T1Max5": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 1 max for tier 5"
+      "description": "Property 5 max for tier 5"
     },
     "T1Code6": {
       "type": "string",
@@ -335,20 +305,20 @@
     },
     "T1Param6": {
       "type": "integer",
-      "description": "Property 1 param for tier 6",
+      "description": "Property 6 param for tier 6",
       "min": 0
     },
     "T1Min6": {
       "type": "integer",
       "min": -3,
       "max": -3,
-      "description": "Property 1 min for tier 6"
+      "description": "Property 6 min for tier 6"
     },
     "T1Max6": {
       "type": "integer",
       "min": -3,
       "max": -3,
-      "description": "Property 1 max for tier 6"
+      "description": "Property 6 max for tier 6"
     }
   }
 }

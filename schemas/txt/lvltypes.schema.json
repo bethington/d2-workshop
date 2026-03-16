@@ -381,7 +381,7 @@
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Act number (1-5)"
+      "description": "Act index (0=Act1, 4=Act5)"
     }
   }
 }

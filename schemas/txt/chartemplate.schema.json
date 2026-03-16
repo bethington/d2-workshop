@@ -1,6 +1,6 @@
 {
   "file": "chartemplate.txt",
-  "description": "Auto-generated schema for chartemplate.txt",
+  "description": "Character template definitions for pre-built characters",
   "columns": {
     "Template": {
       "type": "enum",

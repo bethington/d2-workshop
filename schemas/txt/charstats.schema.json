@@ -3,7 +3,7 @@
   "description": "Character class base stats \u2014 starting attributes, growth rates, and default equipment.",
   "columns": {
     "class": {
-      "type": "string",
+      "type": "enum",
       "values": [
         "Amazon",
         "Barbarian",
@@ -355,7 +355,7 @@
     },
     "item10": {
       "type": "string",
-      "description": "Starting item 0 code (empty if unused)"
+      "description": "Starting item 10 code (empty if unused)"
     },
     "item10loc": {
       "type": "integer",

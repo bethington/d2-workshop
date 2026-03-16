@@ -1012,16 +1012,19 @@
       "description": "Excluded item type 3"
     },
     "divide": {
-      "type": "boolean",
-      "description": "Division factor for calculations"
+      "type": "integer",
+      "description": "Division factor for calculations",
+      "min": 0
     },
     "multiply": {
-      "type": "boolean",
-      "description": "Multiplicative cost modifier"
+      "type": "integer",
+      "description": "Multiplicative cost modifier",
+      "min": 0
     },
     "add": {
-      "type": "boolean",
-      "description": "Flat cost modification value"
+      "type": "integer",
+      "description": "Flat cost modification value",
+      "min": 0
     }
   }
 }

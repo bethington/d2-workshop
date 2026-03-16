@@ -48,7 +48,7 @@
     },
     "Dir": {
       "type": "boolean",
-      "description": "Number of directions"
+      "description": "Whether the overlay uses directional animations"
     },
     "Open": {
       "type": "boolean",

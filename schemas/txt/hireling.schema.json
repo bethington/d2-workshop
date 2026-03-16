@@ -194,17 +194,9 @@
       "description": "Secondary weapon type code the hireling can equip"
     },
     "HireDesc": {
-      "type": "enum",
-      "values": [
-        "carw",
-        "cold",
-        "comb",
-        "def",
-        "farw",
-        "fire",
-        "ltng",
-        "off"
-      ],
+      "type": "ref",
+      "target": "hiredesc.txt",
+      "targetColumn": "Code",
       "description": "Hireling description code (references hiredesc.txt)"
     },
     "DefaultChance": {

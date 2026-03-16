@@ -14,31 +14,31 @@
       "type": "integer",
       "min": 0,
       "max": 3837739017,
-      "description": "Amazon class specific"
+      "description": "Cumulative experience required to reach this level as Amazon"
     },
     "Sorceress": {
       "type": "integer",
       "min": 0,
       "max": 3837739017,
-      "description": "Sorceress class specific"
+      "description": "Cumulative experience required to reach this level as Sorceress"
     },
     "Necromancer": {
       "type": "integer",
       "min": 0,
       "max": 3837739017,
-      "description": "Necromancer class specific"
+      "description": "Cumulative experience required to reach this level as Necromancer"
     },
     "Paladin": {
       "type": "integer",
       "min": 0,
       "max": 3837739017,
-      "description": "Paladin class specific"
+      "description": "Cumulative experience required to reach this level as Paladin"
     },
     "Barbarian": {
       "type": "integer",
       "min": 0,
       "max": 3837739017,
-      "description": "Barbarian class specific"
+      "description": "Cumulative experience required to reach this level as Barbarian"
     }
   }
 }

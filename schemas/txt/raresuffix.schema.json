@@ -17,10 +17,8 @@
       "description": "Applies to helms"
     },
     "shield": {
-      "type": "integer",
-      "description": "Applies to shields",
-      "min": 0,
-      "max": 1
+      "type": "boolean",
+      "description": "Applies to shields"
     },
     "sword": {
       "type": "boolean",
@@ -64,7 +62,7 @@
     },
     "belt": {
       "type": "boolean",
-      "description": "Belt type index"
+      "description": "Applies to belts"
     },
     "ring": {
       "type": "boolean",
@@ -75,16 +73,19 @@
       "description": "Applies to amulets"
     },
     "add": {
-      "type": "boolean",
-      "description": "Flat cost modification value"
+      "type": "integer",
+      "description": "Flat cost modification value",
+      "min": 0
     },
     "multiply": {
-      "type": "boolean",
-      "description": "Multiplicative cost modifier"
+      "type": "integer",
+      "description": "Multiplicative cost modifier",
+      "min": 0
     },
     "divide": {
-      "type": "boolean",
-      "description": "Division factor for calculations"
+      "type": "integer",
+      "description": "Division factor for calculations",
+      "min": 0
     }
   }
 }

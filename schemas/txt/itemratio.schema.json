@@ -16,7 +16,7 @@
       "type": "integer",
       "min": 600,
       "max": 1000,
-      "description": "Only appears as unique quality"
+      "description": "Base ratio for unique item quality chance"
     },
     "UniqueDivisor": {
       "type": "integer",
@@ -28,7 +28,7 @@
       "type": "integer",
       "min": 120,
       "max": 200,
-      "description": "Can spawn as rare quality"
+      "description": "Base ratio for rare item quality chance"
     },
     "RareDivisor": {
       "type": "integer",

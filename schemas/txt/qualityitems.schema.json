@@ -702,7 +702,7 @@
     },
     "belt": {
       "type": "boolean",
-      "description": "Belt type index"
+      "description": "Applies to belts"
     },
     "level": {
       "type": "integer",
