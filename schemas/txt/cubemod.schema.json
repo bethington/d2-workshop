@@ -19,7 +19,8 @@
         "unique"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Horadric Cube recipe modifier type name (e.g. gem type, quality type)"
     },
     "Code": {
       "type": "enum",
@@ -36,7 +37,7 @@
         "top",
         "unq"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the cube modifier type"
     }
   }
 }

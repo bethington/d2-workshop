@@ -1,6 +1,6 @@
 {
   "file": "automap.txt",
-  "description": "Auto-generated schema for automap.txt",
+  "description": "Automap cell type definitions mapping tiles to minimap graphics.",
   "columns": {
     "LevelName": {
       "type": "string",
@@ -23,30 +23,36 @@
         "wtll",
         "wtlr",
         "wtr"
-      ]
+      ],
+      "description": "Tile orientation type code (e.g. fl=floor, wl=wall left, co=corner)"
     },
     "Style": {
       "type": "integer",
       "min": 0,
-      "max": 49
+      "max": 49,
+      "description": "Visual style index for the automap tile"
     },
     "StartSequence": {
       "type": "integer",
       "min": -1,
-      "max": 63
+      "max": 63,
+      "description": "Starting animation sequence index (-1 = none)"
     },
     "EndSequence": {
       "type": "integer",
       "min": -1,
-      "max": 63
+      "max": 63,
+      "description": "Ending animation sequence index (-1 = none)"
     },
     "Type1": {
-      "type": "string"
+      "type": "string",
+      "description": "Primary automap cell type name"
     },
     "Cel1": {
       "type": "integer",
       "min": 0,
-      "max": 1254
+      "max": 1254,
+      "description": "Primary automap cell graphic index"
     },
     "Type2": {
       "type": "enum",
@@ -61,17 +67,19 @@
         "rock4",
         "tree03"
       ],
-      "description": "Secondary item type code"
+      "description": "Secondary automap cell type name"
     },
     "Cel2": {
       "type": "integer",
       "min": -1,
-      "max": 534
+      "max": 534,
+      "description": "Secondary automap cell graphic index (-1 = none)"
     },
     "Cel3": {
       "type": "integer",
       "min": -1,
-      "max": 522
+      "max": 522,
+      "description": "Tertiary automap cell graphic index (-1 = none)"
     },
     "Type4": {
       "type": "enum",
@@ -80,12 +88,14 @@
         "C_WR d",
         "Floor Path D",
         "tree04"
-      ]
+      ],
+      "description": "Quaternary automap cell type name"
     },
     "Cel4": {
       "type": "integer",
       "min": -1,
-      "max": 475
+      "max": 475,
+      "description": "Quaternary automap cell graphic index (-1 = none)"
     }
   }
 }

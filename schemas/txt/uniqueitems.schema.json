@@ -1,6 +1,6 @@
 {
   "file": "uniqueitems.txt",
-  "description": "Unique item definitions \u2014 base types, level requirements, and up to 12 properties per item.",
+  "description": "Unique item definitions — base types, level requirements, and up to 12 properties per item.",
   "columns": {
     "name": {
       "type": "string",
@@ -35,7 +35,8 @@
     "invtransform": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Inventory graphic color palette transform flag"
     },
     "transformcolor": {
       "type": "integer",
@@ -321,12 +322,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 1 (references Properties.txt)"
     },
     "ItemMod1Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 1"
     },
     "ItemMod1Min": {
       "type": "integer",
@@ -612,12 +615,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 2 (references Properties.txt)"
     },
     "ItemMod2Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 2"
     },
     "ItemMod2Min": {
       "type": "integer",
@@ -903,12 +908,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 3 (references Properties.txt)"
     },
     "ItemMod3Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 3"
     },
     "ItemMod3Min": {
       "type": "integer",
@@ -1194,12 +1201,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 4 (references Properties.txt)"
     },
     "ItemMod4Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 4"
     },
     "ItemMod4Min": {
       "type": "integer",
@@ -1485,12 +1494,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 5 (references Properties.txt)"
     },
     "ItemMod5Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 5"
     },
     "ItemMod5Min": {
       "type": "integer",
@@ -1776,12 +1787,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 6 (references Properties.txt)"
     },
     "ItemMod6Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 6"
     },
     "ItemMod6Min": {
       "type": "integer",
@@ -2067,12 +2080,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 7 (references Properties.txt)"
     },
     "ItemMod7Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 7"
     },
     "ItemMod7Min": {
       "type": "integer",
@@ -2358,12 +2373,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 8 (references Properties.txt)"
     },
     "ItemMod8Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 8"
     },
     "ItemMod8Min": {
       "type": "integer",
@@ -2649,12 +2666,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 9 (references Properties.txt)"
     },
     "ItemMod9Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 9"
     },
     "ItemMod9Min": {
       "type": "integer",
@@ -2940,12 +2959,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for unique item modifier 10 (references Properties.txt)"
     },
     "ItemMod10Offset": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Parameter/offset value for unique item modifier 10"
     },
     "ItemMod10Min": {
       "type": "integer",

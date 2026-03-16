@@ -1,6 +1,6 @@
 {
   "file": "lvlprest.txt",
-  "description": "Level preset definitions \u2014 pre-built map sections.",
+  "description": "Level preset definitions — pre-built map sections.",
   "columns": {
     "Name": {
       "type": "string",
@@ -11,28 +11,36 @@
     "Def": {
       "type": "integer",
       "min": 0,
-      "max": 862
+      "max": 862,
+      "description": "Default preset definition index"
     },
     "LevelId": {
-      "type": "string"
+      "type": "string",
+      "description": "Reference to level ID in Levels.txt that uses this preset"
     },
     "Populate": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to populate this preset with monsters and objects"
     },
     "Logicals": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether logical connections between tiles are enforced"
     },
     "Outdoors": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this preset is used for outdoor areas"
     },
     "Animate": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether animated tiles are enabled in this preset"
     },
     "KillEdge": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to remove edge tiles that overlap with adjacent presets"
     },
     "FillBlanks": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to fill blank spaces with floor tiles"
     },
     "SizeX": {
       "type": "integer",
@@ -63,27 +71,34 @@
     "PopPad": {
       "type": "integer",
       "min": -5,
-      "max": 0
+      "max": 0,
+      "description": "Padding distance for population placement from edges"
     },
     "Files": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Number of DS1 map files used by this preset"
     },
     "File1": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path variant 1"
     },
     "File2": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path variant 2"
     },
     "File3": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path variant 3"
     },
     "File4": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path variant 4"
     },
     "File5": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path variant 5"
     },
     "File6": {
       "type": "enum",
@@ -100,12 +115,14 @@
         "Act2/Ruin/Ruin6.ds1",
         "Act3/Jungle/DungRm6A.ds1",
         "Act3/Jungle/DungRm6B.ds1"
-      ]
+      ],
+      "description": "DS1 map file path variant 6"
     },
     "Dt1Mask": {
       "type": "integer",
       "min": 0,
-      "max": 268435456
+      "max": 268435456,
+      "description": "Bitmask controlling which DT1 tile files are loaded for this preset"
     },
     "Beta": {
       "type": "boolean",

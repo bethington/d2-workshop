@@ -9,7 +9,8 @@
         "Uber"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Quality ratio function type (standard formula or Uber override)"
     },
     "Unique": {
       "type": "integer",
@@ -20,7 +21,8 @@
     "UniqueDivisor": {
       "type": "integer",
       "min": 6,
-      "max": 6
+      "max": 6,
+      "description": "Divisor applied to monster level when calculating unique item chance"
     },
     "Rare": {
       "type": "integer",
@@ -31,47 +33,56 @@
     "RareDivisor": {
       "type": "integer",
       "min": 6,
-      "max": 6
+      "max": 6,
+      "description": "Divisor applied to monster level when calculating rare item chance"
     },
     "Set": {
       "type": "integer",
       "min": 100,
-      "max": 125
+      "max": 125,
+      "description": "Base ratio value for set item quality chance"
     },
     "SetDivisor": {
       "type": "integer",
       "min": 6,
-      "max": 6
+      "max": 6,
+      "description": "Divisor applied to monster level when calculating set item chance"
     },
     "Magic": {
       "type": "integer",
       "min": 3,
-      "max": 30
+      "max": 30,
+      "description": "Base ratio value for magic item quality chance"
     },
     "MagicDivisor": {
       "type": "integer",
       "min": 16,
-      "max": 100
+      "max": 100,
+      "description": "Divisor applied to monster level when calculating magic item chance"
     },
     "HiQuality": {
       "type": "integer",
       "min": 4,
-      "max": 12
+      "max": 12,
+      "description": "Base ratio value for superior (high quality) item chance"
     },
     "HiQualityDivisor": {
       "type": "integer",
       "min": 16,
-      "max": 16
+      "max": 16,
+      "description": "Divisor applied to monster level when calculating superior item chance"
     },
     "Normal": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Base ratio value for normal item quality chance"
     },
     "NormalDivisor": {
       "type": "integer",
       "min": 8,
-      "max": 8
+      "max": 8,
+      "description": "Divisor applied to monster level when calculating normal item chance"
     }
   }
 }

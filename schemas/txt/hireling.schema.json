@@ -1,6 +1,6 @@
 {
   "file": "hireling.txt",
-  "description": "Mercenary definitions \u2014 stats, skills, level progression, and hiring costs per act and difficulty.",
+  "description": "Mercenary definitions — stats, skills, level progression, and hiring costs per act and difficulty.",
   "columns": {
     "Hireling": {
       "type": "ref",
@@ -10,7 +10,8 @@
       "description": "Hireling type identifier"
     },
     "SubType": {
-      "type": "string"
+      "type": "string",
+      "description": "Hireling sub-specialization type (e.g. Fire, Cold, Combat)"
     },
     "Id": {
       "type": "integer",
@@ -55,7 +56,8 @@
         "merc01",
         "merca201",
         "merca222"
-      ]
+      ],
+      "description": "Starting index in the hireling name table for first names"
     },
     "NameLast": {
       "type": "enum",
@@ -64,7 +66,8 @@
         "merc41",
         "merca221",
         "merca241"
-      ]
+      ],
+      "description": "Ending index in the hireling name table for first names"
     },
     "Gold": {
       "type": "integer",
@@ -141,7 +144,8 @@
     "Share": {
       "type": "integer",
       "min": 1,
-      "max": 6
+      "max": 6,
+      "description": "Percentage of experience shared with the hireling"
     },
     "Dmg-Min": {
       "type": "integer",
@@ -164,12 +168,14 @@
     "Resist": {
       "type": "integer",
       "min": 0,
-      "max": 139
+      "max": 139,
+      "description": "Base all-resistances value at hire level"
     },
     "Resist/Lvl": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "All-resistances gained per level (in eighths)"
     },
     "WType1": {
       "type": "enum",
@@ -177,14 +183,16 @@
         "bow",
         "pole",
         "swor"
-      ]
+      ],
+      "description": "Primary weapon type code the hireling can equip"
     },
     "WType2": {
       "type": "enum",
       "values": [
         "shie",
         "spea"
-      ]
+      ],
+      "description": "Secondary weapon type code the hireling can equip"
     },
     "HireDesc": {
       "type": "enum",
@@ -197,12 +205,14 @@
         "fire",
         "ltng",
         "off"
-      ]
+      ],
+      "description": "Hireling description code (references hiredesc.txt)"
     },
     "DefaultChance": {
       "type": "integer",
       "min": 10,
-      "max": 75
+      "max": 75,
+      "description": "Base percentage chance to use default attack"
     },
     "Skill1": {
       "type": "ref",
@@ -225,12 +235,14 @@
     "ChancePerLevel1": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Chance increase per level for hireling skill 1"
     },
     "Level1": {
       "type": "integer",
       "min": 1,
-      "max": 20
+      "max": 20,
+      "description": "Minimum hireling level to unlock skill 1"
     },
     "LvlPerLvl1": {
       "type": "integer",
@@ -268,12 +280,14 @@
     "ChancePerLevel2": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Chance increase per level for hireling skill 2"
     },
     "Level2": {
       "type": "integer",
       "min": 1,
-      "max": 18
+      "max": 18,
+      "description": "Minimum hireling level to unlock skill 2"
     },
     "LvlPerLvl2": {
       "type": "integer",
@@ -306,12 +320,14 @@
     "ChancePerLevel3": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Chance increase per level for hireling skill 3"
     },
     "Level3": {
       "type": "integer",
       "min": 1,
-      "max": 20
+      "max": 20,
+      "description": "Minimum hireling level to unlock skill 3"
     },
     "LvlPerLvl3": {
       "type": "integer",
@@ -337,11 +353,13 @@
     },
     "ChancePerLevel4": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Chance increase per level for hireling skill 4"
     },
     "Level4": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Minimum hireling level to unlock skill 4"
     },
     "LvlPerLvl4": {
       "type": "integer",
@@ -366,11 +384,13 @@
     },
     "ChancePerLevel5": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Chance increase per level for hireling skill 5"
     },
     "Level5": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Minimum hireling level to unlock skill 5"
     },
     "LvlPerLvl5": {
       "type": "integer",
@@ -395,11 +415,13 @@
     },
     "ChancePerLevel6": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Chance increase per level for hireling skill 6"
     },
     "Level6": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "description": "Minimum hireling level to unlock skill 6"
     },
     "LvlPerLvl6": {
       "type": "integer",
@@ -409,12 +431,14 @@
     "Head": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Whether the hireling can equip headgear"
     },
     "Torso": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Whether the hireling can equip body armor"
     },
     "Weapon": {
       "type": "integer",

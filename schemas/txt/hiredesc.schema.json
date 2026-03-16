@@ -16,7 +16,8 @@
         "Offensive Auras"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name for the hireling specialization type"
     },
     "Code": {
       "type": "enum",
@@ -30,7 +31,7 @@
         "ltng",
         "off"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the hireling description type"
     }
   }
 }

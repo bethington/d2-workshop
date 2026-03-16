@@ -1,6 +1,6 @@
 {
   "file": "itemstatcost.txt",
-  "description": "Stat definitions \u2014 controls how stats are stored, transmitted, displayed, and affect item costs.",
+  "description": "Stat definitions — controls how stats are stored, transmitted, displayed, and affect item costs.",
   "columns": {
     "ID": {
       "type": "integer",
@@ -29,16 +29,20 @@
       "description": "Division factor for calculations"
     },
     "CodeName": {
-      "type": "string"
+      "type": "string",
+      "description": "Internal code name used to reference this stat in other data files"
     },
     "English like name": {
-      "type": "string"
+      "type": "string",
+      "description": "Human-readable English description of the stat for documentation"
     },
     "WeirdCode": {
-      "type": "string"
+      "type": "string",
+      "description": "Alternate or legacy internal code reference"
     },
     "ItemSpecific": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this stat is stored per-item rather than per-character"
     }
   }
 }

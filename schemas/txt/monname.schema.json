@@ -1,13 +1,14 @@
 {
   "file": "monname.txt",
-  "description": "Auto-generated schema for monname.txt",
+  "description": "Monster name lookup table for display name references.",
   "columns": {
     "MonName": {
       "type": "ref",
       "target": "monname.txt",
       "targetColumn": "MonName",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Monster display name string used for in-game name lookup"
     }
   }
 }

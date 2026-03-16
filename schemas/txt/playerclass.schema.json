@@ -14,7 +14,8 @@
         "Sorceress"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name of the player character class"
     },
     "Code": {
       "type": "enum",
@@ -27,7 +28,7 @@
         "pal",
         "sor"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Three-letter player class code used in data references"
     }
   }
 }

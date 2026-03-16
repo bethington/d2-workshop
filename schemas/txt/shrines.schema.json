@@ -1,6 +1,6 @@
 {
   "file": "shrines.txt",
-  "description": "Shrine effect definitions \u2014 duration, stat modifiers, and visual effects.",
+  "description": "Shrine effect definitions — duration, stat modifiers, and visual effects.",
   "columns": {
     "Shrine Type": {
       "type": "enum",
@@ -10,39 +10,46 @@
         "None",
         "Recharge"
       ],
-      "required": true
+      "required": true,
+      "description": "Category of shrine effect (Magic, Booster, Recharge, or None)"
     },
     "Shrine name": {
-      "type": "string"
+      "type": "string",
+      "description": "Display name of the shrine shown to the player"
     },
     "Effect": {
-      "type": "string"
+      "type": "string",
+      "description": "Description of the shrine effect when activated"
     },
     "Code": {
       "type": "integer",
       "min": 0,
       "max": 22,
-      "description": "Unique 3-4 character item code"
+      "description": "Numeric shrine effect code identifier"
     },
     "Arg0": {
       "type": "integer",
       "min": 0,
-      "max": 400
+      "max": 400,
+      "description": "Primary parameter for the shrine effect (effect-specific value)"
     },
     "Arg1": {
       "type": "integer",
       "min": 0,
-      "max": 2000
+      "max": 2000,
+      "description": "Secondary parameter for the shrine effect (effect-specific value)"
     },
     "Duration in frames": {
       "type": "integer",
       "min": 0,
-      "max": 4800
+      "max": 4800,
+      "description": "How long the shrine effect lasts in game frames (25 frames = 1 second)"
     },
     "reset time in minutes": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Minutes before the shrine can be reactivated after use"
     },
     "rarity": {
       "type": "integer",
@@ -51,10 +58,12 @@
       "description": "Spawn rarity ratio (1/N chance)"
     },
     "view name": {
-      "type": "string"
+      "type": "string",
+      "description": "String key for the shrine hover text displayed to the player"
     },
     "niftyphrase": {
-      "type": "string"
+      "type": "string",
+      "description": "Flavor text string key shown when the shrine is activated"
     },
     "effectclass": {
       "type": "integer",

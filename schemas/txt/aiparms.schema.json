@@ -1,10 +1,11 @@
 {
   "file": "aiparms.txt",
-  "description": "Auto-generated schema for aiparms.txt",
+  "description": "AI behavior parameter descriptions used by monster AI routines.",
   "columns": {
     "Description of Ai Parameters": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Text description of the AI behavior parameter and its effect on monster behavior"
     }
   }
 }

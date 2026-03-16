@@ -22,7 +22,8 @@
         "Weapon"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Horadric Cube recipe item class name (e.g. Weapon, Armor, Ring)"
     },
     "Code": {
       "type": "enum",
@@ -42,7 +43,7 @@
         "swr",
         "wep"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the cube item class"
     }
   }
 }

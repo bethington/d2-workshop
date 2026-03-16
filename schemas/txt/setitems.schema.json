@@ -1,6 +1,6 @@
 {
   "file": "setitems.txt",
-  "description": "Set item definitions \u2014 individual and set bonus properties.",
+  "description": "Set item definitions — individual and set bonus properties.",
   "columns": {
     "Name": {
       "type": "string",
@@ -9,7 +9,8 @@
       "description": "Internal name identifier"
     },
     "Prefix": {
-      "type": "string"
+      "type": "string",
+      "description": "Name prefix string for the set item display name"
     },
     "level": {
       "type": "integer",
@@ -20,12 +21,14 @@
     "NumItems": {
       "type": "integer",
       "min": 3,
-      "max": 6
+      "max": 6,
+      "description": "Total number of items in the parent set"
     },
     "NumProperties": {
       "type": "integer",
       "min": 8,
-      "max": 16
+      "max": 16,
+      "description": "Total number of set bonus properties defined"
     },
     "transform": {
       "type": "integer",
@@ -57,7 +60,8 @@
         "Military Pick",
         "Saber",
         "Short War Bow"
-      ]
+      ],
+      "description": "Display name of set piece 1 base item type"
     },
     "Item1": {
       "type": "enum",
@@ -99,7 +103,8 @@
         "Tooth",
         "Visor",
         "Ward"
-      ]
+      ],
+      "description": "Display name suffix for set piece 1"
     },
     "ItemType2": {
       "type": "enum",
@@ -120,7 +125,8 @@
         "Splint Mail",
         "War Scepter",
         "War Staff"
-      ]
+      ],
+      "description": "Display name of set piece 2 base item type"
     },
     "Item2": {
       "type": "enum",
@@ -163,7 +169,8 @@
         "Shelter",
         "Spine",
         "Torch"
-      ]
+      ],
+      "description": "Display name suffix for set piece 2"
     },
     "ItemType3": {
       "type": "enum",
@@ -183,7 +190,8 @@
         "Ring",
         "Skull Cap",
         "War Sword"
-      ]
+      ],
+      "description": "Display name of set piece 3 base item type"
     },
     "Item3": {
       "type": "enum",
@@ -225,7 +233,8 @@
         "SignSI3S",
         "Touch",
         "Visage"
-      ]
+      ],
+      "description": "Display name suffix for set piece 3"
     },
     "ItemType4": {
       "type": "enum",
@@ -237,7 +246,8 @@
         "Light Gauntlets",
         "Light Plate",
         "Plate Boots"
-      ]
+      ],
+      "description": "Display name of set piece 4 base item type"
     },
     "Item4": {
       "type": "enum",
@@ -265,7 +275,8 @@
         "Snare",
         "Weird",
         "Wings"
-      ]
+      ],
+      "description": "Display name suffix for set piece 4"
     },
     "ItemType5": {
       "type": "enum",
@@ -273,7 +284,8 @@
         "Bone Helm",
         "Girdle",
         "Ring"
-      ]
+      ],
+      "description": "Display name of set piece 5 base item type"
     },
     "Item5": {
       "type": "enum",
@@ -290,17 +302,20 @@
         "Seal",
         "SkullSI5S",
         "Wrap"
-      ]
+      ],
+      "description": "Display name suffix for set piece 5"
     },
     "ItemType6": {
-      "type": "string"
+      "type": "string",
+      "description": "Display name of set piece 6 base item type"
     },
     "Item6": {
       "type": "string",
       "description": "Starting item 6 code"
     },
     "Item6Suffix": {
-      "type": "string"
+      "type": "string",
+      "description": "Display name suffix for set piece 6"
     },
     "PropertyMod1Code": {
       "type": "enum",
@@ -574,12 +589,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 1 (references Properties.txt)"
     },
     "PropertyMod1Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 1"
     },
     "PropertyMod1Min": {
       "type": "integer",
@@ -865,12 +882,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 2 (references Properties.txt)"
     },
     "PropertyMod2Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 2"
     },
     "PropertyMod2Min": {
       "type": "integer",
@@ -1156,12 +1175,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 3 (references Properties.txt)"
     },
     "PropertyMod3Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 3"
     },
     "PropertyMod3Min": {
       "type": "integer",
@@ -1447,12 +1468,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 4 (references Properties.txt)"
     },
     "PropertyMod4Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 4"
     },
     "PropertyMod4Min": {
       "type": "integer",
@@ -1738,12 +1761,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 5 (references Properties.txt)"
     },
     "PropertyMod5Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 5"
     },
     "PropertyMod5Min": {
       "type": "integer",
@@ -2029,12 +2054,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 6 (references Properties.txt)"
     },
     "PropertyMod6Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 6"
     },
     "PropertyMod6Min": {
       "type": "integer",
@@ -2320,12 +2347,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 7 (references Properties.txt)"
     },
     "PropertyMod7Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 7"
     },
     "PropertyMod7Min": {
       "type": "integer",
@@ -2611,12 +2640,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 8 (references Properties.txt)"
     },
     "PropertyMod8Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 8"
     },
     "PropertyMod8Min": {
       "type": "integer",
@@ -2902,12 +2933,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 9 (references Properties.txt)"
     },
     "PropertyMod9Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 9"
     },
     "PropertyMod9Min": {
       "type": "integer",
@@ -3193,12 +3226,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 10 (references Properties.txt)"
     },
     "PropertyMod10Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 10"
     },
     "PropertyMod10Min": {
       "type": "integer",
@@ -3484,12 +3519,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 11 (references Properties.txt)"
     },
     "PropertyMod11Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 11"
     },
     "PropertyMod11Min": {
       "type": "integer",
@@ -3775,12 +3812,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 12 (references Properties.txt)"
     },
     "PropertyMod12Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 12"
     },
     "PropertyMod12Min": {
       "type": "integer",
@@ -4066,12 +4105,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 13 (references Properties.txt)"
     },
     "PropertyMod13Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 13"
     },
     "PropertyMod13Min": {
       "type": "integer",
@@ -4357,12 +4398,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 14 (references Properties.txt)"
     },
     "PropertyMod14Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 14"
     },
     "PropertyMod14Min": {
       "type": "integer",
@@ -4648,12 +4691,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 15 (references Properties.txt)"
     },
     "PropertyMod15Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 15"
     },
     "PropertyMod15Min": {
       "type": "integer",
@@ -4939,12 +4984,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 16 (references Properties.txt)"
     },
     "PropertyMod16Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 16"
     },
     "PropertyMod16Min": {
       "type": "integer",
@@ -5230,12 +5277,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 17 (references Properties.txt)"
     },
     "PropertyMod17Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 17"
     },
     "PropertyMod17Min": {
       "type": "integer",
@@ -5521,12 +5570,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 18 (references Properties.txt)"
     },
     "PropertyMod18Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 18"
     },
     "PropertyMod18Min": {
       "type": "integer",
@@ -5812,12 +5863,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 19 (references Properties.txt)"
     },
     "PropertyMod19Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 19"
     },
     "PropertyMod19Min": {
       "type": "integer",
@@ -6103,12 +6156,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 20 (references Properties.txt)"
     },
     "PropertyMod20Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 20"
     },
     "PropertyMod20Min": {
       "type": "integer",
@@ -6394,12 +6449,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 21 (references Properties.txt)"
     },
     "PropertyMod21Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 21"
     },
     "PropertyMod21Min": {
       "type": "integer",
@@ -6685,12 +6742,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 22 (references Properties.txt)"
     },
     "PropertyMod22Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 22"
     },
     "PropertyMod22Min": {
       "type": "integer",
@@ -6976,12 +7035,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 23 (references Properties.txt)"
     },
     "PropertyMod23Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 23"
     },
     "PropertyMod23Min": {
       "type": "integer",
@@ -7267,12 +7328,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 24 (references Properties.txt)"
     },
     "PropertyMod24Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 24"
     },
     "PropertyMod24Min": {
       "type": "integer",
@@ -7558,12 +7621,14 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "description": "Property code for set bonus modifier 25 (references Properties.txt)"
     },
     "PropertyMod25Offset": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Parameter/offset value for set bonus modifier 25"
     },
     "PropertyMod25Min": {
       "type": "integer",

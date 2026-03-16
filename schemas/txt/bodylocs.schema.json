@@ -18,7 +18,8 @@
         "Torso"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Human-readable equipment slot name (e.g. Head, Torso, Belt)"
     },
     "Code": {
       "type": "enum",
@@ -34,7 +35,7 @@
         "rrin",
         "tors"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the body equipment slot"
     }
   }
 }

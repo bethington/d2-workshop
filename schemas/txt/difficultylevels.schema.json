@@ -1,6 +1,6 @@
 {
   "file": "difficultylevels.txt",
-  "description": "Difficulty scaling \u2014 resistance penalties, experience modifiers per difficulty.",
+  "description": "Difficulty scaling — resistance penalties, experience modifiers per difficulty.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -28,12 +28,14 @@
     "UberCodeOddsNormal": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Percentage chance of dropping exceptional (uber) items on normal monsters"
     },
     "UberCodeOddsGood": {
       "type": "integer",
       "min": 0,
-      "max": 40
+      "max": 40,
+      "description": "Percentage chance of dropping exceptional (uber) items on champion/unique monsters"
     },
     "MonsterSkillBonus": {
       "type": "integer",
@@ -44,17 +46,20 @@
     "MonsterFreezeDivisor": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Divisor reducing freeze duration on monsters in this difficulty"
     },
     "MonsterColdDivisor": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Divisor reducing cold effect duration on monsters in this difficulty"
     },
     "AiCurseDivisor": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Divisor reducing curse duration on monsters in this difficulty"
     }
   }
 }

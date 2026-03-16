@@ -1,11 +1,12 @@
 {
   "file": "gateways.txt",
-  "description": "Auto-generated schema for gateways.txt",
+  "description": "Battle.net gateway server list definitions.",
   "columns": {
     "[Server List Version]": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Battle.net gateway server list version and connection entries"
     }
   }
 }

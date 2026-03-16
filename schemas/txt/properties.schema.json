@@ -1,6 +1,6 @@
 {
   "file": "properties.txt",
-  "description": "Property definitions \u2014 maps property codes to stat functions used by affixes and uniques.",
+  "description": "Property definitions — maps property codes to stat functions used by affixes and uniques.",
   "columns": {
     "Code": {
       "type": "string",
@@ -9,10 +9,12 @@
       "description": "Unique property code identifier"
     },
     "Done": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this property definition is finalized"
     },
     "ModFuncOffset": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier function offset used to locate the stat application logic"
     },
     "Description": {
       "type": "string",
@@ -48,7 +50,8 @@
         "min amt",
         "min chance",
         "min count"
-      ]
+      ],
+      "description": "Description of what the minimum parameter value represents"
     },
     "Max": {
       "type": "enum",
@@ -60,7 +63,8 @@
         "max amt",
         "max chance",
         "max count"
-      ]
+      ],
+      "description": "Description of what the maximum parameter value represents"
     },
     "Additional Notes": {
       "type": "enum",
@@ -71,7 +75,8 @@
         "random chance from min to max is assigned to item",
         "regenerates 1 durability point per 100/lvl seconds",
         "regenerates 1 quantity per 100/lvl seconds"
-      ]
+      ],
+      "description": "Developer notes on how the property behaves or special calculation rules"
     }
   }
 }

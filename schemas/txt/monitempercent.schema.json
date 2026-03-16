@@ -13,18 +13,22 @@
       "description": "Internal name identifier"
     },
     "HeartPercent": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Percentage chance of dropping a heart component"
     },
     "BodyPartPercent": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Percentage chance of dropping a body part component"
     },
     "TreasureClassPercent": {
       "type": "integer",
       "min": 20,
-      "max": 20
+      "max": 20,
+      "description": "Percentage weight for treasure class item drops"
     },
     "ComponentPercent": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Percentage chance of dropping an equipment component"
     }
   }
 }

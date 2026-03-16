@@ -5,11 +5,12 @@
     "Transform Color": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name of the color transform palette"
     },
     "Code": {
       "type": "string",
-      "description": "Unique 3-4 character item code"
+      "description": "Short color transform code identifier"
     }
   }
 }

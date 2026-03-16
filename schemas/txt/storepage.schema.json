@@ -11,7 +11,8 @@
         "Weapons Page"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name of the NPC store inventory tab"
     },
     "Code": {
       "type": "enum",
@@ -21,7 +22,7 @@
         "misc",
         "weap"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the store page tab"
     }
   }
 }

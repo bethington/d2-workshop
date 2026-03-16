@@ -1,8 +1,8 @@
 {
   "file": "level.txt",
-  "description": "Auto-generated schema for level.txt",
+  "description": "Level name lookup table mapping level IDs to display strings and DC6 graphics.",
   "columns": {
-    "\u00ff\u00fe\"\u0000E\u0000n\u0000t\u0000e\u0000r\u0000i\u0000n\u0000g\u0000 \u0000T\u0000h\u0000e\u0000 \u0000P\u0000a\u0000n\u0000d\u0000e\u0000m\u0000o\u0000n\u0000i\u0000u\u0000m\u0000 \u0000F\u0000o\u0000r\u0000t\u0000r\u0000e\u0000s\u0000s\u0000\"\u0000,\u0000": {
+    "ÿþ\"\u0000E\u0000n\u0000t\u0000e\u0000r\u0000i\u0000n\u0000g\u0000 \u0000T\u0000h\u0000e\u0000 \u0000P\u0000a\u0000n\u0000d\u0000e\u0000m\u0000o\u0000n\u0000i\u0000u\u0000m\u0000 \u0000F\u0000o\u0000r\u0000t\u0000r\u0000e\u0000s\u0000s\u0000\"\u0000,\u0000": {
       "type": "enum",
       "values": [
         "\u0000",
@@ -14,13 +14,16 @@
         "\u0000\"\u0000E\u0000n\u0000t\u0000e\u0000r\u0000i\u0000n\u0000g\u0000 \u0000T\u0000h\u0000e\u0000 \u0000R\u0000i\u0000v\u0000e\u0000r\u0000 \u0000o\u0000f\u0000 \u0000F\u0000l\u0000a\u0000m\u0000e\u0000\"\u0000,\u0000"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Level display name string shown when entering the area"
     },
     "\u0000": {
-      "type": "string"
+      "type": "string",
+      "description": "Level name lookup value or separator field"
     },
     "\u0000A\u00004\u0000L\u00001\u0000.\u0000D\u0000C\u00006\u0000 \u0000 \u0000 \u0000 \u0000 \u0000\r\u0000": {
-      "type": "string"
+      "type": "string",
+      "description": "DC6 graphic file reference for the level loading screen"
     }
   }
 }

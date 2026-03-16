@@ -11,36 +11,43 @@
       "type": "integer",
       "min": 0,
       "max": 9,
-      "description": "Primary item type code (references ItemTypes.txt)"
+      "description": "Substitution type index controlling tile replacement behavior"
     },
     "File": {
-      "type": "string"
+      "type": "string",
+      "description": "DS1 map file path for the substitution tile"
     },
     "CheckAll": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to check all tiles before substituting or stop at first match"
     },
     "BordType": {
       "type": "integer",
       "min": -1,
-      "max": 2
+      "max": 2,
+      "description": "Border type for tile matching (-1 = any, 0 = none, 1-2 = specific edge types)"
     },
     "GridSize": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether substitution snaps to grid boundaries"
     },
     "Dt1Mask": {
       "type": "integer",
       "min": 0,
-      "max": 4194305
+      "max": 4194305,
+      "description": "Bitmask controlling which DT1 tile files are used for substitution"
     },
     "Prob0": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Probability weight (0-100) for substitution group 0"
     },
     "Trials0": {
       "type": "integer",
       "min": -1,
-      "max": 20
+      "max": 20,
+      "description": "Number of placement attempts for substitution group 0 (-1 = unlimited)"
     },
     "Max0": {
       "type": "integer",
@@ -51,12 +58,14 @@
     "Prob1": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Probability weight (0-100) for substitution group 1"
     },
     "Trials1": {
       "type": "integer",
       "min": -1,
-      "max": 10
+      "max": 10,
+      "description": "Number of placement attempts for substitution group 1 (-1 = unlimited)"
     },
     "Max1": {
       "type": "integer",
@@ -67,12 +76,14 @@
     "Prob2": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Probability weight (0-100) for substitution group 2"
     },
     "Trials2": {
       "type": "integer",
       "min": -1,
-      "max": 20
+      "max": 20,
+      "description": "Number of placement attempts for substitution group 2 (-1 = unlimited)"
     },
     "Max2": {
       "type": "integer",
@@ -83,12 +94,14 @@
     "Prob3": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Probability weight (0-100) for substitution group 3"
     },
     "Trials3": {
       "type": "integer",
       "min": -1,
-      "max": 20
+      "max": 20,
+      "description": "Number of placement attempts for substitution group 3 (-1 = unlimited)"
     },
     "Max3": {
       "type": "integer",
@@ -99,12 +112,14 @@
     "Prob4": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Probability weight (0-100) for substitution group 4"
     },
     "Trials4": {
       "type": "integer",
       "min": -1,
-      "max": 20
+      "max": 20,
+      "description": "Number of placement attempts for substitution group 4 (-1 = unlimited)"
     },
     "Max4": {
       "type": "integer",

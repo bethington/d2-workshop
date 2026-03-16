@@ -1,20 +1,23 @@
 {
   "file": "itemtypes.txt",
-  "description": "Item type hierarchy \u2014 defines equipment categories, socket rules, and class restrictions.",
+  "description": "Item type hierarchy — defines equipment categories, socket rules, and class restrictions.",
   "columns": {
     "ItemType": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Display name of the item type category"
     },
     "Code": {
       "type": "string",
       "description": "Unique 3-4 character item code"
     },
     "Order": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Sort order priority for inventory display"
     },
     "Equiv1": {
-      "type": "string"
+      "type": "string",
+      "description": "Primary parent item type code in the type hierarchy"
     },
     "Equiv2": {
       "type": "enum",
@@ -32,17 +35,20 @@
         "sorc",
         "spea",
         "thro"
-      ]
+      ],
+      "description": "Secondary parent item type code in the type hierarchy"
     },
     "Identify": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether items of this type require identification"
     },
     "Repair": {
       "type": "boolean",
       "description": "Item can be repaired"
     },
     "Mods": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether items of this type can receive magical modifiers"
     },
     "Body": {
       "type": "boolean",
@@ -87,43 +93,52 @@
       "values": [
         "bowq",
         "xboq"
-      ]
+      ],
+      "description": "Ammunition item type code this weapon fires (e.g. bowq, xboq)"
     },
     "Quiver": {
       "type": "enum",
       "values": [
         "bow",
         "xbow"
-      ]
+      ],
+      "description": "Weapon type code this ammo is used with (e.g. bow, xbow)"
     },
     "Throwable": {
       "type": "boolean",
       "description": "Item can be thrown"
     },
     "Reload": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this item type auto-reloads ammunition from inventory"
     },
     "ReEquip": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this item type auto-re-equips when quantity is replenished"
     },
     "AutoStack": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this item type automatically stacks in inventory"
     },
     "Magic": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether items of this type can spawn as magic quality"
     },
     "Rare": {
       "type": "boolean",
       "description": "Can spawn as rare quality"
     },
     "Normal": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether items of this type can spawn as normal quality"
     },
     "Charm": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this item type functions as a charm (passive effect in inventory)"
     },
     "Gem": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this item type functions as a gem/rune for socketing"
     },
     "Beltable": {
       "type": "boolean",
@@ -132,17 +147,20 @@
     "MaxSock1": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Maximum number of sockets for items at low level (1-25)"
     },
     "MaxSock25": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Maximum number of sockets for items at mid level (25-40)"
     },
     "MaxSock40": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Maximum number of sockets for items at high level (40+)"
     },
     "TreasureClass": {
       "type": "boolean",
@@ -169,7 +187,8 @@
     "CostFormula": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)"
     },
     "Class": {
       "type": "enum",

@@ -7,40 +7,48 @@
       "target": "arena.txt",
       "targetColumn": "Deathmatch",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Arena mode type identifier (e.g. Deathmatch)"
     },
     "Suicide": {
       "type": "integer",
       "min": -6,
-      "max": -6
+      "max": -6,
+      "description": "Score penalty applied when a player kills themselves"
     },
     "PlayerKill": {
       "type": "integer",
       "min": 2,
-      "max": 2
+      "max": 2,
+      "description": "Score awarded for killing another player"
     },
     "PlayerKillPercent": {
       "type": "integer",
       "min": 10,
-      "max": 10
+      "max": 10,
+      "description": "Percentage of victim score transferred to killer on player kill"
     },
     "MonsterKill": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Score awarded for killing a monster in arena mode"
     },
     "PlayerDeath": {
       "type": "integer",
       "min": -2,
-      "max": -2
+      "max": -2,
+      "description": "Score penalty applied when a player is killed by another player"
     },
     "PlayerDeathPercent": {
       "type": "integer",
       "min": -10,
-      "max": -10
+      "max": -10,
+      "description": "Percentage of score lost when killed by another player"
     },
     "MonsterDeath": {
       "type": "integer",
       "min": -1,
-      "max": -1
+      "max": -1,
+      "description": "Score penalty applied when killed by a monster in arena mode"
     }
   }
 }

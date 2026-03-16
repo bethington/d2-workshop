@@ -19,7 +19,8 @@
         "Stun"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name of the elemental damage type"
     },
     "Code": {
       "type": "enum",
@@ -36,7 +37,7 @@
         "stam",
         "stun"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short element type code used in formulas and data references"
     }
   }
 }

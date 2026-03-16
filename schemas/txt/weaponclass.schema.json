@@ -22,7 +22,8 @@
         "Two Hand-to-Hand"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Display name of the weapon animation class"
     },
     "Code": {
       "type": "enum",
@@ -42,7 +43,7 @@
         "stf",
         "xbw"
       ],
-      "description": "Unique 3-4 character item code"
+      "description": "Short code for the weapon animation class"
     }
   }
 }

@@ -1,10 +1,11 @@
 {
   "file": "a1npc.txt",
-  "description": "Auto-generated schema for a1npc.txt",
+  "description": "NPC vendor buy/sell/repair multiplier definitions for Act 1.",
   "columns": {
-    "\u00ff\u00fe/\u0000/\u0000D\u0000I\u0000A\u0000B\u0000L\u0000O\u0000 \u0000I\u0000I\u0000\r\u0000": {
+    "ÿþ/\u0000/\u0000D\u0000I\u0000A\u0000B\u0000L\u0000O\u0000 \u0000I\u0000I\u0000\r\u0000": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "File header and NPC vendor configuration data for Act 1 NPCs"
     }
   }
 }

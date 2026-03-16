@@ -1,6 +1,6 @@
 {
   "file": "superuniques.txt",
-  "description": "Super unique monster definitions \u2014 named bosses with fixed spawn locations.",
+  "description": "Super unique monster definitions — named bosses with fixed spawn locations.",
   "columns": {
     "Name": {
       "type": "string",
@@ -12,22 +12,25 @@
       "type": "integer",
       "min": 0,
       "max": 409,
-      "description": "Character class restriction"
+      "description": "Monster class index (references monstats.txt Id)"
     },
     "Mod1": {
       "type": "integer",
       "min": 5,
-      "max": 30
+      "max": 30,
+      "description": "First unique monster modifier index (references MonUMod.txt)"
     },
     "Mod2": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Second unique monster modifier index (references MonUMod.txt, 0 = none)"
     },
     "Mod3": {
       "type": "integer",
       "min": 0,
-      "max": 24
+      "max": 24,
+      "description": "Third unique monster modifier index (references MonUMod.txt, 0 = none)"
     },
     "MinGrp": {
       "type": "integer",
