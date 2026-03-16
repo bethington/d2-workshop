@@ -4,6 +4,7 @@ import * as fs from "fs";
 import { SaveQueue, computeTableDiffs } from "../mod/save-queue";
 import { getWebviewContent } from "./webview-utils";
 import { parseTBL, encodeTBL, tblToTabDelimited, tabDelimitedToTbl } from "../dc6/tbl-parser";
+import { parseAnimData, speedToFPS, ANIMATION_EVENT_NAMES } from "../dc6/animdata-parser";
 
 interface TxtSchema {
   file: string;
@@ -85,6 +86,7 @@ export class TableEditorProvider
     const fileName = this.getFileName(document.uri);
     const schema = this.loadSchema(fileName);
     const isTbl = fileName.toLowerCase().endsWith(".tbl");
+    const isAnimData = fileName.toLowerCase() === "animdata.d2";
     let text: string;
 
     try {
@@ -93,7 +95,22 @@ export class TableEditorProvider
       );
       const data = await vscode.workspace.fs.readFile(document.uri);
 
-      if (isTbl) {
+      if (isAnimData) {
+        // Parse AnimData.d2 and convert to tab-delimited
+        const animData = parseAnimData(data);
+        const lines = ["Name\tFrames/Dir\tSpeed\tFPS\tEvents"];
+        for (const [name, records] of animData.records) {
+          for (const rec of records) {
+            const fps = speedToFPS(rec.speed).toFixed(1);
+            const events = Array.from(rec.events.entries())
+              .map(([frame, evt]) => `${frame}:${ANIMATION_EVENT_NAMES[evt] || evt}`)
+              .join(",") || "";
+            lines.push(`${name}\t${rec.framesPerDirection}\t${rec.speed}\t${fps}\t${events}`);
+          }
+        }
+        text = lines.join("\r\n") + "\r\n";
+        console.log(`[D2 Workshop] AnimData parsed: ${animData.totalRecords} records for ${fileName}`);
+      } else if (isTbl) {
         // Parse binary TBL and convert to tab-delimited for the editor
         const tbl = parseTBL(data);
         text = tblToTabDelimited(tbl.entries);

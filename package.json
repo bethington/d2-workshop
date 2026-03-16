@@ -54,6 +54,9 @@
           },
           {
             "filenamePattern": "*.tbl"
+          },
+          {
+            "filenamePattern": "*.d2"
           }
         ],
         "priority": "option"

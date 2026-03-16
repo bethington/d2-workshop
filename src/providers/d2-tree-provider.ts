@@ -83,7 +83,7 @@ export class D2TreeItem extends vscode.TreeItem {
         `d2mpq://${encodeURIComponent(mpqName)}/${mpqInternalPath}`
       );
 
-      if (fileType === D2FileType.Txt || fileType === D2FileType.Tbl) {
+      if (fileType === D2FileType.Txt || fileType === D2FileType.Tbl || fileType === D2FileType.D2) {
         this.command = {
           command: "vscode.openWith",
           title: "Open Table",
