@@ -897,11 +897,11 @@
       "max": 1
     },
     "mod3min": {
-      "type": "string",
+      "type": "integer",
       "description": "Modifier 3 minimum value"
     },
     "mod3max": {
-      "type": "string",
+      "type": "integer",
       "description": "Modifier 3 maximum value"
     },
     "effect1": {

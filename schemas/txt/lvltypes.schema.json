@@ -1,6 +1,6 @@
 {
   "file": "lvltypes.txt",
-  "description": "Level visual type definitions — tileset assignments and lighting.",
+  "description": "Level visual type definitions \u00e2\u20ac\u201d tileset assignments and lighting.",
   "columns": {
     "Name": {
       "type": "string",
@@ -362,16 +362,16 @@
       "description": "DT1 tileset file path 29"
     },
     "File 30": {
-      "type": "boolean",
-      "description": "DT1 tileset file path 30"
+      "type": "string",
+      "description": "DT1 tileset file path (File 30)"
     },
     "File 31": {
-      "type": "boolean",
-      "description": "DT1 tileset file path 31"
+      "type": "string",
+      "description": "DT1 tileset file path (File 31)"
     },
     "File 32": {
-      "type": "boolean",
-      "description": "DT1 tileset file path 32"
+      "type": "string",
+      "description": "DT1 tileset file path (File 32)"
     },
     "Beta": {
       "type": "boolean",

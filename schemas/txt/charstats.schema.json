@@ -290,8 +290,8 @@
       "max": 1
     },
     "item6": {
-      "type": "boolean",
-      "description": "Starting item 6 code"
+      "type": "string",
+      "description": "Starting item 6 code (empty if unused)"
     },
     "item6loc": {
       "type": "integer",
@@ -306,8 +306,8 @@
       "max": 1
     },
     "item7": {
-      "type": "boolean",
-      "description": "Starting item 7 code"
+      "type": "string",
+      "description": "Starting item 7 code (empty if unused)"
     },
     "item7loc": {
       "type": "integer",
@@ -322,8 +322,8 @@
       "max": 1
     },
     "item8": {
-      "type": "boolean",
-      "description": "Starting item 8 code"
+      "type": "string",
+      "description": "Starting item 8 code (empty if unused)"
     },
     "item8loc": {
       "type": "integer",
@@ -338,8 +338,8 @@
       "max": 1
     },
     "item9": {
-      "type": "boolean",
-      "description": "Starting item 9 code"
+      "type": "string",
+      "description": "Starting item 9 code (empty if unused)"
     },
     "item9loc": {
       "type": "integer",
@@ -354,8 +354,8 @@
       "max": 1
     },
     "item10": {
-      "type": "boolean",
-      "description": "Starting item 10 code"
+      "type": "string",
+      "description": "Starting item 0 code (empty if unused)"
     },
     "item10loc": {
       "type": "integer",

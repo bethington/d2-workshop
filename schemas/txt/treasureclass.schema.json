@@ -3,10 +3,9 @@
   "description": "Legacy treasure class definitions (pre-expansion).",
   "columns": {
     "TreasureClass": {
-      "type": "ref",
-      "target": "treasureclass.txt",
-      "targetColumn": "TreasureClass",
+      "type": "string",
       "required": true,
+      "unique": true,
       "description": "Item drop classification reference"
     },
     "Beta": {

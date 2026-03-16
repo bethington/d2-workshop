@@ -1,11 +1,9 @@
 {
   "file": "npc.txt",
-  "description": "NPC trade inventory definitions — item types and quantities per NPC.",
+  "description": "NPC trade inventory definitions \u00e2\u20ac\u201d item types and quantities per NPC.",
   "columns": {
     "npc": {
-      "type": "ref",
-      "target": "npc.txt",
-      "targetColumn": "npc",
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Name of the NPC vendor"
@@ -77,20 +75,24 @@
       "description": "Repair multiplier when quest B completed (1024=100%)"
     },
     "questflag C": {
-      "type": "string",
-      "description": "Third quest flag for modified prices"
+      "type": "integer",
+      "description": "Third quest flag for modified prices",
+      "min": 0
     },
     "questbuymult C": {
-      "type": "string",
-      "description": "Buy multiplier when quest C completed (1024=100%)"
+      "type": "integer",
+      "description": "Buy multiplier when quest C completed (1024=100%)",
+      "min": 0
     },
     "questsellmult C": {
-      "type": "string",
-      "description": "Sell multiplier when quest C completed (1024=100%)"
+      "type": "integer",
+      "description": "Sell multiplier when quest C completed (1024=100%)",
+      "min": 0
     },
     "questrepmult C": {
-      "type": "string",
-      "description": "Repair multiplier when quest C completed (1024=100%)"
+      "type": "integer",
+      "description": "Repair multiplier when quest C completed (1024=100%)",
+      "min": 0
     },
     "max buy": {
       "type": "integer",

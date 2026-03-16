@@ -1,6 +1,6 @@
 {
   "file": "monsounds.txt",
-  "description": "Monster sound assignments — maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
+  "description": "Monster sound assignments \u00e2\u20ac\u201d maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
   "columns": {
     "Id": {
       "type": "string",
@@ -11,13 +11,13 @@
     "Attack1": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Primary attack sound effect"
     },
     "Weapon1": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Primary weapon impact sound effect"
     },
     "Att1Del": {
@@ -39,13 +39,13 @@
     "Attack2": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Secondary attack sound effect"
     },
     "Weapon2": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Secondary weapon impact sound effect"
     },
     "Att2Del": {
@@ -67,13 +67,13 @@
     "HitSound": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Sound effect when monster is hit"
     },
     "DeathSound": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Sound effect when monster dies"
     },
     "HitDelay": {
@@ -87,37 +87,37 @@
     "Skill1": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Skill 1 sound effect"
     },
     "Skill2": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Skill 2 sound effect"
     },
     "Skill3": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Skill 3 sound effect"
     },
     "Skill4": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Skill 4 sound effect"
     },
     "Footstep": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Footstep sound effect"
     },
     "FootstepLayer": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Footstep layered/secondary sound effect"
     },
     "FsCnt": {
@@ -135,7 +135,7 @@
     "Neutral": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Ambient/neutral idle sound effect"
     },
     "NeuTime": {
@@ -145,19 +145,19 @@
     "Init": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Initialization/spawn sound effect"
     },
     "Taunt": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Taunt/aggro sound effect"
     },
     "Flee": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Flee/retreat sound effect"
     },
     "CvtMo1": {
@@ -167,7 +167,7 @@
     "CvtSk1": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Conversion skill 1 sound effect"
     },
     "CvtTgt1": {
@@ -181,7 +181,7 @@
     "CvtSk2": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Conversion skill 2 sound effect"
     },
     "CvtTgt2": {
@@ -195,7 +195,7 @@
     "CvtSk3": {
       "type": "ref",
       "target": "sounds.txt",
-      "targetColumn": "Sound",
+      "targetColumn": "Handle",
       "description": "Conversion skill 3 sound effect"
     },
     "CvtTgt3": {

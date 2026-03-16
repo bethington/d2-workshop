@@ -3,12 +3,10 @@
   "description": "Monster name lookup table for display name references.",
   "columns": {
     "MonName": {
-      "type": "ref",
-      "target": "monname.txt",
-      "targetColumn": "MonName",
+      "type": "string",
       "required": true,
       "unique": true,
-      "description": "Monster display name string used for in-game name lookup"
+      "description": "Monster name string"
     }
   }
 }

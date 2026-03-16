@@ -1,6 +1,6 @@
 {
   "file": "books.txt",
-  "description": "Tome and book item definitions — scroll/book spell codes and costs.",
+  "description": "Tome and book item definitions \u00e2\u20ac\u201d scroll/book spell codes and costs.",
   "columns": {
     "Name": {
       "type": "string",
@@ -37,8 +37,9 @@
       "description": "Item code for the tome/book version of this spell"
     },
     "SpellOffset": {
-      "type": "boolean",
-      "description": "Spell effect offset index"
+      "type": "integer",
+      "description": "Spell effect offset index",
+      "min": 0
     },
     "SpellIcon": {
       "type": "integer",
@@ -47,12 +48,14 @@
       "description": "Spell icon graphic index (-1 = none)"
     },
     "SkillScrollOffset": {
-      "type": "boolean",
-      "description": "Skill index offset for scroll spell lookup"
+      "type": "integer",
+      "description": "Skill index offset for scroll spell lookup",
+      "min": 0
     },
     "SkillBookOffset": {
-      "type": "boolean",
-      "description": "Skill index offset for book spell lookup"
+      "type": "integer",
+      "description": "Skill index offset for book spell lookup",
+      "min": 0
     },
     "BaseCost": {
       "type": "integer",

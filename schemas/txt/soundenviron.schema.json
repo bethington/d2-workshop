@@ -133,8 +133,9 @@
       "description": "EAX late reverb delay in milliseconds"
     },
     "EAX Room Roll": {
-      "type": "boolean",
-      "description": "EAX room rolloff factor for distance attenuation"
+      "type": "integer",
+      "description": "EAX room rolloff factor for distance attenuation",
+      "min": 0
     },
     "EAX Air Absorb": {
       "type": "integer",

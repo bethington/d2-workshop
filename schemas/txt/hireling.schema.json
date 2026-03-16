@@ -1,12 +1,11 @@
 {
   "file": "hireling.txt",
-  "description": "Mercenary definitions — stats, skills, level progression, and hiring costs per act and difficulty.",
+  "description": "Mercenary definitions \u00e2\u20ac\u201d stats, skills, level progression, and hiring costs per act and difficulty.",
   "columns": {
     "Hireling": {
-      "type": "ref",
-      "target": "hireling.txt",
-      "targetColumn": "Hireling",
+      "type": "string",
       "required": true,
+      "unique": true,
       "description": "Hireling type identifier"
     },
     "SubType": {
@@ -251,19 +250,10 @@
       "description": "Skill 1 level per character level"
     },
     "Skill2": {
-      "type": "enum",
-      "values": [
-        "Blessed Aim",
-        "Cold Arrow",
-        "Defiance",
-        "Fire Arrow",
-        "Fire Ball",
-        "Frozen Armor",
-        "Lightning",
-        "Prayer",
-        "Stun"
-      ],
-      "description": "Skill 2 reference"
+      "type": "ref",
+      "description": "Skill 2 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode2": {
       "type": "integer",
@@ -296,14 +286,10 @@
       "description": "Skill 2 level per character level"
     },
     "Skill3": {
-      "type": "enum",
-      "values": [
-        "Holy Freeze",
-        "Ice Blast",
-        "Might",
-        "Thorns"
-      ],
-      "description": "Skill 3 reference"
+      "type": "ref",
+      "description": "Skill 3 reference",
+      "target": "skills.txt",
+      "targetColumn": "skill"
     },
     "Mode3": {
       "type": "integer",

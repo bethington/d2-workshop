@@ -3,9 +3,7 @@
   "description": "PvP arena configuration definitions.",
   "columns": {
     "Arena": {
-      "type": "ref",
-      "target": "arena.txt",
-      "targetColumn": "Deathmatch",
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Arena mode type identifier (e.g. Deathmatch)"

@@ -596,8 +596,9 @@
       "description": "Modifier 2 maximum value"
     },
     "ToHitMin": {
-      "type": "boolean",
-      "description": "tohit minimum value"
+      "type": "integer",
+      "description": "tohit minimum value",
+      "min": 0
     },
     "ToHitMax": {
       "type": "integer",

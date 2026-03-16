@@ -29,8 +29,9 @@
       "description": "Base item level"
     },
     "maxlevel": {
-      "type": "string",
-      "description": "Maximum level this can appear"
+      "type": "integer",
+      "description": "Maximum level this can appear",
+      "min": 0
     },
     "levelreq": {
       "type": "integer",
@@ -43,8 +44,9 @@
       "description": "Character class restriction"
     },
     "classlevelreq": {
-      "type": "string",
-      "description": "Class-specific level requirement"
+      "type": "integer",
+      "description": "Class-specific level requirement",
+      "min": 0
     },
     "frequency": {
       "type": "integer",
@@ -627,8 +629,9 @@
       "description": "Modifier 2 property code"
     },
     "mod2param": {
-      "type": "string",
-      "description": "Modifier 2 parameter value"
+      "type": "integer",
+      "description": "Modifier 2 parameter value",
+      "min": 0
     },
     "mod2min": {
       "type": "integer",
@@ -918,8 +921,9 @@
       ]
     },
     "mod3param": {
-      "type": "string",
-      "description": "Modifier 3 parameter value"
+      "type": "integer",
+      "description": "Modifier 3 parameter value",
+      "min": 0
     },
     "mod3min": {
       "type": "integer",
@@ -948,42 +952,63 @@
       "description": "Color transform palette index"
     },
     "itype1": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 1"
     },
     "itype2": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 2"
     },
     "itype3": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 3"
     },
     "itype4": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 4"
     },
     "itype5": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 5"
     },
     "itype6": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Required item type 6"
     },
     "itype7": {
-      "type": "string"
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Required item type 7"
     },
     "etype1": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Excluded item type 1"
     },
     "etype2": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Excluded item type 2"
     },
     "etype3": {
-      "type": "string",
+      "type": "ref",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code",
       "description": "Excluded item type 3"
     },
     "divide": {

@@ -30,11 +30,12 @@
       "type": "integer",
       "min": 3,
       "max": 9,
-      "description": "Base item level"
+      "description": "Starting character level"
     },
     "Act": {
-      "type": "string",
-      "description": "Act number (1-5)"
+      "type": "integer",
+      "description": "Act number (1-5)",
+      "min": 0
     },
     "Class": {
       "type": "enum",
@@ -111,7 +112,8 @@
       "max": 56
     },
     "ManaRegenBonus": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Velocity": {
       "type": "integer",
@@ -129,7 +131,8 @@
       "max": 100
     },
     "RightSkill": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Total Skills": {
       "type": "integer",
@@ -137,7 +140,7 @@
       "max": 4
     },
     "SkillName": {
-      "type": "boolean"
+      "type": "string"
     },
     "Skill1": {
       "type": "integer",
@@ -157,56 +160,71 @@
       "description": "Skill 2 reference"
     },
     "SkillLevel2": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill3": {
-      "type": "boolean",
-      "description": "Skill 3 reference"
+      "type": "integer",
+      "description": "Skill 3 reference",
+      "min": 0
     },
     "SkillLevel3": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill4": {
-      "type": "boolean",
-      "description": "Skill 4 reference"
+      "type": "integer",
+      "description": "Skill 4 reference",
+      "min": 0
     },
     "SkillLevel4": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill5": {
-      "type": "boolean",
-      "description": "Skill 5 reference"
+      "type": "integer",
+      "description": "Skill 5 reference",
+      "min": 0
     },
     "SkillLevel5": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill6": {
-      "type": "boolean",
-      "description": "Skill 6 reference"
+      "type": "integer",
+      "description": "Skill 6 reference",
+      "min": 0
     },
     "SkillLevel6": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill7": {
-      "type": "boolean",
-      "description": "Skill 7 reference"
+      "type": "integer",
+      "description": "Skill 7 reference",
+      "min": 0
     },
     "SkillLevel7": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill8": {
-      "type": "boolean",
-      "description": "Skill 8 reference"
+      "type": "integer",
+      "description": "Skill 8 reference",
+      "min": 0
     },
     "SkillLevel8": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "Skill9": {
-      "type": "boolean",
-      "description": "Skill 9 reference"
+      "type": "integer",
+      "description": "Skill 9 reference",
+      "min": 0
     },
     "SkillLevel9": {
-      "type": "boolean"
+      "type": "integer",
+      "min": 0
     },
     "baseWClass": {
       "type": "string"
@@ -263,7 +281,7 @@
       "max": 1
     },
     "item3": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 3 code"
     },
     "item3loc": {
@@ -279,7 +297,7 @@
       "max": 1
     },
     "item4": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 4 code"
     },
     "item4loc": {
@@ -295,7 +313,7 @@
       "max": 1
     },
     "item5": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 5 code"
     },
     "item5loc": {
@@ -311,7 +329,7 @@
       "max": 1
     },
     "item6": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 6 code"
     },
     "item6loc": {
@@ -327,7 +345,7 @@
       "max": 1
     },
     "item7": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 7 code"
     },
     "item7loc": {
@@ -343,7 +361,7 @@
       "max": 1
     },
     "item8": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 8 code"
     },
     "item8loc": {
@@ -359,7 +377,7 @@
       "max": 1
     },
     "item9": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 9 code"
     },
     "item9loc": {
@@ -375,7 +393,7 @@
       "max": 1
     },
     "item10": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 10 code"
     },
     "item10loc": {
@@ -391,7 +409,7 @@
       "max": 1
     },
     "item11": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 11 code"
     },
     "item11loc": {
@@ -407,7 +425,7 @@
       "max": 1
     },
     "item12": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 12 code"
     },
     "item12loc": {
@@ -423,7 +441,7 @@
       "max": 1
     },
     "item13": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 13 code"
     },
     "item13loc": {
@@ -439,7 +457,7 @@
       "max": 1
     },
     "item14": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 14 code"
     },
     "item14loc": {
@@ -455,7 +473,7 @@
       "max": 1
     },
     "item15": {
-      "type": "boolean",
+      "type": "string",
       "description": "Starting item 15 code"
     },
     "item15loc": {

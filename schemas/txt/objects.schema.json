@@ -1,6 +1,6 @@
 {
   "file": "objects.txt",
-  "description": "Game object definitions — shrines, chests, doors, waypoints, and interactive objects.",
+  "description": "Game object definitions \u00e2\u20ac\u201d shrines, chests, doors, waypoints, and interactive objects.",
   "columns": {
     "Name": {
       "type": "string",
@@ -346,12 +346,14 @@
       "description": "Whether clicking uses kick mode (1) or neutral mode (0)"
     },
     "Start0": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 0"
+      "type": "integer",
+      "description": "Starting animation frame for mode 0",
+      "min": 0
     },
     "Start1": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 1"
+      "type": "integer",
+      "description": "Starting animation frame for mode 1",
+      "min": 0
     },
     "Start2": {
       "type": "integer",
@@ -366,20 +368,24 @@
       "description": "Starting animation frame for mode 3"
     },
     "Start4": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 4"
+      "type": "integer",
+      "description": "Starting animation frame for mode 4",
+      "min": 0
     },
     "Start5": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 5"
+      "type": "integer",
+      "description": "Starting animation frame for mode 5",
+      "min": 0
     },
     "Start6": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 6"
+      "type": "integer",
+      "description": "Starting animation frame for mode 6",
+      "min": 0
     },
     "Start7": {
-      "type": "boolean",
-      "description": "Starting animation frame for mode 7"
+      "type": "integer",
+      "description": "Starting animation frame for mode 7",
+      "min": 0
     },
     "EnvEffect": {
       "type": "boolean",
@@ -459,49 +465,49 @@
     },
     "Mode0": {
       "type": "integer",
-      "description": "Skill 0 usage mode",
+      "description": "Object animation mode 0 enabled",
       "min": 0,
       "max": 1
     },
     "Mode1": {
       "type": "integer",
-      "description": "Skill 1 usage mode",
+      "description": "Object animation mode 1 enabled",
       "min": 0,
       "max": 1
     },
     "Mode2": {
       "type": "integer",
-      "description": "Skill 2 usage mode",
+      "description": "Object animation mode 2 enabled",
       "min": 0,
       "max": 1
     },
     "Mode3": {
       "type": "integer",
-      "description": "Skill 3 usage mode",
+      "description": "Object animation mode 3 enabled",
       "min": 0,
       "max": 1
     },
     "Mode4": {
       "type": "integer",
-      "description": "Skill 4 usage mode",
+      "description": "Object animation mode 4 enabled",
       "min": 0,
       "max": 1
     },
     "Mode5": {
       "type": "integer",
-      "description": "Skill 5 usage mode",
+      "description": "Object animation mode 5 enabled",
       "min": 0,
       "max": 1
     },
     "Mode6": {
       "type": "integer",
-      "description": "Skill 6 usage mode",
+      "description": "Object animation mode 6 enabled",
       "min": 0,
       "max": 1
     },
     "Mode7": {
       "type": "integer",
-      "description": "Skill 7 usage mode",
+      "description": "Object animation mode 7 enabled",
       "min": 0,
       "max": 1
     },
