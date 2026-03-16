@@ -38,13 +38,15 @@
       "type": "boolean"
     },
     "Repair": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item can be repaired"
     },
     "Mods": {
       "type": "boolean"
     },
     "Body": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Equippable on body slot"
     },
     "BodyLoc1": {
       "type": "enum",
@@ -57,7 +59,8 @@
         "rarm",
         "rrin",
         "tors"
-      ]
+      ],
+      "description": "Primary equipment slot location"
     },
     "BodyLoc2": {
       "type": "enum",
@@ -70,7 +73,8 @@
         "lrin",
         "neck",
         "tors"
-      ]
+      ],
+      "description": "Secondary equipment slot location"
     },
     "Shoots": {
       "type": "enum",
@@ -87,7 +91,8 @@
       ]
     },
     "Throwable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item can be thrown"
     },
     "Reload": {
       "type": "boolean"
@@ -102,7 +107,8 @@
       "type": "boolean"
     },
     "Rare": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can spawn as rare quality"
     },
     "Normal": {
       "type": "boolean"
@@ -114,7 +120,8 @@
       "type": "boolean"
     },
     "Beltable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can be placed in belt"
     },
     "MaxSock1": {
       "type": "integer",
@@ -132,7 +139,8 @@
       "max": 6
     },
     "TreasureClass": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item drop classification reference"
     },
     "Rarity": {
       "type": "integer",
@@ -149,7 +157,8 @@
         "nec",
         "pal",
         "sor"
-      ]
+      ],
+      "description": "Staff auto-mod skill group"
     },
     "CostFormula": {
       "type": "integer",
@@ -172,7 +181,8 @@
     "VarInvGfx": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Number of inventory graphic variations"
     },
     "InvGfx1": {
       "type": "enum",
@@ -183,7 +193,8 @@
         "invch3",
         "invjw1",
         "invrin1"
-      ]
+      ],
+      "description": "Inventory graphic variation 1"
     },
     "InvGfx2": {
       "type": "enum",
@@ -194,7 +205,8 @@
         "invch6",
         "invjw2",
         "invrin2"
-      ]
+      ],
+      "description": "Inventory graphic variation 2"
     },
     "InvGfx3": {
       "type": "enum",
@@ -205,24 +217,28 @@
         "invch9",
         "invjw3",
         "invrin3"
-      ]
+      ],
+      "description": "Inventory graphic variation 3"
     },
     "InvGfx4": {
       "type": "enum",
       "values": [
         "invjw4",
         "invrin4"
-      ]
+      ],
+      "description": "Inventory graphic variation 4"
     },
     "InvGfx5": {
       "type": "enum",
       "values": [
         "invjw5",
         "invrin5"
-      ]
+      ],
+      "description": "Inventory graphic variation 5"
     },
     "InvGfx6": {
-      "type": "string"
+      "type": "string",
+      "description": "Inventory graphic variation 6"
     },
     "StorePage": {
       "type": "enum",
@@ -231,7 +247,8 @@
         "mag",
         "misc",
         "weap"
-      ]
+      ],
+      "description": "NPC store tab page"
     }
   }
 }

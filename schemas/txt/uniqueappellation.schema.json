@@ -9,112 +9,148 @@
       "description": "Internal name identifier"
     },
     "MonType1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 1 reference"
     },
     "MonType2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 2 reference"
     },
     "MonType3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 3 reference"
     },
     "MonType4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 4 reference"
     },
     "MonType5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 5 reference"
     },
     "MonType6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 6 reference"
     },
     "MonType7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 7 reference"
     },
     "MonType8": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 8 reference"
     },
     "MonType9": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 9 reference"
     },
     "MonType10": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 10 reference"
     },
     "MonType11": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 11 reference"
     },
     "MonType12": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 12 reference"
     },
     "MonType13": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 13 reference"
     },
     "MonType14": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 14 reference"
     },
     "MonType15": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 15 reference"
     },
     "MonType16": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 16 reference"
     },
     "MonType17": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 17 reference"
     },
     "MonType18": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 18 reference"
     },
     "MonType19": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 19 reference"
     },
     "MonType20": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 20 reference"
     },
     "MonType21": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 21 reference"
     },
     "MonType22": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 22 reference"
     },
     "MonType23": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 23 reference"
     },
     "MonType24": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 24 reference"
     },
     "MonType25": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 25 reference"
     },
     "MonType26": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 26 reference"
     },
     "MonType27": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 27 reference"
     },
     "MonType28": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 28 reference"
     },
     "MonType29": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 29 reference"
     },
     "MonType30": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 30 reference"
     },
     "MonType31": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 31 reference"
     },
     "MonType32": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 32 reference"
     },
     "MonType33": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 33 reference"
     },
     "MonType34": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 34 reference"
     },
     "MonType35": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 35 reference"
     },
     "MonType36": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Monster type 36 reference"
     }
   }
 }

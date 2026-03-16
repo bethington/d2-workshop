@@ -10,7 +10,8 @@
     "Picks": {
       "type": "integer",
       "min": -3,
-      "max": 7
+      "max": 7,
+      "description": "Number of items picked from this class"
     },
     "Unique": {
       "type": "integer",
@@ -26,7 +27,8 @@
     "Rare": {
       "type": "integer",
       "min": 800,
-      "max": 983
+      "max": 983,
+      "description": "Can spawn as rare quality"
     },
     "Magic": {
       "type": "integer",
@@ -36,10 +38,12 @@
     "NoDrop": {
       "type": "integer",
       "min": 0,
-      "max": 250
+      "max": 250,
+      "description": "Weight for no item drop"
     },
     "Item1": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 1 code"
     },
     "Prob1": {
       "type": "integer",
@@ -47,7 +51,8 @@
       "max": 60
     },
     "Item2": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 2 code"
     },
     "Prob2": {
       "type": "integer",
@@ -55,7 +60,8 @@
       "max": 32770
     },
     "Item3": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 3 code"
     },
     "Prob3": {
       "type": "integer",
@@ -63,7 +69,8 @@
       "max": 81880
     },
     "Item4": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 4 code"
     },
     "Prob4": {
       "type": "integer",
@@ -71,7 +78,8 @@
       "max": 42
     },
     "Item5": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 5 code"
     },
     "Prob5": {
       "type": "integer",
@@ -79,7 +87,8 @@
       "max": 28
     },
     "Item6": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 6 code"
     },
     "Prob6": {
       "type": "integer",
@@ -87,7 +96,8 @@
       "max": 14
     },
     "Item7": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 7 code"
     },
     "Prob7": {
       "type": "integer",
@@ -95,7 +105,8 @@
       "max": 5
     },
     "Item8": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 8 code"
     },
     "Prob8": {
       "type": "integer",
@@ -103,7 +114,8 @@
       "max": 5
     },
     "Item9": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 9 code"
     },
     "Prob9": {
       "type": "integer",
@@ -119,7 +131,8 @@
         "Act 5 Bow B",
         "Act 5 Equip B",
         "Act 5 Melee B"
-      ]
+      ],
+      "description": "Starting item 10 code"
     },
     "Prob10": {
       "type": "integer",

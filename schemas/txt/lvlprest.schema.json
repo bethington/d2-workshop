@@ -37,23 +37,28 @@
     "SizeX": {
       "type": "integer",
       "min": 0,
-      "max": 64
+      "max": 64,
+      "description": "Width in grid cells"
     },
     "SizeY": {
       "type": "integer",
       "min": 0,
-      "max": 56
+      "max": 56,
+      "description": "Height in grid cells"
     },
     "AutoMap": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Automap display flag"
     },
     "Scan": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Scannable by abilities"
     },
     "Pops": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Population density"
     },
     "PopPad": {
       "type": "integer",

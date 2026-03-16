@@ -19,7 +19,8 @@
         "hvy",
         "lit",
         "med"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

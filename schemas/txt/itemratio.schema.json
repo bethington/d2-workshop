@@ -25,7 +25,8 @@
     "Rare": {
       "type": "integer",
       "min": 120,
-      "max": 200
+      "max": 200,
+      "description": "Can spawn as rare quality"
     },
     "RareDivisor": {
       "type": "integer",

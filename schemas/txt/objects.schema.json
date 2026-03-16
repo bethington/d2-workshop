@@ -17,12 +17,14 @@
       "description": "Unique numeric ID"
     },
     "Token": {
-      "type": "string"
+      "type": "string",
+      "description": "Animation token identifier"
     },
     "SpawnMax": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "spawn maximum value"
     },
     "Selectable0": {
       "type": "boolean"
@@ -56,12 +58,14 @@
     "SizeX": {
       "type": "integer",
       "min": 0,
-      "max": 32
+      "max": 32,
+      "description": "Width in grid cells"
     },
     "SizeY": {
       "type": "integer",
       "min": 0,
-      "max": 32
+      "max": 32,
+      "description": "Height in grid cells"
     },
     "nTgtFX": {
       "type": "integer",
@@ -365,28 +369,36 @@
       "type": "boolean"
     },
     "Mode0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 0 usage mode"
     },
     "Mode1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 1 usage mode"
     },
     "Mode2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 2 usage mode"
     },
     "Mode3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 3 usage mode"
     },
     "Mode4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 4 usage mode"
     },
     "Mode5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 5 usage mode"
     },
     "Mode6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 6 usage mode"
     },
     "Mode7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skill 7 usage mode"
     },
     "Yoffset": {
       "type": "integer",
@@ -404,17 +416,20 @@
     "Red": {
       "type": "integer",
       "min": 100,
-      "max": 255
+      "max": 255,
+      "description": "Red color channel (0-255)"
     },
     "Green": {
       "type": "integer",
       "min": 55,
-      "max": 255
+      "max": 255,
+      "description": "Green color channel (0-255)"
     },
     "Blue": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Blue color channel (0-255)"
     },
     "HD": {
       "type": "boolean"
@@ -633,7 +648,8 @@
     "AutoMap": {
       "type": "integer",
       "min": 0,
-      "max": 694
+      "max": 694,
+      "description": "Automap display flag"
     }
   }
 }

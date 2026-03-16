@@ -25,7 +25,8 @@
     "Divide": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Division factor for calculations"
     },
     "CodeName": {
       "type": "string"

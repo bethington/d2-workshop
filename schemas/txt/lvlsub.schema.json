@@ -45,7 +45,8 @@
     "Max0": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "Property 0 maximum value"
     },
     "Prob1": {
       "type": "integer",
@@ -60,7 +61,8 @@
     "Max1": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Property 1 maximum value"
     },
     "Prob2": {
       "type": "integer",
@@ -75,7 +77,8 @@
     "Max2": {
       "type": "integer",
       "min": 0,
-      "max": 12
+      "max": 12,
+      "description": "Property 2 maximum value"
     },
     "Prob3": {
       "type": "integer",
@@ -90,7 +93,8 @@
     "Max3": {
       "type": "integer",
       "min": 0,
-      "max": 12
+      "max": 12,
+      "description": "Property 3 maximum value"
     },
     "Prob4": {
       "type": "integer",
@@ -105,7 +109,8 @@
     "Max4": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "Property 4 maximum value"
     },
     "Beta": {
       "type": "boolean",

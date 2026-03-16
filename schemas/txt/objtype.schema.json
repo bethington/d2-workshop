@@ -8,7 +8,8 @@
       "description": "Internal name identifier"
     },
     "Token": {
-      "type": "string"
+      "type": "string",
+      "description": "Animation token identifier"
     },
     "Beta": {
       "type": "boolean",

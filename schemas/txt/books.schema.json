@@ -16,7 +16,8 @@
       ]
     },
     "Completed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item completion flag"
     },
     "ScrollSpellCode": {
       "type": "enum",
@@ -33,7 +34,8 @@
       ]
     },
     "SpellOffset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Spell effect offset index"
     },
     "SpellIcon": {
       "type": "integer",

@@ -11,27 +11,32 @@
     "Amazon": {
       "type": "integer",
       "min": 0,
-      "max": 3837739017
+      "max": 3837739017,
+      "description": "Amazon class specific"
     },
     "Sorceress": {
       "type": "integer",
       "min": 0,
-      "max": 3837739017
+      "max": 3837739017,
+      "description": "Sorceress class specific"
     },
     "Necromancer": {
       "type": "integer",
       "min": 0,
-      "max": 3837739017
+      "max": 3837739017,
+      "description": "Necromancer class specific"
     },
     "Paladin": {
       "type": "integer",
       "min": 0,
-      "max": 3837739017
+      "max": 3837739017,
+      "description": "Paladin class specific"
     },
     "Barbarian": {
       "type": "integer",
       "min": 0,
-      "max": 3837739017
+      "max": 3837739017,
+      "description": "Barbarian class specific"
     }
   }
 }

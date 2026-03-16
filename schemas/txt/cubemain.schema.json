@@ -489,12 +489,14 @@
     "mod1amin": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "mod1a minimum value"
     },
     "mod1amax": {
       "type": "integer",
       "min": 0,
-      "max": 250
+      "max": 250,
+      "description": "mod1a maximum value"
     },
     "mod2a": {
       "type": "enum",
@@ -528,12 +530,14 @@
     "mod2amin": {
       "type": "integer",
       "min": 1,
-      "max": 120
+      "max": 120,
+      "description": "mod2a minimum value"
     },
     "mod2amax": {
       "type": "integer",
       "min": 1,
-      "max": 120
+      "max": 120,
+      "description": "mod2a maximum value"
     },
     "mod3a": {
       "type": "string"
@@ -549,12 +553,14 @@
     "mod3amin": {
       "type": "integer",
       "min": -5,
-      "max": 50
+      "max": 50,
+      "description": "mod3a minimum value"
     },
     "mod3amax": {
       "type": "integer",
       "min": -50,
-      "max": 200
+      "max": 200,
+      "description": "mod3a maximum value"
     },
     "mod4a": {
       "type": "enum",
@@ -582,12 +588,14 @@
     "mod4amin": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "mod4a minimum value"
     },
     "mod4amax": {
       "type": "integer",
       "min": 1,
-      "max": 101
+      "max": 101,
+      "description": "mod4a maximum value"
     },
     "mod5a": {
       "type": "enum",
@@ -614,12 +622,14 @@
     "mod5amin": {
       "type": "integer",
       "min": 1,
-      "max": 6
+      "max": 6,
+      "description": "mod5a minimum value"
     },
     "mod5amax": {
       "type": "integer",
       "min": 1,
-      "max": 36
+      "max": 36,
+      "description": "mod5a maximum value"
     },
     "product b": {
       "type": "boolean"
@@ -661,10 +671,12 @@
       "type": "string"
     },
     "mod1bmin": {
-      "type": "string"
+      "type": "string",
+      "description": "mod1b minimum value"
     },
     "mod1bmax": {
-      "type": "string"
+      "type": "string",
+      "description": "mod1b maximum value"
     },
     "mod2b": {
       "type": "string"
@@ -676,10 +688,12 @@
       "type": "string"
     },
     "mod2bmin": {
-      "type": "string"
+      "type": "string",
+      "description": "mod2b minimum value"
     },
     "mod2bmax": {
-      "type": "string"
+      "type": "string",
+      "description": "mod2b maximum value"
     },
     "mod3b": {
       "type": "string"
@@ -691,10 +705,12 @@
       "type": "string"
     },
     "mod3bmin": {
-      "type": "string"
+      "type": "string",
+      "description": "mod3b minimum value"
     },
     "mod3bmax": {
-      "type": "string"
+      "type": "string",
+      "description": "mod3b maximum value"
     },
     "mod4b": {
       "type": "string"
@@ -706,10 +722,12 @@
       "type": "string"
     },
     "mod4bmin": {
-      "type": "string"
+      "type": "string",
+      "description": "mod4b minimum value"
     },
     "mod4bmax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "mod4b maximum value"
     },
     "mod5b": {
       "type": "string"
@@ -721,10 +739,12 @@
       "type": "string"
     },
     "mod5bmin": {
-      "type": "string"
+      "type": "string",
+      "description": "mod5b minimum value"
     },
     "mod5bmax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "mod5b maximum value"
     }
   }
 }

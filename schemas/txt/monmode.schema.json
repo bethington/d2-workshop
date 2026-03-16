@@ -44,7 +44,8 @@
         "SC",
         "WL",
         "xx"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

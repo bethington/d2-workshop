@@ -9,13 +9,16 @@
       "description": "Internal name identifier"
     },
     "Rune Name": {
-      "type": "string"
+      "type": "string",
+      "description": "Runeword display name string key"
     },
     "complete": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Runeword activation flag"
     },
     "server": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Server-side only flag"
     },
     "itype1": {
       "type": "enum",
@@ -37,7 +40,8 @@
         "tors",
         "wand",
         "weap"
-      ]
+      ],
+      "description": "Required item type 1"
     },
     "itype2": {
       "type": "enum",
@@ -50,7 +54,8 @@
         "scep",
         "swor",
         "wand"
-      ]
+      ],
+      "description": "Required item type 2"
     },
     "itype3": {
       "type": "enum",
@@ -64,7 +69,8 @@
         "scep",
         "spea",
         "swor"
-      ]
+      ],
+      "description": "Required item type 3"
     },
     "itype4": {
       "type": "enum",
@@ -72,22 +78,28 @@
         "hamm",
         "scep",
         "spea"
-      ]
+      ],
+      "description": "Required item type 4"
     },
     "itype5": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 5"
     },
     "itype6": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 6"
     },
     "etype1": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 1"
     },
     "etype2": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 2"
     },
     "etype3": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 3"
     },
     "Rune1": {
       "type": "string"
@@ -132,22 +144,26 @@
         "pois-max",
         "res-cold",
         "res-pois"
-      ]
+      ],
+      "description": "Property 1 code for tier 1"
     },
     "T1Param1": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Property 1 param for tier 1"
     },
     "T1Min1": {
       "type": "integer",
       "min": 1,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 min for tier 1"
     },
     "T1Max1": {
       "type": "integer",
       "min": 1,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 max for tier 1"
     },
     "T1Code2": {
       "type": "enum",
@@ -170,20 +186,24 @@
         "res-all",
         "res-cold",
         "res-fire"
-      ]
+      ],
+      "description": "Property 1 code for tier 2"
     },
     "T1Param2": {
-      "type": "string"
+      "type": "string",
+      "description": "Property 1 param for tier 2"
     },
     "T1Min2": {
       "type": "integer",
       "min": 3,
-      "max": 300
+      "max": 300,
+      "description": "Property 1 min for tier 2"
     },
     "T1Max2": {
       "type": "integer",
       "min": 3,
-      "max": 300
+      "max": 300,
+      "description": "Property 1 max for tier 2"
     },
     "T1Code3": {
       "type": "enum",
@@ -207,22 +227,26 @@
         "stupidity",
         "swing2",
         "swing3"
-      ]
+      ],
+      "description": "Property 1 code for tier 3"
     },
     "T1Param3": {
       "type": "integer",
       "min": 11,
-      "max": 11
+      "max": 11,
+      "description": "Property 1 param for tier 3"
     },
     "T1Min3": {
       "type": "integer",
       "min": 1,
-      "max": 250
+      "max": 250,
+      "description": "Property 1 min for tier 3"
     },
     "T1Max3": {
       "type": "integer",
       "min": 1,
-      "max": 250
+      "max": 250,
+      "description": "Property 1 max for tier 3"
     },
     "T1Code4": {
       "type": "enum",
@@ -242,22 +266,26 @@
         "res-pois",
         "str",
         "thorns"
-      ]
+      ],
+      "description": "Property 1 code for tier 4"
     },
     "T1Param4": {
       "type": "integer",
       "min": 25,
-      "max": 38
+      "max": 38,
+      "description": "Property 1 param for tier 4"
     },
     "T1Min4": {
       "type": "integer",
       "min": 3,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 min for tier 4"
     },
     "T1Max4": {
       "type": "integer",
       "min": 3,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 max for tier 4"
     },
     "T1Code5": {
       "type": "enum",
@@ -269,38 +297,46 @@
         "skilltab",
         "slow",
         "str"
-      ]
+      ],
+      "description": "Property 1 code for tier 5"
     },
     "T1Param5": {
       "type": "integer",
       "min": 7,
-      "max": 7
+      "max": 7,
+      "description": "Property 1 param for tier 5"
     },
     "T1Min5": {
       "type": "integer",
       "min": 3,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 min for tier 5"
     },
     "T1Max5": {
       "type": "integer",
       "min": 3,
-      "max": 200
+      "max": 200,
+      "description": "Property 1 max for tier 5"
     },
     "T1Code6": {
-      "type": "string"
+      "type": "string",
+      "description": "Property 1 code for tier 6"
     },
     "T1Param6": {
-      "type": "string"
+      "type": "string",
+      "description": "Property 1 param for tier 6"
     },
     "T1Min6": {
       "type": "integer",
       "min": -3,
-      "max": -3
+      "max": -3,
+      "description": "Property 1 min for tier 6"
     },
     "T1Max6": {
       "type": "integer",
       "min": -3,
-      "max": -3
+      "max": -3,
+      "description": "Property 1 max for tier 6"
     }
   }
 }

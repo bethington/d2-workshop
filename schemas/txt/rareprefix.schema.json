@@ -8,53 +8,68 @@
       "description": "Internal name identifier"
     },
     "armor": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to armor"
     },
     "helm": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to helms"
     },
     "shield": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to shields"
     },
     "sword": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to swords"
     },
     "axe": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to axes"
     },
     "mace": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to maces"
     },
     "spear": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to spears"
     },
     "scepter": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to scepters"
     },
     "wand": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to wands"
     },
     "staff": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to staves"
     },
     "bow": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to bows"
     },
     "boots": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to boots"
     },
     "gloves": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to gloves"
     },
     "belt": {
       "type": "boolean",
       "description": "Belt type index"
     },
     "ring": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to rings"
     },
     "amulet": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to amulets"
     },
     "add": {
       "type": "boolean",
@@ -65,7 +80,8 @@
       "description": "Multiplicative cost modifier"
     },
     "divide": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Division factor for calculations"
     }
   }
 }

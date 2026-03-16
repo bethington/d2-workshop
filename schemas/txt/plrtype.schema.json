@@ -23,7 +23,8 @@
         "NE",
         "PA",
         "SO"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

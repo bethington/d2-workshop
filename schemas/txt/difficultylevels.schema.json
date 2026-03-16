@@ -16,12 +16,14 @@
     "ResistPenalty": {
       "type": "integer",
       "min": -50,
-      "max": 0
+      "max": 0,
+      "description": "Resistance penalty percentage"
     },
     "DeathExpPenalty": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Experience penalty on death"
     },
     "UberCodeOddsNormal": {
       "type": "integer",
@@ -36,7 +38,8 @@
     "MonsterSkillBonus": {
       "type": "integer",
       "min": 0,
-      "max": 7
+      "max": 7,
+      "description": "Monster skill level bonus"
     },
     "MonsterFreezeDivisor": {
       "type": "integer",

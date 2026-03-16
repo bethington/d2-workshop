@@ -6,7 +6,8 @@
       "type": "ref",
       "target": "treasureclass.txt",
       "targetColumn": "TreasureClass",
-      "required": true
+      "required": true,
+      "description": "Item drop classification reference"
     },
     "Beta": {
       "type": "boolean",

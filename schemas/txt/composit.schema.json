@@ -45,7 +45,8 @@
         "S8",
         "SH",
         "TR"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

@@ -19,7 +19,8 @@
       "description": "Can randomly spawn in the game"
     },
     "rare": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can spawn as rare quality"
     },
     "level": {
       "type": "integer",
@@ -28,7 +29,8 @@
       "description": "Base item level"
     },
     "maxlevel": {
-      "type": "string"
+      "type": "string",
+      "description": "Maximum level this can appear"
     },
     "levelreq": {
       "type": "integer",
@@ -41,12 +43,14 @@
       "description": "Character class restriction"
     },
     "classlevelreq": {
-      "type": "string"
+      "type": "string",
+      "description": "Class-specific level requirement"
     },
     "frequency": {
       "type": "integer",
       "min": 1,
-      "max": 8
+      "max": 8,
+      "description": "Spawn frequency weight"
     },
     "group": {
       "type": "integer",
@@ -63,58 +67,70 @@
         "pois-min",
         "res-all",
         "skilltab"
-      ]
+      ],
+      "description": "Modifier 1 property code"
     },
     "mod1param": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Modifier 1 parameter value"
     },
     "mod1min": {
       "type": "integer",
       "min": 1,
-      "max": 101
+      "max": 101,
+      "description": "Modifier 1 minimum value"
     },
     "mod1max": {
       "type": "integer",
       "min": 1,
-      "max": 121
+      "max": 121,
+      "description": "Modifier 1 maximum value"
     },
     "mod2code": {
       "type": "enum",
       "values": [
         "dmg%",
         "pois-max"
-      ]
+      ],
+      "description": "Modifier 2 property code"
     },
     "mod2param": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 2 parameter value"
     },
     "mod2min": {
       "type": "integer",
       "min": 10,
-      "max": 128
+      "max": 128,
+      "description": "Modifier 2 minimum value"
     },
     "mod2max": {
       "type": "integer",
       "min": 20,
-      "max": 128
+      "max": 128,
+      "description": "Modifier 2 maximum value"
     },
     "mod3code": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 3 property code"
     },
     "mod3param": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 3 parameter value"
     },
     "mod3min": {
       "type": "integer",
       "min": 75,
-      "max": 100
+      "max": 100,
+      "description": "Modifier 3 minimum value"
     },
     "mod3max": {
       "type": "integer",
       "min": 75,
-      "max": 100
+      "max": 100,
+      "description": "Modifier 3 maximum value"
     },
     "transform": {
       "type": "boolean",
@@ -125,40 +141,51 @@
       "values": [
         "cblu",
         "dgld"
-      ]
+      ],
+      "description": "Color transform palette index"
     },
     "itype1": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 1"
     },
     "itype2": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 2"
     },
     "itype3": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 3"
     },
     "itype4": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 4"
     },
     "itype5": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 5"
     },
     "itype6": {
-      "type": "string"
+      "type": "string",
+      "description": "Required item type 6"
     },
     "itype7": {
       "type": "string"
     },
     "etype1": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 1"
     },
     "etype2": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 2"
     },
     "etype3": {
-      "type": "string"
+      "type": "string",
+      "description": "Excluded item type 3"
     },
     "divide": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Division factor for calculations"
     },
     "multiply": {
       "type": "boolean",

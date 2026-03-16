@@ -27,7 +27,8 @@
       "description": "Can randomly spawn in the game"
     },
     "completed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item completion flag"
     },
     "speed": {
       "type": "boolean",
@@ -55,7 +56,8 @@
       "description": "Alternate character graphics code"
     },
     "spelloffset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Spell effect offset index"
     },
     "component": {
       "type": "integer",
@@ -66,12 +68,14 @@
     "bodyLoc1": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Primary equipment slot location"
     },
     "bodyLoc2": {
       "type": "integer",
       "min": 0,
-      "max": 7
+      "max": 7,
+      "description": "Secondary equipment slot location"
     },
     "invwidth": {
       "type": "integer",
@@ -121,19 +125,22 @@
     "TMogMin": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "tmog minimum value"
     },
     "TMogMax": {
       "type": "integer",
       "min": 0,
-      "max": 40
+      "max": 40,
+      "description": "tmog maximum value"
     },
     "useable": {
       "type": "boolean",
       "description": "Item is right-clickable"
     },
     "throwable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item can be thrown"
     },
     "type": {
       "type": "ref",
@@ -232,43 +239,52 @@
     "CharsiMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "charsi minimum value"
     },
     "CharsiMax": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "charsi maximum value"
     },
     "CharsiMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Charsi magic stock minimum"
     },
     "CharsiMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Charsi magic stock maximum"
     },
     "CharsiMagicLvl": {
       "type": "integer",
       "min": 255,
-      "max": 255
+      "max": 255,
+      "description": "Charsi magic stock level"
     },
     "GheedMin": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "gheed minimum value"
     },
     "GheedMax": {
       "type": "integer",
       "min": 0,
-      "max": 9
+      "max": 9,
+      "description": "gheed maximum value"
     },
     "GheedMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "gheedmagic minimum value"
     },
     "GheedMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 9
+      "max": 9,
+      "description": "gheedmagic maximum value"
     },
     "GheedMagicLvl": {
       "type": "integer",
@@ -278,20 +294,24 @@
     "AkaraMin": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "akara minimum value"
     },
     "AkaraMax": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "akara maximum value"
     },
     "AkaraMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "akaramagic minimum value"
     },
     "AkaraMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "akaramagic maximum value"
     },
     "AkaraMagicLvl": {
       "type": "integer",
@@ -301,22 +321,26 @@
     "FaraMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "fara minimum value"
     },
     "FaraMax": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "fara maximum value"
     },
     "FaraMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "faramagic minimum value"
     },
     "FaraMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "faramagic maximum value"
     },
     "FaraMagicLvl": {
       "type": "integer",
@@ -326,22 +350,26 @@
     "LysanderMin": {
       "type": "integer",
       "min": 0,
-      "max": 9
+      "max": 9,
+      "description": "lysander minimum value"
     },
     "LysanderMax": {
       "type": "integer",
       "min": 0,
-      "max": 16
+      "max": 16,
+      "description": "lysander maximum value"
     },
     "LysanderMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 9
+      "max": 9,
+      "description": "lysandermagic minimum value"
     },
     "LysanderMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "lysandermagic maximum value"
     },
     "LysanderMagicLvl": {
       "type": "integer",
@@ -351,22 +379,26 @@
     "DrognanMin": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "drognan minimum value"
     },
     "DrognanMax": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "drognan maximum value"
     },
     "DrognanMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "drognanmagic minimum value"
     },
     "DrognanMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "drognanmagic maximum value"
     },
     "DrognanMagicLvl": {
       "type": "integer",
@@ -376,22 +408,26 @@
     "HraltiMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "hralti minimum value"
     },
     "HraltiMax": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "hralti maximum value"
     },
     "HraltiMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "hraltimagic minimum value"
     },
     "HraltiMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "hraltimagic maximum value"
     },
     "HraltiMagicLvl": {
       "type": "integer",
@@ -401,18 +437,22 @@
     "AlkorMin": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "alkor minimum value"
     },
     "AlkorMax": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "alkor maximum value"
     },
     "AlkorMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "alkormagic minimum value"
     },
     "AlkorMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "alkormagic maximum value"
     },
     "AlkorMagicLvl": {
       "type": "integer",
@@ -422,22 +462,26 @@
     "OrmusMin": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "ormus minimum value"
     },
     "OrmusMax": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "ormus maximum value"
     },
     "OrmusMagicMin": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "ormusmagic minimum value"
     },
     "OrmusMagicMax": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "ormusmagic maximum value"
     },
     "OrmusMagicLvl": {
       "type": "integer",
@@ -447,18 +491,22 @@
     "ElzixMin": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "elzix minimum value"
     },
     "ElzixMax": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "elzix maximum value"
     },
     "ElzixMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "elzixmagic minimum value"
     },
     "ElzixMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "elzixmagic maximum value"
     },
     "ElzixMagicLvl": {
       "type": "integer",
@@ -468,18 +516,22 @@
     "AshearaMin": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "asheara minimum value"
     },
     "AshearaMax": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "asheara maximum value"
     },
     "AshearaMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "ashearamagic minimum value"
     },
     "AshearaMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "ashearamagic maximum value"
     },
     "AshearaMagicLvl": {
       "type": "integer",
@@ -489,18 +541,22 @@
     "CainMin": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "cain minimum value"
     },
     "CainMax": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "cain maximum value"
     },
     "CainMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "cainmagic minimum value"
     },
     "CainMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "cainmagic maximum value"
     },
     "CainMagicLvl": {
       "type": "integer",
@@ -510,18 +566,22 @@
     "HalbuMin": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "halbu minimum value"
     },
     "HalbuMax": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "halbu maximum value"
     },
     "HalbuMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "halbumagic minimum value"
     },
     "HalbuMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "halbumagic maximum value"
     },
     "HalbuMagicLvl": {
       "type": "integer",
@@ -531,18 +591,22 @@
     "JamellaMin": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "jamella minimum value"
     },
     "JamellaMax": {
       "type": "integer",
       "min": 0,
-      "max": 16
+      "max": 16,
+      "description": "jamella maximum value"
     },
     "JamellaMagicMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "jamellamagic minimum value"
     },
     "JamellaMagicMax": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "jamellamagic maximum value"
     },
     "JamellaMagicLvl": {
       "type": "integer",
@@ -556,19 +620,24 @@
       "type": "string"
     },
     "Amazon": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Amazon class specific"
     },
     "Paladin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Paladin class specific"
     },
     "Barbarian": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Barbarian class specific"
     },
     "Necromancer": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Necromancer class specific"
     },
     "Sorceress": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Sorceress class specific"
     },
     "Transform": {
       "type": "boolean",

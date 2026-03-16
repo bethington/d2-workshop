@@ -59,12 +59,14 @@
     "effectclass": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Visual effect class"
     },
     "LevelMin": {
       "type": "integer",
       "min": 0,
-      "max": 32
+      "max": 32,
+      "description": "Minimum area level to appear"
     }
   }
 }

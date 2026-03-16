@@ -110,17 +110,20 @@
     "Red": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Red color channel (0-255)"
     },
     "Green": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Green color channel (0-255)"
     },
     "Blue": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Blue color channel (0-255)"
     },
     "NumDirections": {
       "type": "integer",

@@ -33,12 +33,14 @@
     "SizeX": {
       "type": "integer",
       "min": 0,
-      "max": 200
+      "max": 200,
+      "description": "Width in grid cells"
     },
     "SizeY": {
       "type": "integer",
       "min": 0,
-      "max": 200
+      "max": 200,
+      "description": "Height in grid cells"
     },
     "OffsetX": {
       "type": "integer",
@@ -59,10 +61,12 @@
       "type": "boolean"
     },
     "Mud": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Mud visual effect"
     },
     "NoPer": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "No periodic spawn"
     },
     "LOSDraw": {
       "type": "boolean"
@@ -183,22 +187,26 @@
     "Intensity": {
       "type": "integer",
       "min": 0,
-      "max": 140
+      "max": 140,
+      "description": "Light intensity value"
     },
     "Red": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Red color channel (0-255)"
     },
     "Green": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Green color channel (0-255)"
     },
     "Blue": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "Blue color channel (0-255)"
     },
     "Portal": {
       "type": "boolean"
@@ -246,12 +254,14 @@
       "description": "Monster density multiplier"
     },
     "MonUMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "monu minimum value"
     },
     "MonUMax": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "monu maximum value"
     },
     "MonWndr": {
       "type": "boolean"

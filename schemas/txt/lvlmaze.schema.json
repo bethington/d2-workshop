@@ -20,12 +20,14 @@
     "SizeX": {
       "type": "integer",
       "min": 8,
-      "max": 24
+      "max": 24,
+      "description": "Width in grid cells"
     },
     "SizeY": {
       "type": "integer",
       "min": 8,
-      "max": 24
+      "max": 24,
+      "description": "Height in grid cells"
     },
     "Merge": {
       "type": "integer",

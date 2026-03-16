@@ -6,7 +6,8 @@
       "type": "integer",
       "min": 1,
       "max": 2,
-      "required": true
+      "required": true,
+      "description": "Number of active modifiers"
     },
     "mod1code": {
       "type": "enum",
@@ -15,78 +16,94 @@
         "dm02",
         "du01",
         "ht00"
-      ]
+      ],
+      "description": "Modifier 1 property code"
     },
     "mod1offset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Modifier 1 value offset"
     },
     "mod1min": {
       "type": "integer",
       "min": 1,
-      "max": 10
+      "max": 10,
+      "description": "Modifier 1 minimum value"
     },
     "mod1max": {
       "type": "integer",
       "min": 3,
-      "max": 15
+      "max": 15,
+      "description": "Modifier 1 maximum value"
     },
     "mod2code": {
       "type": "enum",
       "values": [
         "dm02",
         "du01"
-      ]
+      ],
+      "description": "Modifier 2 property code"
     },
     "mod2offset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Modifier 2 value offset"
     },
     "mod2min": {
       "type": "integer",
       "min": 5,
-      "max": 10
+      "max": 10,
+      "description": "Modifier 2 minimum value"
     },
     "mod2max": {
       "type": "integer",
       "min": 15,
-      "max": 15
+      "max": 15,
+      "description": "Modifier 2 maximum value"
     },
     "ToHitMin": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "tohit minimum value"
     },
     "ToHitMax": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "tohit maximum value"
     },
     "Dam%Min": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "dam% minimum value"
     },
     "Dam%Max": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "dam% maximum value"
     },
     "AC%Min": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "ac% minimum value"
     },
     "AC%Max": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "ac% maximum value"
     },
     "Dur%Min": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "dur% minimum value"
     },
     "Dur%Max": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "dur% maximum value"
     },
     "effect1": {
       "type": "enum",
@@ -105,34 +122,44 @@
       ]
     },
     "armor": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to armor"
     },
     "weapon": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to weapons"
     },
     "shield": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to shields"
     },
     "thrown": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to throwing weapons"
     },
     "scepter": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to scepters"
     },
     "wand": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to wands"
     },
     "staff": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to staves"
     },
     "bow": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to bows"
     },
     "boots": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to boots"
     },
     "gloves": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to gloves"
     },
     "belt": {
       "type": "boolean",

@@ -51,7 +51,8 @@
         "TN",
         "TW",
         "WL"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

@@ -29,7 +29,8 @@
         "S3",
         "S4",
         "S5"
-      ]
+      ],
+      "description": "Animation token identifier"
     }
   }
 }

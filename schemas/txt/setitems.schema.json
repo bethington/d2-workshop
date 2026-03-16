@@ -70,7 +70,8 @@
     "transformcolor": {
       "type": "integer",
       "min": 0,
-      "max": 16
+      "max": 16,
+      "description": "Color transform palette index"
     },
     "ItemType1": {
       "type": "enum",
@@ -110,7 +111,8 @@
         "mpi",
         "sbr",
         "swb"
-      ]
+      ],
+      "description": "Starting item 1 code"
     },
     "Item1Suffix": {
       "type": "enum",
@@ -173,7 +175,8 @@
         "tgl",
         "wsp",
         "wst"
-      ]
+      ],
+      "description": "Starting item 2 code"
     },
     "Item2Suffix": {
       "type": "enum",
@@ -234,7 +237,8 @@
         "tbl",
         "vbl",
         "wsd"
-      ]
+      ],
+      "description": "Starting item 3 code"
     },
     "Item3Suffix": {
       "type": "enum",
@@ -279,7 +283,8 @@
         "ltp",
         "tbl",
         "tgl"
-      ]
+      ],
+      "description": "Starting item 4 code"
     },
     "Item4Suffix": {
       "type": "enum",
@@ -310,7 +315,8 @@
         "bhm",
         "hbl",
         "rin"
-      ]
+      ],
+      "description": "Starting item 5 code"
     },
     "Item5Suffix": {
       "type": "enum",
@@ -324,7 +330,8 @@
       "type": "string"
     },
     "Item6": {
-      "type": "string"
+      "type": "string",
+      "description": "Starting item 6 code"
     },
     "Item6Suffix": {
       "type": "string"
@@ -353,12 +360,14 @@
     "PropertyMod1Min": {
       "type": "integer",
       "min": 1,
-      "max": 75
+      "max": 75,
+      "description": "propertymod1 minimum value"
     },
     "PropertyMod1Max": {
       "type": "integer",
       "min": 1,
-      "max": 75
+      "max": 75,
+      "description": "propertymod1 maximum value"
     },
     "PropertyMod2Code": {
       "type": "enum",
@@ -386,12 +395,14 @@
     "PropertyMod2Min": {
       "type": "integer",
       "min": 3,
-      "max": 250
+      "max": 250,
+      "description": "propertymod2 minimum value"
     },
     "PropertyMod2Max": {
       "type": "integer",
       "min": 3,
-      "max": 250
+      "max": 250,
+      "description": "propertymod2 maximum value"
     },
     "PropertyMod3Code": {
       "type": "enum",
@@ -417,12 +428,14 @@
     "PropertyMod3Min": {
       "type": "integer",
       "min": 1,
-      "max": 275
+      "max": 275,
+      "description": "propertymod3 minimum value"
     },
     "PropertyMod3Max": {
       "type": "integer",
       "min": 1,
-      "max": 325
+      "max": 325,
+      "description": "propertymod3 maximum value"
     },
     "PropertyMod4Code": {
       "type": "enum",
@@ -452,12 +465,14 @@
     "PropertyMod4Min": {
       "type": "integer",
       "min": -50,
-      "max": 75
+      "max": 75,
+      "description": "propertymod4 minimum value"
     },
     "PropertyMod4Max": {
       "type": "integer",
       "min": -50,
-      "max": 75
+      "max": 75,
+      "description": "propertymod4 maximum value"
     },
     "PropertyMod5Code": {
       "type": "enum",
@@ -484,12 +499,14 @@
     "PropertyMod5Min": {
       "type": "integer",
       "min": 1,
-      "max": 75
+      "max": 75,
+      "description": "propertymod5 minimum value"
     },
     "PropertyMod5Max": {
       "type": "integer",
       "min": 1,
-      "max": 75
+      "max": 75,
+      "description": "propertymod5 maximum value"
     },
     "PropertyMod6Code": {
       "type": "enum",
@@ -517,12 +534,14 @@
     "PropertyMod6Min": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "propertymod6 minimum value"
     },
     "PropertyMod6Max": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "propertymod6 maximum value"
     },
     "PropertyMod7Code": {
       "type": "enum",
@@ -549,12 +568,14 @@
     "PropertyMod7Min": {
       "type": "integer",
       "min": 2,
-      "max": 75
+      "max": 75,
+      "description": "propertymod7 minimum value"
     },
     "PropertyMod7Max": {
       "type": "integer",
       "min": 2,
-      "max": 75
+      "max": 75,
+      "description": "propertymod7 maximum value"
     },
     "PropertyMod8Code": {
       "type": "enum",
@@ -581,12 +602,14 @@
     "PropertyMod8Min": {
       "type": "integer",
       "min": 1,
-      "max": 200
+      "max": 200,
+      "description": "propertymod8 minimum value"
     },
     "PropertyMod8Max": {
       "type": "integer",
       "min": 1,
-      "max": 200
+      "max": 200,
+      "description": "propertymod8 maximum value"
     },
     "PropertyMod9Code": {
       "type": "enum",
@@ -611,12 +634,14 @@
     "PropertyMod9Min": {
       "type": "integer",
       "min": 5,
-      "max": 100
+      "max": 100,
+      "description": "propertymod9 minimum value"
     },
     "PropertyMod9Max": {
       "type": "integer",
       "min": 5,
-      "max": 100
+      "max": 100,
+      "description": "propertymod9 maximum value"
     },
     "PropertyMod10Code": {
       "type": "enum",
@@ -642,12 +667,14 @@
     "PropertyMod10Min": {
       "type": "integer",
       "min": 0,
-      "max": 75
+      "max": 75,
+      "description": "propertymod10 minimum value"
     },
     "PropertyMod10Max": {
       "type": "integer",
       "min": 0,
-      "max": 75
+      "max": 75,
+      "description": "propertymod10 maximum value"
     },
     "PropertyMod11Code": {
       "type": "enum",
@@ -672,12 +699,14 @@
     "PropertyMod11Min": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "propertymod11 minimum value"
     },
     "PropertyMod11Max": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "propertymod11 maximum value"
     },
     "PropertyMod12Code": {
       "type": "enum",
@@ -698,12 +727,14 @@
     "PropertyMod12Min": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "propertymod12 minimum value"
     },
     "PropertyMod12Max": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "propertymod12 maximum value"
     },
     "PropertyMod13Code": {
       "type": "enum",
@@ -722,12 +753,14 @@
     "PropertyMod13Min": {
       "type": "integer",
       "min": 0,
-      "max": 35
+      "max": 35,
+      "description": "propertymod13 minimum value"
     },
     "PropertyMod13Max": {
       "type": "integer",
       "min": 0,
-      "max": 35
+      "max": 35,
+      "description": "propertymod13 maximum value"
     },
     "PropertyMod14Code": {
       "type": "enum",
@@ -746,12 +779,14 @@
     "PropertyMod14Min": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "propertymod14 minimum value"
     },
     "PropertyMod14Max": {
       "type": "integer",
       "min": 0,
-      "max": 15
+      "max": 15,
+      "description": "propertymod14 maximum value"
     },
     "PropertyMod15Code": {
       "type": "enum",
@@ -768,12 +803,14 @@
     "PropertyMod15Min": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "propertymod15 minimum value"
     },
     "PropertyMod15Max": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "propertymod15 maximum value"
     },
     "PropertyMod16Code": {
       "type": "string"
@@ -786,12 +823,14 @@
     "PropertyMod16Min": {
       "type": "integer",
       "min": 0,
-      "max": 24
+      "max": 24,
+      "description": "propertymod16 minimum value"
     },
     "PropertyMod16Max": {
       "type": "integer",
       "min": 0,
-      "max": 24
+      "max": 24,
+      "description": "propertymod16 maximum value"
     },
     "PropertyMod17Code": {
       "type": "string"
@@ -802,10 +841,12 @@
       "max": -1
     },
     "PropertyMod17Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod17 minimum value"
     },
     "PropertyMod17Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod17 maximum value"
     },
     "PropertyMod18Code": {
       "type": "string"
@@ -816,10 +857,12 @@
       "max": -1
     },
     "PropertyMod18Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod18 minimum value"
     },
     "PropertyMod18Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod18 maximum value"
     },
     "PropertyMod19Code": {
       "type": "string"
@@ -830,10 +873,12 @@
       "max": -1
     },
     "PropertyMod19Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod19 minimum value"
     },
     "PropertyMod19Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod19 maximum value"
     },
     "PropertyMod20Code": {
       "type": "string"
@@ -844,10 +889,12 @@
       "max": -1
     },
     "PropertyMod20Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod20 minimum value"
     },
     "PropertyMod20Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod20 maximum value"
     },
     "PropertyMod21Code": {
       "type": "string"
@@ -858,10 +905,12 @@
       "max": -1
     },
     "PropertyMod21Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod21 minimum value"
     },
     "PropertyMod21Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod21 maximum value"
     },
     "PropertyMod22Code": {
       "type": "string"
@@ -872,10 +921,12 @@
       "max": -1
     },
     "PropertyMod22Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod22 minimum value"
     },
     "PropertyMod22Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod22 maximum value"
     },
     "PropertyMod23Code": {
       "type": "string"
@@ -886,10 +937,12 @@
       "max": -1
     },
     "PropertyMod23Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod23 minimum value"
     },
     "PropertyMod23Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod23 maximum value"
     },
     "PropertyMod24Code": {
       "type": "string"
@@ -900,10 +953,12 @@
       "max": -1
     },
     "PropertyMod24Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod24 minimum value"
     },
     "PropertyMod24Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod24 maximum value"
     },
     "PropertyMod25Code": {
       "type": "string"
@@ -914,10 +969,12 @@
       "max": -1
     },
     "PropertyMod25Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod25 minimum value"
     },
     "PropertyMod25Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "propertymod25 maximum value"
     }
   }
 }

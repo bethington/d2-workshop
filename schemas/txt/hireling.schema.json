@@ -213,17 +213,20 @@
         "Inferno",
         "Inner Sight",
         "Jab"
-      ]
+      ],
+      "description": "Skill 1 reference"
     },
     "Mode1": {
       "type": "integer",
       "min": 4,
-      "max": 14
+      "max": 14,
+      "description": "Skill 1 usage mode"
     },
     "Chance1": {
       "type": "integer",
       "min": 10,
-      "max": 208
+      "max": 208,
+      "description": "Skill 1 usage probability (%)"
     },
     "ChancePerLevel1": {
       "type": "integer",
@@ -238,7 +241,8 @@
     "LvlPerLvl1": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Skill 1 level per character level"
     },
     "Skill2": {
       "type": "enum",
@@ -252,17 +256,20 @@
         "Lightning",
         "Prayer",
         "Stun"
-      ]
+      ],
+      "description": "Skill 2 reference"
     },
     "Mode2": {
       "type": "integer",
       "min": 1,
-      "max": 7
+      "max": 7,
+      "description": "Skill 2 usage mode"
     },
     "Chance2": {
       "type": "integer",
       "min": 10,
-      "max": 1000
+      "max": 1000,
+      "description": "Skill 2 usage probability (%)"
     },
     "ChancePerLevel2": {
       "type": "integer",
@@ -277,7 +284,8 @@
     "LvlPerLvl2": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Skill 2 level per character level"
     },
     "Skill3": {
       "type": "enum",
@@ -286,17 +294,20 @@
         "Ice Blast",
         "Might",
         "Thorns"
-      ]
+      ],
+      "description": "Skill 3 reference"
     },
     "Mode3": {
       "type": "integer",
       "min": 1,
-      "max": 7
+      "max": 7,
+      "description": "Skill 3 usage mode"
     },
     "Chance3": {
       "type": "integer",
       "min": 5,
-      "max": 240
+      "max": 240,
+      "description": "Skill 3 usage probability (%)"
     },
     "ChancePerLevel3": {
       "type": "boolean"
@@ -309,16 +320,20 @@
     "LvlPerLvl3": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Skill 3 level per character level"
     },
     "Skill4": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 4 reference"
     },
     "Mode4": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 4 usage mode"
     },
     "Chance4": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 4 usage probability (%)"
     },
     "ChancePerLevel4": {
       "type": "string"
@@ -327,16 +342,20 @@
       "type": "string"
     },
     "LvlPerLvl4": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 4 level per character level"
     },
     "Skill5": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 5 reference"
     },
     "Mode5": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 5 usage mode"
     },
     "Chance5": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 5 usage probability (%)"
     },
     "ChancePerLevel5": {
       "type": "string"
@@ -345,16 +364,20 @@
       "type": "string"
     },
     "LvlPerLvl5": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 5 level per character level"
     },
     "Skill6": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 6 reference"
     },
     "Mode6": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 6 usage mode"
     },
     "Chance6": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 6 usage probability (%)"
     },
     "ChancePerLevel6": {
       "type": "string"
@@ -363,7 +386,8 @@
       "type": "string"
     },
     "LvlPerLvl6": {
-      "type": "string"
+      "type": "string",
+      "description": "Skill 6 level per character level"
     },
     "Head": {
       "type": "integer",
@@ -378,10 +402,12 @@
     "Weapon": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Applies to weapons"
     },
     "Shield": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to shields"
     }
   }
 }

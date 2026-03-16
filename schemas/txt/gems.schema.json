@@ -21,7 +21,8 @@
     "nummods": {
       "type": "integer",
       "min": 3,
-      "max": 3
+      "max": 3,
+      "description": "Number of active modifiers"
     },
     "weaponMod1Code": {
       "type": "enum",
@@ -33,7 +34,8 @@
         "ht00",
         "md01",
         "mm03"
-      ]
+      ],
+      "description": "Weapon modifier 1 property code"
     },
     "weaponMod1Offset": {
       "type": "boolean"
@@ -41,12 +43,14 @@
     "weaponMod1Min": {
       "type": "integer",
       "min": 1,
-      "max": 56
+      "max": 56,
+      "description": "Weapon modifier 1 minimum"
     },
     "weaponMod1Max": {
       "type": "integer",
       "min": 1,
-      "max": 70
+      "max": 70,
+      "description": "Weapon modifier 1 maximum"
     },
     "weaponMod2Code": {
       "type": "enum",
@@ -56,7 +60,8 @@
         "dl01",
         "dp01",
         "mh03"
-      ]
+      ],
+      "description": "Weapon modifier 2 property code"
     },
     "weaponMod2Offset": {
       "type": "boolean"
@@ -64,19 +69,22 @@
     "weaponMod2Min": {
       "type": "integer",
       "min": 2,
-      "max": 20
+      "max": 20,
+      "description": "Weapon modifier 2 minimum"
     },
     "weaponMod2Max": {
       "type": "integer",
       "min": 2,
-      "max": 20
+      "max": 20,
+      "description": "Weapon modifier 2 maximum"
     },
     "weaponMod3Code": {
       "type": "enum",
       "values": [
         "dc03",
         "dp02"
-      ]
+      ],
+      "description": "Weapon modifier 3 property code"
     },
     "weaponMod3Offset": {
       "type": "boolean"
@@ -84,12 +92,14 @@
     "weaponMod3Min": {
       "type": "integer",
       "min": 0,
-      "max": 75
+      "max": 75,
+      "description": "Weapon modifier 3 minimum"
     },
     "weaponMod3Max": {
       "type": "integer",
       "min": 0,
-      "max": 75
+      "max": 75,
+      "description": "Weapon modifier 3 maximum"
     },
     "helmMod1Code": {
       "type": "enum",
@@ -101,7 +111,8 @@
         "mh00",
         "mm00",
         "st00"
-      ]
+      ],
+      "description": "Helm modifier 1 property code"
     },
     "helmMod1Offset": {
       "type": "boolean"
@@ -109,15 +120,18 @@
     "helmMod1Min": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "Helm modifier 1 minimum"
     },
     "helmMod1Max": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "Helm modifier 1 maximum"
     },
     "helmMod2Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Helm modifier 2 property code"
     },
     "helmMod2Offset": {
       "type": "boolean"
@@ -125,24 +139,29 @@
     "helmMod2Min": {
       "type": "integer",
       "min": 0,
-      "max": 16
+      "max": 16,
+      "description": "Helm modifier 2 minimum"
     },
     "helmMod2Max": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Helm modifier 2 maximum"
     },
     "helmMod3Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Helm modifier 3 property code"
     },
     "helmMod3Offset": {
       "type": "boolean"
     },
     "helmMod3Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Helm modifier 3 minimum"
     },
     "helmMod3Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Helm modifier 3 maximum"
     },
     "shieldMod1Code": {
       "type": "enum",
@@ -154,7 +173,8 @@
         "rf00",
         "rl00",
         "rp00"
-      ]
+      ],
+      "description": "Shield modifier 1 property code"
     },
     "shieldMod1Offset": {
       "type": "boolean"
@@ -162,36 +182,44 @@
     "shieldMod1Min": {
       "type": "integer",
       "min": 2,
-      "max": 26
+      "max": 26,
+      "description": "Shield modifier 1 minimum"
     },
     "shieldMod1Max": {
       "type": "integer",
       "min": 2,
-      "max": 30
+      "max": 30,
+      "description": "Shield modifier 1 maximum"
     },
     "shieldMod2Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Shield modifier 2 property code"
     },
     "shieldMod2Offset": {
       "type": "boolean"
     },
     "shieldMod2Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Shield modifier 2 minimum"
     },
     "shieldMod2Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Shield modifier 2 maximum"
     },
     "shieldMod3Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Shield modifier 3 property code"
     },
     "shieldMod3Offset": {
       "type": "boolean"
     },
     "shieldMod3Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Shield modifier 3 minimum"
     },
     "shieldMod3Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Shield modifier 3 maximum"
     }
   }
 }

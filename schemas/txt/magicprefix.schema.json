@@ -26,55 +26,68 @@
     "nummods": {
       "type": "integer",
       "min": 2,
-      "max": 2
+      "max": 2,
+      "description": "Number of active modifiers"
     },
     "mod1code": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 1 property code"
     },
     "mod1offset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Modifier 1 value offset"
     },
     "mod1min": {
       "type": "integer",
       "min": 1,
-      "max": 121
+      "max": 121,
+      "description": "Modifier 1 minimum value"
     },
     "mod1max": {
       "type": "integer",
       "min": 1,
-      "max": 150
+      "max": 150,
+      "description": "Modifier 1 maximum value"
     },
     "mod2code": {
       "type": "enum",
       "values": [
         "dm02",
         "tm00"
-      ]
+      ],
+      "description": "Modifier 2 property code"
     },
     "mod2offset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Modifier 2 value offset"
     },
     "mod2min": {
       "type": "integer",
       "min": 10,
-      "max": 150
+      "max": 150,
+      "description": "Modifier 2 minimum value"
     },
     "mod2max": {
       "type": "integer",
       "min": 20,
-      "max": 150
+      "max": 150,
+      "description": "Modifier 2 maximum value"
     },
     "mod3code": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 3 property code"
     },
     "mod3offset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Modifier 3 value offset"
     },
     "mod3min": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 3 minimum value"
     },
     "mod3max": {
-      "type": "string"
+      "type": "string",
+      "description": "Modifier 3 maximum value"
     },
     "effect1": {
       "type": "string"
@@ -101,56 +114,71 @@
     "transformcolor": {
       "type": "integer",
       "min": 0,
-      "max": 19
+      "max": 19,
+      "description": "Color transform palette index"
     },
     "armor": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to armor"
     },
     "weapon": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to weapons"
     },
     "shield": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to shields"
     },
     "thrown": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to throwing weapons"
     },
     "scepter": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to scepters"
     },
     "wand": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to wands"
     },
     "staff": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to staves"
     },
     "bow": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to bows"
     },
     "boots": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to boots"
     },
     "gloves": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to gloves"
     },
     "belt": {
       "type": "boolean",
       "description": "Belt type index"
     },
     "ring": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to rings"
     },
     "amulet": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to amulets"
     },
     "charm": {
       "type": "boolean"
     },
     "orb": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Applies to orbs"
     },
     "divide": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Division factor for calculations"
     },
     "multiply": {
       "type": "boolean",

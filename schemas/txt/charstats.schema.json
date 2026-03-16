@@ -189,118 +189,148 @@
         "ssd",
         "sst",
         "wnd"
-      ]
+      ],
+      "description": "Starting item 1 code"
     },
     "item1loc": {
       "type": "integer",
       "min": 4,
-      "max": 4
+      "max": 4,
+      "description": "Item 1 equipment slot"
     },
     "item1count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 1 stack quantity"
     },
     "item2": {
       "type": "enum",
       "values": [
         "buc",
         "hp1"
-      ]
+      ],
+      "description": "Starting item 2 code"
     },
     "item2loc": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Item 2 equipment slot"
     },
     "item2count": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Item 2 stack quantity"
     },
     "item3": {
       "type": "enum",
       "values": [
         "hp1",
         "tsc"
-      ]
+      ],
+      "description": "Starting item 3 code"
     },
     "item3loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 3 equipment slot"
     },
     "item3count": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Item 3 stack quantity"
     },
     "item4": {
       "type": "enum",
       "values": [
         "isc",
         "tsc"
-      ]
+      ],
+      "description": "Starting item 4 code"
     },
     "item4loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 4 equipment slot"
     },
     "item4count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 4 stack quantity"
     },
     "item5": {
       "type": "enum",
       "values": [
         "0",
         "isc"
-      ]
+      ],
+      "description": "Starting item 5 code"
     },
     "item5loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 5 equipment slot"
     },
     "item5count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 5 stack quantity"
     },
     "item6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting item 6 code"
     },
     "item6loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 6 equipment slot"
     },
     "item6count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 6 stack quantity"
     },
     "item7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting item 7 code"
     },
     "item7loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 7 equipment slot"
     },
     "item7count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 7 stack quantity"
     },
     "item8": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting item 8 code"
     },
     "item8loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 8 equipment slot"
     },
     "item8count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 8 stack quantity"
     },
     "item9": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting item 9 code"
     },
     "item9loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 9 equipment slot"
     },
     "item9count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 9 stack quantity"
     },
     "item10": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting item 10 code"
     },
     "item10loc": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 10 equipment slot"
     },
     "item10count": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item 10 stack quantity"
     }
   }
 }

@@ -9,7 +9,8 @@
       "description": "Internal name identifier"
     },
     "completed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item completion flag"
     },
     "beta": {
       "type": "boolean",
@@ -33,12 +34,14 @@
     "transformcolor": {
       "type": "integer",
       "min": 0,
-      "max": 19
+      "max": 19,
+      "description": "Color transform palette index"
     },
     "NumMods": {
       "type": "integer",
       "min": 2,
-      "max": 10
+      "max": 10,
+      "description": "Number of active modifiers"
     },
     "ItemMod1Code": {
       "type": "string"
@@ -49,12 +52,14 @@
     "ItemMod1Min": {
       "type": "integer",
       "min": -50,
-      "max": 200
+      "max": 200,
+      "description": "itemmod1 minimum value"
     },
     "ItemMod1Max": {
       "type": "integer",
       "min": -50,
-      "max": 200
+      "max": 200,
+      "description": "itemmod1 maximum value"
     },
     "ItemMod2Code": {
       "type": "string"
@@ -65,12 +70,14 @@
     "ItemMod2Min": {
       "type": "integer",
       "min": 1,
-      "max": 128
+      "max": 128,
+      "description": "itemmod2 minimum value"
     },
     "ItemMod2Max": {
       "type": "integer",
       "min": 1,
-      "max": 128
+      "max": 128,
+      "description": "itemmod2 maximum value"
     },
     "ItemMod3Code": {
       "type": "string"
@@ -81,12 +88,14 @@
     "ItemMod3Min": {
       "type": "integer",
       "min": -10,
-      "max": 75
+      "max": 75,
+      "description": "itemmod3 minimum value"
     },
     "ItemMod3Max": {
       "type": "integer",
       "min": -10,
-      "max": 75
+      "max": 75,
+      "description": "itemmod3 maximum value"
     },
     "ItemMod4Code": {
       "type": "string"
@@ -97,12 +106,14 @@
     "ItemMod4Min": {
       "type": "integer",
       "min": -20,
-      "max": 100
+      "max": 100,
+      "description": "itemmod4 minimum value"
     },
     "ItemMod4Max": {
       "type": "integer",
       "min": -20,
-      "max": 100
+      "max": 100,
+      "description": "itemmod4 maximum value"
     },
     "ItemMod5Code": {
       "type": "string"
@@ -113,12 +124,14 @@
     "ItemMod5Min": {
       "type": "integer",
       "min": -5,
-      "max": 150
+      "max": 150,
+      "description": "itemmod5 minimum value"
     },
     "ItemMod5Max": {
       "type": "integer",
       "min": -5,
-      "max": 150
+      "max": 150,
+      "description": "itemmod5 maximum value"
     },
     "ItemMod6Code": {
       "type": "enum",
@@ -147,12 +160,14 @@
     "ItemMod6Min": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "itemmod6 minimum value"
     },
     "ItemMod6Max": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "itemmod6 maximum value"
     },
     "ItemMod7Code": {
       "type": "enum",
@@ -171,12 +186,14 @@
     "ItemMod7Min": {
       "type": "integer",
       "min": 0,
-      "max": 75
+      "max": 75,
+      "description": "itemmod7 minimum value"
     },
     "ItemMod7Max": {
       "type": "integer",
       "min": 0,
-      "max": 300
+      "max": 300,
+      "description": "itemmod7 maximum value"
     },
     "ItemMod8Code": {
       "type": "string"
@@ -185,10 +202,12 @@
       "type": "boolean"
     },
     "ItemMod8Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod8 minimum value"
     },
     "ItemMod8Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod8 maximum value"
     },
     "ItemMod9Code": {
       "type": "string"
@@ -197,10 +216,12 @@
       "type": "boolean"
     },
     "ItemMod9Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod9 minimum value"
     },
     "ItemMod9Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod9 maximum value"
     },
     "ItemMod10Code": {
       "type": "string"
@@ -209,10 +230,12 @@
       "type": "boolean"
     },
     "ItemMod10Min": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod10 minimum value"
     },
     "ItemMod10Max": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "itemmod10 maximum value"
     }
   }
 }
