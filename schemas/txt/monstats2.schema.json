@@ -1,0 +1,549 @@
+{
+  "file": "monstats2.txt",
+  "description": "Monster visual and collision properties \u2014 animation components, light settings, hit testing, and display flags. Referenced by MonStatsEx column in MonStats.txt.",
+  "columns": {
+    "Id": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Monster identifier, referenced by MonStatsEx column in MonStats.txt"
+    },
+    "Height": {
+      "type": "integer",
+      "description": "Monster height in pixels (used for overlay positioning)"
+    },
+    "OverlayHeight": {
+      "type": "integer",
+      "description": "Overlay effect height offset in pixels"
+    },
+    "pixHeight": {
+      "type": "integer",
+      "description": "Pixel height (unused in 1.10+)"
+    },
+    "SizeX": {
+      "type": "integer",
+      "description": "Collision box X diameter in sub-tiles"
+    },
+    "SizeY": {
+      "type": "integer",
+      "description": "Collision box Y diameter in sub-tiles"
+    },
+    "spawnCol": {
+      "type": "integer",
+      "description": "Spawn collision mode (0 = normal, 1 = DS1 only, 2 = special)"
+    },
+    "MeleeRng": {
+      "type": "integer",
+      "description": "Melee attack range in sub-tiles"
+    },
+    "BaseW": {
+      "type": "integer",
+      "description": "Base weapon class for attack animation"
+    },
+    "HitClass": {
+      "type": "enum",
+      "description": "Hit class for impact sound selection",
+      "values": [
+        "hth",
+        "1hss",
+        "1hsl",
+        "2hss",
+        "2hsl",
+        "1ht",
+        "2ht",
+        "club",
+        "staf",
+        "bow",
+        "xbow",
+        "claw",
+        "over",
+        ""
+      ]
+    },
+    "HDv": {
+      "type": "string",
+      "description": "Head component equipment graphic code"
+    },
+    "TRv": {
+      "type": "string",
+      "description": "Torso component equipment graphic code"
+    },
+    "LGv": {
+      "type": "string",
+      "description": "Legs component equipment graphic code"
+    },
+    "Rav": {
+      "type": "string",
+      "description": "Right arm component equipment graphic code"
+    },
+    "Lav": {
+      "type": "string",
+      "description": "Left arm component equipment graphic code"
+    },
+    "RHv": {
+      "type": "string",
+      "description": "Right hand component equipment graphic code"
+    },
+    "LHv": {
+      "type": "string",
+      "description": "Left hand component equipment graphic code"
+    },
+    "SHv": {
+      "type": "string",
+      "description": "Shield component equipment graphic code"
+    },
+    "S1v": {
+      "type": "string",
+      "description": "Special 1 component equipment graphic code"
+    },
+    "S2v": {
+      "type": "string",
+      "description": "Special 2 component equipment graphic code"
+    },
+    "S3v": {
+      "type": "string",
+      "description": "Special 3 component equipment graphic code"
+    },
+    "S4v": {
+      "type": "string",
+      "description": "Special 4 component equipment graphic code"
+    },
+    "S5v": {
+      "type": "string",
+      "description": "Special 5 component equipment graphic code"
+    },
+    "S6v": {
+      "type": "string",
+      "description": "Special 6 component equipment graphic code"
+    },
+    "S7v": {
+      "type": "string",
+      "description": "Special 7 component equipment graphic code"
+    },
+    "S8v": {
+      "type": "string",
+      "description": "Special 8 component equipment graphic code"
+    },
+    "HD": {
+      "type": "boolean",
+      "description": "Monster has head component"
+    },
+    "TR": {
+      "type": "boolean",
+      "description": "Monster has torso component"
+    },
+    "LG": {
+      "type": "boolean",
+      "description": "Monster has legs component"
+    },
+    "RA": {
+      "type": "boolean",
+      "description": "Monster has right arm component"
+    },
+    "LA": {
+      "type": "boolean",
+      "description": "Monster has left arm component"
+    },
+    "RH": {
+      "type": "boolean",
+      "description": "Monster has right hand component"
+    },
+    "LH": {
+      "type": "boolean",
+      "description": "Monster has left hand component"
+    },
+    "SH": {
+      "type": "boolean",
+      "description": "Monster has shield component"
+    },
+    "S1": {
+      "type": "boolean",
+      "description": "Monster has special 1 component"
+    },
+    "S2": {
+      "type": "boolean",
+      "description": "Monster has special 2 component"
+    },
+    "S3": {
+      "type": "boolean",
+      "description": "Monster has special 3 component"
+    },
+    "S4": {
+      "type": "boolean",
+      "description": "Monster has special 4 component"
+    },
+    "S5": {
+      "type": "boolean",
+      "description": "Monster has special 5 component"
+    },
+    "S6": {
+      "type": "boolean",
+      "description": "Monster has special 6 component"
+    },
+    "S7": {
+      "type": "boolean",
+      "description": "Monster has special 7 component"
+    },
+    "S8": {
+      "type": "boolean",
+      "description": "Monster has special 8 component"
+    },
+    "TotalPieces": {
+      "type": "integer",
+      "description": "Total number of animation component pieces"
+    },
+    "mDT": {
+      "type": "boolean",
+      "description": "Has Death animation mode"
+    },
+    "mNU": {
+      "type": "boolean",
+      "description": "Has Neutral animation mode"
+    },
+    "mWL": {
+      "type": "boolean",
+      "description": "Has Walk animation mode"
+    },
+    "mGH": {
+      "type": "boolean",
+      "description": "Has Get Hit animation mode"
+    },
+    "mA1": {
+      "type": "boolean",
+      "description": "Has Attack 1 animation mode"
+    },
+    "mA2": {
+      "type": "boolean",
+      "description": "Has Attack 2 animation mode"
+    },
+    "mBL": {
+      "type": "boolean",
+      "description": "Has Block animation mode"
+    },
+    "mSC": {
+      "type": "boolean",
+      "description": "Has Cast animation mode"
+    },
+    "mS1": {
+      "type": "boolean",
+      "description": "Has Skill 1 animation mode"
+    },
+    "mS2": {
+      "type": "boolean",
+      "description": "Has Skill 2 animation mode"
+    },
+    "mS3": {
+      "type": "boolean",
+      "description": "Has Skill 3 animation mode"
+    },
+    "mS4": {
+      "type": "boolean",
+      "description": "Has Skill 4 animation mode"
+    },
+    "mDD": {
+      "type": "boolean",
+      "description": "Has Dead (corpse) animation mode"
+    },
+    "mKB": {
+      "type": "boolean",
+      "description": "Has Knockback animation mode"
+    },
+    "mSQ": {
+      "type": "boolean",
+      "description": "Has Sequence animation mode"
+    },
+    "mRN": {
+      "type": "boolean",
+      "description": "Has Run animation mode"
+    },
+    "dDT": {
+      "type": "integer",
+      "description": "Death animation direction count"
+    },
+    "dNU": {
+      "type": "integer",
+      "description": "Neutral animation direction count"
+    },
+    "dWL": {
+      "type": "integer",
+      "description": "Walk animation direction count"
+    },
+    "dGH": {
+      "type": "integer",
+      "description": "Get Hit animation direction count"
+    },
+    "dA1": {
+      "type": "integer",
+      "description": "Attack 1 animation direction count"
+    },
+    "dA2": {
+      "type": "integer",
+      "description": "Attack 2 animation direction count"
+    },
+    "dBL": {
+      "type": "integer",
+      "description": "Block animation direction count"
+    },
+    "dSC": {
+      "type": "integer",
+      "description": "Cast animation direction count"
+    },
+    "dS1": {
+      "type": "integer",
+      "description": "Skill 1 animation direction count"
+    },
+    "dS2": {
+      "type": "integer",
+      "description": "Skill 2 animation direction count"
+    },
+    "dS3": {
+      "type": "integer",
+      "description": "Skill 3 animation direction count"
+    },
+    "dS4": {
+      "type": "integer",
+      "description": "Skill 4 animation direction count"
+    },
+    "dDD": {
+      "type": "integer",
+      "description": "Dead animation direction count"
+    },
+    "dKB": {
+      "type": "integer",
+      "description": "Knockback animation direction count"
+    },
+    "dSQ": {
+      "type": "integer",
+      "description": "Sequence animation direction count"
+    },
+    "dRN": {
+      "type": "integer",
+      "description": "Run animation direction count"
+    },
+    "A1mv": {
+      "type": "boolean",
+      "description": "Attack 1 can move (walking attack)"
+    },
+    "A2mv": {
+      "type": "boolean",
+      "description": "Attack 2 can move (walking attack)"
+    },
+    "SCmv": {
+      "type": "boolean",
+      "description": "Cast can move (walking cast)"
+    },
+    "S1mv": {
+      "type": "boolean",
+      "description": "Skill 1 can move"
+    },
+    "S2mv": {
+      "type": "boolean",
+      "description": "Skill 2 can move"
+    },
+    "S3mv": {
+      "type": "boolean",
+      "description": "Skill 3 can move"
+    },
+    "S4mv": {
+      "type": "boolean",
+      "description": "Skill 4 can move"
+    },
+    "noGfxHitTest": {
+      "type": "boolean",
+      "description": "Disable pixel-accurate hit testing, use bounding box only"
+    },
+    "htTop": {
+      "type": "integer",
+      "description": "Hit test bounding box top offset"
+    },
+    "htLeft": {
+      "type": "integer",
+      "description": "Hit test bounding box left offset"
+    },
+    "htWidth": {
+      "type": "integer",
+      "description": "Hit test bounding box width"
+    },
+    "htHeight": {
+      "type": "integer",
+      "description": "Hit test bounding box height"
+    },
+    "restore": {
+      "type": "integer",
+      "description": "Restore animation frames on mode change"
+    },
+    "automapCel": {
+      "type": "integer",
+      "description": "Automap icon cell index"
+    },
+    "noMap": {
+      "type": "boolean",
+      "description": "Do not display on automap"
+    },
+    "noOvly": {
+      "type": "boolean",
+      "description": "Do not draw overlays on this monster"
+    },
+    "isSel": {
+      "type": "boolean",
+      "description": "Monster is selectable (default)"
+    },
+    "alSel": {
+      "type": "boolean",
+      "description": "Always selectable regardless of hostility"
+    },
+    "noSel": {
+      "type": "boolean",
+      "description": "Monster is never selectable"
+    },
+    "shiftSel": {
+      "type": "boolean",
+      "description": "Only selectable while holding Shift"
+    },
+    "corpseSel": {
+      "type": "boolean",
+      "description": "Corpse is selectable (for revive/find item)"
+    },
+    "isAtt": {
+      "type": "boolean",
+      "description": "Monster is attackable"
+    },
+    "revive": {
+      "type": "boolean",
+      "description": "Monster can be revived by Necromancer"
+    },
+    "critter": {
+      "type": "boolean",
+      "description": "Monster is a critter (passive, non-hostile)"
+    },
+    "small": {
+      "type": "boolean",
+      "description": "Uses small shadow"
+    },
+    "large": {
+      "type": "boolean",
+      "description": "Uses large shadow"
+    },
+    "soft": {
+      "type": "boolean",
+      "description": "Soft collision (can overlap other units)"
+    },
+    "inert": {
+      "type": "boolean",
+      "description": "Monster is inert (cannot be targeted or damaged)"
+    },
+    "objCol": {
+      "type": "boolean",
+      "description": "Uses object collision instead of monster collision"
+    },
+    "deadCol": {
+      "type": "boolean",
+      "description": "Corpse has collision"
+    },
+    "unflatDead": {
+      "type": "boolean",
+      "description": "Corpse is not flattened on ground"
+    },
+    "Shadow": {
+      "type": "boolean",
+      "description": "Monster casts a shadow"
+    },
+    "noUniqueShift": {
+      "type": "boolean",
+      "description": "Disable unique monster color palette shift"
+    },
+    "compositeDeath": {
+      "type": "boolean",
+      "description": "Use composite death animation (parts fly off)"
+    },
+    "localBlood": {
+      "type": "integer",
+      "description": "Blood color (0 = none, 1 = blood, 2 = no blood)"
+    },
+    "Bleed": {
+      "type": "integer",
+      "description": "Blood effect type on hit"
+    },
+    "Light": {
+      "type": "integer",
+      "description": "Light radius diameter in sub-tiles"
+    },
+    "light-r": {
+      "type": "integer",
+      "description": "Light color red component (0-255)"
+    },
+    "light-g": {
+      "type": "integer",
+      "description": "Light color green component (0-255)"
+    },
+    "light-b": {
+      "type": "integer",
+      "description": "Light color blue component (0-255)"
+    },
+    "Utrans": {
+      "type": "integer",
+      "description": "Color palette transform index (Normal difficulty)"
+    },
+    "Utrans(N)": {
+      "type": "integer",
+      "description": "Color palette transform index (Nightmare difficulty)"
+    },
+    "Utrans(H)": {
+      "type": "integer",
+      "description": "Color palette transform index (Hell difficulty)"
+    },
+    "Heart": {
+      "type": "string",
+      "description": "Heart item drop (broken since 1.07, unused)"
+    },
+    "BodyPart": {
+      "type": "string",
+      "description": "Body part item drop (broken since 1.07, unused)"
+    },
+    "InfernoLen": {
+      "type": "integer",
+      "description": "Inferno sub-animation frame length"
+    },
+    "InfernoAnim": {
+      "type": "integer",
+      "description": "Animation mode used for inferno effect"
+    },
+    "InfernoRollback": {
+      "type": "integer",
+      "description": "Inferno animation rollback frame length"
+    },
+    "ResurrectMode": {
+      "type": "enum",
+      "description": "Animation mode token used when resurrected",
+      "values": [
+        "DT",
+        "NU",
+        "WL",
+        "GH",
+        "A1",
+        "A2",
+        "BL",
+        "SC",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "DD",
+        "KB",
+        "xx",
+        "RN",
+        ""
+      ]
+    },
+    "ResurrectSkill": {
+      "type": "ref",
+      "target": "skills.txt",
+      "targetColumn": "skill",
+      "description": "Skill used when monster resurrects"
+    },
+    "EOL": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)"
+    }
+  }
+}

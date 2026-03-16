@@ -73,7 +73,21 @@
     },
     "EType": {
       "type": "enum",
-      "values": ["", "fire", "ltng", "cold", "pois", "mag", "life", "mana", "stam", "stun", "rand", "burn", "frze"],
+      "values": [
+        "burn",
+        "cold",
+        "fire",
+        "frze",
+        "life",
+        "ltng",
+        "mag",
+        "mana",
+        "pois",
+        "rand",
+        "stam",
+        "stun",
+        ""
+      ],
       "description": "Element type for damage"
     },
     "MinDamage": {
@@ -96,12 +110,18 @@
     },
     "LastCollide": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Can only hit the last target (1 = yes)"
     },
     "Pierce": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Passes through targets (1 = yes)"
     }
   }

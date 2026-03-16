@@ -1,0 +1,16 @@
+{
+  "file": "color.txt",
+  "description": "Color definitions — maps color names to codes for use in item and UI color references.",
+  "columns": {
+    "Color": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Color name identifier"
+    },
+    "Code": {
+      "type": "string",
+      "description": "Color code used by other files"
+    }
+  }
+}

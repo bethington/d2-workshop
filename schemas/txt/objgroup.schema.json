@@ -4,138 +4,166 @@
   "columns": {
     "GroupName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name of the object group (reference only)"
     },
     "Offset": {
       "type": "integer",
       "min": 0,
-      "max": 96
+      "max": 96,
+      "description": "Group ID used in levels.txt ObjGrp0-7 columns"
     },
     "ID0": {
       "type": "integer",
       "min": 0,
-      "max": 387
+      "max": 387,
+      "description": "Object ID from objects.txt for slot 0"
     },
     "DENSITY0": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "Minimum cells between spawned instances of object 0"
     },
     "PROB0": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Spawn probability for object 0 (0-100)"
     },
     "ID1": {
       "type": "integer",
       "min": 0,
-      "max": 388
+      "max": 388,
+      "description": "Object ID from objects.txt for slot 1"
     },
     "DENSITY1": {
       "type": "integer",
       "min": 0,
-      "max": 125
+      "max": 125,
+      "description": "Minimum cells between spawned instances of object 1"
     },
     "PROB1": {
       "type": "integer",
       "min": 0,
-      "max": 50
+      "max": 50,
+      "description": "Spawn probability for object 1 (0-100)"
     },
     "ID2": {
       "type": "integer",
       "min": 0,
-      "max": 389
+      "max": 389,
+      "description": "Object ID from objects.txt for slot 2"
     },
     "DENSITY2": {
       "type": "integer",
       "min": 0,
-      "max": 80
+      "max": 80,
+      "description": "Minimum cells between spawned instances of object 2"
     },
     "PROB2": {
       "type": "integer",
       "min": 0,
-      "max": 80
+      "max": 80,
+      "description": "Spawn probability for object 2 (0-100)"
     },
     "ID3": {
       "type": "integer",
       "min": 0,
-      "max": 390
+      "max": 390,
+      "description": "Object ID from objects.txt for slot 3"
     },
     "DENSITY3": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Minimum cells between spawned instances of object 3"
     },
     "PROB3": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Spawn probability for object 3 (0-100)"
     },
     "ID4": {
       "type": "integer",
       "min": 0,
-      "max": 391
+      "max": 391,
+      "description": "Object ID from objects.txt for slot 4"
     },
     "DENSITY4": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Minimum cells between spawned instances of object 4"
     },
     "PROB4": {
       "type": "integer",
       "min": 0,
-      "max": 24
+      "max": 24,
+      "description": "Spawn probability for object 4 (0-100)"
     },
     "ID5": {
       "type": "integer",
       "min": 0,
-      "max": 380
+      "max": 380,
+      "description": "Object ID from objects.txt for slot 5"
     },
     "DENSITY5": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Minimum cells between spawned instances of object 5"
     },
     "PROB5": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Spawn probability for object 5 (0-100)"
     },
     "ID6": {
       "type": "integer",
       "min": 0,
-      "max": 316
+      "max": 316,
+      "description": "Object ID from objects.txt for slot 6"
     },
     "DENSITY6": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Minimum cells between spawned instances of object 6"
     },
     "PROB6": {
       "type": "integer",
       "min": 0,
-      "max": 13
+      "max": 13,
+      "description": "Spawn probability for object 6 (0-100)"
     },
     "ID7": {
       "type": "integer",
       "min": 0,
-      "max": 317
+      "max": 317,
+      "description": "Object ID from objects.txt for slot 7"
     },
     "DENSITY7": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Minimum cells between spawned instances of object 7"
     },
     "PROB7": {
       "type": "integer",
       "min": 0,
-      "max": 14
+      "max": 14,
+      "description": "Spawn probability for object 7 (0-100)"
     },
     "SHRINES": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this group contains shrines"
     },
     "WELLS": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this group contains wells"
     }
   }
 }

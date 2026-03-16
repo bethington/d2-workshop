@@ -1,6 +1,6 @@
 {
   "file": "objects.txt",
-  "description": "Game object definitions \u2014 shrines, chests, doors, waypoints, and interactive objects.",
+  "description": "Game object definitions — shrines, chests, doors, waypoints, and interactive objects.",
   "columns": {
     "Name": {
       "type": "string",
@@ -8,7 +8,8 @@
       "description": "Internal name identifier"
     },
     "description - not loaded": {
-      "type": "string"
+      "type": "string",
+      "description": "Brief reference description (not loaded by game)"
     },
     "Id": {
       "type": "integer",
@@ -27,33 +28,42 @@
       "description": "spawn maximum value"
     },
     "Selectable0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 0 (neutral)"
     },
     "Selectable1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 1 (operating)"
     },
     "Selectable2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 2 (opened)"
     },
     "Selectable3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 3 (special 1)"
     },
     "Selectable4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 4 (special 2)"
     },
     "Selectable5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 5 (special 3)"
     },
     "Selectable6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 6 (special 4)"
     },
     "Selectable7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether selectable in mode 7 (special 5)"
     },
     "TrapProb": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Trap probability (unused)"
     },
     "SizeX": {
       "type": "integer",
@@ -70,307 +80,382 @@
     "nTgtFX": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Front target X offset in subtiles"
     },
     "nTgtFY": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Front target Y offset in subtiles"
     },
     "nTgtBX": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Back target X offset in subtiles"
     },
     "nTgtBY": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Back target Y offset in subtiles"
     },
     "FrameCnt0": {
       "type": "integer",
       "min": 0,
-      "max": 39
+      "max": 39,
+      "description": "Animation frame count for mode 0 (neutral)"
     },
     "FrameCnt1": {
       "type": "integer",
       "min": 0,
-      "max": 49
+      "max": 49,
+      "description": "Animation frame count for mode 1 (operating)"
     },
     "FrameCnt2": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Animation frame count for mode 2 (opened)"
     },
     "FrameCnt3": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Animation frame count for mode 3 (special 1)"
     },
     "FrameCnt4": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Animation frame count for mode 4 (special 2)"
     },
     "FrameCnt5": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Animation frame count for mode 5 (special 3)"
     },
     "FrameCnt6": {
       "type": "integer",
       "min": 0,
-      "max": 20
+      "max": 20,
+      "description": "Animation frame count for mode 6 (special 4)"
     },
     "FrameCnt7": {
       "type": "integer",
       "min": 0,
-      "max": 10
+      "max": 10,
+      "description": "Animation frame count for mode 7 (special 5)"
     },
     "FrameDelta0": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 0 in 256ths"
     },
     "FrameDelta1": {
       "type": "integer",
       "min": 0,
-      "max": 640
+      "max": 640,
+      "description": "Animation playback rate for mode 1 in 256ths"
     },
     "FrameDelta2": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 2 in 256ths"
     },
     "FrameDelta3": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 3 in 256ths"
     },
     "FrameDelta4": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 4 in 256ths"
     },
     "FrameDelta5": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 5 in 256ths"
     },
     "FrameDelta6": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 6 in 256ths"
     },
     "FrameDelta7": {
       "type": "integer",
       "min": 0,
-      "max": 256
+      "max": 256,
+      "description": "Animation playback rate for mode 7 in 256ths"
     },
     "CycleAnim0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 0 (neutral)"
     },
     "CycleAnim1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 1 (operating)"
     },
     "CycleAnim2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 2 (opened)"
     },
     "CycleAnim3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 3 (special 1)"
     },
     "CycleAnim4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 4 (special 2)"
     },
     "CycleAnim5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 5 (special 3)"
     },
     "CycleAnim6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 6 (special 4)"
     },
     "CycleAnim7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to loop animation for mode 7 (special 5)"
     },
     "Lit0": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Light radius in subtiles for mode 0 (neutral)"
     },
     "Lit1": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Light radius in subtiles for mode 1 (operating)"
     },
     "Lit2": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Light radius in subtiles for mode 2 (opened)"
     },
     "Lit3": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "Light radius in subtiles for mode 3 (special 1)"
     },
     "Lit4": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "Light radius in subtiles for mode 4 (special 2)"
     },
     "Lit5": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "Light radius in subtiles for mode 5 (special 3)"
     },
     "Lit6": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "Light radius in subtiles for mode 6 (special 4)"
     },
     "Lit7": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "Light radius in subtiles for mode 7 (special 5)"
     },
     "BlocksLight0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 0"
     },
     "BlocksLight1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 1"
     },
     "BlocksLight2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 2"
     },
     "BlocksLight3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 3"
     },
     "BlocksLight4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 4"
     },
     "BlocksLight5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 5"
     },
     "BlocksLight6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 6"
     },
     "BlocksLight7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object casts shadow in mode 7"
     },
     "HasCollision0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 0"
     },
     "HasCollision1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 1"
     },
     "HasCollision2": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 2"
     },
     "HasCollision3": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 3"
     },
     "HasCollision4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 4"
     },
     "HasCollision5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 5"
     },
     "HasCollision6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 6"
     },
     "HasCollision7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether collision checking is used in mode 7"
     },
     "IsAttackable0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether clicking uses kick mode (1) or neutral mode (0)"
     },
     "Start0": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 0"
     },
     "Start1": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 1"
     },
     "Start2": {
       "type": "integer",
       "min": 0,
-      "max": 28
+      "max": 28,
+      "description": "Starting animation frame for mode 2"
     },
     "Start3": {
       "type": "integer",
       "min": 0,
-      "max": 29
+      "max": 29,
+      "description": "Starting animation frame for mode 3"
     },
     "Start4": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 4"
     },
     "Start5": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 5"
     },
     "Start6": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 6"
     },
     "Start7": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Starting animation frame for mode 7"
     },
     "EnvEffect": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object produces ambient sound/environmental effects"
     },
     "IsDoor": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object is treated as a door"
     },
     "BlocksVis": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object blocks player vision (works with IsDoor)"
     },
     "Orientation": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Directional orientation of the object (0-3)"
     },
     "Trans": {
       "type": "integer",
       "min": 0,
-      "max": 7
+      "max": 7,
+      "description": "Type of palette color mapping applied"
     },
     "OrderFlag0": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 0: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag1": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 1: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag2": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 2: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag3": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 3: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag4": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 4: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag5": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 5: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag6": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 6: 0=object, 1=floor, 2=wall"
     },
     "OrderFlag7": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw order for mode 7: 0=object, 1=floor, 2=wall"
     },
     "PreOperate": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object runs its operate function before player interaction"
     },
     "Mode0": {
       "type": "integer",
@@ -423,15 +508,18 @@
     "Yoffset": {
       "type": "integer",
       "min": -38,
-      "max": 20
+      "max": 20,
+      "description": "Vertical graphical offset from animation pivot in pixels"
     },
     "Xoffset": {
       "type": "integer",
       "min": -45,
-      "max": 20
+      "max": 20,
+      "description": "Horizontal graphical offset from animation pivot in pixels"
     },
     "Draw": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to draw the object graphics on screen"
     },
     "Red": {
       "type": "integer",
@@ -452,149 +540,182 @@
       "description": "Blue color channel (0-255)"
     },
     "HD": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the head DCC component is used"
     },
     "TR": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the torso DCC component is used"
     },
     "LG": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the legs DCC component is used"
     },
     "RA": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the right arm DCC component is used"
     },
     "LA": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the left arm DCC component is used"
     },
     "RH": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the right hand DCC component is used"
     },
     "LH": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the left hand DCC component is used"
     },
     "SH": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the shield DCC component is used"
     },
     "S1": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 1 is used"
     },
     "S2": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 2 is used"
     },
     "S3": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 3 is used"
     },
     "S4": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 4 is used"
     },
     "S5": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 5 is used"
     },
     "S6": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 6 is used"
     },
     "S7": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 7 is used"
     },
     "S8": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether special DCC component 8 is used"
     },
     "TotalPieces": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Total number of selectable DCC components"
     },
     "SubClass": {
       "type": "integer",
       "min": 0,
-      "max": 128
+      "max": 128,
+      "description": "Object subclass bitfield (1=shrine, 4=portal, 8=container, 64=waypoint, 128=quest)"
     },
     "Xspace": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Horizontal spacing in subtiles between instances"
     },
     "Yspace": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "Vertical spacing in subtiles between instances"
     },
     "NameOffset": {
       "type": "integer",
       "min": -250,
-      "max": 0
+      "max": 0,
+      "description": "Vertical pixel offset for displayed object name"
     },
     "MonsterOK": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether monsters can spawn near this object"
     },
     "OperateRange": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Distance in subtiles from which the player can use this object"
     },
     "ShrineFunction": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Shrine function identifier (unused, hardcoded)"
     },
     "Restore": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object persists in memory (1) or disappears off-screen (0)"
     },
     "Parm0": {
       "type": "integer",
       "min": -20,
-      "max": 750
+      "max": 750,
+      "description": "General-purpose parameter 0 for object functions"
     },
     "Parm1": {
       "type": "integer",
       "min": -80,
-      "max": 344
+      "max": 344,
+      "description": "General-purpose parameter 1 for object functions"
     },
     "Parm2": {
       "type": "integer",
       "min": 0,
-      "max": 40
+      "max": 40,
+      "description": "General-purpose parameter 2 for object functions"
     },
     "Parm3": {
       "type": "integer",
       "min": 0,
-      "max": 40
+      "max": 40,
+      "description": "General-purpose parameter 3 for object functions"
     },
     "Parm4": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "General-purpose parameter 4 for object functions"
     },
     "Parm5": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "General-purpose parameter 5 for object functions"
     },
     "Parm6": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "General-purpose parameter 6 for object functions"
     },
     "Parm7": {
       "type": "integer",
       "min": 0,
-      "max": 255
+      "max": 255,
+      "description": "General-purpose parameter 7 for object functions"
     },
     "Act": {
       "type": "integer",
@@ -603,21 +724,26 @@
       "description": "Act bitmask (bitfield, not 1-5)"
     },
     "Lockable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this object can be locked"
     },
     "Gore": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the object is a gore/corpse decoration"
     },
     "Sync": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to keep client and server object state in sync"
     },
     "Flicker": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the emitted light should flicker"
     },
     "Damage": {
       "type": "integer",
       "min": 100,
-      "max": 100
+      "max": 100,
+      "description": "Amount of damage dealt by this object on contact"
     },
     "Beta": {
       "type": "boolean",
@@ -626,64 +752,78 @@
     "Overlay": {
       "type": "integer",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "description": "Whether a visual overlay is applied"
     },
     "CollisionSubst": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether special collision substitution checking is used"
     },
     "Left": {
       "type": "integer",
       "min": -50,
-      "max": 750
+      "max": 750,
+      "description": "Left boundary of bounding box in pixels"
     },
     "Top": {
       "type": "integer",
       "min": -100,
-      "max": 301
+      "max": 301,
+      "description": "Top boundary of bounding box in pixels"
     },
     "Width": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Width of bounding box in pixels"
     },
     "Height": {
       "type": "integer",
       "min": 0,
-      "max": 110
+      "max": 110,
+      "description": "Height of bounding box in pixels"
     },
     "OperateFn": {
       "type": "integer",
       "min": 0,
-      "max": 59
+      "max": 59,
+      "description": "Function called when the player clicks/operates the object"
     },
     "PopulateFn": {
       "type": "integer",
       "min": 0,
-      "max": 9
+      "max": 9,
+      "description": "Function controlling how contents are populated on spawn"
     },
     "InitFn": {
       "type": "integer",
       "min": 0,
-      "max": 61
+      "max": 61,
+      "description": "Initialization function called when the object is created"
     },
     "ClientFn": {
       "type": "integer",
       "min": 0,
-      "max": 7
+      "max": 7,
+      "description": "Client-side visual/sound effect function"
     },
     "RestoreVirgins": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Restore only unoperated objects (1) or all objects (0)"
     },
     "BlockMissile": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether missiles collide with this object"
     },
     "DrawUnder": {
       "type": "integer",
       "min": 0,
-      "max": 2
+      "max": 2,
+      "description": "Draw as floor tile (1) instead of normal rendering (0)"
     },
     "OpenWarp": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether to display warp destination text"
     },
     "AutoMap": {
       "type": "integer",

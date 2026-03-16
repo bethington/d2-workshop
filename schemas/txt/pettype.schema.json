@@ -1,0 +1,106 @@
+{
+  "file": "pettype.txt",
+  "description": "Pet and summon type definitions — controls summoned creature grouping, UI display, automap visibility, and icon assignment. Referenced by the pettype column in Skills.txt.",
+  "columns": {
+    "pet type": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Pet type name identifier, referenced by Skills.txt pettype column"
+    },
+    "idx": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "description": "Numeric index for internal pet type lookup"
+    },
+    "group": {
+      "type": "integer",
+      "description": "Pet group ID (pets in the same group are mutually exclusive)"
+    },
+    "basemax": {
+      "type": "integer",
+      "description": "Base maximum number of this pet type (for oskill/set bonus pet persistence)"
+    },
+    "warp": {
+      "type": "boolean",
+      "description": "Pet warps/teleports to follow the player"
+    },
+    "range": {
+      "type": "boolean",
+      "description": "Pet has ranged attack capability"
+    },
+    "partysend": {
+      "type": "boolean",
+      "description": "Pet responds to party commands"
+    },
+    "unsummon": {
+      "type": "boolean",
+      "description": "Pet can be unsummoned by the player"
+    },
+    "automap": {
+      "type": "boolean",
+      "description": "Pet appears on the automap"
+    },
+    "name": {
+      "type": "boolean",
+      "description": "Pet displays a name"
+    },
+    "drawhp": {
+      "type": "boolean",
+      "description": "Draw pet health bar in the UI"
+    },
+    "icontype": {
+      "type": "integer",
+      "description": "Pet icon display type in the UI panel"
+    },
+    "baseicon": {
+      "type": "integer",
+      "description": "Base icon cell index for this pet type"
+    },
+    "mclass1": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Class",
+      "description": "Monster class 1 that uses this pet icon"
+    },
+    "micon1": {
+      "type": "integer",
+      "description": "Icon cell index for monster class 1"
+    },
+    "mclass2": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Class",
+      "description": "Monster class 2 that uses this pet icon"
+    },
+    "micon2": {
+      "type": "integer",
+      "description": "Icon cell index for monster class 2"
+    },
+    "mclass3": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Class",
+      "description": "Monster class 3 that uses this pet icon"
+    },
+    "micon3": {
+      "type": "integer",
+      "description": "Icon cell index for monster class 3"
+    },
+    "mclass4": {
+      "type": "ref",
+      "target": "monstats.txt",
+      "targetColumn": "Class",
+      "description": "Monster class 4 that uses this pet icon"
+    },
+    "micon4": {
+      "type": "integer",
+      "description": "Icon cell index for monster class 4"
+    },
+    "eol": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)"
+    }
+  }
+}

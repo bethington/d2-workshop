@@ -1,0 +1,210 @@
+{
+  "file": "monsounds.txt",
+  "description": "Monster sound assignments — maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
+  "columns": {
+    "Id": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Monster sound set identifier, referenced by MonStats.txt MonSound/UMonSound columns"
+    },
+    "Attack1": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Primary attack sound effect"
+    },
+    "Weapon1": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Primary weapon impact sound effect"
+    },
+    "Att1Del": {
+      "type": "integer",
+      "description": "Attack 1 sound delay in frames"
+    },
+    "Wea1Del": {
+      "type": "integer",
+      "description": "Weapon 1 sound delay in frames"
+    },
+    "Att1Prb": {
+      "type": "integer",
+      "description": "Attack 1 sound probability (0-100)"
+    },
+    "Wea1Vol": {
+      "type": "integer",
+      "description": "Weapon 1 sound volume (0-255)"
+    },
+    "Attack2": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Secondary attack sound effect"
+    },
+    "Weapon2": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Secondary weapon impact sound effect"
+    },
+    "Att2Del": {
+      "type": "integer",
+      "description": "Attack 2 sound delay in frames"
+    },
+    "Wea2Del": {
+      "type": "integer",
+      "description": "Weapon 2 sound delay in frames"
+    },
+    "Att2Prb": {
+      "type": "integer",
+      "description": "Attack 2 sound probability (0-100)"
+    },
+    "Wea2Vol": {
+      "type": "integer",
+      "description": "Weapon 2 sound volume (0-255)"
+    },
+    "HitSound": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Sound effect when monster is hit"
+    },
+    "DeathSound": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Sound effect when monster dies"
+    },
+    "HitDelay": {
+      "type": "integer",
+      "description": "Get-hit sound delay in frames"
+    },
+    "DeaDelay": {
+      "type": "integer",
+      "description": "Death sound delay in frames"
+    },
+    "Skill1": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Skill 1 sound effect"
+    },
+    "Skill2": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Skill 2 sound effect"
+    },
+    "Skill3": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Skill 3 sound effect"
+    },
+    "Skill4": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Skill 4 sound effect"
+    },
+    "Footstep": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Footstep sound effect"
+    },
+    "FootstepLayer": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Footstep layered/secondary sound effect"
+    },
+    "FsCnt": {
+      "type": "integer",
+      "description": "Footstep frame count per step cycle"
+    },
+    "FsOff": {
+      "type": "integer",
+      "description": "Footstep frame offset within walk animation"
+    },
+    "FsPrb": {
+      "type": "integer",
+      "description": "Footstep sound probability (0-100)"
+    },
+    "Neutral": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Ambient/neutral idle sound effect"
+    },
+    "NeuTime": {
+      "type": "integer",
+      "description": "Neutral sound repeat interval in frames"
+    },
+    "Init": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Initialization/spawn sound effect"
+    },
+    "Taunt": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Taunt/aggro sound effect"
+    },
+    "Flee": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Flee/retreat sound effect"
+    },
+    "CvtMo1": {
+      "type": "string",
+      "description": "Conversion mode 1 animation token"
+    },
+    "CvtSk1": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Conversion skill 1 sound effect"
+    },
+    "CvtTgt1": {
+      "type": "integer",
+      "description": "Conversion target type 1"
+    },
+    "CvtMo2": {
+      "type": "string",
+      "description": "Conversion mode 2 animation token"
+    },
+    "CvtSk2": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Conversion skill 2 sound effect"
+    },
+    "CvtTgt2": {
+      "type": "integer",
+      "description": "Conversion target type 2"
+    },
+    "CvtMo3": {
+      "type": "string",
+      "description": "Conversion mode 3 animation token"
+    },
+    "CvtSk3": {
+      "type": "ref",
+      "target": "sounds.txt",
+      "targetColumn": "Sound",
+      "description": "Conversion skill 3 sound effect"
+    },
+    "CvtTgt3": {
+      "type": "integer",
+      "description": "Conversion target type 3"
+    },
+    "EOL": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)"
+    }
+  }
+}

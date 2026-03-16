@@ -1,6 +1,6 @@
 {
   "file": "inventory.txt",
-  "description": "Inventory panel layout definitions \u2014 grid positions for each inventory screen.",
+  "description": "Inventory panel layout definitions — grid positions for each inventory screen.",
   "columns": {
     "class": {
       "type": "enum",
@@ -25,362 +25,434 @@
     "invLeft": {
       "type": "integer",
       "min": 0,
-      "max": 320
+      "max": 320,
+      "description": "Left pixel coordinate of inventory panel"
     },
     "invRight": {
       "type": "integer",
       "min": 321,
-      "max": 640
+      "max": 640,
+      "description": "Right pixel coordinate of inventory panel"
     },
     "invTop": {
       "type": "integer",
       "min": 0,
-      "max": 220
+      "max": 220,
+      "description": "Top pixel coordinate of inventory panel"
     },
     "invBottom": {
       "type": "integer",
       "min": 219,
-      "max": 442
+      "max": 442,
+      "description": "Bottom pixel coordinate of inventory panel"
     },
     "gridRows": {
       "type": "integer",
       "min": 3,
-      "max": 10
+      "max": 10,
+      "description": "Number of rows in the inventory grid"
     },
     "gridCols": {
       "type": "integer",
       "min": 4,
-      "max": 10
+      "max": 10,
+      "description": "Number of columns in the inventory grid"
     },
     "gridLeft": {
       "type": "integer",
       "min": 16,
-      "max": 339
+      "max": 339,
+      "description": "Left pixel coordinate of inventory grid area"
     },
     "gridRight": {
       "type": "integer",
       "min": 205,
-      "max": 626
+      "max": 626,
+      "description": "Right pixel coordinate of inventory grid area"
     },
     "gridTop": {
       "type": "integer",
       "min": 41,
-      "max": 273
+      "max": 273,
+      "description": "Top pixel coordinate of inventory grid area"
     },
     "gridBottom": {
       "type": "integer",
       "min": 148,
-      "max": 386
+      "max": 386,
+      "description": "Bottom pixel coordinate of inventory grid area"
     },
     "gridBoxWidth": {
       "type": "integer",
       "min": 29,
-      "max": 29
+      "max": 29,
+      "description": "Width of each grid cell in pixels"
     },
     "gridBoxHeight": {
       "type": "integer",
       "min": 29,
-      "max": 29
+      "max": 29,
+      "description": "Height of each grid cell in pixels"
     },
     "rArmLeft": {
       "type": "integer",
       "min": -1,
-      "max": 340
+      "max": 340,
+      "description": "Left pixel coordinate of right arm slot (-1=none)"
     },
     "rArmRight": {
       "type": "integer",
       "min": -1,
-      "max": 395
+      "max": 395,
+      "description": "Right pixel coordinate of right arm slot"
     },
     "rArmTop": {
       "type": "integer",
       "min": -1,
-      "max": 47
+      "max": 47,
+      "description": "Top pixel coordinate of right arm slot"
     },
     "rArmBottom": {
       "type": "integer",
       "min": -1,
-      "max": 159
+      "max": 159,
+      "description": "Bottom pixel coordinate of right arm slot"
     },
     "rArmWidth": {
       "type": "integer",
       "min": -1,
-      "max": 55
+      "max": 55,
+      "description": "Width of right arm slot in pixels"
     },
     "rArmHeight": {
       "type": "integer",
       "min": -1,
-      "max": 112
+      "max": 112,
+      "description": "Height of right arm slot in pixels"
     },
     "torsoLeft": {
       "type": "integer",
       "min": -1,
-      "max": 453
+      "max": 453,
+      "description": "Left pixel coordinate of torso/armor slot (-1=none)"
     },
     "torsoRight": {
       "type": "integer",
       "min": -1,
-      "max": 509
+      "max": 509,
+      "description": "Right pixel coordinate of torso/armor slot"
     },
     "torsoTop": {
       "type": "integer",
       "min": -1,
-      "max": 77
+      "max": 77,
+      "description": "Top pixel coordinate of torso/armor slot"
     },
     "torsoBottom": {
       "type": "integer",
       "min": -1,
-      "max": 159
+      "max": 159,
+      "description": "Bottom pixel coordinate of torso/armor slot"
     },
     "torsoWidth": {
       "type": "integer",
       "min": -1,
-      "max": 56
+      "max": 56,
+      "description": "Width of torso/armor slot in pixels"
     },
     "torsoHeight": {
       "type": "integer",
       "min": -1,
-      "max": 82
+      "max": 82,
+      "description": "Height of torso/armor slot in pixels"
     },
     "lArmLeft": {
       "type": "integer",
       "min": -1,
-      "max": 571
+      "max": 571,
+      "description": "Left pixel coordinate of left arm slot (-1=none)"
     },
     "lArmRight": {
       "type": "integer",
       "min": -1,
-      "max": 626
+      "max": 626,
+      "description": "Right pixel coordinate of left arm slot"
     },
     "lArmTop": {
       "type": "integer",
       "min": -1,
-      "max": 47
+      "max": 47,
+      "description": "Top pixel coordinate of left arm slot"
     },
     "lArmBottom": {
       "type": "integer",
       "min": -1,
-      "max": 159
+      "max": 159,
+      "description": "Bottom pixel coordinate of left arm slot"
     },
     "lArmWidth": {
       "type": "integer",
       "min": -1,
-      "max": 55
+      "max": 55,
+      "description": "Width of left arm slot in pixels"
     },
     "lArmHeight": {
       "type": "integer",
       "min": -1,
-      "max": 112
+      "max": 112,
+      "description": "Height of left arm slot in pixels"
     },
     "headLeft": {
       "type": "integer",
       "min": -1,
-      "max": 455
+      "max": 455,
+      "description": "Left pixel coordinate of head/helm slot (-1=none)"
     },
     "headRight": {
       "type": "integer",
       "min": -1,
-      "max": 509
+      "max": 509,
+      "description": "Right pixel coordinate of head/helm slot"
     },
     "headTop": {
       "type": "integer",
       "min": -1,
-      "max": 8
+      "max": 8,
+      "description": "Top pixel coordinate of head/helm slot"
     },
     "headBottom": {
       "type": "integer",
       "min": -1,
-      "max": 59
+      "max": 59,
+      "description": "Bottom pixel coordinate of head/helm slot"
     },
     "headWidth": {
       "type": "integer",
       "min": -1,
-      "max": 54
+      "max": 54,
+      "description": "Width of head/helm slot in pixels"
     },
     "headHeight": {
       "type": "integer",
       "min": -1,
-      "max": 51
+      "max": 51,
+      "description": "Height of head/helm slot in pixels"
     },
     "neckLeft": {
       "type": "integer",
       "min": -1,
-      "max": 529
+      "max": 529,
+      "description": "Left pixel coordinate of neck/amulet slot (-1=none)"
     },
     "neckRight": {
       "type": "integer",
       "min": -1,
-      "max": 552
+      "max": 552,
+      "description": "Right pixel coordinate of neck/amulet slot"
     },
     "neckTop": {
       "type": "integer",
       "min": -1,
-      "max": 35
+      "max": 35,
+      "description": "Top pixel coordinate of neck/amulet slot"
     },
     "neckBottom": {
       "type": "integer",
       "min": -1,
-      "max": 59
+      "max": 59,
+      "description": "Bottom pixel coordinate of neck/amulet slot"
     },
     "neckWidth": {
       "type": "integer",
       "min": -1,
-      "max": 23
+      "max": 23,
+      "description": "Width of neck/amulet slot in pixels"
     },
     "neckHeight": {
       "type": "integer",
       "min": -1,
-      "max": 24
+      "max": 24,
+      "description": "Height of neck/amulet slot in pixels"
     },
     "rHandLeft": {
       "type": "integer",
       "min": -1,
-      "max": 415
+      "max": 415,
+      "description": "Left pixel coordinate of right ring slot (-1=none)"
     },
     "rHandRight": {
       "type": "integer",
       "min": -1,
-      "max": 438
+      "max": 438,
+      "description": "Right pixel coordinate of right ring slot"
     },
     "rHandTop": {
       "type": "integer",
       "min": -1,
-      "max": 180
+      "max": 180,
+      "description": "Top pixel coordinate of right ring slot"
     },
     "rHandBottom": {
       "type": "integer",
       "min": -1,
-      "max": 204
+      "max": 204,
+      "description": "Bottom pixel coordinate of right ring slot"
     },
     "rHandWidth": {
       "type": "integer",
       "min": -1,
-      "max": 23
+      "max": 23,
+      "description": "Width of right ring slot in pixels"
     },
     "rHandHeight": {
       "type": "integer",
       "min": -1,
-      "max": 24
+      "max": 24,
+      "description": "Height of right ring slot in pixels"
     },
     "lHandLeft": {
       "type": "integer",
       "min": -1,
-      "max": 529
+      "max": 529,
+      "description": "Left pixel coordinate of left ring slot (-1=none)"
     },
     "lHandRight": {
       "type": "integer",
       "min": -1,
-      "max": 552
+      "max": 552,
+      "description": "Right pixel coordinate of left ring slot"
     },
     "lHandTop": {
       "type": "integer",
       "min": -1,
-      "max": 180
+      "max": 180,
+      "description": "Top pixel coordinate of left ring slot"
     },
     "lHandBottom": {
       "type": "integer",
       "min": -1,
-      "max": 204
+      "max": 204,
+      "description": "Bottom pixel coordinate of left ring slot"
     },
     "lHandWidth": {
       "type": "integer",
       "min": -1,
-      "max": 23
+      "max": 23,
+      "description": "Width of left ring slot in pixels"
     },
     "lHandHeight": {
       "type": "integer",
       "min": -1,
-      "max": 24
+      "max": 24,
+      "description": "Height of left ring slot in pixels"
     },
     "beltLeft": {
       "type": "integer",
       "min": -1,
-      "max": 456
+      "max": 456,
+      "description": "Left pixel coordinate of belt slot (-1=none)"
     },
     "beltRight": {
       "type": "integer",
       "min": -1,
-      "max": 508
+      "max": 508,
+      "description": "Right pixel coordinate of belt slot"
     },
     "beltTop": {
       "type": "integer",
       "min": -1,
-      "max": 179
+      "max": 179,
+      "description": "Top pixel coordinate of belt slot"
     },
     "beltBottom": {
       "type": "integer",
       "min": -1,
-      "max": 204
+      "max": 204,
+      "description": "Bottom pixel coordinate of belt slot"
     },
     "beltWidth": {
       "type": "integer",
       "min": -1,
-      "max": 52
+      "max": 52,
+      "description": "Width of belt slot in pixels"
     },
     "beltHeight": {
       "type": "integer",
       "min": -1,
-      "max": 25
+      "max": 25,
+      "description": "Height of belt slot in pixels"
     },
     "feetLeft": {
       "type": "integer",
       "min": -1,
-      "max": 572
+      "max": 572,
+      "description": "Left pixel coordinate of feet/boots slot (-1=none)"
     },
     "feetRight": {
       "type": "integer",
       "min": -1,
-      "max": 626
+      "max": 626,
+      "description": "Right pixel coordinate of feet/boots slot"
     },
     "feetTop": {
       "type": "integer",
       "min": -1,
-      "max": 182
+      "max": 182,
+      "description": "Top pixel coordinate of feet/boots slot"
     },
     "feetBottom": {
       "type": "integer",
       "min": -1,
-      "max": 234
+      "max": 234,
+      "description": "Bottom pixel coordinate of feet/boots slot"
     },
     "feetWidth": {
       "type": "integer",
       "min": -1,
-      "max": 54
+      "max": 54,
+      "description": "Width of feet/boots slot in pixels"
     },
     "feetHeight": {
       "type": "integer",
       "min": -1,
-      "max": 52
+      "max": 52,
+      "description": "Height of feet/boots slot in pixels"
     },
     "glovesLeft": {
       "type": "integer",
       "min": -1,
-      "max": 341
+      "max": 341,
+      "description": "Left pixel coordinate of gloves slot (-1=none)"
     },
     "glovesRight": {
       "type": "integer",
       "min": -1,
-      "max": 395
+      "max": 395,
+      "description": "Right pixel coordinate of gloves slot"
     },
     "glovesTop": {
       "type": "integer",
       "min": -1,
-      "max": 181
+      "max": 181,
+      "description": "Top pixel coordinate of gloves slot"
     },
     "glovesBottom": {
       "type": "integer",
       "min": -1,
-      "max": 234
+      "max": 234,
+      "description": "Bottom pixel coordinate of gloves slot"
     },
     "glovesWidth": {
       "type": "integer",
       "min": -1,
-      "max": 54
+      "max": 54,
+      "description": "Width of gloves slot in pixels"
     },
     "glovesHeight": {
       "type": "integer",
       "min": -1,
-      "max": 53
+      "max": 53,
+      "description": "Height of gloves slot in pixels"
     }
   }
 }

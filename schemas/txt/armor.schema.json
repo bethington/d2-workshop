@@ -109,16 +109,42 @@
       "description": "Animation layer component index"
     },
     "bodyLoc1": {
-      "type": "integer",
+      "type": "enum",
       "min": 1,
       "max": 10,
-      "description": "Primary equipment slot location"
+      "description": "Primary equipment slot location",
+      "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
+        "belt",
+        "feet",
+        "glov",
+        ""
+      ]
     },
     "bodyLoc2": {
-      "type": "integer",
+      "type": "enum",
       "min": 1,
       "max": 10,
-      "description": "Secondary equipment slot location"
+      "description": "Secondary equipment slot location",
+      "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
+        "belt",
+        "feet",
+        "glov",
+        ""
+      ]
     },
     "invwidth": {
       "type": "integer",

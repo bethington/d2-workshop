@@ -51,28 +51,34 @@
     "BodyLoc1": {
       "type": "enum",
       "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
         "belt",
         "feet",
         "glov",
-        "head",
-        "neck",
-        "rarm",
-        "rrin",
-        "tors"
+        ""
       ],
       "description": "Primary equipment slot location"
     },
     "BodyLoc2": {
       "type": "enum",
       "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
         "belt",
         "feet",
         "glov",
-        "head",
-        "larm",
-        "lrin",
-        "neck",
-        "tors"
+        ""
       ],
       "description": "Secondary equipment slot location"
     },

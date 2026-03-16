@@ -233,10 +233,26 @@
       "description": "Spell effect offset index"
     },
     "hit class": {
-      "type": "integer",
+      "type": "enum",
       "min": 1,
       "max": 11,
-      "description": "Impact sound effect class"
+      "description": "Impact sound effect class",
+      "values": [
+        "hth",
+        "1hss",
+        "1hsl",
+        "2hss",
+        "2hsl",
+        "1ht",
+        "2ht",
+        "club",
+        "staf",
+        "bow",
+        "xbow",
+        "claw",
+        "over",
+        ""
+      ]
     },
     "2Handed": {
       "type": "boolean",
@@ -297,16 +313,42 @@
       "description": "Animation layer component index"
     },
     "bodyLoc1": {
-      "type": "integer",
+      "type": "enum",
       "min": 4,
       "max": 4,
-      "description": "Primary equipment slot location"
+      "description": "Primary equipment slot location",
+      "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
+        "belt",
+        "feet",
+        "glov",
+        ""
+      ]
     },
     "bodyLoc2": {
-      "type": "integer",
+      "type": "enum",
       "min": 5,
       "max": 5,
-      "description": "Secondary equipment slot location"
+      "description": "Secondary equipment slot location",
+      "values": [
+        "head",
+        "neck",
+        "tors",
+        "rarm",
+        "larm",
+        "rrin",
+        "lrin",
+        "belt",
+        "feet",
+        "glov",
+        ""
+      ]
     },
     "invwidth": {
       "type": "integer",

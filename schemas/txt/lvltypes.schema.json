@@ -1,6 +1,6 @@
 {
   "file": "lvltypes.txt",
-  "description": "Level visual type definitions \u2014 tileset assignments and lighting.",
+  "description": "Level visual type definitions — tileset assignments and lighting.",
   "columns": {
     "Name": {
       "type": "string",
@@ -15,13 +15,16 @@
       "description": "Unique numeric ID"
     },
     "File 1": {
-      "type": "string"
+      "type": "string",
+      "description": "DT1 tileset file path 1"
     },
     "File 2": {
-      "type": "string"
+      "type": "string",
+      "description": "DT1 tileset file path 2"
     },
     "File 3": {
-      "type": "string"
+      "type": "string",
+      "description": "DT1 tileset file path 3"
     },
     "File 4": {
       "type": "enum",
@@ -43,7 +46,8 @@
         "Act4/Diab/Walls.dt1",
         "Act4/Fort/ForeGate.dt1",
         "Act4/Mesa/Brick_Walls.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 4"
     },
     "File 5": {
       "type": "enum",
@@ -66,7 +70,8 @@
         "Act4/Diab/Bridge.dt1",
         "Act4/Mesa/Chain_Walls.dt1",
         "Act4/Mesa/Floor.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 5"
     },
     "File 6": {
       "type": "enum",
@@ -90,7 +95,8 @@
         "Act4/Lava/Extwalls.dt1",
         "Act4/Mesa/Dist_Wall.dt1",
         "Act4/Mesa/Inv_Wall.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 6"
     },
     "File 7": {
       "type": "enum",
@@ -111,7 +117,8 @@
         "Act4/Lava/Intwalls.dt1",
         "Act4/Mesa/Inv_Wall.dt1",
         "Act4/Mesa/Stairs.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 7"
     },
     "File 8": {
       "type": "enum",
@@ -131,7 +138,8 @@
         "Act3/River/RivBank.dt1",
         "Act4/Lava/Floornew.dt1",
         "Act4/Mesa/Surf_Wall.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 8"
     },
     "File 9": {
       "type": "enum",
@@ -150,7 +158,8 @@
         "Act3/Kurast/Terraces.dt1",
         "Act4/Lava/Rocks.dt1",
         "Act4/Mesa/Surf_Struct.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 9"
     },
     "File 10": {
       "type": "enum",
@@ -166,7 +175,8 @@
         "Act3/Jungle/Trees.dt1",
         "Act3/Kurast/Walls.dt1",
         "Act4/Lava/Specials.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 10"
     },
     "File 11": {
       "type": "enum",
@@ -179,7 +189,8 @@
         "Act3/Jungle/Trees.dt1",
         "Act3/Spider/SpiderEnt.dt1",
         "Act4/Mesa/Surf_Wall.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 11"
     },
     "File 12": {
       "type": "enum",
@@ -190,7 +201,8 @@
         "Act2/Outdoors/Palm.dt1",
         "Act3/Jungle/DungEnt.dt1",
         "Act3/Jungle/TreeGrp.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 12"
     },
     "File 13": {
       "type": "enum",
@@ -201,7 +213,8 @@
         "Act2/Town/Curbs.dt1",
         "Act3/River/Pool.dt1",
         "Act3/Travincal/Floors.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 13"
     },
     "File 14": {
       "type": "enum",
@@ -211,7 +224,8 @@
         "Act2/BigCliff/TalTombL.dt1",
         "Act3/Jungle/Pygmy.dt1",
         "Act3/Travincal/Gate.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 14"
     },
     "File 15": {
       "type": "enum",
@@ -220,7 +234,8 @@
         "Act1/Outdoors/Stones.dt1",
         "Act2/Outdoors/Oasis.dt1",
         "Act3/Travincal/Terraces.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 15"
     },
     "File 16": {
       "type": "enum",
@@ -229,7 +244,8 @@
         "Act1/Outdoors/Tower.dt1",
         "Act2/BigCliff/TombCor.dt1",
         "Act3/Travincal/Walls.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 16"
     },
     "File 17": {
       "type": "enum",
@@ -237,7 +253,8 @@
         "0",
         "Act1/Outdoors/Fallen.dt1",
         "Act2/Ruin/Ground.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 17"
     },
     "File 18": {
       "type": "enum",
@@ -245,7 +262,8 @@
         "0",
         "Act1/Outdoors/pond.dt1",
         "Act2/BigCliff/Corner.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 18"
     },
     "File 19": {
       "type": "enum",
@@ -253,7 +271,8 @@
         "0",
         "Act1/Outdoors/puddle.dt1",
         "Act2/Outdoors/Palm.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 19"
     },
     "File 20": {
       "type": "enum",
@@ -261,7 +280,8 @@
         "0",
         "Act1/Outdoors/TowerB.dt1",
         "Act2/Outdoors/Prickly.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 20"
     },
     "File 21": {
       "type": "enum",
@@ -269,7 +289,8 @@
         "0",
         "Act1/Caves/Cavedr.dt1",
         "Act2/Outdoors/Scrub.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 21"
     },
     "File 22": {
       "type": "enum",
@@ -277,7 +298,8 @@
         "0",
         "Act1/Outdoors/tome.dt1",
         "Act2/Maggot/Entrance.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 22"
     },
     "File 23": {
       "type": "enum",
@@ -285,7 +307,8 @@
         "0",
         "Act1/Outdoors/Swamp.dt1",
         "Act2/Maggot/Hole.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 23"
     },
     "File 24": {
       "type": "enum",
@@ -293,7 +316,8 @@
         "0",
         "Act1/Town/Fence.dt1",
         "Act2/Outdoors/Wagon.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 24"
     },
     "File 25": {
       "type": "enum",
@@ -301,7 +325,8 @@
         "0",
         "Act1/Outdoors/Cottages.dt1",
         "Act2/Ruin/Column.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 25"
     },
     "File 26": {
       "type": "enum",
@@ -309,37 +334,44 @@
         "0",
         "Act1/Town/Objects.dt1",
         "Act2/Outdoors/Village.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 26"
     },
     "File 27": {
       "type": "enum",
       "values": [
         "0",
         "Act2/Outdoors/TombEnt.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 27"
     },
     "File 28": {
       "type": "enum",
       "values": [
         "0",
         "Act2/Outdoors/Viper.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 28"
     },
     "File 29": {
       "type": "enum",
       "values": [
         "0",
         "Act2/Tomb/Tomb.dt1"
-      ]
+      ],
+      "description": "DT1 tileset file path 29"
     },
     "File 30": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "DT1 tileset file path 30"
     },
     "File 31": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "DT1 tileset file path 31"
     },
     "File 32": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "DT1 tileset file path 32"
     },
     "Beta": {
       "type": "boolean",

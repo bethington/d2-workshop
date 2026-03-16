@@ -16,7 +16,16 @@
     },
     "charclass": {
       "type": "enum",
-      "values": ["ama", "sor", "nec", "pal", "bar", "dru", "ass", ""],
+      "values": [
+        "ama",
+        "sor",
+        "nec",
+        "pal",
+        "bar",
+        "dru",
+        "ass",
+        ""
+      ],
       "description": "Character class this skill belongs to (empty = all classes)"
     },
     "skilldesc": {
@@ -51,7 +60,10 @@
     },
     "InGame": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Whether skill appears in-game (1 = yes)"
     },
     "mana": {
@@ -102,7 +114,12 @@
     },
     "range": {
       "type": "enum",
-      "values": ["none", "h2h", "rng", "both"],
+      "values": [
+        "none",
+        "h2h",
+        "rng",
+        "both"
+      ],
       "description": "Attack range type"
     }
   }

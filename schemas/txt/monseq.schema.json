@@ -1,0 +1,50 @@
+{
+  "file": "monseq.txt",
+  "description": "Monster animation sequences \u2014 defines composite animation sequences built from frames of other animation modes. Used for special monster animations that combine multiple modes.",
+  "columns": {
+    "sequence": {
+      "type": "integer",
+      "required": true,
+      "description": "Sequence group index (multiple rows share the same sequence number to form one animation)"
+    },
+    "mode": {
+      "type": "enum",
+      "description": "Source animation mode token to pull frames from (e.g. A1, S1, NU)",
+      "values": [
+        "DT",
+        "NU",
+        "WL",
+        "GH",
+        "A1",
+        "A2",
+        "BL",
+        "SC",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "DD",
+        "KB",
+        "xx",
+        "RN",
+        ""
+      ]
+    },
+    "frame": {
+      "type": "integer",
+      "description": "Frame index within the source animation mode"
+    },
+    "dir": {
+      "type": "integer",
+      "description": "Direction index for the animation frame"
+    },
+    "event": {
+      "type": "integer",
+      "description": "Event trigger at this frame (e.g. missile launch, sound play)"
+    },
+    "eol": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)"
+    }
+  }
+}

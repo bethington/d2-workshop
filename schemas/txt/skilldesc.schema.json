@@ -1,0 +1,470 @@
+{
+  "file": "skilldesc.txt",
+  "description": "Skill description templates — controls skill UI layout, icon, description text, damage display, and synergy tooltip lines. Referenced by the skilldesc column in Skills.txt.",
+  "columns": {
+    "skilldesc": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Skill description identifier, referenced by Skills.txt skilldesc column"
+    },
+    "SkillPage": {
+      "type": "integer",
+      "description": "Skill tree page (1 = left, 2 = middle, 3 = right, 0 = not shown)"
+    },
+    "SkillRow": {
+      "type": "integer",
+      "description": "Skill tree row position (0-6, top to bottom)"
+    },
+    "SkillColumn": {
+      "type": "integer",
+      "description": "Skill tree column position (0-2, left to right)"
+    },
+    "ListRow": {
+      "type": "integer",
+      "description": "Skill list display row for right-click skill menu"
+    },
+    "ListPool": {
+      "type": "integer",
+      "description": "Skill list pool grouping for right-click skill menu"
+    },
+    "IconCel": {
+      "type": "integer",
+      "description": "Skill icon cell index in the skill icon DC6 file"
+    },
+    "str name": {
+      "type": "string",
+      "description": "String table key for skill display name"
+    },
+    "str short": {
+      "type": "string",
+      "description": "String table key for short skill description"
+    },
+    "str long": {
+      "type": "string",
+      "description": "String table key for long/detailed skill description"
+    },
+    "str alt": {
+      "type": "string",
+      "description": "String table key for alternate skill description"
+    },
+    "str mana": {
+      "type": "string",
+      "description": "String table key for mana cost display text"
+    },
+    "descdam": {
+      "type": "integer",
+      "description": "Damage display mode (1=attack, 2=kick, 3=throw, 4-24=various skill damage types)"
+    },
+    "ddam calc1": {
+      "type": "string",
+      "description": "Damage display calculation formula 1"
+    },
+    "ddam calc2": {
+      "type": "string",
+      "description": "Damage display calculation formula 2"
+    },
+    "p1dmelem": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Primary damage element type 1"
+    },
+    "p1dmmin": {
+      "type": "string",
+      "description": "Primary damage 1 minimum value calculation"
+    },
+    "p1dmmax": {
+      "type": "string",
+      "description": "Primary damage 1 maximum value calculation"
+    },
+    "p2dmelem": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Primary damage element type 2"
+    },
+    "p2dmmin": {
+      "type": "string",
+      "description": "Primary damage 2 minimum value calculation"
+    },
+    "p2dmmax": {
+      "type": "string",
+      "description": "Primary damage 2 maximum value calculation"
+    },
+    "p3dmelem": {
+      "type": "ref",
+      "target": "elemtypes.txt",
+      "targetColumn": "Code",
+      "description": "Primary damage element type 3"
+    },
+    "p3dmmin": {
+      "type": "string",
+      "description": "Primary damage 3 minimum value calculation"
+    },
+    "p3dmmax": {
+      "type": "string",
+      "description": "Primary damage 3 maximum value calculation"
+    },
+    "descatt": {
+      "type": "integer",
+      "description": "Attack rating display mode for character screen"
+    },
+    "descmissile1": {
+      "type": "string",
+      "description": "Missile description reference 1"
+    },
+    "descmissile2": {
+      "type": "string",
+      "description": "Missile description reference 2"
+    },
+    "descmissile3": {
+      "type": "string",
+      "description": "Missile description reference 3"
+    },
+    "descline1": {
+      "type": "integer",
+      "description": "Description line 1 display function"
+    },
+    "desctexta1": {
+      "type": "string",
+      "description": "Description line 1 text key A (string table)"
+    },
+    "desctextb1": {
+      "type": "string",
+      "description": "Description line 1 text key B (string table)"
+    },
+    "desccalca1": {
+      "type": "string",
+      "description": "Description line 1 calculation formula A"
+    },
+    "desccalcb1": {
+      "type": "string",
+      "description": "Description line 1 calculation formula B"
+    },
+    "descline2": {
+      "type": "integer",
+      "description": "Description line 2 display function"
+    },
+    "desctexta2": {
+      "type": "string",
+      "description": "Description line 2 text key A"
+    },
+    "desctextb2": {
+      "type": "string",
+      "description": "Description line 2 text key B"
+    },
+    "desccalca2": {
+      "type": "string",
+      "description": "Description line 2 calculation formula A"
+    },
+    "desccalcb2": {
+      "type": "string",
+      "description": "Description line 2 calculation formula B"
+    },
+    "descline3": {
+      "type": "integer",
+      "description": "Description line 3 display function"
+    },
+    "desctexta3": {
+      "type": "string",
+      "description": "Description line 3 text key A"
+    },
+    "desctextb3": {
+      "type": "string",
+      "description": "Description line 3 text key B"
+    },
+    "desccalca3": {
+      "type": "string",
+      "description": "Description line 3 calculation formula A"
+    },
+    "desccalcb3": {
+      "type": "string",
+      "description": "Description line 3 calculation formula B"
+    },
+    "descline4": {
+      "type": "integer",
+      "description": "Description line 4 display function"
+    },
+    "desctexta4": {
+      "type": "string",
+      "description": "Description line 4 text key A"
+    },
+    "desctextb4": {
+      "type": "string",
+      "description": "Description line 4 text key B"
+    },
+    "desccalca4": {
+      "type": "string",
+      "description": "Description line 4 calculation formula A"
+    },
+    "desccalcb4": {
+      "type": "string",
+      "description": "Description line 4 calculation formula B"
+    },
+    "descline5": {
+      "type": "integer",
+      "description": "Description line 5 display function"
+    },
+    "desctexta5": {
+      "type": "string",
+      "description": "Description line 5 text key A"
+    },
+    "desctextb5": {
+      "type": "string",
+      "description": "Description line 5 text key B"
+    },
+    "desccalca5": {
+      "type": "string",
+      "description": "Description line 5 calculation formula A"
+    },
+    "desccalcb5": {
+      "type": "string",
+      "description": "Description line 5 calculation formula B"
+    },
+    "descline6": {
+      "type": "integer",
+      "description": "Description line 6 display function"
+    },
+    "desctexta6": {
+      "type": "string",
+      "description": "Description line 6 text key A"
+    },
+    "desctextb6": {
+      "type": "string",
+      "description": "Description line 6 text key B"
+    },
+    "desccalca6": {
+      "type": "string",
+      "description": "Description line 6 calculation formula A"
+    },
+    "desccalcb6": {
+      "type": "string",
+      "description": "Description line 6 calculation formula B"
+    },
+    "dsc2line1": {
+      "type": "integer",
+      "description": "Current level description line 1 display function"
+    },
+    "dsc2texta1": {
+      "type": "string",
+      "description": "Current level description line 1 text key A"
+    },
+    "dsc2textb1": {
+      "type": "string",
+      "description": "Current level description line 1 text key B"
+    },
+    "dsc2calca1": {
+      "type": "string",
+      "description": "Current level description line 1 calculation A"
+    },
+    "dsc2calcb1": {
+      "type": "string",
+      "description": "Current level description line 1 calculation B"
+    },
+    "dsc2line2": {
+      "type": "integer",
+      "description": "Current level description line 2 display function"
+    },
+    "dsc2texta2": {
+      "type": "string",
+      "description": "Current level description line 2 text key A"
+    },
+    "dsc2textb2": {
+      "type": "string",
+      "description": "Current level description line 2 text key B"
+    },
+    "dsc2calca2": {
+      "type": "string",
+      "description": "Current level description line 2 calculation A"
+    },
+    "dsc2calcb2": {
+      "type": "string",
+      "description": "Current level description line 2 calculation B"
+    },
+    "dsc2line3": {
+      "type": "integer",
+      "description": "Current level description line 3 display function"
+    },
+    "dsc2texta3": {
+      "type": "string",
+      "description": "Current level description line 3 text key A"
+    },
+    "dsc2textb3": {
+      "type": "string",
+      "description": "Current level description line 3 text key B"
+    },
+    "dsc2calca3": {
+      "type": "string",
+      "description": "Current level description line 3 calculation A"
+    },
+    "dsc2calcb3": {
+      "type": "string",
+      "description": "Current level description line 3 calculation B"
+    },
+    "dsc2line4": {
+      "type": "integer",
+      "description": "Current level description line 4 display function"
+    },
+    "dsc2texta4": {
+      "type": "string",
+      "description": "Current level description line 4 text key A"
+    },
+    "dsc2textb4": {
+      "type": "string",
+      "description": "Current level description line 4 text key B"
+    },
+    "dsc2calca4": {
+      "type": "string",
+      "description": "Current level description line 4 calculation A"
+    },
+    "dsc2calcb4": {
+      "type": "string",
+      "description": "Current level description line 4 calculation B"
+    },
+    "dsc3line1": {
+      "type": "integer",
+      "description": "Next level description line 1 display function"
+    },
+    "dsc3texta1": {
+      "type": "string",
+      "description": "Next level description line 1 text key A"
+    },
+    "dsc3textb1": {
+      "type": "string",
+      "description": "Next level description line 1 text key B"
+    },
+    "dsc3calca1": {
+      "type": "string",
+      "description": "Next level description line 1 calculation A"
+    },
+    "dsc3calcb1": {
+      "type": "string",
+      "description": "Next level description line 1 calculation B"
+    },
+    "dsc3line2": {
+      "type": "integer",
+      "description": "Next level description line 2 display function"
+    },
+    "dsc3texta2": {
+      "type": "string",
+      "description": "Next level description line 2 text key A"
+    },
+    "dsc3textb2": {
+      "type": "string",
+      "description": "Next level description line 2 text key B"
+    },
+    "dsc3calca2": {
+      "type": "string",
+      "description": "Next level description line 2 calculation A"
+    },
+    "dsc3calcb2": {
+      "type": "string",
+      "description": "Next level description line 2 calculation B"
+    },
+    "dsc3line3": {
+      "type": "integer",
+      "description": "Next level description line 3 display function"
+    },
+    "dsc3texta3": {
+      "type": "string",
+      "description": "Next level description line 3 text key A"
+    },
+    "dsc3textb3": {
+      "type": "string",
+      "description": "Next level description line 3 text key B"
+    },
+    "dsc3calca3": {
+      "type": "string",
+      "description": "Next level description line 3 calculation A"
+    },
+    "dsc3calcb3": {
+      "type": "string",
+      "description": "Next level description line 3 calculation B"
+    },
+    "dsc3line4": {
+      "type": "integer",
+      "description": "Next level description line 4 display function"
+    },
+    "dsc3texta4": {
+      "type": "string",
+      "description": "Next level description line 4 text key A"
+    },
+    "dsc3textb4": {
+      "type": "string",
+      "description": "Next level description line 4 text key B"
+    },
+    "dsc3calca4": {
+      "type": "string",
+      "description": "Next level description line 4 calculation A"
+    },
+    "dsc3calcb4": {
+      "type": "string",
+      "description": "Next level description line 4 calculation B"
+    },
+    "dsc3line5": {
+      "type": "integer",
+      "description": "Next level description line 5 display function"
+    },
+    "dsc3texta5": {
+      "type": "string",
+      "description": "Next level description line 5 text key A"
+    },
+    "dsc3textb5": {
+      "type": "string",
+      "description": "Next level description line 5 text key B"
+    },
+    "dsc3calca5": {
+      "type": "string",
+      "description": "Next level description line 5 calculation A"
+    },
+    "dsc3calcb5": {
+      "type": "string",
+      "description": "Next level description line 5 calculation B"
+    },
+    "dsc3line6": {
+      "type": "integer",
+      "description": "Next level description line 6 display function"
+    },
+    "dsc3texta6": {
+      "type": "string",
+      "description": "Next level description line 6 text key A"
+    },
+    "dsc3textb6": {
+      "type": "string",
+      "description": "Next level description line 6 text key B"
+    },
+    "dsc3calca6": {
+      "type": "string",
+      "description": "Next level description line 6 calculation A"
+    },
+    "dsc3calcb6": {
+      "type": "string",
+      "description": "Next level description line 6 calculation B"
+    },
+    "dsc3line7": {
+      "type": "integer",
+      "description": "Next level description line 7 display function"
+    },
+    "dsc3texta7": {
+      "type": "string",
+      "description": "Next level description line 7 text key A"
+    },
+    "dsc3textb7": {
+      "type": "string",
+      "description": "Next level description line 7 text key B"
+    },
+    "dsc3calca7": {
+      "type": "string",
+      "description": "Next level description line 7 calculation A"
+    },
+    "dsc3calcb7": {
+      "type": "string",
+      "description": "Next level description line 7 calculation B"
+    },
+    "eol": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)"
+    }
+  }
+}

@@ -5,7 +5,8 @@
     "Handle": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Identifier for the sound environment configuration"
     },
     "Index": {
       "type": "integer",
@@ -16,108 +17,130 @@
     "Song": {
       "type": "integer",
       "min": 0,
-      "max": 3576
+      "max": 3576,
+      "description": "Background music reference from sounds.txt index"
     },
     "Day Ambience": {
       "type": "integer",
       "min": 0,
-      "max": 63
+      "max": 63,
+      "description": "Daytime ambient sound from sounds.txt index"
     },
     "Night Ambience": {
       "type": "integer",
       "min": 0,
-      "max": 64
+      "max": 64,
+      "description": "Nighttime ambient sound from sounds.txt index"
     },
     "Day Event": {
       "type": "integer",
       "min": 0,
-      "max": 185
+      "max": 185,
+      "description": "Daytime random event sound from sounds.txt index"
     },
     "Night Event": {
       "type": "integer",
       "min": 0,
-      "max": 190
+      "max": 190,
+      "description": "Nighttime random event sound from sounds.txt index"
     },
     "Event Delay": {
       "type": "integer",
       "min": 150,
-      "max": 800
+      "max": 800,
+      "description": "Delay between random event sounds in frames"
     },
     "Indoors": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether this is an indoor area (affects sound processing)"
     },
     "Material 1": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Primary ground material type for footstep sounds"
     },
     "Material 2": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Secondary ground material type for footstep sounds"
     },
     "EAX Environ": {
       "type": "integer",
       "min": 0,
-      "max": 17
+      "max": 17,
+      "description": "EAX preset environment type for 3D audio reverb"
     },
     "EAX Env Size": {
       "type": "integer",
       "min": 0,
-      "max": 100000
+      "max": 100000,
+      "description": "EAX environment size parameter"
     },
     "EAX Env Diff": {
       "type": "integer",
       "min": 0,
-      "max": 1000
+      "max": 1000,
+      "description": "EAX environment diffusion"
     },
     "EAX Room Vol": {
       "type": "integer",
       "min": -10000,
-      "max": -1000
+      "max": -1000,
+      "description": "EAX room volume attenuation in millibels"
     },
     "EAX Room HF": {
       "type": "integer",
       "min": -10000,
-      "max": -237
+      "max": -237,
+      "description": "EAX room high-frequency attenuation in millibels"
     },
     "EAX Decay Time": {
       "type": "integer",
       "min": 0,
-      "max": 4750
+      "max": 4750,
+      "description": "EAX reverb decay time in milliseconds"
     },
     "EAX Decay HF": {
       "type": "integer",
       "min": 0,
-      "max": 1167
+      "max": 1167,
+      "description": "EAX high-frequency decay ratio"
     },
     "EAX Reflect": {
       "type": "integer",
       "min": -2780,
-      "max": 0
+      "max": 0,
+      "description": "EAX early reflections level in millibels"
     },
     "EAX Reflect Delay": {
       "type": "integer",
       "min": 0,
-      "max": 226
+      "max": 226,
+      "description": "EAX early reflections delay in milliseconds"
     },
     "EAX Reverb": {
       "type": "integer",
       "min": -1434,
-      "max": 441
+      "max": 441,
+      "description": "EAX late reverb level in millibels"
     },
     "EAX Rev Delay": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "EAX late reverb delay in milliseconds"
     },
     "EAX Room Roll": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "EAX room rolloff factor for distance attenuation"
     },
     "EAX Air Absorb": {
       "type": "integer",
       "min": -5000,
-      "max": 0
+      "max": 0,
+      "description": "EAX air absorption high-frequency attenuation"
     }
   }
 }

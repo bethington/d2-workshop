@@ -30,7 +30,10 @@
     },
     "Spawned": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Can be spawned by other monsters (1 = yes)"
     },
     "SizeX": {
@@ -132,12 +135,38 @@
       "description": "Attack 1 maximum damage (Normal)"
     },
     "El1Mode": {
-      "type": "string",
-      "description": "Elemental attack 1 mode"
+      "type": "enum",
+      "description": "Elemental attack 1 mode",
+      "values": [
+        "DT",
+        "NU",
+        "WL",
+        "GH",
+        "A1",
+        "A2",
+        "BL",
+        "SC",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "DD",
+        "KB",
+        "xx",
+        "RN",
+        ""
+      ]
     },
     "El1Type": {
       "type": "enum",
-      "values": ["", "fire", "ltng", "cold", "pois", "mag"],
+      "values": [
+        "",
+        "fire",
+        "ltng",
+        "cold",
+        "pois",
+        "mag"
+      ],
       "description": "Elemental attack 1 damage type"
     },
     "TreasureClass1": {
@@ -172,17 +201,26 @@
     },
     "boss": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Is a boss monster (1 = yes)"
     },
     "npc": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Is an NPC (1 = yes)"
     },
     "killable": {
       "type": "enum",
-      "values": ["0", "1"],
+      "values": [
+        "0",
+        "1"
+      ],
       "description": "Can be killed (1 = yes)"
     }
   }

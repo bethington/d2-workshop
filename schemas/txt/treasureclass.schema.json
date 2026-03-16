@@ -16,73 +16,96 @@
     "NumCodes": {
       "type": "integer",
       "min": 0,
-      "max": 30
+      "max": 30,
+      "description": "Number of item codes/entries in this treasure class"
     },
     "Code1": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 1"
     },
     "Code2": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 2"
     },
     "Code3": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 3"
     },
     "Code4": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 4"
     },
     "Code5": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 5"
     },
     "Code6": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 6"
     },
     "Code7": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 7"
     },
     "Code8": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 8"
     },
     "Code9": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 9"
     },
     "Code10": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 10"
     },
     "Code11": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 11"
     },
     "Code12": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 12"
     },
     "Code13": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 13"
     },
     "Code14": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 14"
     },
     "Code15": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 15"
     },
     "Code16": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 16"
     },
     "Code17": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 17"
     },
     "Code18": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 18"
     },
     "Code19": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 19"
     },
     "Code20": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 20"
     },
     "Code21": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 21"
     },
     "Code22": {
-      "type": "string"
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 22"
     },
     "Code23": {
       "type": "enum",
@@ -104,7 +127,8 @@
         "spt",
         "tri",
         "wax"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 23"
     },
     "Code24": {
       "type": "enum",
@@ -126,7 +150,8 @@
         "skp",
         "vou",
         "wsc"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 24"
     },
     "Code25": {
       "type": "enum",
@@ -146,7 +171,8 @@
         "mbl",
         "pax",
         "spc"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 25"
     },
     "Code26": {
       "type": "enum",
@@ -166,7 +192,8 @@
         "tax",
         "whm",
         "wsd"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 26"
     },
     "Code27": {
       "type": "enum",
@@ -183,7 +210,8 @@
         "vgl",
         "wax",
         "whm"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 27"
     },
     "Code28": {
       "type": "enum",
@@ -198,7 +226,8 @@
         "ssp",
         "tax",
         "tkf"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 28"
     },
     "Code29": {
       "type": "enum",
@@ -210,7 +239,8 @@
         "gsy",
         "lax",
         "pil"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 29"
     },
     "Code30": {
       "type": "enum",
@@ -221,10 +251,12 @@
         "gsv",
         "pil",
         "sbr"
-      ]
+      ],
+      "description": "Item code or treasure class name for drop slot 30"
     },
     "Comment": {
-      "type": "string"
+      "type": "string",
+      "description": "Developer comment (not loaded by game)"
     }
   }
 }
