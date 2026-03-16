@@ -69,6 +69,16 @@
         "priority": "default"
       },
       {
+        "viewType": "d2workshop.dt1Viewer",
+        "displayName": "D2 Tile Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.dt1"
+          }
+        ],
+        "priority": "default"
+      },
+      {
         "viewType": "d2workshop.cofViewer",
         "displayName": "D2 COF Viewer",
         "selector": [

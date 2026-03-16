@@ -101,6 +101,12 @@ export class D2TreeItem extends vscode.TreeItem {
           title: "Open COF",
           arguments: [mpqUri, "d2workshop.cofViewer"],
         };
+      } else if (fileType === D2FileType.Dt1) {
+        this.command = {
+          command: "vscode.openWith",
+          title: "Open Tiles",
+          arguments: [mpqUri, "d2workshop.dt1Viewer"],
+        };
       }
     } else if (fileType === D2FileType.Dll || fileType === D2FileType.Exe) {
       this.command = {
