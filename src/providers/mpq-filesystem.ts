@@ -96,15 +96,9 @@ export class MpqFileSystemProvider implements vscode.FileSystemProvider {
     // MPQ files use backslash paths internally
     const mpqPath = internalPath.replace(/\//g, "\\");
 
-    console.log(
-      `[D2 Workshop] readFile: mpq=${mpqName}, path=${mpqPath}`
-    );
-
     try {
       return this.mpqManager.readFile(mpqName, mpqPath);
     } catch (err) {
-      // Log as info, not error — file-not-found is expected during MPQ fallback
-      console.log(`[D2 Workshop] readFile: not found in ${mpqName}: ${mpqPath}`);
       throw vscode.FileSystemError.FileNotFound(uri);
     }
   }

@@ -292,7 +292,7 @@ export class TableEditorProvider
         }
         resolvedValues.set(key, Array.from(values).sort());
       } catch (err) {
-        console.log(`[D2 Workshop] Could not resolve ref ${key}: ${err}`);
+        console.warn(`[D2 Workshop] Could not resolve ref ${key}: ${err}`);
       }
     }
 

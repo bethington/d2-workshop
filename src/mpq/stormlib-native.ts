@@ -228,12 +228,14 @@ class StormLibBridge {
       });
 
       this.process!.stderr!.on("data", (data: Buffer) => {
-        console.error(`[StormLib Bridge] ${data.toString().trim()}`);
+        console.warn(`[StormLib Bridge] ${data.toString().trim()}`);
       });
 
       this.process!.on("exit", (code) => {
         this.ready = false;
-        console.log(`[StormLib Bridge] Process exited with code ${code}`);
+        if (code !== 0) {
+          console.warn(`[StormLib Bridge] Process exited with code ${code}`);
+        }
         // Reject any pending requests
         for (const req of this.pendingRequests) {
           req.reject(new Error("Bridge process exited"));
