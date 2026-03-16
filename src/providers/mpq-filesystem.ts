@@ -103,7 +103,8 @@ export class MpqFileSystemProvider implements vscode.FileSystemProvider {
     try {
       return this.mpqManager.readFile(mpqName, mpqPath);
     } catch (err) {
-      console.error(`[D2 Workshop] readFile failed: ${err}`);
+      // Log as info, not error — file-not-found is expected during MPQ fallback
+      console.log(`[D2 Workshop] readFile: not found in ${mpqName}: ${mpqPath}`);
       throw vscode.FileSystemError.FileNotFound(uri);
     }
   }
