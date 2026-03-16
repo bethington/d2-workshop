@@ -1,6 +1,6 @@
 {
   "file": "colors.txt",
-  "description": "Auto-generated schema for colors.txt",
+  "description": "Color transform definitions for character graphics.",
   "columns": {
     "Transform Color": {
       "type": "string",
@@ -8,7 +8,8 @@
       "unique": true
     },
     "Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     }
   }
 }

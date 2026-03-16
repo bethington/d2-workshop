@@ -1,6 +1,6 @@
 {
   "file": "playerclass.txt",
-  "description": "Auto-generated schema for playerclass.txt",
+  "description": "Player character class code definitions.",
   "columns": {
     "Player Class": {
       "type": "enum",
@@ -26,7 +26,8 @@
         "nec",
         "pal",
         "sor"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

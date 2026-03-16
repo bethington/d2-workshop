@@ -1,6 +1,6 @@
 {
   "file": "shrines.txt",
-  "description": "Auto-generated schema for shrines.txt",
+  "description": "Shrine effect definitions \u2014 duration, stat modifiers, and visual effects.",
   "columns": {
     "Shrine Type": {
       "type": "enum",
@@ -21,7 +21,8 @@
     "Code": {
       "type": "integer",
       "min": 0,
-      "max": 22
+      "max": 22,
+      "description": "Unique 3-4 character item code"
     },
     "Arg0": {
       "type": "integer",
@@ -46,7 +47,8 @@
     "rarity": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Spawn rarity ratio (1/N chance)"
     },
     "view name": {
       "type": "string"

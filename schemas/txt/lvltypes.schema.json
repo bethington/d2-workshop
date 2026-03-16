@@ -1,16 +1,18 @@
 {
   "file": "lvltypes.txt",
-  "description": "Auto-generated schema for lvltypes.txt",
+  "description": "Level visual type definitions \u2014 tileset assignments and lighting.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Id": {
       "type": "integer",
       "min": 0,
-      "max": 28
+      "max": 28,
+      "description": "Unique numeric ID"
     },
     "File 1": {
       "type": "string"
@@ -340,12 +342,14 @@
       "type": "boolean"
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     },
     "Act": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Act number (1-5)"
     }
   }
 }

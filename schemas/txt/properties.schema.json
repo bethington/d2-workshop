@@ -1,11 +1,12 @@
 {
   "file": "properties.txt",
-  "description": "Auto-generated schema for properties.txt",
+  "description": "Property definitions \u2014 maps property codes to stat functions used by affixes and uniques.",
   "columns": {
     "Code": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Unique 3-4 character item code"
     },
     "Done": {
       "type": "boolean"
@@ -14,7 +15,8 @@
       "type": "string"
     },
     "Description": {
-      "type": "string"
+      "type": "string",
+      "description": "Recipe description/identifier"
     },
     "Param": {
       "type": "enum",
@@ -32,7 +34,8 @@
         "monster",
         "skill",
         "speed (see note)"
-      ]
+      ],
+      "description": "Condition operation parameter"
     },
     "Min": {
       "type": "enum",

@@ -1,6 +1,6 @@
 {
   "file": "itemratio.txt",
-  "description": "Auto-generated schema for itemratio.txt",
+  "description": "Item quality ratio definitions per monster level.",
   "columns": {
     "Function": {
       "type": "enum",
@@ -14,7 +14,8 @@
     "Unique": {
       "type": "integer",
       "min": 600,
-      "max": 1000
+      "max": 1000,
+      "description": "Only appears as unique quality"
     },
     "UniqueDivisor": {
       "type": "integer",

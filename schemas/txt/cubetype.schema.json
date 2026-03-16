@@ -1,6 +1,6 @@
 {
   "file": "cubetype.txt",
-  "description": "Auto-generated schema for cubetype.txt",
+  "description": "Cube recipe type code definitions.",
   "columns": {
     "cube item class": {
       "type": "enum",
@@ -41,7 +41,8 @@
         "stf",
         "swr",
         "wep"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

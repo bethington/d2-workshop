@@ -1,6 +1,6 @@
 {
   "file": "setitems.txt",
-  "description": "Auto-generated schema for setitems.txt",
+  "description": "Set item definitions \u2014 individual and set bonus properties.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -23,7 +23,8 @@
         "Vidala's Rig"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Prefix": {
       "type": "enum",
@@ -49,7 +50,8 @@
     "level": {
       "type": "integer",
       "min": 3,
-      "max": 27
+      "max": 27,
+      "description": "Base item level"
     },
     "NumItems": {
       "type": "integer",
@@ -62,7 +64,8 @@
       "max": 16
     },
     "transform": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Character model color palette transform"
     },
     "transformcolor": {
       "type": "integer",

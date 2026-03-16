@@ -1,23 +1,27 @@
 {
   "file": "magicsuffix.txt",
-  "description": "Auto-generated schema for magicsuffix.txt",
+  "description": "Magic suffix affix definitions \u2014 stat modifiers, spawn conditions, and item type restrictions.",
   "columns": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "spawnable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can randomly spawn in the game"
     },
     "level": {
       "type": "integer",
       "min": 1,
-      "max": 70
+      "max": 70,
+      "description": "Base item level"
     },
     "group": {
       "type": "integer",
       "min": 1,
-      "max": 35
+      "max": 35,
+      "description": "State group assignment"
     },
     "nummods": {
       "type": "integer",
@@ -93,7 +97,8 @@
       ]
     },
     "transform": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Character model color palette transform"
     },
     "transformcolor": {
       "type": "integer",
@@ -131,7 +136,8 @@
       "type": "boolean"
     },
     "belt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Belt type index"
     },
     "ring": {
       "type": "boolean"
@@ -149,10 +155,12 @@
       "type": "boolean"
     },
     "multiply": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Multiplicative cost modifier"
     },
     "add": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Flat cost modification value"
     }
   }
 }

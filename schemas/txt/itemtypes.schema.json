@@ -1,13 +1,14 @@
 {
   "file": "itemtypes.txt",
-  "description": "Auto-generated schema for itemtypes.txt",
+  "description": "Item type hierarchy \u2014 defines equipment categories, socket rules, and class restrictions.",
   "columns": {
     "ItemType": {
       "type": "string",
       "required": true
     },
     "Code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     },
     "Order": {
       "type": "boolean"
@@ -136,7 +137,8 @@
     "Rarity": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Spawn rarity ratio (1/N chance)"
     },
     "StaffMods": {
       "type": "enum",
@@ -164,7 +166,8 @@
         "nec",
         "pal",
         "sor"
-      ]
+      ],
+      "description": "Character class restriction"
     },
     "VarInvGfx": {
       "type": "integer",

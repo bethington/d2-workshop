@@ -1,6 +1,6 @@
 {
   "file": "arena.txt",
-  "description": "Auto-generated schema for arena.txt",
+  "description": "PvP arena configuration definitions.",
   "columns": {
     "Arena": {
       "type": "ref",

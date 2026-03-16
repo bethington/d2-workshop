@@ -1,6 +1,6 @@
 {
   "file": "hiredesc.txt",
-  "description": "Auto-generated schema for hiredesc.txt",
+  "description": "Hireling description string key definitions.",
   "columns": {
     "Hireling Description": {
       "type": "enum",
@@ -29,7 +29,8 @@
         "fire",
         "ltng",
         "off"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

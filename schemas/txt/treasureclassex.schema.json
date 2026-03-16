@@ -1,6 +1,6 @@
 {
   "file": "treasureclassex.txt",
-  "description": "Auto-generated schema for treasureclassex.txt",
+  "description": "Treasure class definitions \u2014 item drop tables with quality modifiers.",
   "columns": {
     "Treasure Class": {
       "type": "string",
@@ -15,7 +15,8 @@
     "Unique": {
       "type": "integer",
       "min": 800,
-      "max": 983
+      "max": 983,
+      "description": "Only appears as unique quality"
     },
     "Set": {
       "type": "integer",

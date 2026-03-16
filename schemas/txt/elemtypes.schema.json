@@ -1,6 +1,6 @@
 {
   "file": "elemtypes.txt",
-  "description": "Auto-generated schema for elemtypes.txt",
+  "description": "Elemental damage type definitions.",
   "columns": {
     "Elemental Type": {
       "type": "enum",
@@ -35,7 +35,8 @@
         "rand",
         "stam",
         "stun"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

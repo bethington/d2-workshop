@@ -1,6 +1,6 @@
 {
   "file": "soundenviron.txt",
-  "description": "Auto-generated schema for soundenviron.txt",
+  "description": "Environmental sound effect definitions per area type.",
   "columns": {
     "Handle": {
       "type": "string",
@@ -10,7 +10,8 @@
     "Index": {
       "type": "integer",
       "min": 0,
-      "max": 35
+      "max": 35,
+      "description": "Unique index identifier"
     },
     "Song": {
       "type": "integer",

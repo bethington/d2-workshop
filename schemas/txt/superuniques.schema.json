@@ -1,16 +1,18 @@
 {
   "file": "superuniques.txt",
-  "description": "Auto-generated schema for superuniques.txt",
+  "description": "Super unique monster definitions \u2014 named bosses with fixed spawn locations.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Class": {
       "type": "integer",
       "min": 0,
-      "max": 409
+      "max": 409,
+      "description": "Character class restriction"
     },
     "Mod1": {
       "type": "integer",

@@ -1,19 +1,22 @@
 {
   "file": "weapons.txt",
-  "description": "Auto-generated schema for weapons.txt",
+  "description": "Weapon item definitions \u2014 damage values, speed, range, requirements, and visual properties.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "rarity": {
       "type": "integer",
       "min": 0,
-      "max": 99
+      "max": 99,
+      "description": "Spawn rarity ratio (1/N chance)"
     },
     "spawnable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can randomly spawn in the game"
     },
     "completed": {
       "type": "boolean"
@@ -24,38 +27,46 @@
     "mindam": {
       "type": "integer",
       "min": 0,
-      "max": 46
+      "max": 46,
+      "description": "Minimum one-handed physical damage"
     },
     "maxdam": {
       "type": "integer",
       "min": 1,
-      "max": 112
+      "max": 112,
+      "description": "Maximum one-handed physical damage"
     },
     "2handmindam": {
       "type": "integer",
       "min": 0,
-      "max": 61
+      "max": 61,
+      "description": "Minimum two-handed physical damage"
     },
     "2handmaxdam": {
       "type": "integer",
       "min": 1,
-      "max": 114
+      "max": 114,
+      "description": "Maximum two-handed physical damage"
     },
     "rangeadder": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Melee range extension (grid spaces)"
     },
     "StrBonus": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Strength damage bonus (percentage per 100 str)"
     },
     "DexBonus": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Dexterity damage bonus (percentage per 100 dex)"
     },
     "speed": {
       "type": "integer",
       "min": -60,
-      "max": 20
+      "max": 20,
+      "description": "Speed reduction modifier (negative = faster)"
     },
     "weaponspeedenum": {
       "type": "integer",
@@ -65,12 +76,14 @@
     "minmisdam": {
       "type": "integer",
       "min": 1,
-      "max": 27
+      "max": 27,
+      "description": "Minimum throwing/missile damage"
     },
     "maxmisdam": {
       "type": "integer",
       "min": 4,
-      "max": 54
+      "max": 54,
+      "description": "Maximum throwing/missile damage"
     },
     "misspeed": {
       "type": "boolean"
@@ -111,45 +124,54 @@
     "reqstr": {
       "type": "integer",
       "min": 0,
-      "max": 170
+      "max": 170,
+      "description": "Strength requirement to equip"
     },
     "reqdex": {
       "type": "integer",
       "min": 0,
-      "max": 140
+      "max": 140,
+      "description": "Dexterity requirement to equip"
     },
     "durability": {
       "type": "integer",
       "min": 2,
-      "max": 72
+      "max": 72,
+      "description": "Base durability value (0-255)"
     },
     "nodurability": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item has no durability"
     },
     "level": {
       "type": "integer",
       "min": 1,
-      "max": 999
+      "max": 999,
+      "description": "Base item level"
     },
     "cost": {
       "type": "integer",
       "min": 6,
-      "max": 12588
+      "max": 12588,
+      "description": "Base NPC gold cost"
     },
     "replenish": {
       "type": "boolean"
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     },
     "alternateGfx": {
-      "type": "string"
+      "type": "string",
+      "description": "Alternate character graphics code"
     },
     "OpenBetaGfx": {
       "type": "string"
     },
     "ubercode": {
-      "type": "string"
+      "type": "string",
+      "description": "Exceptional quality item code"
     },
     "wclass": {
       "type": "enum",
@@ -160,7 +182,8 @@
         "bow",
         "stf",
         "xbw"
-      ]
+      ],
+      "description": "One-handed weapon class code"
     },
     "2handedwclass": {
       "type": "enum",
@@ -172,7 +195,8 @@
         "bow",
         "stf",
         "xbw"
-      ]
+      ],
+      "description": "Two-handed weapon class code"
     },
     "group": {
       "type": "enum",
@@ -191,7 +215,8 @@
         "spear",
         "staff",
         "throwpotion"
-      ]
+      ],
+      "description": "State group assignment"
     },
     "weapongroupenum": {
       "type": "integer",
@@ -199,7 +224,8 @@
       "max": 10
     },
     "1or2handed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can be wielded in one or two hands (Barbarian)"
     },
     "spelloffset": {
       "type": "boolean"
@@ -207,26 +233,31 @@
     "hit class": {
       "type": "integer",
       "min": 1,
-      "max": 11
+      "max": 11,
+      "description": "Impact sound effect class"
     },
     "2Handed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Two-handed weapon flag"
     },
     "throwable": {
       "type": "boolean"
     },
     "stackable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item uses quantity stacking"
     },
     "minstack": {
       "type": "integer",
       "min": 0,
-      "max": 40
+      "max": 40,
+      "description": "Minimum stack count"
     },
     "maxstack": {
       "type": "integer",
       "min": 0,
-      "max": 80
+      "max": 80,
+      "description": "Maximum stack count"
     },
     "class": {
       "type": "enum",
@@ -236,7 +267,8 @@
         "necromancer",
         "paladin",
         "sorceress"
-      ]
+      ],
+      "description": "Character class restriction"
     },
     "reload": {
       "type": "integer",
@@ -258,7 +290,8 @@
     "component": {
       "type": "integer",
       "min": 5,
-      "max": 6
+      "max": 6,
+      "description": "Animation layer component index"
     },
     "bodyLoc1": {
       "type": "integer",
@@ -273,29 +306,36 @@
     "invwidth": {
       "type": "integer",
       "min": 1,
-      "max": 2
+      "max": 2,
+      "description": "Inventory grid width"
     },
     "invheight": {
       "type": "integer",
       "min": 1,
-      "max": 4
+      "max": 4,
+      "description": "Inventory grid height"
     },
     "hasinv": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item is socketable"
     },
     "gemsockets": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Maximum number of sockets"
     },
     "flippyfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Ground display DC6 file"
     },
     "invfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Inventory graphics DC6 file"
     },
     "uniqueinvfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique quality inventory DC6 file"
     },
     "special": {
       "type": "enum",
@@ -309,12 +349,16 @@
       ]
     },
     "useable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item is right-clickable"
     },
     "type": {
-      "type": "integer",
+      "type": "ref",
       "min": 24,
-      "max": 43
+      "max": 43,
+      "description": "Primary item type code (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "sound": {
       "type": "integer",
@@ -322,15 +366,18 @@
       "max": 30
     },
     "unique": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Only appears as unique quality"
     },
     "transparent": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Enable transparency rendering"
     },
     "transtbl": {
       "type": "integer",
       "min": 5,
-      "max": 5
+      "max": 5,
+      "description": "Transparency type code"
     },
     "quivered": {
       "type": "boolean"
@@ -338,15 +385,18 @@
     "lightradius": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Light radius around item/character"
     },
     "belt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Belt type index"
     },
     "quest": {
       "type": "integer",
       "min": 0,
-      "max": 25
+      "max": 25,
+      "description": "Quest item class identifier"
     },
     "missiletype": {
       "type": "enum",
@@ -365,17 +415,20 @@
         "47",
         "48",
         "49"
-      ]
+      ],
+      "description": "Throwing weapon missile type reference"
     },
     "durwarning": {
       "type": "integer",
       "min": 7,
-      "max": 7
+      "max": 7,
+      "description": "Low durability warning threshold"
     },
     "qntwarning": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Low quantity warning threshold"
     },
     "damvsundead": {
       "type": "integer",
@@ -424,7 +477,8 @@
       "max": 0
     },
     "gemoffset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Gem/rune starting index in Gems.txt"
     },
     "bitfield1": {
       "type": "integer",
@@ -763,21 +817,26 @@
     "Transform": {
       "type": "integer",
       "min": 0,
-      "max": 5
+      "max": 5,
+      "description": "Character model color palette transform"
     },
     "InvTrans": {
       "type": "integer",
       "min": 0,
-      "max": 8
+      "max": 8,
+      "description": "Inventory color transform palette index"
     },
     "SkipName": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skip base name display on uniques"
     },
     "NightmareUpgrade": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Nightmare difficulty replacement code"
     },
     "HellUpgrade": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Hell difficulty replacement code"
     }
   }
 }

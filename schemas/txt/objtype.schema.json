@@ -1,16 +1,18 @@
 {
   "file": "objtype.txt",
-  "description": "Auto-generated schema for objtype.txt",
+  "description": "Object type classification definitions.",
   "columns": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "string"
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     }
   }
 }

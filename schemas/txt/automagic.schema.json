@@ -1,19 +1,22 @@
 {
   "file": "automagic.txt",
-  "description": "Auto-generated schema for automagic.txt",
+  "description": "Automatic magic modifier definitions applied during item generation.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "version": {
       "type": "integer",
       "min": 100,
-      "max": 100
+      "max": 100,
+      "description": "Game version (0=Classic D2, 1=New Classic, 100=Expansion)"
     },
     "spawnable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can randomly spawn in the game"
     },
     "rare": {
       "type": "boolean"
@@ -21,7 +24,8 @@
     "level": {
       "type": "integer",
       "min": 1,
-      "max": 75
+      "max": 75,
+      "description": "Base item level"
     },
     "maxlevel": {
       "type": "string"
@@ -29,10 +33,12 @@
     "levelreq": {
       "type": "integer",
       "min": 2,
-      "max": 67
+      "max": 67,
+      "description": "Minimum character level required to equip"
     },
     "class": {
-      "type": "string"
+      "type": "string",
+      "description": "Character class restriction"
     },
     "classlevelreq": {
       "type": "string"
@@ -45,7 +51,8 @@
     "group": {
       "type": "integer",
       "min": 300,
-      "max": 305
+      "max": 305,
+      "description": "State group assignment"
     },
     "mod1code": {
       "type": "enum",
@@ -110,7 +117,8 @@
       "max": 100
     },
     "transform": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Character model color palette transform"
     },
     "transformcolor": {
       "type": "enum",
@@ -153,10 +161,12 @@
       "type": "boolean"
     },
     "multiply": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Multiplicative cost modifier"
     },
     "add": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Flat cost modification value"
     }
   }
 }

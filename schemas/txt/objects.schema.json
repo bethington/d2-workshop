@@ -1,10 +1,11 @@
 {
   "file": "objects.txt",
-  "description": "Auto-generated schema for objects.txt",
+  "description": "Game object definitions \u2014 shrines, chests, doors, waypoints, and interactive objects.",
   "columns": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "description - not loaded": {
       "type": "string"
@@ -12,7 +13,8 @@
     "Id": {
       "type": "integer",
       "min": 0,
-      "max": 409
+      "max": 409,
+      "description": "Unique numeric ID"
     },
     "Token": {
       "type": "string"
@@ -544,7 +546,8 @@
     "Act": {
       "type": "integer",
       "min": 0,
-      "max": 16
+      "max": 16,
+      "description": "Act number (1-5)"
     },
     "Lockable": {
       "type": "boolean"
@@ -564,7 +567,8 @@
       "max": 100
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     },
     "Overlay": {
       "type": "boolean"

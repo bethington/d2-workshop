@@ -1,6 +1,6 @@
 {
   "file": "belts.txt",
-  "description": "Auto-generated schema for belts.txt",
+  "description": "Belt inventory layout definitions \u2014 potion slot positions per belt type.",
   "columns": {
     "name": {
       "type": "enum",
@@ -14,7 +14,8 @@
         "uber belt"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "numboxes": {
       "type": "integer",

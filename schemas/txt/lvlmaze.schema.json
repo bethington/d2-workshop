@@ -1,14 +1,16 @@
 {
   "file": "lvlmaze.txt",
-  "description": "Auto-generated schema for lvlmaze.txt",
+  "description": "Level maze generation parameters.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Level": {
-      "type": "string"
+      "type": "string",
+      "description": "Base item level"
     },
     "Rooms": {
       "type": "integer",
@@ -31,7 +33,8 @@
       "max": 1000
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     }
   }
 }

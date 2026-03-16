@@ -1,19 +1,22 @@
 {
   "file": "gems.txt",
-  "description": "Auto-generated schema for gems.txt",
+  "description": "Gem and rune modifier definitions \u2014 weapon, armor, and shield bonuses per quality level.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "transform": {
       "type": "integer",
       "min": 0,
-      "max": 18
+      "max": 18,
+      "description": "Character model color palette transform"
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     },
     "nummods": {
       "type": "integer",

@@ -1,26 +1,31 @@
 {
   "file": "uniqueitems.txt",
-  "description": "Auto-generated schema for uniqueitems.txt",
+  "description": "Unique item definitions \u2014 base types, level requirements, and up to 12 properties per item.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "completed": {
       "type": "boolean"
     },
     "beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "description": "Primary item type code (references ItemTypes.txt)"
     },
     "transform": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Character model color palette transform"
     },
     "invtransform": {
       "type": "boolean"

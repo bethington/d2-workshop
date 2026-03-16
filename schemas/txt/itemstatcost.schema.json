@@ -1,23 +1,26 @@
 {
   "file": "itemstatcost.txt",
-  "description": "Auto-generated schema for itemstatcost.txt",
+  "description": "Stat definitions \u2014 controls how stats are stored, transmitted, displayed, and affect item costs.",
   "columns": {
     "ID": {
       "type": "integer",
       "min": 0,
       "max": 176,
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Unique numeric ID"
     },
     "Add": {
       "type": "integer",
       "min": 0,
-      "max": 1000
+      "max": 1000,
+      "description": "Flat cost modification value"
     },
     "Multiply": {
       "type": "integer",
       "min": 0,
-      "max": 300
+      "max": 300,
+      "description": "Multiplicative cost modifier"
     },
     "Divide": {
       "type": "integer",

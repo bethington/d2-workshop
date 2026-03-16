@@ -1,11 +1,12 @@
 {
   "file": "lvlprest.txt",
-  "description": "Auto-generated schema for lvlprest.txt",
+  "description": "Level preset definitions \u2014 pre-built map sections.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Def": {
       "type": "integer",
@@ -102,7 +103,8 @@
       "max": 268435456
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     }
   }
 }

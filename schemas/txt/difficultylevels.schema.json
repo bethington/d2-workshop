@@ -1,6 +1,6 @@
 {
   "file": "difficultylevels.txt",
-  "description": "Auto-generated schema for difficultylevels.txt",
+  "description": "Difficulty scaling \u2014 resistance penalties, experience modifiers per difficulty.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -10,7 +10,8 @@
         "Normal"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "ResistPenalty": {
       "type": "integer",

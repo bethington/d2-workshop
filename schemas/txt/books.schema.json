@@ -4,7 +4,8 @@
   "columns": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "Namco": {
       "type": "enum",

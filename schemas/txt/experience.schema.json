@@ -1,11 +1,12 @@
 {
   "file": "experience.txt",
-  "description": "Auto-generated schema for experience.txt",
+  "description": "Experience requirements per level for each character class.",
   "columns": {
     "Level": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Base item level"
     },
     "Amazon": {
       "type": "integer",

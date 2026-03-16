@@ -1,6 +1,6 @@
 {
   "file": "composit.txt",
-  "description": "Auto-generated schema for composit.txt",
+  "description": "Character composite layer mode definitions.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -23,7 +23,8 @@
         "Torso"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "enum",

@@ -23,15 +23,18 @@
       "required": true
     },
     "Name": {
-      "type": "string"
+      "type": "string",
+      "description": "Internal name identifier"
     },
     "Level": {
       "type": "integer",
       "min": 3,
-      "max": 9
+      "max": 9,
+      "description": "Base item level"
     },
     "Act": {
-      "type": "string"
+      "type": "string",
+      "description": "Act number (1-5)"
     },
     "Class": {
       "type": "enum",
@@ -41,27 +44,32 @@
         "nec",
         "pal",
         "sor"
-      ]
+      ],
+      "description": "Character class restriction"
     },
     "str": {
       "type": "integer",
       "min": 10,
-      "max": 40
+      "max": 40,
+      "description": "Base strength"
     },
     "dex": {
       "type": "integer",
       "min": 15,
-      "max": 32
+      "max": 32,
+      "description": "Base dexterity"
     },
     "int": {
       "type": "integer",
       "min": 10,
-      "max": 40
+      "max": 40,
+      "description": "Starting energy"
     },
     "vit": {
       "type": "integer",
       "min": 10,
-      "max": 42
+      "max": 42,
+      "description": "Starting vitality"
     },
     "tot": {
       "type": "integer",
@@ -71,22 +79,26 @@
     "LifePerLevel": {
       "type": "integer",
       "min": 12,
-      "max": 24
+      "max": 24,
+      "description": "HP gained per level (fourths)"
     },
     "ManaPerLevel": {
       "type": "integer",
       "min": 2,
-      "max": 8
+      "max": 8,
+      "description": "Mana gained per level (fourths)"
     },
     "LifePerVitality": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "HP per vitality point (fourths)"
     },
     "ManaPerMagic": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "Mana per energy point (fourths)"
     },
     "Hitpoints": {
       "type": "integer",

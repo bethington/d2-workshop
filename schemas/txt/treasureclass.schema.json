@@ -1,6 +1,6 @@
 {
   "file": "treasureclass.txt",
-  "description": "Auto-generated schema for treasureclass.txt",
+  "description": "Legacy treasure class definitions (pre-expansion).",
   "columns": {
     "TreasureClass": {
       "type": "ref",
@@ -9,7 +9,8 @@
       "required": true
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     },
     "NumCodes": {
       "type": "integer",

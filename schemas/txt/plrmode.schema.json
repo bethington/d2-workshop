@@ -1,6 +1,6 @@
 {
   "file": "plrmode.txt",
-  "description": "Auto-generated schema for plrmode.txt",
+  "description": "Player animation mode definitions.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -27,7 +27,8 @@
         "Walk"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "enum",

@@ -1,6 +1,6 @@
 {
   "file": "overlay.txt",
-  "description": "Auto-generated schema for overlay.txt",
+  "description": "Visual overlay definitions \u2014 particle effects, auras, and status indicators.",
   "columns": {
     "Overlay": {
       "type": "ref",
@@ -10,7 +10,8 @@
       "unique": true
     },
     "Filename": {
-      "type": "string"
+      "type": "string",
+      "description": "Audio file reference"
     },
     "Frames": {
       "type": "integer",
@@ -50,7 +51,8 @@
       "type": "boolean"
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     },
     "Xoffset": {
       "type": "integer",

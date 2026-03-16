@@ -1,6 +1,6 @@
 {
   "file": "objmode.txt",
-  "description": "Auto-generated schema for objmode.txt",
+  "description": "Object animation mode definitions.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -15,7 +15,8 @@
         "Special5"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "enum",

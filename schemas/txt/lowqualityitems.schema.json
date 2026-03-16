@@ -1,6 +1,6 @@
 {
   "file": "lowqualityitems.txt",
-  "description": "Auto-generated schema for lowqualityitems.txt",
+  "description": "Low quality item prefix definitions (Crude, Cracked, etc.).",
   "columns": {
     "Name": {
       "type": "enum",
@@ -11,7 +11,8 @@
         "Low Quality"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     }
   }
 }

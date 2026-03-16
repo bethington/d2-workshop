@@ -1,6 +1,6 @@
 {
   "file": "plrtype.txt",
-  "description": "Auto-generated schema for plrtype.txt",
+  "description": "Player animation type definitions.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -12,7 +12,8 @@
         "Sorceress"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "enum",

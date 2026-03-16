@@ -1,10 +1,11 @@
 {
   "file": "misc.txt",
-  "description": "Auto-generated schema for misc.txt",
+  "description": "Miscellaneous item definitions \u2014 potions, scrolls, gems, quest items, keys, and other non-equipment items.",
   "columns": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "namco": {
       "type": "string"
@@ -12,24 +13,29 @@
     "level": {
       "type": "integer",
       "min": 0,
-      "max": 999
+      "max": 999,
+      "description": "Base item level"
     },
     "rarity": {
       "type": "integer",
       "min": 0,
-      "max": 999
+      "max": 999,
+      "description": "Spawn rarity ratio (1/N chance)"
     },
     "spawnable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can randomly spawn in the game"
     },
     "completed": {
       "type": "boolean"
     },
     "speed": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Speed reduction modifier (negative = faster)"
     },
     "nodurability": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item has no durability"
     },
     "uniqueonly": {
       "type": "boolean"
@@ -37,13 +43,16 @@
     "cost": {
       "type": "integer",
       "min": 0,
-      "max": 100000
+      "max": 100000,
+      "description": "Base NPC gold cost"
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique 3-4 character item code"
     },
     "alternategfx": {
-      "type": "string"
+      "type": "string",
+      "description": "Alternate character graphics code"
     },
     "spelloffset": {
       "type": "boolean"
@@ -51,7 +60,8 @@
     "component": {
       "type": "integer",
       "min": 7,
-      "max": 16
+      "max": 16,
+      "description": "Animation layer component index"
     },
     "bodyLoc1": {
       "type": "integer",
@@ -66,21 +76,26 @@
     "invwidth": {
       "type": "integer",
       "min": 1,
-      "max": 2
+      "max": 2,
+      "description": "Inventory grid width"
     },
     "invheight": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Inventory grid height"
     },
     "flippyfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Ground display DC6 file"
     },
     "invfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Inventory graphics DC6 file"
     },
     "uniqueinvfile": {
-      "type": "string"
+      "type": "string",
+      "description": "Unique quality inventory DC6 file"
     },
     "special": {
       "type": "string"
@@ -114,15 +129,19 @@
       "max": 40
     },
     "useable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item is right-clickable"
     },
     "throwable": {
       "type": "boolean"
     },
     "type": {
-      "type": "integer",
+      "type": "ref",
       "min": 4,
-      "max": 41
+      "max": 41,
+      "description": "Primary item type code (references ItemTypes.txt)",
+      "target": "itemtypes.txt",
+      "targetColumn": "Code"
     },
     "sound": {
       "type": "integer",
@@ -130,15 +149,18 @@
       "max": 28
     },
     "unique": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Only appears as unique quality"
     },
     "transparent": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Enable transparency rendering"
     },
     "transtbl": {
       "type": "integer",
       "min": 3,
-      "max": 5
+      "max": 5,
+      "description": "Transparency type code"
     },
     "quivered": {
       "type": "boolean"
@@ -146,34 +168,42 @@
     "lightradius": {
       "type": "integer",
       "min": 0,
-      "max": 6
+      "max": 6,
+      "description": "Light radius around item/character"
     },
     "belt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Belt type index"
     },
     "autobelt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Auto-place in belt slots"
     },
     "stackable": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Item uses quantity stacking"
     },
     "minstack": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Minimum stack count"
     },
     "maxstack": {
       "type": "integer",
       "min": 0,
-      "max": 5000
+      "max": 5000,
+      "description": "Maximum stack count"
     },
     "quest": {
       "type": "integer",
       "min": 0,
-      "max": 23
+      "max": 23,
+      "description": "Quest item class identifier"
     },
     "missiletype": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Throwing weapon missile type reference"
     },
     "spellicon": {
       "type": "integer",
@@ -181,16 +211,20 @@
       "max": -1
     },
     "durwarning": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Low durability warning threshold"
     },
     "qntwarning": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Low quantity warning threshold"
     },
     "gemoffset": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Gem/rune starting index in Gems.txt"
     },
     "BetterGem": {
-      "type": "string"
+      "type": "string",
+      "description": "Upgraded gem/rune code"
     },
     "bitfield1": {
       "type": "boolean"
@@ -537,29 +571,36 @@
       "type": "boolean"
     },
     "Transform": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Character model color palette transform"
     },
     "InvTrans": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Inventory color transform palette index"
     },
     "SkipName": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Skip base name display on uniques"
     },
     "NightmareUpgrade": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Nightmare difficulty replacement code"
     },
     "HellUpgrade": {
       "type": "integer",
       "min": 0,
-      "max": 4
+      "max": 4,
+      "description": "Hell difficulty replacement code"
     },
     "mindam": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Minimum one-handed physical damage"
     },
     "maxdam": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Maximum one-handed physical damage"
     }
   }
 }

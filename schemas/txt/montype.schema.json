@@ -1,10 +1,11 @@
 {
   "file": "montype.txt",
-  "description": "Auto-generated schema for montype.txt",
+  "description": "Monster type hierarchy \u2014 damage resistances and immunities by type.",
   "columns": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "string"

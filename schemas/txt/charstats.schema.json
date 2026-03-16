@@ -1,6 +1,6 @@
 {
   "file": "charstats.txt",
-  "description": "Auto-generated schema for charstats.txt",
+  "description": "Character class base stats \u2014 starting attributes, growth rates, and default equipment.",
   "columns": {
     "class": {
       "type": "enum",
@@ -12,27 +12,32 @@
         "Sorceress"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Character class restriction"
     },
     "str": {
       "type": "integer",
       "min": 10,
-      "max": 30
+      "max": 30,
+      "description": "Base strength"
     },
     "dex": {
       "type": "integer",
       "min": 20,
-      "max": 25
+      "max": 25,
+      "description": "Base dexterity"
     },
     "int": {
       "type": "integer",
       "min": 10,
-      "max": 35
+      "max": 35,
+      "description": "Starting energy"
     },
     "vit": {
       "type": "integer",
       "min": 10,
-      "max": 25
+      "max": 25,
+      "description": "Starting vitality"
     },
     "tot": {
       "type": "integer",
@@ -42,7 +47,8 @@
     "hpadd": {
       "type": "integer",
       "min": 30,
-      "max": 30
+      "max": 30,
+      "description": "Bonus starting hit points"
     },
     "PercentStr": {
       "type": "integer",
@@ -67,27 +73,32 @@
     "ManaRegen": {
       "type": "integer",
       "min": 120,
-      "max": 120
+      "max": 120,
+      "description": "Mana regeneration time (seconds per full regen)"
     },
     "ToHitFactor": {
       "type": "integer",
       "min": 80,
-      "max": 120
+      "max": 120,
+      "description": "Starting attack rating"
     },
     "WalkVelocity": {
       "type": "integer",
       "min": 7,
-      "max": 7
+      "max": 7,
+      "description": "Walk movement speed"
     },
     "RunVelocity": {
       "type": "integer",
       "min": 11,
-      "max": 11
+      "max": 11,
+      "description": "Run movement speed"
     },
     "RunDrain": {
       "type": "integer",
       "min": 20,
-      "max": 20
+      "max": 20,
+      "description": "Stamina drain rate while running"
     },
     "Comment": {
       "type": "string"
@@ -95,32 +106,38 @@
     "LifePerLevel": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "HP gained per level (fourths)"
     },
     "StaminaPerLevel": {
       "type": "integer",
       "min": 4,
-      "max": 4
+      "max": 4,
+      "description": "Stamina gained per level (fourths)"
     },
     "ManaPerLevel": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "Mana gained per level (fourths)"
     },
     "LifePerVitality": {
       "type": "integer",
       "min": 8,
-      "max": 16
+      "max": 16,
+      "description": "HP per vitality point (fourths)"
     },
     "StaminaPerVitality": {
       "type": "integer",
       "min": 4,
-      "max": 4
+      "max": 4,
+      "description": "Stamina per vitality point (fourths)"
     },
     "ManaPerMagic": {
       "type": "integer",
       "min": 4,
-      "max": 8
+      "max": 8,
+      "description": "Mana per energy point (fourths)"
     },
     "#walk": {
       "type": "integer",
@@ -155,7 +172,8 @@
     "BlockFactor": {
       "type": "integer",
       "min": 20,
-      "max": 30
+      "max": 30,
+      "description": "Base block percentage"
     },
     "StartSkill": {
       "type": "boolean"

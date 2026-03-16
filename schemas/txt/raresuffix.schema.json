@@ -5,7 +5,8 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "armor": {
       "type": "boolean"
@@ -47,7 +48,8 @@
       "type": "boolean"
     },
     "belt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Belt type index"
     },
     "ring": {
       "type": "boolean"
@@ -56,10 +58,12 @@
       "type": "boolean"
     },
     "add": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Flat cost modification value"
     },
     "multiply": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Multiplicative cost modifier"
     },
     "divide": {
       "type": "boolean"

@@ -1,16 +1,18 @@
 {
   "file": "levels.txt",
-  "description": "Auto-generated schema for levels.txt",
+  "description": "Level/area definitions \u2014 monster levels, density, waypoints, and act assignments.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Id": {
       "type": "integer",
       "min": 0,
-      "max": 108
+      "max": 108,
+      "description": "Unique numeric ID"
     },
     "Pal": {
       "type": "integer",
@@ -20,7 +22,8 @@
     "Act": {
       "type": "integer",
       "min": 0,
-      "max": 3
+      "max": 3,
+      "description": "Act number (1-5)"
     },
     "Layer": {
       "type": "integer",
@@ -209,32 +212,38 @@
     "Quest": {
       "type": "integer",
       "min": 0,
-      "max": 11
+      "max": 11,
+      "description": "Quest item class identifier"
     },
     "WarpDist": {
       "type": "integer",
       "min": 0,
-      "max": 3900
+      "max": 3900,
+      "description": "Waypoint travel distance"
     },
     "MonLvl1": {
       "type": "integer",
       "min": 0,
-      "max": 28
+      "max": 28,
+      "description": "Normal difficulty monster level"
     },
     "MonLvl2": {
       "type": "integer",
       "min": 25,
-      "max": 53
+      "max": 53,
+      "description": "Nightmare difficulty monster level"
     },
     "MonLvl3": {
       "type": "integer",
       "min": 50,
-      "max": 78
+      "max": 78,
+      "description": "Hell difficulty monster level"
     },
     "MonDen": {
       "type": "integer",
       "min": 0,
-      "max": 2200
+      "max": 2200,
+      "description": "Monster density multiplier"
     },
     "MonUMin": {
       "type": "boolean"
@@ -602,10 +611,12 @@
       "max": 255
     },
     "LevelName": {
-      "type": "string"
+      "type": "string",
+      "description": "Display name string key"
     },
     "LevelWarp": {
-      "type": "string"
+      "type": "string",
+      "description": "Warp destination reference"
     },
     "EntryFile": {
       "type": "string"
@@ -683,7 +694,8 @@
       "type": "boolean"
     },
     "Beta": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Beta content flag (unused)"
     }
   }
 }

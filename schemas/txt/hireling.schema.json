@@ -1,12 +1,13 @@
 {
   "file": "hireling.txt",
-  "description": "Auto-generated schema for hireling.txt",
+  "description": "Mercenary definitions \u2014 stats, skills, level progression, and hiring costs per act and difficulty.",
   "columns": {
     "Hireling": {
       "type": "ref",
       "target": "hireling.txt",
       "targetColumn": "Hireling",
-      "required": true
+      "required": true,
+      "description": "Hireling type identifier"
     },
     "SubType": {
       "type": "string"
@@ -14,32 +15,38 @@
     "Id": {
       "type": "integer",
       "min": 0,
-      "max": 29
+      "max": 29,
+      "description": "Unique numeric ID"
     },
     "Class": {
       "type": "integer",
       "min": 271,
-      "max": 561
+      "max": 561,
+      "description": "Character class restriction"
     },
     "Act": {
       "type": "integer",
       "min": 1,
-      "max": 5
+      "max": 5,
+      "description": "Act number (1-5)"
     },
     "Difficulty": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Difficulty level (1=Normal, 2=Nightmare, 3=Hell)"
     },
     "Level": {
       "type": "integer",
       "min": 3,
-      "max": 75
+      "max": 75,
+      "description": "Base item level"
     },
     "Seller": {
       "type": "integer",
       "min": 150,
-      "max": 515
+      "max": 515,
+      "description": "NPC vendor reference"
     },
     "NameFirst": {
       "type": "enum",
@@ -62,62 +69,74 @@
     "Gold": {
       "type": "integer",
       "min": 100,
-      "max": 32000
+      "max": 32000,
+      "description": "Base hiring gold cost"
     },
     "Exp/Lvl": {
       "type": "integer",
       "min": 100,
-      "max": 125
+      "max": 125,
+      "description": "Experience scaling ratio per level"
     },
     "HP": {
       "type": "integer",
       "min": 45,
-      "max": 852
+      "max": 852,
+      "description": "Base hit points"
     },
     "HP/Lvl": {
       "type": "integer",
       "min": 6,
-      "max": 12
+      "max": 12,
+      "description": "Hit points gained per level"
     },
     "Defense": {
       "type": "integer",
       "min": 15,
-      "max": 509
+      "max": 509,
+      "description": "Base defense rating"
     },
     "Def/Lvl": {
       "type": "integer",
       "min": 4,
-      "max": 9
+      "max": 9,
+      "description": "Defense gained per level"
     },
     "Str": {
       "type": "integer",
       "min": 35,
-      "max": 190
+      "max": 190,
+      "description": "Base strength"
     },
     "Str/Lvl": {
       "type": "integer",
       "min": 10,
-      "max": 15
+      "max": 15,
+      "description": "Strength gained per level (eighths)"
     },
     "Dex": {
       "type": "integer",
       "min": 40,
-      "max": 137
+      "max": 137,
+      "description": "Base dexterity"
     },
     "Dex/Lvl": {
       "type": "integer",
       "min": 8,
-      "max": 16
+      "max": 16,
+      "description": "Dexterity gained per level (eighths)"
     },
     "AR": {
       "type": "integer",
       "min": 0,
-      "max": 432
+      "max": 432,
+      "description": "Base attack rating"
     },
     "AR/Lvl": {
       "type": "integer",
       "min": 0,
-      "max": 12
+      "max": 12,
+      "description": "Attack rating gained per level"
     },
     "Share": {
       "type": "integer",
@@ -127,17 +146,20 @@
     "Dmg-Min": {
       "type": "integer",
       "min": 1,
-      "max": 60
+      "max": 60,
+      "description": "Base minimum damage"
     },
     "Dmg-Max": {
       "type": "integer",
       "min": 3,
-      "max": 64
+      "max": 64,
+      "description": "Base maximum damage"
     },
     "Dmg/Lvl": {
       "type": "integer",
       "min": 2,
-      "max": 8
+      "max": 8,
+      "description": "Damage gained per level (eighths)"
     },
     "Resist": {
       "type": "integer",

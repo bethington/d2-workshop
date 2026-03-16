@@ -5,7 +5,8 @@
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "MonType1": {
       "type": "boolean"

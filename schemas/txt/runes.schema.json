@@ -1,11 +1,12 @@
 {
   "file": "runes.txt",
-  "description": "Auto-generated schema for runes.txt",
+  "description": "Runeword definitions \u2014 rune combinations, item type restrictions, and granted properties.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Rune Name": {
       "type": "string"

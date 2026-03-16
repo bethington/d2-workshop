@@ -1,6 +1,6 @@
 {
   "file": "monitempercent.txt",
-  "description": "Auto-generated schema for monitempercent.txt",
+  "description": "Monster item equipment rate percentages.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -9,7 +9,8 @@
         "NonComposited"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "HeartPercent": {
       "type": "boolean"

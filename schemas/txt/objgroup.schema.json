@@ -1,6 +1,6 @@
 {
   "file": "objgroup.txt",
-  "description": "Auto-generated schema for objgroup.txt",
+  "description": "Object group definitions for random object placement.",
   "columns": {
     "GroupName": {
       "type": "string",

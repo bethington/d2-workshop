@@ -1,6 +1,6 @@
 {
   "file": "npc.txt",
-  "description": "Auto-generated schema for npc.txt",
+  "description": "NPC trade inventory definitions \u2014 item types and quantities per NPC.",
   "columns": {
     "npc": {
       "type": "ref",

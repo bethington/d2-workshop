@@ -1,6 +1,6 @@
 {
   "file": "storepage.txt",
-  "description": "Auto-generated schema for storepage.txt",
+  "description": "NPC store page layout definitions.",
   "columns": {
     "Store Page": {
       "type": "enum",
@@ -20,7 +20,8 @@
         "mag",
         "misc",
         "weap"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

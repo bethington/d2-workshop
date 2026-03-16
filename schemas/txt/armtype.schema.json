@@ -1,6 +1,6 @@
 {
   "file": "armtype.txt",
-  "description": "Auto-generated schema for armtype.txt",
+  "description": "Arm animation type definitions.",
   "columns": {
     "Name": {
       "type": "enum",
@@ -10,7 +10,8 @@
         "Medium"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Internal name identifier"
     },
     "Token": {
       "type": "enum",

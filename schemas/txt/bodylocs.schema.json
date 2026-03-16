@@ -1,6 +1,6 @@
 {
   "file": "bodylocs.txt",
-  "description": "Auto-generated schema for bodylocs.txt",
+  "description": "Body location/equipment slot definitions.",
   "columns": {
     "Body Location": {
       "type": "enum",
@@ -33,7 +33,8 @@
         "rarm",
         "rrin",
         "tors"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

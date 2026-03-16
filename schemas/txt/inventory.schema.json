@@ -1,6 +1,6 @@
 {
   "file": "inventory.txt",
-  "description": "Auto-generated schema for inventory.txt",
+  "description": "Inventory panel layout definitions \u2014 grid positions for each inventory screen.",
   "columns": {
     "class": {
       "type": "enum",
@@ -19,7 +19,8 @@
         "Trophy Case Page 1"
       ],
       "required": true,
-      "unique": true
+      "unique": true,
+      "description": "Character class restriction"
     },
     "invLeft": {
       "type": "integer",

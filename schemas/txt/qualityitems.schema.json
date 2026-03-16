@@ -1,6 +1,6 @@
 {
   "file": "qualityitems.txt",
-  "description": "Auto-generated schema for qualityitems.txt",
+  "description": "Superior/inferior quality item modifier definitions.",
   "columns": {
     "nummods": {
       "type": "integer",
@@ -135,22 +135,26 @@
       "type": "boolean"
     },
     "belt": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Belt type index"
     },
     "level": {
       "type": "integer",
       "min": 1,
-      "max": 3
+      "max": 3,
+      "description": "Base item level"
     },
     "multiply": {
       "type": "integer",
       "min": 2,
-      "max": 5
+      "max": 5,
+      "description": "Multiplicative cost modifier"
     },
     "add": {
       "type": "integer",
       "min": 100,
-      "max": 350
+      "max": 350,
+      "description": "Flat cost modification value"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "file": "weaponclass.txt",
-  "description": "Auto-generated schema for weaponclass.txt",
+  "description": "Weapon animation class definitions.",
   "columns": {
     "Weapon Class": {
       "type": "enum",
@@ -41,7 +41,8 @@
         "hth",
         "stf",
         "xbw"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }

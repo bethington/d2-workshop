@@ -4,7 +4,8 @@
   "columns": {
     "LevelName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Display name string key"
     },
     "TileName": {
       "type": "enum",
@@ -59,7 +60,8 @@
         "River_C",
         "rock4",
         "tree03"
-      ]
+      ],
+      "description": "Secondary item type code"
     },
     "Cel2": {
       "type": "integer",

@@ -1,24 +1,28 @@
 {
   "file": "cubemain.txt",
-  "description": "Auto-generated schema for cubemain.txt",
+  "description": "Horadric Cube recipes \u2014 input items, output items, conditions, and property modifications.",
   "columns": {
     "Description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "description": "Recipe description/identifier"
     },
     "enabled": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Recipe is functional (1=active, 0=disabled)"
     },
     "numinputs": {
       "type": "integer",
       "min": 2,
-      "max": 7
+      "max": 7,
+      "description": "Number of required input items"
     },
     "min difficulty": {
       "type": "boolean"
     },
     "expansion": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Expansion-only content flag"
     },
     "start day": {
       "type": "integer",

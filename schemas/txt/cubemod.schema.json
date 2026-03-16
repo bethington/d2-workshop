@@ -1,6 +1,6 @@
 {
   "file": "cubemod.txt",
-  "description": "Auto-generated schema for cubemod.txt",
+  "description": "Cube recipe modifier code definitions.",
   "columns": {
     "cube modifier type": {
       "type": "enum",
@@ -35,7 +35,8 @@
         "sku",
         "top",
         "unq"
-      ]
+      ],
+      "description": "Unique 3-4 character item code"
     }
   }
 }
