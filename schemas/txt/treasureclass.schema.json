@@ -2,109 +2,269 @@
   "file": "treasureclass.txt",
   "description": "Legacy treasure class definitions (pre-expansion).",
   "columns": {
-    "TreasureClass": {
+    "Treasure Class": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Item drop classification reference"
+      "description": "Item drop classification reference",
+      "engineVerified": true
+    },
+    "Picks": {
+      "type": "integer",
+      "description": "Number of items to select from this treasure class (negative = always pick all)",
+      "engineVerified": true
+    },
+    "NoDrop": {
+      "type": "integer",
+      "description": "Probability weight for no item dropping",
+      "engineVerified": true
+    },
+    "Item1": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 1",
+      "engineVerified": true
+    },
+    "Item2": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 2",
+      "engineVerified": true
+    },
+    "Item3": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 3",
+      "engineVerified": true
+    },
+    "Item4": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 4",
+      "engineVerified": true
+    },
+    "Item5": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 5",
+      "engineVerified": true
+    },
+    "Item6": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 6",
+      "engineVerified": true
+    },
+    "Item7": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 7",
+      "engineVerified": true
+    },
+    "Item8": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 8",
+      "engineVerified": true
+    },
+    "Item9": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 9",
+      "engineVerified": true
+    },
+    "Item10": {
+      "type": "string",
+      "description": "Item code or treasure class name for drop slot 10",
+      "engineVerified": true
+    },
+    "Prob1": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 1",
+      "engineVerified": true
+    },
+    "Prob2": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 2",
+      "engineVerified": true
+    },
+    "Prob3": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 3",
+      "engineVerified": true
+    },
+    "Prob4": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 4",
+      "engineVerified": true
+    },
+    "Prob5": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 5",
+      "engineVerified": true
+    },
+    "Prob6": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 6",
+      "engineVerified": true
+    },
+    "Prob7": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 7",
+      "engineVerified": true
+    },
+    "Prob8": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 8",
+      "engineVerified": true
+    },
+    "Prob9": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 9",
+      "engineVerified": true
+    },
+    "Prob10": {
+      "type": "integer",
+      "description": "Drop probability weight for slot 10",
+      "engineVerified": true
+    },
+    "Unique": {
+      "type": "integer",
+      "description": "Unique item drop chance modifier (per 1024)",
+      "engineVerified": true
+    },
+    "Set": {
+      "type": "integer",
+      "description": "Set item drop chance modifier (per 1024)",
+      "engineVerified": true
+    },
+    "Rare": {
+      "type": "integer",
+      "description": "Rare item drop chance modifier (per 1024)",
+      "engineVerified": true
+    },
+    "Magic": {
+      "type": "integer",
+      "description": "Magic item drop chance modifier (per 1024)",
+      "engineVerified": true
+    },
+    "*eol": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)",
+      "engineVerified": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused)",
+      "deprecated": true
     },
     "NumCodes": {
       "type": "integer",
       "min": 0,
       "max": 30,
-      "description": "Number of item codes/entries in this treasure class"
+      "description": "Number of item codes/entries in this treasure class",
+      "deprecated": true
     },
     "Code1": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 1"
+      "description": "Item code or treasure class name for drop slot 1",
+      "deprecated": true
     },
     "Code2": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 2"
+      "description": "Item code or treasure class name for drop slot 2",
+      "deprecated": true
     },
     "Code3": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 3"
+      "description": "Item code or treasure class name for drop slot 3",
+      "deprecated": true
     },
     "Code4": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 4"
+      "description": "Item code or treasure class name for drop slot 4",
+      "deprecated": true
     },
     "Code5": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 5"
+      "description": "Item code or treasure class name for drop slot 5",
+      "deprecated": true
     },
     "Code6": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 6"
+      "description": "Item code or treasure class name for drop slot 6",
+      "deprecated": true
     },
     "Code7": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 7"
+      "description": "Item code or treasure class name for drop slot 7",
+      "deprecated": true
     },
     "Code8": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 8"
+      "description": "Item code or treasure class name for drop slot 8",
+      "deprecated": true
     },
     "Code9": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 9"
+      "description": "Item code or treasure class name for drop slot 9",
+      "deprecated": true
     },
     "Code10": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 10"
+      "description": "Item code or treasure class name for drop slot 10",
+      "deprecated": true
     },
     "Code11": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 11"
+      "description": "Item code or treasure class name for drop slot 11",
+      "deprecated": true
     },
     "Code12": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 12"
+      "description": "Item code or treasure class name for drop slot 12",
+      "deprecated": true
     },
     "Code13": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 13"
+      "description": "Item code or treasure class name for drop slot 13",
+      "deprecated": true
     },
     "Code14": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 14"
+      "description": "Item code or treasure class name for drop slot 14",
+      "deprecated": true
     },
     "Code15": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 15"
+      "description": "Item code or treasure class name for drop slot 15",
+      "deprecated": true
     },
     "Code16": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 16"
+      "description": "Item code or treasure class name for drop slot 16",
+      "deprecated": true
     },
     "Code17": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 17"
+      "description": "Item code or treasure class name for drop slot 17",
+      "deprecated": true
     },
     "Code18": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 18"
+      "description": "Item code or treasure class name for drop slot 18",
+      "deprecated": true
     },
     "Code19": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 19"
+      "description": "Item code or treasure class name for drop slot 19",
+      "deprecated": true
     },
     "Code20": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 20"
+      "description": "Item code or treasure class name for drop slot 20",
+      "deprecated": true
     },
     "Code21": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 21"
+      "description": "Item code or treasure class name for drop slot 21",
+      "deprecated": true
     },
     "Code22": {
       "type": "string",
-      "description": "Item code or treasure class name for drop slot 22"
+      "description": "Item code or treasure class name for drop slot 22",
+      "deprecated": true
     },
     "Code23": {
       "type": "enum",
@@ -127,7 +287,8 @@
         "tri",
         "wax"
       ],
-      "description": "Item code or treasure class name for drop slot 23"
+      "description": "Item code or treasure class name for drop slot 23",
+      "deprecated": true
     },
     "Code24": {
       "type": "enum",
@@ -150,7 +311,8 @@
         "vou",
         "wsc"
       ],
-      "description": "Item code or treasure class name for drop slot 24"
+      "description": "Item code or treasure class name for drop slot 24",
+      "deprecated": true
     },
     "Code25": {
       "type": "enum",
@@ -171,7 +333,8 @@
         "pax",
         "spc"
       ],
-      "description": "Item code or treasure class name for drop slot 25"
+      "description": "Item code or treasure class name for drop slot 25",
+      "deprecated": true
     },
     "Code26": {
       "type": "enum",
@@ -192,7 +355,8 @@
         "whm",
         "wsd"
       ],
-      "description": "Item code or treasure class name for drop slot 26"
+      "description": "Item code or treasure class name for drop slot 26",
+      "deprecated": true
     },
     "Code27": {
       "type": "enum",
@@ -210,7 +374,8 @@
         "wax",
         "whm"
       ],
-      "description": "Item code or treasure class name for drop slot 27"
+      "description": "Item code or treasure class name for drop slot 27",
+      "deprecated": true
     },
     "Code28": {
       "type": "enum",
@@ -226,7 +391,8 @@
         "tax",
         "tkf"
       ],
-      "description": "Item code or treasure class name for drop slot 28"
+      "description": "Item code or treasure class name for drop slot 28",
+      "deprecated": true
     },
     "Code29": {
       "type": "enum",
@@ -239,7 +405,8 @@
         "lax",
         "pil"
       ],
-      "description": "Item code or treasure class name for drop slot 29"
+      "description": "Item code or treasure class name for drop slot 29",
+      "deprecated": true
     },
     "Code30": {
       "type": "enum",
@@ -251,11 +418,13 @@
         "pil",
         "sbr"
       ],
-      "description": "Item code or treasure class name for drop slot 30"
+      "description": "Item code or treasure class name for drop slot 30",
+      "deprecated": true
     },
     "Comment": {
       "type": "string",
-      "description": "Developer comment (not loaded by game)"
+      "description": "Developer comment (not loaded by game)",
+      "deprecated": true
     }
   }
 }

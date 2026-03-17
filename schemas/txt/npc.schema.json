@@ -1,116 +1,135 @@
 {
   "file": "npc.txt",
-  "description": "NPC trade inventory definitions \u00e2\u20ac\u201d item types and quantities per NPC.",
+  "description": "NPC trade inventory definitions â€” item types and quantities per NPC.",
   "columns": {
     "npc": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Name of the NPC vendor"
+      "description": "Name of the NPC vendor",
+      "engineVerified": true
     },
     "buy mult": {
       "type": "integer",
       "min": 512,
       "max": 512,
-      "description": "Percentage of item value vendor pays when buying (1024=100%)"
+      "description": "Percentage of item value vendor pays when buying (1024=100%)",
+      "engineVerified": true
     },
     "sell mult": {
       "type": "integer",
       "min": 960,
       "max": 2048,
-      "description": "Percentage of item value vendor charges when selling (1024=100%)"
+      "description": "Percentage of item value vendor charges when selling (1024=100%)",
+      "engineVerified": true
     },
     "rep mult": {
       "type": "integer",
       "min": 128,
       "max": 128,
-      "description": "Percentage of item value vendor charges for repairs (1024=100%)"
+      "description": "Percentage of item value vendor charges for repairs (1024=100%)",
+      "engineVerified": true
     },
     "questflag A": {
       "type": "integer",
       "min": 4,
       "max": 41,
-      "description": "First quest flag that triggers modified vendor prices"
-    },
-    "questbuymult A": {
-      "type": "integer",
-      "min": 1024,
-      "max": 1024,
-      "description": "Buy multiplier when quest A completed (1024=100%)"
+      "description": "First quest flag that triggers modified vendor prices",
+      "engineVerified": true
     },
     "questsellmult A": {
       "type": "integer",
       "min": 922,
       "max": 922,
-      "description": "Sell multiplier when quest A completed (1024=100%)"
+      "description": "Sell multiplier when quest A completed (1024=100%)",
+      "engineVerified": true
+    },
+    "questbuymult A": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024,
+      "description": "Buy multiplier when quest A completed (1024=100%)",
+      "engineVerified": true
     },
     "questrepmult A": {
       "type": "integer",
       "min": 1024,
       "max": 1024,
-      "description": "Repair multiplier when quest A completed (1024=100%)"
+      "description": "Repair multiplier when quest A completed (1024=100%)",
+      "engineVerified": true
     },
     "questflag B": {
       "type": "integer",
       "min": 35,
       "max": 35,
-      "description": "Second quest flag for modified prices (stacks with A)"
-    },
-    "questbuymult B": {
-      "type": "integer",
-      "min": 1024,
-      "max": 1024,
-      "description": "Buy multiplier when quest B completed (1024=100%)"
+      "description": "Second quest flag for modified prices (stacks with A)",
+      "engineVerified": true
     },
     "questsellmult B": {
       "type": "integer",
       "min": 512,
       "max": 512,
-      "description": "Sell multiplier when quest B completed (1024=100%)"
+      "description": "Sell multiplier when quest B completed (1024=100%)",
+      "engineVerified": true
+    },
+    "questbuymult B": {
+      "type": "integer",
+      "min": 1024,
+      "max": 1024,
+      "description": "Buy multiplier when quest B completed (1024=100%)",
+      "engineVerified": true
     },
     "questrepmult B": {
       "type": "integer",
       "min": 1024,
       "max": 1024,
-      "description": "Repair multiplier when quest B completed (1024=100%)"
+      "description": "Repair multiplier when quest B completed (1024=100%)",
+      "engineVerified": true
     },
     "questflag C": {
       "type": "integer",
       "description": "Third quest flag for modified prices",
-      "min": 0
-    },
-    "questbuymult C": {
-      "type": "integer",
-      "description": "Buy multiplier when quest C completed (1024=100%)",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "questsellmult C": {
       "type": "integer",
       "description": "Sell multiplier when quest C completed (1024=100%)",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
+    },
+    "questbuymult C": {
+      "type": "integer",
+      "description": "Buy multiplier when quest C completed (1024=100%)",
+      "min": 0,
+      "engineVerified": true
     },
     "questrepmult C": {
       "type": "integer",
       "description": "Repair multiplier when quest C completed (1024=100%)",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "max buy": {
       "type": "integer",
       "min": 5000,
       "max": 25000,
-      "description": "Maximum gold vendor pays in Normal difficulty"
+      "description": "Maximum gold vendor pays in Normal difficulty",
+      "engineVerified": true
     },
     "max buy (N)": {
       "type": "integer",
       "min": 25000,
       "max": 25000,
-      "description": "Maximum gold vendor pays in Nightmare"
+      "description": "Maximum gold vendor pays in Nightmare",
+      "engineVerified": true
     },
     "max buy (H)": {
       "type": "integer",
       "min": 25000,
       "max": 25000,
-      "description": "Maximum gold vendor pays in Hell"
+      "description": "Maximum gold vendor pays in Hell",
+      "engineVerified": true
     }
   }
 }

@@ -5,7 +5,8 @@
     "Name": {
       "type": "string",
       "required": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "Namco": {
       "type": "enum",
@@ -27,151 +28,188 @@
         "Prince",
         "Warlord"
       ],
-      "description": "Display title for unique monsters"
+      "description": "Display title for unique monsters",
+      "deprecated": true
     },
     "MonType1": {
       "type": "boolean",
-      "description": "Monster type 1 reference"
+      "description": "Monster type 1 reference",
+      "deprecated": true
     },
     "MonType2": {
       "type": "boolean",
-      "description": "Monster type 2 reference"
+      "description": "Monster type 2 reference",
+      "deprecated": true
     },
     "MonType3": {
       "type": "boolean",
-      "description": "Monster type 3 reference"
+      "description": "Monster type 3 reference",
+      "deprecated": true
     },
     "MonType4": {
       "type": "boolean",
-      "description": "Monster type 4 reference"
+      "description": "Monster type 4 reference",
+      "deprecated": true
     },
     "MonType5": {
       "type": "boolean",
-      "description": "Monster type 5 reference"
+      "description": "Monster type 5 reference",
+      "deprecated": true
     },
     "MonType6": {
       "type": "boolean",
-      "description": "Monster type 6 reference"
+      "description": "Monster type 6 reference",
+      "deprecated": true
     },
     "MonType7": {
       "type": "boolean",
-      "description": "Monster type 7 reference"
+      "description": "Monster type 7 reference",
+      "deprecated": true
     },
     "MonType8": {
       "type": "boolean",
-      "description": "Monster type 8 reference"
+      "description": "Monster type 8 reference",
+      "deprecated": true
     },
     "MonType9": {
       "type": "boolean",
-      "description": "Monster type 9 reference"
+      "description": "Monster type 9 reference",
+      "deprecated": true
     },
     "MonType10": {
       "type": "boolean",
-      "description": "Monster type 10 reference"
+      "description": "Monster type 10 reference",
+      "deprecated": true
     },
     "MonType11": {
       "type": "boolean",
-      "description": "Monster type 11 reference"
+      "description": "Monster type 11 reference",
+      "deprecated": true
     },
     "MonType12": {
       "type": "boolean",
-      "description": "Monster type 12 reference"
+      "description": "Monster type 12 reference",
+      "deprecated": true
     },
     "MonType13": {
       "type": "boolean",
-      "description": "Monster type 13 reference"
+      "description": "Monster type 13 reference",
+      "deprecated": true
     },
     "MonType14": {
       "type": "boolean",
-      "description": "Monster type 14 reference"
+      "description": "Monster type 14 reference",
+      "deprecated": true
     },
     "MonType15": {
       "type": "boolean",
-      "description": "Monster type 15 reference"
+      "description": "Monster type 15 reference",
+      "deprecated": true
     },
     "MonType16": {
       "type": "boolean",
-      "description": "Monster type 16 reference"
+      "description": "Monster type 16 reference",
+      "deprecated": true
     },
     "MonType17": {
       "type": "boolean",
-      "description": "Monster type 17 reference"
+      "description": "Monster type 17 reference",
+      "deprecated": true
     },
     "MonType18": {
       "type": "boolean",
-      "description": "Monster type 18 reference"
+      "description": "Monster type 18 reference",
+      "deprecated": true
     },
     "MonType19": {
       "type": "boolean",
-      "description": "Monster type 19 reference"
+      "description": "Monster type 19 reference",
+      "deprecated": true
     },
     "MonType20": {
       "type": "boolean",
-      "description": "Monster type 20 reference"
+      "description": "Monster type 20 reference",
+      "deprecated": true
     },
     "MonType21": {
       "type": "boolean",
-      "description": "Monster type 21 reference"
+      "description": "Monster type 21 reference",
+      "deprecated": true
     },
     "MonType22": {
       "type": "boolean",
-      "description": "Monster type 22 reference"
+      "description": "Monster type 22 reference",
+      "deprecated": true
     },
     "MonType23": {
       "type": "boolean",
-      "description": "Monster type 23 reference"
+      "description": "Monster type 23 reference",
+      "deprecated": true
     },
     "MonType24": {
       "type": "boolean",
-      "description": "Monster type 24 reference"
+      "description": "Monster type 24 reference",
+      "deprecated": true
     },
     "MonType25": {
       "type": "boolean",
-      "description": "Monster type 25 reference"
+      "description": "Monster type 25 reference",
+      "deprecated": true
     },
     "MonType26": {
       "type": "boolean",
-      "description": "Monster type 26 reference"
+      "description": "Monster type 26 reference",
+      "deprecated": true
     },
     "MonType27": {
       "type": "boolean",
-      "description": "Monster type 27 reference"
+      "description": "Monster type 27 reference",
+      "deprecated": true
     },
     "MonType28": {
       "type": "boolean",
-      "description": "Monster type 28 reference"
+      "description": "Monster type 28 reference",
+      "deprecated": true
     },
     "MonType29": {
       "type": "boolean",
-      "description": "Monster type 29 reference"
+      "description": "Monster type 29 reference",
+      "deprecated": true
     },
     "MonType30": {
       "type": "boolean",
-      "description": "Monster type 30 reference"
+      "description": "Monster type 30 reference",
+      "deprecated": true
     },
     "MonType31": {
       "type": "boolean",
-      "description": "Monster type 31 reference"
+      "description": "Monster type 31 reference",
+      "deprecated": true
     },
     "MonType32": {
       "type": "boolean",
-      "description": "Monster type 32 reference"
+      "description": "Monster type 32 reference",
+      "deprecated": true
     },
     "MonType33": {
       "type": "boolean",
-      "description": "Monster type 33 reference"
+      "description": "Monster type 33 reference",
+      "deprecated": true
     },
     "MonType34": {
       "type": "boolean",
-      "description": "Monster type 34 reference"
+      "description": "Monster type 34 reference",
+      "deprecated": true
     },
     "MonType35": {
       "type": "boolean",
-      "description": "Monster type 35 reference"
+      "description": "Monster type 35 reference",
+      "deprecated": true
     },
     "MonType36": {
       "type": "boolean",
-      "description": "Monster type 36 reference"
+      "description": "Monster type 36 reference",
+      "deprecated": true
     }
   }
 }

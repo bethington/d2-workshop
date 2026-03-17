@@ -1,131 +1,156 @@
 {
   "file": "sounds.txt",
-  "description": "Sound effect definitions \u2014 file references, volume, looping, and fade settings.",
+  "description": "Sound effect definitions — file references, volume, looping, and fade settings.",
   "columns": {
-    "Handle": {
+    "Sound": {
       "type": "string",
       "required": true,
-      "description": "Sound effect name/handle identifier"
+      "description": "Sound effect name/handle identifier",
+      "engineVerified": true
     },
     "Index": {
       "type": "integer",
       "min": 0,
       "max": 3586,
-      "description": "Unique index identifier"
+      "description": "Unique index identifier",
+      "engineVerified": true
     },
     "FileName": {
       "type": "string",
-      "description": "Audio file reference"
+      "description": "Audio file reference",
+      "engineVerified": true
     },
     "Volume": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Playback volume (0-255)"
+      "description": "Playback volume (0-255)",
+      "engineVerified": true
     },
     "Group Size": {
       "type": "integer",
       "min": 0,
       "max": 8,
-      "description": "Maximum simultaneous playback instances"
+      "description": "Maximum simultaneous playback instances",
+      "engineVerified": true
     },
     "Loop": {
       "type": "boolean",
-      "description": "Enable looping playback"
+      "description": "Enable looping playback",
+      "engineVerified": true
     },
     "Fade In": {
       "type": "integer",
       "min": 0,
       "max": 125,
-      "description": "Fade-in duration in frames"
+      "description": "Fade-in duration in frames",
+      "engineVerified": true
     },
     "Fade Out": {
       "type": "integer",
       "min": 0,
       "max": 125,
-      "description": "Fade-out duration in frames"
+      "description": "Fade-out duration in frames",
+      "engineVerified": true
     },
     "Defer Inst": {
       "type": "boolean",
-      "description": "Deferred instantiation flag"
+      "description": "Deferred instantiation flag",
+      "engineVerified": true
     },
     "Stop Inst": {
       "type": "boolean",
-      "description": "Stop other instances when playing"
+      "description": "Stop other instances when playing",
+      "engineVerified": true
     },
     "Duration": {
       "type": "integer",
       "min": 0,
       "max": 150,
-      "description": "Playback duration (milliseconds)"
+      "description": "Playback duration (milliseconds)",
+      "engineVerified": true
     },
     "Compound": {
       "type": "integer",
       "min": -1,
       "max": 24,
-      "description": "Compound sound priority"
+      "description": "Compound sound priority",
+      "engineVerified": true
     },
     "Reverb": {
       "type": "boolean",
-      "description": "Reverb effect enabled"
+      "description": "Reverb effect enabled",
+      "engineVerified": true
     },
     "Falloff": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Distance falloff rate"
+      "description": "Distance falloff rate",
+      "engineVerified": true
     },
     "Cache": {
       "type": "boolean",
-      "description": "Cache sound in memory"
+      "description": "Cache sound in memory",
+      "engineVerified": true
     },
     "Async Only": {
       "type": "boolean",
-      "description": "Asynchronous playback only"
+      "description": "Asynchronous playback only",
+      "engineVerified": true
     },
     "Priority": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Playback priority (0-255, higher = more important)"
+      "description": "Playback priority (0-255, higher = more important)",
+      "engineVerified": true
     },
     "Stream": {
       "type": "boolean",
-      "description": "Stream from disk instead of loading into memory"
+      "description": "Stream from disk instead of loading into memory",
+      "engineVerified": true
     },
     "Stereo": {
       "type": "boolean",
-      "description": "Stereo audio playback"
+      "description": "Stereo audio playback",
+      "engineVerified": true
     },
     "Tracking": {
       "type": "boolean",
-      "description": "Position tracking enabled"
+      "description": "Position tracking enabled",
+      "engineVerified": true
     },
     "Solo": {
       "type": "boolean",
-      "description": "Solo playback (mute others)"
+      "description": "Solo playback (mute others)",
+      "engineVerified": true
     },
     "Music Vol": {
       "type": "boolean",
-      "description": "Use music volume slider"
+      "description": "Use music volume slider",
+      "engineVerified": true
     },
     "Block 1": {
       "type": "integer",
       "min": -1,
       "max": 6381568,
-      "description": "Sound block 1 reference"
+      "description": "Sound block 1 reference",
+      "engineVerified": true
     },
     "Block 2": {
       "type": "integer",
       "min": -1,
       "max": 7000000,
-      "description": "Sound block 2 reference"
+      "description": "Sound block 2 reference",
+      "engineVerified": true
     },
     "Block 3": {
       "type": "integer",
       "min": -1,
       "max": -1,
-      "description": "Sound block 3 reference"
+      "description": "Sound block 3 reference",
+      "engineVerified": true
     }
   }
 }

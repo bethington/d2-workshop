@@ -1,24 +1,28 @@
 {
   "file": "sets.txt",
-  "description": "Set definitions \u2014 set names, partial set bonuses (2-5 items equipped), and full set bonuses (up to 8 properties).",
+  "description": "Set definitions — set names, partial set bonuses (2-5 items equipped), and full set bonuses (up to 8 properties).",
   "columns": {
     "index": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal set identifier, referenced by the set column in SetItems.txt"
+      "description": "Internal set identifier, referenced by the set column in SetItems.txt",
+      "engineVerified": true
     },
     "name": {
       "type": "string",
-      "description": "String table key for the set display name (.tbl lookup)"
+      "description": "String table key for the set display name (.tbl lookup)",
+      "engineVerified": true
     },
     "version": {
       "type": "integer",
-      "description": "Game version availability (0 = Classic + LoD, 100 = LoD only)"
+      "description": "Game version availability (0 = Classic + LoD, 100 = LoD only)",
+      "engineVerified": true
     },
     "level": {
       "type": "integer",
-      "description": "Set level (reference only, not loaded by game engine)"
+      "description": "Set level (reference only, not loaded by game engine)",
+      "engineVerified": true
     },
     "PCode2a": {
       "type": "enum",
@@ -293,19 +297,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam2a": {
       "type": "string",
-      "description": "Partial bonus 2a parameter"
+      "description": "Partial bonus 2a parameter",
+      "engineVerified": true
     },
     "PMin2a": {
       "type": "integer",
-      "description": "Partial bonus 2a minimum value"
+      "description": "Partial bonus 2a minimum value",
+      "engineVerified": true
     },
     "PMax2a": {
       "type": "integer",
-      "description": "Partial bonus 2a maximum value"
+      "description": "Partial bonus 2a maximum value",
+      "engineVerified": true
     },
     "PCode2b": {
       "type": "enum",
@@ -580,19 +588,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam2b": {
       "type": "string",
-      "description": "Partial bonus 2b parameter"
+      "description": "Partial bonus 2b parameter",
+      "engineVerified": true
     },
     "PMin2b": {
       "type": "integer",
-      "description": "Partial bonus 2b minimum value"
+      "description": "Partial bonus 2b minimum value",
+      "engineVerified": true
     },
     "PMax2b": {
       "type": "integer",
-      "description": "Partial bonus 2b maximum value"
+      "description": "Partial bonus 2b maximum value",
+      "engineVerified": true
     },
     "PCode3a": {
       "type": "enum",
@@ -867,19 +879,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam3a": {
       "type": "string",
-      "description": "Partial bonus 3a parameter"
+      "description": "Partial bonus 3a parameter",
+      "engineVerified": true
     },
     "PMin3a": {
       "type": "integer",
-      "description": "Partial bonus 3a minimum value"
+      "description": "Partial bonus 3a minimum value",
+      "engineVerified": true
     },
     "PMax3a": {
       "type": "integer",
-      "description": "Partial bonus 3a maximum value"
+      "description": "Partial bonus 3a maximum value",
+      "engineVerified": true
     },
     "PCode3b": {
       "type": "enum",
@@ -1154,19 +1170,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam3b": {
       "type": "string",
-      "description": "Partial bonus 3b parameter"
+      "description": "Partial bonus 3b parameter",
+      "engineVerified": true
     },
     "PMin3b": {
       "type": "integer",
-      "description": "Partial bonus 3b minimum value"
+      "description": "Partial bonus 3b minimum value",
+      "engineVerified": true
     },
     "PMax3b": {
       "type": "integer",
-      "description": "Partial bonus 3b maximum value"
+      "description": "Partial bonus 3b maximum value",
+      "engineVerified": true
     },
     "PCode4a": {
       "type": "enum",
@@ -1441,19 +1461,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam4a": {
       "type": "string",
-      "description": "Partial bonus 4a parameter"
+      "description": "Partial bonus 4a parameter",
+      "engineVerified": true
     },
     "PMin4a": {
       "type": "integer",
-      "description": "Partial bonus 4a minimum value"
+      "description": "Partial bonus 4a minimum value",
+      "engineVerified": true
     },
     "PMax4a": {
       "type": "integer",
-      "description": "Partial bonus 4a maximum value"
+      "description": "Partial bonus 4a maximum value",
+      "engineVerified": true
     },
     "PCode4b": {
       "type": "enum",
@@ -1728,19 +1752,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam4b": {
       "type": "string",
-      "description": "Partial bonus 4b parameter"
+      "description": "Partial bonus 4b parameter",
+      "engineVerified": true
     },
     "PMin4b": {
       "type": "integer",
-      "description": "Partial bonus 4b minimum value"
+      "description": "Partial bonus 4b minimum value",
+      "engineVerified": true
     },
     "PMax4b": {
       "type": "integer",
-      "description": "Partial bonus 4b maximum value"
+      "description": "Partial bonus 4b maximum value",
+      "engineVerified": true
     },
     "PCode5a": {
       "type": "enum",
@@ -2015,19 +2043,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam5a": {
       "type": "string",
-      "description": "Partial bonus 5a parameter"
+      "description": "Partial bonus 5a parameter",
+      "engineVerified": true
     },
     "PMin5a": {
       "type": "integer",
-      "description": "Partial bonus 5a minimum value"
+      "description": "Partial bonus 5a minimum value",
+      "engineVerified": true
     },
     "PMax5a": {
       "type": "integer",
-      "description": "Partial bonus 5a maximum value"
+      "description": "Partial bonus 5a maximum value",
+      "engineVerified": true
     },
     "PCode5b": {
       "type": "enum",
@@ -2302,19 +2334,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "PParam5b": {
       "type": "string",
-      "description": "Partial bonus 5b parameter"
+      "description": "Partial bonus 5b parameter",
+      "engineVerified": true
     },
     "PMin5b": {
       "type": "integer",
-      "description": "Partial bonus 5b minimum value"
+      "description": "Partial bonus 5b minimum value",
+      "engineVerified": true
     },
     "PMax5b": {
       "type": "integer",
-      "description": "Partial bonus 5b maximum value"
+      "description": "Partial bonus 5b maximum value",
+      "engineVerified": true
     },
     "FCode1": {
       "type": "enum",
@@ -2589,19 +2625,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam1": {
       "type": "string",
-      "description": "Full set bonus 1 parameter"
+      "description": "Full set bonus 1 parameter",
+      "engineVerified": true
     },
     "FMin1": {
       "type": "integer",
-      "description": "Full set bonus 1 minimum value"
+      "description": "Full set bonus 1 minimum value",
+      "engineVerified": true
     },
     "FMax1": {
       "type": "integer",
-      "description": "Full set bonus 1 maximum value"
+      "description": "Full set bonus 1 maximum value",
+      "engineVerified": true
     },
     "FCode2": {
       "type": "enum",
@@ -2876,19 +2916,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam2": {
       "type": "string",
-      "description": "Full set bonus 2 parameter"
+      "description": "Full set bonus 2 parameter",
+      "engineVerified": true
     },
     "FMin2": {
       "type": "integer",
-      "description": "Full set bonus 2 minimum value"
+      "description": "Full set bonus 2 minimum value",
+      "engineVerified": true
     },
     "FMax2": {
       "type": "integer",
-      "description": "Full set bonus 2 maximum value"
+      "description": "Full set bonus 2 maximum value",
+      "engineVerified": true
     },
     "FCode3": {
       "type": "enum",
@@ -3163,19 +3207,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam3": {
       "type": "string",
-      "description": "Full set bonus 3 parameter"
+      "description": "Full set bonus 3 parameter",
+      "engineVerified": true
     },
     "FMin3": {
       "type": "integer",
-      "description": "Full set bonus 3 minimum value"
+      "description": "Full set bonus 3 minimum value",
+      "engineVerified": true
     },
     "FMax3": {
       "type": "integer",
-      "description": "Full set bonus 3 maximum value"
+      "description": "Full set bonus 3 maximum value",
+      "engineVerified": true
     },
     "FCode4": {
       "type": "enum",
@@ -3450,19 +3498,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam4": {
       "type": "string",
-      "description": "Full set bonus 4 parameter"
+      "description": "Full set bonus 4 parameter",
+      "engineVerified": true
     },
     "FMin4": {
       "type": "integer",
-      "description": "Full set bonus 4 minimum value"
+      "description": "Full set bonus 4 minimum value",
+      "engineVerified": true
     },
     "FMax4": {
       "type": "integer",
-      "description": "Full set bonus 4 maximum value"
+      "description": "Full set bonus 4 maximum value",
+      "engineVerified": true
     },
     "FCode5": {
       "type": "enum",
@@ -3737,19 +3789,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam5": {
       "type": "string",
-      "description": "Full set bonus 5 parameter"
+      "description": "Full set bonus 5 parameter",
+      "engineVerified": true
     },
     "FMin5": {
       "type": "integer",
-      "description": "Full set bonus 5 minimum value"
+      "description": "Full set bonus 5 minimum value",
+      "engineVerified": true
     },
     "FMax5": {
       "type": "integer",
-      "description": "Full set bonus 5 maximum value"
+      "description": "Full set bonus 5 maximum value",
+      "engineVerified": true
     },
     "FCode6": {
       "type": "enum",
@@ -4024,19 +4080,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam6": {
       "type": "string",
-      "description": "Full set bonus 6 parameter"
+      "description": "Full set bonus 6 parameter",
+      "engineVerified": true
     },
     "FMin6": {
       "type": "integer",
-      "description": "Full set bonus 6 minimum value"
+      "description": "Full set bonus 6 minimum value",
+      "engineVerified": true
     },
     "FMax6": {
       "type": "integer",
-      "description": "Full set bonus 6 maximum value"
+      "description": "Full set bonus 6 maximum value",
+      "engineVerified": true
     },
     "FCode7": {
       "type": "enum",
@@ -4311,19 +4371,23 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam7": {
       "type": "string",
-      "description": "Full set bonus 7 parameter"
+      "description": "Full set bonus 7 parameter",
+      "engineVerified": true
     },
     "FMin7": {
       "type": "integer",
-      "description": "Full set bonus 7 minimum value"
+      "description": "Full set bonus 7 minimum value",
+      "engineVerified": true
     },
     "FMax7": {
       "type": "integer",
-      "description": "Full set bonus 7 maximum value"
+      "description": "Full set bonus 7 maximum value",
+      "engineVerified": true
     },
     "FCode8": {
       "type": "enum",
@@ -4598,23 +4662,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "FParam8": {
       "type": "string",
-      "description": "Full set bonus 8 parameter"
+      "description": "Full set bonus 8 parameter",
+      "engineVerified": true
     },
     "FMin8": {
       "type": "integer",
-      "description": "Full set bonus 8 minimum value"
+      "description": "Full set bonus 8 minimum value",
+      "engineVerified": true
     },
     "FMax8": {
       "type": "integer",
-      "description": "Full set bonus 8 maximum value"
+      "description": "Full set bonus 8 maximum value",
+      "engineVerified": true
     },
     "*eol": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game)",
+      "engineVerified": true
     }
   }
 }

@@ -2,23 +2,161 @@
   "file": "properties.txt",
   "description": "Property definitions — maps property codes to stat functions used by affixes and uniques.",
   "columns": {
-    "Code": {
+    "code": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Unique property code identifier"
+      "description": "Unique property code identifier",
+      "engineVerified": true
+    },
+    "set1": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 1",
+      "engineVerified": true
+    },
+    "val1": {
+      "type": "integer",
+      "description": "Value parameter for function slot 1",
+      "engineVerified": true
+    },
+    "func1": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 1",
+      "engineVerified": true
+    },
+    "set2": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 2",
+      "engineVerified": true
+    },
+    "val2": {
+      "type": "integer",
+      "description": "Value parameter for function slot 2",
+      "engineVerified": true
+    },
+    "func2": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 2",
+      "engineVerified": true
+    },
+    "set3": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 3",
+      "engineVerified": true
+    },
+    "val3": {
+      "type": "integer",
+      "description": "Value parameter for function slot 3",
+      "engineVerified": true
+    },
+    "func3": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 3",
+      "engineVerified": true
+    },
+    "set4": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 4",
+      "engineVerified": true
+    },
+    "val4": {
+      "type": "integer",
+      "description": "Value parameter for function slot 4",
+      "engineVerified": true
+    },
+    "func4": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 4",
+      "engineVerified": true
+    },
+    "stat4": {
+      "type": "string",
+      "description": "Stat reference for slot 4 (slots 1-3 use set1-3 as stat refs)",
+      "ref": "itemstatcost.txt/Stat",
+      "engineVerified": true
+    },
+    "set5": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 5",
+      "engineVerified": true
+    },
+    "val5": {
+      "type": "integer",
+      "description": "Value parameter for function slot 5",
+      "engineVerified": true
+    },
+    "func5": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 5",
+      "engineVerified": true
+    },
+    "stat5": {
+      "type": "string",
+      "description": "Stat reference for slot 5 (slots 1-3 use set1-3 as stat refs)",
+      "ref": "itemstatcost.txt/Stat",
+      "engineVerified": true
+    },
+    "set6": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 6",
+      "engineVerified": true
+    },
+    "val6": {
+      "type": "integer",
+      "description": "Value parameter for function slot 6",
+      "engineVerified": true
+    },
+    "func6": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 6",
+      "engineVerified": true
+    },
+    "stat6": {
+      "type": "string",
+      "description": "Stat reference for slot 6 (slots 1-3 use set1-3 as stat refs)",
+      "ref": "itemstatcost.txt/Stat",
+      "engineVerified": true
+    },
+    "set7": {
+      "type": "integer",
+      "description": "Stat set ID for function slot 7",
+      "engineVerified": true
+    },
+    "val7": {
+      "type": "integer",
+      "description": "Value parameter for function slot 7",
+      "engineVerified": true
+    },
+    "func7": {
+      "type": "integer",
+      "description": "Function ID for stat application slot 7",
+      "engineVerified": true
+    },
+    "stat7": {
+      "type": "string",
+      "description": "Stat reference for slot 7 (slots 1-3 use set1-3 as stat refs)",
+      "ref": "itemstatcost.txt/Stat",
+      "engineVerified": true
+    },
+    "*eol": {
+      "type": "integer",
+      "description": "End of line marker (not loaded by game)",
+      "engineVerified": true
     },
     "Done": {
       "type": "boolean",
-      "description": "Whether this property definition is finalized"
+      "description": "Whether this property definition is finalized",
+      "deprecated": true
     },
     "ModFuncOffset": {
       "type": "string",
-      "description": "Modifier function offset used to locate the stat application logic"
+      "description": "Modifier function offset used to locate the stat application logic",
+      "deprecated": true
     },
     "Description": {
       "type": "string",
-      "description": "Human-readable description of the property"
+      "description": "Human-readable description of the property",
+      "deprecated": true
     },
     "Param": {
       "type": "enum",
@@ -37,7 +175,8 @@
         "skill",
         "speed (see note)"
       ],
-      "description": "Condition operation parameter"
+      "description": "Condition operation parameter",
+      "deprecated": true
     },
     "Min": {
       "type": "enum",
@@ -51,7 +190,8 @@
         "min chance",
         "min count"
       ],
-      "description": "Description of what the minimum parameter value represents"
+      "description": "Description of what the minimum parameter value represents",
+      "deprecated": true
     },
     "Max": {
       "type": "enum",
@@ -64,7 +204,8 @@
         "max chance",
         "max count"
       ],
-      "description": "Description of what the maximum parameter value represents"
+      "description": "Description of what the maximum parameter value represents",
+      "deprecated": true
     },
     "Additional Notes": {
       "type": "enum",
@@ -76,7 +217,8 @@
         "regenerates 1 durability point per 100/lvl seconds",
         "regenerates 1 quantity per 100/lvl seconds"
       ],
-      "description": "Developer notes on how the property behaves or special calculation rules"
+      "description": "Developer notes on how the property behaves or special calculation rules",
+      "deprecated": true
     }
   }
 }

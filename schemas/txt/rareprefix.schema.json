@@ -5,86 +5,178 @@
     "name": {
       "type": "string",
       "required": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
+    },
+    "itype1": {
+      "type": "string",
+      "description": "Included item type 1",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype2": {
+      "type": "string",
+      "description": "Included item type 2",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype3": {
+      "type": "string",
+      "description": "Included item type 3",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype4": {
+      "type": "string",
+      "description": "Included item type 4",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype5": {
+      "type": "string",
+      "description": "Included item type 5",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype6": {
+      "type": "string",
+      "description": "Included item type 6",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "itype7": {
+      "type": "string",
+      "description": "Included item type 7",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "etype1": {
+      "type": "string",
+      "description": "Excluded item type 1",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "etype2": {
+      "type": "string",
+      "description": "Excluded item type 2",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "etype3": {
+      "type": "string",
+      "description": "Excluded item type 3",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "etype4": {
+      "type": "string",
+      "description": "Excluded item type 4",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
+    },
+    "etype5": {
+      "type": "string",
+      "description": "Excluded item type 5",
+      "ref": "itemtypes.txt/Code",
+      "engineVerified": true
     },
     "armor": {
       "type": "boolean",
-      "description": "Applies to armor"
+      "description": "Applies to armor",
+      "deprecated": true
     },
     "helm": {
       "type": "boolean",
-      "description": "Applies to helms"
+      "description": "Applies to helms",
+      "deprecated": true
     },
     "shield": {
       "type": "boolean",
-      "description": "Applies to shields"
+      "description": "Applies to shields",
+      "deprecated": true
     },
     "sword": {
       "type": "boolean",
-      "description": "Applies to swords"
+      "description": "Applies to swords",
+      "deprecated": true
     },
     "axe": {
       "type": "boolean",
-      "description": "Applies to axes"
+      "description": "Applies to axes",
+      "deprecated": true
     },
     "mace": {
       "type": "boolean",
-      "description": "Applies to maces"
+      "description": "Applies to maces",
+      "deprecated": true
     },
     "spear": {
       "type": "boolean",
-      "description": "Applies to spears"
+      "description": "Applies to spears",
+      "deprecated": true
     },
     "scepter": {
       "type": "boolean",
-      "description": "Applies to scepters"
+      "description": "Applies to scepters",
+      "deprecated": true
     },
     "wand": {
       "type": "boolean",
-      "description": "Applies to wands"
+      "description": "Applies to wands",
+      "deprecated": true
     },
     "staff": {
       "type": "boolean",
-      "description": "Applies to staves"
+      "description": "Applies to staves",
+      "deprecated": true
     },
     "bow": {
       "type": "boolean",
-      "description": "Applies to bows"
+      "description": "Applies to bows",
+      "deprecated": true
     },
     "boots": {
       "type": "boolean",
-      "description": "Applies to boots"
+      "description": "Applies to boots",
+      "deprecated": true
     },
     "gloves": {
       "type": "boolean",
-      "description": "Applies to gloves"
+      "description": "Applies to gloves",
+      "deprecated": true
     },
     "belt": {
       "type": "boolean",
-      "description": "Applies to belts"
+      "description": "Applies to belts",
+      "deprecated": true
     },
     "ring": {
       "type": "boolean",
-      "description": "Applies to rings"
+      "description": "Applies to rings",
+      "deprecated": true
     },
     "amulet": {
       "type": "boolean",
-      "description": "Applies to amulets"
+      "description": "Applies to amulets",
+      "deprecated": true
     },
     "add": {
       "type": "integer",
       "description": "Flat cost modification value",
-      "min": 0
+      "min": 0,
+      "deprecated": true
     },
     "multiply": {
       "type": "integer",
       "description": "Multiplicative cost modifier",
-      "min": 0
+      "min": 0,
+      "deprecated": true
     },
     "divide": {
       "type": "integer",
       "description": "Division factor for calculations",
-      "min": 0
+      "min": 0,
+      "deprecated": true
     }
   }
 }

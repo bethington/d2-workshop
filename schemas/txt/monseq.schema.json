@@ -1,11 +1,12 @@
 {
   "file": "monseq.txt",
-  "description": "Monster animation sequences \u2014 defines composite animation sequences built from frames of other animation modes. Used for special monster animations that combine multiple modes.",
+  "description": "Monster animation sequences — defines composite animation sequences built from frames of other animation modes. Used for special monster animations that combine multiple modes.",
   "columns": {
     "sequence": {
       "type": "integer",
       "required": true,
-      "description": "Sequence group index (multiple rows share the same sequence number to form one animation)"
+      "description": "Sequence group index (multiple rows share the same sequence number to form one animation)",
+      "engineVerified": true
     },
     "mode": {
       "type": "enum",
@@ -28,23 +29,28 @@
         "xx",
         "RN",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "frame": {
       "type": "integer",
-      "description": "Frame index within the source animation mode"
+      "description": "Frame index within the source animation mode",
+      "engineVerified": true
     },
     "dir": {
       "type": "integer",
-      "description": "Direction index for the animation frame"
+      "description": "Direction index for the animation frame",
+      "engineVerified": true
     },
     "event": {
       "type": "integer",
-      "description": "Event trigger at this frame (e.g. missile launch, sound play)"
+      "description": "Event trigger at this frame (e.g. missile launch, sound play)",
+      "engineVerified": true
     },
     "eol": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game)",
+      "deprecated": true
     }
   }
 }

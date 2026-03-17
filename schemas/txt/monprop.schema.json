@@ -6,7 +6,8 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Monster property set identifier, referenced by MonStats.txt MonProp column"
+      "description": "Monster property set identifier, referenced by MonStats.txt MonProp column",
+      "engineVerified": true
     },
     "prop1": {
       "type": "enum",
@@ -281,23 +282,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance1": {
       "type": "integer",
-      "description": "Normal property 1 spawn chance (blank = always)"
+      "description": "Normal property 1 spawn chance (blank = always)",
+      "engineVerified": true
     },
     "par1": {
       "type": "string",
-      "description": "Normal property 1 parameter"
+      "description": "Normal property 1 parameter",
+      "engineVerified": true
     },
     "min1": {
       "type": "integer",
-      "description": "Normal property 1 minimum value"
+      "description": "Normal property 1 minimum value",
+      "engineVerified": true
     },
     "max1": {
       "type": "integer",
-      "description": "Normal property 1 maximum value"
+      "description": "Normal property 1 maximum value",
+      "engineVerified": true
     },
     "prop2": {
       "type": "enum",
@@ -572,23 +578,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance2": {
       "type": "integer",
-      "description": "Normal property 2 spawn chance"
+      "description": "Normal property 2 spawn chance",
+      "engineVerified": true
     },
     "par2": {
       "type": "string",
-      "description": "Normal property 2 parameter"
+      "description": "Normal property 2 parameter",
+      "engineVerified": true
     },
     "min2": {
       "type": "integer",
-      "description": "Normal property 2 minimum value"
+      "description": "Normal property 2 minimum value",
+      "engineVerified": true
     },
     "max2": {
       "type": "integer",
-      "description": "Normal property 2 maximum value"
+      "description": "Normal property 2 maximum value",
+      "engineVerified": true
     },
     "prop3": {
       "type": "enum",
@@ -863,23 +874,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance3": {
       "type": "integer",
-      "description": "Normal property 3 spawn chance"
+      "description": "Normal property 3 spawn chance",
+      "engineVerified": true
     },
     "par3": {
       "type": "string",
-      "description": "Normal property 3 parameter"
+      "description": "Normal property 3 parameter",
+      "engineVerified": true
     },
     "min3": {
       "type": "integer",
-      "description": "Normal property 3 minimum value"
+      "description": "Normal property 3 minimum value",
+      "engineVerified": true
     },
     "max3": {
       "type": "integer",
-      "description": "Normal property 3 maximum value"
+      "description": "Normal property 3 maximum value",
+      "engineVerified": true
     },
     "prop4": {
       "type": "enum",
@@ -1154,23 +1170,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance4": {
       "type": "integer",
-      "description": "Normal property 4 spawn chance"
+      "description": "Normal property 4 spawn chance",
+      "engineVerified": true
     },
     "par4": {
       "type": "string",
-      "description": "Normal property 4 parameter"
+      "description": "Normal property 4 parameter",
+      "engineVerified": true
     },
     "min4": {
       "type": "integer",
-      "description": "Normal property 4 minimum value"
+      "description": "Normal property 4 minimum value",
+      "engineVerified": true
     },
     "max4": {
       "type": "integer",
-      "description": "Normal property 4 maximum value"
+      "description": "Normal property 4 maximum value",
+      "engineVerified": true
     },
     "prop5": {
       "type": "enum",
@@ -1445,23 +1466,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance5": {
       "type": "integer",
-      "description": "Normal property 5 spawn chance"
+      "description": "Normal property 5 spawn chance",
+      "engineVerified": true
     },
     "par5": {
       "type": "string",
-      "description": "Normal property 5 parameter"
+      "description": "Normal property 5 parameter",
+      "engineVerified": true
     },
     "min5": {
       "type": "integer",
-      "description": "Normal property 5 minimum value"
+      "description": "Normal property 5 minimum value",
+      "engineVerified": true
     },
     "max5": {
       "type": "integer",
-      "description": "Normal property 5 maximum value"
+      "description": "Normal property 5 maximum value",
+      "engineVerified": true
     },
     "prop6": {
       "type": "enum",
@@ -1736,23 +1762,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance6": {
       "type": "integer",
-      "description": "Normal property 6 spawn chance"
+      "description": "Normal property 6 spawn chance",
+      "engineVerified": true
     },
     "par6": {
       "type": "string",
-      "description": "Normal property 6 parameter"
+      "description": "Normal property 6 parameter",
+      "engineVerified": true
     },
     "min6": {
       "type": "integer",
-      "description": "Normal property 6 minimum value"
+      "description": "Normal property 6 minimum value",
+      "engineVerified": true
     },
     "max6": {
       "type": "integer",
-      "description": "Normal property 6 maximum value"
+      "description": "Normal property 6 maximum value",
+      "engineVerified": true
     },
     "prop1 (N)": {
       "type": "enum",
@@ -2027,23 +2058,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance1 (N)": {
       "type": "integer",
-      "description": "Nightmare property 1 spawn chance"
+      "description": "Nightmare property 1 spawn chance",
+      "engineVerified": true
     },
     "par1 (N)": {
       "type": "string",
-      "description": "Nightmare property 1 parameter"
+      "description": "Nightmare property 1 parameter",
+      "engineVerified": true
     },
     "min1 (N)": {
       "type": "integer",
-      "description": "Nightmare property 1 minimum value"
+      "description": "Nightmare property 1 minimum value",
+      "engineVerified": true
     },
     "max1 (N)": {
       "type": "integer",
-      "description": "Nightmare property 1 maximum value"
+      "description": "Nightmare property 1 maximum value",
+      "engineVerified": true
     },
     "prop2 (N)": {
       "type": "enum",
@@ -2318,23 +2354,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance2 (N)": {
       "type": "integer",
-      "description": "Nightmare property 2 spawn chance"
+      "description": "Nightmare property 2 spawn chance",
+      "engineVerified": true
     },
     "par2 (N)": {
       "type": "string",
-      "description": "Nightmare property 2 parameter"
+      "description": "Nightmare property 2 parameter",
+      "engineVerified": true
     },
     "min2 (N)": {
       "type": "integer",
-      "description": "Nightmare property 2 minimum value"
+      "description": "Nightmare property 2 minimum value",
+      "engineVerified": true
     },
     "max2 (N)": {
       "type": "integer",
-      "description": "Nightmare property 2 maximum value"
+      "description": "Nightmare property 2 maximum value",
+      "engineVerified": true
     },
     "prop3 (N)": {
       "type": "enum",
@@ -2609,23 +2650,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance3 (N)": {
       "type": "integer",
-      "description": "Nightmare property 3 spawn chance"
+      "description": "Nightmare property 3 spawn chance",
+      "engineVerified": true
     },
     "par3 (N)": {
       "type": "string",
-      "description": "Nightmare property 3 parameter"
+      "description": "Nightmare property 3 parameter",
+      "engineVerified": true
     },
     "min3 (N)": {
       "type": "integer",
-      "description": "Nightmare property 3 minimum value"
+      "description": "Nightmare property 3 minimum value",
+      "engineVerified": true
     },
     "max3 (N)": {
       "type": "integer",
-      "description": "Nightmare property 3 maximum value"
+      "description": "Nightmare property 3 maximum value",
+      "engineVerified": true
     },
     "prop4 (N)": {
       "type": "enum",
@@ -2900,23 +2946,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance4 (N)": {
       "type": "integer",
-      "description": "Nightmare property 4 spawn chance"
+      "description": "Nightmare property 4 spawn chance",
+      "engineVerified": true
     },
     "par4 (N)": {
       "type": "string",
-      "description": "Nightmare property 4 parameter"
+      "description": "Nightmare property 4 parameter",
+      "engineVerified": true
     },
     "min4 (N)": {
       "type": "integer",
-      "description": "Nightmare property 4 minimum value"
+      "description": "Nightmare property 4 minimum value",
+      "engineVerified": true
     },
     "max4 (N)": {
       "type": "integer",
-      "description": "Nightmare property 4 maximum value"
+      "description": "Nightmare property 4 maximum value",
+      "engineVerified": true
     },
     "prop5 (N)": {
       "type": "enum",
@@ -3191,23 +3242,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance5 (N)": {
       "type": "integer",
-      "description": "Nightmare property 5 spawn chance"
+      "description": "Nightmare property 5 spawn chance",
+      "engineVerified": true
     },
     "par5 (N)": {
       "type": "string",
-      "description": "Nightmare property 5 parameter"
+      "description": "Nightmare property 5 parameter",
+      "engineVerified": true
     },
     "min5 (N)": {
       "type": "integer",
-      "description": "Nightmare property 5 minimum value"
+      "description": "Nightmare property 5 minimum value",
+      "engineVerified": true
     },
     "max5 (N)": {
       "type": "integer",
-      "description": "Nightmare property 5 maximum value"
+      "description": "Nightmare property 5 maximum value",
+      "engineVerified": true
     },
     "prop6 (N)": {
       "type": "enum",
@@ -3482,23 +3538,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance6 (N)": {
       "type": "integer",
-      "description": "Nightmare property 6 spawn chance"
+      "description": "Nightmare property 6 spawn chance",
+      "engineVerified": true
     },
     "par6 (N)": {
       "type": "string",
-      "description": "Nightmare property 6 parameter"
+      "description": "Nightmare property 6 parameter",
+      "engineVerified": true
     },
     "min6 (N)": {
       "type": "integer",
-      "description": "Nightmare property 6 minimum value"
+      "description": "Nightmare property 6 minimum value",
+      "engineVerified": true
     },
     "max6 (N)": {
       "type": "integer",
-      "description": "Nightmare property 6 maximum value"
+      "description": "Nightmare property 6 maximum value",
+      "engineVerified": true
     },
     "prop1 (H)": {
       "type": "enum",
@@ -3773,23 +3834,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance1 (H)": {
       "type": "integer",
-      "description": "Hell property 1 spawn chance"
+      "description": "Hell property 1 spawn chance",
+      "engineVerified": true
     },
     "par1 (H)": {
       "type": "string",
-      "description": "Hell property 1 parameter"
+      "description": "Hell property 1 parameter",
+      "engineVerified": true
     },
     "min1 (H)": {
       "type": "integer",
-      "description": "Hell property 1 minimum value"
+      "description": "Hell property 1 minimum value",
+      "engineVerified": true
     },
     "max1 (H)": {
       "type": "integer",
-      "description": "Hell property 1 maximum value"
+      "description": "Hell property 1 maximum value",
+      "engineVerified": true
     },
     "prop2 (H)": {
       "type": "enum",
@@ -4064,23 +4130,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance2 (H)": {
       "type": "integer",
-      "description": "Hell property 2 spawn chance"
+      "description": "Hell property 2 spawn chance",
+      "engineVerified": true
     },
     "par2 (H)": {
       "type": "string",
-      "description": "Hell property 2 parameter"
+      "description": "Hell property 2 parameter",
+      "engineVerified": true
     },
     "min2 (H)": {
       "type": "integer",
-      "description": "Hell property 2 minimum value"
+      "description": "Hell property 2 minimum value",
+      "engineVerified": true
     },
     "max2 (H)": {
       "type": "integer",
-      "description": "Hell property 2 maximum value"
+      "description": "Hell property 2 maximum value",
+      "engineVerified": true
     },
     "prop3 (H)": {
       "type": "enum",
@@ -4355,23 +4426,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance3 (H)": {
       "type": "integer",
-      "description": "Hell property 3 spawn chance"
+      "description": "Hell property 3 spawn chance",
+      "engineVerified": true
     },
     "par3 (H)": {
       "type": "string",
-      "description": "Hell property 3 parameter"
+      "description": "Hell property 3 parameter",
+      "engineVerified": true
     },
     "min3 (H)": {
       "type": "integer",
-      "description": "Hell property 3 minimum value"
+      "description": "Hell property 3 minimum value",
+      "engineVerified": true
     },
     "max3 (H)": {
       "type": "integer",
-      "description": "Hell property 3 maximum value"
+      "description": "Hell property 3 maximum value",
+      "engineVerified": true
     },
     "prop4 (H)": {
       "type": "enum",
@@ -4646,23 +4722,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance4 (H)": {
       "type": "integer",
-      "description": "Hell property 4 spawn chance"
+      "description": "Hell property 4 spawn chance",
+      "engineVerified": true
     },
     "par4 (H)": {
       "type": "string",
-      "description": "Hell property 4 parameter"
+      "description": "Hell property 4 parameter",
+      "engineVerified": true
     },
     "min4 (H)": {
       "type": "integer",
-      "description": "Hell property 4 minimum value"
+      "description": "Hell property 4 minimum value",
+      "engineVerified": true
     },
     "max4 (H)": {
       "type": "integer",
-      "description": "Hell property 4 maximum value"
+      "description": "Hell property 4 maximum value",
+      "engineVerified": true
     },
     "prop5 (H)": {
       "type": "enum",
@@ -4937,23 +5018,28 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance5 (H)": {
       "type": "integer",
-      "description": "Hell property 5 spawn chance"
+      "description": "Hell property 5 spawn chance",
+      "engineVerified": true
     },
     "par5 (H)": {
       "type": "string",
-      "description": "Hell property 5 parameter"
+      "description": "Hell property 5 parameter",
+      "engineVerified": true
     },
     "min5 (H)": {
       "type": "integer",
-      "description": "Hell property 5 minimum value"
+      "description": "Hell property 5 minimum value",
+      "engineVerified": true
     },
     "max5 (H)": {
       "type": "integer",
-      "description": "Hell property 5 maximum value"
+      "description": "Hell property 5 maximum value",
+      "engineVerified": true
     },
     "prop6 (H)": {
       "type": "enum",
@@ -5228,27 +5314,33 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "chance6 (H)": {
       "type": "integer",
-      "description": "Hell property 6 spawn chance"
+      "description": "Hell property 6 spawn chance",
+      "engineVerified": true
     },
     "par6 (H)": {
       "type": "string",
-      "description": "Hell property 6 parameter"
+      "description": "Hell property 6 parameter",
+      "engineVerified": true
     },
     "min6 (H)": {
       "type": "integer",
-      "description": "Hell property 6 minimum value"
+      "description": "Hell property 6 minimum value",
+      "engineVerified": true
     },
     "max6 (H)": {
       "type": "integer",
-      "description": "Hell property 6 maximum value"
+      "description": "Hell property 6 maximum value",
+      "engineVerified": true
     },
     "*eol": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game)",
+      "deprecated": true
     }
   }
 }
