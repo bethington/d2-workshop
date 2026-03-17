@@ -144,8 +144,8 @@
       "engineVerified": true
     },
     "BaseW": {
-      "type": "integer",
-      "description": "Base weapon class",
+      "type": "string",
+      "description": "Base weapon class code (e.g. 1hs, 2hs, bow, hth)",
       "engineVerified": true
     },
     "Id": {
