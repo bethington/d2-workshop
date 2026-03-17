@@ -2,39 +2,14 @@
   "file": "lvltypes.txt",
   "description": "Level visual type definitions â€” tileset assignments and lighting.",
   "columns": {
-    "LOSDraw": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "SaveMonsters": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "Act": {
       "type": "integer",
       "description": "Act number for this level type",
       "engineVerified": true
     },
-    "Beta": {
-      "type": "boolean",
-      "description": "Whether this entry is beta content",
-      "engineVerified": true
-    },
     "Expansion": {
       "type": "boolean",
       "description": "Whether this is expansion-only content",
-      "engineVerified": true
-    },
-    "Id": {
-      "type": "integer",
-      "description": "Level type ID",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Level type name identifier",
       "engineVerified": true
     },
     "File 1": {
