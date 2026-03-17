@@ -1,44 +1,10 @@
 {
   "file": "elemtypes.txt",
-  "description": "Elemental damage type definitions.",
+  "description": "Elemental damage type code lookup table. Engine uses row index to map element type IDs to their short codes.",
   "columns": {
-    "Elemental Type": {
-      "type": "enum",
-      "values": [
-        "Burning",
-        "Cold",
-        "Fire",
-        "Life Drain",
-        "Lightning",
-        "Magic",
-        "Mana Drain",
-        "None",
-        "Poison",
-        "Random",
-        "Stamina Drain",
-        "Stun"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Display name of the elemental damage type",
-      "engineVerified": true
-    },
-    "Code": {
-      "type": "enum",
-      "values": [
-        "burn",
-        "cold",
-        "fire",
-        "life",
-        "ltng",
-        "mag",
-        "mana",
-        "pois",
-        "rand",
-        "stam",
-        "stun"
-      ],
-      "description": "Short element type code used in formulas and data references",
+    "code": {
+      "type": "string",
+      "description": "Short element type code used in formulas and data references (e.g. fire, cold, ltng, pois)",
       "engineVerified": true
     }
   }
