@@ -10,79 +10,122 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Quality ratio function type (standard formula or Uber override)"
+      "description": "Quality ratio function type (standard formula or Uber override). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Unique": {
       "type": "integer",
       "min": 600,
       "max": 1000,
-      "description": "Base ratio for unique item quality chance"
+      "description": "Base ratio for unique item quality chance",
+      "engineVerified": true
     },
     "UniqueDivisor": {
       "type": "integer",
       "min": 6,
       "max": 6,
-      "description": "Divisor applied to monster level when calculating unique item chance"
+      "description": "Divisor applied to monster level when calculating unique item chance",
+      "engineVerified": true
     },
     "Rare": {
       "type": "integer",
       "min": 120,
       "max": 200,
-      "description": "Base ratio for rare item quality chance"
+      "description": "Base ratio for rare item quality chance. Not read by 1.13c engine",
+      "deprecated": true
     },
     "RareDivisor": {
       "type": "integer",
       "min": 6,
       "max": 6,
-      "description": "Divisor applied to monster level when calculating rare item chance"
+      "description": "Divisor applied to monster level when calculating rare item chance",
+      "engineVerified": true
     },
     "Set": {
       "type": "integer",
       "min": 100,
       "max": 125,
-      "description": "Base ratio value for set item quality chance"
+      "description": "Base ratio value for set item quality chance. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SetDivisor": {
       "type": "integer",
       "min": 6,
       "max": 6,
-      "description": "Divisor applied to monster level when calculating set item chance"
+      "description": "Divisor applied to monster level when calculating set item chance",
+      "engineVerified": true
     },
     "Magic": {
       "type": "integer",
       "min": 3,
       "max": 30,
-      "description": "Base ratio value for magic item quality chance"
+      "description": "Base ratio value for magic item quality chance",
+      "engineVerified": true
     },
     "MagicDivisor": {
       "type": "integer",
       "min": 16,
       "max": 100,
-      "description": "Divisor applied to monster level when calculating magic item chance"
+      "description": "Divisor applied to monster level when calculating magic item chance",
+      "engineVerified": true
     },
     "HiQuality": {
       "type": "integer",
       "min": 4,
       "max": 12,
-      "description": "Base ratio value for superior (high quality) item chance"
+      "description": "Base ratio value for superior (high quality) item chance",
+      "engineVerified": true
     },
     "HiQualityDivisor": {
       "type": "integer",
       "min": 16,
       "max": 16,
-      "description": "Divisor applied to monster level when calculating superior item chance"
+      "description": "Divisor applied to monster level when calculating superior item chance",
+      "engineVerified": true
     },
     "Normal": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Base ratio value for normal item quality chance"
+      "description": "Base ratio value for normal item quality chance",
+      "engineVerified": true
     },
     "NormalDivisor": {
       "type": "integer",
       "min": 8,
       "max": 8,
-      "description": "Divisor applied to monster level when calculating normal item chance"
+      "description": "Divisor applied to monster level when calculating normal item chance",
+      "engineVerified": true
+    },
+    "MagicMin": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SetMin": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "RareMin": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "UniqueMin": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Class Specific": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Version": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

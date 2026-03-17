@@ -1,332 +1,454 @@
 {
   "file": "states.txt",
-  "description": "Character/monster state definitions \u00e2\u20ac\u201d buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
+  "description": "Character/monster state definitions â€” buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
   "columns": {
     "state": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Unique state identifier used by skills.txt, missiles.txt, and other files to reference this state"
+      "description": "Unique state identifier used by skills.txt, missiles.txt, and other files to reference this state. Not read by 1.13c engine",
+      "deprecated": true
     },
     "id": {
       "type": "integer",
       "required": true,
       "unique": true,
-      "description": "Sequential numeric ID for this state, must match the row index"
+      "description": "Sequential numeric ID for this state, must match the row index. Not read by 1.13c engine",
+      "deprecated": true
     },
     "group": {
       "type": "integer",
-      "description": "Group ID for mutually exclusive states \u00e2\u20ac\u201d states in the same group cannot stack (e.g., cold armors share a group)"
+      "description": "Group ID for mutually exclusive states â€” states in the same group cannot stack (e.g., cold armors share a group). Not read by 1.13c engine",
+      "deprecated": true
     },
     "remhit": {
       "type": "boolean",
-      "description": "Whether this state is dispelled when the unit is hit (only works for monsters, not players)"
+      "description": "Whether this state is dispelled when the unit is hit (only works for monsters, not players)",
+      "engineVerified": true
     },
     "nosend": {
       "type": "boolean",
-      "description": "Whether the server skips sending this state to other clients (used for internal-only states that do not affect other players)"
+      "description": "Whether the server skips sending this state to other clients (used for internal-only states that do not affect other players)",
+      "engineVerified": true
     },
     "transform": {
       "type": "boolean",
-      "description": "Whether this state transforms the unit appearance (e.g., werewolf, werebear, Holy Shield)"
+      "description": "Whether this state transforms the unit appearance (e.g., werewolf, werebear, Holy Shield). Not read by 1.13c engine",
+      "deprecated": true
     },
     "aura": {
       "type": "boolean",
-      "description": "Whether this is an aura state \u00e2\u20ac\u201d auras cycle on-screen display and are dispelled by conversion effects"
+      "description": "Whether this is an aura state â€” auras cycle on-screen display and are dispelled by conversion effects. Not read by 1.13c engine",
+      "deprecated": true
     },
     "curable": {
       "type": "boolean",
-      "description": "Whether a heal-enabled NPC (e.g., Akara) can remove this state when you talk to them"
+      "description": "Whether a heal-enabled NPC (e.g., Akara) can remove this state when you talk to them. Not read by 1.13c engine",
+      "deprecated": true
     },
     "curse": {
       "type": "boolean",
-      "description": "Whether this is a curse \u00e2\u20ac\u201d curse states cannot stack and a new curse replaces the previous one"
+      "description": "Whether this is a curse â€” curse states cannot stack and a new curse replaces the previous one. Not read by 1.13c engine",
+      "deprecated": true
     },
     "active": {
       "type": "boolean",
-      "description": "Whether the state has an active ongoing effect (e.g., Shiver Armor's retaliation)"
+      "description": "Whether the state has an active ongoing effect (e.g., Shiver Armor's retaliation)",
+      "engineVerified": true
     },
     "immed": {
       "type": "boolean",
-      "description": "Whether the state takes effect immediately upon application without waiting for the next game tick"
+      "description": "Whether the state takes effect immediately upon application without waiting for the next game tick. Not read by 1.13c engine",
+      "deprecated": true
     },
     "restrict": {
       "type": "boolean",
-      "description": "Whether the state restricts player actions (related to werewolf/werebear transformation restrictions)"
+      "description": "Whether the state restricts player actions (related to werewolf/werebear transformation restrictions). Not read by 1.13c engine",
+      "deprecated": true
     },
     "disguise": {
       "type": "boolean",
-      "description": "Whether the state changes the unit graphic entirely (e.g., werewolf/werebear/valkyrie appearance swap)"
+      "description": "Whether the state changes the unit graphic entirely (e.g., werewolf/werebear/valkyrie appearance swap). Not read by 1.13c engine",
+      "deprecated": true
     },
     "blue": {
       "type": "boolean",
-      "description": "Whether the state is considered a positive (blue) modifier for UI display purposes"
+      "description": "Whether the state is considered a positive (blue) modifier for UI display purposes. Not read by 1.13c engine",
+      "deprecated": true
     },
     "attblue": {
       "type": "boolean",
-      "description": "Whether to display the attack rating modifier from this state in blue (positive) color"
+      "description": "Whether to display the attack rating modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "damblue": {
       "type": "boolean",
-      "description": "Whether to display the damage modifier from this state in blue (positive) color"
+      "description": "Whether to display the damage modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "armblue": {
       "type": "boolean",
-      "description": "Whether to display the armor/defense modifier from this state in blue (positive) color"
+      "description": "Whether to display the armor/defense modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rfblue": {
       "type": "boolean",
-      "description": "Whether to display the fire resistance modifier from this state in blue (positive) color"
+      "description": "Whether to display the fire resistance modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rlblue": {
       "type": "boolean",
-      "description": "Whether to display the lightning resistance modifier from this state in blue (positive) color"
+      "description": "Whether to display the lightning resistance modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rcblue": {
       "type": "boolean",
-      "description": "Whether to display the cold resistance modifier from this state in blue (positive) color"
+      "description": "Whether to display the cold resistance modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "stambarblue": {
       "type": "boolean",
-      "description": "Whether to display the stamina bar effect from this state in blue (positive) color"
+      "description": "Whether to display the stamina bar effect from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rpblue": {
       "type": "boolean",
-      "description": "Whether to display the poison resistance modifier from this state in blue (positive) color"
+      "description": "Whether to display the poison resistance modifier from this state in blue (positive) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "attred": {
       "type": "boolean",
-      "description": "Whether to display the attack rating modifier from this state in red (negative) color"
+      "description": "Whether to display the attack rating modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "damred": {
       "type": "boolean",
-      "description": "Whether to display the damage modifier from this state in red (negative) color"
+      "description": "Whether to display the damage modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "armred": {
       "type": "boolean",
-      "description": "Whether to display the armor/defense modifier from this state in red (negative) color"
+      "description": "Whether to display the armor/defense modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rfred": {
       "type": "boolean",
-      "description": "Whether to display the fire resistance modifier from this state in red (negative) color"
+      "description": "Whether to display the fire resistance modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rlred": {
       "type": "boolean",
-      "description": "Whether to display the lightning resistance modifier from this state in red (negative) color"
+      "description": "Whether to display the lightning resistance modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rcred": {
       "type": "boolean",
-      "description": "Whether to display the cold resistance modifier from this state in red (negative) color"
+      "description": "Whether to display the cold resistance modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rpred": {
       "type": "boolean",
-      "description": "Whether to display the poison resistance modifier from this state in red (negative) color"
+      "description": "Whether to display the poison resistance modifier from this state in red (negative) color. Not read by 1.13c engine",
+      "deprecated": true
     },
     "exp": {
       "type": "boolean",
-      "description": "Whether this state is an expansion-only state (Lord of Destruction content)"
+      "description": "Whether this state is an expansion-only state (Lord of Destruction content). Not read by 1.13c engine",
+      "deprecated": true
     },
     "plrstaydeath": {
       "type": "boolean",
-      "description": "Whether this state persists on a player after death (not removed on resurrection)"
+      "description": "Whether this state persists on a player after death (not removed on resurrection). Not read by 1.13c engine",
+      "deprecated": true
     },
     "monstaydeath": {
       "type": "boolean",
-      "description": "Whether this state persists on a monster after death (e.g., for corpse-related effects)"
+      "description": "Whether this state persists on a monster after death (e.g., for corpse-related effects). Not read by 1.13c engine",
+      "deprecated": true
     },
     "bossstaydeath": {
       "type": "boolean",
-      "description": "Whether this state persists on a boss monster after death"
+      "description": "Whether this state persists on a boss monster after death",
+      "engineVerified": true
     },
     "hide": {
       "type": "boolean",
-      "description": "Whether the state is hidden from the player UI and buff/debuff display"
+      "description": "Whether the state is hidden from the player UI and buff/debuff display. Not read by 1.13c engine",
+      "deprecated": true
     },
     "shatter": {
       "type": "boolean",
-      "description": "Whether a unit killed while in this state shatters (ice death animation, no corpse left)"
+      "description": "Whether a unit killed while in this state shatters (ice death animation, no corpse left). Not read by 1.13c engine",
+      "deprecated": true
     },
     "udead": {
       "type": "boolean",
-      "description": "Whether the state marks the unit as undead for purposes of holy damage and other undead-specific effects"
+      "description": "Whether the state marks the unit as undead for purposes of holy damage and other undead-specific effects",
+      "engineVerified": true
     },
     "life": {
       "type": "boolean",
-      "description": "Whether this state affects the life display or life-related behavior"
+      "description": "Whether this state affects the life display or life-related behavior. Not read by 1.13c engine",
+      "deprecated": true
     },
     "green": {
       "type": "boolean",
-      "description": "Whether the state is displayed in green color in the UI (set bonus style)"
+      "description": "Whether the state is displayed in green color in the UI (set bonus style). Not read by 1.13c engine",
+      "deprecated": true
     },
     "pgsv": {
       "type": "boolean",
-      "description": "Whether this state is associated with progressive (charge-up) skills and triggers when charges activate"
+      "description": "Whether this state is associated with progressive (charge-up) skills and triggers when charges activate. Not read by 1.13c engine",
+      "deprecated": true
     },
     "nooverlays": {
       "type": "boolean",
-      "description": "Whether to suppress overlay graphics while this state is active on the unit"
+      "description": "Whether to suppress overlay graphics while this state is active on the unit",
+      "engineVerified": true
     },
     "noclear": {
       "type": "boolean",
-      "description": "Whether this state cannot be cleared by normal means (e.g., town portal or death)"
+      "description": "Whether this state cannot be cleared by normal means (e.g., town portal or death). Not read by 1.13c engine",
+      "deprecated": true
     },
     "bossinv": {
       "type": "boolean",
-      "description": "Whether the state uses the minion owner's inventory client-side (makes Decoy display your current equipment)"
+      "description": "Whether the state uses the minion owner's inventory client-side (makes Decoy display your current equipment)",
+      "engineVerified": true
     },
     "meleeonly": {
       "type": "boolean",
-      "description": "Whether the state restricts the unit to melee attacks only (prevents shapeshifted druids from firing missiles with bows)"
+      "description": "Whether the state restricts the unit to melee attacks only (prevents shapeshifted druids from firing missiles with bows)",
+      "engineVerified": true
     },
     "notondead": {
       "type": "boolean",
-      "description": "Whether this state cannot be applied to dead units"
+      "description": "Whether this state cannot be applied to dead units",
+      "engineVerified": true
     },
     "overlay1": {
       "type": "ref",
       "description": "First persistent overlay displayed on the unit while this state is active",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "overlay2": {
       "type": "ref",
       "description": "Second persistent overlay displayed on the unit while this state is active",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "overlay3": {
       "type": "ref",
       "description": "Third persistent overlay displayed on the unit while this state is active",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "overlay4": {
       "type": "ref",
       "description": "Fourth persistent overlay displayed on the unit while this state is active",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "pgsvoverlay": {
       "type": "ref",
       "description": "Overlay shown on the target of a progressive skill when the charge-up triggers",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "castoverlay": {
       "type": "ref",
-      "description": "Overlay displayed once when the state is initially applied (cast effect)",
+      "description": "Overlay displayed once when the state is initially applied (cast effect). Not read by 1.13c engine",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "deprecated": true
     },
     "removerlay": {
       "type": "ref",
       "description": "Overlay displayed once when the state is removed",
       "target": "overlay.txt",
-      "targetColumn": "Overlay"
+      "targetColumn": "Overlay",
+      "engineVerified": true
     },
     "stat": {
       "type": "ref",
-      "description": "Stat from itemstatcost.txt associated with this state (used to link state duration or strength to a stat)",
+      "description": "Stat from itemstatcost.txt associated with this state (used to link state duration or strength to a stat). Not read by 1.13c engine",
       "target": "itemstatcost.txt",
-      "targetColumn": "Stat"
+      "targetColumn": "Stat",
+      "deprecated": true
     },
     "setfunc": {
       "type": "integer",
-      "description": "Server function ID called when this state is applied to a unit"
+      "description": "Server function ID called when this state is applied to a unit",
+      "engineVerified": true
     },
     "remfunc": {
       "type": "integer",
-      "description": "Server function ID called when this state is removed from a unit"
+      "description": "Server function ID called when this state is removed from a unit",
+      "engineVerified": true
     },
     "missile": {
       "type": "ref",
-      "description": "Missile spawned while this state is active (e.g., Blaze fire trail)",
+      "description": "Missile spawned while this state is active (e.g., Blaze fire trail). Not read by 1.13c engine",
       "target": "Missiles.txt",
-      "targetColumn": "Missile"
+      "targetColumn": "Missile",
+      "deprecated": true
     },
     "skill": {
       "type": "ref",
-      "description": "Skill associated with this state (used to link back to the skill that created it)",
+      "description": "Skill associated with this state (used to link back to the skill that created it). Not read by 1.13c engine",
       "target": "skills.txt",
-      "targetColumn": "skill"
+      "targetColumn": "skill",
+      "deprecated": true
     },
     "itemtype": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Item type restriction \u00e2\u20ac\u201d limits which item types can grant this state (references ItemTypes.txt Code)"
+      "description": "Item type restriction â€” limits which item types can grant this state (references ItemTypes.txt Code)",
+      "engineVerified": true
     },
     "itemtrans": {
       "type": "ref",
       "description": "Color transform applied to items while this state is active",
       "target": "colors.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "colorpri": {
       "type": "integer",
-      "description": "Priority for the color transform \u00e2\u20ac\u201d higher priority overrides lower when multiple states are active"
+      "description": "Priority for the color transform â€” higher priority overrides lower when multiple states are active",
+      "engineVerified": true
     },
     "colorshift": {
       "type": "integer",
-      "description": "Palette shift index applied to the unit graphic while this state is active"
+      "description": "Palette shift index applied to the unit graphic while this state is active",
+      "engineVerified": true
     },
     "light-r": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Red component of the light radius color emitted while this state is active"
+      "description": "Red component of the light radius color emitted while this state is active",
+      "engineVerified": true
     },
     "light-g": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Green component of the light radius color emitted while this state is active"
+      "description": "Green component of the light radius color emitted while this state is active",
+      "engineVerified": true
     },
     "light-b": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Blue component of the light radius color emitted while this state is active"
+      "description": "Blue component of the light radius color emitted while this state is active",
+      "engineVerified": true
     },
     "onsound": {
       "type": "ref",
       "description": "Sound played when this state is applied",
       "target": "sounds.txt",
-      "targetColumn": "Handle"
+      "targetColumn": "Handle",
+      "engineVerified": true
     },
     "offsound": {
       "type": "ref",
       "description": "Sound played when this state expires or is removed",
       "target": "sounds.txt",
-      "targetColumn": "Handle"
+      "targetColumn": "Handle",
+      "engineVerified": true
     },
     "gfxtype": {
       "type": "integer",
-      "description": "Graphics type used for the state visual effect (determines which graphic class to use)"
+      "description": "Graphics type used for the state visual effect (determines which graphic class to use)",
+      "engineVerified": true
     },
     "gfxclass": {
       "type": "integer",
-      "description": "Graphics class index selecting the specific visual variant within the gfxtype"
+      "description": "Graphics class index selecting the specific visual variant within the gfxtype",
+      "engineVerified": true
     },
     "cltevent": {
       "type": "string",
-      "description": "Client event name that triggers clteventfunc (e.g., 'hit', 'kill')"
+      "description": "Client event name that triggers clteventfunc (e.g., 'hit', 'kill')",
+      "engineVerified": true
     },
     "clteventfunc": {
       "type": "integer",
-      "description": "Client-side function ID executed when the cltevent fires"
+      "description": "Client-side function ID executed when the cltevent fires",
+      "engineVerified": true
     },
     "cltactivefunc": {
       "type": "integer",
-      "description": "Client-side function ID called every frame while the state is active on the unit"
+      "description": "Client-side function ID called every frame while the state is active on the unit",
+      "engineVerified": true
     },
     "srvactivefunc": {
       "type": "integer",
-      "description": "Server-side function ID called every frame while the state is active on the unit"
+      "description": "Server-side function ID called every frame while the state is active on the unit",
+      "engineVerified": true
     },
     "eol": {
       "type": "integer",
-      "description": "End of line marker \u00e2\u20ac\u201d always 0, used by the game to detect row termination"
+      "description": "End of line marker â€” always 0, used by the game to detect row termination. Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "baseicon": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "icontype": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "drawhp": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "unsummon": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "partysend": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "basemax": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "micon4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "micon3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "micon2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "micon1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

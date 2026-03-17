@@ -1,32 +1,36 @@
 {
   "file": "gems.txt",
-  "description": "Gem and rune modifier definitions \u2014 weapon, armor, and shield bonuses per quality level.",
+  "description": "Gem and rune modifier definitions — weapon, armor, and shield bonuses per quality level.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "transform": {
       "type": "integer",
       "min": 0,
       "max": 18,
-      "description": "Inventory color transform index"
+      "description": "Inventory color transform index",
+      "engineVerified": true
     },
     "code": {
       "type": "ref",
-      "description": "Item code (references Misc.txt)",
+      "description": "Item code (references Misc.txt). Not read by 1.13c engine",
       "target": "misc.txt",
-      "targetColumn": "code"
+      "targetColumn": "code",
+      "deprecated": true
     },
     "nummods": {
       "type": "integer",
       "min": 3,
       "max": 3,
-      "description": "Number of active modifiers"
+      "description": "Number of active modifiers. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "weaponMod1Code": {
+    "weaponmod1code": {
       "type": "enum",
       "values": [
         "abs-cold",
@@ -299,27 +303,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Weapon modifier 1 property code"
+      "description": "Weapon modifier 1 property code",
+      "engineVerified": true
     },
     "weaponMod1Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for weapon modifier 1"
+      "description": "Parameter offset for weapon modifier 1. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "weaponMod1Min": {
+    "weaponmod1min": {
       "type": "integer",
       "min": 1,
       "max": 56,
-      "description": "Weapon modifier 1 minimum"
+      "description": "Weapon modifier 1 minimum",
+      "engineVerified": true
     },
-    "weaponMod1Max": {
+    "weaponmod1max": {
       "type": "integer",
       "min": 1,
       "max": 70,
-      "description": "Weapon modifier 1 maximum"
+      "description": "Weapon modifier 1 maximum",
+      "engineVerified": true
     },
-    "weaponMod2Code": {
+    "weaponmod2code": {
       "type": "enum",
       "values": [
         "abs-cold",
@@ -592,27 +600,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Weapon modifier 2 property code"
+      "description": "Weapon modifier 2 property code",
+      "engineVerified": true
     },
     "weaponMod2Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for weapon modifier 2"
+      "description": "Parameter offset for weapon modifier 2. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "weaponMod2Min": {
+    "weaponmod2min": {
       "type": "integer",
       "min": 2,
       "max": 20,
-      "description": "Weapon modifier 2 minimum"
+      "description": "Weapon modifier 2 minimum",
+      "engineVerified": true
     },
-    "weaponMod2Max": {
+    "weaponmod2max": {
       "type": "integer",
       "min": 2,
       "max": 20,
-      "description": "Weapon modifier 2 maximum"
+      "description": "Weapon modifier 2 maximum",
+      "engineVerified": true
     },
-    "weaponMod3Code": {
+    "weaponmod3code": {
       "type": "enum",
       "values": [
         "abs-cold",
@@ -885,27 +897,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Weapon modifier 3 property code"
+      "description": "Weapon modifier 3 property code",
+      "engineVerified": true
     },
     "weaponMod3Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for weapon modifier 3"
+      "description": "Parameter offset for weapon modifier 3. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "weaponMod3Min": {
+    "weaponmod3min": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "Weapon modifier 3 minimum"
+      "description": "Weapon modifier 3 minimum",
+      "engineVerified": true
     },
-    "weaponMod3Max": {
+    "weaponmod3max": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "Weapon modifier 3 maximum"
+      "description": "Weapon modifier 3 maximum",
+      "engineVerified": true
     },
-    "helmMod1Code": {
+    "helmmod1code": {
       "type": "enum",
       "values": [
         "abs-cold",
@@ -1178,27 +1194,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Helm modifier 1 property code"
+      "description": "Helm modifier 1 property code",
+      "engineVerified": true
     },
     "helmMod1Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for helm modifier 1"
+      "description": "Parameter offset for helm modifier 1. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "helmMod1Min": {
+    "helmmod1min": {
       "type": "integer",
       "min": 2,
       "max": 30,
-      "description": "Helm modifier 1 minimum"
+      "description": "Helm modifier 1 minimum",
+      "engineVerified": true
     },
-    "helmMod1Max": {
+    "helmmod1max": {
       "type": "integer",
       "min": 2,
       "max": 30,
-      "description": "Helm modifier 1 maximum"
+      "description": "Helm modifier 1 maximum",
+      "engineVerified": true
     },
-    "helmMod2Code": {
+    "helmmod2code": {
       "type": "enum",
       "description": "Helm modifier 2 property code",
       "values": [
@@ -1471,27 +1491,31 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "helmMod2Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for helm modifier 2"
+      "description": "Parameter offset for helm modifier 2. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "helmMod2Min": {
+    "helmmod2min": {
       "type": "integer",
       "min": 0,
       "max": 16,
-      "description": "Helm modifier 2 minimum"
+      "description": "Helm modifier 2 minimum",
+      "engineVerified": true
     },
-    "helmMod2Max": {
+    "helmmod2max": {
       "type": "integer",
       "min": 0,
       "max": 20,
-      "description": "Helm modifier 2 maximum"
+      "description": "Helm modifier 2 maximum",
+      "engineVerified": true
     },
-    "helmMod3Code": {
+    "helmmod3code": {
       "type": "enum",
       "description": "Helm modifier 3 property code",
       "values": [
@@ -1764,27 +1788,31 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "helmMod3Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for helm modifier 3"
+      "description": "Parameter offset for helm modifier 3. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "helmMod3Min": {
+    "helmmod3min": {
       "type": "integer",
       "description": "Helm modifier 3 minimum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
-    "helmMod3Max": {
+    "helmmod3max": {
       "type": "integer",
       "description": "Helm modifier 3 maximum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
-    "shieldMod1Code": {
+    "shieldmod1code": {
       "type": "enum",
       "values": [
         "abs-cold",
@@ -2057,27 +2085,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Shield modifier 1 property code"
+      "description": "Shield modifier 1 property code",
+      "engineVerified": true
     },
     "shieldMod1Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for shield modifier 1"
+      "description": "Parameter offset for shield modifier 1. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "shieldMod1Min": {
+    "shieldmod1min": {
       "type": "integer",
       "min": 2,
       "max": 26,
-      "description": "Shield modifier 1 minimum"
+      "description": "Shield modifier 1 minimum",
+      "engineVerified": true
     },
-    "shieldMod1Max": {
+    "shieldmod1max": {
       "type": "integer",
       "min": 2,
       "max": 30,
-      "description": "Shield modifier 1 maximum"
+      "description": "Shield modifier 1 maximum",
+      "engineVerified": true
     },
-    "shieldMod2Code": {
+    "shieldmod2code": {
       "type": "enum",
       "description": "Shield modifier 2 property code",
       "values": [
@@ -2350,27 +2382,31 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "shieldMod2Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for shield modifier 2"
+      "description": "Parameter offset for shield modifier 2. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "shieldMod2Min": {
+    "shieldmod2min": {
       "type": "integer",
       "description": "Shield modifier 2 minimum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
-    "shieldMod2Max": {
+    "shieldmod2max": {
       "type": "integer",
       "description": "Shield modifier 2 maximum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
-    "shieldMod3Code": {
+    "shieldmod3code": {
       "type": "enum",
       "description": "Shield modifier 3 property code",
       "values": [
@@ -2643,25 +2679,74 @@
         "wounds/lvl",
         "wounds/time",
         ""
-      ]
+      ],
+      "engineVerified": true
     },
     "shieldMod3Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter offset for shield modifier 3"
+      "description": "Parameter offset for shield modifier 3. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "shieldMod3Min": {
+    "shieldmod3min": {
       "type": "integer",
       "description": "Shield modifier 3 minimum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
-    "shieldMod3Max": {
+    "shieldmod3max": {
       "type": "integer",
       "description": "Shield modifier 3 maximum",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
+    },
+    "shieldmod3param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "shieldmod2param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "shieldmod1param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "helmmod3param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "helmmod2param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "helmmod1param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "weaponmod3param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "weaponmod2param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "weaponmod1param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

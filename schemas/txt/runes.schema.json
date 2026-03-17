@@ -1,116 +1,135 @@
 {
   "file": "runes.txt",
-  "description": "Runeword definitions \u2014 rune combinations, item type restrictions, and granted properties.",
+  "description": "Runeword definitions — rune combinations, item type restrictions, and granted properties.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "Rune Name": {
+    "rune name": {
       "type": "string",
-      "description": "Runeword display name string key"
+      "description": "Runeword display name string key",
+      "engineVerified": true
     },
     "complete": {
       "type": "boolean",
-      "description": "Runeword activation flag"
+      "description": "Runeword activation flag",
+      "engineVerified": true
     },
     "server": {
       "type": "boolean",
-      "description": "Server-side only flag"
+      "description": "Server-side only flag. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itype1": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Required item type 1"
+      "description": "Required item type 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itype2": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Required item type 2"
+      "description": "Required item type 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itype3": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Required item type 3"
+      "description": "Required item type 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itype4": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Required item type 4"
+      "description": "Required item type 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itype5": {
       "type": "ref",
-      "description": "Required item type (references ItemTypes.txt)",
+      "description": "Required item type (references ItemTypes.txt). Not read by 1.13c engine",
       "target": "itemtypes.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "itype6": {
       "type": "ref",
-      "description": "Required item type (references ItemTypes.txt)",
+      "description": "Required item type (references ItemTypes.txt). Not read by 1.13c engine",
       "target": "itemtypes.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "etype1": {
       "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt)",
+      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
       "target": "itemtypes.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "etype2": {
       "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt)",
+      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
       "target": "itemtypes.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "etype3": {
       "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt)",
+      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
       "target": "itemtypes.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
-    "Rune1": {
+    "rune1": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 1 item code"
+      "description": "Rune 1 item code",
+      "engineVerified": true
     },
-    "Rune2": {
+    "rune2": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 2 item code"
+      "description": "Rune 2 item code",
+      "engineVerified": true
     },
-    "Rune3": {
+    "rune3": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 3 item code"
+      "description": "Rune 3 item code",
+      "engineVerified": true
     },
-    "Rune4": {
+    "rune4": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 4 item code"
+      "description": "Rune 4 item code",
+      "engineVerified": true
     },
-    "Rune5": {
+    "rune5": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 5 item code"
+      "description": "Rune 5 item code",
+      "engineVerified": true
     },
-    "Rune6": {
+    "rune6": {
       "type": "ref",
       "target": "misc.txt",
       "targetColumn": "code",
-      "description": "Rune 6 item code"
+      "description": "Rune 6 item code",
+      "engineVerified": true
     },
-    "T1Code1": {
+    "t1code1": {
       "type": "enum",
       "values": [
         "ac%",
@@ -125,27 +144,31 @@
         "res-cold",
         "res-pois"
       ],
-      "description": "Runeword property 1 code"
+      "description": "Runeword property 1 code",
+      "engineVerified": true
     },
-    "T1Param1": {
+    "t1param1": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "Property 1 param for tier 1"
+      "description": "Property 1 param for tier 1",
+      "engineVerified": true
     },
-    "T1Min1": {
+    "t1min1": {
       "type": "integer",
       "min": 1,
       "max": 200,
-      "description": "Property 1 min for tier 1"
+      "description": "Property 1 min for tier 1",
+      "engineVerified": true
     },
-    "T1Max1": {
+    "t1max1": {
       "type": "integer",
       "min": 1,
       "max": 200,
-      "description": "Property 1 max for tier 1"
+      "description": "Property 1 max for tier 1",
+      "engineVerified": true
     },
-    "T1Code2": {
+    "t1code2": {
       "type": "enum",
       "values": [
         "ac",
@@ -167,26 +190,30 @@
         "res-cold",
         "res-fire"
       ],
-      "description": "Runeword property 2 code"
+      "description": "Runeword property 2 code",
+      "engineVerified": true
     },
-    "T1Param2": {
+    "t1param2": {
       "type": "integer",
       "description": "Property 2 param for tier 2",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
-    "T1Min2": {
+    "t1min2": {
       "type": "integer",
       "min": 3,
       "max": 300,
-      "description": "Property 2 min for tier 2"
+      "description": "Property 2 min for tier 2",
+      "engineVerified": true
     },
-    "T1Max2": {
+    "t1max2": {
       "type": "integer",
       "min": 3,
       "max": 300,
-      "description": "Property 2 max for tier 2"
+      "description": "Property 2 max for tier 2",
+      "engineVerified": true
     },
-    "T1Code3": {
+    "t1code3": {
       "type": "enum",
       "values": [
         "ac%",
@@ -209,27 +236,31 @@
         "swing2",
         "swing3"
       ],
-      "description": "Runeword property 3 code"
+      "description": "Runeword property 3 code",
+      "engineVerified": true
     },
-    "T1Param3": {
+    "t1param3": {
       "type": "integer",
       "min": 11,
       "max": 11,
-      "description": "Property 3 param for tier 3"
+      "description": "Property 3 param for tier 3",
+      "engineVerified": true
     },
-    "T1Min3": {
+    "t1min3": {
       "type": "integer",
       "min": 1,
       "max": 250,
-      "description": "Property 3 min for tier 3"
+      "description": "Property 3 min for tier 3",
+      "engineVerified": true
     },
-    "T1Max3": {
+    "t1max3": {
       "type": "integer",
       "min": 1,
       "max": 250,
-      "description": "Property 3 max for tier 3"
+      "description": "Property 3 max for tier 3",
+      "engineVerified": true
     },
-    "T1Code4": {
+    "t1code4": {
       "type": "enum",
       "values": [
         "att%",
@@ -248,27 +279,31 @@
         "str",
         "thorns"
       ],
-      "description": "Runeword property 4 code"
+      "description": "Runeword property 4 code",
+      "engineVerified": true
     },
-    "T1Param4": {
+    "t1param4": {
       "type": "integer",
       "min": 25,
       "max": 38,
-      "description": "Property 4 param for tier 4"
+      "description": "Property 4 param for tier 4",
+      "engineVerified": true
     },
-    "T1Min4": {
+    "t1min4": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 4 min for tier 4"
+      "description": "Property 4 min for tier 4",
+      "engineVerified": true
     },
-    "T1Max4": {
+    "t1max4": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 4 max for tier 4"
+      "description": "Property 4 max for tier 4",
+      "engineVerified": true
     },
-    "T1Code5": {
+    "t1code5": {
       "type": "enum",
       "values": [
         "att",
@@ -279,46 +314,79 @@
         "slow",
         "str"
       ],
-      "description": "Runeword property 5 code"
+      "description": "Runeword property 5 code",
+      "engineVerified": true
     },
-    "T1Param5": {
+    "t1param5": {
       "type": "integer",
       "min": 7,
       "max": 7,
-      "description": "Property 5 param for tier 5"
+      "description": "Property 5 param for tier 5",
+      "engineVerified": true
     },
-    "T1Min5": {
+    "t1min5": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 5 min for tier 5"
+      "description": "Property 5 min for tier 5",
+      "engineVerified": true
     },
-    "T1Max5": {
+    "t1max5": {
       "type": "integer",
       "min": 3,
       "max": 200,
-      "description": "Property 5 max for tier 5"
+      "description": "Property 5 max for tier 5",
+      "engineVerified": true
     },
-    "T1Code6": {
+    "t1code6": {
       "type": "string",
-      "description": "Runeword property 6 code"
+      "description": "Runeword property 6 code",
+      "engineVerified": true
     },
-    "T1Param6": {
+    "t1param6": {
       "type": "integer",
       "description": "Property 6 param for tier 6",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
-    "T1Min6": {
+    "t1min6": {
       "type": "integer",
       "min": -3,
       "max": -3,
-      "description": "Property 6 min for tier 6"
+      "description": "Property 6 min for tier 6",
+      "engineVerified": true
     },
-    "T1Max6": {
+    "t1max6": {
       "type": "integer",
       "min": -3,
       "max": -3,
-      "description": "Property 6 max for tier 6"
+      "description": "Property 6 max for tier 6",
+      "engineVerified": true
+    },
+    "runessrv": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "t1max7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "t1min7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "t1param7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "t1code7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

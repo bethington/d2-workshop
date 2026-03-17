@@ -1,11 +1,12 @@
 {
   "file": "books.txt",
-  "description": "Tome and book item definitions \u00e2\u20ac\u201d scroll/book spell codes and costs.",
+  "description": "Tome and book item definitions â€” scroll/book spell codes and costs.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Namco": {
       "type": "enum",
@@ -14,60 +15,82 @@
         "of Ressurect",
         "of Town Portal"
       ],
-      "description": "Book name completion suffix (e.g. of Identify, of Town Portal)"
+      "description": "Book name completion suffix (e.g. of Identify, of Town Portal). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Completed": {
       "type": "boolean",
-      "description": "Item completion flag"
+      "description": "Item completion flag. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "ScrollSpellCode": {
+    "scrollspellcode": {
       "type": "enum",
       "values": [
         "isc",
         "tsc"
       ],
-      "description": "Item code for the scroll version of this spell"
+      "description": "Item code for the scroll version of this spell",
+      "engineVerified": true
     },
-    "BookSpellCode": {
+    "bookspellcode": {
       "type": "enum",
       "values": [
         "ibk",
         "tbk"
       ],
-      "description": "Item code for the tome/book version of this spell"
+      "description": "Item code for the tome/book version of this spell",
+      "engineVerified": true
     },
     "SpellOffset": {
       "type": "integer",
-      "description": "Spell effect offset index",
-      "min": 0
+      "description": "Spell effect offset index. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "SpellIcon": {
       "type": "integer",
       "min": -1,
       "max": 0,
-      "description": "Spell icon graphic index (-1 = none)"
+      "description": "Spell icon graphic index (-1 = none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SkillScrollOffset": {
       "type": "integer",
-      "description": "Skill index offset for scroll spell lookup",
-      "min": 0
+      "description": "Skill index offset for scroll spell lookup. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "SkillBookOffset": {
       "type": "integer",
-      "description": "Skill index offset for book spell lookup",
-      "min": 0
+      "description": "Skill index offset for book spell lookup. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
-    "BaseCost": {
+    "basecost": {
       "type": "integer",
       "min": 200,
       "max": 500,
-      "description": "Base gold cost of the book item"
+      "description": "Base gold cost of the book item",
+      "engineVerified": true
     },
-    "CostPerCharge": {
+    "costpercharge": {
       "type": "integer",
       "min": 40,
       "max": 100,
-      "description": "Additional gold cost per remaining charge"
+      "description": "Additional gold cost per remaining charge",
+      "engineVerified": true
+    },
+    "bookskill": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "scrollskill": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

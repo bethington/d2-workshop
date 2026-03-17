@@ -1,984 +1,1643 @@
 {
   "file": "levels.txt",
-  "description": "Level/area definitions \u00e2\u20ac\u201d monster levels, density, waypoints, and act assignments.",
+  "description": "Level/area definitions â€” monster levels, density, waypoints, and act assignments.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Id": {
       "type": "integer",
       "min": 0,
       "max": 108,
-      "description": "Unique numeric ID"
+      "description": "Unique numeric ID. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Pal": {
       "type": "integer",
       "min": 0,
       "max": 3,
-      "description": "Color palette index loaded for the level"
+      "description": "Color palette index loaded for the level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Act": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Act number (0-indexed: 0=Act1, 4=Act5)"
+      "description": "Act number (0-indexed: 0=Act1, 4=Act5). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Layer": {
       "type": "integer",
       "min": 0,
       "max": 78,
-      "description": "Level layer position (0 for surface levels)"
+      "description": "Level layer position (0 for surface levels). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SizeX": {
       "type": "integer",
       "min": 0,
       "max": 200,
-      "description": "Width in grid cells"
+      "description": "Width in grid cells",
+      "engineVerified": true
     },
     "SizeY": {
       "type": "integer",
       "min": 0,
       "max": 200,
-      "description": "Height in grid cells"
+      "description": "Height in grid cells",
+      "engineVerified": true
     },
     "OffsetX": {
       "type": "integer",
       "min": -4,
       "max": 5000,
-      "description": "Horizontal placement offset"
+      "description": "Horizontal placement offset",
+      "engineVerified": true
     },
     "OffsetY": {
       "type": "integer",
       "min": -40,
       "max": 3100,
-      "description": "Vertical placement offset"
+      "description": "Vertical placement offset",
+      "engineVerified": true
     },
     "Depend": {
       "type": "integer",
       "min": 0,
       "max": 32,
-      "description": "Level dependency for non-random, non-preset levels"
+      "description": "Level dependency for non-random, non-preset levels",
+      "engineVerified": true
     },
     "Rain": {
       "type": "boolean",
-      "description": "Whether rain or snow falls in this level"
+      "description": "Whether rain or snow falls in this level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Mud": {
       "type": "boolean",
-      "description": "Mud visual effect"
+      "description": "Mud visual effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "NoPer": {
       "type": "boolean",
-      "description": "No periodic spawn"
+      "description": "No periodic spawn. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LOSDraw": {
       "type": "boolean",
-      "description": "Allows seeing through objects and walls in non-wilderness levels"
+      "description": "Allows seeing through objects and walls in non-wilderness levels. Not read by 1.13c engine",
+      "deprecated": true
     },
     "IsInside": {
       "type": "boolean",
-      "description": "Whether this is an underground or indoor area"
+      "description": "Whether this is an underground or indoor area. Not read by 1.13c engine",
+      "deprecated": true
     },
     "DrlgType": {
       "type": "integer",
       "min": 0,
       "max": 3,
-      "description": "Level generation type (1=random size, 2=preset map, 3=random with preset size)"
+      "description": "Level generation type (1=random size, 2=preset map, 3=random with preset size)",
+      "engineVerified": true
     },
     "LevelType": {
       "type": "integer",
       "min": 0,
       "max": 28,
-      "description": "Visual level type ID from lvltypes.txt"
+      "description": "Visual level type ID from lvltypes.txt",
+      "engineVerified": true
     },
     "SubType": {
       "type": "integer",
       "min": -1,
       "max": 9,
-      "description": "Sub-level type from LVLSub.txt (-1=none)"
+      "description": "Sub-level type from LVLSub.txt (-1=none)",
+      "engineVerified": true
     },
     "SubTheme": {
       "type": "integer",
       "min": -1,
       "max": 4,
-      "description": "Sub-level theme from LVLSub.txt (-1=none)"
+      "description": "Sub-level theme from LVLSub.txt (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SubWaypoint": {
       "type": "integer",
       "min": -1,
       "max": 7,
-      "description": "Sub-level waypoint setting from LVLSub.txt (-1=none)"
+      "description": "Sub-level waypoint setting from LVLSub.txt (-1=none)",
+      "engineVerified": true
     },
     "SubShrine": {
       "type": "integer",
       "min": -1,
       "max": 8,
-      "description": "Sub-level shrine setting from LVLSub.txt (-1=none)"
+      "description": "Sub-level shrine setting from LVLSub.txt (-1=none)",
+      "engineVerified": true
     },
     "Vis0": {
       "type": "integer",
       "min": 0,
       "max": 107,
-      "description": "Level ID of connected/visible area in slot 0"
+      "description": "Level ID of connected/visible area in slot 0. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis1": {
       "type": "integer",
       "min": 0,
       "max": 108,
-      "description": "Level ID of connected/visible area in slot 1"
+      "description": "Level ID of connected/visible area in slot 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis2": {
       "type": "integer",
       "min": 0,
       "max": 101,
-      "description": "Level ID of connected/visible area in slot 2"
+      "description": "Level ID of connected/visible area in slot 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis3": {
       "type": "integer",
       "min": 0,
       "max": 101,
-      "description": "Level ID of connected/visible area in slot 3"
+      "description": "Level ID of connected/visible area in slot 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis4": {
       "type": "integer",
       "min": 0,
       "max": 93,
-      "description": "Level ID of connected/visible area in slot 4"
+      "description": "Level ID of connected/visible area in slot 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis5": {
       "type": "integer",
       "min": 0,
       "max": 70,
-      "description": "Level ID of connected/visible area in slot 5"
+      "description": "Level ID of connected/visible area in slot 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis6": {
       "type": "integer",
       "min": 0,
       "max": 71,
-      "description": "Level ID of connected/visible area in slot 6"
+      "description": "Level ID of connected/visible area in slot 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Vis7": {
       "type": "integer",
       "min": 0,
       "max": 72,
-      "description": "Level ID of connected/visible area in slot 7"
+      "description": "Level ID of connected/visible area in slot 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp0": {
       "type": "integer",
       "min": -1,
       "max": 70,
-      "description": "Warp visual from LVLWarp.txt for Vis0 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis0 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp1": {
       "type": "integer",
       "min": -1,
       "max": 69,
-      "description": "Warp visual from LVLWarp.txt for Vis1 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis1 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp2": {
       "type": "integer",
       "min": -1,
       "max": 65,
-      "description": "Warp visual from LVLWarp.txt for Vis2 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis2 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp3": {
       "type": "integer",
       "min": -1,
       "max": 66,
-      "description": "Warp visual from LVLWarp.txt for Vis3 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis3 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp4": {
       "type": "integer",
       "min": -1,
       "max": 60,
-      "description": "Warp visual from LVLWarp.txt for Vis4 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis4 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp5": {
       "type": "integer",
       "min": -1,
       "max": 42,
-      "description": "Warp visual from LVLWarp.txt for Vis5 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis5 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp6": {
       "type": "integer",
       "min": -1,
       "max": 43,
-      "description": "Warp visual from LVLWarp.txt for Vis6 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis6 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Warp7": {
       "type": "integer",
       "min": -1,
       "max": 44,
-      "description": "Warp visual from LVLWarp.txt for Vis7 connection (-1=none)"
+      "description": "Warp visual from LVLWarp.txt for Vis7 connection (-1=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Intensity": {
       "type": "integer",
       "min": 0,
       "max": 140,
-      "description": "Light intensity value"
+      "description": "Light intensity value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Red": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Red color channel (0-255)"
+      "description": "Red color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Green": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Green color channel (0-255)"
+      "description": "Green color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Blue": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Blue color channel (0-255)"
+      "description": "Blue color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Portal": {
       "type": "boolean",
-      "description": "Whether town portal can be cast in this level"
+      "description": "Whether town portal can be cast in this level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Position": {
       "type": "boolean",
-      "description": "Whether the level uses preset position placement"
+      "description": "Whether the level uses preset position placement. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SaveMonsters": {
       "type": "boolean",
-      "description": "Whether monster state is saved (0 in towns so NPCs respawn)"
+      "description": "Whether monster state is saved (0 in towns so NPCs respawn). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Quest": {
       "type": "integer",
       "min": 0,
       "max": 11,
-      "description": "Associated quest ID for this level"
+      "description": "Associated quest ID for this level",
+      "engineVerified": true
     },
     "WarpDist": {
       "type": "integer",
       "min": 0,
       "max": 3900,
-      "description": "Waypoint travel distance"
+      "description": "Waypoint travel distance",
+      "engineVerified": true
     },
     "MonLvl1": {
       "type": "integer",
       "min": 0,
       "max": 28,
-      "description": "Normal difficulty monster level"
+      "description": "Normal difficulty monster level",
+      "engineVerified": true
     },
     "MonLvl2": {
       "type": "integer",
       "min": 0,
       "max": 53,
-      "description": "Nightmare difficulty monster level"
+      "description": "Nightmare difficulty monster level",
+      "engineVerified": true
     },
     "MonLvl3": {
       "type": "integer",
       "min": 0,
       "max": 78,
-      "description": "Hell difficulty monster level"
+      "description": "Hell difficulty monster level",
+      "engineVerified": true
     },
     "MonDen": {
       "type": "integer",
       "min": 0,
       "max": 2200,
-      "description": "Monster density multiplier"
+      "description": "Monster density multiplier",
+      "engineVerified": true
     },
     "MonUMin": {
       "type": "integer",
-      "description": "monu minimum value",
+      "description": "monu minimum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "MonUMax": {
       "type": "integer",
       "min": 0,
       "max": 2,
-      "description": "monu maximum value"
+      "description": "monu maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MonWndr": {
       "type": "boolean",
-      "description": "Whether monsters can wander between adjacent levels"
+      "description": "Whether monsters can wander between adjacent levels. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MonSpcWalk": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "Monster special walk type for area transitions"
+      "description": "Monster special walk type for area transitions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Mtot": {
       "type": "integer",
       "min": 0,
       "max": 8,
-      "description": "Total number of normal monster species in this level"
+      "description": "Total number of normal monster species in this level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M1": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Monster ID from monstats.txt for normal spawn slot 1"
+      "description": "Monster ID from monstats.txt for normal spawn slot 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M2": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Monster ID from monstats.txt for normal spawn slot 2"
+      "description": "Monster ID from monstats.txt for normal spawn slot 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M3": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Monster ID from monstats.txt for normal spawn slot 3"
+      "description": "Monster ID from monstats.txt for normal spawn slot 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M4": {
       "type": "integer",
       "min": 0,
       "max": 394,
-      "description": "Monster ID from monstats.txt for normal spawn slot 4"
+      "description": "Monster ID from monstats.txt for normal spawn slot 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M5": {
       "type": "integer",
       "min": 0,
       "max": 397,
-      "description": "Monster ID from monstats.txt for normal spawn slot 5"
+      "description": "Monster ID from monstats.txt for normal spawn slot 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M6": {
       "type": "integer",
       "min": 0,
       "max": 362,
-      "description": "Monster ID from monstats.txt for normal spawn slot 6"
+      "description": "Monster ID from monstats.txt for normal spawn slot 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M7": {
       "type": "integer",
       "min": 0,
       "max": 398,
-      "description": "Monster ID from monstats.txt for normal spawn slot 7"
+      "description": "Monster ID from monstats.txt for normal spawn slot 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M8": {
       "type": "integer",
       "min": 0,
       "max": 214,
-      "description": "Monster ID from monstats.txt for normal spawn slot 8"
+      "description": "Monster ID from monstats.txt for normal spawn slot 8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M9": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 9"
+      "description": "Monster ID from monstats.txt for normal spawn slot 9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M10": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 10"
+      "description": "Monster ID from monstats.txt for normal spawn slot 10. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M11": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 11"
+      "description": "Monster ID from monstats.txt for normal spawn slot 11. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M12": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 12"
+      "description": "Monster ID from monstats.txt for normal spawn slot 12. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M13": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 13"
+      "description": "Monster ID from monstats.txt for normal spawn slot 13. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M14": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 14"
+      "description": "Monster ID from monstats.txt for normal spawn slot 14. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M15": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 15"
+      "description": "Monster ID from monstats.txt for normal spawn slot 15. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M16": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 16"
+      "description": "Monster ID from monstats.txt for normal spawn slot 16. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M17": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 17"
+      "description": "Monster ID from monstats.txt for normal spawn slot 17. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M18": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 18"
+      "description": "Monster ID from monstats.txt for normal spawn slot 18. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M19": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 19"
+      "description": "Monster ID from monstats.txt for normal spawn slot 19. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M20": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 20"
+      "description": "Monster ID from monstats.txt for normal spawn slot 20. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M21": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 21"
+      "description": "Monster ID from monstats.txt for normal spawn slot 21. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M22": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 22"
+      "description": "Monster ID from monstats.txt for normal spawn slot 22. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M23": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 23"
+      "description": "Monster ID from monstats.txt for normal spawn slot 23. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M24": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 24"
+      "description": "Monster ID from monstats.txt for normal spawn slot 24. Not read by 1.13c engine",
+      "deprecated": true
     },
     "M25": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Monster ID from monstats.txt for normal spawn slot 25"
+      "description": "Monster ID from monstats.txt for normal spawn slot 25. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S1": {
       "type": "integer",
       "min": 0,
       "max": 208,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 1"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S2": {
       "type": "integer",
       "min": 0,
       "max": 207,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 2"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S3": {
       "type": "integer",
       "min": 0,
       "max": 206,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 3"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S4": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 4"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S5": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 5"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S6": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 6"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S7": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 7"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S8": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 8"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S9": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 9"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S10": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 10"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 10. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S11": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 11"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 11. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S12": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 12"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 12. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S13": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 13"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 13. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S14": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 14"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 14. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S15": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 15"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 15. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S16": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 16"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 16. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S17": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 17"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 17. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S18": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 18"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 18. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S19": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 19"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 19. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S20": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 20"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 20. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S21": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 21"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 21. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S22": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 22"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 22. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S23": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 23"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 23. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S24": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 24"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 24. Not read by 1.13c engine",
+      "deprecated": true
     },
     "S25": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawned monster ID (eSpawnCol=2) for slot 25"
+      "description": "Spawned monster ID (eSpawnCol=2) for slot 25. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Utot": {
       "type": "integer",
       "min": 0,
       "max": 8,
-      "description": "Total number of unique monster species in this level"
+      "description": "Total number of unique monster species in this level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U1": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Unique monster ID from monstats.txt for slot 1"
+      "description": "Unique monster ID from monstats.txt for slot 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U2": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Unique monster ID from monstats.txt for slot 2"
+      "description": "Unique monster ID from monstats.txt for slot 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U3": {
       "type": "integer",
       "min": 0,
       "max": 391,
-      "description": "Unique monster ID from monstats.txt for slot 3"
+      "description": "Unique monster ID from monstats.txt for slot 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U4": {
       "type": "integer",
       "min": 0,
       "max": 394,
-      "description": "Unique monster ID from monstats.txt for slot 4"
+      "description": "Unique monster ID from monstats.txt for slot 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U5": {
       "type": "integer",
       "min": 0,
       "max": 397,
-      "description": "Unique monster ID from monstats.txt for slot 5"
+      "description": "Unique monster ID from monstats.txt for slot 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U6": {
       "type": "integer",
       "min": 0,
       "max": 361,
-      "description": "Unique monster ID from monstats.txt for slot 6"
+      "description": "Unique monster ID from monstats.txt for slot 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U7": {
       "type": "integer",
       "min": 0,
       "max": 398,
-      "description": "Unique monster ID from monstats.txt for slot 7"
+      "description": "Unique monster ID from monstats.txt for slot 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U8": {
       "type": "integer",
       "min": 0,
       "max": 214,
-      "description": "Unique monster ID from monstats.txt for slot 8"
+      "description": "Unique monster ID from monstats.txt for slot 8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U9": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 9"
+      "description": "Unique monster ID from monstats.txt for slot 9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U10": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 10"
+      "description": "Unique monster ID from monstats.txt for slot 10. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U11": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 11"
+      "description": "Unique monster ID from monstats.txt for slot 11. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U12": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 12"
+      "description": "Unique monster ID from monstats.txt for slot 12. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U13": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 13"
+      "description": "Unique monster ID from monstats.txt for slot 13. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U14": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 14"
+      "description": "Unique monster ID from monstats.txt for slot 14. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U15": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 15"
+      "description": "Unique monster ID from monstats.txt for slot 15. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U16": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 16"
+      "description": "Unique monster ID from monstats.txt for slot 16. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U17": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 17"
+      "description": "Unique monster ID from monstats.txt for slot 17. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U18": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 18"
+      "description": "Unique monster ID from monstats.txt for slot 18. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U19": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 19"
+      "description": "Unique monster ID from monstats.txt for slot 19. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U20": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 20"
+      "description": "Unique monster ID from monstats.txt for slot 20. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U21": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 21"
+      "description": "Unique monster ID from monstats.txt for slot 21. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U22": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 22"
+      "description": "Unique monster ID from monstats.txt for slot 22. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U23": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 23"
+      "description": "Unique monster ID from monstats.txt for slot 23. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U24": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 24"
+      "description": "Unique monster ID from monstats.txt for slot 24. Not read by 1.13c engine",
+      "deprecated": true
     },
     "U25": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Unique monster ID from monstats.txt for slot 25"
+      "description": "Unique monster ID from monstats.txt for slot 25. Not read by 1.13c engine",
+      "deprecated": true
     },
     "C1": {
       "type": "integer",
       "min": 0,
       "max": 339,
-      "description": "Critter/ambient creature ID from monstats.txt for slot 1"
+      "description": "Critter/ambient creature ID from monstats.txt for slot 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "C2": {
       "type": "integer",
       "min": 0,
       "max": 319,
-      "description": "Critter/ambient creature ID from monstats.txt for slot 2"
+      "description": "Critter/ambient creature ID from monstats.txt for slot 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "C3": {
       "type": "integer",
       "min": 0,
       "max": 269,
-      "description": "Critter/ambient creature ID from monstats.txt for slot 3"
+      "description": "Critter/ambient creature ID from monstats.txt for slot 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "C4": {
       "type": "integer",
       "min": 0,
       "max": 283,
-      "description": "Critter/ambient creature ID from monstats.txt for slot 4"
+      "description": "Critter/ambient creature ID from monstats.txt for slot 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "C5": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Critter/ambient creature ID from monstats.txt for slot 5"
+      "description": "Critter/ambient creature ID from monstats.txt for slot 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CA1": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "Spawn probability for critter 1 (0-100)"
+      "description": "Spawn probability for critter 1 (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CA2": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "Spawn probability for critter 2 (0-100)"
+      "description": "Spawn probability for critter 2 (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CA3": {
       "type": "integer",
       "min": 0,
       "max": 20,
-      "description": "Spawn probability for critter 3 (0-100)"
+      "description": "Spawn probability for critter 3 (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CA4": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "Spawn probability for critter 4 (0-100)"
+      "description": "Spawn probability for critter 4 (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CA5": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawn probability for critter 5 (0-100)"
+      "description": "Spawn probability for critter 5 (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CD1": {
       "type": "boolean",
-      "description": "Whether critter 1 spawns only during specific conditions"
+      "description": "Whether critter 1 spawns only during specific conditions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CD2": {
       "type": "boolean",
-      "description": "Whether critter 2 spawns only during specific conditions"
+      "description": "Whether critter 2 spawns only during specific conditions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CD3": {
       "type": "boolean",
-      "description": "Whether critter 3 spawns only during specific conditions"
+      "description": "Whether critter 3 spawns only during specific conditions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CD4": {
       "type": "boolean",
-      "description": "Whether critter 4 spawns only during specific conditions"
+      "description": "Whether critter 4 spawns only during specific conditions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CD5": {
       "type": "boolean",
-      "description": "Whether critter 5 spawns only during specific conditions"
+      "description": "Whether critter 5 spawns only during specific conditions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Themes": {
       "type": "integer",
       "min": 0,
       "max": 60,
-      "description": "Theme index controlling level visual decorations"
+      "description": "Theme index controlling level visual decorations. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SoundEnv": {
       "type": "integer",
       "min": 0,
       "max": 34,
-      "description": "Sound environment ID from soundenviron.txt"
+      "description": "Sound environment ID from soundenviron.txt",
+      "engineVerified": true
     },
     "Waypoint": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Waypoint ID for this level (255=no waypoint)"
+      "description": "Waypoint ID for this level (255=no waypoint). Not read by 1.13c engine",
+      "deprecated": true
     },
     "LevelName": {
       "type": "string",
-      "description": "Display name string key"
+      "description": "Display name string key",
+      "engineVerified": true
     },
     "LevelWarp": {
       "type": "string",
-      "description": "Warp destination reference"
+      "description": "Warp destination reference",
+      "engineVerified": true
     },
     "EntryFile": {
       "type": "string",
-      "description": "DC6 title image file loaded when entering the level"
+      "description": "DC6 title image file loaded when entering the level",
+      "engineVerified": true
     },
     "ObjGrp0": {
       "type": "integer",
       "min": 0,
       "max": 66,
-      "description": "Object group ID from objgroup.txt for slot 0"
+      "description": "Object group ID from objgroup.txt for slot 0",
+      "engineVerified": true
     },
     "ObjGrp1": {
       "type": "integer",
       "min": 0,
       "max": 76,
-      "description": "Object group ID from objgroup.txt for slot 1"
+      "description": "Object group ID from objgroup.txt for slot 1",
+      "engineVerified": true
     },
     "ObjGrp2": {
       "type": "integer",
       "min": 0,
       "max": 77,
-      "description": "Object group ID from objgroup.txt for slot 2"
+      "description": "Object group ID from objgroup.txt for slot 2",
+      "engineVerified": true
     },
     "ObjGrp3": {
       "type": "integer",
       "min": 0,
       "max": 78,
-      "description": "Object group ID from objgroup.txt for slot 3"
+      "description": "Object group ID from objgroup.txt for slot 3",
+      "engineVerified": true
     },
     "ObjGrp4": {
       "type": "integer",
       "min": 0,
       "max": 72,
-      "description": "Object group ID from objgroup.txt for slot 4"
+      "description": "Object group ID from objgroup.txt for slot 4",
+      "engineVerified": true
     },
     "ObjGrp5": {
       "type": "integer",
       "min": 0,
       "max": 69,
-      "description": "Object group ID from objgroup.txt for slot 5"
+      "description": "Object group ID from objgroup.txt for slot 5",
+      "engineVerified": true
     },
     "ObjGrp6": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Object group ID from objgroup.txt for slot 6"
+      "description": "Object group ID from objgroup.txt for slot 6",
+      "engineVerified": true
     },
     "ObjGrp7": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Object group ID from objgroup.txt for slot 7"
+      "description": "Object group ID from objgroup.txt for slot 7",
+      "engineVerified": true
     },
     "ObjPrb0": {
       "type": "integer",
       "min": 0,
       "max": 90,
-      "description": "Spawn probability for object group 0 (0-100)"
+      "description": "Spawn probability for object group 0 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb1": {
       "type": "integer",
       "min": 0,
       "max": 80,
-      "description": "Spawn probability for object group 1 (0-100)"
+      "description": "Spawn probability for object group 1 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb2": {
       "type": "integer",
       "min": 0,
       "max": 70,
-      "description": "Spawn probability for object group 2 (0-100)"
+      "description": "Spawn probability for object group 2 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb3": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "Spawn probability for object group 3 (0-100)"
+      "description": "Spawn probability for object group 3 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb4": {
       "type": "integer",
       "min": 0,
       "max": 50,
-      "description": "Spawn probability for object group 4 (0-100)"
+      "description": "Spawn probability for object group 4 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb5": {
       "type": "integer",
       "min": 0,
       "max": 35,
-      "description": "Spawn probability for object group 5 (0-100)"
+      "description": "Spawn probability for object group 5 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb6": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawn probability for object group 6 (0-100)"
+      "description": "Spawn probability for object group 6 (0-100)",
+      "engineVerified": true
     },
     "ObjPrb7": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Spawn probability for object group 7 (0-100)"
+      "description": "Spawn probability for object group 7 (0-100)",
+      "engineVerified": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused). Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "SizeY(H)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SizeX(H)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SizeY(N)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SizeX(N)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "QuestFlagEx": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "QuestFlag": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "FloorFilter": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cpct4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cpct3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cpct2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cpct1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cmon4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cmon3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cmon2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "cmon1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon25": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon24": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon23": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon22": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon21": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon20": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon19": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon18": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon17": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon16": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon15": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon14": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon13": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon12": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon11": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon10": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon9": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon8": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon6": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "umon1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon25": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon24": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon23": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon22": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon21": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon20": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon19": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon18": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon17": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon16": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon15": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon14": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon13": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon12": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon11": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon10": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon9": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon8": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon6": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "nmon1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "rangedspawn": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon25": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon24": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon23": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon22": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon21": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon20": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon19": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon18": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon17": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon16": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon15": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon14": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon13": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon12": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon11": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon10": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonDen(H)": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonDen(N)": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonLvl3Ex": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonLvl2Ex": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonLvl1Ex": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "DrawEdges": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Teleport": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon6": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon8": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mon9": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

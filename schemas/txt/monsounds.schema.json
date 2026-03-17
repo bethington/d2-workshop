@@ -1,210 +1,251 @@
 {
   "file": "monsounds.txt",
-  "description": "Monster sound assignments \u00e2\u20ac\u201d maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
+  "description": "Monster sound assignments â€” maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
   "columns": {
     "Id": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Monster sound set identifier, referenced by MonStats.txt MonSound/UMonSound columns"
+      "description": "Monster sound set identifier, referenced by MonStats.txt MonSound/UMonSound columns. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Attack1": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Primary attack sound effect"
+      "description": "Primary attack sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Weapon1": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Primary weapon impact sound effect"
+      "description": "Primary weapon impact sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Att1Del": {
       "type": "integer",
-      "description": "Attack 1 sound delay in frames"
+      "description": "Attack 1 sound delay in frames. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Wea1Del": {
       "type": "integer",
-      "description": "Weapon 1 sound delay in frames"
+      "description": "Weapon 1 sound delay in frames. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Att1Prb": {
       "type": "integer",
-      "description": "Attack 1 sound probability (0-100)"
+      "description": "Attack 1 sound probability (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Wea1Vol": {
       "type": "integer",
-      "description": "Weapon 1 sound volume (0-255)"
+      "description": "Weapon 1 sound volume (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Attack2": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Secondary attack sound effect"
+      "description": "Secondary attack sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Weapon2": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Secondary weapon impact sound effect"
+      "description": "Secondary weapon impact sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Att2Del": {
       "type": "integer",
-      "description": "Attack 2 sound delay in frames"
+      "description": "Attack 2 sound delay in frames. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Wea2Del": {
       "type": "integer",
-      "description": "Weapon 2 sound delay in frames"
+      "description": "Weapon 2 sound delay in frames. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Att2Prb": {
       "type": "integer",
-      "description": "Attack 2 sound probability (0-100)"
+      "description": "Attack 2 sound probability (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Wea2Vol": {
       "type": "integer",
-      "description": "Weapon 2 sound volume (0-255)"
+      "description": "Weapon 2 sound volume (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "HitSound": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Sound effect when monster is hit"
+      "description": "Sound effect when monster is hit. Not read by 1.13c engine",
+      "deprecated": true
     },
     "DeathSound": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Sound effect when monster dies"
+      "description": "Sound effect when monster dies",
+      "engineVerified": true
     },
     "HitDelay": {
       "type": "integer",
-      "description": "Get-hit sound delay in frames"
+      "description": "Get-hit sound delay in frames",
+      "engineVerified": true
     },
     "DeaDelay": {
       "type": "integer",
-      "description": "Death sound delay in frames"
+      "description": "Death sound delay in frames",
+      "engineVerified": true
     },
     "Skill1": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Skill 1 sound effect"
+      "description": "Skill 1 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Skill2": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Skill 2 sound effect"
+      "description": "Skill 2 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Skill3": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Skill 3 sound effect"
+      "description": "Skill 3 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Skill4": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Skill 4 sound effect"
+      "description": "Skill 4 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Footstep": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Footstep sound effect"
+      "description": "Footstep sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "FootstepLayer": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Footstep layered/secondary sound effect"
+      "description": "Footstep layered/secondary sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "FsCnt": {
       "type": "integer",
-      "description": "Footstep frame count per step cycle"
+      "description": "Footstep frame count per step cycle. Not read by 1.13c engine",
+      "deprecated": true
     },
     "FsOff": {
       "type": "integer",
-      "description": "Footstep frame offset within walk animation"
+      "description": "Footstep frame offset within walk animation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "FsPrb": {
       "type": "integer",
-      "description": "Footstep sound probability (0-100)"
+      "description": "Footstep sound probability (0-100). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Neutral": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Ambient/neutral idle sound effect"
+      "description": "Ambient/neutral idle sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "NeuTime": {
       "type": "integer",
-      "description": "Neutral sound repeat interval in frames"
+      "description": "Neutral sound repeat interval in frames. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Init": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Initialization/spawn sound effect"
+      "description": "Initialization/spawn sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Taunt": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Taunt/aggro sound effect"
+      "description": "Taunt/aggro sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Flee": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Flee/retreat sound effect"
+      "description": "Flee/retreat sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtMo1": {
       "type": "string",
-      "description": "Conversion mode 1 animation token"
+      "description": "Conversion mode 1 animation token. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtSk1": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Conversion skill 1 sound effect"
+      "description": "Conversion skill 1 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtTgt1": {
       "type": "integer",
-      "description": "Conversion target type 1"
+      "description": "Conversion target type 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtMo2": {
       "type": "string",
-      "description": "Conversion mode 2 animation token"
+      "description": "Conversion mode 2 animation token. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtSk2": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Conversion skill 2 sound effect"
+      "description": "Conversion skill 2 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtTgt2": {
       "type": "integer",
-      "description": "Conversion target type 2"
+      "description": "Conversion target type 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtMo3": {
       "type": "string",
-      "description": "Conversion mode 3 animation token"
+      "description": "Conversion mode 3 animation token. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtSk3": {
       "type": "ref",
       "target": "sounds.txt",
       "targetColumn": "Handle",
-      "description": "Conversion skill 3 sound effect"
+      "description": "Conversion skill 3 sound effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CvtTgt3": {
       "type": "integer",
-      "description": "Conversion target type 3"
+      "description": "Conversion target type 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "EOL": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game). Not read by 1.13c engine",
+      "deprecated": true
     }
   }
 }

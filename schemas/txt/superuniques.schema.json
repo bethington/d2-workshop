@@ -6,43 +6,261 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Class": {
       "type": "integer",
       "min": 0,
       "max": 409,
-      "description": "Monster class index (references monstats.txt Id)"
+      "description": "Monster class index (references monstats.txt Id)",
+      "engineVerified": true
     },
     "Mod1": {
       "type": "integer",
       "min": 5,
       "max": 30,
-      "description": "First unique monster modifier index (references MonUMod.txt)"
+      "description": "First unique monster modifier index (references MonUMod.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Mod2": {
       "type": "integer",
       "min": 0,
       "max": 30,
-      "description": "Second unique monster modifier index (references MonUMod.txt, 0 = none)"
+      "description": "Second unique monster modifier index (references MonUMod.txt, 0 = none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Mod3": {
       "type": "integer",
       "min": 0,
       "max": 24,
-      "description": "Third unique monster modifier index (references MonUMod.txt, 0 = none)"
+      "description": "Third unique monster modifier index (references MonUMod.txt, 0 = none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinGrp": {
       "type": "integer",
       "min": 0,
       "max": 9,
-      "description": "Minimum group spawn count"
+      "description": "Minimum group spawn count. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxGrp": {
       "type": "integer",
       "min": 0,
       "max": 9,
-      "description": "Maximum group spawn count"
+      "description": "Maximum group spawn count. Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "Utrans": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Utrans(N)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Utrans(H)": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Replaceable": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EClass": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "AutoPos": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "hcIdx": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Superunique": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "monumod": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "constants": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "uniquemod": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "monitempercent": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ComponentPercent": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "TreasureClassPercent": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SplClientEnd": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SplEndGeneric": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SplGetModeChart": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SplEndDeath": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "DamageRegen": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk8lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk7lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk6lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk5lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk4lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk3lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk2lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk1lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk8mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk7mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk6mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk5mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk4mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk3mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk2mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Sk1mode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SendSkills": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtSk3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtSk2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtSk1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtMo3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtMo2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "CvtMo1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

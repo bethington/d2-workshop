@@ -1,56 +1,65 @@
 {
   "file": "uniqueitems.txt",
-  "description": "Unique item definitions \u00e2\u20ac\u201d base types, level requirements, and up to 12 properties per item.",
+  "description": "Unique item definitions â€” base types, level requirements, and up to 12 properties per item.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "completed": {
       "type": "boolean",
-      "description": "Item completion flag"
+      "description": "Item completion flag. Not read by 1.13c engine",
+      "deprecated": true
     },
     "beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "code": {
       "type": "ref",
-      "description": "Base item code (references Armor/Weapons/Misc code)",
+      "description": "Base item code (references Armor/Weapons/Misc code). Not read by 1.13c engine",
       "target": "armor.txt",
-      "targetColumn": "code"
+      "targetColumn": "code",
+      "deprecated": true
     },
     "type": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Primary item type code (references ItemTypes.txt)"
+      "description": "Primary item type code (references ItemTypes.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "transform": {
       "type": "integer",
-      "description": "Character model color palette transform",
+      "description": "Character model color palette transform. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "invtransform": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Inventory graphic color palette transform flag"
+      "description": "Inventory graphic color palette transform flag. Not read by 1.13c engine",
+      "deprecated": true
     },
     "transformcolor": {
       "type": "integer",
       "min": 0,
       "max": 19,
-      "description": "Color transform palette index"
+      "description": "Color transform palette index. Not read by 1.13c engine",
+      "deprecated": true
     },
     "NumMods": {
       "type": "integer",
       "min": 2,
       "max": 10,
-      "description": "Number of active modifiers"
+      "description": "Number of active modifiers. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod1Code": {
       "type": "enum",
@@ -325,25 +334,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 1 (references Properties.txt)"
+      "description": "Property code for unique item modifier 1 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod1Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 1"
+      "description": "Parameter/offset value for unique item modifier 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod1Min": {
       "type": "integer",
       "min": -50,
       "max": 200,
-      "description": "itemmod1 minimum value"
+      "description": "itemmod1 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod1Max": {
       "type": "integer",
       "min": -50,
       "max": 200,
-      "description": "itemmod1 maximum value"
+      "description": "itemmod1 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod2Code": {
       "type": "enum",
@@ -618,25 +631,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 2 (references Properties.txt)"
+      "description": "Property code for unique item modifier 2 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod2Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 2"
+      "description": "Parameter/offset value for unique item modifier 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod2Min": {
       "type": "integer",
       "min": 1,
       "max": 128,
-      "description": "itemmod2 minimum value"
+      "description": "itemmod2 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod2Max": {
       "type": "integer",
       "min": 1,
       "max": 128,
-      "description": "itemmod2 maximum value"
+      "description": "itemmod2 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod3Code": {
       "type": "enum",
@@ -911,25 +928,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 3 (references Properties.txt)"
+      "description": "Property code for unique item modifier 3 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod3Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 3"
+      "description": "Parameter/offset value for unique item modifier 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod3Min": {
       "type": "integer",
       "min": -10,
       "max": 75,
-      "description": "itemmod3 minimum value"
+      "description": "itemmod3 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod3Max": {
       "type": "integer",
       "min": -10,
       "max": 75,
-      "description": "itemmod3 maximum value"
+      "description": "itemmod3 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod4Code": {
       "type": "enum",
@@ -1204,25 +1225,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 4 (references Properties.txt)"
+      "description": "Property code for unique item modifier 4 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod4Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 4"
+      "description": "Parameter/offset value for unique item modifier 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod4Min": {
       "type": "integer",
       "min": -20,
       "max": 100,
-      "description": "itemmod4 minimum value"
+      "description": "itemmod4 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod4Max": {
       "type": "integer",
       "min": -20,
       "max": 100,
-      "description": "itemmod4 maximum value"
+      "description": "itemmod4 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod5Code": {
       "type": "enum",
@@ -1497,25 +1522,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 5 (references Properties.txt)"
+      "description": "Property code for unique item modifier 5 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod5Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 5"
+      "description": "Parameter/offset value for unique item modifier 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod5Min": {
       "type": "integer",
       "min": -5,
       "max": 150,
-      "description": "itemmod5 minimum value"
+      "description": "itemmod5 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod5Max": {
       "type": "integer",
       "min": -5,
       "max": 150,
-      "description": "itemmod5 maximum value"
+      "description": "itemmod5 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod6Code": {
       "type": "enum",
@@ -1790,25 +1819,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 6 (references Properties.txt)"
+      "description": "Property code for unique item modifier 6 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod6Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 6"
+      "description": "Parameter/offset value for unique item modifier 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod6Min": {
       "type": "integer",
       "min": 0,
       "max": 125,
-      "description": "itemmod6 minimum value"
+      "description": "itemmod6 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod6Max": {
       "type": "integer",
       "min": 0,
       "max": 125,
-      "description": "itemmod6 maximum value"
+      "description": "itemmod6 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod7Code": {
       "type": "enum",
@@ -2083,25 +2116,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 7 (references Properties.txt)"
+      "description": "Property code for unique item modifier 7 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod7Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 7"
+      "description": "Parameter/offset value for unique item modifier 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod7Min": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "itemmod7 minimum value"
+      "description": "itemmod7 minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod7Max": {
       "type": "integer",
       "min": 0,
       "max": 300,
-      "description": "itemmod7 maximum value"
+      "description": "itemmod7 maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod8Code": {
       "type": "enum",
@@ -2376,25 +2413,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 8 (references Properties.txt)"
+      "description": "Property code for unique item modifier 8 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod8Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 8"
+      "description": "Parameter/offset value for unique item modifier 8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod8Min": {
       "type": "integer",
-      "description": "itemmod8 minimum value",
+      "description": "itemmod8 minimum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "ItemMod8Max": {
       "type": "integer",
-      "description": "itemmod8 maximum value",
+      "description": "itemmod8 maximum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "ItemMod9Code": {
       "type": "enum",
@@ -2669,25 +2710,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 9 (references Properties.txt)"
+      "description": "Property code for unique item modifier 9 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod9Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 9"
+      "description": "Parameter/offset value for unique item modifier 9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod9Min": {
       "type": "integer",
-      "description": "itemmod9 minimum value",
+      "description": "itemmod9 minimum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "ItemMod9Max": {
       "type": "integer",
-      "description": "itemmod9 maximum value",
+      "description": "itemmod9 maximum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "ItemMod10Code": {
       "type": "enum",
@@ -2962,25 +3007,89 @@
         "wounds/time",
         ""
       ],
-      "description": "Property code for unique item modifier 10 (references Properties.txt)"
+      "description": "Property code for unique item modifier 10 (references Properties.txt). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod10Offset": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Parameter/offset value for unique item modifier 10"
+      "description": "Parameter/offset value for unique item modifier 10. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ItemMod10Min": {
       "type": "integer",
-      "description": "itemmod10 minimum value",
+      "description": "itemmod10 minimum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "ItemMod10Max": {
       "type": "integer",
-      "description": "itemmod10 maximum value",
+      "description": "itemmod10 maximum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
+    },
+    "prop12": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop11": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop10": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop9": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop8": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop6": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "prop1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

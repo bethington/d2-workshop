@@ -11,55 +11,160 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ResistPenalty": {
       "type": "integer",
       "min": -50,
       "max": 0,
-      "description": "Resistance penalty percentage"
+      "description": "Resistance penalty percentage",
+      "engineVerified": true
     },
     "DeathExpPenalty": {
       "type": "integer",
       "min": 0,
       "max": 10,
-      "description": "Experience penalty on death"
+      "description": "Experience penalty on death",
+      "engineVerified": true
     },
     "UberCodeOddsNormal": {
       "type": "integer",
       "min": 0,
       "max": 20,
-      "description": "Percentage chance of dropping exceptional (uber) items on normal monsters"
+      "description": "Percentage chance of dropping exceptional (uber) items on normal monsters",
+      "engineVerified": true
     },
     "UberCodeOddsGood": {
       "type": "integer",
       "min": 0,
       "max": 40,
-      "description": "Percentage chance of dropping exceptional (uber) items on champion/unique monsters"
+      "description": "Percentage chance of dropping exceptional (uber) items on champion/unique monsters",
+      "engineVerified": true
     },
     "MonsterSkillBonus": {
       "type": "integer",
       "min": 0,
       "max": 7,
-      "description": "Monster skill level bonus"
+      "description": "Monster skill level bonus",
+      "engineVerified": true
     },
     "MonsterFreezeDivisor": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Divisor reducing freeze duration on monsters in this difficulty"
+      "description": "Divisor reducing freeze duration on monsters in this difficulty",
+      "engineVerified": true
     },
     "MonsterColdDivisor": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Divisor reducing cold effect duration on monsters in this difficulty"
+      "description": "Divisor reducing cold effect duration on monsters in this difficulty",
+      "engineVerified": true
     },
     "AiCurseDivisor": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Divisor reducing curse duration on monsters in this difficulty"
+      "description": "Divisor reducing curse duration on monsters in this difficulty",
+      "engineVerified": true
+    },
+    "GambleUltra": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "GambleUber": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "GambleUnique": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "GambleSet": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "GambleRare": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StaticFieldMin": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MonsterCEDamagePercent": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "HireableBossDamagePercent": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ChampionDamageBonus": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "UniqueDamageBonus": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ManaStealDivisor": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "LifeStealDivisor": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "UltraCodeOddsGood": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "UltraCodeOddsNormal": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "skilldesccode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "skillscode": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "aibonus": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "aitype": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "restrict": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

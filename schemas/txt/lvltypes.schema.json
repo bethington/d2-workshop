@@ -1,30 +1,35 @@
 {
   "file": "lvltypes.txt",
-  "description": "Level visual type definitions \u00e2\u20ac\u201d tileset assignments and lighting.",
+  "description": "Level visual type definitions â€” tileset assignments and lighting.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Id": {
       "type": "integer",
       "min": 0,
       "max": 28,
-      "description": "Unique numeric ID"
+      "description": "Unique numeric ID. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 1": {
       "type": "string",
-      "description": "DT1 tileset file path 1"
+      "description": "DT1 tileset file path 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 2": {
       "type": "string",
-      "description": "DT1 tileset file path 2"
+      "description": "DT1 tileset file path 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 3": {
       "type": "string",
-      "description": "DT1 tileset file path 3"
+      "description": "DT1 tileset file path 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 4": {
       "type": "enum",
@@ -47,7 +52,8 @@
         "Act4/Fort/ForeGate.dt1",
         "Act4/Mesa/Brick_Walls.dt1"
       ],
-      "description": "DT1 tileset file path 4"
+      "description": "DT1 tileset file path 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 5": {
       "type": "enum",
@@ -71,7 +77,8 @@
         "Act4/Mesa/Chain_Walls.dt1",
         "Act4/Mesa/Floor.dt1"
       ],
-      "description": "DT1 tileset file path 5"
+      "description": "DT1 tileset file path 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 6": {
       "type": "enum",
@@ -96,7 +103,8 @@
         "Act4/Mesa/Dist_Wall.dt1",
         "Act4/Mesa/Inv_Wall.dt1"
       ],
-      "description": "DT1 tileset file path 6"
+      "description": "DT1 tileset file path 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 7": {
       "type": "enum",
@@ -118,7 +126,8 @@
         "Act4/Mesa/Inv_Wall.dt1",
         "Act4/Mesa/Stairs.dt1"
       ],
-      "description": "DT1 tileset file path 7"
+      "description": "DT1 tileset file path 7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 8": {
       "type": "enum",
@@ -139,7 +148,8 @@
         "Act4/Lava/Floornew.dt1",
         "Act4/Mesa/Surf_Wall.dt1"
       ],
-      "description": "DT1 tileset file path 8"
+      "description": "DT1 tileset file path 8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 9": {
       "type": "enum",
@@ -159,7 +169,8 @@
         "Act4/Lava/Rocks.dt1",
         "Act4/Mesa/Surf_Struct.dt1"
       ],
-      "description": "DT1 tileset file path 9"
+      "description": "DT1 tileset file path 9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 10": {
       "type": "enum",
@@ -176,7 +187,8 @@
         "Act3/Kurast/Walls.dt1",
         "Act4/Lava/Specials.dt1"
       ],
-      "description": "DT1 tileset file path 10"
+      "description": "DT1 tileset file path 10. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 11": {
       "type": "enum",
@@ -190,7 +202,8 @@
         "Act3/Spider/SpiderEnt.dt1",
         "Act4/Mesa/Surf_Wall.dt1"
       ],
-      "description": "DT1 tileset file path 11"
+      "description": "DT1 tileset file path 11. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 12": {
       "type": "enum",
@@ -202,7 +215,8 @@
         "Act3/Jungle/DungEnt.dt1",
         "Act3/Jungle/TreeGrp.dt1"
       ],
-      "description": "DT1 tileset file path 12"
+      "description": "DT1 tileset file path 12. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 13": {
       "type": "enum",
@@ -214,7 +228,8 @@
         "Act3/River/Pool.dt1",
         "Act3/Travincal/Floors.dt1"
       ],
-      "description": "DT1 tileset file path 13"
+      "description": "DT1 tileset file path 13. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 14": {
       "type": "enum",
@@ -225,7 +240,8 @@
         "Act3/Jungle/Pygmy.dt1",
         "Act3/Travincal/Gate.dt1"
       ],
-      "description": "DT1 tileset file path 14"
+      "description": "DT1 tileset file path 14. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 15": {
       "type": "enum",
@@ -235,7 +251,8 @@
         "Act2/Outdoors/Oasis.dt1",
         "Act3/Travincal/Terraces.dt1"
       ],
-      "description": "DT1 tileset file path 15"
+      "description": "DT1 tileset file path 15. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 16": {
       "type": "enum",
@@ -245,7 +262,8 @@
         "Act2/BigCliff/TombCor.dt1",
         "Act3/Travincal/Walls.dt1"
       ],
-      "description": "DT1 tileset file path 16"
+      "description": "DT1 tileset file path 16. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 17": {
       "type": "enum",
@@ -254,7 +272,8 @@
         "Act1/Outdoors/Fallen.dt1",
         "Act2/Ruin/Ground.dt1"
       ],
-      "description": "DT1 tileset file path 17"
+      "description": "DT1 tileset file path 17. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 18": {
       "type": "enum",
@@ -263,7 +282,8 @@
         "Act1/Outdoors/pond.dt1",
         "Act2/BigCliff/Corner.dt1"
       ],
-      "description": "DT1 tileset file path 18"
+      "description": "DT1 tileset file path 18. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 19": {
       "type": "enum",
@@ -272,7 +292,8 @@
         "Act1/Outdoors/puddle.dt1",
         "Act2/Outdoors/Palm.dt1"
       ],
-      "description": "DT1 tileset file path 19"
+      "description": "DT1 tileset file path 19. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 20": {
       "type": "enum",
@@ -281,7 +302,8 @@
         "Act1/Outdoors/TowerB.dt1",
         "Act2/Outdoors/Prickly.dt1"
       ],
-      "description": "DT1 tileset file path 20"
+      "description": "DT1 tileset file path 20. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 21": {
       "type": "enum",
@@ -290,7 +312,8 @@
         "Act1/Caves/Cavedr.dt1",
         "Act2/Outdoors/Scrub.dt1"
       ],
-      "description": "DT1 tileset file path 21"
+      "description": "DT1 tileset file path 21. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 22": {
       "type": "enum",
@@ -299,7 +322,8 @@
         "Act1/Outdoors/tome.dt1",
         "Act2/Maggot/Entrance.dt1"
       ],
-      "description": "DT1 tileset file path 22"
+      "description": "DT1 tileset file path 22. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 23": {
       "type": "enum",
@@ -308,7 +332,8 @@
         "Act1/Outdoors/Swamp.dt1",
         "Act2/Maggot/Hole.dt1"
       ],
-      "description": "DT1 tileset file path 23"
+      "description": "DT1 tileset file path 23. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 24": {
       "type": "enum",
@@ -317,7 +342,8 @@
         "Act1/Town/Fence.dt1",
         "Act2/Outdoors/Wagon.dt1"
       ],
-      "description": "DT1 tileset file path 24"
+      "description": "DT1 tileset file path 24. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 25": {
       "type": "enum",
@@ -326,7 +352,8 @@
         "Act1/Outdoors/Cottages.dt1",
         "Act2/Ruin/Column.dt1"
       ],
-      "description": "DT1 tileset file path 25"
+      "description": "DT1 tileset file path 25. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 26": {
       "type": "enum",
@@ -335,7 +362,8 @@
         "Act1/Town/Objects.dt1",
         "Act2/Outdoors/Village.dt1"
       ],
-      "description": "DT1 tileset file path 26"
+      "description": "DT1 tileset file path 26. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 27": {
       "type": "enum",
@@ -343,7 +371,8 @@
         "0",
         "Act2/Outdoors/TombEnt.dt1"
       ],
-      "description": "DT1 tileset file path 27"
+      "description": "DT1 tileset file path 27. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 28": {
       "type": "enum",
@@ -351,7 +380,8 @@
         "0",
         "Act2/Outdoors/Viper.dt1"
       ],
-      "description": "DT1 tileset file path 28"
+      "description": "DT1 tileset file path 28. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 29": {
       "type": "enum",
@@ -359,29 +389,45 @@
         "0",
         "Act2/Tomb/Tomb.dt1"
       ],
-      "description": "DT1 tileset file path 29"
+      "description": "DT1 tileset file path 29. Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 30": {
       "type": "string",
-      "description": "DT1 tileset file path (File 30)"
+      "description": "DT1 tileset file path (File 30). Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 31": {
       "type": "string",
-      "description": "DT1 tileset file path (File 31)"
+      "description": "DT1 tileset file path (File 31). Not read by 1.13c engine",
+      "deprecated": true
     },
     "File 32": {
       "type": "string",
-      "description": "DT1 tileset file path (File 32)"
+      "description": "DT1 tileset file path (File 32). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Act": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Act index (0=Act1, 4=Act5)"
+      "description": "Act index (0=Act1, 4=Act5). Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "LOSDraw": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SaveMonsters": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

@@ -20,439 +20,522 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Character class restriction"
+      "description": "Character class restriction. Not read by 1.13c engine",
+      "deprecated": true
     },
     "invLeft": {
       "type": "integer",
       "min": 0,
       "max": 320,
-      "description": "Left pixel coordinate of inventory panel"
+      "description": "Left pixel coordinate of inventory panel",
+      "engineVerified": true
     },
     "invRight": {
       "type": "integer",
       "min": 321,
       "max": 640,
-      "description": "Right pixel coordinate of inventory panel"
+      "description": "Right pixel coordinate of inventory panel",
+      "engineVerified": true
     },
     "invTop": {
       "type": "integer",
       "min": 0,
       "max": 220,
-      "description": "Top pixel coordinate of inventory panel"
+      "description": "Top pixel coordinate of inventory panel",
+      "engineVerified": true
     },
     "invBottom": {
       "type": "integer",
       "min": 219,
       "max": 442,
-      "description": "Bottom pixel coordinate of inventory panel"
+      "description": "Bottom pixel coordinate of inventory panel",
+      "engineVerified": true
     },
     "gridRows": {
       "type": "integer",
       "min": 3,
       "max": 10,
-      "description": "Number of rows in the inventory grid"
+      "description": "Number of rows in the inventory grid. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gridCols": {
       "type": "integer",
       "min": 4,
       "max": 10,
-      "description": "Number of columns in the inventory grid"
+      "description": "Number of columns in the inventory grid. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gridLeft": {
       "type": "integer",
       "min": 16,
       "max": 339,
-      "description": "Left pixel coordinate of inventory grid area"
+      "description": "Left pixel coordinate of inventory grid area",
+      "engineVerified": true
     },
     "gridRight": {
       "type": "integer",
       "min": 205,
       "max": 626,
-      "description": "Right pixel coordinate of inventory grid area"
+      "description": "Right pixel coordinate of inventory grid area",
+      "engineVerified": true
     },
     "gridTop": {
       "type": "integer",
       "min": 41,
       "max": 273,
-      "description": "Top pixel coordinate of inventory grid area"
+      "description": "Top pixel coordinate of inventory grid area",
+      "engineVerified": true
     },
     "gridBottom": {
       "type": "integer",
       "min": 148,
       "max": 386,
-      "description": "Bottom pixel coordinate of inventory grid area"
+      "description": "Bottom pixel coordinate of inventory grid area",
+      "engineVerified": true
     },
     "gridBoxWidth": {
       "type": "integer",
       "min": 29,
       "max": 29,
-      "description": "Width of each grid cell in pixels"
+      "description": "Width of each grid cell in pixels",
+      "engineVerified": true
     },
     "gridBoxHeight": {
       "type": "integer",
       "min": 29,
       "max": 29,
-      "description": "Height of each grid cell in pixels"
+      "description": "Height of each grid cell in pixels",
+      "engineVerified": true
     },
     "rArmLeft": {
       "type": "integer",
       "min": -1,
       "max": 340,
-      "description": "Left pixel coordinate of right arm slot (-1=none)"
+      "description": "Left pixel coordinate of right arm slot (-1=none)",
+      "engineVerified": true
     },
     "rArmRight": {
       "type": "integer",
       "min": -1,
       "max": 395,
-      "description": "Right pixel coordinate of right arm slot"
+      "description": "Right pixel coordinate of right arm slot",
+      "engineVerified": true
     },
     "rArmTop": {
       "type": "integer",
       "min": -1,
       "max": 47,
-      "description": "Top pixel coordinate of right arm slot"
+      "description": "Top pixel coordinate of right arm slot",
+      "engineVerified": true
     },
     "rArmBottom": {
       "type": "integer",
       "min": -1,
       "max": 159,
-      "description": "Bottom pixel coordinate of right arm slot"
+      "description": "Bottom pixel coordinate of right arm slot",
+      "engineVerified": true
     },
     "rArmWidth": {
       "type": "integer",
       "min": -1,
       "max": 55,
-      "description": "Width of right arm slot in pixels"
+      "description": "Width of right arm slot in pixels",
+      "engineVerified": true
     },
     "rArmHeight": {
       "type": "integer",
       "min": -1,
       "max": 112,
-      "description": "Height of right arm slot in pixels"
+      "description": "Height of right arm slot in pixels",
+      "engineVerified": true
     },
     "torsoLeft": {
       "type": "integer",
       "min": -1,
       "max": 453,
-      "description": "Left pixel coordinate of torso/armor slot (-1=none)"
+      "description": "Left pixel coordinate of torso/armor slot (-1=none)",
+      "engineVerified": true
     },
     "torsoRight": {
       "type": "integer",
       "min": -1,
       "max": 509,
-      "description": "Right pixel coordinate of torso/armor slot"
+      "description": "Right pixel coordinate of torso/armor slot",
+      "engineVerified": true
     },
     "torsoTop": {
       "type": "integer",
       "min": -1,
       "max": 77,
-      "description": "Top pixel coordinate of torso/armor slot"
+      "description": "Top pixel coordinate of torso/armor slot",
+      "engineVerified": true
     },
     "torsoBottom": {
       "type": "integer",
       "min": -1,
       "max": 159,
-      "description": "Bottom pixel coordinate of torso/armor slot"
+      "description": "Bottom pixel coordinate of torso/armor slot",
+      "engineVerified": true
     },
     "torsoWidth": {
       "type": "integer",
       "min": -1,
       "max": 56,
-      "description": "Width of torso/armor slot in pixels"
+      "description": "Width of torso/armor slot in pixels",
+      "engineVerified": true
     },
     "torsoHeight": {
       "type": "integer",
       "min": -1,
       "max": 82,
-      "description": "Height of torso/armor slot in pixels"
+      "description": "Height of torso/armor slot in pixels",
+      "engineVerified": true
     },
     "lArmLeft": {
       "type": "integer",
       "min": -1,
       "max": 571,
-      "description": "Left pixel coordinate of left arm slot (-1=none)"
+      "description": "Left pixel coordinate of left arm slot (-1=none)",
+      "engineVerified": true
     },
     "lArmRight": {
       "type": "integer",
       "min": -1,
       "max": 626,
-      "description": "Right pixel coordinate of left arm slot"
+      "description": "Right pixel coordinate of left arm slot",
+      "engineVerified": true
     },
     "lArmTop": {
       "type": "integer",
       "min": -1,
       "max": 47,
-      "description": "Top pixel coordinate of left arm slot"
+      "description": "Top pixel coordinate of left arm slot",
+      "engineVerified": true
     },
     "lArmBottom": {
       "type": "integer",
       "min": -1,
       "max": 159,
-      "description": "Bottom pixel coordinate of left arm slot"
+      "description": "Bottom pixel coordinate of left arm slot",
+      "engineVerified": true
     },
     "lArmWidth": {
       "type": "integer",
       "min": -1,
       "max": 55,
-      "description": "Width of left arm slot in pixels"
+      "description": "Width of left arm slot in pixels",
+      "engineVerified": true
     },
     "lArmHeight": {
       "type": "integer",
       "min": -1,
       "max": 112,
-      "description": "Height of left arm slot in pixels"
+      "description": "Height of left arm slot in pixels",
+      "engineVerified": true
     },
     "headLeft": {
       "type": "integer",
       "min": -1,
       "max": 455,
-      "description": "Left pixel coordinate of head/helm slot (-1=none)"
+      "description": "Left pixel coordinate of head/helm slot (-1=none)",
+      "engineVerified": true
     },
     "headRight": {
       "type": "integer",
       "min": -1,
       "max": 509,
-      "description": "Right pixel coordinate of head/helm slot"
+      "description": "Right pixel coordinate of head/helm slot",
+      "engineVerified": true
     },
     "headTop": {
       "type": "integer",
       "min": -1,
       "max": 8,
-      "description": "Top pixel coordinate of head/helm slot"
+      "description": "Top pixel coordinate of head/helm slot",
+      "engineVerified": true
     },
     "headBottom": {
       "type": "integer",
       "min": -1,
       "max": 59,
-      "description": "Bottom pixel coordinate of head/helm slot"
+      "description": "Bottom pixel coordinate of head/helm slot",
+      "engineVerified": true
     },
     "headWidth": {
       "type": "integer",
       "min": -1,
       "max": 54,
-      "description": "Width of head/helm slot in pixels"
+      "description": "Width of head/helm slot in pixels",
+      "engineVerified": true
     },
     "headHeight": {
       "type": "integer",
       "min": -1,
       "max": 51,
-      "description": "Height of head/helm slot in pixels"
+      "description": "Height of head/helm slot in pixels",
+      "engineVerified": true
     },
     "neckLeft": {
       "type": "integer",
       "min": -1,
       "max": 529,
-      "description": "Left pixel coordinate of neck/amulet slot (-1=none)"
+      "description": "Left pixel coordinate of neck/amulet slot (-1=none)",
+      "engineVerified": true
     },
     "neckRight": {
       "type": "integer",
       "min": -1,
       "max": 552,
-      "description": "Right pixel coordinate of neck/amulet slot"
+      "description": "Right pixel coordinate of neck/amulet slot",
+      "engineVerified": true
     },
     "neckTop": {
       "type": "integer",
       "min": -1,
       "max": 35,
-      "description": "Top pixel coordinate of neck/amulet slot"
+      "description": "Top pixel coordinate of neck/amulet slot",
+      "engineVerified": true
     },
     "neckBottom": {
       "type": "integer",
       "min": -1,
       "max": 59,
-      "description": "Bottom pixel coordinate of neck/amulet slot"
+      "description": "Bottom pixel coordinate of neck/amulet slot",
+      "engineVerified": true
     },
     "neckWidth": {
       "type": "integer",
       "min": -1,
       "max": 23,
-      "description": "Width of neck/amulet slot in pixels"
+      "description": "Width of neck/amulet slot in pixels",
+      "engineVerified": true
     },
     "neckHeight": {
       "type": "integer",
       "min": -1,
       "max": 24,
-      "description": "Height of neck/amulet slot in pixels"
+      "description": "Height of neck/amulet slot in pixels",
+      "engineVerified": true
     },
     "rHandLeft": {
       "type": "integer",
       "min": -1,
       "max": 415,
-      "description": "Left pixel coordinate of right ring slot (-1=none)"
+      "description": "Left pixel coordinate of right ring slot (-1=none)",
+      "engineVerified": true
     },
     "rHandRight": {
       "type": "integer",
       "min": -1,
       "max": 438,
-      "description": "Right pixel coordinate of right ring slot"
+      "description": "Right pixel coordinate of right ring slot",
+      "engineVerified": true
     },
     "rHandTop": {
       "type": "integer",
       "min": -1,
       "max": 180,
-      "description": "Top pixel coordinate of right ring slot"
+      "description": "Top pixel coordinate of right ring slot",
+      "engineVerified": true
     },
     "rHandBottom": {
       "type": "integer",
       "min": -1,
       "max": 204,
-      "description": "Bottom pixel coordinate of right ring slot"
+      "description": "Bottom pixel coordinate of right ring slot",
+      "engineVerified": true
     },
     "rHandWidth": {
       "type": "integer",
       "min": -1,
       "max": 23,
-      "description": "Width of right ring slot in pixels"
+      "description": "Width of right ring slot in pixels",
+      "engineVerified": true
     },
     "rHandHeight": {
       "type": "integer",
       "min": -1,
       "max": 24,
-      "description": "Height of right ring slot in pixels"
+      "description": "Height of right ring slot in pixels",
+      "engineVerified": true
     },
     "lHandLeft": {
       "type": "integer",
       "min": -1,
       "max": 529,
-      "description": "Left pixel coordinate of left ring slot (-1=none)"
+      "description": "Left pixel coordinate of left ring slot (-1=none)",
+      "engineVerified": true
     },
     "lHandRight": {
       "type": "integer",
       "min": -1,
       "max": 552,
-      "description": "Right pixel coordinate of left ring slot"
+      "description": "Right pixel coordinate of left ring slot",
+      "engineVerified": true
     },
     "lHandTop": {
       "type": "integer",
       "min": -1,
       "max": 180,
-      "description": "Top pixel coordinate of left ring slot"
+      "description": "Top pixel coordinate of left ring slot",
+      "engineVerified": true
     },
     "lHandBottom": {
       "type": "integer",
       "min": -1,
       "max": 204,
-      "description": "Bottom pixel coordinate of left ring slot"
+      "description": "Bottom pixel coordinate of left ring slot",
+      "engineVerified": true
     },
     "lHandWidth": {
       "type": "integer",
       "min": -1,
       "max": 23,
-      "description": "Width of left ring slot in pixels"
+      "description": "Width of left ring slot in pixels",
+      "engineVerified": true
     },
     "lHandHeight": {
       "type": "integer",
       "min": -1,
       "max": 24,
-      "description": "Height of left ring slot in pixels"
+      "description": "Height of left ring slot in pixels",
+      "engineVerified": true
     },
     "beltLeft": {
       "type": "integer",
       "min": -1,
       "max": 456,
-      "description": "Left pixel coordinate of belt slot (-1=none)"
+      "description": "Left pixel coordinate of belt slot (-1=none)",
+      "engineVerified": true
     },
     "beltRight": {
       "type": "integer",
       "min": -1,
       "max": 508,
-      "description": "Right pixel coordinate of belt slot"
+      "description": "Right pixel coordinate of belt slot",
+      "engineVerified": true
     },
     "beltTop": {
       "type": "integer",
       "min": -1,
       "max": 179,
-      "description": "Top pixel coordinate of belt slot"
+      "description": "Top pixel coordinate of belt slot",
+      "engineVerified": true
     },
     "beltBottom": {
       "type": "integer",
       "min": -1,
       "max": 204,
-      "description": "Bottom pixel coordinate of belt slot"
+      "description": "Bottom pixel coordinate of belt slot",
+      "engineVerified": true
     },
     "beltWidth": {
       "type": "integer",
       "min": -1,
       "max": 52,
-      "description": "Width of belt slot in pixels"
+      "description": "Width of belt slot in pixels",
+      "engineVerified": true
     },
     "beltHeight": {
       "type": "integer",
       "min": -1,
       "max": 25,
-      "description": "Height of belt slot in pixels"
+      "description": "Height of belt slot in pixels",
+      "engineVerified": true
     },
     "feetLeft": {
       "type": "integer",
       "min": -1,
       "max": 572,
-      "description": "Left pixel coordinate of feet/boots slot (-1=none)"
+      "description": "Left pixel coordinate of feet/boots slot (-1=none)",
+      "engineVerified": true
     },
     "feetRight": {
       "type": "integer",
       "min": -1,
       "max": 626,
-      "description": "Right pixel coordinate of feet/boots slot"
+      "description": "Right pixel coordinate of feet/boots slot",
+      "engineVerified": true
     },
     "feetTop": {
       "type": "integer",
       "min": -1,
       "max": 182,
-      "description": "Top pixel coordinate of feet/boots slot"
+      "description": "Top pixel coordinate of feet/boots slot",
+      "engineVerified": true
     },
     "feetBottom": {
       "type": "integer",
       "min": -1,
       "max": 234,
-      "description": "Bottom pixel coordinate of feet/boots slot"
+      "description": "Bottom pixel coordinate of feet/boots slot",
+      "engineVerified": true
     },
     "feetWidth": {
       "type": "integer",
       "min": -1,
       "max": 54,
-      "description": "Width of feet/boots slot in pixels"
+      "description": "Width of feet/boots slot in pixels",
+      "engineVerified": true
     },
     "feetHeight": {
       "type": "integer",
       "min": -1,
       "max": 52,
-      "description": "Height of feet/boots slot in pixels"
+      "description": "Height of feet/boots slot in pixels",
+      "engineVerified": true
     },
     "glovesLeft": {
       "type": "integer",
       "min": -1,
       "max": 341,
-      "description": "Left pixel coordinate of gloves slot (-1=none)"
+      "description": "Left pixel coordinate of gloves slot (-1=none)",
+      "engineVerified": true
     },
     "glovesRight": {
       "type": "integer",
       "min": -1,
       "max": 395,
-      "description": "Right pixel coordinate of gloves slot"
+      "description": "Right pixel coordinate of gloves slot",
+      "engineVerified": true
     },
     "glovesTop": {
       "type": "integer",
       "min": -1,
       "max": 181,
-      "description": "Top pixel coordinate of gloves slot"
+      "description": "Top pixel coordinate of gloves slot",
+      "engineVerified": true
     },
     "glovesBottom": {
       "type": "integer",
       "min": -1,
       "max": 234,
-      "description": "Bottom pixel coordinate of gloves slot"
+      "description": "Bottom pixel coordinate of gloves slot",
+      "engineVerified": true
     },
     "glovesWidth": {
       "type": "integer",
       "min": -1,
       "max": 54,
-      "description": "Width of gloves slot in pixels"
+      "description": "Width of gloves slot in pixels",
+      "engineVerified": true
     },
     "glovesHeight": {
       "type": "integer",
       "min": -1,
       "max": 53,
-      "description": "Height of gloves slot in pixels"
+      "description": "Height of gloves slot in pixels",
+      "engineVerified": true
+    },
+    "gridY": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "gridX": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

@@ -1,48 +1,57 @@
 {
   "file": "itemtypes.txt",
-  "description": "Item type hierarchy \u00e2\u20ac\u201d defines equipment categories, socket rules, and class restrictions.",
+  "description": "Item type hierarchy â€” defines equipment categories, socket rules, and class restrictions.",
   "columns": {
     "ItemType": {
       "type": "string",
       "required": true,
-      "description": "Display name of the item type category"
+      "description": "Display name of the item type category. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Code": {
       "type": "string",
-      "description": "Unique 3-4 character item code"
+      "description": "Unique 3-4 character item code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Order": {
       "type": "integer",
-      "description": "Sort order priority for inventory display",
-      "min": 0
+      "description": "Sort order priority for inventory display. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "Equiv1": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Equivalent item type 1 (parent in type hierarchy)"
+      "description": "Equivalent item type 1 (parent in type hierarchy). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Equiv2": {
       "type": "ref",
       "target": "itemtypes.txt",
       "targetColumn": "Code",
-      "description": "Equivalent item type 2 (parent in type hierarchy)"
+      "description": "Equivalent item type 2 (parent in type hierarchy). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Identify": {
       "type": "boolean",
-      "description": "Whether items of this type require identification"
+      "description": "Whether items of this type require identification. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Repair": {
       "type": "boolean",
-      "description": "Item can be repaired"
+      "description": "Item can be repaired. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Mods": {
       "type": "boolean",
-      "description": "Whether items of this type can receive magical modifiers"
+      "description": "Whether items of this type can receive magical modifiers. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Body": {
       "type": "boolean",
-      "description": "Equippable on body slot"
+      "description": "Equippable on body slot. Not read by 1.13c engine",
+      "deprecated": true
     },
     "BodyLoc1": {
       "type": "enum",
@@ -59,7 +68,8 @@
         "glov",
         ""
       ],
-      "description": "Primary equipment slot location"
+      "description": "Primary equipment slot location. Not read by 1.13c engine",
+      "deprecated": true
     },
     "BodyLoc2": {
       "type": "enum",
@@ -76,7 +86,8 @@
         "glov",
         ""
       ],
-      "description": "Secondary equipment slot location"
+      "description": "Secondary equipment slot location. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Shoots": {
       "type": "enum",
@@ -84,7 +95,8 @@
         "bowq",
         "xboq"
       ],
-      "description": "Ammunition item type code this weapon fires (e.g. bowq, xboq)"
+      "description": "Ammunition item type code this weapon fires (e.g. bowq, xboq). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Quiver": {
       "type": "enum",
@@ -92,77 +104,93 @@
         "bow",
         "xbow"
       ],
-      "description": "Weapon type code this ammo is used with (e.g. bow, xbow)"
+      "description": "Weapon type code this ammo is used with (e.g. bow, xbow). Not read by 1.13c engine",
+      "deprecated": true
     },
-    "Throwable": {
+    "throwable": {
       "type": "boolean",
-      "description": "Item can be thrown"
+      "description": "Item can be thrown",
+      "engineVerified": true
     },
     "Reload": {
       "type": "boolean",
-      "description": "Whether this item type auto-reloads ammunition from inventory"
+      "description": "Whether this item type auto-reloads ammunition from inventory. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ReEquip": {
       "type": "boolean",
-      "description": "Whether this item type auto-re-equips when quantity is replenished"
+      "description": "Whether this item type auto-re-equips when quantity is replenished. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "AutoStack": {
+    "autostack": {
       "type": "boolean",
-      "description": "Whether this item type automatically stacks in inventory"
+      "description": "Whether this item type automatically stacks in inventory",
+      "engineVerified": true
     },
-    "Magic": {
+    "magic": {
       "type": "boolean",
-      "description": "Whether items of this type can spawn as magic quality"
+      "description": "Whether items of this type can spawn as magic quality",
+      "engineVerified": true
     },
     "Rare": {
       "type": "boolean",
-      "description": "Can spawn as rare quality"
+      "description": "Can spawn as rare quality. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "Normal": {
+    "normal": {
       "type": "boolean",
-      "description": "Whether items of this type can spawn as normal quality"
+      "description": "Whether items of this type can spawn as normal quality",
+      "engineVerified": true
     },
     "Charm": {
       "type": "boolean",
-      "description": "Whether this item type functions as a charm (passive effect in inventory)"
+      "description": "Whether this item type functions as a charm (passive effect in inventory). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Gem": {
       "type": "boolean",
-      "description": "Whether this item type functions as a gem/rune for socketing"
+      "description": "Whether this item type functions as a gem/rune for socketing. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "Beltable": {
+    "beltable": {
       "type": "boolean",
-      "description": "Can be placed in belt"
+      "description": "Can be placed in belt",
+      "engineVerified": true
     },
     "MaxSock1": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "Maximum number of sockets for items at low level (1-25)"
+      "description": "Maximum number of sockets for items at low level (1-25). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxSock25": {
       "type": "integer",
       "min": 0,
       "max": 6,
-      "description": "Maximum number of sockets for items at mid level (25-40)"
+      "description": "Maximum number of sockets for items at mid level (25-40). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxSock40": {
       "type": "integer",
       "min": 0,
       "max": 6,
-      "description": "Maximum number of sockets for items at high level (40+)"
+      "description": "Maximum number of sockets for items at high level (40+). Not read by 1.13c engine",
+      "deprecated": true
     },
-    "TreasureClass": {
+    "treasureclass": {
       "type": "boolean",
-      "description": "Item drop classification reference"
+      "description": "Item drop classification reference",
+      "engineVerified": true
     },
     "Rarity": {
       "type": "integer",
       "min": 1,
       "max": 3,
-      "description": "Spawn rarity ratio (1/N chance)"
+      "description": "Spawn rarity ratio (1/N chance). Not read by 1.13c engine",
+      "deprecated": true
     },
-    "StaffMods": {
+    "staffmods": {
       "type": "enum",
       "values": [
         "ass",
@@ -172,25 +200,29 @@
         "pal",
         "sor"
       ],
-      "description": "Staff auto-mod skill group"
+      "description": "Staff auto-mod skill group",
+      "engineVerified": true
     },
-    "CostFormula": {
+    "costformula": {
       "type": "integer",
       "min": 0,
       "max": 2,
-      "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)"
+      "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)",
+      "engineVerified": true
     },
     "Class": {
       "type": "ref",
       "target": "PlayerClass.txt",
       "targetColumn": "Player Class",
-      "description": "Character class restriction"
+      "description": "Character class restriction. Not read by 1.13c engine",
+      "deprecated": true
     },
     "VarInvGfx": {
       "type": "integer",
       "min": 0,
       "max": 6,
-      "description": "Number of inventory graphic variations"
+      "description": "Number of inventory graphic variations. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx1": {
       "type": "enum",
@@ -202,7 +234,8 @@
         "invjw1",
         "invrin1"
       ],
-      "description": "Inventory graphic variation 1"
+      "description": "Inventory graphic variation 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx2": {
       "type": "enum",
@@ -214,7 +247,8 @@
         "invjw2",
         "invrin2"
       ],
-      "description": "Inventory graphic variation 2"
+      "description": "Inventory graphic variation 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx3": {
       "type": "enum",
@@ -226,7 +260,8 @@
         "invjw3",
         "invrin3"
       ],
-      "description": "Inventory graphic variation 3"
+      "description": "Inventory graphic variation 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx4": {
       "type": "enum",
@@ -234,7 +269,8 @@
         "invjw4",
         "invrin4"
       ],
-      "description": "Inventory graphic variation 4"
+      "description": "Inventory graphic variation 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx5": {
       "type": "enum",
@@ -242,11 +278,13 @@
         "invjw5",
         "invrin5"
       ],
-      "description": "Inventory graphic variation 5"
+      "description": "Inventory graphic variation 5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InvGfx6": {
       "type": "string",
-      "description": "Inventory graphic variation 6"
+      "description": "Inventory graphic variation 6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "StorePage": {
       "type": "enum",
@@ -256,7 +294,8 @@
         "misc",
         "weap"
       ],
-      "description": "NPC store tab page"
+      "description": "NPC store tab page. Not read by 1.13c engine",
+      "deprecated": true
     }
   }
 }

@@ -1,55 +1,64 @@
 {
   "file": "cubemain.txt",
-  "description": "Horadric Cube recipes \u00e2\u20ac\u201d input items, output items, conditions, and property modifications.",
+  "description": "Horadric Cube recipes â€” input items, output items, conditions, and property modifications.",
   "columns": {
     "Description": {
       "type": "string",
       "required": true,
-      "description": "Recipe description/identifier"
+      "description": "Recipe description/identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "enabled": {
       "type": "boolean",
-      "description": "Recipe is functional (1=active, 0=disabled)"
+      "description": "Recipe is functional (1=active, 0=disabled)",
+      "engineVerified": true
     },
     "numinputs": {
       "type": "integer",
       "min": 2,
       "max": 7,
-      "description": "Number of required input items"
+      "description": "Number of required input items",
+      "engineVerified": true
     },
     "min difficulty": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Minimum game difficulty (0=all, 1=Nightmare+, 2=Hell only)"
+      "description": "Minimum game difficulty (0=all, 1=Nightmare+, 2=Hell only). Not read by 1.13c engine",
+      "deprecated": true
     },
     "expansion": {
       "type": "boolean",
-      "description": "Expansion-only content flag"
+      "description": "Expansion-only content flag. Not read by 1.13c engine",
+      "deprecated": true
     },
     "start day": {
       "type": "integer",
       "min": 0,
       "max": 23,
-      "description": "Starting day for time-limited recipe availability"
+      "description": "Starting day for time-limited recipe availability. Not read by 1.13c engine",
+      "deprecated": true
     },
     "stop day": {
       "type": "integer",
       "min": 0,
       "max": 31,
-      "description": "Ending day for time-limited recipe availability"
+      "description": "Ending day for time-limited recipe availability. Not read by 1.13c engine",
+      "deprecated": true
     },
     "day of week": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Day of week restriction for recipe availability"
+      "description": "Day of week restriction for recipe availability. Not read by 1.13c engine",
+      "deprecated": true
     },
     "playerclass": {
       "type": "ref",
       "target": "PlayerClass.txt",
       "targetColumn": "Player Class",
-      "description": "Character class required to use this recipe"
+      "description": "Character class required to use this recipe. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require a": {
       "type": "enum",
@@ -62,17 +71,20 @@
         "swr",
         "wep"
       ],
-      "description": "Item type requirement for input slot A"
+      "description": "Item type requirement for input slot A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code a": {
       "type": "string",
-      "description": "Specific item code for input slot A"
+      "description": "Specific item code for input slot A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of a": {
       "type": "integer",
       "min": 1,
       "max": 3,
-      "description": "Required quantity of input item A"
+      "description": "Required quantity of input item A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier a": {
       "type": "enum",
@@ -87,49 +99,59 @@
         "sku",
         "top"
       ],
-      "description": "Quality/gem type modifier for input A"
+      "description": "Quality/gem type modifier for input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 a": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "First parameter for input A requirements"
+      "description": "First parameter for input A requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 a": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Second parameter for input A requirements"
+      "description": "Second parameter for input A requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets a": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item A"
+      "description": "Required number of sockets in input item A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input A"
+      "description": "Item code for gem/rune in socket 1 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input A"
+      "description": "Item code for gem/rune in socket 2 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input A"
+      "description": "Item code for gem/rune in socket 3 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input A"
+      "description": "Item code for gem/rune in socket 4 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input A"
+      "description": "Item code for gem/rune in socket 5 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 a": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input A"
+      "description": "Item code for gem/rune in socket 6 of input A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require b": {
       "type": "enum",
@@ -140,7 +162,8 @@
         "itm",
         "mpt"
       ],
-      "description": "Item type requirement for input slot B"
+      "description": "Item type requirement for input slot B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code b": {
       "type": "enum",
@@ -160,13 +183,15 @@
         "tbk",
         "vip"
       ],
-      "description": "Specific item code for input slot B"
+      "description": "Specific item code for input slot B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of b": {
       "type": "integer",
       "min": 0,
       "max": 6,
-      "description": "Required quantity of input item B"
+      "description": "Required quantity of input item B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier b": {
       "type": "enum",
@@ -177,49 +202,59 @@
         "sku",
         "top"
       ],
-      "description": "Quality/gem type modifier for input B"
+      "description": "Quality/gem type modifier for input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 b": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "First parameter for input B requirements"
+      "description": "First parameter for input B requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Second parameter for input B requirements"
+      "description": "Second parameter for input B requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item B"
+      "description": "Required number of sockets in input item B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input B"
+      "description": "Item code for gem/rune in socket 1 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input B"
+      "description": "Item code for gem/rune in socket 2 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input B"
+      "description": "Item code for gem/rune in socket 3 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input B"
+      "description": "Item code for gem/rune in socket 4 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input B"
+      "description": "Item code for gem/rune in socket 5 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 b": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input B"
+      "description": "Item code for gem/rune in socket 6 of input B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require c": {
       "type": "enum",
@@ -229,17 +264,20 @@
         "itm",
         "stf"
       ],
-      "description": "Item type requirement for input slot C"
+      "description": "Item type requirement for input slot C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code c": {
       "type": "string",
-      "description": "Specific item code for input slot C"
+      "description": "Specific item code for input slot C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of c": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Required quantity of input item C"
+      "description": "Required quantity of input item C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier c": {
       "type": "enum",
@@ -247,49 +285,59 @@
         "sku",
         "unq"
       ],
-      "description": "Quality/gem type modifier for input C"
+      "description": "Quality/gem type modifier for input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 c": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "First parameter for input C requirements"
+      "description": "First parameter for input C requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 c": {
       "type": "integer",
       "min": 0,
       "max": 122,
-      "description": "Second parameter for input C requirements"
+      "description": "Second parameter for input C requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets c": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item C"
+      "description": "Required number of sockets in input item C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input C"
+      "description": "Item code for gem/rune in socket 1 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input C"
+      "description": "Item code for gem/rune in socket 2 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input C"
+      "description": "Item code for gem/rune in socket 3 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input C"
+      "description": "Item code for gem/rune in socket 4 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input C"
+      "description": "Item code for gem/rune in socket 5 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 c": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input C"
+      "description": "Item code for gem/rune in socket 6 of input C. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require d": {
       "type": "enum",
@@ -298,7 +346,8 @@
         "gem",
         "itm"
       ],
-      "description": "Item type requirement for input slot D"
+      "description": "Item type requirement for input slot D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code d": {
       "type": "enum",
@@ -316,13 +365,15 @@
         "r16",
         "r17"
       ],
-      "description": "Specific item code for input slot D"
+      "description": "Specific item code for input slot D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of d": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required quantity of input item D"
+      "description": "Required quantity of input item D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier d": {
       "type": "enum",
@@ -333,53 +384,64 @@
         "sap",
         "sku"
       ],
-      "description": "Quality/gem type modifier for input D"
+      "description": "Quality/gem type modifier for input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 d": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "First parameter for input D requirements"
+      "description": "First parameter for input D requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 d": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Second parameter for input D requirements"
+      "description": "Second parameter for input D requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets d": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item D"
+      "description": "Required number of sockets in input item D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input D"
+      "description": "Item code for gem/rune in socket 1 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input D"
+      "description": "Item code for gem/rune in socket 2 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input D"
+      "description": "Item code for gem/rune in socket 3 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input D"
+      "description": "Item code for gem/rune in socket 4 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input D"
+      "description": "Item code for gem/rune in socket 5 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 d": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input D"
+      "description": "Item code for gem/rune in socket 6 of input D. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require e": {
       "type": "string",
-      "description": "Item type requirement for input slot E"
+      "description": "Item type requirement for input slot E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code e": {
       "type": "enum",
@@ -393,218 +455,263 @@
         "r21",
         "r22"
       ],
-      "description": "Specific item code for input slot E"
+      "description": "Specific item code for input slot E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of e": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required quantity of input item E"
+      "description": "Required quantity of input item E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier e": {
       "type": "string",
-      "description": "Quality/gem type modifier for input E"
+      "description": "Quality/gem type modifier for input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 e": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "First parameter for input E requirements"
+      "description": "First parameter for input E requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 e": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Second parameter for input E requirements"
+      "description": "Second parameter for input E requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets e": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item E"
+      "description": "Required number of sockets in input item E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input E"
+      "description": "Item code for gem/rune in socket 1 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input E"
+      "description": "Item code for gem/rune in socket 2 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input E"
+      "description": "Item code for gem/rune in socket 3 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input E"
+      "description": "Item code for gem/rune in socket 4 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input E"
+      "description": "Item code for gem/rune in socket 5 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 e": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input E"
+      "description": "Item code for gem/rune in socket 6 of input E. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require f": {
       "type": "string",
-      "description": "Item type requirement for input slot F"
+      "description": "Item type requirement for input slot F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code f": {
       "type": "string",
-      "description": "Specific item code for input slot F"
+      "description": "Specific item code for input slot F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of f": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required quantity of input item F"
+      "description": "Required quantity of input item F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier f": {
       "type": "string",
-      "description": "Quality/gem type modifier for input F"
+      "description": "Quality/gem type modifier for input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 f": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "First parameter for input F requirements"
+      "description": "First parameter for input F requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param2 f": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Second parameter for input F requirements"
+      "description": "Second parameter for input F requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "sockets f": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required number of sockets in input item F"
+      "description": "Required number of sockets in input item F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 1 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input F"
+      "description": "Item code for gem/rune in socket 1 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input F"
+      "description": "Item code for gem/rune in socket 2 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input F"
+      "description": "Item code for gem/rune in socket 3 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input F"
+      "description": "Item code for gem/rune in socket 4 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input F"
+      "description": "Item code for gem/rune in socket 5 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 f": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input F"
+      "description": "Item code for gem/rune in socket 6 of input F. Not read by 1.13c engine",
+      "deprecated": true
     },
     "require g": {
       "type": "string",
-      "description": "Item type requirement for input slot G"
+      "description": "Item type requirement for input slot G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "code g": {
       "type": "string",
-      "description": "Specific item code for input slot G"
+      "description": "Specific item code for input slot G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "number of g": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Required quantity of input item G"
+      "description": "Required quantity of input item G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "modifier g": {
       "type": "string",
-      "description": "Quality/gem type modifier for input G"
+      "description": "Quality/gem type modifier for input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param1 g": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "First parameter for input G requirements"
+      "description": "First parameter for input G requirements. Not read by 1.13c engine",
+      "deprecated": true
     },
     "param 2 g": {
       "type": "integer",
-      "description": "Second parameter for input G requirements",
-      "min": 0
+      "description": "Second parameter for input G requirements. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "gem 1 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 1 of input G"
+      "description": "Item code for gem/rune in socket 1 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 2 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 2 of input G"
+      "description": "Item code for gem/rune in socket 2 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 3 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 3 of input G"
+      "description": "Item code for gem/rune in socket 3 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 4 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 4 of input G"
+      "description": "Item code for gem/rune in socket 4 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 5 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 5 of input G"
+      "description": "Item code for gem/rune in socket 5 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gem 6 g": {
       "type": "string",
-      "description": "Item code for gem/rune in socket 6 of input G"
+      "description": "Item code for gem/rune in socket 6 of input G. Not read by 1.13c engine",
+      "deprecated": true
     },
     "function": {
       "type": "integer",
       "min": 0,
       "max": 28,
-      "description": "Special recipe function to execute on transmutation"
+      "description": "Special recipe function to execute on transmutation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "product a": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Output type for primary result item"
+      "description": "Output type for primary result item. Not read by 1.13c engine",
+      "deprecated": true
     },
     "product code a": {
       "type": "string",
-      "description": "Item code for primary output item"
+      "description": "Item code for primary output item. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mods a": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Whether output A inherits modifiers from input"
+      "description": "Whether output A inherits modifiers from input. Not read by 1.13c engine",
+      "deprecated": true
     },
     "uses a": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Number of charges/uses for output item A"
+      "description": "Number of charges/uses for output item A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "fixedlevel a": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "Fixed item level for output A"
+      "description": "Fixed item level for output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "playerlevel pct a": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "Percentage of player level used for output A item level"
+      "description": "Percentage of player level used for output A item level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itemlevel pct a": {
       "type": "integer",
       "min": 0,
       "max": 75,
-      "description": "Percentage of first input item level used for output A"
+      "description": "Percentage of first input item level used for output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "pmod1a": {
       "type": "enum",
@@ -613,17 +720,20 @@
         "mag",
         "rar"
       ],
-      "description": "Quality type for output A (crf=crafted, mag=magic, rar=rare)"
+      "description": "Quality type for output A (crf=crafted, mag=magic, rar=rare). Not read by 1.13c engine",
+      "deprecated": true
     },
     "pmod2a": {
       "type": "string",
-      "description": "Secondary quality modifier for output A"
+      "description": "Secondary quality modifier for output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "psocketsa": {
       "type": "integer",
       "min": 0,
       "max": 3,
-      "description": "Number of sockets added to output item A"
+      "description": "Number of sockets added to output item A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1a": {
       "type": "enum",
@@ -898,31 +1008,36 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 1 applied to output A"
+      "description": "Property modifier 1 applied to output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1achance": {
       "type": "integer",
       "min": 75,
       "max": 75,
-      "description": "Percent chance for modifier 1 to appear on output A"
+      "description": "Percent chance for modifier 1 to appear on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1aparam": {
       "type": "integer",
       "min": 0,
       "max": 44,
-      "description": "Parameter for modifier 1 on output A"
+      "description": "Parameter for modifier 1 on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1amin": {
       "type": "integer",
       "min": 0,
       "max": 100,
-      "description": "mod1a minimum value"
+      "description": "mod1a minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1amax": {
       "type": "integer",
       "min": 0,
       "max": 250,
-      "description": "mod1a maximum value"
+      "description": "mod1a maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2a": {
       "type": "enum",
@@ -1197,29 +1312,34 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 2 applied to output A"
+      "description": "Property modifier 2 applied to output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2achance": {
       "type": "integer",
       "min": 10,
       "max": 33,
-      "description": "Percent chance for modifier 2 to appear on output A"
+      "description": "Percent chance for modifier 2 to appear on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2aparam": {
       "type": "boolean",
-      "description": "Parameter for modifier 2 on output A"
+      "description": "Parameter for modifier 2 on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2amin": {
       "type": "integer",
       "min": 1,
       "max": 120,
-      "description": "mod2a minimum value"
+      "description": "mod2a minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2amax": {
       "type": "integer",
       "min": 1,
       "max": 120,
-      "description": "mod2a maximum value"
+      "description": "mod2a maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3a": {
       "type": "enum",
@@ -1494,29 +1614,34 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 3 applied to output A"
+      "description": "Property modifier 3 applied to output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3achance": {
       "type": "integer",
       "min": 33,
       "max": 40,
-      "description": "Percent chance for modifier 3 to appear on output A"
+      "description": "Percent chance for modifier 3 to appear on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3aparam": {
       "type": "boolean",
-      "description": "Parameter for modifier 3 on output A"
+      "description": "Parameter for modifier 3 on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3amin": {
       "type": "integer",
       "min": -5,
       "max": 50,
-      "description": "mod3a minimum value"
+      "description": "mod3a minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3amax": {
       "type": "integer",
       "min": -50,
       "max": 200,
-      "description": "mod3a maximum value"
+      "description": "mod3a maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4a": {
       "type": "enum",
@@ -1791,29 +1916,34 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 4 applied to output A"
+      "description": "Property modifier 4 applied to output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4achance": {
       "type": "integer",
       "min": 33,
       "max": 33,
-      "description": "Percent chance for modifier 4 to appear on output A"
+      "description": "Percent chance for modifier 4 to appear on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4aparam": {
       "type": "boolean",
-      "description": "Parameter for modifier 4 on output A"
+      "description": "Parameter for modifier 4 on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4amin": {
       "type": "integer",
       "min": 0,
       "max": 20,
-      "description": "mod4a minimum value"
+      "description": "mod4a minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4amax": {
       "type": "integer",
       "min": 1,
       "max": 101,
-      "description": "mod4a maximum value"
+      "description": "mod4a maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5a": {
       "type": "enum",
@@ -2088,82 +2218,97 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 5 applied to output A"
+      "description": "Property modifier 5 applied to output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5achance": {
       "type": "integer",
       "min": 25,
       "max": 50,
-      "description": "Percent chance for modifier 5 to appear on output A"
+      "description": "Percent chance for modifier 5 to appear on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5aparam": {
       "type": "boolean",
-      "description": "Parameter for modifier 5 on output A"
+      "description": "Parameter for modifier 5 on output A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5amin": {
       "type": "integer",
       "min": 1,
       "max": 6,
-      "description": "mod5a minimum value"
+      "description": "mod5a minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5amax": {
       "type": "integer",
       "min": 1,
       "max": 36,
-      "description": "mod5a maximum value"
+      "description": "mod5a maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "product b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Output type for secondary result item"
+      "description": "Output type for secondary result item. Not read by 1.13c engine",
+      "deprecated": true
     },
     "product code b": {
       "type": "string",
-      "description": "Item code for secondary output item"
+      "description": "Item code for secondary output item. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mods b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Whether output B inherits modifiers from input"
+      "description": "Whether output B inherits modifiers from input. Not read by 1.13c engine",
+      "deprecated": true
     },
     "uses b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Number of charges/uses for output item B"
+      "description": "Number of charges/uses for output item B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "fixedlevel b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Fixed item level for output B"
+      "description": "Fixed item level for output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "playerlevel pct b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Percentage of player level used for output B item level"
+      "description": "Percentage of player level used for output B item level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "itemlevel pct b": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Percentage of first input item level used for output B"
+      "description": "Percentage of first input item level used for output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "pmod1b": {
       "type": "string",
-      "description": "Quality type for output B (crf=crafted, mag=magic, rar=rare)"
+      "description": "Quality type for output B (crf=crafted, mag=magic, rar=rare). Not read by 1.13c engine",
+      "deprecated": true
     },
     "pmod2b": {
       "type": "string",
-      "description": "Secondary quality modifier for output B"
+      "description": "Secondary quality modifier for output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "psocketsb": {
       "type": "integer",
-      "description": "Number of sockets added to output item B",
-      "min": 0
+      "description": "Number of sockets added to output item B. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod1b": {
       "type": "enum",
@@ -2438,26 +2583,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 1 applied to output B"
+      "description": "Property modifier 1 applied to output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1bchance": {
       "type": "integer",
       "min": 0,
-      "description": "Percent chance for modifier 1 to appear on output B"
+      "description": "Percent chance for modifier 1 to appear on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1bparam": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter for modifier 1 on output B"
+      "description": "Parameter for modifier 1 on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod1bmin": {
       "type": "integer",
-      "description": "mod1b minimum value",
-      "min": 0
+      "description": "mod1b minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod1bmax": {
       "type": "string",
-      "description": "mod1b maximum value"
+      "description": "mod1b maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2b": {
       "type": "enum",
@@ -2732,26 +2882,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 2 applied to output B"
+      "description": "Property modifier 2 applied to output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2bchance": {
       "type": "integer",
       "min": 0,
-      "description": "Percent chance for modifier 2 to appear on output B"
+      "description": "Percent chance for modifier 2 to appear on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2bparam": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter for modifier 2 on output B"
+      "description": "Parameter for modifier 2 on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod2bmin": {
       "type": "integer",
-      "description": "mod2b minimum value",
-      "min": 0
+      "description": "mod2b minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod2bmax": {
       "type": "string",
-      "description": "mod2b maximum value"
+      "description": "mod2b maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3b": {
       "type": "enum",
@@ -3026,26 +3181,31 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 3 applied to output B"
+      "description": "Property modifier 3 applied to output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3bchance": {
       "type": "integer",
       "min": 0,
-      "description": "Percent chance for modifier 3 to appear on output B"
+      "description": "Percent chance for modifier 3 to appear on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3bparam": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter for modifier 3 on output B"
+      "description": "Parameter for modifier 3 on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod3bmin": {
       "type": "integer",
-      "description": "mod3b minimum value",
-      "min": 0
+      "description": "mod3b minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod3bmax": {
       "type": "string",
-      "description": "mod3b maximum value"
+      "description": "mod3b maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4b": {
       "type": "enum",
@@ -3320,28 +3480,33 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 4 applied to output B"
+      "description": "Property modifier 4 applied to output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4bchance": {
       "type": "integer",
       "min": 0,
-      "description": "Percent chance for modifier 4 to appear on output B"
+      "description": "Percent chance for modifier 4 to appear on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4bparam": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter for modifier 4 on output B"
+      "description": "Parameter for modifier 4 on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod4bmin": {
       "type": "integer",
-      "description": "mod4b minimum value",
-      "min": 0
+      "description": "mod4b minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod4bmax": {
       "type": "integer",
-      "description": "mod4b maximum value",
+      "description": "mod4b maximum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "mod5b": {
       "type": "enum",
@@ -3616,28 +3781,298 @@
         "wounds/time",
         ""
       ],
-      "description": "Property modifier 5 applied to output B"
+      "description": "Property modifier 5 applied to output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5bchance": {
       "type": "integer",
       "min": 0,
-      "description": "Percent chance for modifier 5 to appear on output B"
+      "description": "Percent chance for modifier 5 to appear on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5bparam": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter for modifier 5 on output B"
+      "description": "Parameter for modifier 5 on output B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mod5bmin": {
       "type": "integer",
-      "description": "mod5b minimum value",
-      "min": 0
+      "description": "mod5b minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "mod5bmax": {
       "type": "integer",
-      "description": "mod5b maximum value",
+      "description": "mod5b maximum value. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
+    },
+    "output": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "output b": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "output c": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "value": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "usetype": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ladder": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "class": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c ilvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c plvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b ilvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b plvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b lvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 5 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 5 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 4 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 4 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 3 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 3 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 2 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 2 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 1 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod 1 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 5 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 5 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 4 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 4 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 3 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 3 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 2 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 2 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 1 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "b mod 1 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 5 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 5 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 4 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 4 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 3 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 3 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 2 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 2 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 1 chance": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 1 param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 5 max": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 5 min": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 4 max": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 4 min": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 3 max": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "c mod 3 min": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

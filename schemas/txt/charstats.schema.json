@@ -1,6 +1,6 @@
 {
   "file": "charstats.txt",
-  "description": "Character class base stats \u2014 starting attributes, growth rates, and default equipment.",
+  "description": "Character class base stats — starting attributes, growth rates, and default equipment.",
   "columns": {
     "class": {
       "type": "enum",
@@ -13,179 +13,209 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Character class identifier"
+      "description": "Character class identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "str": {
       "type": "integer",
       "min": 10,
       "max": 30,
-      "description": "Base strength"
+      "description": "Base strength. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dex": {
       "type": "integer",
       "min": 20,
       "max": 25,
-      "description": "Base dexterity"
+      "description": "Base dexterity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "int": {
       "type": "integer",
       "min": 10,
       "max": 35,
-      "description": "Starting energy"
+      "description": "Starting energy. Not read by 1.13c engine",
+      "deprecated": true
     },
     "vit": {
       "type": "integer",
       "min": 10,
       "max": 25,
-      "description": "Starting vitality"
+      "description": "Starting vitality. Not read by 1.13c engine",
+      "deprecated": true
     },
     "tot": {
       "type": "integer",
       "min": 80,
       "max": 85,
-      "description": "Total starting stat points allocated"
+      "description": "Total starting stat points allocated. Not read by 1.13c engine",
+      "deprecated": true
     },
     "hpadd": {
       "type": "integer",
       "min": 30,
       "max": 30,
-      "description": "Bonus starting hit points"
+      "description": "Bonus starting hit points. Not read by 1.13c engine",
+      "deprecated": true
     },
     "PercentStr": {
       "type": "integer",
       "min": 20,
       "max": 35,
-      "description": "Percentage of auto-allocated stat points to strength"
+      "description": "Percentage of auto-allocated stat points to strength. Not read by 1.13c engine",
+      "deprecated": true
     },
     "PercentDex": {
       "type": "integer",
       "min": 20,
       "max": 35,
-      "description": "Percentage of auto-allocated stat points to dexterity"
+      "description": "Percentage of auto-allocated stat points to dexterity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "PercentInt": {
       "type": "integer",
       "min": 10,
       "max": 30,
-      "description": "Percentage of auto-allocated stat points to energy"
+      "description": "Percentage of auto-allocated stat points to energy. Not read by 1.13c engine",
+      "deprecated": true
     },
     "PercentVit": {
       "type": "integer",
       "min": 15,
       "max": 30,
-      "description": "Percentage of auto-allocated stat points to vitality"
+      "description": "Percentage of auto-allocated stat points to vitality. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ManaRegen": {
       "type": "integer",
       "min": 120,
       "max": 120,
-      "description": "Mana regeneration time (seconds per full regen)"
+      "description": "Mana regeneration time (seconds per full regen)",
+      "engineVerified": true
     },
     "ToHitFactor": {
       "type": "integer",
       "min": 80,
       "max": 120,
-      "description": "Starting attack rating"
+      "description": "Starting attack rating",
+      "engineVerified": true
     },
     "WalkVelocity": {
       "type": "integer",
       "min": 7,
       "max": 7,
-      "description": "Walk movement speed"
+      "description": "Walk movement speed",
+      "engineVerified": true
     },
     "RunVelocity": {
       "type": "integer",
       "min": 11,
       "max": 11,
-      "description": "Run movement speed"
+      "description": "Run movement speed",
+      "engineVerified": true
     },
     "RunDrain": {
       "type": "integer",
       "min": 20,
       "max": 20,
-      "description": "Stamina drain rate while running"
+      "description": "Stamina drain rate while running",
+      "engineVerified": true
     },
     "Comment": {
       "type": "string",
-      "description": "Developer comment"
+      "description": "Developer comment. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LifePerLevel": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "HP gained per level (fourths)"
+      "description": "HP gained per level (fourths)",
+      "engineVerified": true
     },
     "StaminaPerLevel": {
       "type": "integer",
       "min": 4,
       "max": 4,
-      "description": "Stamina gained per level (fourths)"
+      "description": "Stamina gained per level (fourths)",
+      "engineVerified": true
     },
     "ManaPerLevel": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "Mana gained per level (fourths)"
+      "description": "Mana gained per level (fourths)",
+      "engineVerified": true
     },
     "LifePerVitality": {
       "type": "integer",
       "min": 8,
       "max": 16,
-      "description": "HP per vitality point (fourths)"
+      "description": "HP per vitality point (fourths)",
+      "engineVerified": true
     },
     "StaminaPerVitality": {
       "type": "integer",
       "min": 4,
       "max": 4,
-      "description": "Stamina per vitality point (fourths)"
+      "description": "Stamina per vitality point (fourths)",
+      "engineVerified": true
     },
     "ManaPerMagic": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "Mana per energy point (fourths)"
+      "description": "Mana per energy point (fourths)",
+      "engineVerified": true
     },
     "#walk": {
       "type": "integer",
       "min": 6,
       "max": 9,
-      "description": "Animation frame count for walking"
+      "description": "Animation frame count for walking. Not read by 1.13c engine",
+      "deprecated": true
     },
     "#run": {
       "type": "integer",
       "min": 4,
       "max": 5,
-      "description": "Animation frame count for running"
+      "description": "Animation frame count for running. Not read by 1.13c engine",
+      "deprecated": true
     },
     "#swing": {
       "type": "integer",
       "min": 15,
       "max": 20,
-      "description": "Animation frame count for melee swing"
+      "description": "Animation frame count for melee swing. Not read by 1.13c engine",
+      "deprecated": true
     },
     "#spell": {
       "type": "integer",
       "min": 14,
       "max": 22,
-      "description": "Animation frame count for spell casting"
+      "description": "Animation frame count for spell casting. Not read by 1.13c engine",
+      "deprecated": true
     },
     "#gethit": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "Animation frame count for getting hit"
+      "description": "Animation frame count for getting hit. Not read by 1.13c engine",
+      "deprecated": true
     },
     "#bow": {
       "type": "integer",
       "min": 14,
       "max": 18,
-      "description": "Animation frame count for bow attack"
+      "description": "Animation frame count for bow attack. Not read by 1.13c engine",
+      "deprecated": true
     },
     "BlockFactor": {
       "type": "integer",
       "min": 20,
       "max": 30,
-      "description": "Base block percentage"
+      "description": "Base block percentage",
+      "engineVerified": true
     },
     "StartSkill": {
       "type": "ref",
@@ -193,11 +223,13 @@
       "max": 1,
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Default right-hand skill"
+      "description": "Default right-hand skill",
+      "engineVerified": true
     },
-    "baseWClass": {
+    "basewclass": {
       "type": "string",
-      "description": "Base weapon class for animations"
+      "description": "Base weapon class for animations",
+      "engineVerified": true
     },
     "item1": {
       "type": "enum",
@@ -208,19 +240,22 @@
         "sst",
         "wnd"
       ],
-      "description": "Starting item 1 code"
+      "description": "Starting item 1 code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item1loc": {
       "type": "integer",
       "min": 4,
       "max": 4,
-      "description": "Item 1 equipment slot"
+      "description": "Item 1 equipment slot. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item1count": {
       "type": "integer",
-      "description": "Item 1 stack quantity",
+      "description": "Item 1 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item2": {
       "type": "enum",
@@ -228,19 +263,22 @@
         "buc",
         "hp1"
       ],
-      "description": "Starting item 2 code"
+      "description": "Starting item 2 code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item2loc": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "Item 2 equipment slot"
+      "description": "Item 2 equipment slot. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item2count": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Item 2 stack quantity"
+      "description": "Item 2 stack quantity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item3": {
       "type": "enum",
@@ -248,19 +286,22 @@
         "hp1",
         "tsc"
       ],
-      "description": "Starting item 3 code"
+      "description": "Starting item 3 code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item3loc": {
       "type": "integer",
-      "description": "Item 3 equipment slot",
+      "description": "Item 3 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item3count": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Item 3 stack quantity"
+      "description": "Item 3 stack quantity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item4": {
       "type": "enum",
@@ -268,19 +309,22 @@
         "isc",
         "tsc"
       ],
-      "description": "Starting item 4 code"
+      "description": "Starting item 4 code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item4loc": {
       "type": "integer",
-      "description": "Item 4 equipment slot",
+      "description": "Item 4 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item4count": {
       "type": "integer",
-      "description": "Item 4 stack quantity",
+      "description": "Item 4 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item5": {
       "type": "enum",
@@ -288,99 +332,233 @@
         "0",
         "isc"
       ],
-      "description": "Starting item 5 code"
+      "description": "Starting item 5 code. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item5loc": {
       "type": "integer",
-      "description": "Item 5 equipment slot",
+      "description": "Item 5 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item5count": {
       "type": "integer",
-      "description": "Item 5 stack quantity",
+      "description": "Item 5 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item6": {
       "type": "string",
-      "description": "Starting item 6 code (empty if unused)"
+      "description": "Starting item 6 code (empty if unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "item6loc": {
       "type": "integer",
-      "description": "Item 6 equipment slot",
+      "description": "Item 6 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item6count": {
       "type": "integer",
-      "description": "Item 6 stack quantity",
+      "description": "Item 6 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item7": {
       "type": "string",
-      "description": "Starting item 7 code (empty if unused)"
+      "description": "Starting item 7 code (empty if unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "item7loc": {
       "type": "integer",
-      "description": "Item 7 equipment slot",
+      "description": "Item 7 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item7count": {
       "type": "integer",
-      "description": "Item 7 stack quantity",
+      "description": "Item 7 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item8": {
       "type": "string",
-      "description": "Starting item 8 code (empty if unused)"
+      "description": "Starting item 8 code (empty if unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "item8loc": {
       "type": "integer",
-      "description": "Item 8 equipment slot",
+      "description": "Item 8 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item8count": {
       "type": "integer",
-      "description": "Item 8 stack quantity",
+      "description": "Item 8 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item9": {
       "type": "string",
-      "description": "Starting item 9 code (empty if unused)"
+      "description": "Starting item 9 code (empty if unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "item9loc": {
       "type": "integer",
-      "description": "Item 9 equipment slot",
+      "description": "Item 9 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item9count": {
       "type": "integer",
-      "description": "Item 9 stack quantity",
+      "description": "Item 9 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item10": {
       "type": "string",
-      "description": "Starting item 10 code (empty if unused)"
+      "description": "Starting item 10 code (empty if unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "item10loc": {
       "type": "integer",
-      "description": "Item 10 equipment slot",
+      "description": "Item 10 equipment slot. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item10count": {
       "type": "integer",
-      "description": "Item 10 stack quantity",
+      "description": "Item 10 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
+    },
+    "skillcolumn": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "skillrow": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "skillpage": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "sklvl": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ExpRatio": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StatPerLevel": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 10": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 9": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 8": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 7": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 6": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 5": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 4": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 3": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 2": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Skill 1": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StrClassOnly": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StrSkillTab3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StrSkillTab2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StrSkillTab1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "StrAllSkills": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

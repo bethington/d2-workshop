@@ -6,101 +6,123 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Pet type name identifier, referenced by Skills.txt pettype column"
+      "description": "Pet type name identifier, referenced by Skills.txt pettype column",
+      "engineVerified": true
     },
     "idx": {
       "type": "integer",
       "required": true,
       "unique": true,
-      "description": "Numeric index for internal pet type lookup"
+      "description": "Numeric index for internal pet type lookup. Not read by 1.13c engine",
+      "deprecated": true
     },
     "group": {
       "type": "integer",
-      "description": "Pet group ID (pets in the same group are mutually exclusive)"
+      "description": "Pet group ID (pets in the same group are mutually exclusive). Not read by 1.13c engine",
+      "deprecated": true
     },
     "basemax": {
       "type": "integer",
-      "description": "Base maximum number of this pet type (for oskill/set bonus pet persistence)"
+      "description": "Base maximum number of this pet type (for oskill/set bonus pet persistence). Not read by 1.13c engine",
+      "deprecated": true
     },
     "warp": {
       "type": "boolean",
-      "description": "Pet warps/teleports to follow the player"
+      "description": "Pet warps/teleports to follow the player. Not read by 1.13c engine",
+      "deprecated": true
     },
     "range": {
       "type": "boolean",
-      "description": "Pet has ranged attack capability"
+      "description": "Pet has ranged attack capability. Not read by 1.13c engine",
+      "deprecated": true
     },
     "partysend": {
       "type": "boolean",
-      "description": "Pet responds to party commands"
+      "description": "Pet responds to party commands. Not read by 1.13c engine",
+      "deprecated": true
     },
     "unsummon": {
       "type": "boolean",
-      "description": "Pet can be unsummoned by the player"
+      "description": "Pet can be unsummoned by the player. Not read by 1.13c engine",
+      "deprecated": true
     },
     "automap": {
       "type": "boolean",
-      "description": "Pet appears on the automap"
+      "description": "Pet appears on the automap. Not read by 1.13c engine",
+      "deprecated": true
     },
     "name": {
       "type": "boolean",
-      "description": "Pet displays a name"
+      "description": "Pet displays a name. Not read by 1.13c engine",
+      "deprecated": true
     },
     "drawhp": {
       "type": "boolean",
-      "description": "Draw pet health bar in the UI"
+      "description": "Draw pet health bar in the UI. Not read by 1.13c engine",
+      "deprecated": true
     },
     "icontype": {
       "type": "integer",
-      "description": "Pet icon display type in the UI panel"
+      "description": "Pet icon display type in the UI panel. Not read by 1.13c engine",
+      "deprecated": true
     },
     "baseicon": {
       "type": "integer",
-      "description": "Base icon cell index for this pet type"
+      "description": "Base icon cell index for this pet type. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mclass1": {
       "type": "ref",
       "target": "monstats.txt",
       "targetColumn": "Class",
-      "description": "Monster class 1 that uses this pet icon"
+      "description": "Monster class 1 that uses this pet icon. Not read by 1.13c engine",
+      "deprecated": true
     },
     "micon1": {
       "type": "integer",
-      "description": "Icon cell index for monster class 1"
+      "description": "Icon cell index for monster class 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mclass2": {
       "type": "ref",
       "target": "monstats.txt",
       "targetColumn": "Class",
-      "description": "Monster class 2 that uses this pet icon"
+      "description": "Monster class 2 that uses this pet icon. Not read by 1.13c engine",
+      "deprecated": true
     },
     "micon2": {
       "type": "integer",
-      "description": "Icon cell index for monster class 2"
+      "description": "Icon cell index for monster class 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mclass3": {
       "type": "ref",
       "target": "monstats.txt",
       "targetColumn": "Class",
-      "description": "Monster class 3 that uses this pet icon"
+      "description": "Monster class 3 that uses this pet icon. Not read by 1.13c engine",
+      "deprecated": true
     },
     "micon3": {
       "type": "integer",
-      "description": "Icon cell index for monster class 3"
+      "description": "Icon cell index for monster class 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "mclass4": {
       "type": "ref",
       "target": "monstats.txt",
       "targetColumn": "Class",
-      "description": "Monster class 4 that uses this pet icon"
+      "description": "Monster class 4 that uses this pet icon. Not read by 1.13c engine",
+      "deprecated": true
     },
     "micon4": {
       "type": "integer",
-      "description": "Icon cell index for monster class 4"
+      "description": "Icon cell index for monster class 4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "eol": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game). Not read by 1.13c engine",
+      "deprecated": true
     }
   }
 }

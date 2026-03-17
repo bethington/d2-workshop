@@ -5,55 +5,65 @@
     "skill": {
       "type": "string",
       "required": true,
-      "description": "Internal skill name (used by other tables to reference this skill)"
+      "description": "Internal skill name (used by other tables to reference this skill). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Id": {
       "type": "integer",
       "required": true,
       "unique": true,
       "min": 0,
-      "description": "Unique numeric skill ID"
+      "description": "Unique numeric skill ID. Not read by 1.13c engine",
+      "deprecated": true
     },
     "charclass": {
       "type": "ref",
       "target": "PlayerClass.txt",
       "targetColumn": "Player Class",
-      "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama)."
+      "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama).",
+      "engineVerified": true
     },
     "skilldesc": {
       "type": "ref",
       "target": "skilldesc.txt",
       "targetColumn": "skilldesc",
-      "description": "Reference to skill description entry"
+      "description": "Reference to skill description entry. Not read by 1.13c engine",
+      "deprecated": true
     },
     "srvstfunc": {
       "type": "integer",
       "min": 0,
-      "description": "Server start function ID - executed when skill is first activated"
+      "description": "Server start function ID - executed when skill is first activated",
+      "engineVerified": true
     },
     "srvdofunc": {
       "type": "integer",
       "min": 0,
-      "description": "Server do function ID - executed when start function completes or periodically while held"
+      "description": "Server do function ID - executed when start function completes or periodically while held",
+      "engineVerified": true
     },
     "prgstack": {
       "type": "boolean",
-      "description": "Whether progressive charges stack (1 = yes)"
+      "description": "Whether progressive charges stack (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "srvprgfunc1": {
       "type": "integer",
       "min": 0,
-      "description": "Server progressive function 1 - called when charges are released"
+      "description": "Server progressive function 1 - called when charges are released",
+      "engineVerified": true
     },
     "srvprgfunc2": {
       "type": "integer",
       "min": 0,
-      "description": "Server progressive function 2"
+      "description": "Server progressive function 2",
+      "engineVerified": true
     },
     "srvprgfunc3": {
       "type": "integer",
       "min": 0,
-      "description": "Server progressive function 3"
+      "description": "Server progressive function 3",
+      "engineVerified": true
     },
     "prgcalc1": {
       "type": "enum",
@@ -62,7 +72,8 @@
         "par1+lvl/par2+skill('Fire Trauma'.blvl)/3",
         "par4"
       ],
-      "description": "Calculation for progressive function 1 parameter"
+      "description": "Calculation for progressive function 1 parameter",
+      "engineVerified": true
     },
     "prgcalc2": {
       "type": "enum",
@@ -71,7 +82,8 @@
         "par1",
         "par6"
       ],
-      "description": "Calculation for progressive function 2 parameter"
+      "description": "Calculation for progressive function 2 parameter",
+      "engineVerified": true
     },
     "prgcalc3": {
       "type": "enum",
@@ -81,44 +93,52 @@
         "par2",
         "par5"
       ],
-      "description": "Calculation for progressive function 3 parameter"
+      "description": "Calculation for progressive function 3 parameter",
+      "engineVerified": true
     },
     "prgdam": {
       "type": "integer",
       "min": 0,
-      "description": "Progressive damage type (1=other/physical, 2=fire, 3=lightning, 4=magic)"
+      "description": "Progressive damage type (1=other/physical, 2=fire, 3=lightning, 4=magic)",
+      "engineVerified": true
     },
     "srvmissile": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Server-side missile spawned by skill"
+      "description": "Server-side missile spawned by skill",
+      "engineVerified": true
     },
     "decquant": {
       "type": "boolean",
-      "description": "Decreases ammunition quantity when used (1 = yes)"
+      "description": "Decreases ammunition quantity when used (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "lob": {
       "type": "boolean",
-      "description": "Missile uses lobbed arc trajectory (1 = yes)"
+      "description": "Missile uses lobbed arc trajectory (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "srvmissilea": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Server-side missile A (alternate)"
+      "description": "Server-side missile A (alternate)",
+      "engineVerified": true
     },
     "srvmissileb": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Server-side missile B (alternate)"
+      "description": "Server-side missile B (alternate)",
+      "engineVerified": true
     },
     "srvmissilec": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Server-side missile C (alternate)"
+      "description": "Server-side missile C (alternate)",
+      "engineVerified": true
     },
     "srvoverlay": {
       "type": "enum",
@@ -132,68 +152,81 @@
         "receiving",
         "spawnedflames"
       ],
-      "description": "Server-side overlay effect applied when skill is used"
+      "description": "Server-side overlay effect applied when skill is used",
+      "engineVerified": true
     },
     "aurafilter": {
       "type": "integer",
       "min": 0,
-      "description": "Binary filter controlling which unit types are affected by this aura"
+      "description": "Binary filter controlling which unit types are affected by this aura",
+      "engineVerified": true
     },
     "aurastate": {
       "type": "ref",
       "target": "states.txt",
       "targetColumn": "state",
-      "description": "State applied to the caster by this aura"
+      "description": "State applied to the caster by this aura",
+      "engineVerified": true
     },
     "auratargetstate": {
       "type": "ref",
       "target": "states.txt",
       "targetColumn": "state",
-      "description": "State applied to targets within aura range"
+      "description": "State applied to targets within aura range",
+      "engineVerified": true
     },
     "auralencalc": {
       "type": "string",
-      "description": "Calculation for aura length/duration"
+      "description": "Calculation for aura length/duration",
+      "engineVerified": true
     },
     "aurarangecalc": {
       "type": "string",
-      "description": "Calculation for aura radius in subtiles"
+      "description": "Calculation for aura radius in subtiles",
+      "engineVerified": true
     },
     "aurastat1": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 1 granted by aura"
+      "description": "Stat 1 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc1": {
       "type": "string",
-      "description": "Calculation for aura stat 1 value"
+      "description": "Calculation for aura stat 1 value",
+      "engineVerified": true
     },
     "aurastat2": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 2 granted by aura"
+      "description": "Stat 2 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc2": {
       "type": "string",
-      "description": "Calculation for aura stat 2 value"
+      "description": "Calculation for aura stat 2 value",
+      "engineVerified": true
     },
     "aurastat3": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 3 granted by aura"
+      "description": "Stat 3 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc3": {
       "type": "string",
-      "description": "Calculation for aura stat 3 value"
+      "description": "Calculation for aura stat 3 value",
+      "engineVerified": true
     },
     "aurastat4": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 4 granted by aura"
+      "description": "Stat 4 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc4": {
       "type": "enum",
@@ -211,13 +244,15 @@
         "par5",
         "par6"
       ],
-      "description": "Calculation for aura stat 4 value"
+      "description": "Calculation for aura stat 4 value",
+      "engineVerified": true
     },
     "aurastat5": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 5 granted by aura"
+      "description": "Stat 5 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc5": {
       "type": "enum",
@@ -226,13 +261,15 @@
         "\"min((lvl+skill('Dopplezon'.blvl))*par7,85)\"",
         "dm34"
       ],
-      "description": "Calculation for aura stat 5 value"
+      "description": "Calculation for aura stat 5 value",
+      "engineVerified": true
     },
     "aurastat6": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Stat 6 granted by aura"
+      "description": "Stat 6 granted by aura",
+      "engineVerified": true
     },
     "aurastatcalc6": {
       "type": "enum",
@@ -241,7 +278,8 @@
         "\"min((lvl+skill('Dopplezon'.blvl))*par7,85)\"",
         "ln78"
       ],
-      "description": "Calculation for aura stat 6 value"
+      "description": "Calculation for aura stat 6 value",
+      "engineVerified": true
     },
     "auraevent1": {
       "type": "enum",
@@ -253,12 +291,14 @@
         "domeleedamage",
         "hitbymissile"
       ],
-      "description": "Event 1 that triggers the aura event function"
+      "description": "Event 1 that triggers the aura event function",
+      "engineVerified": true
     },
     "auraeventfunc1": {
       "type": "integer",
       "min": 0,
-      "description": "Function ID called when aura event 1 triggers"
+      "description": "Function ID called when aura event 1 triggers",
+      "engineVerified": true
     },
     "auraevent2": {
       "type": "enum",
@@ -267,12 +307,14 @@
         "damagedbymissile",
         "damagedinmelee"
       ],
-      "description": "Event 2 that triggers the aura event function"
+      "description": "Event 2 that triggers the aura event function",
+      "engineVerified": true
     },
     "auraeventfunc2": {
       "type": "integer",
       "min": 0,
-      "description": "Function ID called when aura event 2 triggers"
+      "description": "Function ID called when aura event 2 triggers",
+      "engineVerified": true
     },
     "auraevent3": {
       "type": "enum",
@@ -280,26 +322,31 @@
         "",
         "damagedbymissile"
       ],
-      "description": "Event 3 that triggers the aura event function"
+      "description": "Event 3 that triggers the aura event function",
+      "engineVerified": true
     },
     "auraeventfunc3": {
       "type": "integer",
       "min": 0,
-      "description": "Function ID called when aura event 3 triggers"
+      "description": "Function ID called when aura event 3 triggers",
+      "engineVerified": true
     },
     "auratgtevent": {
       "type": "string",
-      "description": "Event triggered on aura targets"
+      "description": "Event triggered on aura targets",
+      "engineVerified": true
     },
     "auratgteventfunc": {
       "type": "string",
-      "description": "Function ID called when aura target event triggers"
+      "description": "Function ID called when aura target event triggers",
+      "engineVerified": true
     },
     "passivestate": {
       "type": "ref",
       "target": "states.txt",
       "targetColumn": "state",
-      "description": "State applied when this passive skill is learned"
+      "description": "State applied when this passive skill is learned",
+      "engineVerified": true
     },
     "passiveitype": {
       "type": "enum",
@@ -313,23 +360,27 @@
         "swor",
         "thro"
       ],
-      "description": "Item type code restricting passive to specific weapon types (ref ItemTypes.txt)"
+      "description": "Item type code restricting passive to specific weapon types (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "passivestat1": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Passive stat 1 modified by this skill"
+      "description": "Passive stat 1 modified by this skill",
+      "engineVerified": true
     },
     "passivecalc1": {
       "type": "string",
-      "description": "Calculation for passive stat 1 value"
+      "description": "Calculation for passive stat 1 value",
+      "engineVerified": true
     },
     "passivestat2": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Passive stat 2 modified by this skill"
+      "description": "Passive stat 2 modified by this skill",
+      "engineVerified": true
     },
     "passivecalc2": {
       "type": "enum",
@@ -349,13 +400,15 @@
         "stat('passive_fire_pierce'.accr)",
         "toht"
       ],
-      "description": "Calculation for passive stat 2 value"
+      "description": "Calculation for passive stat 2 value",
+      "engineVerified": true
     },
     "passivestat3": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Passive stat 3 modified by this skill"
+      "description": "Passive stat 3 modified by this skill",
+      "engineVerified": true
     },
     "passivecalc3": {
       "type": "enum",
@@ -372,13 +425,15 @@
         "skill('Summon Grizzly'.ln12)",
         "skill('Summon Spirit Wolf'.ln56)"
       ],
-      "description": "Calculation for passive stat 3 value"
+      "description": "Calculation for passive stat 3 value",
+      "engineVerified": true
     },
     "passivestat4": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Passive stat 4 modified by this skill"
+      "description": "Passive stat 4 modified by this skill",
+      "engineVerified": true
     },
     "passivecalc4": {
       "type": "enum",
@@ -390,37 +445,44 @@
         "dm34",
         "skill('IronGolem'.blvl)*skill('IronGolem'.par8)"
       ],
-      "description": "Calculation for passive stat 4 value"
+      "description": "Calculation for passive stat 4 value",
+      "engineVerified": true
     },
     "passivestat5": {
       "type": "ref",
       "target": "ItemStatCost.txt",
       "targetColumn": "Stat",
-      "description": "Passive stat 5 modified by this skill"
+      "description": "Passive stat 5 modified by this skill",
+      "engineVerified": true
     },
     "passivecalc5": {
       "type": "string",
-      "description": "Calculation for passive stat 5 value"
+      "description": "Calculation for passive stat 5 value",
+      "engineVerified": true
     },
     "passiveevent": {
       "type": "string",
-      "description": "Event that triggers the passive event function"
+      "description": "Event that triggers the passive event function",
+      "engineVerified": true
     },
     "passiveeventfunc": {
       "type": "string",
-      "description": "Function ID called when passive event triggers"
+      "description": "Function ID called when passive event triggers",
+      "engineVerified": true
     },
     "summon": {
       "type": "ref",
       "target": "monstats.txt",
       "targetColumn": "Id",
-      "description": "Monster summoned by this skill (ref monstats.txt)"
+      "description": "Monster summoned by this skill (ref monstats.txt)",
+      "engineVerified": true
     },
     "pettype": {
       "type": "ref",
       "target": "PetType.txt",
       "targetColumn": "pet type",
-      "description": "Summon group controlling coexistence, UI icon, and warp behavior"
+      "description": "Summon group controlling coexistence, UI icon, and warp behavior. Not read by 1.13c engine",
+      "deprecated": true
     },
     "petmax": {
       "type": "enum",
@@ -434,7 +496,8 @@
         "99",
         "lvl"
       ],
-      "description": "Maximum number of summons allowed (can be a calculation)"
+      "description": "Maximum number of summons allowed (can be a calculation). Not read by 1.13c engine",
+      "deprecated": true
     },
     "summode": {
       "type": "enum",
@@ -444,13 +507,15 @@
         "S1",
         "S2"
       ],
-      "description": "Animation mode the summon plays when created (e.g. NU, S1, S2)"
+      "description": "Animation mode the summon plays when created (e.g. NU, S1, S2)",
+      "engineVerified": true
     },
     "sumskill1": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Skill 1 granted to the summoned creature"
+      "description": "Skill 1 granted to the summoned creature",
+      "engineVerified": true
     },
     "sumsk1calc": {
       "type": "enum",
@@ -461,13 +526,15 @@
         "skill('Dodge'.blvl)",
         "skill('Skeleton Mastery'.lvl) + ((lvl < 4)?0:((lvl-2)/2))"
       ],
-      "description": "Skill level calculation for summon skill 1"
+      "description": "Skill level calculation for summon skill 1",
+      "engineVerified": true
     },
     "sumskill2": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Skill 2 granted to the summoned creature"
+      "description": "Skill 2 granted to the summoned creature",
+      "engineVerified": true
     },
     "sumsk2calc": {
       "type": "enum",
@@ -479,13 +546,15 @@
         "skill('Fire Trauma'.blvl)",
         "skill('Shock Field'.blvl)"
       ],
-      "description": "Skill level calculation for summon skill 2"
+      "description": "Skill level calculation for summon skill 2",
+      "engineVerified": true
     },
     "sumskill3": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Skill 3 granted to the summoned creature"
+      "description": "Skill 3 granted to the summoned creature",
+      "engineVerified": true
     },
     "sumsk3calc": {
       "type": "enum",
@@ -499,13 +568,15 @@
         "skill('Shock Field'.blvl)",
         "skill('Wake of Fire Sentry'.blvl)"
       ],
-      "description": "Skill level calculation for summon skill 3"
+      "description": "Skill level calculation for summon skill 3",
+      "engineVerified": true
     },
     "sumskill4": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Skill 4 granted to the summoned creature"
+      "description": "Skill 4 granted to the summoned creature",
+      "engineVerified": true
     },
     "sumsk4calc": {
       "type": "enum",
@@ -515,13 +586,15 @@
         "skill('Death Sentry'.blvl)",
         "skill('Lightning Sentry'.blvl)"
       ],
-      "description": "Skill level calculation for summon skill 4"
+      "description": "Skill level calculation for summon skill 4",
+      "engineVerified": true
     },
     "sumskill5": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Skill 5 granted to the summoned creature"
+      "description": "Skill 5 granted to the summoned creature",
+      "engineVerified": true
     },
     "sumsk5calc": {
       "type": "enum",
@@ -529,12 +602,14 @@
         "",
         "skill('Death Sentry'.blvl)"
       ],
-      "description": "Skill level calculation for summon skill 5"
+      "description": "Skill level calculation for summon skill 5",
+      "engineVerified": true
     },
     "sumumod": {
       "type": "integer",
       "min": 0,
-      "description": "Unique modifier applied to summoned creature"
+      "description": "Unique modifier applied to summoned creature",
+      "engineVerified": true
     },
     "sumoverlay": {
       "type": "enum",
@@ -543,15 +618,18 @@
         "dopllezon_appear",
         "spawnedminion"
       ],
-      "description": "Overlay effect displayed when summon appears"
+      "description": "Overlay effect displayed when summon appears",
+      "engineVerified": true
     },
     "stsuccessonly": {
       "type": "boolean",
-      "description": "Sound plays only on successful cast (1 = yes)"
+      "description": "Sound plays only on successful cast (1 = yes)",
+      "engineVerified": true
     },
     "stsound": {
       "type": "string",
-      "description": "Sound played when skill starts casting"
+      "description": "Sound played when skill starts casting",
+      "engineVerified": true
     },
     "stsoundclass": {
       "type": "enum",
@@ -572,15 +650,18 @@
         "barbarian_warcry_1",
         "barbarian_whirlwind"
       ],
-      "description": "Class-specific sound played on skill start"
+      "description": "Class-specific sound played on skill start",
+      "engineVerified": true
     },
     "stsounddelay": {
       "type": "boolean",
-      "description": "Whether the start sound is delayed (1 = yes)"
+      "description": "Whether the start sound is delayed (1 = yes)",
+      "engineVerified": true
     },
     "weaponsnd": {
       "type": "boolean",
-      "description": "Play weapon swing sound (1 = yes)"
+      "description": "Play weapon swing sound (1 = yes)",
+      "engineVerified": true
     },
     "dosound": {
       "type": "enum",
@@ -597,7 +678,8 @@
         "weapon_giant_1",
         "weapon_throw_1"
       ],
-      "description": "Sound played when skill do function executes"
+      "description": "Sound played when skill do function executes",
+      "engineVerified": true
     },
     "dosound a": {
       "type": "enum",
@@ -607,7 +689,8 @@
         "paladin_charge",
         "weapon_1ht_1"
       ],
-      "description": "Alternate do sound A"
+      "description": "Alternate do sound A",
+      "engineVerified": true
     },
     "dosound b": {
       "type": "enum",
@@ -616,7 +699,8 @@
         "druidpod_neutral_1",
         "weapon_2ht_1"
       ],
-      "description": "Alternate do sound B"
+      "description": "Alternate do sound B",
+      "engineVerified": true
     },
     "tgtoverlay": {
       "type": "enum",
@@ -628,7 +712,8 @@
         "psychic_hammer_hit",
         "receiving"
       ],
-      "description": "Overlay effect displayed on target"
+      "description": "Overlay effect displayed on target",
+      "engineVerified": true
     },
     "tgtsound": {
       "type": "enum",
@@ -640,7 +725,8 @@
         "necromancer_revive_target",
         "paladin_holybolt_impact_1"
       ],
-      "description": "Sound played on target when hit by this skill"
+      "description": "Sound played on target when hit by this skill",
+      "engineVerified": true
     },
     "prgoverlay": {
       "type": "enum",
@@ -653,7 +739,8 @@
         "steallife",
         "tigerstrike1"
       ],
-      "description": "Overlay effect for progressive/charge-up display"
+      "description": "Overlay effect for progressive/charge-up display",
+      "engineVerified": true
     },
     "prgsound": {
       "type": "enum",
@@ -666,11 +753,13 @@
         "monster_baal_taunt_1",
         "necromancer_corpseexp_1"
       ],
-      "description": "Sound played during progressive/charge-up"
+      "description": "Sound played during progressive/charge-up",
+      "engineVerified": true
     },
     "castoverlay": {
       "type": "string",
-      "description": "Overlay effect displayed on caster during cast"
+      "description": "Overlay effect displayed on caster during cast",
+      "engineVerified": true
     },
     "cltoverlaya": {
       "type": "enum",
@@ -682,7 +771,8 @@
         "shiverarmor_hit",
         "wolf_into"
       ],
-      "description": "Client overlay A (e.g. shapeshift transformation in)"
+      "description": "Client overlay A (e.g. shapeshift transformation in)",
+      "engineVerified": true
     },
     "cltoverlayb": {
       "type": "enum",
@@ -691,56 +781,66 @@
         "bear_undo",
         "wolf_undo"
       ],
-      "description": "Client overlay B (e.g. shapeshift transformation out)"
+      "description": "Client overlay B (e.g. shapeshift transformation out)",
+      "engineVerified": true
     },
     "cltstfunc": {
       "type": "integer",
       "min": 0,
-      "description": "Client start function ID - visual counterpart of srvstfunc"
+      "description": "Client start function ID - visual counterpart of srvstfunc",
+      "engineVerified": true
     },
     "cltdofunc": {
       "type": "integer",
       "min": 0,
-      "description": "Client do function ID - visual counterpart of srvdofunc"
+      "description": "Client do function ID - visual counterpart of srvdofunc",
+      "engineVerified": true
     },
     "cltprgfunc1": {
       "type": "integer",
       "min": 0,
-      "description": "Client progressive function 1 - visual effect for charge release"
+      "description": "Client progressive function 1 - visual effect for charge release",
+      "engineVerified": true
     },
     "cltprgfunc2": {
       "type": "integer",
       "min": 0,
-      "description": "Client progressive function 2"
+      "description": "Client progressive function 2",
+      "engineVerified": true
     },
     "cltprgfunc3": {
       "type": "integer",
       "min": 0,
-      "description": "Client progressive function 3"
+      "description": "Client progressive function 3",
+      "engineVerified": true
     },
     "cltmissile": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side missile (visual effect)"
+      "description": "Client-side missile (visual effect)",
+      "engineVerified": true
     },
     "cltmissilea": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side missile A (alternate visual)"
+      "description": "Client-side missile A (alternate visual)",
+      "engineVerified": true
     },
     "cltmissileb": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side missile B (alternate visual)"
+      "description": "Client-side missile B (alternate visual)",
+      "engineVerified": true
     },
     "cltmissilec": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side missile C (alternate visual)"
+      "description": "Client-side missile C (alternate visual)",
+      "engineVerified": true
     },
     "cltmissiled": {
       "type": "enum",
@@ -748,7 +848,8 @@
         "",
         "vine beast neutral"
       ],
-      "description": "Client-side missile D (alternate visual)"
+      "description": "Client-side missile D (alternate visual)",
+      "engineVerified": true
     },
     "cltcalc1": {
       "type": "enum",
@@ -766,7 +867,8 @@
         "par1 * (lvl-1)",
         "par5"
       ],
-      "description": "Client calculation 1 for visual parameters"
+      "description": "Client calculation 1 for visual parameters",
+      "engineVerified": true
     },
     "cltcalc2": {
       "type": "enum",
@@ -778,33 +880,40 @@
         "75",
         "lvl-1"
       ],
-      "description": "Client calculation 2 for visual parameters"
+      "description": "Client calculation 2 for visual parameters",
+      "engineVerified": true
     },
     "cltcalc3": {
       "type": "integer",
       "min": 0,
-      "description": "Client calculation 3 for visual parameters"
+      "description": "Client calculation 3 for visual parameters",
+      "engineVerified": true
     },
     "warp": {
       "type": "boolean",
-      "description": "Skill teleports the caster (1 = yes)"
+      "description": "Skill teleports the caster (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "immediate": {
       "type": "boolean",
-      "description": "Skill activates immediately without animation (1 = yes)"
+      "description": "Skill activates immediately without animation (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "enhanceable": {
       "type": "boolean",
-      "description": "Damage can be enhanced by +% damage modifiers (1 = yes)"
+      "description": "Damage can be enhanced by +% damage modifiers (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "attackrank": {
       "type": "integer",
       "min": 0,
-      "description": "Priority rank for attack rating calculation (0-10)"
+      "description": "Priority rank for attack rating calculation (0-10)",
+      "engineVerified": true
     },
     "noammo": {
       "type": "boolean",
-      "description": "Skill does not consume ammunition (1 = yes)"
+      "description": "Skill does not consume ammunition (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "range": {
       "type": "enum",
@@ -814,12 +923,14 @@
         "rng",
         "both"
       ],
-      "description": "Attack range type"
+      "description": "Attack range type",
+      "engineVerified": true
     },
     "weapsel": {
       "type": "integer",
       "min": 0,
-      "description": "Weapon selection mode (1=left, 2=either, 3=both, 4=armor)"
+      "description": "Weapon selection mode (1=left, 2=either, 3=both, 4=armor). Not read by 1.13c engine",
+      "deprecated": true
     },
     "itypea1": {
       "type": "enum",
@@ -835,7 +946,8 @@
         "thro",
         "weap"
       ],
-      "description": "Required item type A1 for weapon set A (ref ItemTypes.txt)"
+      "description": "Required item type A1 for weapon set A (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "itypea2": {
       "type": "enum",
@@ -843,11 +955,13 @@
         "",
         "miss"
       ],
-      "description": "Required item type A2 for weapon set A (ref ItemTypes.txt)"
+      "description": "Required item type A2 for weapon set A (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "itypea3": {
       "type": "string",
-      "description": "Required item type A3 for weapon set A (ref ItemTypes.txt)"
+      "description": "Required item type A3 for weapon set A (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "etypea1": {
       "type": "enum",
@@ -855,11 +969,13 @@
         "",
         "tpot"
       ],
-      "description": "Excluded item type A1 for weapon set A (ref ItemTypes.txt)"
+      "description": "Excluded item type A1 for weapon set A (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "etypea2": {
       "type": "string",
-      "description": "Excluded item type A2 for weapon set A (ref ItemTypes.txt)"
+      "description": "Excluded item type A2 for weapon set A (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "itypeb1": {
       "type": "enum",
@@ -869,31 +985,38 @@
         "mele",
         "thro"
       ],
-      "description": "Required item type B1 for weapon set B (ref ItemTypes.txt)"
+      "description": "Required item type B1 for weapon set B (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "itypeb2": {
       "type": "string",
-      "description": "Required item type B2 for weapon set B (ref ItemTypes.txt)"
+      "description": "Required item type B2 for weapon set B (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "itypeb3": {
       "type": "string",
-      "description": "Required item type B3 for weapon set B (ref ItemTypes.txt)"
+      "description": "Required item type B3 for weapon set B (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "etypeb1": {
       "type": "string",
-      "description": "Excluded item type B1 for weapon set B (ref ItemTypes.txt)"
+      "description": "Excluded item type B1 for weapon set B (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "etypeb2": {
       "type": "string",
-      "description": "Excluded item type B2 for weapon set B (ref ItemTypes.txt)"
+      "description": "Excluded item type B2 for weapon set B (ref ItemTypes.txt)",
+      "engineVerified": true
     },
     "anim": {
       "type": "string",
-      "description": "Animation mode (e.g., 'SC' for spell cast)"
+      "description": "Animation mode (e.g., 'SC' for spell cast). Not read by 1.13c engine",
+      "deprecated": true
     },
     "seqtrans": {
       "type": "string",
-      "description": "Sequence transition mode"
+      "description": "Sequence transition mode. Not read by 1.13c engine",
+      "deprecated": true
     },
     "monanim": {
       "type": "enum",
@@ -908,106 +1031,130 @@
         "SC",
         "xx"
       ],
-      "description": "Monster animation mode when using this skill"
+      "description": "Monster animation mode when using this skill",
+      "engineVerified": true
     },
     "seqnum": {
       "type": "integer",
       "min": 0,
-      "description": "Player animation sequence ID (used when anim=SQ)"
+      "description": "Player animation sequence ID (used when anim=SQ). Not read by 1.13c engine",
+      "deprecated": true
     },
     "seqinput": {
       "type": "integer",
       "min": 0,
-      "description": "Sequence input frame for transitioning between animations"
+      "description": "Sequence input frame for transitioning between animations. Not read by 1.13c engine",
+      "deprecated": true
     },
     "durability": {
       "type": "boolean",
-      "description": "Skill drains weapon durability (1 = yes)"
+      "description": "Skill drains weapon durability (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "UseAttackRate": {
       "type": "boolean",
-      "description": "Use weapon attack rate for animation speed (1 = yes)"
+      "description": "Use weapon attack rate for animation speed (1 = yes)",
+      "engineVerified": true
     },
     "LineOfSight": {
       "type": "integer",
       "min": 0,
-      "description": "Line-of-sight check mode (4 = standard wall check)"
+      "description": "Line-of-sight check mode (4 = standard wall check). Not read by 1.13c engine",
+      "deprecated": true
     },
     "TargetableOnly": {
       "type": "boolean",
-      "description": "Can only target targetable units (1 = yes)"
+      "description": "Can only target targetable units (1 = yes)",
+      "engineVerified": true
     },
     "SearchEnemyXY": {
       "type": "boolean",
-      "description": "Search for enemy at cursor position (1 = yes)"
+      "description": "Search for enemy at cursor position (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SearchEnemyNear": {
       "type": "boolean",
-      "description": "Search for nearest enemy to caster (1 = yes)"
+      "description": "Search for nearest enemy to caster (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SearchOpenXY": {
       "type": "boolean",
-      "description": "Search for open position at target XY (1 = yes)"
+      "description": "Search for open position at target XY (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SelectProc": {
       "type": "integer",
       "min": 0,
-      "description": "Target selection procedure (1-6, various targeting modes)"
+      "description": "Target selection procedure (1-6, various targeting modes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "TargetCorpse": {
       "type": "boolean",
-      "description": "Can target corpses (1 = yes)"
+      "description": "Can target corpses (1 = yes)",
+      "engineVerified": true
     },
     "TargetPet": {
       "type": "boolean",
-      "description": "Can target pets/summons (1 = yes)"
+      "description": "Can target pets/summons (1 = yes)",
+      "engineVerified": true
     },
     "TargetAlly": {
       "type": "boolean",
-      "description": "Can target allies (1 = yes)"
+      "description": "Can target allies (1 = yes)",
+      "engineVerified": true
     },
     "TargetItem": {
       "type": "boolean",
-      "description": "Can target items on ground (1 = yes)"
+      "description": "Can target items on ground (1 = yes)",
+      "engineVerified": true
     },
     "AttackNoMana": {
       "type": "boolean",
-      "description": "Attack continues even when mana runs out (1 = yes)"
+      "description": "Attack continues even when mana runs out (1 = yes)",
+      "engineVerified": true
     },
     "TgtPlaceCheck": {
       "type": "boolean",
-      "description": "Check if target location is valid placement (1 = yes)"
+      "description": "Check if target location is valid placement (1 = yes)",
+      "engineVerified": true
     },
     "ItemEffect": {
       "type": "integer",
       "min": 0,
-      "description": "Server function ID when skill is triggered by item (chance-to-cast)"
+      "description": "Server function ID when skill is triggered by item (chance-to-cast)",
+      "engineVerified": true
     },
     "ItemCltEffect": {
       "type": "integer",
       "min": 0,
-      "description": "Client function ID when skill is triggered by item"
+      "description": "Client function ID when skill is triggered by item",
+      "engineVerified": true
     },
     "ItemTgtDo": {
       "type": "boolean",
-      "description": "Apply item target do function (1 = yes)"
+      "description": "Apply item target do function (1 = yes)",
+      "engineVerified": true
     },
     "ItemTarget": {
       "type": "integer",
       "min": 0,
-      "description": "Item cast target (1=self, 2=random pos, 3=random corpse, 4=last attacker)"
+      "description": "Item cast target (1=self, 2=random pos, 3=random corpse, 4=last attacker)",
+      "engineVerified": true
     },
     "ItemCheckStart": {
       "type": "boolean",
-      "description": "Server-side check on item-triggered skill start (1 = yes)"
+      "description": "Server-side check on item-triggered skill start (1 = yes)",
+      "engineVerified": true
     },
     "ItemCltCheckStart": {
       "type": "boolean",
-      "description": "Client-side check on item-triggered skill start (1 = yes)"
+      "description": "Client-side check on item-triggered skill start (1 = yes)",
+      "engineVerified": true
     },
     "ItemCastSound": {
       "type": "string",
-      "description": "Sound played when skill is cast from an item"
+      "description": "Sound played when skill is cast from an item",
+      "engineVerified": true
     },
     "ItemCastOverlay": {
       "type": "enum",
@@ -1023,147 +1170,177 @@
         "ice_cast_3",
         "teleport"
       ],
-      "description": "Overlay effect when skill is cast from an item"
+      "description": "Overlay effect when skill is cast from an item",
+      "engineVerified": true
     },
     "skpoints": {
       "type": "string",
-      "description": "Skill points column (unused in 1.10+)"
+      "description": "Skill points column (unused in 1.10+). Not read by 1.13c engine",
+      "deprecated": true
     },
     "reqlevel": {
       "type": "integer",
       "min": 0,
       "max": 99,
-      "description": "Required character level to learn"
+      "description": "Required character level to learn",
+      "engineVerified": true
     },
     "maxlvl": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum skill level"
+      "description": "Maximum skill level",
+      "engineVerified": true
     },
     "reqstr": {
       "type": "string",
-      "description": "Required strength (unused, always blank)"
+      "description": "Required strength (unused, always blank). Not read by 1.13c engine",
+      "deprecated": true
     },
     "reqdex": {
       "type": "string",
-      "description": "Required dexterity (unused, always blank)"
+      "description": "Required dexterity (unused, always blank). Not read by 1.13c engine",
+      "deprecated": true
     },
     "reqint": {
       "type": "string",
-      "description": "Required intelligence (unused, always blank)"
+      "description": "Required intelligence (unused, always blank). Not read by 1.13c engine",
+      "deprecated": true
     },
     "reqvit": {
       "type": "string",
-      "description": "Required vitality (unused, always blank)"
+      "description": "Required vitality (unused, always blank). Not read by 1.13c engine",
+      "deprecated": true
     },
     "reqskill1": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Prerequisite skill 1"
+      "description": "Prerequisite skill 1",
+      "engineVerified": true
     },
     "reqskill2": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Prerequisite skill 2"
+      "description": "Prerequisite skill 2",
+      "engineVerified": true
     },
     "reqskill3": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Prerequisite skill 3"
+      "description": "Prerequisite skill 3",
+      "engineVerified": true
     },
     "restrict": {
       "type": "integer",
       "min": 0,
-      "description": "Class restriction (1=class-specific, 2=class-specific alternate)"
+      "description": "Class restriction (1=class-specific, 2=class-specific alternate). Not read by 1.13c engine",
+      "deprecated": true
     },
-    "State1": {
+    "state1": {
       "type": "enum",
       "values": [
         "",
         "bear",
         "wolf"
       ],
-      "description": "Required state 1 to use this skill (e.g. bear, wolf)"
+      "description": "Required state 1 to use this skill (e.g. bear, wolf)",
+      "engineVerified": true
     },
-    "State2": {
+    "state2": {
       "type": "enum",
       "values": [
         "",
         "bear"
       ],
-      "description": "Required state 2 to use this skill"
+      "description": "Required state 2 to use this skill",
+      "engineVerified": true
     },
-    "State3": {
+    "state3": {
       "type": "string",
-      "description": "Required state 3 to use this skill"
+      "description": "Required state 3 to use this skill",
+      "engineVerified": true
     },
     "delay": {
       "type": "integer",
       "min": 0,
-      "description": "Cooldown delay in frames (25 frames = 1 second)"
+      "description": "Cooldown delay in frames (25 frames = 1 second)",
+      "engineVerified": true
     },
     "leftskill": {
       "type": "boolean",
-      "description": "Can be assigned to left mouse button (1 = yes)"
+      "description": "Can be assigned to left mouse button (1 = yes)",
+      "engineVerified": true
     },
     "repeat": {
       "type": "boolean",
-      "description": "Skill repeats while mouse is held (1 = yes)"
+      "description": "Skill repeats while mouse is held (1 = yes)",
+      "engineVerified": true
     },
     "checkfunc": {
       "type": "integer",
       "min": 0,
-      "description": "Pre-cast check function ID (1-6, various conditions)"
+      "description": "Pre-cast check function ID (1-6, various conditions). Not read by 1.13c engine",
+      "deprecated": true
     },
     "nocostinstate": {
       "type": "boolean",
-      "description": "No mana cost while in a specific state (1 = yes)"
+      "description": "No mana cost while in a specific state (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "usemanaondo": {
       "type": "boolean",
-      "description": "Mana is spent on do function rather than start (1 = yes)"
+      "description": "Mana is spent on do function rather than start (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "startmana": {
       "type": "integer",
       "min": 0,
-      "description": "Initial mana cost multiplier on first cast"
+      "description": "Initial mana cost multiplier on first cast. Not read by 1.13c engine",
+      "deprecated": true
     },
     "minmana": {
       "type": "boolean",
-      "description": "Minimum mana cost (floor)"
+      "description": "Minimum mana cost (floor). Not read by 1.13c engine",
+      "deprecated": true
     },
     "manashift": {
       "type": "integer",
       "min": 0,
-      "description": "Bit shift for mana cost precision (higher = finer granularity)"
+      "description": "Bit shift for mana cost precision (higher = finer granularity). Not read by 1.13c engine",
+      "deprecated": true
     },
     "mana": {
       "type": "integer",
       "min": 0,
-      "description": "Base mana cost"
+      "description": "Base mana cost. Not read by 1.13c engine",
+      "deprecated": true
     },
     "lvlmana": {
       "type": "integer",
-      "description": "Additional mana cost per skill level"
+      "description": "Additional mana cost per skill level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "interrupt": {
       "type": "boolean",
-      "description": "Skill can be interrupted by hit recovery (1 = yes)"
+      "description": "Skill can be interrupted by hit recovery (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "InTown": {
       "type": "boolean",
-      "description": "Skill can be used in town (1 = yes)"
+      "description": "Skill can be used in town (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "aura": {
       "type": "boolean",
-      "description": "Skill is an aura (1 = yes)"
+      "description": "Skill is an aura (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "periodic": {
       "type": "boolean",
-      "description": "Skill triggers periodically while active (1 = yes)"
+      "description": "Skill triggers periodically while active (1 = yes)",
+      "engineVerified": true
     },
     "perdelay": {
       "type": "enum",
@@ -1173,35 +1350,43 @@
         "50",
         "par3"
       ],
-      "description": "Delay between periodic triggers (in frames or calculation)"
+      "description": "Delay between periodic triggers (in frames or calculation)",
+      "engineVerified": true
     },
     "finishing": {
       "type": "boolean",
-      "description": "Skill is a finishing move that consumes charges (1 = yes)"
+      "description": "Skill is a finishing move that consumes charges (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "passive": {
       "type": "boolean",
-      "description": "Skill is passive and always active (1 = yes)"
+      "description": "Skill is passive and always active (1 = yes)",
+      "engineVerified": true
     },
     "progressive": {
       "type": "boolean",
-      "description": "Skill is a charge-up/progressive skill (1 = yes)"
+      "description": "Skill is a charge-up/progressive skill (1 = yes)",
+      "engineVerified": true
     },
     "general": {
       "type": "boolean",
-      "description": "General skill available to all classes (1 = yes)"
+      "description": "General skill available to all classes (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "scroll": {
       "type": "boolean",
-      "description": "Skill can be used from a scroll (1 = yes)"
+      "description": "Skill can be used from a scroll (1 = yes)",
+      "engineVerified": true
     },
     "calc1": {
       "type": "string",
-      "description": "General calculation 1 used by skill functions"
+      "description": "General calculation 1 used by skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "calc2": {
       "type": "string",
-      "description": "General calculation 2 used by skill functions"
+      "description": "General calculation 2 used by skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "calc3": {
       "type": "enum",
@@ -1220,7 +1405,8 @@
         "par3",
         "par5"
       ],
-      "description": "General calculation 3 used by skill functions"
+      "description": "General calculation 3 used by skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "calc4": {
       "type": "enum",
@@ -1238,54 +1424,66 @@
         "par8 + skill('Lightning Sentry'.blvl)/4",
         "skill('Berserk'.blvl)"
       ],
-      "description": "General calculation 4 used by skill functions"
+      "description": "General calculation 4 used by skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param1": {
       "type": "integer",
-      "description": "Numeric parameter 1 passed to skill functions"
+      "description": "Numeric parameter 1 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param2": {
       "type": "integer",
-      "description": "Numeric parameter 2 passed to skill functions"
+      "description": "Numeric parameter 2 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param3": {
       "type": "integer",
-      "description": "Numeric parameter 3 passed to skill functions"
+      "description": "Numeric parameter 3 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param4": {
       "type": "integer",
-      "description": "Numeric parameter 4 passed to skill functions"
+      "description": "Numeric parameter 4 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param5": {
       "type": "integer",
-      "description": "Numeric parameter 5 passed to skill functions"
+      "description": "Numeric parameter 5 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param6": {
       "type": "integer",
-      "description": "Numeric parameter 6 passed to skill functions"
+      "description": "Numeric parameter 6 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param7": {
       "type": "integer",
-      "description": "Numeric parameter 7 passed to skill functions"
+      "description": "Numeric parameter 7 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Param8": {
       "type": "integer",
       "min": 0,
-      "description": "Numeric parameter 8 passed to skill functions"
+      "description": "Numeric parameter 8 passed to skill functions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InGame": {
       "type": "boolean",
-      "description": "Whether skill appears in-game (1 = yes)"
+      "description": "Whether skill appears in-game (1 = yes)",
+      "engineVerified": true
     },
     "ToHit": {
       "type": "integer",
       "min": 0,
-      "description": "Base attack rating bonus"
+      "description": "Base attack rating bonus. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LevToHit": {
       "type": "integer",
       "min": 0,
-      "description": "Attack rating bonus per skill level"
+      "description": "Attack rating bonus per skill level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ToHitCalc": {
       "type": "enum",
@@ -1295,96 +1493,115 @@
         "15+lvl*5+skill('Concentrate'.blvl)*par7",
         "40*lvl+40*skill('Penetrate'.blvl)"
       ],
-      "description": "Calculation overriding ToHit/LevToHit when present"
+      "description": "Calculation overriding ToHit/LevToHit when present. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ResultFlags": {
       "type": "integer",
       "min": 0,
-      "description": "Bitfield controlling hit results (1=knockback, 4=stun, etc.)"
+      "description": "Bitfield controlling hit results (1=knockback, 4=stun, etc.). Not read by 1.13c engine",
+      "deprecated": true
     },
     "HitFlags": {
       "type": "integer",
       "min": 0,
-      "description": "Bitfield for hit behavior flags"
+      "description": "Bitfield for hit behavior flags. Not read by 1.13c engine",
+      "deprecated": true
     },
     "HitClass": {
       "type": "integer",
       "min": 0,
-      "description": "Hit class controlling hit sound and visual effect"
+      "description": "Hit class controlling hit sound and visual effect. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Kick": {
       "type": "boolean",
-      "description": "Skill uses kick attack (1 = yes)"
+      "description": "Skill uses kick attack (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "HitShift": {
       "type": "integer",
       "min": 0,
-      "description": "Bit shift for damage precision (typically 8 = 256ths)"
+      "description": "Bit shift for damage precision (typically 8 = 256ths). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SrcDam": {
       "type": "integer",
       "min": 0,
-      "description": "Percentage of weapon damage applied (128=100%, 64=50%)"
+      "description": "Percentage of weapon damage applied (128=100%, 64=50%). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinDam": {
       "type": "integer",
       "min": 0,
-      "description": "Minimum physical damage at base level"
+      "description": "Minimum physical damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinLevDam1": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 2-8)"
+      "description": "Min damage bonus per level (levels 2-8). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinLevDam2": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 9-16)"
+      "description": "Min damage bonus per level (levels 9-16). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinLevDam3": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 17-22)"
+      "description": "Min damage bonus per level (levels 17-22). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinLevDam4": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 23-28)"
+      "description": "Min damage bonus per level (levels 23-28). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinLevDam5": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 29+)"
+      "description": "Min damage bonus per level (levels 29+). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxDam": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum physical damage at base level"
+      "description": "Maximum physical damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxLevDam1": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 2-8)"
+      "description": "Max damage bonus per level (levels 2-8). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxLevDam2": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 9-16)"
+      "description": "Max damage bonus per level (levels 9-16). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxLevDam3": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 17-22)"
+      "description": "Max damage bonus per level (levels 17-22). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxLevDam4": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 23-28)"
+      "description": "Max damage bonus per level (levels 23-28). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxLevDam5": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 29+)"
+      "description": "Max damage bonus per level (levels 29+). Not read by 1.13c engine",
+      "deprecated": true
     },
     "DmgSymPerCalc": {
       "type": "enum",
@@ -1397,97 +1614,116 @@
         "skill('Molten Boulder'.blvl)*par7",
         "skill('Volcano'.blvl)*par7"
       ],
-      "description": "Synergy calculation for physical damage bonus"
+      "description": "Synergy calculation for physical damage bonus. Not read by 1.13c engine",
+      "deprecated": true
     },
     "EType": {
       "type": "ref",
       "target": "elemtypes.txt",
       "targetColumn": "Code",
-      "description": "Elemental damage type"
+      "description": "Elemental damage type. Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMin": {
       "type": "integer",
       "min": 0,
-      "description": "Minimum elemental damage at base level"
+      "description": "Minimum elemental damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMinLev1": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 2-8)"
+      "description": "Min elemental damage bonus per level (levels 2-8). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMinLev2": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 9-16)"
+      "description": "Min elemental damage bonus per level (levels 9-16). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMinLev3": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 17-22)"
+      "description": "Min elemental damage bonus per level (levels 17-22). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMinLev4": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 23-28)"
+      "description": "Min elemental damage bonus per level (levels 23-28). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMinLev5": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 29+)"
+      "description": "Min elemental damage bonus per level (levels 29+). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMax": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum elemental damage at base level"
+      "description": "Maximum elemental damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMaxLev1": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 2-8)"
+      "description": "Max elemental damage bonus per level (levels 2-8). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMaxLev2": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 9-16)"
+      "description": "Max elemental damage bonus per level (levels 9-16). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMaxLev3": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 17-22)"
+      "description": "Max elemental damage bonus per level (levels 17-22). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMaxLev4": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 23-28)"
+      "description": "Max elemental damage bonus per level (levels 23-28). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EMaxLev5": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 29+)"
+      "description": "Max elemental damage bonus per level (levels 29+). Not read by 1.13c engine",
+      "deprecated": true
     },
     "EDmgSymPerCalc": {
       "type": "string",
-      "description": "Synergy calculation for elemental damage bonus"
+      "description": "Synergy calculation for elemental damage bonus. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELen": {
       "type": "integer",
       "min": 0,
-      "description": "Base elemental effect duration in frames (poison/cold/stun)"
+      "description": "Base elemental effect duration in frames (poison/cold/stun). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELevLen1": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 2-8)"
+      "description": "Duration bonus per level (levels 2-8). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELevLen2": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 9-16)"
+      "description": "Duration bonus per level (levels 9-16). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELevLen3": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 17-22)"
+      "description": "Duration bonus per level (levels 17-22). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELenSymPerCalc": {
       "type": "enum",
@@ -1498,26 +1734,42 @@
         "(skill('Ice Arrow'.blvl)) * par7",
         "skill('War Cry'.blvl)*par6"
       ],
-      "description": "Synergy calculation for elemental duration bonus"
+      "description": "Synergy calculation for elemental duration bonus. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aitype": {
       "type": "integer",
       "min": 0,
-      "description": "AI targeting type for this skill"
+      "description": "AI targeting type for this skill. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aibonus": {
       "type": "integer",
-      "description": "AI bonus parameter for targeting priority"
+      "description": "AI bonus parameter for targeting priority. Not read by 1.13c engine",
+      "deprecated": true
     },
     "cost mult": {
       "type": "integer",
       "min": 0,
-      "description": "Mana cost multiplier for this skill"
+      "description": "Mana cost multiplier for this skill. Not read by 1.13c engine",
+      "deprecated": true
     },
     "cost add": {
       "type": "integer",
       "min": 0,
-      "description": "Flat mana cost added to base cost"
+      "description": "Flat mana cost added to base cost. Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "skillcalc": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "misscalc": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

@@ -6,37 +6,44 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal missile name (referenced by skills.txt and other tables)"
+      "description": "Internal missile name (referenced by skills.txt and other tables)",
+      "engineVerified": true
     },
     "Id": {
       "type": "integer",
       "required": true,
       "unique": true,
       "min": 0,
-      "description": "Unique numeric missile ID"
+      "description": "Unique numeric missile ID. Not read by 1.13c engine",
+      "deprecated": true
     },
     "pCltDoFunc": {
       "type": "integer",
       "min": 0,
-      "description": "Client do function ID - visual behavior while missile travels"
+      "description": "Client do function ID - visual behavior while missile travels",
+      "engineVerified": true
     },
     "pCltHitFunc": {
       "type": "string",
-      "description": "Client hit function ID - visual effect on collision"
+      "description": "Client hit function ID - visual effect on collision",
+      "engineVerified": true
     },
     "pSrvDoFunc": {
       "type": "integer",
       "min": 0,
-      "description": "Server do function ID - server-side behavior while missile travels"
+      "description": "Server do function ID - server-side behavior while missile travels",
+      "engineVerified": true
     },
     "pSrvHitFunc": {
       "type": "string",
-      "description": "Server hit function ID - server-side effect on collision"
+      "description": "Server hit function ID - server-side effect on collision",
+      "engineVerified": true
     },
     "pSrvDmgFunc": {
       "type": "integer",
       "min": 0,
-      "description": "Server damage function ID - special damage calculation"
+      "description": "Server damage function ID - special damage calculation",
+      "engineVerified": true
     },
     "SrvCalc1": {
       "type": "enum",
@@ -46,32 +53,38 @@
         "3",
         "lvl*2"
       ],
-      "description": "Server-side calculation 1 for missile behavior"
+      "description": "Server-side calculation 1 for missile behavior",
+      "engineVerified": true
     },
     "Param1": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 1 for server calculation/function"
+      "description": "Parameter 1 for server calculation/function",
+      "engineVerified": true
     },
     "Param2": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 2 for server calculation/function"
+      "description": "Parameter 2 for server calculation/function",
+      "engineVerified": true
     },
     "Param3": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 3 for server calculation/function"
+      "description": "Parameter 3 for server calculation/function",
+      "engineVerified": true
     },
     "Param4": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 4 for server calculation/function"
+      "description": "Parameter 4 for server calculation/function",
+      "engineVerified": true
     },
     "Param5": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 5 for server calculation/function"
+      "description": "Parameter 5 for server calculation/function",
+      "engineVerified": true
     },
     "CltCalc1": {
       "type": "enum",
@@ -80,70 +93,84 @@
         "0",
         "lvl*2"
       ],
-      "description": "Client-side calculation 1 for visual behavior"
+      "description": "Client-side calculation 1 for visual behavior",
+      "engineVerified": true
     },
     "CltParam1": {
       "type": "integer",
-      "description": "Parameter 1 for client calculation/function"
+      "description": "Parameter 1 for client calculation/function",
+      "engineVerified": true
     },
     "CltParam2": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 2 for client calculation/function"
+      "description": "Parameter 2 for client calculation/function",
+      "engineVerified": true
     },
     "CltParam3": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 3 for client calculation/function"
+      "description": "Parameter 3 for client calculation/function",
+      "engineVerified": true
     },
     "CltParam4": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 4 for client calculation/function"
+      "description": "Parameter 4 for client calculation/function",
+      "engineVerified": true
     },
     "CltParam5": {
       "type": "integer",
       "min": 0,
-      "description": "Parameter 5 for client calculation/function"
+      "description": "Parameter 5 for client calculation/function",
+      "engineVerified": true
     },
     "SHitCalc1": {
       "type": "integer",
       "min": 0,
-      "description": "Server collision calculation"
+      "description": "Server collision calculation",
+      "engineVerified": true
     },
     "sHitPar1": {
       "type": "integer",
-      "description": "Server collision parameter 1"
+      "description": "Server collision parameter 1",
+      "engineVerified": true
     },
     "sHitPar2": {
       "type": "integer",
       "min": 0,
-      "description": "Server collision parameter 2"
+      "description": "Server collision parameter 2",
+      "engineVerified": true
     },
     "sHitPar3": {
       "type": "integer",
       "min": 0,
-      "description": "Server collision parameter 3"
+      "description": "Server collision parameter 3",
+      "engineVerified": true
     },
     "CHitCalc1": {
       "type": "integer",
       "min": 0,
-      "description": "Client collision calculation"
+      "description": "Client collision calculation",
+      "engineVerified": true
     },
     "cHitPar1": {
       "type": "integer",
       "min": 0,
-      "description": "Client collision parameter 1"
+      "description": "Client collision parameter 1",
+      "engineVerified": true
     },
     "cHitPar2": {
       "type": "integer",
       "min": 0,
-      "description": "Client collision parameter 2"
+      "description": "Client collision parameter 2",
+      "engineVerified": true
     },
     "cHitPar3": {
       "type": "integer",
       "min": 0,
-      "description": "Client collision parameter 3"
+      "description": "Client collision parameter 3",
+      "engineVerified": true
     },
     "DmgCalc1": {
       "type": "enum",
@@ -151,364 +178,443 @@
         "",
         "dl12"
       ],
-      "description": "Damage modification calculation"
+      "description": "Damage modification calculation",
+      "engineVerified": true
     },
     "dParam1": {
       "type": "integer",
       "min": 0,
-      "description": "Damage calculation parameter 1"
+      "description": "Damage calculation parameter 1",
+      "engineVerified": true
     },
     "dParam2": {
       "type": "integer",
       "min": 0,
-      "description": "Damage calculation parameter 2"
+      "description": "Damage calculation parameter 2",
+      "engineVerified": true
     },
     "Vel": {
       "type": "integer",
       "min": 0,
-      "description": "Base velocity"
+      "description": "Base velocity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxVel": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum velocity"
+      "description": "Maximum velocity",
+      "engineVerified": true
     },
     "VelLev": {
       "type": "integer",
       "min": 0,
-      "description": "Velocity increase per skill level"
+      "description": "Velocity increase per skill level",
+      "engineVerified": true
     },
     "Accel": {
       "type": "integer",
-      "description": "Acceleration per frame"
+      "description": "Acceleration per frame",
+      "engineVerified": true
     },
     "Range": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum range in frames"
+      "description": "Maximum range in frames",
+      "engineVerified": true
     },
     "LevRange": {
       "type": "integer",
-      "description": "Additional range per skill level"
+      "description": "Additional range per skill level",
+      "engineVerified": true
     },
     "Light": {
       "type": "integer",
       "min": 0,
-      "description": "Light radius"
+      "description": "Light radius",
+      "engineVerified": true
     },
     "Flicker": {
       "type": "integer",
       "min": 0,
-      "description": "Random light radius variation (0=none)"
+      "description": "Random light radius variation (0=none). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Red": {
       "type": "integer",
       "min": 0,
-      "description": "Red component of missile light color (0-255)"
+      "description": "Red component of missile light color (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Green": {
       "type": "integer",
       "min": 0,
-      "description": "Green component of missile light color (0-255)"
+      "description": "Green component of missile light color (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Blue": {
       "type": "integer",
       "min": 0,
-      "description": "Blue component of missile light color (0-255)"
+      "description": "Blue component of missile light color (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "InitSteps": {
       "type": "integer",
       "min": 0,
-      "description": "Number of initial movement steps on creation (used to skip travel time)"
+      "description": "Number of initial movement steps on creation (used to skip travel time). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Activate": {
       "type": "integer",
       "min": 0,
-      "description": "Frame on which special activation occurs"
+      "description": "Frame on which special activation occurs",
+      "engineVerified": true
     },
     "LoopAnim": {
       "type": "integer",
       "min": 0,
-      "description": "Animation looping mode (0=no loop, 1=loop, 2=once)"
+      "description": "Animation looping mode (0=no loop, 1=loop, 2=once)",
+      "engineVerified": true
     },
     "CelFile": {
       "type": "string",
-      "description": "Animation cel file path (DCC/DC6)"
+      "description": "Animation cel file path (DCC/DC6)",
+      "engineVerified": true
     },
     "animrate": {
       "type": "integer",
       "min": 0,
-      "description": "Animation playback rate (256=normal speed)"
+      "description": "Animation playback rate (256=normal speed)",
+      "engineVerified": true
     },
     "AnimLen": {
       "type": "integer",
       "min": 0,
-      "description": "Total animation length in frames"
+      "description": "Total animation length in frames",
+      "engineVerified": true
     },
     "AnimSpeed": {
       "type": "integer",
       "min": 0,
-      "description": "Animation speed divisor"
+      "description": "Animation speed divisor",
+      "engineVerified": true
     },
     "RandStart": {
       "type": "integer",
       "min": 0,
-      "description": "Random start frame range for visual variety"
+      "description": "Random start frame range for visual variety. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SubLoop": {
       "type": "boolean",
-      "description": "Animation has a looping sub-section (1 = yes)"
+      "description": "Animation has a looping sub-section (1 = yes)",
+      "engineVerified": true
     },
     "SubStart": {
       "type": "integer",
       "min": 0,
-      "description": "Frame where sub-loop begins"
+      "description": "Frame where sub-loop begins. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SubStop": {
       "type": "integer",
       "min": 0,
-      "description": "Frame where sub-loop ends"
+      "description": "Frame where sub-loop ends. Not read by 1.13c engine",
+      "deprecated": true
     },
     "CollideType": {
       "type": "integer",
       "min": 0,
-      "description": "Collision detection type (1=floor, 3=normal, 6=z-axis, 8=fire)"
+      "description": "Collision detection type (1=floor, 3=normal, 6=z-axis, 8=fire)",
+      "engineVerified": true
     },
     "CollideKill": {
       "type": "boolean",
-      "description": "Missile is destroyed on collision (1 = yes)"
+      "description": "Missile is destroyed on collision (1 = yes)",
+      "engineVerified": true
     },
     "CollideFriend": {
       "type": "boolean",
-      "description": "Can collide with friendly units (1 = yes)"
+      "description": "Can collide with friendly units (1 = yes)",
+      "engineVerified": true
     },
     "LastCollide": {
       "type": "boolean",
-      "description": "Can only hit the last target (1 = yes)"
+      "description": "Can only hit the last target (1 = yes)",
+      "engineVerified": true
     },
     "Collision": {
       "type": "boolean",
-      "description": "Has standard collision detection (1 = yes)"
+      "description": "Has standard collision detection (1 = yes)",
+      "engineVerified": true
     },
     "ClientCol": {
       "type": "boolean",
-      "description": "Client-side collision detection (1 = yes)"
+      "description": "Client-side collision detection (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ClientSend": {
       "type": "boolean",
-      "description": "Client notifies server of collision (1 = yes)"
+      "description": "Client notifies server of collision (1 = yes)",
+      "engineVerified": true
     },
     "NextHit": {
       "type": "boolean",
-      "description": "Can trigger next-hit delay on target (1 = yes)"
+      "description": "Can trigger next-hit delay on target (1 = yes)",
+      "engineVerified": true
     },
     "NextDelay": {
       "type": "integer",
       "min": 0,
-      "description": "Next-hit delay in frames applied to target"
+      "description": "Next-hit delay in frames applied to target",
+      "engineVerified": true
     },
     "xoffset": {
       "type": "string",
-      "description": "X offset from source position in subtiles"
+      "description": "X offset from source position in subtiles",
+      "engineVerified": true
     },
     "yoffset": {
       "type": "integer",
-      "description": "Y offset from source position in subtiles"
+      "description": "Y offset from source position in subtiles",
+      "engineVerified": true
     },
     "zoffset": {
       "type": "integer",
-      "description": "Z (height) offset from source position"
+      "description": "Z (height) offset from source position",
+      "engineVerified": true
     },
     "Size": {
       "type": "integer",
       "min": 0,
-      "description": "Collision size (1=small, 2=medium, 3=large)"
+      "description": "Collision size (1=small, 2=medium, 3=large). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SrcTown": {
       "type": "boolean",
-      "description": "Can be created in town on server (1 = yes)"
+      "description": "Can be created in town on server (1 = yes)",
+      "engineVerified": true
     },
     "CltSrcTown": {
       "type": "integer",
       "min": 0,
-      "description": "Client-side town behavior mode"
+      "description": "Client-side town behavior mode",
+      "engineVerified": true
     },
     "CanDestroy": {
       "type": "boolean",
-      "description": "Can destroy destructible objects (1 = yes)"
+      "description": "Can destroy destructible objects (1 = yes)",
+      "engineVerified": true
     },
     "ToHit": {
       "type": "boolean",
-      "description": "Uses attack rating check (1 = yes)"
+      "description": "Uses attack rating check (1 = yes)",
+      "engineVerified": true
     },
     "AlwaysExplode": {
       "type": "boolean",
-      "description": "Always plays explosion animation even on miss (1 = yes)"
+      "description": "Always plays explosion animation even on miss (1 = yes)",
+      "engineVerified": true
     },
     "Explosion": {
       "type": "integer",
       "min": 0,
-      "description": "Explosion type (1=standard, 2=nova)"
+      "description": "Explosion type (1=standard, 2=nova)",
+      "engineVerified": true
     },
     "Town": {
       "type": "boolean",
-      "description": "Missile functions in town (1 = yes)"
+      "description": "Missile functions in town (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "NoUniqueMod": {
       "type": "boolean",
-      "description": "Cannot be modified by unique monster affixes (1 = yes)"
+      "description": "Cannot be modified by unique monster affixes (1 = yes)",
+      "engineVerified": true
     },
     "NoMultiShot": {
       "type": "integer",
       "min": 0,
-      "description": "Cannot be affected by multi-shot modifier (1=normal, 2=strict)"
+      "description": "Cannot be affected by multi-shot modifier (1=normal, 2=strict)",
+      "engineVerified": true
     },
     "Holy": {
       "type": "integer",
       "min": 0,
-      "description": "Holy missile type (1=default, 3=hits undead only)"
+      "description": "Holy missile type (1=default, 3=hits undead only). Not read by 1.13c engine",
+      "deprecated": true
     },
     "CanSlow": {
       "type": "boolean",
-      "description": "Can be slowed by cold/chill effects (1 = yes)"
+      "description": "Can be slowed by cold/chill effects (1 = yes)",
+      "engineVerified": true
     },
     "ReturnFire": {
       "type": "boolean",
-      "description": "Target returns fire at missile source (1 = yes)"
+      "description": "Target returns fire at missile source (1 = yes)",
+      "engineVerified": true
     },
     "GetHit": {
       "type": "boolean",
-      "description": "Target plays hit recovery animation (1 = yes)"
+      "description": "Target plays hit recovery animation (1 = yes)",
+      "engineVerified": true
     },
     "SoftHit": {
       "type": "boolean",
-      "description": "Soft hit - reduced stagger effect (1 = yes)"
+      "description": "Soft hit - reduced stagger effect (1 = yes)",
+      "engineVerified": true
     },
     "KnockBack": {
       "type": "integer",
       "min": 0,
-      "description": "Knockback distance in subtiles on hit"
+      "description": "Knockback distance in subtiles on hit",
+      "engineVerified": true
     },
     "Trans": {
       "type": "integer",
       "min": 0,
-      "description": "Transparency mode (1=alpha, 2=additive blend)"
+      "description": "Transparency mode (1=alpha, 2=additive blend)",
+      "engineVerified": true
     },
     "Qty": {
       "type": "boolean",
-      "description": "Missile uses ammunition quantity (1 = yes)"
+      "description": "Missile uses ammunition quantity (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Pierce": {
       "type": "boolean",
-      "description": "Passes through targets (1 = yes)"
+      "description": "Passes through targets (1 = yes)",
+      "engineVerified": true
     },
     "SpecialSetup": {
       "type": "boolean",
-      "description": "Uses special setup function (1 = yes)"
+      "description": "Uses special setup function (1 = yes)",
+      "engineVerified": true
     },
     "MissileSkill": {
       "type": "boolean",
-      "description": "Missile acts as a skill for damage purposes (1 = yes)"
+      "description": "Missile acts as a skill for damage purposes (1 = yes)",
+      "engineVerified": true
     },
     "Skill": {
       "type": "ref",
       "target": "skills.txt",
       "targetColumn": "skill",
-      "description": "Associated skill"
+      "description": "Associated skill",
+      "engineVerified": true
     },
     "ResultFlags": {
       "type": "integer",
       "min": 0,
-      "description": "Bitfield for hit result flags (4=default hit, 9=stun)"
+      "description": "Bitfield for hit result flags (4=default hit, 9=stun). Not read by 1.13c engine",
+      "deprecated": true
     },
     "HitFlags": {
       "type": "integer",
       "min": 0,
-      "description": "Bitfield for additional hit behavior"
+      "description": "Bitfield for additional hit behavior",
+      "engineVerified": true
     },
     "HitShift": {
       "type": "integer",
       "min": 0,
-      "description": "Bit shift for damage precision (typically 8 = 256ths)"
+      "description": "Bit shift for damage precision (typically 8 = 256ths)",
+      "engineVerified": true
     },
     "ApplyMastery": {
       "type": "boolean",
-      "description": "Apply elemental mastery damage bonus (1 = yes)"
+      "description": "Apply elemental mastery damage bonus (1 = yes). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SrcDamage": {
       "type": "integer",
-      "description": "Percentage of source weapon damage (128=100%, -1=none)"
+      "description": "Percentage of source weapon damage (128=100%, -1=none)",
+      "engineVerified": true
     },
     "Half2HSrc": {
       "type": "boolean",
-      "description": "Halve two-handed weapon source damage (1 = yes)"
+      "description": "Halve two-handed weapon source damage (1 = yes)",
+      "engineVerified": true
     },
     "SrcMissDmg": {
       "type": "integer",
       "min": 0,
-      "description": "Inherit damage from source missile (128=100%)"
+      "description": "Inherit damage from source missile (128=100%). Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinDamage": {
       "type": "integer",
-      "description": "Minimum damage"
+      "description": "Minimum damage",
+      "engineVerified": true
     },
     "MinLevDam1": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 2-8)"
+      "description": "Min damage bonus per level (levels 2-8)",
+      "engineVerified": true
     },
     "MinLevDam2": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 9-16)"
+      "description": "Min damage bonus per level (levels 9-16)",
+      "engineVerified": true
     },
     "MinLevDam3": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 17-22)"
+      "description": "Min damage bonus per level (levels 17-22)",
+      "engineVerified": true
     },
     "MinLevDam4": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 23-28)"
+      "description": "Min damage bonus per level (levels 23-28)",
+      "engineVerified": true
     },
     "MinLevDam5": {
       "type": "integer",
       "min": 0,
-      "description": "Min damage bonus per level (levels 29+)"
+      "description": "Min damage bonus per level (levels 29+)",
+      "engineVerified": true
     },
     "MaxDamage": {
       "type": "integer",
-      "description": "Maximum damage"
+      "description": "Maximum damage",
+      "engineVerified": true
     },
     "MaxLevDam1": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 2-8)"
+      "description": "Max damage bonus per level (levels 2-8)",
+      "engineVerified": true
     },
     "MaxLevDam2": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 9-16)"
+      "description": "Max damage bonus per level (levels 9-16)",
+      "engineVerified": true
     },
     "MaxLevDam3": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 17-22)"
+      "description": "Max damage bonus per level (levels 17-22)",
+      "engineVerified": true
     },
     "MaxLevDam4": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 23-28)"
+      "description": "Max damage bonus per level (levels 23-28)",
+      "engineVerified": true
     },
     "MaxLevDam5": {
       "type": "integer",
       "min": 0,
-      "description": "Max damage bonus per level (levels 29+)"
+      "description": "Max damage bonus per level (levels 29+)",
+      "engineVerified": true
     },
     "DmgSymPerCalc": {
       "type": "string",
-      "description": "Synergy calculation for physical damage bonus"
+      "description": "Synergy calculation for physical damage bonus",
+      "engineVerified": true
     },
     "EType": {
       "type": "enum",
@@ -527,67 +633,80 @@
         "stun",
         ""
       ],
-      "description": "Element type for damage"
+      "description": "Element type for damage",
+      "engineVerified": true
     },
     "EMin": {
       "type": "integer",
       "min": 0,
-      "description": "Minimum elemental damage at base level"
+      "description": "Minimum elemental damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MinELev1": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 2-8)"
+      "description": "Min elemental damage bonus per level (levels 2-8)",
+      "engineVerified": true
     },
     "MinELev2": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 9-16)"
+      "description": "Min elemental damage bonus per level (levels 9-16)",
+      "engineVerified": true
     },
     "MinELev3": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 17-22)"
+      "description": "Min elemental damage bonus per level (levels 17-22)",
+      "engineVerified": true
     },
     "MinELev4": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 23-28)"
+      "description": "Min elemental damage bonus per level (levels 23-28)",
+      "engineVerified": true
     },
     "MinELev5": {
       "type": "integer",
       "min": 0,
-      "description": "Min elemental damage bonus per level (levels 29+)"
+      "description": "Min elemental damage bonus per level (levels 29+)",
+      "engineVerified": true
     },
     "Emax": {
       "type": "integer",
       "min": 0,
-      "description": "Maximum elemental damage at base level"
+      "description": "Maximum elemental damage at base level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "MaxELev1": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 2-8)"
+      "description": "Max elemental damage bonus per level (levels 2-8)",
+      "engineVerified": true
     },
     "MaxELev2": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 9-16)"
+      "description": "Max elemental damage bonus per level (levels 9-16)",
+      "engineVerified": true
     },
     "MaxELev3": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 17-22)"
+      "description": "Max elemental damage bonus per level (levels 17-22)",
+      "engineVerified": true
     },
     "MaxELev4": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 23-28)"
+      "description": "Max elemental damage bonus per level (levels 23-28)",
+      "engineVerified": true
     },
     "MaxELev5": {
       "type": "integer",
       "min": 0,
-      "description": "Max elemental damage bonus per level (levels 29+)"
+      "description": "Max elemental damage bonus per level (levels 29+)",
+      "engineVerified": true
     },
     "EDmgSymPerCalc": {
       "type": "enum",
@@ -605,54 +724,65 @@
         "skill('Holy Bolt'.blvl) * 15",
         "skill('Inferno'.blvl)*3"
       ],
-      "description": "Synergy calculation for elemental damage bonus"
+      "description": "Synergy calculation for elemental damage bonus",
+      "engineVerified": true
     },
     "ELen": {
       "type": "integer",
       "min": 0,
-      "description": "Base elemental effect duration in frames (poison/cold/stun)"
+      "description": "Base elemental effect duration in frames (poison/cold/stun). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ELevLen1": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 2-8)"
+      "description": "Duration bonus per level (levels 2-8)",
+      "engineVerified": true
     },
     "ELevLen2": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 9-16)"
+      "description": "Duration bonus per level (levels 9-16)",
+      "engineVerified": true
     },
     "ELevLen3": {
       "type": "integer",
       "min": 0,
-      "description": "Duration bonus per level (levels 17-22)"
+      "description": "Duration bonus per level (levels 17-22)",
+      "engineVerified": true
     },
     "HitClass": {
       "type": "integer",
       "min": 0,
-      "description": "Hit class controlling sound and visual on impact"
+      "description": "Hit class controlling sound and visual on impact. Not read by 1.13c engine",
+      "deprecated": true
     },
     "NumDirections": {
       "type": "integer",
       "min": 0,
-      "description": "Number of animation directions (1, 4, 8, 16, or 32)"
+      "description": "Number of animation directions (1, 4, 8, 16, or 32)",
+      "engineVerified": true
     },
     "LocalBlood": {
       "type": "boolean",
-      "description": "Show blood effect on hit (1 = yes)"
+      "description": "Show blood effect on hit (1 = yes)",
+      "engineVerified": true
     },
     "DamageRate": {
       "type": "integer",
       "min": 0,
-      "description": "Damage rate for periodic-damage missiles (frames between ticks)"
+      "description": "Damage rate for periodic-damage missiles (frames between ticks)",
+      "engineVerified": true
     },
     "TravelSound": {
       "type": "string",
-      "description": "Sound played while missile travels"
+      "description": "Sound played while missile travels",
+      "engineVerified": true
     },
     "HitSound": {
       "type": "string",
-      "description": "Sound played on missile impact"
+      "description": "Sound played on missile impact",
+      "engineVerified": true
     },
     "ProgSound": {
       "type": "enum",
@@ -663,7 +793,8 @@
         "sorceress_fireball_1",
         "sorceress_meteor_impact"
       ],
-      "description": "Sound played during progressive/charge phase"
+      "description": "Sound played during progressive/charge phase",
+      "engineVerified": true
     },
     "ProgOverlay": {
       "type": "enum",
@@ -680,101 +811,233 @@
         "stealmana",
         "vampiresteal"
       ],
-      "description": "Overlay effect during progressive/charge phase"
+      "description": "Overlay effect during progressive/charge phase",
+      "engineVerified": true
     },
     "ExplosionMissile": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Missile spawned as explosion effect on impact"
+      "description": "Missile spawned as explosion effect on impact",
+      "engineVerified": true
     },
     "SubMissile1": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile spawned on creation"
+      "description": "Sub-missile spawned on creation",
+      "engineVerified": true
     },
     "SubMissile2": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile 2 spawned on creation"
+      "description": "Sub-missile 2 spawned on creation",
+      "engineVerified": true
     },
     "SubMissile3": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile 3 spawned on creation"
+      "description": "Sub-missile 3 spawned on creation",
+      "engineVerified": true
     },
     "HitSubMissile1": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile spawned on hit"
+      "description": "Sub-missile spawned on hit",
+      "engineVerified": true
     },
     "HitSubMissile2": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile 2 spawned on hit"
+      "description": "Sub-missile 2 spawned on hit",
+      "engineVerified": true
     },
     "HitSubMissile3": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile 3 spawned on hit"
+      "description": "Sub-missile 3 spawned on hit",
+      "engineVerified": true
     },
     "HitSubMissile4": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Sub-missile 4 spawned on hit"
+      "description": "Sub-missile 4 spawned on hit",
+      "engineVerified": true
     },
     "CltSubMissile1": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile on creation"
+      "description": "Client-side sub-missile on creation",
+      "engineVerified": true
     },
     "CltSubMissile2": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile 2 on creation"
+      "description": "Client-side sub-missile 2 on creation",
+      "engineVerified": true
     },
     "CltSubMissile3": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile 3 on creation"
+      "description": "Client-side sub-missile 3 on creation",
+      "engineVerified": true
     },
     "CltHitSubMissile1": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile on hit"
+      "description": "Client-side sub-missile on hit",
+      "engineVerified": true
     },
     "CltHitSubMissile2": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile 2 on hit"
+      "description": "Client-side sub-missile 2 on hit",
+      "engineVerified": true
     },
     "CltHitSubMissile3": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile 3 on hit"
+      "description": "Client-side sub-missile 3 on hit",
+      "engineVerified": true
     },
     "CltHitSubMissile4": {
       "type": "ref",
       "target": "Missiles.txt",
       "targetColumn": "Missile",
-      "description": "Client-side sub-missile 4 on hit"
+      "description": "Client-side sub-missile 4 on hit",
+      "engineVerified": true
     },
     "EOL": {
       "type": "boolean",
-      "description": "End of line marker (always 0)"
+      "description": "End of line marker (always 0). Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "Velocity": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ELenSymPerCalc": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MinDam": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "MaxDam": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "SrcDam": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "ToHitCalc": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "LevToHit": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "calc4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Param8": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Param7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Param6": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "lvlmana": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMaxLev5": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMaxLev4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMaxLev3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMaxLev2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMaxLev1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMinLev5": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMinLev4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMinLev3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMinLev2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "EMinLev1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "misscode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

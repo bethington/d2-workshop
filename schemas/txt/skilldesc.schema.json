@@ -6,465 +6,584 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Skill description identifier, referenced by Skills.txt skilldesc column"
+      "description": "Skill description identifier, referenced by Skills.txt skilldesc column. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SkillPage": {
       "type": "integer",
-      "description": "Skill tree page (1 = left, 2 = middle, 3 = right, 0 = not shown)"
+      "description": "Skill tree page (1 = left, 2 = middle, 3 = right, 0 = not shown). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SkillRow": {
       "type": "integer",
-      "description": "Skill tree row position (0-6, top to bottom)"
+      "description": "Skill tree row position (0-6, top to bottom). Not read by 1.13c engine",
+      "deprecated": true
     },
     "SkillColumn": {
       "type": "integer",
-      "description": "Skill tree column position (0-2, left to right)"
+      "description": "Skill tree column position (0-2, left to right). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ListRow": {
       "type": "integer",
-      "description": "Skill list display row for right-click skill menu"
+      "description": "Skill list display row for right-click skill menu. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ListPool": {
       "type": "integer",
-      "description": "Skill list pool grouping for right-click skill menu"
+      "description": "Skill list pool grouping for right-click skill menu. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "IconCel": {
+    "iconcel": {
       "type": "integer",
-      "description": "Skill icon cell index in the skill icon DC6 file"
+      "description": "Skill icon cell index in the skill icon DC6 file",
+      "engineVerified": true
     },
     "str name": {
       "type": "string",
-      "description": "String table key for skill display name"
+      "description": "String table key for skill display name",
+      "engineVerified": true
     },
     "str short": {
       "type": "string",
-      "description": "String table key for short skill description"
+      "description": "String table key for short skill description. Not read by 1.13c engine",
+      "deprecated": true
     },
     "str long": {
       "type": "string",
-      "description": "String table key for long/detailed skill description"
+      "description": "String table key for long/detailed skill description. Not read by 1.13c engine",
+      "deprecated": true
     },
     "str alt": {
       "type": "string",
-      "description": "String table key for alternate skill description"
+      "description": "String table key for alternate skill description. Not read by 1.13c engine",
+      "deprecated": true
     },
     "str mana": {
       "type": "string",
-      "description": "String table key for mana cost display text"
+      "description": "String table key for mana cost display text. Not read by 1.13c engine",
+      "deprecated": true
     },
     "descdam": {
       "type": "integer",
-      "description": "Damage display mode (1=attack, 2=kick, 3=throw, 4-24=various skill damage types)"
+      "description": "Damage display mode (1=attack, 2=kick, 3=throw, 4-24=various skill damage types)",
+      "engineVerified": true
     },
     "ddam calc1": {
       "type": "string",
-      "description": "Damage display calculation formula 1"
+      "description": "Damage display calculation formula 1",
+      "engineVerified": true
     },
     "ddam calc2": {
       "type": "string",
-      "description": "Damage display calculation formula 2"
+      "description": "Damage display calculation formula 2",
+      "engineVerified": true
     },
     "p1dmelem": {
       "type": "ref",
       "target": "elemtypes.txt",
       "targetColumn": "Code",
-      "description": "Primary damage element type 1"
+      "description": "Primary damage element type 1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p1dmmin": {
       "type": "string",
-      "description": "Primary damage 1 minimum value calculation"
+      "description": "Primary damage 1 minimum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p1dmmax": {
       "type": "string",
-      "description": "Primary damage 1 maximum value calculation"
+      "description": "Primary damage 1 maximum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p2dmelem": {
       "type": "ref",
       "target": "elemtypes.txt",
       "targetColumn": "Code",
-      "description": "Primary damage element type 2"
+      "description": "Primary damage element type 2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p2dmmin": {
       "type": "string",
-      "description": "Primary damage 2 minimum value calculation"
+      "description": "Primary damage 2 minimum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p2dmmax": {
       "type": "string",
-      "description": "Primary damage 2 maximum value calculation"
+      "description": "Primary damage 2 maximum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p3dmelem": {
       "type": "ref",
       "target": "elemtypes.txt",
       "targetColumn": "Code",
-      "description": "Primary damage element type 3"
+      "description": "Primary damage element type 3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p3dmmin": {
       "type": "string",
-      "description": "Primary damage 3 minimum value calculation"
+      "description": "Primary damage 3 minimum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "p3dmmax": {
       "type": "string",
-      "description": "Primary damage 3 maximum value calculation"
+      "description": "Primary damage 3 maximum value calculation. Not read by 1.13c engine",
+      "deprecated": true
     },
     "descatt": {
       "type": "integer",
-      "description": "Attack rating display mode for character screen"
+      "description": "Attack rating display mode for character screen",
+      "engineVerified": true
     },
     "descmissile1": {
       "type": "string",
-      "description": "Missile description reference 1"
+      "description": "Missile description reference 1",
+      "engineVerified": true
     },
     "descmissile2": {
       "type": "string",
-      "description": "Missile description reference 2"
+      "description": "Missile description reference 2",
+      "engineVerified": true
     },
     "descmissile3": {
       "type": "string",
-      "description": "Missile description reference 3"
+      "description": "Missile description reference 3",
+      "engineVerified": true
     },
     "descline1": {
       "type": "integer",
-      "description": "Description line 1 display function"
+      "description": "Description line 1 display function",
+      "engineVerified": true
     },
     "desctexta1": {
       "type": "string",
-      "description": "Description line 1 text key A (string table)"
+      "description": "Description line 1 text key A (string table). Not read by 1.13c engine",
+      "deprecated": true
     },
     "desctextb1": {
       "type": "string",
-      "description": "Description line 1 text key B (string table)"
+      "description": "Description line 1 text key B (string table). Not read by 1.13c engine",
+      "deprecated": true
     },
     "desccalca1": {
       "type": "string",
-      "description": "Description line 1 calculation formula A"
+      "description": "Description line 1 calculation formula A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "desccalcb1": {
       "type": "string",
-      "description": "Description line 1 calculation formula B"
+      "description": "Description line 1 calculation formula B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "descline2": {
       "type": "integer",
-      "description": "Description line 2 display function"
+      "description": "Description line 2 display function",
+      "engineVerified": true
     },
     "desctexta2": {
       "type": "string",
-      "description": "Description line 2 text key A"
+      "description": "Description line 2 text key A",
+      "engineVerified": true
     },
     "desctextb2": {
       "type": "string",
-      "description": "Description line 2 text key B"
+      "description": "Description line 2 text key B",
+      "engineVerified": true
     },
     "desccalca2": {
       "type": "string",
-      "description": "Description line 2 calculation formula A"
+      "description": "Description line 2 calculation formula A",
+      "engineVerified": true
     },
     "desccalcb2": {
       "type": "string",
-      "description": "Description line 2 calculation formula B"
+      "description": "Description line 2 calculation formula B",
+      "engineVerified": true
     },
     "descline3": {
       "type": "integer",
-      "description": "Description line 3 display function"
+      "description": "Description line 3 display function",
+      "engineVerified": true
     },
     "desctexta3": {
       "type": "string",
-      "description": "Description line 3 text key A"
+      "description": "Description line 3 text key A",
+      "engineVerified": true
     },
     "desctextb3": {
       "type": "string",
-      "description": "Description line 3 text key B"
+      "description": "Description line 3 text key B",
+      "engineVerified": true
     },
     "desccalca3": {
       "type": "string",
-      "description": "Description line 3 calculation formula A"
+      "description": "Description line 3 calculation formula A",
+      "engineVerified": true
     },
     "desccalcb3": {
       "type": "string",
-      "description": "Description line 3 calculation formula B"
+      "description": "Description line 3 calculation formula B",
+      "engineVerified": true
     },
     "descline4": {
       "type": "integer",
-      "description": "Description line 4 display function"
+      "description": "Description line 4 display function",
+      "engineVerified": true
     },
     "desctexta4": {
       "type": "string",
-      "description": "Description line 4 text key A"
+      "description": "Description line 4 text key A",
+      "engineVerified": true
     },
     "desctextb4": {
       "type": "string",
-      "description": "Description line 4 text key B"
+      "description": "Description line 4 text key B",
+      "engineVerified": true
     },
     "desccalca4": {
       "type": "string",
-      "description": "Description line 4 calculation formula A"
+      "description": "Description line 4 calculation formula A",
+      "engineVerified": true
     },
     "desccalcb4": {
       "type": "string",
-      "description": "Description line 4 calculation formula B"
+      "description": "Description line 4 calculation formula B",
+      "engineVerified": true
     },
     "descline5": {
       "type": "integer",
-      "description": "Description line 5 display function"
+      "description": "Description line 5 display function",
+      "engineVerified": true
     },
     "desctexta5": {
       "type": "string",
-      "description": "Description line 5 text key A"
+      "description": "Description line 5 text key A",
+      "engineVerified": true
     },
     "desctextb5": {
       "type": "string",
-      "description": "Description line 5 text key B"
+      "description": "Description line 5 text key B",
+      "engineVerified": true
     },
     "desccalca5": {
       "type": "string",
-      "description": "Description line 5 calculation formula A"
+      "description": "Description line 5 calculation formula A",
+      "engineVerified": true
     },
     "desccalcb5": {
       "type": "string",
-      "description": "Description line 5 calculation formula B"
+      "description": "Description line 5 calculation formula B",
+      "engineVerified": true
     },
     "descline6": {
       "type": "integer",
-      "description": "Description line 6 display function"
+      "description": "Description line 6 display function",
+      "engineVerified": true
     },
     "desctexta6": {
       "type": "string",
-      "description": "Description line 6 text key A"
+      "description": "Description line 6 text key A",
+      "engineVerified": true
     },
     "desctextb6": {
       "type": "string",
-      "description": "Description line 6 text key B"
+      "description": "Description line 6 text key B",
+      "engineVerified": true
     },
     "desccalca6": {
       "type": "string",
-      "description": "Description line 6 calculation formula A"
+      "description": "Description line 6 calculation formula A",
+      "engineVerified": true
     },
     "desccalcb6": {
       "type": "string",
-      "description": "Description line 6 calculation formula B"
+      "description": "Description line 6 calculation formula B",
+      "engineVerified": true
     },
     "dsc2line1": {
       "type": "integer",
-      "description": "Current level description line 1 display function"
+      "description": "Current level description line 1 display function",
+      "engineVerified": true
     },
     "dsc2texta1": {
       "type": "string",
-      "description": "Current level description line 1 text key A"
+      "description": "Current level description line 1 text key A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc2textb1": {
       "type": "string",
-      "description": "Current level description line 1 text key B"
+      "description": "Current level description line 1 text key B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc2calca1": {
       "type": "string",
-      "description": "Current level description line 1 calculation A"
+      "description": "Current level description line 1 calculation A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc2calcb1": {
       "type": "string",
-      "description": "Current level description line 1 calculation B"
+      "description": "Current level description line 1 calculation B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc2line2": {
       "type": "integer",
-      "description": "Current level description line 2 display function"
+      "description": "Current level description line 2 display function",
+      "engineVerified": true
     },
     "dsc2texta2": {
       "type": "string",
-      "description": "Current level description line 2 text key A"
+      "description": "Current level description line 2 text key A",
+      "engineVerified": true
     },
     "dsc2textb2": {
       "type": "string",
-      "description": "Current level description line 2 text key B"
+      "description": "Current level description line 2 text key B",
+      "engineVerified": true
     },
     "dsc2calca2": {
       "type": "string",
-      "description": "Current level description line 2 calculation A"
+      "description": "Current level description line 2 calculation A",
+      "engineVerified": true
     },
     "dsc2calcb2": {
       "type": "string",
-      "description": "Current level description line 2 calculation B"
+      "description": "Current level description line 2 calculation B",
+      "engineVerified": true
     },
     "dsc2line3": {
       "type": "integer",
-      "description": "Current level description line 3 display function"
+      "description": "Current level description line 3 display function",
+      "engineVerified": true
     },
     "dsc2texta3": {
       "type": "string",
-      "description": "Current level description line 3 text key A"
+      "description": "Current level description line 3 text key A",
+      "engineVerified": true
     },
     "dsc2textb3": {
       "type": "string",
-      "description": "Current level description line 3 text key B"
+      "description": "Current level description line 3 text key B",
+      "engineVerified": true
     },
     "dsc2calca3": {
       "type": "string",
-      "description": "Current level description line 3 calculation A"
+      "description": "Current level description line 3 calculation A",
+      "engineVerified": true
     },
     "dsc2calcb3": {
       "type": "string",
-      "description": "Current level description line 3 calculation B"
+      "description": "Current level description line 3 calculation B",
+      "engineVerified": true
     },
     "dsc2line4": {
       "type": "integer",
-      "description": "Current level description line 4 display function"
+      "description": "Current level description line 4 display function",
+      "engineVerified": true
     },
     "dsc2texta4": {
       "type": "string",
-      "description": "Current level description line 4 text key A"
+      "description": "Current level description line 4 text key A",
+      "engineVerified": true
     },
     "dsc2textb4": {
       "type": "string",
-      "description": "Current level description line 4 text key B"
+      "description": "Current level description line 4 text key B",
+      "engineVerified": true
     },
     "dsc2calca4": {
       "type": "string",
-      "description": "Current level description line 4 calculation A"
+      "description": "Current level description line 4 calculation A",
+      "engineVerified": true
     },
     "dsc2calcb4": {
       "type": "string",
-      "description": "Current level description line 4 calculation B"
+      "description": "Current level description line 4 calculation B",
+      "engineVerified": true
     },
     "dsc3line1": {
       "type": "integer",
-      "description": "Next level description line 1 display function"
+      "description": "Next level description line 1 display function",
+      "engineVerified": true
     },
     "dsc3texta1": {
       "type": "string",
-      "description": "Next level description line 1 text key A"
+      "description": "Next level description line 1 text key A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc3textb1": {
       "type": "string",
-      "description": "Next level description line 1 text key B"
+      "description": "Next level description line 1 text key B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc3calca1": {
       "type": "string",
-      "description": "Next level description line 1 calculation A"
+      "description": "Next level description line 1 calculation A. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc3calcb1": {
       "type": "string",
-      "description": "Next level description line 1 calculation B"
+      "description": "Next level description line 1 calculation B. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dsc3line2": {
       "type": "integer",
-      "description": "Next level description line 2 display function"
+      "description": "Next level description line 2 display function",
+      "engineVerified": true
     },
     "dsc3texta2": {
       "type": "string",
-      "description": "Next level description line 2 text key A"
+      "description": "Next level description line 2 text key A",
+      "engineVerified": true
     },
     "dsc3textb2": {
       "type": "string",
-      "description": "Next level description line 2 text key B"
+      "description": "Next level description line 2 text key B",
+      "engineVerified": true
     },
     "dsc3calca2": {
       "type": "string",
-      "description": "Next level description line 2 calculation A"
+      "description": "Next level description line 2 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb2": {
       "type": "string",
-      "description": "Next level description line 2 calculation B"
+      "description": "Next level description line 2 calculation B",
+      "engineVerified": true
     },
     "dsc3line3": {
       "type": "integer",
-      "description": "Next level description line 3 display function"
+      "description": "Next level description line 3 display function",
+      "engineVerified": true
     },
     "dsc3texta3": {
       "type": "string",
-      "description": "Next level description line 3 text key A"
+      "description": "Next level description line 3 text key A",
+      "engineVerified": true
     },
     "dsc3textb3": {
       "type": "string",
-      "description": "Next level description line 3 text key B"
+      "description": "Next level description line 3 text key B",
+      "engineVerified": true
     },
     "dsc3calca3": {
       "type": "string",
-      "description": "Next level description line 3 calculation A"
+      "description": "Next level description line 3 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb3": {
       "type": "string",
-      "description": "Next level description line 3 calculation B"
+      "description": "Next level description line 3 calculation B",
+      "engineVerified": true
     },
     "dsc3line4": {
       "type": "integer",
-      "description": "Next level description line 4 display function"
+      "description": "Next level description line 4 display function",
+      "engineVerified": true
     },
     "dsc3texta4": {
       "type": "string",
-      "description": "Next level description line 4 text key A"
+      "description": "Next level description line 4 text key A",
+      "engineVerified": true
     },
     "dsc3textb4": {
       "type": "string",
-      "description": "Next level description line 4 text key B"
+      "description": "Next level description line 4 text key B",
+      "engineVerified": true
     },
     "dsc3calca4": {
       "type": "string",
-      "description": "Next level description line 4 calculation A"
+      "description": "Next level description line 4 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb4": {
       "type": "string",
-      "description": "Next level description line 4 calculation B"
+      "description": "Next level description line 4 calculation B",
+      "engineVerified": true
     },
     "dsc3line5": {
       "type": "integer",
-      "description": "Next level description line 5 display function"
+      "description": "Next level description line 5 display function",
+      "engineVerified": true
     },
     "dsc3texta5": {
       "type": "string",
-      "description": "Next level description line 5 text key A"
+      "description": "Next level description line 5 text key A",
+      "engineVerified": true
     },
     "dsc3textb5": {
       "type": "string",
-      "description": "Next level description line 5 text key B"
+      "description": "Next level description line 5 text key B",
+      "engineVerified": true
     },
     "dsc3calca5": {
       "type": "string",
-      "description": "Next level description line 5 calculation A"
+      "description": "Next level description line 5 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb5": {
       "type": "string",
-      "description": "Next level description line 5 calculation B"
+      "description": "Next level description line 5 calculation B",
+      "engineVerified": true
     },
     "dsc3line6": {
       "type": "integer",
-      "description": "Next level description line 6 display function"
+      "description": "Next level description line 6 display function",
+      "engineVerified": true
     },
     "dsc3texta6": {
       "type": "string",
-      "description": "Next level description line 6 text key A"
+      "description": "Next level description line 6 text key A",
+      "engineVerified": true
     },
     "dsc3textb6": {
       "type": "string",
-      "description": "Next level description line 6 text key B"
+      "description": "Next level description line 6 text key B",
+      "engineVerified": true
     },
     "dsc3calca6": {
       "type": "string",
-      "description": "Next level description line 6 calculation A"
+      "description": "Next level description line 6 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb6": {
       "type": "string",
-      "description": "Next level description line 6 calculation B"
+      "description": "Next level description line 6 calculation B",
+      "engineVerified": true
     },
     "dsc3line7": {
       "type": "integer",
-      "description": "Next level description line 7 display function"
+      "description": "Next level description line 7 display function",
+      "engineVerified": true
     },
     "dsc3texta7": {
       "type": "string",
-      "description": "Next level description line 7 text key A"
+      "description": "Next level description line 7 text key A",
+      "engineVerified": true
     },
     "dsc3textb7": {
       "type": "string",
-      "description": "Next level description line 7 text key B"
+      "description": "Next level description line 7 text key B",
+      "engineVerified": true
     },
     "dsc3calca7": {
       "type": "string",
-      "description": "Next level description line 7 calculation A"
+      "description": "Next level description line 7 calculation A",
+      "engineVerified": true
     },
     "dsc3calcb7": {
       "type": "string",
-      "description": "Next level description line 7 calculation B"
+      "description": "Next level description line 7 calculation B",
+      "engineVerified": true
     },
     "eol": {
       "type": "integer",
-      "description": "End of line marker (not loaded by game)"
+      "description": "End of line marker (not loaded by game). Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "skilldesccode": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

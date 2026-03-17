@@ -1,22 +1,25 @@
 {
   "file": "overlay.txt",
-  "description": "Visual overlay definitions \u2014 particle effects, auras, and status indicators.",
+  "description": "Visual overlay definitions — particle effects, auras, and status indicators.",
   "columns": {
     "Overlay": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Overlay identifier"
+      "description": "Overlay identifier",
+      "engineVerified": true
     },
     "Filename": {
       "type": "string",
-      "description": "DCC/DC6 animation file reference"
+      "description": "DCC/DC6 animation file reference",
+      "engineVerified": true
     },
     "Frames": {
       "type": "integer",
       "min": 2,
       "max": 30,
-      "description": "Number of animation frames"
+      "description": "Number of animation frames",
+      "engineVerified": true
     },
     "Character": {
       "type": "enum",
@@ -35,123 +38,145 @@
         "objects",
         "test"
       ],
-      "description": "Character or entity type this overlay applies to"
+      "description": "Character or entity type this overlay applies to. Not read by 1.13c engine",
+      "deprecated": true
     },
     "PreDraw": {
       "type": "boolean",
-      "description": "Pre-draw flag for rendering order"
+      "description": "Pre-draw flag for rendering order",
+      "engineVerified": true
     },
     "1ofN": {
       "type": "integer",
       "min": 1,
       "max": 3,
-      "description": "Random variant selection (1 of N)"
+      "description": "Random variant selection (1 of N). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Dir": {
       "type": "boolean",
-      "description": "Whether the overlay uses directional animations"
+      "description": "Whether the overlay uses directional animations. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Open": {
       "type": "boolean",
-      "description": "Open/expanded state flag"
+      "description": "Open/expanded state flag. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Xoffset": {
       "type": "integer",
       "min": -10,
       "max": 10,
-      "description": "Horizontal position offset in pixels"
+      "description": "Horizontal position offset in pixels. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Yoffset": {
       "type": "integer",
       "min": -15,
       "max": 1,
-      "description": "Vertical position offset in pixels"
+      "description": "Vertical position offset in pixels. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Height1": {
       "type": "integer",
       "min": -30,
       "max": 14,
-      "description": "Height offset for overhead overlays"
+      "description": "Height offset for overhead overlays",
+      "engineVerified": true
     },
     "Height2": {
       "type": "integer",
       "min": 0,
       "max": 1,
-      "description": "Height offset for medium overlays"
+      "description": "Height offset for medium overlays",
+      "engineVerified": true
     },
     "Height3": {
       "type": "integer",
       "min": -14,
       "max": 0,
-      "description": "Height offset for low overlays"
+      "description": "Height offset for low overlays",
+      "engineVerified": true
     },
     "Height4": {
       "type": "integer",
       "min": -60,
       "max": 0,
-      "description": "Height offset for ground-level overlays"
+      "description": "Height offset for ground-level overlays",
+      "engineVerified": true
     },
     "AnimRate": {
       "type": "integer",
       "min": 2,
       "max": 24,
-      "description": "Animation playback rate"
+      "description": "Animation playback rate",
+      "engineVerified": true
     },
     "LoopWaitTime": {
       "type": "integer",
       "min": 0,
       "max": 7000,
-      "description": "Wait time between loop iterations (frames)"
+      "description": "Wait time between loop iterations (frames)",
+      "engineVerified": true
     },
     "Trans": {
       "type": "integer",
       "min": 3,
       "max": 8,
-      "description": "Transparency blend mode"
+      "description": "Transparency blend mode. Not read by 1.13c engine",
+      "deprecated": true
     },
     "InitRadius": {
       "type": "integer",
       "min": 0,
       "max": 14,
-      "description": "Initial effect radius"
+      "description": "Initial effect radius. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Radius": {
       "type": "integer",
       "min": 0,
       "max": 14,
-      "description": "Effect radius"
+      "description": "Effect radius. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Red": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Red color channel (0-255)"
+      "description": "Red color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Green": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Green color channel (0-255)"
+      "description": "Green color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Blue": {
       "type": "integer",
       "min": 0,
       "max": 255,
-      "description": "Blue color channel (0-255)"
+      "description": "Blue color channel (0-255). Not read by 1.13c engine",
+      "deprecated": true
     },
     "NumDirections": {
       "type": "integer",
       "min": 1,
       "max": 4,
-      "description": "Number of animation directions"
+      "description": "Number of animation directions. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LocalBlood": {
       "type": "boolean",
-      "description": "Local blood effect flag"
+      "description": "Local blood effect flag. Not read by 1.13c engine",
+      "deprecated": true
     }
   }
 }

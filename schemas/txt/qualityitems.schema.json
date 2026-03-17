@@ -7,7 +7,8 @@
       "min": 1,
       "max": 2,
       "required": true,
-      "description": "Number of active modifiers"
+      "description": "Number of active modifiers",
+      "engineVerified": true
     },
     "mod1code": {
       "type": "enum",
@@ -282,25 +283,29 @@
         "wounds/time",
         ""
       ],
-      "description": "Modifier 1 property code"
+      "description": "Modifier 1 property code",
+      "engineVerified": true
     },
     "mod1offset": {
       "type": "integer",
-      "description": "Modifier 1 value offset",
+      "description": "Modifier 1 value offset. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "mod1min": {
       "type": "integer",
       "min": 1,
       "max": 10,
-      "description": "Modifier 1 minimum value"
+      "description": "Modifier 1 minimum value",
+      "engineVerified": true
     },
     "mod1max": {
       "type": "integer",
       "min": 3,
       "max": 15,
-      "description": "Modifier 1 maximum value"
+      "description": "Modifier 1 maximum value",
+      "engineVerified": true
     },
     "mod2code": {
       "type": "enum",
@@ -575,72 +580,84 @@
         "wounds/time",
         ""
       ],
-      "description": "Modifier 2 property code"
+      "description": "Modifier 2 property code",
+      "engineVerified": true
     },
     "mod2offset": {
       "type": "integer",
-      "description": "Modifier 2 value offset",
+      "description": "Modifier 2 value offset. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "mod2min": {
       "type": "integer",
       "min": 5,
       "max": 10,
-      "description": "Modifier 2 minimum value"
+      "description": "Modifier 2 minimum value",
+      "engineVerified": true
     },
     "mod2max": {
       "type": "integer",
       "min": 15,
       "max": 15,
-      "description": "Modifier 2 maximum value"
+      "description": "Modifier 2 maximum value",
+      "engineVerified": true
     },
     "ToHitMin": {
       "type": "integer",
-      "description": "tohit minimum value",
-      "min": 0
+      "description": "tohit minimum value. Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
     "ToHitMax": {
       "type": "integer",
       "min": 0,
       "max": 3,
-      "description": "tohit maximum value"
+      "description": "tohit maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Dam%Min": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "dam% minimum value"
+      "description": "dam% minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Dam%Max": {
       "type": "integer",
       "min": 0,
       "max": 15,
-      "description": "dam% maximum value"
+      "description": "dam% maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "AC%Min": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "ac% minimum value"
+      "description": "ac% minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "AC%Max": {
       "type": "integer",
       "min": 0,
       "max": 15,
-      "description": "ac% maximum value"
+      "description": "ac% maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Dur%Min": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "dur% minimum value"
+      "description": "dur% minimum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Dur%Max": {
       "type": "integer",
       "min": 0,
       "max": 15,
-      "description": "dur% maximum value"
+      "description": "dur% maximum value. Not read by 1.13c engine",
+      "deprecated": true
     },
     "effect1": {
       "type": "enum",
@@ -650,7 +667,8 @@
         "improved durability",
         "improved to hit"
       ],
-      "description": "Quality effect 1 description"
+      "description": "Quality effect 1 description. Not read by 1.13c engine",
+      "deprecated": true
     },
     "effect2": {
       "type": "enum",
@@ -658,71 +676,116 @@
         "improved damage",
         "improved durability"
       ],
-      "description": "Quality effect 2 description"
+      "description": "Quality effect 2 description. Not read by 1.13c engine",
+      "deprecated": true
     },
     "armor": {
       "type": "boolean",
-      "description": "Applies to armor"
+      "description": "Applies to armor. Not read by 1.13c engine",
+      "deprecated": true
     },
     "weapon": {
       "type": "boolean",
-      "description": "Applies to weapons"
+      "description": "Applies to weapons",
+      "engineVerified": true
     },
     "shield": {
       "type": "integer",
       "description": "Applies to shields",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "thrown": {
       "type": "boolean",
-      "description": "Applies to throwing weapons"
+      "description": "Applies to throwing weapons. Not read by 1.13c engine",
+      "deprecated": true
     },
     "scepter": {
       "type": "boolean",
-      "description": "Applies to scepters"
+      "description": "Applies to scepters. Not read by 1.13c engine",
+      "deprecated": true
     },
     "wand": {
       "type": "boolean",
-      "description": "Applies to wands"
+      "description": "Applies to wands. Not read by 1.13c engine",
+      "deprecated": true
     },
     "staff": {
       "type": "boolean",
-      "description": "Applies to staves"
+      "description": "Applies to staves",
+      "engineVerified": true
     },
     "bow": {
       "type": "boolean",
-      "description": "Applies to bows"
+      "description": "Applies to bows. Not read by 1.13c engine",
+      "deprecated": true
     },
     "boots": {
       "type": "boolean",
-      "description": "Applies to boots"
+      "description": "Applies to boots. Not read by 1.13c engine",
+      "deprecated": true
     },
     "gloves": {
       "type": "boolean",
-      "description": "Applies to gloves"
+      "description": "Applies to gloves",
+      "engineVerified": true
     },
     "belt": {
       "type": "boolean",
-      "description": "Applies to belts"
+      "description": "Applies to belts. Not read by 1.13c engine",
+      "deprecated": true
     },
     "level": {
       "type": "integer",
       "min": 1,
       "max": 3,
-      "description": "Base item level"
+      "description": "Base item level. Not read by 1.13c engine",
+      "deprecated": true
     },
     "multiply": {
       "type": "integer",
       "min": 2,
       "max": 5,
-      "description": "Multiplicative cost modifier"
+      "description": "Multiplicative cost modifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "add": {
       "type": "integer",
       "min": 100,
       "max": 350,
-      "description": "Flat cost modification value"
+      "description": "Flat cost modification value. Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "mod1param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod2param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod3max": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod3min": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod3param": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "mod3code": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

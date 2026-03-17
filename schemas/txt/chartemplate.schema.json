@@ -21,229 +21,271 @@
         "Sorceress Lightning"
       ],
       "required": true,
-      "description": "Template name identifier"
+      "description": "Template name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Name": {
       "type": "string",
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
-    "Level": {
+    "level": {
       "type": "integer",
       "min": 3,
       "max": 9,
-      "description": "Starting character level"
+      "description": "Starting character level",
+      "engineVerified": true
     },
     "Act": {
       "type": "integer",
-      "description": "Act number (1-5)",
-      "min": 0
+      "description": "Act number (1-5). Not read by 1.13c engine",
+      "min": 0,
+      "deprecated": true
     },
-    "Class": {
+    "class": {
       "type": "ref",
       "target": "PlayerClass.txt",
       "targetColumn": "Player Class",
-      "description": "Character class restriction"
+      "description": "Character class restriction",
+      "engineVerified": true
     },
     "str": {
       "type": "integer",
       "min": 10,
       "max": 40,
-      "description": "Base strength"
+      "description": "Base strength. Not read by 1.13c engine",
+      "deprecated": true
     },
     "dex": {
       "type": "integer",
       "min": 15,
       "max": 32,
-      "description": "Base dexterity"
+      "description": "Base dexterity. Not read by 1.13c engine",
+      "deprecated": true
     },
     "int": {
       "type": "integer",
       "min": 10,
       "max": 40,
-      "description": "Starting energy"
+      "description": "Starting energy. Not read by 1.13c engine",
+      "deprecated": true
     },
     "vit": {
       "type": "integer",
       "min": 10,
       "max": 42,
-      "description": "Starting vitality"
+      "description": "Starting vitality. Not read by 1.13c engine",
+      "deprecated": true
     },
     "tot": {
       "type": "integer",
       "min": 80,
       "max": 105,
-      "description": "Total starting stat points allocated"
+      "description": "Total starting stat points allocated. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LifePerLevel": {
       "type": "integer",
       "min": 12,
       "max": 24,
-      "description": "HP gained per level (fourths)"
+      "description": "HP gained per level (fourths). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ManaPerLevel": {
       "type": "integer",
       "min": 2,
       "max": 8,
-      "description": "Mana gained per level (fourths)"
+      "description": "Mana gained per level (fourths). Not read by 1.13c engine",
+      "deprecated": true
     },
     "LifePerVitality": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "HP per vitality point (fourths)"
+      "description": "HP per vitality point (fourths). Not read by 1.13c engine",
+      "deprecated": true
     },
     "ManaPerMagic": {
       "type": "integer",
       "min": 4,
       "max": 8,
-      "description": "Mana per energy point (fourths)"
+      "description": "Mana per energy point (fourths). Not read by 1.13c engine",
+      "deprecated": true
     },
     "Hitpoints": {
       "type": "integer",
       "min": 24,
       "max": 89,
-      "description": "Starting hit points"
+      "description": "Starting hit points",
+      "engineVerified": true
     },
     "Mana": {
       "type": "integer",
       "min": 10,
       "max": 56,
-      "description": "Starting mana points"
+      "description": "Starting mana points. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ManaRegenBonus": {
       "type": "integer",
       "min": 0,
-      "description": "Bonus mana regeneration rate"
+      "description": "Bonus mana regeneration rate",
+      "engineVerified": true
     },
     "Velocity": {
       "type": "integer",
       "min": 100,
       "max": 100,
-      "description": "Movement speed multiplier (percentage)"
+      "description": "Movement speed multiplier (percentage)",
+      "engineVerified": true
     },
     "AttackRate": {
       "type": "integer",
       "min": 100,
       "max": 100,
-      "description": "Attack speed multiplier (percentage)"
+      "description": "Attack speed multiplier (percentage)",
+      "engineVerified": true
     },
     "OtherRate": {
       "type": "integer",
       "min": 100,
       "max": 100,
-      "description": "Other animation speed multiplier (percentage)"
+      "description": "Other animation speed multiplier (percentage). Not read by 1.13c engine",
+      "deprecated": true
     },
     "RightSkill": {
       "type": "integer",
       "min": 0,
-      "description": "Default right-click skill ID"
+      "description": "Default right-click skill ID",
+      "engineVerified": true
     },
     "Total Skills": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Total number of pre-assigned skills"
+      "description": "Total number of pre-assigned skills. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SkillName": {
       "type": "string",
-      "description": "Skill display name"
+      "description": "Skill display name. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Skill1": {
       "type": "integer",
       "min": 0,
       "max": 98,
-      "description": "Skill 1 reference"
+      "description": "Skill 1 reference",
+      "engineVerified": true
     },
     "SkillLevel1": {
       "type": "integer",
       "min": 0,
       "max": 4,
-      "description": "Skill 1 level"
+      "description": "Skill 1 level",
+      "engineVerified": true
     },
     "Skill2": {
       "type": "integer",
       "min": 0,
       "max": 37,
-      "description": "Skill 2 reference"
+      "description": "Skill 2 reference",
+      "engineVerified": true
     },
     "SkillLevel2": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 2 level"
+      "description": "Skill 2 level",
+      "engineVerified": true
     },
     "Skill3": {
       "type": "integer",
       "description": "Skill 3 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel3": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 3 level"
+      "description": "Skill 3 level",
+      "engineVerified": true
     },
     "Skill4": {
       "type": "integer",
       "description": "Skill 4 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel4": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 4 level"
+      "description": "Skill 4 level",
+      "engineVerified": true
     },
     "Skill5": {
       "type": "integer",
       "description": "Skill 5 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel5": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 5 level"
+      "description": "Skill 5 level",
+      "engineVerified": true
     },
     "Skill6": {
       "type": "integer",
       "description": "Skill 6 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel6": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 6 level"
+      "description": "Skill 6 level",
+      "engineVerified": true
     },
     "Skill7": {
       "type": "integer",
       "description": "Skill 7 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel7": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 7 level"
+      "description": "Skill 7 level",
+      "engineVerified": true
     },
     "Skill8": {
       "type": "integer",
       "description": "Skill 8 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel8": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 8 level"
+      "description": "Skill 8 level",
+      "engineVerified": true
     },
     "Skill9": {
       "type": "integer",
       "description": "Skill 9 reference",
-      "min": 0
+      "min": 0,
+      "engineVerified": true
     },
     "SkillLevel9": {
       "type": "integer",
       "min": 0,
-      "description": "Skill 9 level"
+      "description": "Skill 9 level",
+      "engineVerified": true
     },
     "baseWClass": {
       "type": "string",
-      "description": "Base weapon class for animations"
+      "description": "Base weapon class for animations. Not read by 1.13c engine",
+      "deprecated": true
     },
     "item1": {
       "type": "enum",
@@ -261,19 +303,22 @@
         "ssd",
         "sst"
       ],
-      "description": "Starting item 1 code"
+      "description": "Starting item 1 code",
+      "engineVerified": true
     },
     "item1loc": {
       "type": "integer",
       "min": 4,
       "max": 4,
-      "description": "Item 1 equipment slot"
+      "description": "Item 1 equipment slot",
+      "engineVerified": true
     },
     "item1count": {
       "type": "integer",
-      "description": "Item 1 stack quantity",
+      "description": "Item 1 stack quantity. Not read by 1.13c engine",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "deprecated": true
     },
     "item2": {
       "type": "enum",
@@ -282,227 +327,269 @@
         "aqv",
         "buc"
       ],
-      "description": "Starting item 2 code"
+      "description": "Starting item 2 code",
+      "engineVerified": true
     },
     "item2loc": {
       "type": "integer",
       "min": 0,
       "max": 5,
-      "description": "Item 2 equipment slot"
+      "description": "Item 2 equipment slot",
+      "engineVerified": true
     },
     "item2count": {
       "type": "integer",
       "description": "Item 2 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item3": {
       "type": "string",
-      "description": "Starting item 3 code"
+      "description": "Starting item 3 code",
+      "engineVerified": true
     },
     "item3loc": {
       "type": "integer",
       "description": "Item 3 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item3count": {
       "type": "integer",
       "description": "Item 3 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item4": {
       "type": "string",
-      "description": "Starting item 4 code"
+      "description": "Starting item 4 code",
+      "engineVerified": true
     },
     "item4loc": {
       "type": "integer",
       "description": "Item 4 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item4count": {
       "type": "integer",
       "description": "Item 4 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item5": {
       "type": "string",
-      "description": "Starting item 5 code"
+      "description": "Starting item 5 code",
+      "engineVerified": true
     },
     "item5loc": {
       "type": "integer",
       "description": "Item 5 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item5count": {
       "type": "integer",
       "description": "Item 5 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item6": {
       "type": "string",
-      "description": "Starting item 6 code"
+      "description": "Starting item 6 code",
+      "engineVerified": true
     },
     "item6loc": {
       "type": "integer",
       "description": "Item 6 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item6count": {
       "type": "integer",
       "description": "Item 6 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item7": {
       "type": "string",
-      "description": "Starting item 7 code"
+      "description": "Starting item 7 code",
+      "engineVerified": true
     },
     "item7loc": {
       "type": "integer",
       "description": "Item 7 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item7count": {
       "type": "integer",
       "description": "Item 7 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item8": {
       "type": "string",
-      "description": "Starting item 8 code"
+      "description": "Starting item 8 code",
+      "engineVerified": true
     },
     "item8loc": {
       "type": "integer",
       "description": "Item 8 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item8count": {
       "type": "integer",
       "description": "Item 8 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item9": {
       "type": "string",
-      "description": "Starting item 9 code"
+      "description": "Starting item 9 code",
+      "engineVerified": true
     },
     "item9loc": {
       "type": "integer",
       "description": "Item 9 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item9count": {
       "type": "integer",
       "description": "Item 9 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item10": {
       "type": "string",
-      "description": "Starting item 10 code"
+      "description": "Starting item 10 code",
+      "engineVerified": true
     },
     "item10loc": {
       "type": "integer",
       "description": "Item 10 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item10count": {
       "type": "integer",
       "description": "Item 10 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item11": {
       "type": "string",
-      "description": "Starting item 11 code"
+      "description": "Starting item 11 code",
+      "engineVerified": true
     },
     "item11loc": {
       "type": "integer",
       "description": "Item 11 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item11count": {
       "type": "integer",
       "description": "Item 11 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item12": {
       "type": "string",
-      "description": "Starting item 12 code"
+      "description": "Starting item 12 code",
+      "engineVerified": true
     },
     "item12loc": {
       "type": "integer",
       "description": "Item 12 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item12count": {
       "type": "integer",
       "description": "Item 12 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item13": {
       "type": "string",
-      "description": "Starting item 13 code"
+      "description": "Starting item 13 code",
+      "engineVerified": true
     },
     "item13loc": {
       "type": "integer",
       "description": "Item 13 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item13count": {
       "type": "integer",
       "description": "Item 13 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item14": {
       "type": "string",
-      "description": "Starting item 14 code"
+      "description": "Starting item 14 code",
+      "engineVerified": true
     },
     "item14loc": {
       "type": "integer",
       "description": "Item 14 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item14count": {
       "type": "integer",
       "description": "Item 14 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item15": {
       "type": "string",
-      "description": "Starting item 15 code"
+      "description": "Starting item 15 code",
+      "engineVerified": true
     },
     "item15loc": {
       "type": "integer",
       "description": "Item 15 equipment slot",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     },
     "item15count": {
       "type": "integer",
       "description": "Item 15 stack quantity",
       "min": 0,
-      "max": 1
+      "max": 1,
+      "engineVerified": true
     }
   }
 }

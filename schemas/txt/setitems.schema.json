@@ -6,433 +6,767 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Unique identifier for this set item entry, used as a key by other files"
+      "description": "Unique identifier for this set item entry, used as a key by other files. Not read by 1.13c engine",
+      "deprecated": true
     },
     "set": {
       "type": "ref",
-      "description": "Parent set this item belongs to",
+      "description": "Parent set this item belongs to. Not read by 1.13c engine",
       "target": "sets.txt",
-      "targetColumn": "index"
+      "targetColumn": "index",
+      "deprecated": true
     },
     "item": {
       "type": "string",
-      "description": "Base item code referencing armor.txt, weapons.txt, or misc.txt code columns"
+      "description": "Base item code referencing armor.txt, weapons.txt, or misc.txt code columns. Not read by 1.13c engine",
+      "deprecated": true
     },
     "*item": {
       "type": "string",
-      "description": "Comment column — human-readable base item name for reference only"
+      "description": "Comment column — human-readable base item name for reference only. Not read by 1.13c engine",
+      "deprecated": true
     },
     "rarity": {
       "type": "integer",
-      "description": "Relative rarity weight for drop selection among set items of the same base type"
+      "description": "Relative rarity weight for drop selection among set items of the same base type. Not read by 1.13c engine",
+      "deprecated": true
     },
     "lvl": {
       "type": "integer",
       "min": 1,
       "max": 99,
-      "description": "Internal item level used for affix generation and TC qualification"
+      "description": "Internal item level used for affix generation and TC qualification. Not read by 1.13c engine",
+      "deprecated": true
     },
     "lvl req": {
       "type": "integer",
       "min": 0,
       "max": 99,
-      "description": "Minimum character level required to equip this set item"
+      "description": "Minimum character level required to equip this set item. Not read by 1.13c engine",
+      "deprecated": true
     },
     "chrtransform": {
       "type": "ref",
-      "description": "Color transform applied to the character model when item is equipped",
+      "description": "Color transform applied to the character model when item is equipped. Not read by 1.13c engine",
       "target": "colors.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "invtransform": {
       "type": "ref",
-      "description": "Color transform applied to the inventory graphic",
+      "description": "Color transform applied to the inventory graphic. Not read by 1.13c engine",
       "target": "colors.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "invfile": {
       "type": "string",
-      "description": "Override inventory graphic DC6 filename (blank uses base item default)"
+      "description": "Override inventory graphic DC6 filename (blank uses base item default). Not read by 1.13c engine",
+      "deprecated": true
     },
     "flippyfile": {
       "type": "string",
-      "description": "Override ground drop animation DC6 filename (blank uses base item default)"
+      "description": "Override ground drop animation DC6 filename (blank uses base item default). Not read by 1.13c engine",
+      "deprecated": true
     },
     "dropsound": {
       "type": "ref",
-      "description": "Sound played when the item drops on the ground",
+      "description": "Sound played when the item drops on the ground. Not read by 1.13c engine",
       "target": "sounds.txt",
-      "targetColumn": "Handle"
+      "targetColumn": "Handle",
+      "deprecated": true
     },
     "dropsfxframe": {
       "type": "integer",
-      "description": "Animation frame on which the drop sound is triggered"
+      "description": "Animation frame on which the drop sound is triggered. Not read by 1.13c engine",
+      "deprecated": true
     },
     "usesound": {
       "type": "ref",
-      "description": "Sound played when the item is picked up or equipped",
+      "description": "Sound played when the item is picked up or equipped. Not read by 1.13c engine",
       "target": "sounds.txt",
-      "targetColumn": "Handle"
+      "targetColumn": "Handle",
+      "deprecated": true
     },
     "cost mult": {
       "type": "integer",
-      "description": "Multiplier applied to the base item cost (in 1024ths, so 1024 = 1x)"
+      "description": "Multiplier applied to the base item cost (in 1024ths, so 1024 = 1x). Not read by 1.13c engine",
+      "deprecated": true
     },
     "cost add": {
       "type": "integer",
-      "description": "Flat gold amount added to the item price after multiplication"
+      "description": "Flat gold amount added to the item price after multiplication. Not read by 1.13c engine",
+      "deprecated": true
     },
     "add func": {
       "type": "integer",
       "min": 0,
       "max": 2,
-      "description": "Controls how green (partial set) bonuses are applied: 0=none, 1=bonuses depend on which specific items are equipped, 2=bonuses depend on how many items are equipped"
+      "description": "Controls how green (partial set) bonuses are applied: 0=none, 1=bonuses depend on which specific items are equipped, 2=bonuses depend on how many items are equipped",
+      "engineVerified": true
     },
     "prop1": {
       "type": "ref",
-      "description": "Fixed (blue) property 1 code applied when item is equipped",
+      "description": "Fixed (blue) property 1 code applied when item is equipped. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par1": {
       "type": "string",
-      "description": "Parameter for prop1 — skill ID, state ID, or other property-specific parameter"
+      "description": "Parameter for prop1 — skill ID, state ID, or other property-specific parameter. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min1": {
       "type": "integer",
-      "description": "Minimum value for prop1"
+      "description": "Minimum value for prop1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max1": {
       "type": "integer",
-      "description": "Maximum value for prop1"
+      "description": "Maximum value for prop1. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop2": {
       "type": "ref",
-      "description": "Fixed (blue) property 2 code",
+      "description": "Fixed (blue) property 2 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par2": {
       "type": "string",
-      "description": "Parameter for prop2"
+      "description": "Parameter for prop2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min2": {
       "type": "integer",
-      "description": "Minimum value for prop2"
+      "description": "Minimum value for prop2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max2": {
       "type": "integer",
-      "description": "Maximum value for prop2"
+      "description": "Maximum value for prop2. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop3": {
       "type": "ref",
-      "description": "Fixed (blue) property 3 code",
+      "description": "Fixed (blue) property 3 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par3": {
       "type": "string",
-      "description": "Parameter for prop3"
+      "description": "Parameter for prop3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min3": {
       "type": "integer",
-      "description": "Minimum value for prop3"
+      "description": "Minimum value for prop3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max3": {
       "type": "integer",
-      "description": "Maximum value for prop3"
+      "description": "Maximum value for prop3. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop4": {
       "type": "ref",
-      "description": "Fixed (blue) property 4 code",
+      "description": "Fixed (blue) property 4 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par4": {
       "type": "string",
-      "description": "Parameter for prop4"
+      "description": "Parameter for prop4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min4": {
       "type": "integer",
-      "description": "Minimum value for prop4"
+      "description": "Minimum value for prop4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max4": {
       "type": "integer",
-      "description": "Maximum value for prop4"
+      "description": "Maximum value for prop4. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop5": {
       "type": "ref",
-      "description": "Fixed (blue) property 5 code",
+      "description": "Fixed (blue) property 5 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par5": {
       "type": "string",
-      "description": "Parameter for prop5"
+      "description": "Parameter for prop5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min5": {
       "type": "integer",
-      "description": "Minimum value for prop5"
+      "description": "Minimum value for prop5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max5": {
       "type": "integer",
-      "description": "Maximum value for prop5"
+      "description": "Maximum value for prop5. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop6": {
       "type": "ref",
-      "description": "Fixed (blue) property 6 code",
+      "description": "Fixed (blue) property 6 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par6": {
       "type": "string",
-      "description": "Parameter for prop6"
+      "description": "Parameter for prop6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min6": {
       "type": "integer",
-      "description": "Minimum value for prop6"
+      "description": "Minimum value for prop6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max6": {
       "type": "integer",
-      "description": "Maximum value for prop6"
+      "description": "Maximum value for prop6. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop7": {
       "type": "ref",
-      "description": "Fixed (blue) property 7 code",
+      "description": "Fixed (blue) property 7 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par7": {
       "type": "string",
-      "description": "Parameter for prop7"
+      "description": "Parameter for prop7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min7": {
       "type": "integer",
-      "description": "Minimum value for prop7"
+      "description": "Minimum value for prop7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max7": {
       "type": "integer",
-      "description": "Maximum value for prop7"
+      "description": "Maximum value for prop7. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop8": {
       "type": "ref",
-      "description": "Fixed (blue) property 8 code",
+      "description": "Fixed (blue) property 8 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par8": {
       "type": "string",
-      "description": "Parameter for prop8"
+      "description": "Parameter for prop8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min8": {
       "type": "integer",
-      "description": "Minimum value for prop8"
+      "description": "Minimum value for prop8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max8": {
       "type": "integer",
-      "description": "Maximum value for prop8"
+      "description": "Maximum value for prop8. Not read by 1.13c engine",
+      "deprecated": true
     },
     "prop9": {
       "type": "ref",
-      "description": "Fixed (blue) property 9 code",
+      "description": "Fixed (blue) property 9 code. Not read by 1.13c engine",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "deprecated": true
     },
     "par9": {
       "type": "string",
-      "description": "Parameter for prop9"
+      "description": "Parameter for prop9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "min9": {
       "type": "integer",
-      "description": "Minimum value for prop9"
+      "description": "Minimum value for prop9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "max9": {
       "type": "integer",
-      "description": "Maximum value for prop9"
+      "description": "Maximum value for prop9. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop1a": {
       "type": "ref",
       "description": "Partial set (green) bonus 1a — first property of pair 1, applied based on add func logic",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar1a": {
       "type": "string",
-      "description": "Parameter for aprop1a"
+      "description": "Parameter for aprop1a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin1a": {
       "type": "integer",
-      "description": "Minimum value for aprop1a"
+      "description": "Minimum value for aprop1a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax1a": {
       "type": "integer",
-      "description": "Maximum value for aprop1a"
+      "description": "Maximum value for aprop1a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop1b": {
       "type": "ref",
       "description": "Partial set (green) bonus 1b — second property of pair 1",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar1b": {
       "type": "string",
-      "description": "Parameter for aprop1b"
+      "description": "Parameter for aprop1b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin1b": {
       "type": "integer",
-      "description": "Minimum value for aprop1b"
+      "description": "Minimum value for aprop1b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax1b": {
       "type": "integer",
-      "description": "Maximum value for aprop1b"
+      "description": "Maximum value for aprop1b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop2a": {
       "type": "ref",
       "description": "Partial set (green) bonus 2a — first property of pair 2",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar2a": {
       "type": "string",
-      "description": "Parameter for aprop2a"
+      "description": "Parameter for aprop2a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin2a": {
       "type": "integer",
-      "description": "Minimum value for aprop2a"
+      "description": "Minimum value for aprop2a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax2a": {
       "type": "integer",
-      "description": "Maximum value for aprop2a"
+      "description": "Maximum value for aprop2a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop2b": {
       "type": "ref",
       "description": "Partial set (green) bonus 2b — second property of pair 2",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar2b": {
       "type": "string",
-      "description": "Parameter for aprop2b"
+      "description": "Parameter for aprop2b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin2b": {
       "type": "integer",
-      "description": "Minimum value for aprop2b"
+      "description": "Minimum value for aprop2b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax2b": {
       "type": "integer",
-      "description": "Maximum value for aprop2b"
+      "description": "Maximum value for aprop2b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop3a": {
       "type": "ref",
       "description": "Partial set (green) bonus 3a — first property of pair 3",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar3a": {
       "type": "string",
-      "description": "Parameter for aprop3a"
+      "description": "Parameter for aprop3a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin3a": {
       "type": "integer",
-      "description": "Minimum value for aprop3a"
+      "description": "Minimum value for aprop3a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax3a": {
       "type": "integer",
-      "description": "Maximum value for aprop3a"
+      "description": "Maximum value for aprop3a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop3b": {
       "type": "ref",
       "description": "Partial set (green) bonus 3b — second property of pair 3",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar3b": {
       "type": "string",
-      "description": "Parameter for aprop3b"
+      "description": "Parameter for aprop3b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin3b": {
       "type": "integer",
-      "description": "Minimum value for aprop3b"
+      "description": "Minimum value for aprop3b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax3b": {
       "type": "integer",
-      "description": "Maximum value for aprop3b"
+      "description": "Maximum value for aprop3b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop4a": {
       "type": "ref",
       "description": "Partial set (green) bonus 4a — first property of pair 4",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar4a": {
       "type": "string",
-      "description": "Parameter for aprop4a"
+      "description": "Parameter for aprop4a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin4a": {
       "type": "integer",
-      "description": "Minimum value for aprop4a"
+      "description": "Minimum value for aprop4a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax4a": {
       "type": "integer",
-      "description": "Maximum value for aprop4a"
+      "description": "Maximum value for aprop4a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop4b": {
       "type": "ref",
       "description": "Partial set (green) bonus 4b — second property of pair 4",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar4b": {
       "type": "string",
-      "description": "Parameter for aprop4b"
+      "description": "Parameter for aprop4b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin4b": {
       "type": "integer",
-      "description": "Minimum value for aprop4b"
+      "description": "Minimum value for aprop4b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax4b": {
       "type": "integer",
-      "description": "Maximum value for aprop4b"
+      "description": "Maximum value for aprop4b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop5a": {
       "type": "ref",
       "description": "Partial set (green) bonus 5a — first property of pair 5",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar5a": {
       "type": "string",
-      "description": "Parameter for aprop5a"
+      "description": "Parameter for aprop5a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin5a": {
       "type": "integer",
-      "description": "Minimum value for aprop5a"
+      "description": "Minimum value for aprop5a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax5a": {
       "type": "integer",
-      "description": "Maximum value for aprop5a"
+      "description": "Maximum value for aprop5a. Not read by 1.13c engine",
+      "deprecated": true
     },
     "aprop5b": {
       "type": "ref",
       "description": "Partial set (green) bonus 5b — second property of pair 5",
       "target": "properties.txt",
-      "targetColumn": "Code"
+      "targetColumn": "Code",
+      "engineVerified": true
     },
     "apar5b": {
       "type": "string",
-      "description": "Parameter for aprop5b"
+      "description": "Parameter for aprop5b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amin5b": {
       "type": "integer",
-      "description": "Minimum value for aprop5b"
+      "description": "Minimum value for aprop5b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "amax5b": {
       "type": "integer",
-      "description": "Maximum value for aprop5b"
+      "description": "Maximum value for aprop5b. Not read by 1.13c engine",
+      "deprecated": true
     },
     "*eol": {
       "type": "integer",
-      "description": "End of line marker — always 0, used by the game to detect row termination"
+      "description": "End of line marker — always 0, used by the game to detect row termination. Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "fmax8": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin8": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam8": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode8": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam7": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode7": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax6": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin6": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam6": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode6": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax5": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin5": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam5": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode5": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam4": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode4": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam3": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode3": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam2": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode2": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmax1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fmin1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fparam1": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "fcode1": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam5b": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode5b": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam5a": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode5a": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam4b": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode4b": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam4a": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode4a": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam3b": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode3b": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam3a": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode3a": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam2b": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode2b": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pparam2a": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "pcode2a": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }

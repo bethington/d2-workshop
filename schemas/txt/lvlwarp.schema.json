@@ -6,69 +6,106 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier. Not read by 1.13c engine",
+      "deprecated": true
     },
     "Id": {
       "type": "integer",
       "min": 0,
       "max": 70,
-      "description": "Unique numeric ID"
+      "description": "Unique numeric ID. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SelectX": {
       "type": "integer",
       "min": -130,
       "max": 20,
-      "description": "X pixel offset for the warp clickable selection area"
+      "description": "X pixel offset for the warp clickable selection area. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SelectY": {
       "type": "integer",
       "min": -210,
       "max": -10,
-      "description": "Y pixel offset for the warp clickable selection area"
+      "description": "Y pixel offset for the warp clickable selection area. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SelectDX": {
       "type": "integer",
       "min": 0,
       "max": 210,
-      "description": "Width in pixels of the warp clickable selection area"
+      "description": "Width in pixels of the warp clickable selection area. Not read by 1.13c engine",
+      "deprecated": true
     },
     "SelectDY": {
       "type": "integer",
       "min": 0,
       "max": 240,
-      "description": "Height in pixels of the warp clickable selection area"
+      "description": "Height in pixels of the warp clickable selection area. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ExitWalkX": {
       "type": "integer",
       "min": -5,
       "max": 5,
-      "description": "X tile offset where the player appears after warping"
+      "description": "X tile offset where the player appears after warping. Not read by 1.13c engine",
+      "deprecated": true
     },
     "ExitWalkY": {
       "type": "integer",
       "min": -5,
       "max": 5,
-      "description": "Y tile offset where the player appears after warping"
+      "description": "Y tile offset where the player appears after warping. Not read by 1.13c engine",
+      "deprecated": true
     },
     "OffsetX": {
       "type": "integer",
       "min": -4,
       "max": 10,
-      "description": "X tile offset for the warp visual position"
+      "description": "X tile offset for the warp visual position. Not read by 1.13c engine",
+      "deprecated": true
     },
     "OffsetY": {
       "type": "integer",
       "min": -6,
       "max": 5,
-      "description": "Y tile offset for the warp visual position"
+      "description": "Y tile offset for the warp visual position. Not read by 1.13c engine",
+      "deprecated": true
     },
     "LitVersion": {
       "type": "boolean",
-      "description": "Whether this warp has an alternate lit (highlighted) visual version"
+      "description": "Whether this warp has an alternate lit (highlighted) visual version",
+      "engineVerified": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused). Not read by 1.13c engine",
+      "deprecated": true
+    },
+    "Level": {
+      "type": "integer",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Direction": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Tiles": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "Dt1Mask": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
+    },
+    "PopPad": {
+      "type": "string",
+      "description": "Column read by game engine",
+      "engineVerified": true
     }
   }
 }
