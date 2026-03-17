@@ -3811,267 +3811,577 @@
     },
     "output": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Output A item/result code",
       "engineVerified": true
     },
     "output b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Output B item/result code",
       "engineVerified": true
     },
     "output c": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Output C item/result code",
       "engineVerified": true
     },
     "value": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "type": "integer",
+      "description": "Recipe result value/quantity",
       "engineVerified": true
     },
     "param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Recipe function parameter",
       "engineVerified": true
     },
     "usetype": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "type": "boolean",
+      "description": "Use input item type for output type matching",
       "engineVerified": true
     },
     "ladder": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Ladder-only recipe",
       "engineVerified": true
     },
     "class": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "type": "ref",
+      "description": "Class restriction for recipe",
+      "engineVerified": true,
+      "target": "PlayerClass.txt",
+      "targetColumn": "Player Class"
     },
     "c ilvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C item level",
       "engineVerified": true
     },
     "c plvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C player level scaling",
       "engineVerified": true
     },
     "c lvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C level",
       "engineVerified": true
     },
     "b ilvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B item level",
       "engineVerified": true
     },
     "b plvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B player level scaling",
       "engineVerified": true
     },
     "b lvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B level",
       "engineVerified": true
     },
     "mod 5 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 5 chance (percentage)",
       "engineVerified": true
     },
     "mod 5 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 5 parameter",
       "engineVerified": true
     },
     "mod 4 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 4 parameter",
       "engineVerified": true
     },
     "mod 4 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 4 chance (percentage)",
       "engineVerified": true
     },
     "mod 3 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 3 parameter",
       "engineVerified": true
     },
     "mod 3 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 3 chance (percentage)",
       "engineVerified": true
     },
     "mod 2 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 2 parameter",
       "engineVerified": true
     },
     "mod 2 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 2 chance (percentage)",
       "engineVerified": true
     },
     "mod 1 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 1 parameter",
       "engineVerified": true
     },
     "mod 1 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output A modifier 1 chance (percentage)",
       "engineVerified": true
     },
     "b mod 5 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 5 chance (percentage)",
       "engineVerified": true
     },
     "b mod 5 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 5 parameter",
       "engineVerified": true
     },
     "b mod 4 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 4 parameter",
       "engineVerified": true
     },
     "b mod 4 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 4 chance (percentage)",
       "engineVerified": true
     },
     "b mod 3 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 3 parameter",
       "engineVerified": true
     },
     "b mod 3 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 3 chance (percentage)",
       "engineVerified": true
     },
     "b mod 2 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 2 parameter",
       "engineVerified": true
     },
     "b mod 2 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 2 chance (percentage)",
       "engineVerified": true
     },
     "b mod 1 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 1 parameter",
       "engineVerified": true
     },
     "b mod 1 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output B modifier 1 chance (percentage)",
       "engineVerified": true
     },
     "c mod 5 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 5 chance (percentage)",
       "engineVerified": true
     },
     "c mod 5 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 5 parameter",
       "engineVerified": true
     },
     "c mod 4 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 4 chance (percentage)",
       "engineVerified": true
     },
     "c mod 4 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 4 parameter",
       "engineVerified": true
     },
     "c mod 3 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 3 chance (percentage)",
       "engineVerified": true
     },
     "c mod 3 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 3 parameter",
       "engineVerified": true
     },
     "c mod 2 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 2 chance (percentage)",
       "engineVerified": true
     },
     "c mod 2 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 2 parameter",
       "engineVerified": true
     },
     "c mod 1 chance": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 1 chance (percentage)",
       "engineVerified": true
     },
     "c mod 1 param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 1 parameter",
       "engineVerified": true
     },
     "c mod 5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "type": "ref",
+      "description": "Output C modifier 5 property code",
+      "engineVerified": true,
+      "target": "properties.txt",
+      "targetColumn": "code"
     },
     "c mod 4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "type": "ref",
+      "description": "Output C modifier 4 property code",
+      "engineVerified": true,
+      "target": "properties.txt",
+      "targetColumn": "code"
     },
     "c mod 3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "type": "ref",
+      "description": "Output C modifier 3 property code",
+      "engineVerified": true,
+      "target": "properties.txt",
+      "targetColumn": "code"
     },
     "c mod 5 max": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 5 maximum value",
       "engineVerified": true
     },
     "c mod 5 min": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 5 minimum value",
       "engineVerified": true
     },
     "c mod 4 max": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 4 maximum value",
       "engineVerified": true
     },
     "c mod 4 min": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 4 minimum value",
       "engineVerified": true
     },
     "c mod 3 max": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 3 maximum value",
       "engineVerified": true
     },
     "c mod 3 min": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Output C modifier 3 minimum value",
+      "engineVerified": true
+    },
+    "mod 1": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output A modifier 1 property code",
+      "engineVerified": true
+    },
+    "mod 1 min": {
+      "type": "integer",
+      "description": "Output A modifier 1 minimum value",
+      "engineVerified": true
+    },
+    "mod 1 max": {
+      "type": "integer",
+      "description": "Output A modifier 1 maximum value",
+      "engineVerified": true
+    },
+    "mod 2": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output A modifier 2 property code",
+      "engineVerified": true
+    },
+    "mod 2 min": {
+      "type": "integer",
+      "description": "Output A modifier 2 minimum value",
+      "engineVerified": true
+    },
+    "mod 2 max": {
+      "type": "integer",
+      "description": "Output A modifier 2 maximum value",
+      "engineVerified": true
+    },
+    "mod 3": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output A modifier 3 property code",
+      "engineVerified": true
+    },
+    "mod 3 min": {
+      "type": "integer",
+      "description": "Output A modifier 3 minimum value",
+      "engineVerified": true
+    },
+    "mod 3 max": {
+      "type": "integer",
+      "description": "Output A modifier 3 maximum value",
+      "engineVerified": true
+    },
+    "mod 4": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output A modifier 4 property code",
+      "engineVerified": true
+    },
+    "mod 4 min": {
+      "type": "integer",
+      "description": "Output A modifier 4 minimum value",
+      "engineVerified": true
+    },
+    "mod 4 max": {
+      "type": "integer",
+      "description": "Output A modifier 4 maximum value",
+      "engineVerified": true
+    },
+    "mod 5": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output A modifier 5 property code",
+      "engineVerified": true
+    },
+    "mod 5 min": {
+      "type": "integer",
+      "description": "Output A modifier 5 minimum value",
+      "engineVerified": true
+    },
+    "mod 5 max": {
+      "type": "integer",
+      "description": "Output A modifier 5 maximum value",
+      "engineVerified": true
+    },
+    "b mod 1": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output B modifier 1 property code",
+      "engineVerified": true
+    },
+    "b mod 1 min": {
+      "type": "integer",
+      "description": "Output B modifier 1 minimum value",
+      "engineVerified": true
+    },
+    "b mod 1 max": {
+      "type": "integer",
+      "description": "Output B modifier 1 maximum value",
+      "engineVerified": true
+    },
+    "b mod 2": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output B modifier 2 property code",
+      "engineVerified": true
+    },
+    "b mod 2 min": {
+      "type": "integer",
+      "description": "Output B modifier 2 minimum value",
+      "engineVerified": true
+    },
+    "b mod 2 max": {
+      "type": "integer",
+      "description": "Output B modifier 2 maximum value",
+      "engineVerified": true
+    },
+    "b mod 3": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output B modifier 3 property code",
+      "engineVerified": true
+    },
+    "b mod 3 min": {
+      "type": "integer",
+      "description": "Output B modifier 3 minimum value",
+      "engineVerified": true
+    },
+    "b mod 3 max": {
+      "type": "integer",
+      "description": "Output B modifier 3 maximum value",
+      "engineVerified": true
+    },
+    "b mod 4": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output B modifier 4 property code",
+      "engineVerified": true
+    },
+    "b mod 4 min": {
+      "type": "integer",
+      "description": "Output B modifier 4 minimum value",
+      "engineVerified": true
+    },
+    "b mod 4 max": {
+      "type": "integer",
+      "description": "Output B modifier 4 maximum value",
+      "engineVerified": true
+    },
+    "b mod 5": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output B modifier 5 property code",
+      "engineVerified": true
+    },
+    "b mod 5 min": {
+      "type": "integer",
+      "description": "Output B modifier 5 minimum value",
+      "engineVerified": true
+    },
+    "b mod 5 max": {
+      "type": "integer",
+      "description": "Output B modifier 5 maximum value",
+      "engineVerified": true
+    },
+    "c mod 1": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output C modifier 1 property code",
+      "engineVerified": true
+    },
+    "c mod 1 min": {
+      "type": "integer",
+      "description": "Output C modifier 1 minimum value",
+      "engineVerified": true
+    },
+    "c mod 1 max": {
+      "type": "integer",
+      "description": "Output C modifier 1 maximum value",
+      "engineVerified": true
+    },
+    "c mod 2": {
+      "type": "ref",
+      "target": "properties.txt",
+      "targetColumn": "code",
+      "description": "Output C modifier 2 property code",
+      "engineVerified": true
+    },
+    "c mod 2 min": {
+      "type": "integer",
+      "description": "Output C modifier 2 minimum value",
+      "engineVerified": true
+    },
+    "c mod 2 max": {
+      "type": "integer",
+      "description": "Output C modifier 2 maximum value",
+      "engineVerified": true
+    },
+    "ilvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Output A item level",
+      "engineVerified": true
+    },
+    "plvl": {
+      "type": "integer",
+      "min": 0,
+      "description": "Output A player level scaling",
+      "engineVerified": true
+    },
+    "input 1": {
+      "type": "string",
+      "description": "Input slot 1 item code or condition",
+      "engineVerified": true
+    },
+    "input 2": {
+      "type": "string",
+      "description": "Input slot 2 item code or condition",
+      "engineVerified": true
+    },
+    "input 3": {
+      "type": "string",
+      "description": "Input slot 3 item code or condition",
+      "engineVerified": true
+    },
+    "input 4": {
+      "type": "string",
+      "description": "Input slot 4 item code or condition",
+      "engineVerified": true
+    },
+    "input 5": {
+      "type": "string",
+      "description": "Input slot 5 item code or condition",
+      "engineVerified": true
+    },
+    "input 6": {
+      "type": "string",
+      "description": "Input slot 6 item code or condition",
+      "engineVerified": true
+    },
+    "input 7": {
+      "type": "string",
+      "description": "Input slot 7 item code or condition",
+      "engineVerified": true
+    },
+    "min diff": {
+      "type": "string",
+      "description": "Minimum difficulty required (empty/nightmare/hell)",
+      "engineVerified": true
+    },
+    "op": {
+      "type": "integer",
+      "min": 0,
+      "description": "Recipe operator/function ID",
+      "engineVerified": true
+    },
+    "rch": {
+      "type": "boolean",
+      "description": "Output can have random charged skill affixes",
+      "engineVerified": true
+    },
+    "rep": {
+      "type": "boolean",
+      "description": "Output can have replenish quantity affix",
+      "engineVerified": true
+    },
+    "reg": {
+      "type": "boolean",
+      "description": "Output can have regeneration affix",
+      "engineVerified": true
+    },
+    "rem": {
+      "type": "boolean",
+      "description": "Output can have remaining charges affix",
+      "engineVerified": true
+    },
+    "uns": {
+      "type": "boolean",
+      "description": "Output can be unsocketed",
+      "engineVerified": true
+    },
+    "suf": {
+      "type": "boolean",
+      "description": "Output preserves suffix",
+      "engineVerified": true
+    },
+    "pre": {
+      "type": "boolean",
+      "description": "Output preserves prefix",
+      "engineVerified": true
+    },
+    "useitem": {
+      "type": "boolean",
+      "description": "Use input item as base for output",
       "engineVerified": true
     }
   }
