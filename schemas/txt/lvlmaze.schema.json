@@ -1,35 +1,40 @@
 {
   "file": "lvlmaze.txt",
-  "description": "Level maze generation parameters.",
+  "description": "Level maze generation parameters - room counts, dimensions, and merge behavior per level and difficulty.",
   "columns": {
     "Level": {
       "type": "integer",
       "description": "Level ID this maze definition applies to",
       "engineVerified": true
     },
-    "Merge": {
-      "type": "integer",
-      "description": "Whether maze rooms merge",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Maze name identifier",
-      "engineVerified": true
-    },
     "Rooms": {
       "type": "integer",
-      "description": "Number of rooms in the maze",
+      "description": "Number of rooms in the maze (Normal)",
+      "engineVerified": true
+    },
+    "Rooms(N)": {
+      "type": "integer",
+      "description": "Number of rooms in the maze (Nightmare)",
+      "engineVerified": true
+    },
+    "Rooms(H)": {
+      "type": "integer",
+      "description": "Number of rooms in the maze (Hell)",
       "engineVerified": true
     },
     "SizeX": {
       "type": "integer",
-      "description": "Horizontal size of the maze",
+      "description": "Horizontal size of the maze in tiles",
       "engineVerified": true
     },
     "SizeY": {
       "type": "integer",
-      "description": "Vertical size of the maze",
+      "description": "Vertical size of the maze in tiles",
+      "engineVerified": true
+    },
+    "Merge": {
+      "type": "integer",
+      "description": "Whether adjacent maze rooms merge together",
       "engineVerified": true
     }
   }
