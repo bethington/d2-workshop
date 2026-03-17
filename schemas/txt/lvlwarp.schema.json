@@ -1,50 +1,10 @@
 {
   "file": "lvlwarp.txt",
-  "description": "Level warp/transition definitions — visual offsets and target areas.",
+  "description": "Level warp/transition definitions - selection areas, exit positions, offsets, and visual properties.",
   "columns": {
-    "LitVersion": {
-      "type": "boolean",
-      "description": "Whether this warp has an alternate lit (highlighted) visual version",
-      "engineVerified": true
-    },
-    "Level": {
+    "Id": {
       "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Direction": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Tiles": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Dt1Mask": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PopPad": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Warp name identifier",
-      "engineVerified": true
-    },
-    "SelectDX": {
-      "type": "integer",
-      "description": "Selection box delta X offset",
-      "engineVerified": true
-    },
-    "SelectDY": {
-      "type": "integer",
-      "description": "Selection box delta Y offset",
+      "description": "Warp definition ID",
       "engineVerified": true
     },
     "SelectX": {
@@ -55,6 +15,51 @@
     "SelectY": {
       "type": "integer",
       "description": "Selection box Y position",
+      "engineVerified": true
+    },
+    "SelectDX": {
+      "type": "integer",
+      "description": "Selection box width (delta X)",
+      "engineVerified": true
+    },
+    "SelectDY": {
+      "type": "integer",
+      "description": "Selection box height (delta Y)",
+      "engineVerified": true
+    },
+    "ExitWalkX": {
+      "type": "integer",
+      "description": "X offset where player exits after warp",
+      "engineVerified": true
+    },
+    "ExitWalkY": {
+      "type": "integer",
+      "description": "Y offset where player exits after warp",
+      "engineVerified": true
+    },
+    "OffsetX": {
+      "type": "integer",
+      "description": "Warp visual X offset",
+      "engineVerified": true
+    },
+    "OffsetY": {
+      "type": "integer",
+      "description": "Warp visual Y offset",
+      "engineVerified": true
+    },
+    "LitVersion": {
+      "type": "integer",
+      "description": "Whether this warp has an alternate lit (highlighted) visual version",
+      "engineVerified": true
+    },
+    "Tiles": {
+      "type": "integer",
+      "description": "Number of tiles used by this warp",
+      "engineVerified": true
+    },
+    "Direction": {
+      "type": "string",
+      "description": "Warp direction identifier",
       "engineVerified": true
     }
   }
