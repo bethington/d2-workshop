@@ -1,6 +1,6 @@
 {
   "file": "objgroup.txt",
-  "description": "Object group definitions for random object placement.",
+  "description": "Object group definitions - groups of up to 8 object IDs with density and probability weights, plus shrine/well flags.",
   "columns": {
     "DENSITY0": {
       "type": "integer",
@@ -42,11 +42,6 @@
       "description": "Object density for slot 7",
       "engineVerified": true
     },
-    "GroupName": {
-      "type": "string",
-      "description": "Object group name identifier",
-      "engineVerified": true
-    },
     "ID0": {
       "type": "integer",
       "description": "Object ID for slot 0",
@@ -85,11 +80,6 @@
     "ID7": {
       "type": "integer",
       "description": "Object ID for slot 7",
-      "engineVerified": true
-    },
-    "Offset": {
-      "type": "integer",
-      "description": "Offset value for group placement",
       "engineVerified": true
     },
     "PROB0": {
@@ -133,8 +123,13 @@
       "engineVerified": true
     },
     "SHRINES": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this group contains shrines",
+      "engineVerified": true
+    },
+    "WELLS": {
+      "type": "integer",
+      "description": "Whether this group contains wells",
       "engineVerified": true
     }
   }
