@@ -224,82 +224,82 @@
       "engineVerified": true
     },
     "HDv": {
-      "type": "integer",
+      "type": "string",
       "description": "Head variant count",
       "engineVerified": true
     },
     "TRv": {
-      "type": "integer",
+      "type": "string",
       "description": "Torso variant count",
       "engineVerified": true
     },
     "LGv": {
-      "type": "integer",
+      "type": "string",
       "description": "Legs variant count",
       "engineVerified": true
     },
     "Rav": {
-      "type": "integer",
+      "type": "string",
       "description": "Right arm variant count",
       "engineVerified": true
     },
     "Lav": {
-      "type": "integer",
+      "type": "string",
       "description": "Left arm variant count",
       "engineVerified": true
     },
     "RHv": {
-      "type": "integer",
+      "type": "string",
       "description": "Right hand variant count",
       "engineVerified": true
     },
     "LHv": {
-      "type": "integer",
+      "type": "string",
       "description": "Left hand variant count",
       "engineVerified": true
     },
     "SHv": {
-      "type": "integer",
+      "type": "string",
       "description": "Shield variant count",
       "engineVerified": true
     },
     "S1v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 1 variant count",
       "engineVerified": true
     },
     "S2v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 2 variant count",
       "engineVerified": true
     },
     "S3v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 3 variant count",
       "engineVerified": true
     },
     "S4v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 4 variant count",
       "engineVerified": true
     },
     "S5v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 5 variant count",
       "engineVerified": true
     },
     "S6v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 6 variant count",
       "engineVerified": true
     },
     "S7v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 7 variant count",
       "engineVerified": true
     },
     "S8v": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 8 variant count",
       "engineVerified": true
     },
