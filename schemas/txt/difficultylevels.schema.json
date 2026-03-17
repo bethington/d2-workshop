@@ -1,177 +1,115 @@
 {
   "file": "difficultylevels.txt",
-  "description": "Difficulty scaling — resistance penalties, experience modifiers per difficulty.",
+  "description": "Difficulty scaling — resistance penalties, experience modifiers, item odds, and combat divisors per difficulty (Normal, Nightmare, Hell).",
   "columns": {
     "ResistPenalty": {
       "type": "integer",
-      "min": -50,
-      "max": 0,
-      "description": "Resistance penalty percentage",
+      "description": "Resistance penalty applied to players in this difficulty",
       "engineVerified": true
     },
     "DeathExpPenalty": {
       "type": "integer",
-      "min": 0,
-      "max": 10,
-      "description": "Experience penalty on death",
+      "description": "Experience loss percentage on death",
       "engineVerified": true
     },
     "UberCodeOddsNormal": {
       "type": "integer",
-      "min": 0,
-      "max": 20,
-      "description": "Percentage chance of dropping exceptional (uber) items on normal monsters",
+      "description": "Chance of exceptional item drop from normal monsters",
       "engineVerified": true
     },
     "UberCodeOddsGood": {
       "type": "integer",
-      "min": 0,
-      "max": 40,
-      "description": "Percentage chance of dropping exceptional (uber) items on champion/unique monsters",
+      "description": "Chance of exceptional item drop from champion/unique monsters",
       "engineVerified": true
     },
     "MonsterSkillBonus": {
       "type": "integer",
-      "min": 0,
-      "max": 7,
-      "description": "Monster skill level bonus",
+      "description": "Bonus skill levels granted to monsters",
       "engineVerified": true
     },
     "MonsterFreezeDivisor": {
       "type": "integer",
-      "min": 1,
-      "max": 4,
-      "description": "Divisor reducing freeze duration on monsters in this difficulty",
+      "description": "Divisor reducing freeze duration on monsters",
       "engineVerified": true
     },
     "MonsterColdDivisor": {
       "type": "integer",
-      "min": 1,
-      "max": 4,
-      "description": "Divisor reducing cold effect duration on monsters in this difficulty",
+      "description": "Divisor reducing cold effect duration on monsters",
       "engineVerified": true
     },
     "AiCurseDivisor": {
       "type": "integer",
-      "min": 1,
-      "max": 4,
-      "description": "Divisor reducing curse duration on monsters in this difficulty",
+      "description": "Divisor reducing curse duration on monsters",
       "engineVerified": true
     },
-    "GambleUltra": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "GambleUber": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "GambleUnique": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "GambleSet": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "GambleRare": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StaticFieldMin": {
+    "UltraCodeOddsNormal": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Chance of elite item drop from normal monsters",
       "engineVerified": true
     },
-    "MonsterCEDamagePercent": {
+    "UltraCodeOddsGood": {
       "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "HireableBossDamagePercent": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ChampionDamageBonus": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "UniqueDamageBonus": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ManaStealDivisor": {
-      "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Chance of elite item drop from champion/unique monsters",
       "engineVerified": true
     },
     "LifeStealDivisor": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Divisor reducing life steal effectiveness",
       "engineVerified": true
     },
-    "UltraCodeOddsGood": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "UltraCodeOddsNormal": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "skilldesccode": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "skillscode": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "aibonus": {
+    "ManaStealDivisor": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Divisor reducing mana steal effectiveness",
       "engineVerified": true
     },
-    "aitype": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "restrict": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "BlockFactor": {
+    "UniqueDamageBonus": {
       "type": "integer",
-      "description": "Block chance reduction factor for this difficulty",
+      "description": "Bonus damage percentage for unique monsters",
       "engineVerified": true
     },
-    "DropFactor": {
+    "ChampionDamageBonus": {
       "type": "integer",
-      "description": "Item drop rate factor for this difficulty",
+      "description": "Bonus damage percentage for champion monsters",
       "engineVerified": true
     },
-    "Name": {
-      "type": "string",
-      "description": "Difficulty name identifier",
-      "engineVerified": true
-    },
-    "ResistPenaltyNonExpansion": {
+    "HireableBossDamagePercent": {
       "type": "integer",
-      "description": "Resistance penalty for non-expansion characters",
+      "description": "Damage percentage modifier for hireable boss monsters",
+      "engineVerified": true
+    },
+    "MonsterCEDamagePercent": {
+      "type": "integer",
+      "description": "Corpse Explosion damage percentage for monsters",
+      "engineVerified": true
+    },
+    "StaticFieldMin": {
+      "type": "integer",
+      "description": "Minimum HP percentage Static Field can reduce monsters to",
+      "engineVerified": true
+    },
+    "GambleRare": {
+      "type": "integer",
+      "description": "Chance of gambling a rare item",
+      "engineVerified": true
+    },
+    "GambleSet": {
+      "type": "integer",
+      "description": "Chance of gambling a set item",
+      "engineVerified": true
+    },
+    "GambleUnique": {
+      "type": "integer",
+      "description": "Chance of gambling a unique item",
+      "engineVerified": true
+    },
+    "GambleUber": {
+      "type": "integer",
+      "description": "Chance of gambling an exceptional item",
+      "engineVerified": true
+    },
+    "GambleUltra": {
+      "type": "integer",
+      "description": "Chance of gambling an elite item",
       "engineVerified": true
     }
   }
