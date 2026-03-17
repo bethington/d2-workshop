@@ -1,6 +1,6 @@
 {
   "file": "uniqueitems.txt",
-  "description": "Unique item definitions â€” base types, level requirements, and up to 12 properties per item.",
+  "description": "Unique item definitions - base item codes, level requirements, properties (up to 12 slots), visual transforms, sounds, and drop behavior.",
   "columns": {
     "prop12": {
       "type": "string",
@@ -62,11 +62,6 @@
       "description": "Column read by game engine",
       "engineVerified": true
     },
-    "*ID": {
-      "type": "integer",
-      "description": "Unique item ID for reference",
-      "engineVerified": true
-    },
     "code": {
       "type": "string",
       "description": "Base item code",
@@ -93,7 +88,7 @@
       "engineVerified": true
     },
     "enabled": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this unique is enabled",
       "engineVerified": true
     },
@@ -113,7 +108,7 @@
       "engineVerified": true
     },
     "ladder": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this unique is ladder-only",
       "engineVerified": true
     },
@@ -128,7 +123,7 @@
       "engineVerified": true
     },
     "nolimit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether item has no level limit",
       "engineVerified": true
     },
@@ -148,7 +143,7 @@
       "engineVerified": true
     },
     "par1": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 1 parameter",
       "engineVerified": true
     },
@@ -163,7 +158,7 @@
       "engineVerified": true
     },
     "par2": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 2 parameter",
       "engineVerified": true
     },
@@ -178,7 +173,7 @@
       "engineVerified": true
     },
     "par3": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 3 parameter",
       "engineVerified": true
     },
@@ -193,7 +188,7 @@
       "engineVerified": true
     },
     "par4": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 4 parameter",
       "engineVerified": true
     },
@@ -208,7 +203,7 @@
       "engineVerified": true
     },
     "par5": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 5 parameter",
       "engineVerified": true
     },
@@ -223,7 +218,7 @@
       "engineVerified": true
     },
     "par6": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 6 parameter",
       "engineVerified": true
     },
@@ -238,7 +233,7 @@
       "engineVerified": true
     },
     "par7": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 7 parameter",
       "engineVerified": true
     },
@@ -253,7 +248,7 @@
       "engineVerified": true
     },
     "par8": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 8 parameter",
       "engineVerified": true
     },
@@ -268,7 +263,7 @@
       "engineVerified": true
     },
     "par9": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 9 parameter",
       "engineVerified": true
     },
@@ -283,7 +278,7 @@
       "engineVerified": true
     },
     "par10": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 10 parameter",
       "engineVerified": true
     },
@@ -298,7 +293,7 @@
       "engineVerified": true
     },
     "par11": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 11 parameter",
       "engineVerified": true
     },
@@ -313,7 +308,7 @@
       "engineVerified": true
     },
     "par12": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 12 parameter",
       "engineVerified": true
     },
@@ -325,6 +320,21 @@
     "max12": {
       "type": "integer",
       "description": "Property 12 maximum value",
+      "engineVerified": true
+    },
+    "carry1": {
+      "type": "integer",
+      "description": "Whether only one can be carried",
+      "engineVerified": true
+    },
+    "chrtransform": {
+      "type": "string",
+      "description": "Character color transform",
+      "engineVerified": true
+    },
+    "flippyfile": {
+      "type": "string",
+      "description": "Drop animation file",
       "engineVerified": true
     }
   }
