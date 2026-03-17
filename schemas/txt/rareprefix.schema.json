@@ -1,83 +1,70 @@
 {
   "file": "rareprefix.txt",
-  "description": "Auto-generated schema for rareprefix.txt",
+  "description": "Rare item prefix name definitions with item type inclusion/exclusion rules.",
   "columns": {
     "name": {
       "type": "string",
-      "required": true,
       "description": "Internal name identifier",
       "engineVerified": true
     },
     "itype1": {
       "type": "string",
       "description": "Included item type 1",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype2": {
       "type": "string",
       "description": "Included item type 2",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype3": {
       "type": "string",
       "description": "Included item type 3",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype4": {
       "type": "string",
       "description": "Included item type 4",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype5": {
       "type": "string",
       "description": "Included item type 5",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype6": {
       "type": "string",
       "description": "Included item type 6",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "itype7": {
       "type": "string",
       "description": "Included item type 7",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "etype1": {
       "type": "string",
       "description": "Excluded item type 1",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "etype2": {
       "type": "string",
       "description": "Excluded item type 2",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "etype3": {
       "type": "string",
       "description": "Excluded item type 3",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
     "etype4": {
       "type": "string",
       "description": "Excluded item type 4",
-      "ref": "itemtypes.txt/Code",
       "engineVerified": true
     },
-    "etype5": {
-      "type": "string",
-      "description": "Excluded item type 5",
-      "ref": "itemtypes.txt/Code",
+    "version": {
+      "type": "integer",
+      "description": "Game version this affix was introduced",
       "engineVerified": true
     }
   }
