@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 - 2026-03-17
+
+### Fixed
+
+- Fix extension activation failure on newer VS Code versions by declaring MCP server definition provider in package.json `contributes.mcpServerDefinitionProviders`
+
 ## 0.1.2 - 2026-03-17
 
 ### Fixed
