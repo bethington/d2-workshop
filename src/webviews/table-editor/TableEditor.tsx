@@ -205,25 +205,46 @@ export function TableEditor() {
   const columnHelper = createColumnHelper<string[]>();
 
   // Merge schema enum values with unique values found in the actual data.
-  // This prevents false validation errors when mods use different values than vanilla.
+  // Merge schema enum values with data values AND auto-detect types for unknown columns.
   const mergedColumnSchemas = useMemo(() => {
-    if (!schema) return {};
     const result: Record<string, ColumnSchema> = {};
     for (const [i, header] of data.headers.entries()) {
-      const colSchema = getColumnSchema(schema.columns, header);
-      if (!colSchema) continue;
-      if ((colSchema.type === "enum" || colSchema.type === "ref") && colSchema.values?.length) {
-        // Collect unique non-empty values from this column's data
-        const dataValues = new Set<string>();
+      const colSchema = schema ? getColumnSchema(schema.columns, header) : undefined;
+      if (colSchema) {
+        if ((colSchema.type === "enum" || colSchema.type === "ref") && colSchema.values?.length) {
+          const dataValues = new Set<string>();
+          for (const row of data.rows) {
+            const v = row[i]?.trim();
+            if (v) dataValues.add(v);
+          }
+          const merged = new Set([...colSchema.values, ...dataValues]);
+          result[header] = { ...colSchema, values: Array.from(merged).sort() };
+        } else {
+          result[header] = colSchema;
+        }
+      } else {
+        // Auto-detect type from data for columns not in schema
+        const values = new Set<string>();
+        let allNumeric = true;
+        let allBool = true;
         for (const row of data.rows) {
           const v = row[i]?.trim();
-          if (v) dataValues.add(v);
+          if (!v) continue;
+          values.add(v);
+          if (!/^-?\d+$/.test(v)) allNumeric = false;
+          if (v !== "0" && v !== "1") allBool = false;
         }
-        // Merge: schema values + data values (deduped, sorted)
-        const merged = new Set([...colSchema.values, ...dataValues]);
-        result[header] = { ...colSchema, values: Array.from(merged).sort() };
-      } else {
-        result[header] = colSchema;
+        if (values.size === 0) {
+          result[header] = { type: "string", description: "Auto-detected (empty column)" };
+        } else if (allBool && values.size <= 2) {
+          result[header] = { type: "boolean", description: "Auto-detected boolean" };
+        } else if (allNumeric) {
+          result[header] = { type: "integer", description: "Auto-detected integer" };
+        } else if (values.size <= 15) {
+          result[header] = { type: "enum", values: Array.from(values).sort(), description: "Auto-detected enum" };
+        } else {
+          result[header] = { type: "string", description: "Auto-detected string" };
+        }
       }
     }
     return result;
