@@ -1,14 +1,7 @@
 {
   "file": "overlay.txt",
-  "description": "Visual overlay definitions — particle effects, auras, and status indicators.",
+  "description": "Overlay visual effect definitions - animation files, positioning, lighting, and rendering properties for spell/aura/state visual overlays.",
   "columns": {
-    "Overlay": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Overlay identifier",
-      "engineVerified": true
-    },
     "Filename": {
       "type": "string",
       "description": "DCC/DC6 animation file reference",
@@ -16,71 +9,52 @@
     },
     "Frames": {
       "type": "integer",
-      "min": 2,
-      "max": 30,
       "description": "Number of animation frames",
       "engineVerified": true
     },
     "PreDraw": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Pre-draw flag for rendering order",
       "engineVerified": true
     },
     "Height1": {
       "type": "integer",
-      "min": -30,
-      "max": 14,
       "description": "Height offset for overhead overlays",
       "engineVerified": true
     },
     "Height2": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Height offset for medium overlays",
       "engineVerified": true
     },
     "Height3": {
       "type": "integer",
-      "min": -14,
-      "max": 0,
       "description": "Height offset for low overlays",
       "engineVerified": true
     },
     "Height4": {
       "type": "integer",
-      "min": -60,
-      "max": 0,
       "description": "Height offset for ground-level overlays",
       "engineVerified": true
     },
     "AnimRate": {
       "type": "integer",
-      "min": 2,
-      "max": 24,
       "description": "Animation playback rate",
       "engineVerified": true
     },
     "LoopWaitTime": {
       "type": "integer",
-      "min": 0,
-      "max": 7000,
       "description": "Wait time between loop iterations (frames)",
       "engineVerified": true
     },
     "Beta": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this is beta content",
       "engineVerified": true
     },
     "Blue": {
       "type": "integer",
       "description": "Blue color component",
-      "engineVerified": true
-    },
-    "Character": {
-      "type": "boolean",
-      "description": "Whether overlay is attached to character",
       "engineVerified": true
     },
     "Dir": {
@@ -109,7 +83,7 @@
       "engineVerified": true
     },
     "Open": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether overlay renders in open areas",
       "engineVerified": true
     },
@@ -128,9 +102,29 @@
       "description": "Transparency level",
       "engineVerified": true
     },
-    "isOverlay": {
-      "type": "boolean",
-      "description": "Whether this entry is an overlay type",
+    "1ofN": {
+      "type": "integer",
+      "description": "Random selection count (1 of N overlays)",
+      "engineVerified": true
+    },
+    "Xoffset": {
+      "type": "integer",
+      "description": "Horizontal pixel offset",
+      "engineVerified": true
+    },
+    "Yoffset": {
+      "type": "integer",
+      "description": "Vertical pixel offset",
+      "engineVerified": true
+    },
+    "overlay": {
+      "type": "string",
+      "description": "Overlay identifier string",
+      "engineVerified": true
+    },
+    "version": {
+      "type": "integer",
+      "description": "Version flag (0 = classic, 100 = expansion)",
       "engineVerified": true
     }
   }
