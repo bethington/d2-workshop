@@ -4,8 +4,6 @@
   "columns": {
     "group": {
       "type": "integer",
-      "min": 1,
-      "max": 35,
       "description": "State group assignment",
       "engineVerified": true
     },
@@ -287,15 +285,11 @@
     },
     "mod1min": {
       "type": "integer",
-      "min": -40,
-      "max": 80,
       "description": "Modifier 1 minimum value",
       "engineVerified": true
     },
     "mod1max": {
       "type": "integer",
-      "min": -40,
-      "max": 120,
       "description": "Modifier 1 maximum value",
       "engineVerified": true
     },
@@ -577,15 +571,11 @@
     },
     "mod2min": {
       "type": "integer",
-      "min": 1,
-      "max": 72,
       "description": "Modifier 2 minimum value",
       "engineVerified": true
     },
     "mod2max": {
       "type": "integer",
-      "min": 4,
-      "max": 72,
       "description": "Modifier 2 maximum value",
       "engineVerified": true
     },
@@ -867,65 +857,27 @@
     },
     "mod3min": {
       "type": "integer",
-      "min": 75,
-      "max": 150,
       "description": "Modifier 3 minimum value",
       "engineVerified": true
     },
     "mod3max": {
       "type": "integer",
-      "min": 75,
-      "max": 150,
       "description": "Modifier 3 maximum value",
       "engineVerified": true
     },
     "transformcolor": {
       "type": "integer",
-      "min": 0,
-      "max": 19,
       "description": "Color transform palette index",
       "engineVerified": true
     },
     "divide": {
       "type": "integer",
       "description": "Division factor for calculations",
-      "min": 0,
       "engineVerified": true
     },
     "multiply": {
       "type": "integer",
       "description": "Multiplicative cost modifier",
-      "min": 0,
-      "engineVerified": true
-    },
-    "invtransform": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chrtransform": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "nolimit": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ladder": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "enabled": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "index": {
-      "type": "string",
-      "description": "Column read by game engine",
       "engineVerified": true
     },
     "itype7": {
@@ -1023,16 +975,6 @@
       "description": "Column read by game engine",
       "engineVerified": true
     },
-    "itemscode": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Magic suffix name string key",
-      "engineVerified": true
-    },
     "level": {
       "type": "integer",
       "description": "Internal affix level",
@@ -1056,6 +998,21 @@
     "version": {
       "type": "integer",
       "description": "Game version this affix was introduced",
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Affix name string key",
+      "engineVerified": true
+    },
+    "add": {
+      "type": "integer",
+      "description": "Value added to stat after multiply/divide",
+      "engineVerified": true
+    },
+    "class": {
+      "type": "string",
+      "description": "Character class restriction",
       "engineVerified": true
     }
   }

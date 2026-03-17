@@ -5,26 +5,20 @@
     "maxlevel": {
       "type": "integer",
       "description": "Maximum level this can appear",
-      "min": 0,
       "engineVerified": true
     },
     "classlevelreq": {
       "type": "integer",
       "description": "Class-specific level requirement",
-      "min": 0,
       "engineVerified": true
     },
     "frequency": {
       "type": "integer",
-      "min": 1,
-      "max": 8,
       "description": "Spawn frequency weight",
       "engineVerified": true
     },
     "group": {
       "type": "integer",
-      "min": 300,
-      "max": 305,
       "description": "State group assignment",
       "engineVerified": true
     },
@@ -306,22 +300,16 @@
     },
     "mod1param": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Modifier 1 parameter value",
       "engineVerified": true
     },
     "mod1min": {
       "type": "integer",
-      "min": 1,
-      "max": 101,
       "description": "Modifier 1 minimum value",
       "engineVerified": true
     },
     "mod1max": {
       "type": "integer",
-      "min": 1,
-      "max": 121,
       "description": "Modifier 1 maximum value",
       "engineVerified": true
     },
@@ -604,20 +592,15 @@
     "mod2param": {
       "type": "integer",
       "description": "Modifier 2 parameter value",
-      "min": 0,
       "engineVerified": true
     },
     "mod2min": {
       "type": "integer",
-      "min": 10,
-      "max": 128,
       "description": "Modifier 2 minimum value",
       "engineVerified": true
     },
     "mod2max": {
       "type": "integer",
-      "min": 20,
-      "max": 128,
       "description": "Modifier 2 maximum value",
       "engineVerified": true
     },
@@ -900,20 +883,15 @@
     "mod3param": {
       "type": "integer",
       "description": "Modifier 3 parameter value",
-      "min": 0,
       "engineVerified": true
     },
     "mod3min": {
       "type": "integer",
-      "min": 75,
-      "max": 100,
       "description": "Modifier 3 minimum value",
       "engineVerified": true
     },
     "mod3max": {
       "type": "integer",
-      "min": 75,
-      "max": 100,
       "description": "Modifier 3 maximum value",
       "engineVerified": true
     },
@@ -999,43 +977,11 @@
     "divide": {
       "type": "integer",
       "description": "Division factor for calculations",
-      "min": 0,
       "engineVerified": true
     },
     "multiply": {
       "type": "integer",
       "description": "Multiplicative cost modifier",
-      "min": 0,
-      "engineVerified": true
-    },
-    "invtransform": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chrtransform": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "nolimit": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ladder": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "enabled": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "index": {
-      "type": "string",
-      "description": "Column read by game engine",
       "engineVerified": true
     },
     "etype5": {
@@ -1051,16 +997,6 @@
     "classspecific": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "itemscode": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Affix name string key",
       "engineVerified": true
     },
     "level": {
@@ -1086,6 +1022,21 @@
     "version": {
       "type": "integer",
       "description": "Game version this affix was introduced",
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Affix name string key",
+      "engineVerified": true
+    },
+    "add": {
+      "type": "integer",
+      "description": "Value added to stat after multiply/divide",
+      "engineVerified": true
+    },
+    "class": {
+      "type": "string",
+      "description": "Character class restriction",
       "engineVerified": true
     }
   }
