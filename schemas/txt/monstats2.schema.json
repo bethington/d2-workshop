@@ -143,11 +143,6 @@
       "description": "Skill used when monster resurrects",
       "engineVerified": true
     },
-    "montype": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "BaseW": {
       "type": "integer",
       "description": "Base weapon class",
@@ -167,6 +162,491 @@
     "SizeY": {
       "type": "integer",
       "description": "Vertical collision size",
+      "engineVerified": true
+    },
+    "HD": {
+      "type": "integer",
+      "description": "Head component",
+      "engineVerified": true
+    },
+    "TR": {
+      "type": "integer",
+      "description": "Torso component",
+      "engineVerified": true
+    },
+    "LG": {
+      "type": "integer",
+      "description": "Legs component",
+      "engineVerified": true
+    },
+    "RA": {
+      "type": "integer",
+      "description": "Right arm component",
+      "engineVerified": true
+    },
+    "LA": {
+      "type": "integer",
+      "description": "Left arm component",
+      "engineVerified": true
+    },
+    "RH": {
+      "type": "integer",
+      "description": "Right hand component",
+      "engineVerified": true
+    },
+    "LH": {
+      "type": "integer",
+      "description": "Left hand component",
+      "engineVerified": true
+    },
+    "SH": {
+      "type": "integer",
+      "description": "Shield component",
+      "engineVerified": true
+    },
+    "S1": {
+      "type": "integer",
+      "description": "Special 1 component",
+      "engineVerified": true
+    },
+    "S2": {
+      "type": "integer",
+      "description": "Special 2 component",
+      "engineVerified": true
+    },
+    "S3": {
+      "type": "integer",
+      "description": "Special 3 component",
+      "engineVerified": true
+    },
+    "S4": {
+      "type": "integer",
+      "description": "Special 4 component",
+      "engineVerified": true
+    },
+    "S5": {
+      "type": "integer",
+      "description": "Special 5 component",
+      "engineVerified": true
+    },
+    "S6": {
+      "type": "integer",
+      "description": "Special 6 component",
+      "engineVerified": true
+    },
+    "S7": {
+      "type": "integer",
+      "description": "Special 7 component",
+      "engineVerified": true
+    },
+    "S8": {
+      "type": "integer",
+      "description": "Special 8 component",
+      "engineVerified": true
+    },
+    "HDv": {
+      "type": "integer",
+      "description": "Head variant count",
+      "engineVerified": true
+    },
+    "TRv": {
+      "type": "integer",
+      "description": "Torso variant count",
+      "engineVerified": true
+    },
+    "LGv": {
+      "type": "integer",
+      "description": "Legs variant count",
+      "engineVerified": true
+    },
+    "Rav": {
+      "type": "integer",
+      "description": "Right arm variant count",
+      "engineVerified": true
+    },
+    "Lav": {
+      "type": "integer",
+      "description": "Left arm variant count",
+      "engineVerified": true
+    },
+    "RHv": {
+      "type": "integer",
+      "description": "Right hand variant count",
+      "engineVerified": true
+    },
+    "LHv": {
+      "type": "integer",
+      "description": "Left hand variant count",
+      "engineVerified": true
+    },
+    "SHv": {
+      "type": "integer",
+      "description": "Shield variant count",
+      "engineVerified": true
+    },
+    "S1v": {
+      "type": "integer",
+      "description": "Special 1 variant count",
+      "engineVerified": true
+    },
+    "S2v": {
+      "type": "integer",
+      "description": "Special 2 variant count",
+      "engineVerified": true
+    },
+    "S3v": {
+      "type": "integer",
+      "description": "Special 3 variant count",
+      "engineVerified": true
+    },
+    "S4v": {
+      "type": "integer",
+      "description": "Special 4 variant count",
+      "engineVerified": true
+    },
+    "S5v": {
+      "type": "integer",
+      "description": "Special 5 variant count",
+      "engineVerified": true
+    },
+    "S6v": {
+      "type": "integer",
+      "description": "Special 6 variant count",
+      "engineVerified": true
+    },
+    "S7v": {
+      "type": "integer",
+      "description": "Special 7 variant count",
+      "engineVerified": true
+    },
+    "S8v": {
+      "type": "integer",
+      "description": "Special 8 variant count",
+      "engineVerified": true
+    },
+    "dDT": {
+      "type": "integer",
+      "description": "Death direction count",
+      "engineVerified": true
+    },
+    "dNU": {
+      "type": "integer",
+      "description": "Neutral direction count",
+      "engineVerified": true
+    },
+    "dWL": {
+      "type": "integer",
+      "description": "Walk direction count",
+      "engineVerified": true
+    },
+    "dGH": {
+      "type": "integer",
+      "description": "Get hit direction count",
+      "engineVerified": true
+    },
+    "dA1": {
+      "type": "integer",
+      "description": "Attack 1 direction count",
+      "engineVerified": true
+    },
+    "dA2": {
+      "type": "integer",
+      "description": "Attack 2 direction count",
+      "engineVerified": true
+    },
+    "dBL": {
+      "type": "integer",
+      "description": "Block direction count",
+      "engineVerified": true
+    },
+    "dSC": {
+      "type": "integer",
+      "description": "Cast direction count",
+      "engineVerified": true
+    },
+    "dS1": {
+      "type": "integer",
+      "description": "Skill 1 direction count",
+      "engineVerified": true
+    },
+    "dS2": {
+      "type": "integer",
+      "description": "Skill 2 direction count",
+      "engineVerified": true
+    },
+    "dS3": {
+      "type": "integer",
+      "description": "Skill 3 direction count",
+      "engineVerified": true
+    },
+    "dS4": {
+      "type": "integer",
+      "description": "Skill 4 direction count",
+      "engineVerified": true
+    },
+    "dDD": {
+      "type": "integer",
+      "description": "Dead direction count",
+      "engineVerified": true
+    },
+    "dKB": {
+      "type": "integer",
+      "description": "Knockback direction count",
+      "engineVerified": true
+    },
+    "dSQ": {
+      "type": "integer",
+      "description": "Sequence direction count",
+      "engineVerified": true
+    },
+    "dRN": {
+      "type": "integer",
+      "description": "Run direction count",
+      "engineVerified": true
+    },
+    "mDT": {
+      "type": "integer",
+      "description": "Death has missile",
+      "engineVerified": true
+    },
+    "mNU": {
+      "type": "integer",
+      "description": "Neutral has missile",
+      "engineVerified": true
+    },
+    "mWL": {
+      "type": "integer",
+      "description": "Walk has missile",
+      "engineVerified": true
+    },
+    "mGH": {
+      "type": "integer",
+      "description": "Get hit has missile",
+      "engineVerified": true
+    },
+    "mA1": {
+      "type": "integer",
+      "description": "Attack 1 has missile",
+      "engineVerified": true
+    },
+    "mA2": {
+      "type": "integer",
+      "description": "Attack 2 has missile",
+      "engineVerified": true
+    },
+    "mBL": {
+      "type": "integer",
+      "description": "Block has missile",
+      "engineVerified": true
+    },
+    "mSC": {
+      "type": "integer",
+      "description": "Cast has missile",
+      "engineVerified": true
+    },
+    "mS1": {
+      "type": "integer",
+      "description": "Skill 1 has missile",
+      "engineVerified": true
+    },
+    "mS2": {
+      "type": "integer",
+      "description": "Skill 2 has missile",
+      "engineVerified": true
+    },
+    "mS3": {
+      "type": "integer",
+      "description": "Skill 3 has missile",
+      "engineVerified": true
+    },
+    "mS4": {
+      "type": "integer",
+      "description": "Skill 4 has missile",
+      "engineVerified": true
+    },
+    "mDD": {
+      "type": "integer",
+      "description": "Dead has missile",
+      "engineVerified": true
+    },
+    "mKB": {
+      "type": "integer",
+      "description": "Knockback has missile",
+      "engineVerified": true
+    },
+    "mSQ": {
+      "type": "integer",
+      "description": "Sequence has missile",
+      "engineVerified": true
+    },
+    "mRN": {
+      "type": "integer",
+      "description": "Run has missile",
+      "engineVerified": true
+    },
+    "A1mv": {
+      "type": "integer",
+      "description": "Attack 1 while moving",
+      "engineVerified": true
+    },
+    "A2mv": {
+      "type": "integer",
+      "description": "Attack 2 while moving",
+      "engineVerified": true
+    },
+    "SCmv": {
+      "type": "integer",
+      "description": "Cast while moving",
+      "engineVerified": true
+    },
+    "S1mv": {
+      "type": "integer",
+      "description": "Skill 1 while moving",
+      "engineVerified": true
+    },
+    "S2mv": {
+      "type": "integer",
+      "description": "Skill 2 while moving",
+      "engineVerified": true
+    },
+    "S3mv": {
+      "type": "integer",
+      "description": "Skill 3 while moving",
+      "engineVerified": true
+    },
+    "S4mv": {
+      "type": "integer",
+      "description": "Skill 4 while moving",
+      "engineVerified": true
+    },
+    "HitClass": {
+      "type": "integer",
+      "description": "Hit class for impact sounds",
+      "engineVerified": true
+    },
+    "BodyPart": {
+      "type": "integer",
+      "description": "Whether monster drops body parts",
+      "engineVerified": true
+    },
+    "Heart": {
+      "type": "integer",
+      "description": "Whether monster drops hearts",
+      "engineVerified": true
+    },
+    "Utrans": {
+      "type": "integer",
+      "description": "Unique color transform (Normal)",
+      "engineVerified": true
+    },
+    "Utrans(H)": {
+      "type": "integer",
+      "description": "Unique color transform (Hell)",
+      "engineVerified": true
+    },
+    "Utrans(N)": {
+      "type": "integer",
+      "description": "Unique color transform (Nightmare)",
+      "engineVerified": true
+    },
+    "htTop": {
+      "type": "integer",
+      "description": "Hit test top offset",
+      "engineVerified": true
+    },
+    "htLeft": {
+      "type": "integer",
+      "description": "Hit test left offset",
+      "engineVerified": true
+    },
+    "bleed": {
+      "type": "integer",
+      "description": "Bleed type on hit",
+      "engineVerified": true
+    },
+    "light-r": {
+      "type": "integer",
+      "description": "Light red component",
+      "engineVerified": true
+    },
+    "light-g": {
+      "type": "integer",
+      "description": "Light green component",
+      "engineVerified": true
+    },
+    "light-b": {
+      "type": "integer",
+      "description": "Light blue component",
+      "engineVerified": true
+    },
+    "small": {
+      "type": "integer",
+      "description": "Whether monster is small size",
+      "engineVerified": true
+    },
+    "large": {
+      "type": "integer",
+      "description": "Whether monster is large size",
+      "engineVerified": true
+    },
+    "soft": {
+      "type": "integer",
+      "description": "Whether monster uses soft hit",
+      "engineVerified": true
+    },
+    "shadow": {
+      "type": "integer",
+      "description": "Whether monster casts shadow",
+      "engineVerified": true
+    },
+    "noOvly": {
+      "type": "integer",
+      "description": "Whether overlay is disabled",
+      "engineVerified": true
+    },
+    "noSel": {
+      "type": "integer",
+      "description": "Whether monster is not selectable",
+      "engineVerified": true
+    },
+    "shiftSel": {
+      "type": "integer",
+      "description": "Whether shift-click selects",
+      "engineVerified": true
+    },
+    "corpseSel": {
+      "type": "integer",
+      "description": "Whether corpse is selectable",
+      "engineVerified": true
+    },
+    "revive": {
+      "type": "integer",
+      "description": "Whether monster can be revived",
+      "engineVerified": true
+    },
+    "objCol": {
+      "type": "integer",
+      "description": "Object collision type",
+      "engineVerified": true
+    },
+    "compositeDeath": {
+      "type": "integer",
+      "description": "Whether death uses composite mode",
+      "engineVerified": true
+    },
+    "inert": {
+      "type": "integer",
+      "description": "Whether monster is inert",
+      "engineVerified": true
+    },
+    "alSel": {
+      "type": "integer",
+      "description": "Whether always selectable",
+      "engineVerified": true
+    },
+    "restore": {
+      "type": "integer",
+      "description": "Whether monster restores on level re-entry",
       "engineVerified": true
     }
   }
