@@ -1,35 +1,10 @@
 {
   "file": "playerclass.txt",
-  "description": "Player character class code definitions.",
+  "description": "Player character class code lookup table. Engine uses row index to map class IDs to their short codes.",
   "columns": {
-    "Player Class": {
-      "type": "enum",
-      "values": [
-        "Amazon",
-        "Assassin",
-        "Barbarian",
-        "Druid",
-        "Necromancer",
-        "Paladin",
-        "Sorceress"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Display name of the player character class",
-      "engineVerified": true
-    },
-    "Code": {
-      "type": "enum",
-      "values": [
-        "ama",
-        "ass",
-        "bar",
-        "dru",
-        "nec",
-        "pal",
-        "sor"
-      ],
-      "description": "Three-letter player class code used in data references",
+    "code": {
+      "type": "string",
+      "description": "Three-letter player class code (e.g. ama, sor, nec, pal, bar, dru, ass)",
       "engineVerified": true
     }
   }
