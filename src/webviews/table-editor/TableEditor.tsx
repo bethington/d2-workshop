@@ -23,8 +23,18 @@ interface ColumnSchema {
   target?: string;
   targetColumn?: string;
   description?: string;
-  engineVerified?: boolean | string;
+  engineVerified?: boolean | string | string[];
   deprecated?: boolean;
+}
+
+function formatVerifiedTooltip(engineVerified: boolean | string | string[]): string {
+  if (Array.isArray(engineVerified)) {
+    return `Verified: read by D2 game engine (v1.13c ${engineVerified.join(', ')})`;
+  }
+  if (typeof engineVerified === 'string') {
+    return `Verified: read by D2 game engine (v1.13c ${engineVerified})`;
+  }
+  return 'Verified: read by D2 game engine (v1.13c D2Common.dll)';
 }
 
 interface TxtSchema {
@@ -262,7 +272,7 @@ export function TableEditor() {
           header: () => (
             <div className="header-cell">
               <span className="header-name">
-                {colSchema?.engineVerified && <span className="verified-badge" title={`Verified: read by D2 game engine (v1.13c ${typeof colSchema.engineVerified === 'string' ? colSchema.engineVerified : 'D2Common.dll'})`}>&#x2713;</span>}
+                {colSchema?.engineVerified && <span className="verified-badge" title={formatVerifiedTooltip(colSchema.engineVerified)}>&#x2713;</span>}
                 {header}
               </span>
               {colSchema && (

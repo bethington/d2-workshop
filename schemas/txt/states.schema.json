@@ -1,91 +1,85 @@
 {
   "file": "states.txt",
-  "description": "Character/monster state definitions â€” buffs, debuffs, curses, auras, transformations, and associated visual/sound effects.",
+  "description": "State definitions - visual effects, behavioral flags, overlays, color shifts, sounds, and function IDs for unit states (buffs, debuffs, auras, curses, transforms).",
   "columns": {
     "remhit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state is dispelled when the unit is hit (only works for monsters, not players)",
       "engineVerified": true
     },
     "nosend": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the server skips sending this state to other clients (used for internal-only states that do not affect other players)",
       "engineVerified": true
     },
     "active": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the state has an active ongoing effect (e.g., Shiver Armor's retaliation)",
       "engineVerified": true
     },
     "bossstaydeath": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state persists on a boss monster after death",
       "engineVerified": true
     },
     "udead": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the state marks the unit as undead for purposes of holy damage and other undead-specific effects",
       "engineVerified": true
     },
     "nooverlays": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to suppress overlay graphics while this state is active on the unit",
       "engineVerified": true
     },
     "bossinv": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the state uses the minion owner's inventory client-side (makes Decoy display your current equipment)",
       "engineVerified": true
     },
     "meleeonly": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the state restricts the unit to melee attacks only (prevents shapeshifted druids from firing missiles with bows)",
       "engineVerified": true
     },
     "notondead": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state cannot be applied to dead units",
       "engineVerified": true
     },
     "overlay1": {
-      "type": "ref",
+      "type": "string",
       "description": "First persistent overlay displayed on the unit while this state is active",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay2": {
-      "type": "ref",
+      "type": "string",
       "description": "Second persistent overlay displayed on the unit while this state is active",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay3": {
-      "type": "ref",
+      "type": "string",
       "description": "Third persistent overlay displayed on the unit while this state is active",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay4": {
-      "type": "ref",
+      "type": "string",
       "description": "Fourth persistent overlay displayed on the unit while this state is active",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
     "pgsvoverlay": {
-      "type": "ref",
+      "type": "string",
       "description": "Overlay shown on the target of a progressive skill when the charge-up triggers",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
     "removerlay": {
-      "type": "ref",
+      "type": "string",
       "description": "Overlay displayed once when the state is removed",
-      "target": "overlay.txt",
       "targetColumn": "Overlay",
       "engineVerified": true
     },
@@ -100,16 +94,14 @@
       "engineVerified": true
     },
     "itemtype": {
-      "type": "ref",
-      "target": "itemtypes.txt",
+      "type": "string",
       "targetColumn": "Code",
       "description": "Item type restriction â€” limits which item types can grant this state (references ItemTypes.txt Code)",
       "engineVerified": true
     },
     "itemtrans": {
-      "type": "ref",
+      "type": "string",
       "description": "Color transform applied to items while this state is active",
-      "target": "colors.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
@@ -125,36 +117,28 @@
     },
     "light-r": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "Red component of the light radius color emitted while this state is active",
       "engineVerified": true
     },
     "light-g": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "Green component of the light radius color emitted while this state is active",
       "engineVerified": true
     },
     "light-b": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "Blue component of the light radius color emitted while this state is active",
       "engineVerified": true
     },
     "onsound": {
-      "type": "ref",
+      "type": "string",
       "description": "Sound played when this state is applied",
-      "target": "sounds.txt",
       "targetColumn": "Handle",
       "engineVerified": true
     },
     "offsound": {
-      "type": "ref",
+      "type": "string",
       "description": "Sound played when this state expires or is removed",
-      "target": "sounds.txt",
       "targetColumn": "Handle",
       "engineVerified": true
     },
@@ -188,56 +172,6 @@
       "description": "Server-side function ID called every frame while the state is active on the unit",
       "engineVerified": true
     },
-    "baseicon": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "icontype": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "drawhp": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "unsummon": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "partysend": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "basemax": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "micon4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "micon3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "micon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "micon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "armblue": {
       "type": "integer",
       "description": "Blue color shift for armor",
@@ -249,17 +183,17 @@
       "engineVerified": true
     },
     "aura": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state is an aura",
       "engineVerified": true
     },
     "curable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state can be cured",
       "engineVerified": true
     },
     "curse": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state is a curse",
       "engineVerified": true
     },
@@ -269,7 +203,7 @@
       "engineVerified": true
     },
     "disguise": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state disguises the unit",
       "engineVerified": true
     },
@@ -284,27 +218,22 @@
       "engineVerified": true
     },
     "hide": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this state hides the unit",
       "engineVerified": true
     },
-    "id": {
-      "type": "integer",
-      "description": "State ID number",
-      "engineVerified": true
-    },
     "monstaydeath": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether state persists through monster death",
       "engineVerified": true
     },
     "pgsv": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether state is saved per game",
       "engineVerified": true
     },
     "plrstaydeath": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether state persists through player death",
       "engineVerified": true
     },
@@ -334,7 +263,7 @@
       "engineVerified": true
     },
     "shatter": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether state causes shatter on death",
       "engineVerified": true
     },
@@ -351,12 +280,76 @@
     "state": {
       "type": "string",
       "description": "State name identifier",
-      "required": true,
       "engineVerified": true
     },
     "transform": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether state transforms the unit",
+      "engineVerified": true
+    },
+    "armred": {
+      "type": "integer",
+      "description": "Armor red color shift",
+      "engineVerified": true
+    },
+    "attred": {
+      "type": "integer",
+      "description": "Attack rating red color shift",
+      "engineVerified": true
+    },
+    "blue": {
+      "type": "integer",
+      "description": "General blue color shift",
+      "engineVerified": true
+    },
+    "castoverlay": {
+      "type": "string",
+      "description": "Cast overlay",
+      "engineVerified": true
+    },
+    "damred": {
+      "type": "integer",
+      "description": "Damage number red color shift",
+      "engineVerified": true
+    },
+    "green": {
+      "type": "integer",
+      "description": "Green color shift flag",
+      "engineVerified": true
+    },
+    "life": {
+      "type": "integer",
+      "description": "Life modifier flag",
+      "engineVerified": true
+    },
+    "missile": {
+      "type": "string",
+      "description": "Missile reference",
+      "engineVerified": true
+    },
+    "noclear": {
+      "type": "integer",
+      "description": "Whether state cannot be cleared",
+      "engineVerified": true
+    },
+    "rcred": {
+      "type": "integer",
+      "description": "Cold resist red shift",
+      "engineVerified": true
+    },
+    "rfred": {
+      "type": "integer",
+      "description": "Fire resist red shift",
+      "engineVerified": true
+    },
+    "rlred": {
+      "type": "integer",
+      "description": "Lightning resist red shift",
+      "engineVerified": true
+    },
+    "rpred": {
+      "type": "integer",
+      "description": "Poison resist red shift",
       "engineVerified": true
     }
   }
