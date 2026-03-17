@@ -1,16 +1,14 @@
 {
   "file": "pettype.txt",
-  "description": "Pet and summon type definitions — controls summoned creature grouping, UI display, automap visibility, and icon assignment. Referenced by the pettype column in Skills.txt.",
+  "description": "Pet type definitions - UI grouping, icons, summon behavior, and display properties for player-controlled pets and summons.",
   "columns": {
     "pet type": {
       "type": "string",
-      "required": true,
-      "unique": true,
       "description": "Pet type name identifier, referenced by Skills.txt pettype column",
       "engineVerified": true
     },
     "automap": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether pet appears on automap",
       "engineVerified": true
     },
@@ -25,7 +23,7 @@
       "engineVerified": true
     },
     "drawhp": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to draw HP bar for pet",
       "engineVerified": true
     },
@@ -37,11 +35,6 @@
     "icontype": {
       "type": "integer",
       "description": "Icon display type",
-      "engineVerified": true
-    },
-    "idx": {
-      "type": "integer",
-      "description": "Pet type index ID",
       "engineVerified": true
     },
     "mclass1": {
@@ -75,23 +68,38 @@
       "engineVerified": true
     },
     "partysend": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether pet type is sent to party",
       "engineVerified": true
     },
     "range": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether pet uses ranged attacks",
       "engineVerified": true
     },
     "unsummon": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether pet can be unsummoned",
       "engineVerified": true
     },
     "warp": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether pet warps to owner",
+      "engineVerified": true
+    },
+    "mclass2": {
+      "type": "integer",
+      "description": "Monster class 2 ID",
+      "engineVerified": true
+    },
+    "mclass3": {
+      "type": "integer",
+      "description": "Monster class 3 ID",
+      "engineVerified": true
+    },
+    "mclass4": {
+      "type": "integer",
+      "description": "Monster class 4 ID",
       "engineVerified": true
     }
   }
