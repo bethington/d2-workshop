@@ -3,748 +3,518 @@
   "description": "Game object definitions â€” shrines, chests, doors, waypoints, and interactive objects.",
   "columns": {
     "Token": {
-      "type": "string",
+      "type": "integer",
       "description": "Animation token identifier",
       "engineVerified": true
     },
     "SpawnMax": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "spawn maximum value",
       "engineVerified": true
     },
     "Selectable0": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 0 (neutral)",
       "engineVerified": true
     },
     "Selectable1": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 1 (operating)",
       "engineVerified": true
     },
     "Selectable2": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 2 (opened)",
       "engineVerified": true
     },
     "Selectable3": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 3 (special 1)",
       "engineVerified": true
     },
     "Selectable4": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 4 (special 2)",
       "engineVerified": true
     },
     "Selectable5": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 5 (special 3)",
       "engineVerified": true
     },
     "Selectable6": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 6 (special 4)",
       "engineVerified": true
     },
     "Selectable7": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether selectable in mode 7 (special 5)",
       "engineVerified": true
     },
     "TrapProb": {
       "type": "integer",
-      "min": 0,
-      "max": 20,
       "description": "Trap probability (unused)",
       "engineVerified": true
     },
     "nTgtFX": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "Front target X offset in subtiles",
       "engineVerified": true
     },
     "nTgtFY": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "Front target Y offset in subtiles",
       "engineVerified": true
     },
     "nTgtBX": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Back target X offset in subtiles",
       "engineVerified": true
     },
     "nTgtBY": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Back target Y offset in subtiles",
       "engineVerified": true
     },
     "FrameCnt0": {
       "type": "integer",
-      "min": 0,
-      "max": 39,
       "description": "Animation frame count for mode 0 (neutral)",
       "engineVerified": true
     },
     "FrameCnt1": {
       "type": "integer",
-      "min": 0,
-      "max": 49,
       "description": "Animation frame count for mode 1 (operating)",
       "engineVerified": true
     },
     "FrameCnt2": {
       "type": "integer",
-      "min": 0,
-      "max": 30,
       "description": "Animation frame count for mode 2 (opened)",
       "engineVerified": true
     },
     "FrameCnt3": {
       "type": "integer",
-      "min": 0,
-      "max": 30,
       "description": "Animation frame count for mode 3 (special 1)",
       "engineVerified": true
     },
     "FrameCnt4": {
       "type": "integer",
-      "min": 0,
-      "max": 25,
       "description": "Animation frame count for mode 4 (special 2)",
       "engineVerified": true
     },
     "FrameCnt5": {
       "type": "integer",
-      "min": 0,
-      "max": 20,
       "description": "Animation frame count for mode 5 (special 3)",
       "engineVerified": true
     },
     "FrameCnt6": {
       "type": "integer",
-      "min": 0,
-      "max": 20,
       "description": "Animation frame count for mode 6 (special 4)",
       "engineVerified": true
     },
     "FrameCnt7": {
       "type": "integer",
-      "min": 0,
-      "max": 10,
       "description": "Animation frame count for mode 7 (special 5)",
       "engineVerified": true
     },
     "FrameDelta0": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 0 in 256ths",
       "engineVerified": true
     },
     "FrameDelta1": {
       "type": "integer",
-      "min": 0,
-      "max": 640,
       "description": "Animation playback rate for mode 1 in 256ths",
       "engineVerified": true
     },
     "FrameDelta2": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 2 in 256ths",
       "engineVerified": true
     },
     "FrameDelta3": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 3 in 256ths",
       "engineVerified": true
     },
     "FrameDelta4": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 4 in 256ths",
       "engineVerified": true
     },
     "FrameDelta5": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 5 in 256ths",
       "engineVerified": true
     },
     "FrameDelta6": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 6 in 256ths",
       "engineVerified": true
     },
     "FrameDelta7": {
       "type": "integer",
-      "min": 0,
-      "max": 256,
       "description": "Animation playback rate for mode 7 in 256ths",
       "engineVerified": true
     },
     "CycleAnim0": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 0 (neutral)",
       "engineVerified": true
     },
     "CycleAnim1": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 1 (operating)",
       "engineVerified": true
     },
     "CycleAnim2": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 2 (opened)",
       "engineVerified": true
     },
     "CycleAnim3": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 3 (special 1)",
       "engineVerified": true
     },
     "CycleAnim4": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 4 (special 2)",
       "engineVerified": true
     },
     "CycleAnim5": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 5 (special 3)",
       "engineVerified": true
     },
     "CycleAnim6": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 6 (special 4)",
       "engineVerified": true
     },
     "CycleAnim7": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to loop animation for mode 7 (special 5)",
       "engineVerified": true
     },
     "BlocksLight0": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 0",
       "engineVerified": true
     },
     "BlocksLight1": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 1",
       "engineVerified": true
     },
     "BlocksLight2": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 2",
       "engineVerified": true
     },
     "BlocksLight3": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 3",
       "engineVerified": true
     },
     "BlocksLight4": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 4",
       "engineVerified": true
     },
     "BlocksLight5": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 5",
       "engineVerified": true
     },
     "BlocksLight6": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 6",
       "engineVerified": true
     },
     "BlocksLight7": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object casts shadow in mode 7",
       "engineVerified": true
     },
     "HasCollision0": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 0",
       "engineVerified": true
     },
     "HasCollision1": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 1",
       "engineVerified": true
     },
     "HasCollision2": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 2",
       "engineVerified": true
     },
     "HasCollision3": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 3",
       "engineVerified": true
     },
     "HasCollision4": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 4",
       "engineVerified": true
     },
     "HasCollision5": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 5",
       "engineVerified": true
     },
     "HasCollision6": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 6",
       "engineVerified": true
     },
     "HasCollision7": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether collision checking is used in mode 7",
       "engineVerified": true
     },
     "IsAttackable0": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether clicking uses kick mode (1) or neutral mode (0)",
       "engineVerified": true
     },
     "EnvEffect": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the object produces ambient sound/environmental effects",
       "engineVerified": true
     },
     "IsDoor": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the object is treated as a door",
       "engineVerified": true
     },
     "BlocksVis": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the object blocks player vision (works with IsDoor)",
       "engineVerified": true
     },
     "Orientation": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "Directional orientation of the object (0-3)",
       "engineVerified": true
     },
     "OrderFlag0": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 0: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag1": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 1: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag2": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 2: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag3": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 3: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag4": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 4: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag5": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 5: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag6": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 6: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "OrderFlag7": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw order for mode 7: 0=object, 1=floor, 2=wall",
       "engineVerified": true
     },
     "PreOperate": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether the object runs its operate function before player interaction",
       "engineVerified": true
     },
     "Mode0": {
       "type": "integer",
       "description": "Object animation mode 0 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode1": {
       "type": "integer",
       "description": "Object animation mode 1 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode2": {
       "type": "integer",
       "description": "Object animation mode 2 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode3": {
       "type": "integer",
       "description": "Object animation mode 3 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode4": {
       "type": "integer",
       "description": "Object animation mode 4 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode5": {
       "type": "integer",
       "description": "Object animation mode 5 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode6": {
       "type": "integer",
       "description": "Object animation mode 6 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Mode7": {
       "type": "integer",
       "description": "Object animation mode 7 enabled",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "Yoffset": {
       "type": "integer",
-      "min": -38,
-      "max": 20,
       "description": "Vertical graphical offset from animation pivot in pixels",
       "engineVerified": true
     },
     "Xoffset": {
       "type": "integer",
-      "min": -45,
-      "max": 20,
       "description": "Horizontal graphical offset from animation pivot in pixels",
       "engineVerified": true
     },
     "SubClass": {
       "type": "integer",
-      "min": 0,
-      "max": 128,
       "description": "Object subclass bitfield (1=shrine, 4=portal, 8=container, 64=waypoint, 128=quest)",
       "engineVerified": true
     },
     "XSpace": {
       "type": "integer",
-      "min": 0,
-      "max": 6,
       "description": "Horizontal spacing in subtiles between instances",
       "engineVerified": true
     },
     "YSpace": {
       "type": "integer",
-      "min": 0,
-      "max": 8,
       "description": "Vertical spacing in subtiles between instances",
       "engineVerified": true
     },
     "NameOffset": {
       "type": "integer",
-      "min": -250,
-      "max": 0,
       "description": "Vertical pixel offset for displayed object name",
       "engineVerified": true
     },
     "MonsterOK": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether monsters can spawn near this object",
       "engineVerified": true
     },
     "OperateRange": {
       "type": "integer",
-      "min": 0,
-      "max": 6,
       "description": "Distance in subtiles from which the player can use this object",
       "engineVerified": true
     },
     "ShrineFunction": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Shrine function identifier (unused, hardcoded)",
       "engineVerified": true
     },
     "Parm0": {
       "type": "integer",
-      "min": -20,
-      "max": 750,
       "description": "General-purpose parameter 0 for object functions",
       "engineVerified": true
     },
     "Parm1": {
       "type": "integer",
-      "min": -80,
-      "max": 344,
       "description": "General-purpose parameter 1 for object functions",
       "engineVerified": true
     },
     "Parm2": {
       "type": "integer",
-      "min": 0,
-      "max": 40,
       "description": "General-purpose parameter 2 for object functions",
       "engineVerified": true
     },
     "Parm3": {
       "type": "integer",
-      "min": 0,
-      "max": 40,
       "description": "General-purpose parameter 3 for object functions",
       "engineVerified": true
     },
     "Parm4": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "General-purpose parameter 4 for object functions",
       "engineVerified": true
     },
     "Parm5": {
       "type": "integer",
-      "min": 0,
-      "max": 6,
       "description": "General-purpose parameter 5 for object functions",
       "engineVerified": true
     },
     "Parm6": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "General-purpose parameter 6 for object functions",
       "engineVerified": true
     },
     "Parm7": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "General-purpose parameter 7 for object functions",
       "engineVerified": true
     },
     "Lockable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this object can be locked",
       "engineVerified": true
     },
     "Damage": {
       "type": "integer",
-      "min": 100,
-      "max": 100,
       "description": "Amount of damage dealt by this object on contact",
       "engineVerified": true
     },
     "CollisionSubst": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether special collision substitution checking is used",
       "engineVerified": true
     },
     "Width": {
       "type": "integer",
-      "min": 0,
-      "max": 100,
       "description": "Width of bounding box in pixels",
       "engineVerified": true
     },
     "PopulateFn": {
       "type": "integer",
-      "min": 0,
-      "max": 9,
       "description": "Function controlling how contents are populated on spawn",
       "engineVerified": true
     },
     "InitFn": {
       "type": "integer",
-      "min": 0,
-      "max": 61,
       "description": "Initialization function called when the object is created",
       "engineVerified": true
     },
     "BlockMissile": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether missiles collide with this object",
       "engineVerified": true
     },
     "DrawUnder": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Draw as floor tile (1) instead of normal rendering (0)",
       "engineVerified": true
     },
     "OpenWarp": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether to display warp destination text",
-      "engineVerified": true
-    },
-    "LevelMin": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "effectclass": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "view name": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Duration in frames": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB7": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY7": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB6": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY6": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB5": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY5": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB4": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY4": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB3": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY3": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB2": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY2": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB1": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY1": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "PROB0": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DENSITY0": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "monster": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "frame": {
-      "type": "string",
-      "description": "Column read by game engine",
       "engineVerified": true
     },
     "Act": {
@@ -753,83 +523,13 @@
       "engineVerified": true
     },
     "Beta": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this is beta content",
-      "engineVerified": true
-    },
-    "Class": {
-      "type": "integer",
-      "description": "Object class type",
-      "engineVerified": true
-    },
-    "HasAnimationMode0": {
-      "type": "boolean",
-      "description": "Has animation mode 0",
-      "engineVerified": true
-    },
-    "HasAnimationMode1": {
-      "type": "boolean",
-      "description": "Has animation mode 1",
-      "engineVerified": true
-    },
-    "HasAnimationMode2": {
-      "type": "boolean",
-      "description": "Has animation mode 2",
-      "engineVerified": true
-    },
-    "HasAnimationMode3": {
-      "type": "boolean",
-      "description": "Has animation mode 3",
-      "engineVerified": true
-    },
-    "HasAnimationMode4": {
-      "type": "boolean",
-      "description": "Has animation mode 4",
-      "engineVerified": true
-    },
-    "HasAnimationMode5": {
-      "type": "boolean",
-      "description": "Has animation mode 5",
-      "engineVerified": true
-    },
-    "HasAnimationMode6": {
-      "type": "boolean",
-      "description": "Has animation mode 6",
-      "engineVerified": true
-    },
-    "HasAnimationMode7": {
-      "type": "boolean",
-      "description": "Has animation mode 7",
-      "engineVerified": true
-    },
-    "Id": {
-      "type": "integer",
-      "description": "Unique object ID",
       "engineVerified": true
     },
     "Left": {
       "type": "integer",
       "description": "Left boundary offset",
-      "engineVerified": true
-    },
-    "Light": {
-      "type": "integer",
-      "description": "Light radius emitted",
-      "engineVerified": true
-    },
-    "LightB": {
-      "type": "integer",
-      "description": "Light blue component",
-      "engineVerified": true
-    },
-    "LightG": {
-      "type": "integer",
-      "description": "Light green component",
-      "engineVerified": true
-    },
-    "LightR": {
-      "type": "integer",
-      "description": "Light red component",
       "engineVerified": true
     },
     "Name": {
@@ -838,7 +538,7 @@
       "engineVerified": true
     },
     "Overlay": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether object uses overlay drawing",
       "engineVerified": true
     },
@@ -852,16 +552,6 @@
       "description": "Vertical size in cells",
       "engineVerified": true
     },
-    "Speed": {
-      "type": "integer",
-      "description": "Animation speed",
-      "engineVerified": true
-    },
-    "Start": {
-      "type": "integer",
-      "description": "Starting animation frame",
-      "engineVerified": true
-    },
     "Top": {
       "type": "integer",
       "description": "Top boundary offset",
@@ -872,14 +562,229 @@
       "description": "Transparency level",
       "engineVerified": true
     },
-    "Trap": {
-      "type": "boolean",
-      "description": "Whether this object is a trap",
+    "AutoMap": {
+      "type": "integer",
+      "description": "Automap cell index",
       "engineVerified": true
     },
-    "Type": {
+    "Blue": {
       "type": "integer",
-      "description": "Object type classification",
+      "description": "Blue value",
+      "engineVerified": true
+    },
+    "ClientFn": {
+      "type": "integer",
+      "description": "Client function ID",
+      "engineVerified": true
+    },
+    "Draw": {
+      "type": "integer",
+      "description": "Draw order priority",
+      "engineVerified": true
+    },
+    "Gore": {
+      "type": "integer",
+      "description": "Whether object shows gore effects",
+      "engineVerified": true
+    },
+    "Green": {
+      "type": "integer",
+      "description": "Green value",
+      "engineVerified": true
+    },
+    "HD": {
+      "type": "integer",
+      "description": "Head component",
+      "engineVerified": true
+    },
+    "Height": {
+      "type": "integer",
+      "description": "Height value",
+      "engineVerified": true
+    },
+    "LA": {
+      "type": "integer",
+      "description": "Left arm component",
+      "engineVerified": true
+    },
+    "LG": {
+      "type": "integer",
+      "description": "Legs component",
+      "engineVerified": true
+    },
+    "LH": {
+      "type": "integer",
+      "description": "Left hand component",
+      "engineVerified": true
+    },
+    "Lit0": {
+      "type": "integer",
+      "description": "Lit0 value",
+      "engineVerified": true
+    },
+    "Lit1": {
+      "type": "integer",
+      "description": "Lit1 value",
+      "engineVerified": true
+    },
+    "Lit2": {
+      "type": "integer",
+      "description": "Lit2 value",
+      "engineVerified": true
+    },
+    "Lit3": {
+      "type": "integer",
+      "description": "Lit3 value",
+      "engineVerified": true
+    },
+    "Lit4": {
+      "type": "integer",
+      "description": "Lit4 value",
+      "engineVerified": true
+    },
+    "Lit5": {
+      "type": "integer",
+      "description": "Lit5 value",
+      "engineVerified": true
+    },
+    "Lit6": {
+      "type": "integer",
+      "description": "Lit6 value",
+      "engineVerified": true
+    },
+    "Lit7": {
+      "type": "integer",
+      "description": "Lit7 value",
+      "engineVerified": true
+    },
+    "OperateFn": {
+      "type": "integer",
+      "description": "Operate function ID",
+      "engineVerified": true
+    },
+    "RA": {
+      "type": "integer",
+      "description": "Right arm component",
+      "engineVerified": true
+    },
+    "RH": {
+      "type": "integer",
+      "description": "Right hand component",
+      "engineVerified": true
+    },
+    "Red": {
+      "type": "integer",
+      "description": "Red value",
+      "engineVerified": true
+    },
+    "Restore": {
+      "type": "integer",
+      "description": "Whether object restores on level re-entry",
+      "engineVerified": true
+    },
+    "RestoreVirgins": {
+      "type": "integer",
+      "description": "Whether virgin state restores",
+      "engineVerified": true
+    },
+    "S1": {
+      "type": "integer",
+      "description": "Special 1 component",
+      "engineVerified": true
+    },
+    "S2": {
+      "type": "integer",
+      "description": "Special 2 component",
+      "engineVerified": true
+    },
+    "S3": {
+      "type": "integer",
+      "description": "Special 3 component",
+      "engineVerified": true
+    },
+    "S4": {
+      "type": "integer",
+      "description": "Special 4 component",
+      "engineVerified": true
+    },
+    "S5": {
+      "type": "integer",
+      "description": "Special 5 component",
+      "engineVerified": true
+    },
+    "S6": {
+      "type": "integer",
+      "description": "Special 6 component",
+      "engineVerified": true
+    },
+    "S7": {
+      "type": "integer",
+      "description": "Special 7 component",
+      "engineVerified": true
+    },
+    "S8": {
+      "type": "integer",
+      "description": "Special 8 component",
+      "engineVerified": true
+    },
+    "SH": {
+      "type": "integer",
+      "description": "Shield component",
+      "engineVerified": true
+    },
+    "Start0": {
+      "type": "integer",
+      "description": "Start0 value",
+      "engineVerified": true
+    },
+    "Start1": {
+      "type": "integer",
+      "description": "Start1 value",
+      "engineVerified": true
+    },
+    "Start2": {
+      "type": "integer",
+      "description": "Start2 value",
+      "engineVerified": true
+    },
+    "Start3": {
+      "type": "integer",
+      "description": "Start3 value",
+      "engineVerified": true
+    },
+    "Start4": {
+      "type": "integer",
+      "description": "Start4 value",
+      "engineVerified": true
+    },
+    "Start5": {
+      "type": "integer",
+      "description": "Start5 value",
+      "engineVerified": true
+    },
+    "Start6": {
+      "type": "integer",
+      "description": "Start6 value",
+      "engineVerified": true
+    },
+    "Start7": {
+      "type": "integer",
+      "description": "Start7 value",
+      "engineVerified": true
+    },
+    "Sync": {
+      "type": "integer",
+      "description": "Whether state syncs across players",
+      "engineVerified": true
+    },
+    "TR": {
+      "type": "integer",
+      "description": "Torso component",
+      "engineVerified": true
+    },
+    "TotalPieces": {
+      "type": "integer",
+      "description": "Total animation component pieces",
       "engineVerified": true
     }
   }
