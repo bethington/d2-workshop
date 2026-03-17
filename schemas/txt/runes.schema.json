@@ -1,6 +1,6 @@
 {
   "file": "runes.txt",
-  "description": "Runeword definitions — rune combinations, item type restrictions, and granted properties.",
+  "description": "Runeword definitions - rune combinations, required item types, and property bonuses applied when socketed in order.",
   "columns": {
     "rune name": {
       "type": "string",
@@ -8,258 +8,143 @@
       "engineVerified": true
     },
     "complete": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Runeword activation flag",
       "engineVerified": true
     },
     "rune1": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 1 item code",
       "engineVerified": true
     },
     "rune2": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 2 item code",
       "engineVerified": true
     },
     "rune3": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 3 item code",
       "engineVerified": true
     },
     "rune4": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 4 item code",
       "engineVerified": true
     },
     "rune5": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 5 item code",
       "engineVerified": true
     },
     "rune6": {
-      "type": "ref",
-      "target": "misc.txt",
+      "type": "string",
       "targetColumn": "code",
       "description": "Rune 6 item code",
       "engineVerified": true
     },
     "t1code1": {
-      "type": "enum",
-      "values": [
-        "ac%",
-        "att-undead",
-        "deadly",
-        "dmg%",
-        "dmg-pois",
-        "dmg-undead",
-        "light",
-        "mag%",
-        "pois-max",
-        "res-cold",
-        "res-pois"
-      ],
+      "type": "string",
       "description": "Runeword property 1 code",
       "engineVerified": true
     },
     "t1param1": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
+      "type": "string",
       "description": "Property 1 param for tier 1",
       "engineVerified": true
     },
     "t1min1": {
       "type": "integer",
-      "min": 1,
-      "max": 200,
       "description": "Property 1 min for tier 1",
       "engineVerified": true
     },
     "t1max1": {
       "type": "integer",
-      "min": 1,
-      "max": 200,
       "description": "Property 1 max for tier 1",
       "engineVerified": true
     },
     "t1code2": {
-      "type": "enum",
-      "values": [
-        "ac",
-        "att",
-        "att-undead",
-        "balance3",
-        "crush",
-        "dmg%",
-        "dmg-cold",
-        "dmg-fire",
-        "dmg-undead",
-        "gold%",
-        "lifesteal",
-        "light",
-        "mag%",
-        "manasteal",
-        "openwounds",
-        "res-all",
-        "res-cold",
-        "res-fire"
-      ],
+      "type": "string",
       "description": "Runeword property 2 code",
       "engineVerified": true
     },
     "t1param2": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 2 param for tier 2",
-      "min": 0,
       "engineVerified": true
     },
     "t1min2": {
       "type": "integer",
-      "min": 3,
-      "max": 300,
       "description": "Property 2 min for tier 2",
       "engineVerified": true
     },
     "t1max2": {
       "type": "integer",
-      "min": 3,
-      "max": 300,
       "description": "Property 2 max for tier 2",
       "engineVerified": true
     },
     "t1code3": {
-      "type": "enum",
-      "values": [
-        "ac%",
-        "allskills",
-        "att",
-        "balance2",
-        "deadly",
-        "dex",
-        "dmg%",
-        "ignore-ac",
-        "mana-kill",
-        "manasteal",
-        "noheal",
-        "openwounds",
-        "res-fire",
-        "res-ltng",
-        "skilltab",
-        "str",
-        "stupidity",
-        "swing2",
-        "swing3"
-      ],
+      "type": "string",
       "description": "Runeword property 3 code",
       "engineVerified": true
     },
     "t1param3": {
-      "type": "integer",
-      "min": 11,
-      "max": 11,
+      "type": "string",
       "description": "Property 3 param for tier 3",
       "engineVerified": true
     },
     "t1min3": {
       "type": "integer",
-      "min": 1,
-      "max": 250,
       "description": "Property 3 min for tier 3",
       "engineVerified": true
     },
     "t1max3": {
       "type": "integer",
-      "min": 1,
-      "max": 250,
       "description": "Property 3 max for tier 3",
       "engineVerified": true
     },
     "t1code4": {
-      "type": "enum",
-      "values": [
-        "att%",
-        "dmg%",
-        "dmg-fire",
-        "dmg-pois",
-        "dmg-to-mana",
-        "dmg-undead",
-        "gethit-skill",
-        "hp",
-        "lifesteal",
-        "manasteal",
-        "move1",
-        "res-cold",
-        "res-pois",
-        "str",
-        "thorns"
-      ],
+      "type": "string",
       "description": "Runeword property 4 code",
       "engineVerified": true
     },
     "t1param4": {
-      "type": "integer",
-      "min": 25,
-      "max": 38,
+      "type": "string",
       "description": "Property 4 param for tier 4",
       "engineVerified": true
     },
     "t1min4": {
       "type": "integer",
-      "min": 3,
-      "max": 200,
       "description": "Property 4 min for tier 4",
       "engineVerified": true
     },
     "t1max4": {
       "type": "integer",
-      "min": 3,
-      "max": 200,
       "description": "Property 4 max for tier 4",
       "engineVerified": true
     },
     "t1code5": {
-      "type": "enum",
-      "values": [
-        "att",
-        "dmg-demon",
-        "lifesteal",
-        "res-ltng",
-        "skilltab",
-        "slow",
-        "str"
-      ],
+      "type": "string",
       "description": "Runeword property 5 code",
       "engineVerified": true
     },
     "t1param5": {
-      "type": "integer",
-      "min": 7,
-      "max": 7,
+      "type": "string",
       "description": "Property 5 param for tier 5",
       "engineVerified": true
     },
     "t1min5": {
       "type": "integer",
-      "min": 3,
-      "max": 200,
       "description": "Property 5 min for tier 5",
       "engineVerified": true
     },
     "t1max5": {
       "type": "integer",
-      "min": 3,
-      "max": 200,
       "description": "Property 5 max for tier 5",
       "engineVerified": true
     },
@@ -269,28 +154,18 @@
       "engineVerified": true
     },
     "t1param6": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 6 param for tier 6",
-      "min": 0,
       "engineVerified": true
     },
     "t1min6": {
       "type": "integer",
-      "min": -3,
-      "max": -3,
       "description": "Property 6 min for tier 6",
       "engineVerified": true
     },
     "t1max6": {
       "type": "integer",
-      "min": -3,
-      "max": -3,
       "description": "Property 6 max for tier 6",
-      "engineVerified": true
-    },
-    "runessrv": {
-      "type": "string",
-      "description": "Column read by game engine",
       "engineVerified": true
     },
     "t1max7": {
@@ -304,7 +179,7 @@
       "engineVerified": true
     },
     "t1param7": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -313,14 +188,59 @@
       "description": "Column read by game engine",
       "engineVerified": true
     },
-    "*Runes": {
+    "etype1": {
       "type": "string",
-      "description": "Runeword display name",
+      "description": "Excluded item type 1",
       "engineVerified": true
     },
-    "Name": {
+    "etype2": {
       "type": "string",
-      "description": "Runeword name string key",
+      "description": "Excluded item type 2",
+      "engineVerified": true
+    },
+    "etype3": {
+      "type": "string",
+      "description": "Excluded item type 3",
+      "engineVerified": true
+    },
+    "itype1": {
+      "type": "string",
+      "description": "Included item type 1",
+      "engineVerified": true
+    },
+    "itype2": {
+      "type": "string",
+      "description": "Included item type 2",
+      "engineVerified": true
+    },
+    "itype3": {
+      "type": "string",
+      "description": "Included item type 3",
+      "engineVerified": true
+    },
+    "itype4": {
+      "type": "string",
+      "description": "Included item type 4",
+      "engineVerified": true
+    },
+    "itype5": {
+      "type": "string",
+      "description": "Included item type 5",
+      "engineVerified": true
+    },
+    "itype6": {
+      "type": "string",
+      "description": "Included item type 6",
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Runeword internal name identifier",
+      "engineVerified": true
+    },
+    "server": {
+      "type": "integer",
+      "description": "Whether this runeword requires server validation",
       "engineVerified": true
     }
   }
