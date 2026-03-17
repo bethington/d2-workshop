@@ -36,9 +36,33 @@
       "description": "Ending animation sequence index (-1 = none)",
       "engineVerified": true
     },
-    "AutoMap": {
-      "type": "string",
-      "description": "Automap entry name identifier",
+    "Style": {
+      "type": "integer",
+      "description": "Visual style index for this automap tile",
+      "engineVerified": true
+    },
+    "Cel1": {
+      "type": "integer",
+      "min": -1,
+      "description": "Automap cell graphic index 1 (-1 = none)",
+      "engineVerified": true
+    },
+    "Cel2": {
+      "type": "integer",
+      "min": -1,
+      "description": "Automap cell graphic index 2 (-1 = none)",
+      "engineVerified": true
+    },
+    "Cel3": {
+      "type": "integer",
+      "min": -1,
+      "description": "Automap cell graphic index 3 (-1 = none)",
+      "engineVerified": true
+    },
+    "Cel4": {
+      "type": "integer",
+      "min": -1,
+      "description": "Automap cell graphic index 4 (-1 = none)",
       "engineVerified": true
     }
   }
