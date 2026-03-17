@@ -2,7 +2,7 @@
   "name": "d2-workshop",
   "displayName": "D2 Workshop",
   "description": "A complete Diablo II 1.13c modding workbench — browse MPQ archives, edit game data tables, view/edit DC6 sprites, patch binaries, and share mods.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "xebyte",
   "author": "Ben Ethington",
   "license": "MIT",

@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.5 - 2026-03-17
+
+### Added
+
+- Path picker commands for GIMP executable, game executable, and mod folders — no more manual path typing
+- "Browse..." option in the Switch Mod quick pick to add mod folders inline
+- Game launcher prompts with a "Browse..." button when the executable is not found
+- New settings:
+  - `d2workshop.gameExePath` — explicit path to Game.exe / Diablo II.exe (falls back to auto-detection)
+  - `d2workshop.autoBackup` — toggle automatic backups before publishing (default: on)
+  - `d2workshop.autoDeleteBin` — toggle auto-deletion of .bin files when publishing .txt changes (default: on)
+
+## 0.1.4 - 2026-03-17
+
+### Fixed
+
+- Fix MCP server provider missing label in package.json
+
 ## 0.1.3 - 2026-03-17
 
 ### Fixed
