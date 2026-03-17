@@ -2,9 +2,13 @@
 .vscode-test/**
 src/**
 node_modules/**
+scripts/**
+tests/**
 .gitignore
+.mcp.json
 tsconfig*.json
 esbuild*.mjs
 **/*.ts
 **/*.tsx
 **/*.map
+**/*.vsix

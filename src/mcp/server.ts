@@ -18,7 +18,7 @@ const schemaLoader = new SchemaLoader(schemasDir, workspaceSchemasDir);
 
 const server = new McpServer({
   name: "d2-workshop",
-  version: "0.1.0",
+  version: "0.1.2",
 });
 
 // --- d2_list_schemas ---

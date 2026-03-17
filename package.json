@@ -2,7 +2,7 @@
   "name": "d2-workshop",
   "displayName": "D2 Workshop",
   "description": "A complete Diablo II 1.13c modding workbench — browse MPQ archives, edit game data tables, view/edit DC6 sprites, patch binaries, and share mods.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "publisher": "xebyte",
   "author": "Ben Ethington",
   "license": "MIT",
@@ -13,10 +13,26 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "icon": "resources/icons/d2-icon.png",
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "diablo",
+    "diablo 2",
+    "modding",
+    "mpq",
+    "dc6",
+    "dt1",
+    "dcc",
+    "pl2",
+    "cof",
+    "sprite"
+  ],
   "activationEvents": [
+    "onView:d2ExplorerView",
+    "onView:d2SaveQueueView",
+    "onView:d2SearchView",
     "workspaceContains:**/*.mpq",
     "workspaceContains:**/Game.exe",
     "workspaceContains:**/Diablo II.exe"
@@ -270,7 +286,9 @@
     "watch": "node esbuild.mjs --watch",
     "watch:webviews": "node esbuild.webviews.mjs --watch",
     "lint": "eslint src --ext ts,tsx",
-    "test": "vitest run"
+    "test": "vitest run",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
@@ -280,6 +298,7 @@
     "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
+    "@vscode/vsce": "^3.7.1",
     "esbuild": "^0.19.11",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3",
