@@ -1,0 +1,11 @@
+{
+  "file": "misscalc.txt",
+  "description": "Missile calculation code lookup table. Engine uses row index to map missile calc IDs to their code strings.",
+  "columns": {
+    "code": {
+      "type": "string",
+      "description": "Missile calculation code identifier",
+      "engineVerified": true
+    }
+  }
+}
