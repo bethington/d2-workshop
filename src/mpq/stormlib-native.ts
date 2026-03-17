@@ -505,5 +505,40 @@ print(r)
       }).trim();
       return output === "True";
     },
+
+    removeFile(handle: number, fileName: string): boolean {
+      const mpqPath = archivePaths.get(handle);
+      if (!mpqPath) throw new Error("Invalid handle");
+
+      const escapedMpqPath = mpqPath.replace(/\\/g, "\\\\");
+      const escapedFileName = fileName.replace(/\\/g, "\\\\");
+
+      const script = `
+import ctypes
+storm = ctypes.WinDLL(r"${dllPath!.replace(/\\/g, "\\\\")}")
+storm.SFileOpenArchive.argtypes = [ctypes.c_char_p, ctypes.c_uint, ctypes.c_uint, ctypes.POINTER(ctypes.c_void_p)]
+storm.SFileOpenArchive.restype = ctypes.c_bool
+storm.SFileCloseArchive.argtypes = [ctypes.c_void_p]
+storm.SFileCloseArchive.restype = ctypes.c_bool
+storm.SFileRemoveFile.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_uint]
+storm.SFileRemoveFile.restype = ctypes.c_bool
+h = ctypes.c_void_p()
+storm.SFileOpenArchive(b"${escapedMpqPath}", 0, 0, ctypes.byref(h))
+r = storm.SFileRemoveFile(h.value, b"${escapedFileName}", 0)
+storm.SFileCloseArchive(h.value)
+print(r)
+`;
+
+      const { execFileSync } = require("child_process");
+      try {
+        const output = execFileSync("python", ["-c", script], {
+          encoding: "utf-8",
+          timeout: 10000,
+        }).trim();
+        return output === "True";
+      } catch {
+        return false;
+      }
+    },
   };
 }

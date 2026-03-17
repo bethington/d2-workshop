@@ -295,6 +295,18 @@ export class SaveQueue {
 
     this.mpqManager.writeFile(mpqName, internalPath, new Uint8Array(data));
     console.log(`[D2 Workshop] Published ${internalPath} to ${mpqName}`);
+
+    // Auto-delete corresponding .bin file when publishing a .txt change
+    // This forces the game engine to reparse the .txt on next launch
+    if (internalPath.toLowerCase().endsWith(".txt")) {
+      const binPath = internalPath.replace(/\.txt$/i, ".bin");
+      try {
+        this.mpqManager.deleteFile(mpqName, binPath);
+        console.log(`[D2 Workshop] Deleted ${binPath} from ${mpqName} (forces engine reparse)`);
+      } catch {
+        // .bin may not exist — that's fine
+      }
+    }
   }
 
   private async publishBinaryChanges(

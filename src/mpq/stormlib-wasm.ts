@@ -17,6 +17,7 @@ export interface StormLibModule {
   readFile(handle: number, fileName: string): Uint8Array | null;
   writeFile(handle: number, fileName: string, data: Uint8Array): boolean;
   hasFile(handle: number, fileName: string): boolean;
+  removeFile(handle: number, fileName: string): boolean;
 }
 
 /** MPQ open flags */
@@ -114,5 +115,6 @@ function createStub(): StormLibModule {
     readFile: notImpl("readFile") as any,
     writeFile: notImpl("writeFile") as any,
     hasFile: notImpl("hasFile") as any,
+    removeFile: notImpl("removeFile") as any,
   };
 }

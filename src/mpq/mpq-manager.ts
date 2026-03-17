@@ -157,6 +157,30 @@ export class MpqManager {
   }
 
   /**
+   * Delete a file from an MPQ archive.
+   * Used to remove .bin cache files when .txt files are modified.
+   */
+  deleteFile(mpqName: string, fileName: string): void {
+    const stormlib = getStormLib();
+
+    // Close ALL open archive handles to release file locks
+    this.closeAll();
+
+    const fullPath = path.join(this.workspaceRoot, mpqName);
+    const handle = stormlib.openArchive(fullPath, 0);
+
+    try {
+      const normalizedName = fileName.replace(/\//g, "\\");
+      // Check if file exists before trying to delete
+      if (stormlib.hasFile(handle, normalizedName)) {
+        stormlib.removeFile(handle, normalizedName);
+      }
+    } finally {
+      stormlib.closeArchive(handle);
+    }
+  }
+
+  /**
    * Close all open archives.
    */
   closeAll(): void {
