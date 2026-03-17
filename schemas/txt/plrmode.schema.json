@@ -1,59 +1,15 @@
 {
   "file": "plrmode.txt",
-  "description": "Player animation mode definitions.",
+  "description": "Player animation mode definitions - maps mode names to animation tokens. Merged with plrtype.txt at load time.",
   "columns": {
-    "Name": {
-      "type": "enum",
-      "values": [
-        "Attack1",
-        "Attack2",
-        "Block",
-        "Cast",
-        "Dead",
-        "Death",
-        "Get Hit",
-        "Kick",
-        "Knock back",
-        "Neutral",
-        "Run",
-        "Sequence",
-        "Skill1",
-        "Skill2",
-        "Skill3",
-        "Skill4",
-        "Throw",
-        "Town Neutral",
-        "Town Walk",
-        "Walk"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
+    "name": {
+      "type": "string",
+      "description": "Animation mode name (e.g. Neutral, Walk, Attack1, Cast)",
       "engineVerified": true
     },
-    "Token": {
-      "type": "enum",
-      "values": [
-        "A1",
-        "A2",
-        "BL",
-        "DD",
-        "DT",
-        "GH",
-        "KK",
-        "NU",
-        "RN",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "SC",
-        "TH",
-        "TN",
-        "TW",
-        "WL"
-      ],
-      "description": "Animation token identifier",
+    "token": {
+      "type": "string",
+      "description": "Animation token code (e.g. NU, WL, A1, SC)",
       "engineVerified": true
     }
   }
