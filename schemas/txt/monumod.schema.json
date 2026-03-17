@@ -1,0 +1,81 @@
+{
+  "file": "monumod.txt",
+  "description": "Monster unique modifier definitions - controls which modifiers can spawn on champion, unique, and super unique monsters.",
+  "columns": {
+    "uniquemod": {
+      "type": "string",
+      "description": "Unique modifier name identifier",
+      "engineVerified": true
+    },
+    "version": {
+      "type": "integer",
+      "description": "Version flag (0 = classic, 100 = expansion)",
+      "engineVerified": true
+    },
+    "enabled": {
+      "type": "integer",
+      "description": "Whether this modifier is enabled",
+      "engineVerified": true
+    },
+    "xfer": {
+      "type": "integer",
+      "description": "Whether this modifier transfers to minions",
+      "engineVerified": true
+    },
+    "champion": {
+      "type": "integer",
+      "description": "Whether this modifier can appear on champion monsters",
+      "engineVerified": true
+    },
+    "fpick": {
+      "type": "integer",
+      "description": "First pick frequency weight",
+      "engineVerified": true
+    },
+    "exclude1": {
+      "type": "string",
+      "description": "First mutually exclusive modifier reference",
+      "engineVerified": true
+    },
+    "exclude2": {
+      "type": "string",
+      "description": "Second mutually exclusive modifier reference",
+      "engineVerified": true
+    },
+    "cpick": {
+      "type": "integer",
+      "description": "Champion pick frequency (Normal)",
+      "engineVerified": true
+    },
+    "cpick (N)": {
+      "type": "integer",
+      "description": "Champion pick frequency (Nightmare)",
+      "engineVerified": true
+    },
+    "cpick (H)": {
+      "type": "integer",
+      "description": "Champion pick frequency (Hell)",
+      "engineVerified": true
+    },
+    "upick": {
+      "type": "integer",
+      "description": "Unique pick frequency (Normal)",
+      "engineVerified": true
+    },
+    "upick (N)": {
+      "type": "integer",
+      "description": "Unique pick frequency (Nightmare)",
+      "engineVerified": true
+    },
+    "upick (H)": {
+      "type": "integer",
+      "description": "Unique pick frequency (Hell)",
+      "engineVerified": true
+    },
+    "constants": {
+      "type": "integer",
+      "description": "Modifier constant parameter value",
+      "engineVerified": true
+    }
+  }
+}
