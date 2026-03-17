@@ -1,12 +1,12 @@
 {
   "file": "uniqueprefix.txt",
-  "description": "Auto-generated schema for uniqueprefix.txt",
+  "description": "Unique monster name prefix strings for random boss name generation.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier",
+      "description": "Monster name component string table key",
       "engineVerified": true
     }
   }

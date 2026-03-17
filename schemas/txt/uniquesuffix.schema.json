@@ -1,12 +1,12 @@
 {
   "file": "uniquesuffix.txt",
-  "description": "Auto-generated schema for uniquesuffix.txt",
+  "description": "Unique monster name suffix strings for random boss name generation.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier",
+      "description": "Monster name component string table key",
       "engineVerified": true
     }
   }

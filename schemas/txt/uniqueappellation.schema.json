@@ -1,12 +1,12 @@
 {
   "file": "uniqueappellation.txt",
-  "description": "Auto-generated schema for uniqueappellation.txt",
+  "description": "Unique monster appellation (title suffix) name strings for random boss name generation.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier",
+      "description": "Monster name component string table key",
       "engineVerified": true
     }
   }

@@ -1,11 +1,11 @@
 {
   "file": "uniquetitle.txt",
-  "description": "Auto-generated schema for uniquetitle.txt",
+  "description": "Unique monster title (prefix) name strings for random boss name generation.",
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
-      "description": "Internal name identifier",
+      "description": "Monster name component string table key",
       "engineVerified": true
     }
   }
