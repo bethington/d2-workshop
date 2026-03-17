@@ -4,120 +4,86 @@
   "columns": {
     "SizeX": {
       "type": "integer",
-      "min": 0,
-      "max": 200,
       "description": "Width in grid cells",
       "engineVerified": true
     },
     "SizeY": {
       "type": "integer",
-      "min": 0,
-      "max": 200,
       "description": "Height in grid cells",
       "engineVerified": true
     },
     "OffsetX": {
       "type": "integer",
-      "min": -4,
-      "max": 5000,
       "description": "Horizontal placement offset",
       "engineVerified": true
     },
     "OffsetY": {
       "type": "integer",
-      "min": -40,
-      "max": 3100,
       "description": "Vertical placement offset",
       "engineVerified": true
     },
     "Depend": {
       "type": "integer",
-      "min": 0,
-      "max": 32,
       "description": "Level dependency for non-random, non-preset levels",
       "engineVerified": true
     },
     "DrlgType": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "Level generation type (1=random size, 2=preset map, 3=random with preset size)",
       "engineVerified": true
     },
     "LevelType": {
       "type": "integer",
-      "min": 0,
-      "max": 28,
       "description": "Visual level type ID from lvltypes.txt",
       "engineVerified": true
     },
     "SubType": {
       "type": "integer",
-      "min": -1,
-      "max": 9,
       "description": "Sub-level type from LVLSub.txt (-1=none)",
       "engineVerified": true
     },
     "SubWaypoint": {
       "type": "integer",
-      "min": -1,
-      "max": 7,
       "description": "Sub-level waypoint setting from LVLSub.txt (-1=none)",
       "engineVerified": true
     },
     "SubShrine": {
       "type": "integer",
-      "min": -1,
-      "max": 8,
       "description": "Sub-level shrine setting from LVLSub.txt (-1=none)",
       "engineVerified": true
     },
     "Quest": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "Associated quest ID for this level",
       "engineVerified": true
     },
     "WarpDist": {
       "type": "integer",
-      "min": 0,
-      "max": 3900,
       "description": "Waypoint travel distance",
       "engineVerified": true
     },
     "MonLvl1": {
       "type": "integer",
-      "min": 0,
-      "max": 28,
       "description": "Normal difficulty monster level",
       "engineVerified": true
     },
     "MonLvl2": {
       "type": "integer",
-      "min": 0,
-      "max": 53,
       "description": "Nightmare difficulty monster level",
       "engineVerified": true
     },
     "MonLvl3": {
       "type": "integer",
-      "min": 0,
-      "max": 78,
       "description": "Hell difficulty monster level",
       "engineVerified": true
     },
     "MonDen": {
       "type": "integer",
-      "min": 0,
-      "max": 2200,
       "description": "Monster density multiplier",
       "engineVerified": true
     },
     "SoundEnv": {
       "type": "integer",
-      "min": 0,
-      "max": 34,
       "description": "Sound environment ID from soundenviron.txt",
       "engineVerified": true
     },
@@ -138,113 +104,81 @@
     },
     "ObjGrp0": {
       "type": "integer",
-      "min": 0,
-      "max": 66,
       "description": "Object group ID from objgroup.txt for slot 0",
       "engineVerified": true
     },
     "ObjGrp1": {
       "type": "integer",
-      "min": 0,
-      "max": 76,
       "description": "Object group ID from objgroup.txt for slot 1",
       "engineVerified": true
     },
     "ObjGrp2": {
       "type": "integer",
-      "min": 0,
-      "max": 77,
       "description": "Object group ID from objgroup.txt for slot 2",
       "engineVerified": true
     },
     "ObjGrp3": {
       "type": "integer",
-      "min": 0,
-      "max": 78,
       "description": "Object group ID from objgroup.txt for slot 3",
       "engineVerified": true
     },
     "ObjGrp4": {
       "type": "integer",
-      "min": 0,
-      "max": 72,
       "description": "Object group ID from objgroup.txt for slot 4",
       "engineVerified": true
     },
     "ObjGrp5": {
       "type": "integer",
-      "min": 0,
-      "max": 69,
       "description": "Object group ID from objgroup.txt for slot 5",
       "engineVerified": true
     },
     "ObjGrp6": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Object group ID from objgroup.txt for slot 6",
       "engineVerified": true
     },
     "ObjGrp7": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Object group ID from objgroup.txt for slot 7",
       "engineVerified": true
     },
     "ObjPrb0": {
       "type": "integer",
-      "min": 0,
-      "max": 90,
       "description": "Spawn probability for object group 0 (0-100)",
       "engineVerified": true
     },
     "ObjPrb1": {
       "type": "integer",
-      "min": 0,
-      "max": 80,
       "description": "Spawn probability for object group 1 (0-100)",
       "engineVerified": true
     },
     "ObjPrb2": {
       "type": "integer",
-      "min": 0,
-      "max": 70,
       "description": "Spawn probability for object group 2 (0-100)",
       "engineVerified": true
     },
     "ObjPrb3": {
       "type": "integer",
-      "min": 0,
-      "max": 75,
       "description": "Spawn probability for object group 3 (0-100)",
       "engineVerified": true
     },
     "ObjPrb4": {
       "type": "integer",
-      "min": 0,
-      "max": 50,
       "description": "Spawn probability for object group 4 (0-100)",
       "engineVerified": true
     },
     "ObjPrb5": {
       "type": "integer",
-      "min": 0,
-      "max": 35,
       "description": "Spawn probability for object group 5 (0-100)",
       "engineVerified": true
     },
     "ObjPrb6": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Spawn probability for object group 6 (0-100)",
       "engineVerified": true
     },
     "ObjPrb7": {
       "type": "integer",
-      "min": 0,
-      "max": 1,
       "description": "Spawn probability for object group 7 (0-100)",
       "engineVerified": true
     },
@@ -269,11 +203,6 @@
       "engineVerified": true
     },
     "QuestFlagEx": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "QuestFlag": {
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
@@ -773,16 +702,6 @@
       "description": "Layer number for level rendering",
       "engineVerified": true
     },
-    "LevelGroup": {
-      "type": "integer",
-      "description": "Group ID for related levels",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Level name string key",
-      "engineVerified": true
-    },
     "Pal": {
       "type": "integer",
       "description": "Palette index for this level",
@@ -846,6 +765,151 @@
     "Waypoint": {
       "type": "integer",
       "description": "Waypoint index for this level",
+      "engineVerified": true
+    },
+    "BlankScreen": {
+      "type": "integer",
+      "description": "Whether to blank screen on level transition",
+      "engineVerified": true
+    },
+    "LOSDraw": {
+      "type": "integer",
+      "description": "Whether to draw line-of-sight walls",
+      "engineVerified": true
+    },
+    "MonSpcWalk": {
+      "type": "integer",
+      "description": "Whether monsters use special walk AI",
+      "engineVerified": true
+    },
+    "MonUMax": {
+      "type": "integer",
+      "description": "Maximum unique monsters (Normal)",
+      "engineVerified": true
+    },
+    "MonUMax(H)": {
+      "type": "integer",
+      "description": "Maximum unique monsters (Hell)",
+      "engineVerified": true
+    },
+    "MonUMax(N)": {
+      "type": "integer",
+      "description": "Maximum unique monsters (Nightmare)",
+      "engineVerified": true
+    },
+    "MonUMin": {
+      "type": "integer",
+      "description": "Minimum unique monsters (Normal)",
+      "engineVerified": true
+    },
+    "MonUMin(H)": {
+      "type": "integer",
+      "description": "Minimum unique monsters (Hell)",
+      "engineVerified": true
+    },
+    "MonUMin(N)": {
+      "type": "integer",
+      "description": "Minimum unique monsters (Nightmare)",
+      "engineVerified": true
+    },
+    "MonWndr": {
+      "type": "integer",
+      "description": "Whether monsters wander in this level",
+      "engineVerified": true
+    },
+    "Mud": {
+      "type": "integer",
+      "description": "Whether mud effect is active",
+      "engineVerified": true
+    },
+    "NoPer": {
+      "type": "integer",
+      "description": "Whether perspective mode is disabled",
+      "engineVerified": true
+    },
+    "NumMon": {
+      "type": "integer",
+      "description": "Number of unique monster types to pick",
+      "engineVerified": true
+    },
+    "Portal": {
+      "type": "integer",
+      "description": "Whether town portal can be used",
+      "engineVerified": true
+    },
+    "SaveMonsters": {
+      "type": "integer",
+      "description": "Whether monster state is saved",
+      "engineVerified": true
+    },
+    "SubTheme": {
+      "type": "integer",
+      "description": "Sub-theme type for visual variation",
+      "engineVerified": true
+    },
+    "Themes": {
+      "type": "integer",
+      "description": "Number of visual themes available",
+      "engineVerified": true
+    },
+    "Warp0": {
+      "type": "integer",
+      "description": "Warp visual 0",
+      "engineVerified": true
+    },
+    "Warp1": {
+      "type": "integer",
+      "description": "Warp visual 1",
+      "engineVerified": true
+    },
+    "Warp2": {
+      "type": "integer",
+      "description": "Warp visual 2",
+      "engineVerified": true
+    },
+    "Warp3": {
+      "type": "integer",
+      "description": "Warp visual 3",
+      "engineVerified": true
+    },
+    "Warp4": {
+      "type": "integer",
+      "description": "Warp visual 4",
+      "engineVerified": true
+    },
+    "Warp5": {
+      "type": "integer",
+      "description": "Warp visual 5",
+      "engineVerified": true
+    },
+    "Warp6": {
+      "type": "integer",
+      "description": "Warp visual 6",
+      "engineVerified": true
+    },
+    "Warp7": {
+      "type": "integer",
+      "description": "Warp visual 7",
+      "engineVerified": true
+    },
+    "camt1": {
+      "type": "integer",
+      "description": "Champion monster amount 1",
+      "engineVerified": true
+    },
+    "camt2": {
+      "type": "integer",
+      "description": "Champion monster amount 2",
+      "engineVerified": true
+    },
+    "camt3": {
+      "type": "integer",
+      "description": "Champion monster amount 3",
+      "engineVerified": true
+    },
+    "camt4": {
+      "type": "integer",
+      "description": "Champion monster amount 4",
       "engineVerified": true
     }
   }
