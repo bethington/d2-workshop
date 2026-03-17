@@ -1,6 +1,6 @@
 {
   "file": "skilldesc.txt",
-  "description": "Skill description templates — controls skill UI layout, icon, description text, damage display, and synergy tooltip lines. Referenced by the skilldesc column in Skills.txt.",
+  "description": "Skill description definitions - UI layout (page/row/column), display strings, damage descriptions, and tooltip line formatting for skill descriptions across 3 description panels.",
   "columns": {
     "iconcel": {
       "type": "integer",
@@ -412,11 +412,6 @@
       "description": "Next level description line 7 calculation B",
       "engineVerified": true
     },
-    "skilldesccode": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "ListPool": {
       "type": "integer",
       "description": "List pool for skill grouping",
@@ -425,36 +420,6 @@
     "ListRow": {
       "type": "integer",
       "description": "Row position in skill list",
-      "engineVerified": true
-    },
-    "PrgCalc1": {
-      "type": "string",
-      "description": "Progress calculation formula 1",
-      "engineVerified": true
-    },
-    "PrgCalc2": {
-      "type": "string",
-      "description": "Progress calculation formula 2",
-      "engineVerified": true
-    },
-    "PrgCalc3": {
-      "type": "string",
-      "description": "Progress calculation formula 3",
-      "engineVerified": true
-    },
-    "SkillColumn": {
-      "type": "integer",
-      "description": "Column position in skill tree",
-      "engineVerified": true
-    },
-    "SkillPage": {
-      "type": "integer",
-      "description": "Skill tree page number",
-      "engineVerified": true
-    },
-    "SkillRow": {
-      "type": "integer",
-      "description": "Row position in skill tree",
       "engineVerified": true
     },
     "desccalca1": {
@@ -520,7 +485,6 @@
     "skilldesc": {
       "type": "string",
       "description": "Skill description identifier",
-      "required": true,
       "engineVerified": true
     },
     "str alt": {
@@ -541,6 +505,66 @@
     "str short": {
       "type": "string",
       "description": "Short description string key",
+      "engineVerified": true
+    },
+    "p1dmelem": {
+      "type": "string",
+      "description": "p1dmelem",
+      "engineVerified": true
+    },
+    "p1dmmax": {
+      "type": "string",
+      "description": "p1dmmax",
+      "engineVerified": true
+    },
+    "p1dmmin": {
+      "type": "string",
+      "description": "p1dmmin",
+      "engineVerified": true
+    },
+    "p2dmelem": {
+      "type": "string",
+      "description": "p2dmelem",
+      "engineVerified": true
+    },
+    "p2dmmax": {
+      "type": "string",
+      "description": "p2dmmax",
+      "engineVerified": true
+    },
+    "p2dmmin": {
+      "type": "string",
+      "description": "p2dmmin",
+      "engineVerified": true
+    },
+    "p3dmelem": {
+      "type": "string",
+      "description": "p3dmelem",
+      "engineVerified": true
+    },
+    "p3dmmax": {
+      "type": "string",
+      "description": "p3dmmax",
+      "engineVerified": true
+    },
+    "p3dmmin": {
+      "type": "string",
+      "description": "p3dmmin",
+      "engineVerified": true
+    },
+    "skillcolumn": {
+      "type": "integer",
+      "description": "skillcolumn",
+      "engineVerified": true
+    },
+    "skillpage": {
+      "type": "integer",
+      "description": "skillpage",
+      "engineVerified": true
+    },
+    "skillrow": {
+      "type": "integer",
+      "description": "skillrow",
       "engineVerified": true
     }
   }
