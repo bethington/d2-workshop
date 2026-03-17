@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.6 - 2026-03-17
+
+### Added
+
+- `d2workshop.gameDirectory` setting — point at your Diablo II install folder when your workspace is not the game directory
+- "Set Game Directory..." browse command — folder picker so you don't have to type paths manually
+- Empty-state guidance in the Game Files tree — shows "No MPQ files found" with a clickable action to set the game directory
+- Auto-refresh when `gameDirectory` setting changes — all components (tree, MPQ manager, save queue, launcher) re-point instantly
+
+### Fixed
+
+- Ensure `StormLib_x64.dll` and `mpq_write.py` are bundled in the published .vsix package (were missing in marketplace installs)
+- Exclude dev-only `wasm/build-stormlib.sh` from published package
+
 ## 0.1.5 - 2026-03-17
 
 ### Added

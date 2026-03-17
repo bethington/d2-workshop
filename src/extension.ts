@@ -31,6 +31,19 @@ export async function activate(context: vscode.ExtensionContext) {
     return;
   }
 
+  // Resolve effective game directory from settings (falls back to workspace)
+  function getGameDirectory(): string {
+    const configured = vscode.workspace
+      .getConfiguration("d2workshop")
+      .get<string>("gameDirectory");
+    if (configured && fs.existsSync(configured)) {
+      return configured;
+    }
+    return workspaceRoot;
+  }
+
+  let gameDirectory = getGameDirectory();
+
   // Initialize StormLib (tries native DLL, then WASM, then stub)
   try {
     await initStormLib(context.extensionUri.fsPath);
@@ -39,10 +52,10 @@ export async function activate(context: vscode.ExtensionContext) {
   }
 
   // Initialize MPQ manager
-  mpqManager = new MpqManager(workspaceRoot);
+  mpqManager = new MpqManager(gameDirectory);
 
   // Initialize save queue
-  saveQueue = new SaveQueue(workspaceRoot, mpqManager);
+  saveQueue = new SaveQueue(gameDirectory, mpqManager);
 
   // Register MCP server provider (exposes D2 data tools to AI assistants)
   if (typeof vscode.lm?.registerMcpServerDefinitionProvider === "function") {
@@ -63,7 +76,7 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   // Register D2 Explorer tree view
-  const treeProvider = new D2TreeProvider(workspaceRoot, mpqManager);
+  const treeProvider = new D2TreeProvider(gameDirectory, mpqManager);
   const treeView = vscode.window.createTreeView("d2ExplorerView", {
     treeDataProvider: treeProvider,
   });
@@ -82,7 +95,7 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   // Register search view
-  const searchProvider = new SearchProvider(mpqManager, workspaceRoot);
+  const searchProvider = new SearchProvider(mpqManager, gameDirectory);
   context.subscriptions.push(
     vscode.window.registerTreeDataProvider("d2SearchView", searchProvider)
   );
@@ -246,6 +259,22 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.browseGameDirectory", async () => {
+      const result = await vscode.window.showOpenDialog({
+        canSelectFiles: false,
+        canSelectFolders: true,
+        canSelectMany: false,
+        title: "Select Diablo II Game Directory (containing MPQ files)",
+        defaultUri: vscode.Uri.file(gameDirectory),
+      });
+      if (!result?.[0]) return;
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      await config.update("gameDirectory", result[0].fsPath, vscode.ConfigurationTarget.Workspace);
+      vscode.window.showInformationMessage(`Game directory set to: ${result[0].fsPath}`);
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerCommand("d2workshop.browseModPath", async () => {
       const result = await vscode.window.showOpenDialog({
         canSelectFiles: false,
@@ -368,6 +397,23 @@ export async function activate(context: vscode.ExtensionContext) {
   watcher.onDidCreate(() => treeProvider.refresh());
   watcher.onDidDelete(() => treeProvider.refresh());
   context.subscriptions.push(watcher);
+
+  // Re-initialize components when game directory setting changes
+  context.subscriptions.push(
+    vscode.workspace.onDidChangeConfiguration((e) => {
+      if (e.affectsConfiguration("d2workshop.gameDirectory")) {
+        const newDir = getGameDirectory();
+        if (newDir !== gameDirectory) {
+          gameDirectory = newDir;
+          mpqManager.setRoot(gameDirectory);
+          treeProvider.setRoot(gameDirectory);
+          saveQueue.switchRoot(gameDirectory, mpqManager);
+          launcher.setRoot(gameDirectory);
+          treeProvider.refresh();
+        }
+      }
+    })
+  );
 
   // Cleanup on deactivation
   context.subscriptions.push(

@@ -12,3 +12,4 @@ esbuild*.mjs
 **/*.tsx
 **/*.map
 **/*.vsix
+wasm/build-stormlib.sh

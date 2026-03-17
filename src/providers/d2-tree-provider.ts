@@ -234,7 +234,11 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
 
   async getChildren(element?: D2TreeItem): Promise<D2TreeItem[]> {
     if (!element) {
-      return this.getRootItems();
+      const items = this.getRootItems();
+      if (items.length === 0) {
+        return this.getEmptyStateItems();
+      }
+      return items;
     }
 
     if (element.fileType === D2FileType.Mpq) {
@@ -249,6 +253,31 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
     }
 
     return [];
+  }
+
+  private getEmptyStateItems(): D2TreeItem[] {
+    const hint = new D2TreeItem(
+      "No MPQ files found",
+      D2FileType.Unknown,
+      "",
+      vscode.TreeItemCollapsibleState.None
+    );
+    hint.description = "Set game directory in settings";
+    hint.iconPath = new vscode.ThemeIcon("warning");
+    hint.command = {
+      command: "d2workshop.browseGameDirectory",
+      title: "Set Game Directory",
+    };
+
+    const dirInfo = new D2TreeItem(
+      `Looking in: ${this.workspaceRoot}`,
+      D2FileType.Unknown,
+      "",
+      vscode.TreeItemCollapsibleState.None
+    );
+    dirInfo.iconPath = new vscode.ThemeIcon("folder");
+
+    return [hint, dirInfo];
   }
 
   private getRootItems(): D2TreeItem[] {

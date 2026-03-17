@@ -2,7 +2,7 @@
   "name": "d2-workshop",
   "displayName": "D2 Workshop",
   "description": "A complete Diablo II 1.13c modding workbench — browse MPQ archives, edit game data tables, view/edit DC6 sprites, patch binaries, and share mods.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "xebyte",
   "author": "Ben Ethington",
   "license": "MIT",
@@ -212,6 +212,10 @@
       {
         "command": "d2workshop.browseGameExe",
         "title": "D2 Workshop: Set Game Executable..."
+      },
+      {
+        "command": "d2workshop.browseGameDirectory",
+        "title": "D2 Workshop: Set Game Directory..."
       }
     ],
     "menus": {
@@ -271,6 +275,11 @@
     "configuration": {
       "title": "D2 Workshop",
       "properties": {
+        "d2workshop.gameDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the Diablo II game directory containing MPQ files. If empty, uses the current workspace folder."
+        },
         "d2workshop.gimpPath": {
           "type": "string",
           "default": "",
