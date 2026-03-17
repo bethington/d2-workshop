@@ -1,236 +1,65 @@
 {
   "file": "treasureclassex.txt",
-  "description": "Treasure class definitions — item drop tables with quality modifiers.",
+  "description": "Treasure class definitions (expansion) - drop tables with item/sub-TC references, probability weights, pick counts, and quality factors (unique/set/rare/magic).",
   "columns": {
-    "treasure class": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Unique name identifier for this treasure class drop table",
-      "engineVerified": true
-    },
     "picks": {
       "type": "integer",
-      "min": -3,
-      "max": 7,
       "description": "Number of items picked from this class",
       "engineVerified": true
     },
     "nodrop": {
       "type": "integer",
-      "min": 0,
-      "max": 250,
       "description": "Weight for no item drop",
       "engineVerified": true
     },
     "prob1": {
       "type": "integer",
-      "min": 1,
-      "max": 60,
       "description": "Drop probability weight for Item1",
       "engineVerified": true
     },
     "prob2": {
       "type": "integer",
-      "min": 1,
-      "max": 32770,
       "description": "Drop probability weight for Item2",
       "engineVerified": true
     },
     "prob3": {
       "type": "integer",
-      "min": 1,
-      "max": 81880,
       "description": "Drop probability weight for Item3",
       "engineVerified": true
     },
     "prob4": {
       "type": "integer",
-      "min": 1,
-      "max": 42,
       "description": "Drop probability weight for Item4",
       "engineVerified": true
     },
     "prob5": {
       "type": "integer",
-      "min": 1,
-      "max": 28,
       "description": "Drop probability weight for Item5",
       "engineVerified": true
     },
     "prob6": {
       "type": "integer",
-      "min": 1,
-      "max": 14,
       "description": "Drop probability weight for Item6",
       "engineVerified": true
     },
     "prob7": {
       "type": "integer",
-      "min": 1,
-      "max": 5,
       "description": "Drop probability weight for Item7",
       "engineVerified": true
     },
     "prob8": {
       "type": "integer",
-      "min": 1,
-      "max": 5,
       "description": "Drop probability weight for Item8",
       "engineVerified": true
     },
     "prob9": {
       "type": "integer",
-      "min": 1,
-      "max": 310,
       "description": "Drop probability weight for Item9",
       "engineVerified": true
     },
     "prob10": {
       "type": "integer",
-      "min": 100,
-      "max": 1000,
       "description": "Drop probability weight for Item10",
-      "engineVerified": true
-    },
-    "TCQuestCP": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TCQuestId": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass4(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass3(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass2(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass1(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass4(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass3(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass2(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass1(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "TreasureClass1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Item1": {
-      "type": "string",
-      "description": "Treasure item/group 1",
-      "engineVerified": true
-    },
-    "Item10": {
-      "type": "string",
-      "description": "Treasure item/group 10",
-      "engineVerified": true
-    },
-    "Item2": {
-      "type": "string",
-      "description": "Treasure item/group 2",
-      "engineVerified": true
-    },
-    "Item3": {
-      "type": "string",
-      "description": "Treasure item/group 3",
-      "engineVerified": true
-    },
-    "Item4": {
-      "type": "string",
-      "description": "Treasure item/group 4",
-      "engineVerified": true
-    },
-    "Item5": {
-      "type": "string",
-      "description": "Treasure item/group 5",
-      "engineVerified": true
-    },
-    "Item6": {
-      "type": "string",
-      "description": "Treasure item/group 6",
-      "engineVerified": true
-    },
-    "Item7": {
-      "type": "string",
-      "description": "Treasure item/group 7",
-      "engineVerified": true
-    },
-    "Item8": {
-      "type": "string",
-      "description": "Treasure item/group 8",
-      "engineVerified": true
-    },
-    "Item9": {
-      "type": "string",
-      "description": "Treasure item/group 9",
-      "engineVerified": true
-    },
-    "Magic": {
-      "type": "integer",
-      "description": "Magic find factor",
-      "engineVerified": true
-    },
-    "Rare": {
-      "type": "integer",
-      "description": "Rare find factor",
-      "engineVerified": true
-    },
-    "Set": {
-      "type": "integer",
-      "description": "Set find factor",
-      "engineVerified": true
-    },
-    "Unique": {
-      "type": "integer",
-      "description": "Unique find factor",
       "engineVerified": true
     },
     "group": {
@@ -241,6 +70,81 @@
     "level": {
       "type": "integer",
       "description": "Treasure class level",
+      "engineVerified": true
+    },
+    "Treasure Class": {
+      "type": "string",
+      "description": "Treasure class name identifier",
+      "engineVerified": true
+    },
+    "item1": {
+      "type": "string",
+      "description": "Item/sub-TC reference 1",
+      "engineVerified": true
+    },
+    "item10": {
+      "type": "string",
+      "description": "Item/sub-TC reference 10",
+      "engineVerified": true
+    },
+    "item2": {
+      "type": "string",
+      "description": "Item/sub-TC reference 2",
+      "engineVerified": true
+    },
+    "item3": {
+      "type": "string",
+      "description": "Item/sub-TC reference 3",
+      "engineVerified": true
+    },
+    "item4": {
+      "type": "string",
+      "description": "Item/sub-TC reference 4",
+      "engineVerified": true
+    },
+    "item5": {
+      "type": "string",
+      "description": "Item/sub-TC reference 5",
+      "engineVerified": true
+    },
+    "item6": {
+      "type": "string",
+      "description": "Item/sub-TC reference 6",
+      "engineVerified": true
+    },
+    "item7": {
+      "type": "string",
+      "description": "Item/sub-TC reference 7",
+      "engineVerified": true
+    },
+    "item8": {
+      "type": "string",
+      "description": "Item/sub-TC reference 8",
+      "engineVerified": true
+    },
+    "item9": {
+      "type": "string",
+      "description": "Item/sub-TC reference 9",
+      "engineVerified": true
+    },
+    "magic": {
+      "type": "integer",
+      "description": "Magic item find factor",
+      "engineVerified": true
+    },
+    "rare": {
+      "type": "integer",
+      "description": "Rare item find factor",
+      "engineVerified": true
+    },
+    "set": {
+      "type": "integer",
+      "description": "Set item find factor",
+      "engineVerified": true
+    },
+    "unique": {
+      "type": "integer",
+      "description": "Unique item find factor",
       "engineVerified": true
     }
   }
