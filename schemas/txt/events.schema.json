@@ -1,0 +1,11 @@
+{
+  "file": "events.txt",
+  "description": "Event type lookup table. Engine uses row index to map event IDs to their string identifiers.",
+  "columns": {
+    "event": {
+      "type": "string",
+      "description": "Event type identifier string used by the skill and state systems",
+      "engineVerified": true
+    }
+  }
+}
