@@ -5,3 +5,4 @@ dist/
 .vscode/
 .d2workshop/
 *.bak
+.mcp.json
