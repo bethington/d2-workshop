@@ -17,9 +17,11 @@ import { ModPackageManager } from "./mod/mod-package";
 import { initStormLib } from "./mpq/stormlib-wasm";
 import { MpqManager } from "./mpq/mpq-manager";
 import { ModProfileManager } from "./mod/mod-profiles";
+import { D2McpProvider } from "./providers/mcp-provider";
 
 let saveQueue: SaveQueue;
 let mpqManager: MpqManager;
+let mcpProvider: D2McpProvider | undefined;
 
 export async function activate(context: vscode.ExtensionContext) {
   console.log("D2 Workshop is activating...");
@@ -41,6 +43,15 @@ export async function activate(context: vscode.ExtensionContext) {
 
   // Initialize save queue
   saveQueue = new SaveQueue(workspaceRoot, mpqManager);
+
+  // Register MCP server provider (exposes D2 data tools to AI assistants)
+  if (typeof vscode.lm?.registerMcpServerDefinitionProvider === "function") {
+    mcpProvider = new D2McpProvider(context.extensionUri.fsPath, workspaceRoot);
+    context.subscriptions.push(
+      vscode.lm.registerMcpServerDefinitionProvider("d2-workshop", mcpProvider)
+    );
+    console.log("[D2 Workshop] MCP server provider registered");
+  }
 
   // Register MPQ virtual filesystem
   const mpqFs = new MpqFileSystemProvider(mpqManager);

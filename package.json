@@ -286,6 +286,7 @@
     "vitest": "^1.2.0"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
     "@tanstack/react-table": "^8.11.6",
     "@vscode/webview-ui-toolkit": "^1.4.0",
     "jszip": "^3.10.1",
