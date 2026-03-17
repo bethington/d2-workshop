@@ -14,37 +14,31 @@
     },
     "rune1": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 1 item code",
       "engineVerified": true
     },
     "rune2": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 2 item code",
       "engineVerified": true
     },
     "rune3": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 3 item code",
       "engineVerified": true
     },
     "rune4": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 4 item code",
       "engineVerified": true
     },
     "rune5": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 5 item code",
       "engineVerified": true
     },
     "rune6": {
       "type": "string",
-      "targetColumn": "code",
       "description": "Rune 6 item code",
       "engineVerified": true
     },

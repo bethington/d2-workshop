@@ -3,14 +3,12 @@
   "description": "Horadric Cube recipes â€” input items, output items, conditions, and property modifications.",
   "columns": {
     "enabled": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Recipe is functional (1=active, 0=disabled)",
       "engineVerified": true
     },
     "numinputs": {
       "type": "integer",
-      "min": 2,
-      "max": 7,
       "description": "Number of required input items",
       "engineVerified": true
     },
@@ -40,7 +38,7 @@
       "engineVerified": true
     },
     "usetype": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Use input item type for output type matching",
       "engineVerified": true
     },
@@ -50,11 +48,9 @@
       "engineVerified": true
     },
     "class": {
-      "type": "ref",
+      "type": "string",
       "description": "Class restriction for recipe",
-      "engineVerified": true,
-      "target": "PlayerClass.txt",
-      "targetColumn": "Player Class"
+      "engineVerified": true
     },
     "c ilvl": {
       "type": "integer",
@@ -237,25 +233,19 @@
       "engineVerified": true
     },
     "c mod 5": {
-      "type": "ref",
+      "type": "string",
       "description": "Output C modifier 5 property code",
-      "engineVerified": true,
-      "target": "properties.txt",
-      "targetColumn": "code"
+      "engineVerified": true
     },
     "c mod 4": {
-      "type": "ref",
+      "type": "string",
       "description": "Output C modifier 4 property code",
-      "engineVerified": true,
-      "target": "properties.txt",
-      "targetColumn": "code"
+      "engineVerified": true
     },
     "c mod 3": {
-      "type": "ref",
+      "type": "string",
       "description": "Output C modifier 3 property code",
-      "engineVerified": true,
-      "target": "properties.txt",
-      "targetColumn": "code"
+      "engineVerified": true
     },
     "c mod 5 max": {
       "type": "integer",
@@ -288,9 +278,7 @@
       "engineVerified": true
     },
     "mod 1": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output A modifier 1 property code",
       "engineVerified": true
     },
@@ -305,9 +293,7 @@
       "engineVerified": true
     },
     "mod 2": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output A modifier 2 property code",
       "engineVerified": true
     },
@@ -322,9 +308,7 @@
       "engineVerified": true
     },
     "mod 3": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output A modifier 3 property code",
       "engineVerified": true
     },
@@ -339,9 +323,7 @@
       "engineVerified": true
     },
     "mod 4": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output A modifier 4 property code",
       "engineVerified": true
     },
@@ -356,9 +338,7 @@
       "engineVerified": true
     },
     "mod 5": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output A modifier 5 property code",
       "engineVerified": true
     },
@@ -373,9 +353,7 @@
       "engineVerified": true
     },
     "b mod 1": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output B modifier 1 property code",
       "engineVerified": true
     },
@@ -390,9 +368,7 @@
       "engineVerified": true
     },
     "b mod 2": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output B modifier 2 property code",
       "engineVerified": true
     },
@@ -407,9 +383,7 @@
       "engineVerified": true
     },
     "b mod 3": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output B modifier 3 property code",
       "engineVerified": true
     },
@@ -424,9 +398,7 @@
       "engineVerified": true
     },
     "b mod 4": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output B modifier 4 property code",
       "engineVerified": true
     },
@@ -441,9 +413,7 @@
       "engineVerified": true
     },
     "b mod 5": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output B modifier 5 property code",
       "engineVerified": true
     },
@@ -458,9 +428,7 @@
       "engineVerified": true
     },
     "c mod 1": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output C modifier 1 property code",
       "engineVerified": true
     },
@@ -475,9 +443,7 @@
       "engineVerified": true
     },
     "c mod 2": {
-      "type": "ref",
-      "target": "properties.txt",
-      "targetColumn": "code",
+      "type": "string",
       "description": "Output C modifier 2 property code",
       "engineVerified": true
     },
@@ -493,13 +459,11 @@
     },
     "ilvl": {
       "type": "integer",
-      "min": 0,
       "description": "Output A item level",
       "engineVerified": true
     },
     "plvl": {
       "type": "integer",
-      "min": 0,
       "description": "Output A player level scaling",
       "engineVerified": true
     },
@@ -545,47 +509,46 @@
     },
     "op": {
       "type": "integer",
-      "min": 0,
       "description": "Recipe operator/function ID",
       "engineVerified": true
     },
     "rch": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output can have random charged skill affixes",
       "engineVerified": true
     },
     "rep": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output can have replenish quantity affix",
       "engineVerified": true
     },
     "reg": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output can have regeneration affix",
       "engineVerified": true
     },
     "rem": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output can have remaining charges affix",
       "engineVerified": true
     },
     "uns": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output can be unsocketed",
       "engineVerified": true
     },
     "suf": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output preserves suffix",
       "engineVerified": true
     },
     "pre": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Output preserves prefix",
       "engineVerified": true
     },
     "useitem": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Use input item as base for output",
       "engineVerified": true
     },

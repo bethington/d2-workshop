@@ -3,39 +3,14 @@
   "description": "Body location/equipment slot definitions.",
   "columns": {
     "Body Location": {
-      "type": "enum",
-      "values": [
-        "Belt",
-        "Feet",
-        "Gloves",
-        "Head",
-        "Left Arm",
-        "Left Ring",
-        "Neck",
-        "None",
-        "Right Arm",
-        "Right Ring",
-        "Torso"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Human-readable equipment slot name (e.g. Head, Torso, Belt)",
       "engineVerified": true
     },
     "Code": {
-      "type": "enum",
-      "values": [
-        "belt",
-        "feet",
-        "glov",
-        "head",
-        "larm",
-        "lrin",
-        "neck",
-        "rarm",
-        "rrin",
-        "tors"
-      ],
+      "type": "string",
       "description": "Short code for the body equipment slot",
       "engineVerified": true
     }

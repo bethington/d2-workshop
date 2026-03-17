@@ -8,7 +8,7 @@
       "engineVerified": true
     },
     "spawnable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can randomly spawn in the game",
       "engineVerified": true
     },
@@ -43,7 +43,7 @@
       "engineVerified": true
     },
     "nodurability": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item has no durability",
       "engineVerified": true
     },
@@ -73,7 +73,7 @@
       "engineVerified": true
     },
     "hasinv": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item is socketable",
       "engineVerified": true
     },
@@ -93,23 +93,7 @@
       "engineVerified": true
     },
     "uniqueinvfile": {
-      "type": "enum",
-      "values": [
-        "invaaru",
-        "invbhmu",
-        "invbshu",
-        "invbucu",
-        "invcapu",
-        "invfhlu",
-        "invfulu",
-        "invgtsu",
-        "invhlmu",
-        "invkitu",
-        "invlrgu",
-        "invsmlu",
-        "invspku",
-        "invtowu"
-      ],
+      "type": "string",
       "description": "Unique quality inventory DC6 file",
       "engineVerified": true
     },
@@ -119,12 +103,12 @@
       "engineVerified": true
     },
     "useable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item is right-clickable",
       "engineVerified": true
     },
     "stackable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item uses quantity stacking",
       "engineVerified": true
     },
@@ -139,12 +123,12 @@
       "engineVerified": true
     },
     "unique": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Only appears as unique quality",
       "engineVerified": true
     },
     "transparent": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Enable transparency rendering",
       "engineVerified": true
     },
@@ -544,7 +528,7 @@
       "engineVerified": true
     },
     "SkipName": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Skip base name display on uniques",
       "engineVerified": true
     },

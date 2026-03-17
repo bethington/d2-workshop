@@ -10,61 +10,51 @@
     "aprop1a": {
       "type": "string",
       "description": "Partial set (green) bonus 1a — first property of pair 1, applied based on add func logic",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop1b": {
       "type": "string",
       "description": "Partial set (green) bonus 1b — second property of pair 1",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop2a": {
       "type": "string",
       "description": "Partial set (green) bonus 2a — first property of pair 2",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop2b": {
       "type": "string",
       "description": "Partial set (green) bonus 2b — second property of pair 2",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop3a": {
       "type": "string",
       "description": "Partial set (green) bonus 3a — first property of pair 3",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop3b": {
       "type": "string",
       "description": "Partial set (green) bonus 3b — second property of pair 3",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop4a": {
       "type": "string",
       "description": "Partial set (green) bonus 4a — first property of pair 4",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop4b": {
       "type": "string",
       "description": "Partial set (green) bonus 4b — second property of pair 4",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop5a": {
       "type": "string",
       "description": "Partial set (green) bonus 5a — first property of pair 5",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop5b": {
       "type": "string",
       "description": "Partial set (green) bonus 5b — second property of pair 5",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "fmax8": {

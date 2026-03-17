@@ -3,41 +3,14 @@
   "description": "Cube recipe modifier code definitions.",
   "columns": {
     "cube modifier type": {
-      "type": "enum",
-      "values": [
-        "None",
-        "amethyst",
-        "crafted",
-        "diamond",
-        "emerald",
-        "magic",
-        "rare",
-        "ruby",
-        "sapphire",
-        "skull",
-        "topaz",
-        "unique"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Horadric Cube recipe modifier type name (e.g. gem type, quality type)",
       "engineVerified": true
     },
     "Code": {
-      "type": "enum",
-      "values": [
-        "ame",
-        "crf",
-        "dim",
-        "eme",
-        "mag",
-        "rar",
-        "rub",
-        "sap",
-        "sku",
-        "top",
-        "unq"
-      ],
+      "type": "string",
       "description": "Short code for the cube modifier type",
       "engineVerified": true
     }

@@ -10,8 +10,6 @@
     },
     "Index": {
       "type": "integer",
-      "min": 0,
-      "max": 3586,
       "description": "Unique index identifier",
       "engineVerified": true
     },
@@ -22,133 +20,111 @@
     },
     "Volume": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "Playback volume (0-255)",
       "engineVerified": true
     },
     "Group Size": {
       "type": "integer",
-      "min": 0,
-      "max": 8,
       "description": "Maximum simultaneous playback instances",
       "engineVerified": true
     },
     "Loop": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Enable looping playback",
       "engineVerified": true
     },
     "Fade In": {
       "type": "integer",
-      "min": 0,
-      "max": 125,
       "description": "Fade-in duration in frames",
       "engineVerified": true
     },
     "Fade Out": {
       "type": "integer",
-      "min": 0,
-      "max": 125,
       "description": "Fade-out duration in frames",
       "engineVerified": true
     },
     "Defer Inst": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Deferred instantiation flag",
       "engineVerified": true
     },
     "Stop Inst": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Stop other instances when playing",
       "engineVerified": true
     },
     "Duration": {
       "type": "integer",
-      "min": 0,
-      "max": 150,
       "description": "Playback duration (milliseconds)",
       "engineVerified": true
     },
     "Compound": {
       "type": "integer",
-      "min": -1,
-      "max": 24,
       "description": "Compound sound priority",
       "engineVerified": true
     },
     "Reverb": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Reverb effect enabled",
       "engineVerified": true
     },
     "Falloff": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "Distance falloff rate",
       "engineVerified": true
     },
     "Cache": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Cache sound in memory",
       "engineVerified": true
     },
     "Async Only": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Asynchronous playback only",
       "engineVerified": true
     },
     "Priority": {
       "type": "integer",
-      "min": 0,
-      "max": 255,
       "description": "Playback priority (0-255, higher = more important)",
       "engineVerified": true
     },
     "Stream": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Stream from disk instead of loading into memory",
       "engineVerified": true
     },
     "Stereo": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Stereo audio playback",
       "engineVerified": true
     },
     "Tracking": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Position tracking enabled",
       "engineVerified": true
     },
     "Solo": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Solo playback (mute others)",
       "engineVerified": true
     },
     "Music Vol": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Use music volume slider",
       "engineVerified": true
     },
     "Block 1": {
       "type": "integer",
-      "min": -1,
-      "max": 6381568,
       "description": "Sound block 1 reference",
       "engineVerified": true
     },
     "Block 2": {
       "type": "integer",
-      "min": -1,
-      "max": 7000000,
       "description": "Sound block 2 reference",
       "engineVerified": true
     },
     "Block 3": {
       "type": "integer",
-      "min": -1,
-      "max": -1,
       "description": "Sound block 3 reference",
       "engineVerified": true
     }

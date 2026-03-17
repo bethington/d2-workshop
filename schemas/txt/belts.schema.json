@@ -4,8 +4,6 @@
   "columns": {
     "numboxes": {
       "type": "integer",
-      "min": 4,
-      "max": 16,
       "description": "Number of active potion slots (must be multiple of 4: 4, 8, 12, or 16)",
       "engineVerified": true
     },

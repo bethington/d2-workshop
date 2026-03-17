@@ -693,7 +693,7 @@
       "engineVerified": true
     },
     "IsInside": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this level is indoors",
       "engineVerified": true
     },
@@ -713,7 +713,7 @@
       "engineVerified": true
     },
     "Rain": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether rain occurs in this level",
       "engineVerified": true
     },

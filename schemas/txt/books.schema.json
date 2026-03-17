@@ -3,34 +3,22 @@
   "description": "Tome and book item definitions â€” scroll/book spell codes and costs.",
   "columns": {
     "scrollspellcode": {
-      "type": "enum",
-      "values": [
-        "isc",
-        "tsc"
-      ],
+      "type": "string",
       "description": "Item code for the scroll version of this spell",
       "engineVerified": true
     },
     "bookspellcode": {
-      "type": "enum",
-      "values": [
-        "ibk",
-        "tbk"
-      ],
+      "type": "string",
       "description": "Item code for the tome/book version of this spell",
       "engineVerified": true
     },
     "basecost": {
       "type": "integer",
-      "min": 200,
-      "max": 500,
       "description": "Base gold cost of the book item",
       "engineVerified": true
     },
     "costpercharge": {
       "type": "integer",
-      "min": 40,
-      "max": 100,
       "description": "Additional gold cost per remaining charge",
       "engineVerified": true
     },

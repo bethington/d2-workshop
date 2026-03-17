@@ -3,36 +3,17 @@
   "description": "Automap cell type definitions mapping tiles to minimap graphics.",
   "columns": {
     "TileName": {
-      "type": "enum",
-      "values": [
-        "co",
-        "fl",
-        "wbl",
-        "wbr",
-        "wl",
-        "wld",
-        "wle",
-        "wr",
-        "wrd",
-        "wre",
-        "wtll",
-        "wtlr",
-        "wtr"
-      ],
+      "type": "string",
       "description": "Tile orientation type code (e.g. fl=floor, wl=wall left, co=corner)",
       "engineVerified": true
     },
     "StartSequence": {
       "type": "integer",
-      "min": -1,
-      "max": 63,
       "description": "Starting animation sequence index (-1 = none)",
       "engineVerified": true
     },
     "EndSequence": {
       "type": "integer",
-      "min": -1,
-      "max": 63,
       "description": "Ending animation sequence index (-1 = none)",
       "engineVerified": true
     },
@@ -43,25 +24,21 @@
     },
     "Cel1": {
       "type": "integer",
-      "min": -1,
       "description": "Automap cell graphic index 1 (-1 = none)",
       "engineVerified": true
     },
     "Cel2": {
       "type": "integer",
-      "min": -1,
       "description": "Automap cell graphic index 2 (-1 = none)",
       "engineVerified": true
     },
     "Cel3": {
       "type": "integer",
-      "min": -1,
       "description": "Automap cell graphic index 3 (-1 = none)",
       "engineVerified": true
     },
     "Cel4": {
       "type": "integer",
-      "min": -1,
       "description": "Automap cell graphic index 4 (-1 = none)",
       "engineVerified": true
     }

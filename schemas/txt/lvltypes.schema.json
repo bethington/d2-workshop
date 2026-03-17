@@ -8,7 +8,7 @@
       "engineVerified": true
     },
     "Expansion": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this is expansion-only content",
       "engineVerified": true
     },

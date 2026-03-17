@@ -3,50 +3,14 @@
   "description": "Character composite layer mode definitions.",
   "columns": {
     "Name": {
-      "type": "enum",
-      "values": [
-        "Head",
-        "LeftArm",
-        "LeftHand",
-        "Legs",
-        "RightArm",
-        "RightHand",
-        "Shield",
-        "Special1",
-        "Special2",
-        "Special3",
-        "Special4",
-        "Special5",
-        "Special6",
-        "Special7",
-        "Special8",
-        "Torso"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Internal name identifier",
       "engineVerified": true
     },
     "Token": {
-      "type": "enum",
-      "values": [
-        "HD",
-        "LA",
-        "LG",
-        "LH",
-        "RA",
-        "RH",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "S5",
-        "S6",
-        "S7",
-        "S8",
-        "SH",
-        "TR"
-      ],
+      "type": "string",
       "description": "Animation token identifier",
       "engineVerified": true
     }

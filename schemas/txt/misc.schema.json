@@ -8,7 +8,7 @@
       "engineVerified": true
     },
     "spawnable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can randomly spawn in the game",
       "engineVerified": true
     },
@@ -18,7 +18,7 @@
       "engineVerified": true
     },
     "nodurability": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item has no durability",
       "engineVerified": true
     },
@@ -58,24 +58,12 @@
       "engineVerified": true
     },
     "Transmogrify": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can be transmogrified into another item",
       "engineVerified": true
     },
     "TMogType": {
-      "type": "enum",
-      "values": [
-        "aqv",
-        "cqv",
-        "gps",
-        "hpf",
-        "hpo",
-        "key",
-        "mpo",
-        "opm",
-        "vps",
-        "xxx"
-      ],
+      "type": "string",
       "description": "Transmogrification target item code",
       "engineVerified": true
     },
@@ -90,17 +78,17 @@
       "engineVerified": true
     },
     "useable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item is right-clickable",
       "engineVerified": true
     },
     "unique": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Only appears as unique quality",
       "engineVerified": true
     },
     "transparent": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Enable transparency rendering",
       "engineVerified": true
     },
@@ -115,12 +103,12 @@
       "engineVerified": true
     },
     "autobelt": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Auto-place in belt slots",
       "engineVerified": true
     },
     "stackable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item uses quantity stacking",
       "engineVerified": true
     },
@@ -520,7 +508,7 @@
       "engineVerified": true
     },
     "SkipName": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Skip base name display on uniques",
       "engineVerified": true
     },

@@ -28,13 +28,7 @@
       "engineVerified": true
     },
     "SrvCalc1": {
-      "type": "enum",
-      "values": [
-        "",
-        "0",
-        "3",
-        "lvl*2"
-      ],
+      "type": "string",
       "description": "Server-side calculation 1 for missile behavior",
       "engineVerified": true
     },
@@ -64,12 +58,7 @@
       "engineVerified": true
     },
     "CltCalc1": {
-      "type": "enum",
-      "values": [
-        "",
-        "0",
-        "lvl*2"
-      ],
+      "type": "string",
       "description": "Client-side calculation 1 for visual behavior",
       "engineVerified": true
     },
@@ -139,11 +128,7 @@
       "engineVerified": true
     },
     "DmgCalc1": {
-      "type": "enum",
-      "values": [
-        "",
-        "dl12"
-      ],
+      "type": "string",
       "description": "Damage modification calculation",
       "engineVerified": true
     },
@@ -218,7 +203,7 @@
       "engineVerified": true
     },
     "SubLoop": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Animation has a looping sub-section (1 = yes)",
       "engineVerified": true
     },
@@ -228,32 +213,32 @@
       "engineVerified": true
     },
     "CollideKill": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Missile is destroyed on collision (1 = yes)",
       "engineVerified": true
     },
     "CollideFriend": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can collide with friendly units (1 = yes)",
       "engineVerified": true
     },
     "LastCollide": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can only hit the last target (1 = yes)",
       "engineVerified": true
     },
     "Collision": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Has standard collision detection (1 = yes)",
       "engineVerified": true
     },
     "ClientSend": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Client notifies server of collision (1 = yes)",
       "engineVerified": true
     },
     "NextHit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can trigger next-hit delay on target (1 = yes)",
       "engineVerified": true
     },
@@ -278,7 +263,7 @@
       "engineVerified": true
     },
     "SrcTown": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can be created in town on server (1 = yes)",
       "engineVerified": true
     },
@@ -288,17 +273,17 @@
       "engineVerified": true
     },
     "CanDestroy": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can destroy destructible objects (1 = yes)",
       "engineVerified": true
     },
     "ToHit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Uses attack rating check (1 = yes)",
       "engineVerified": true
     },
     "AlwaysExplode": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Always plays explosion animation even on miss (1 = yes)",
       "engineVerified": true
     },
@@ -308,7 +293,7 @@
       "engineVerified": true
     },
     "NoUniqueMod": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Cannot be modified by unique monster affixes (1 = yes)",
       "engineVerified": true
     },
@@ -318,22 +303,22 @@
       "engineVerified": true
     },
     "CanSlow": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can be slowed by cold/chill effects (1 = yes)",
       "engineVerified": true
     },
     "ReturnFire": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Target returns fire at missile source (1 = yes)",
       "engineVerified": true
     },
     "GetHit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Target plays hit recovery animation (1 = yes)",
       "engineVerified": true
     },
     "SoftHit": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Soft hit - reduced stagger effect (1 = yes)",
       "engineVerified": true
     },
@@ -348,24 +333,22 @@
       "engineVerified": true
     },
     "Pierce": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Passes through targets (1 = yes)",
       "engineVerified": true
     },
     "SpecialSetup": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Uses special setup function (1 = yes)",
       "engineVerified": true
     },
     "MissileSkill": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Missile acts as a skill for damage purposes (1 = yes)",
       "engineVerified": true
     },
     "Skill": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
+      "type": "string",
       "description": "Associated skill",
       "engineVerified": true
     },
@@ -385,7 +368,7 @@
       "engineVerified": true
     },
     "Half2HSrc": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Halve two-handed weapon source damage (1 = yes)",
       "engineVerified": true
     },
@@ -455,22 +438,7 @@
       "engineVerified": true
     },
     "EType": {
-      "type": "enum",
-      "values": [
-        "burn",
-        "cold",
-        "fire",
-        "frze",
-        "life",
-        "ltng",
-        "mag",
-        "mana",
-        "pois",
-        "rand",
-        "stam",
-        "stun",
-        ""
-      ],
+      "type": "string",
       "description": "Element type for damage",
       "engineVerified": true
     },
@@ -525,21 +493,7 @@
       "engineVerified": true
     },
     "EDmgSymPerCalc": {
-      "type": "enum",
-      "values": [
-        "",
-        "(skill('Blades of Ice'.blvl))*10",
-        "(skill('Claws of Thunder'.blvl))*13",
-        "(skill('Firestorm'.blvl)+skill('Molten Boulder'.blvl)+skill('Volcano'.blvl))*7",
-        "(skill('Fists of Fire'.blvl)) * 10",
-        "(skill('Fists of Fire'.blvl)) * 6",
-        "(skill('Royal Strike'.blvl)) * 6",
-        "(skill('Royal Strike'.blvl)) * 8",
-        "skill('Fire Arrow'.blvl) * 5",
-        "skill('Firestorm'.blvl)*8",
-        "skill('Holy Bolt'.blvl) * 15",
-        "skill('Inferno'.blvl)*3"
-      ],
+      "type": "string",
       "description": "Synergy calculation for elemental damage bonus",
       "engineVerified": true
     },
@@ -564,7 +518,7 @@
       "engineVerified": true
     },
     "LocalBlood": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Show blood effect on hit (1 = yes)",
       "engineVerified": true
     },
@@ -584,137 +538,87 @@
       "engineVerified": true
     },
     "ProgSound": {
-      "type": "enum",
-      "values": [
-        "",
-        "andariel_fire_end",
-        "necromancer_corpseexp_1",
-        "sorceress_fireball_1",
-        "sorceress_meteor_impact"
-      ],
+      "type": "string",
       "description": "Sound played during progressive/charge phase",
       "engineVerified": true
     },
     "ProgOverlay": {
-      "type": "enum",
-      "values": [
-        "",
-        "diablolightning",
-        "doubledamage1",
-        "fingermagespiderexplode",
-        "fire_hit",
-        "healing",
-        "ice_explode",
-        "lightning",
-        "steallife",
-        "stealmana",
-        "vampiresteal"
-      ],
+      "type": "string",
       "description": "Overlay effect during progressive/charge phase",
       "engineVerified": true
     },
     "ExplosionMissile": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Missile spawned as explosion effect on impact",
       "engineVerified": true
     },
     "SubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile spawned on creation",
       "engineVerified": true
     },
     "SubMissile2": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile 2 spawned on creation",
       "engineVerified": true
     },
     "SubMissile3": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile 3 spawned on creation",
       "engineVerified": true
     },
     "HitSubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile2": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile 2 spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile3": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile 3 spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile4": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Sub-missile 4 spawned on hit",
       "engineVerified": true
     },
     "CltSubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile on creation",
       "engineVerified": true
     },
     "CltSubMissile2": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile 2 on creation",
       "engineVerified": true
     },
     "CltSubMissile3": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile 3 on creation",
       "engineVerified": true
     },
     "CltHitSubMissile1": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile on hit",
       "engineVerified": true
     },
     "CltHitSubMissile2": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile 2 on hit",
       "engineVerified": true
     },
     "CltHitSubMissile3": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile 3 on hit",
       "engineVerified": true
     },
     "CltHitSubMissile4": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
+      "type": "string",
       "description": "Client-side sub-missile 4 on hit",
       "engineVerified": true
     },

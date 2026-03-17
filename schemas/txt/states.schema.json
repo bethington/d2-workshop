@@ -50,37 +50,31 @@
     "overlay1": {
       "type": "string",
       "description": "First persistent overlay displayed on the unit while this state is active",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay2": {
       "type": "string",
       "description": "Second persistent overlay displayed on the unit while this state is active",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay3": {
       "type": "string",
       "description": "Third persistent overlay displayed on the unit while this state is active",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "overlay4": {
       "type": "string",
       "description": "Fourth persistent overlay displayed on the unit while this state is active",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "pgsvoverlay": {
       "type": "string",
       "description": "Overlay shown on the target of a progressive skill when the charge-up triggers",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "removerlay": {
       "type": "string",
       "description": "Overlay displayed once when the state is removed",
-      "targetColumn": "Overlay",
       "engineVerified": true
     },
     "setfunc": {
@@ -95,14 +89,12 @@
     },
     "itemtype": {
       "type": "string",
-      "targetColumn": "Code",
       "description": "Item type restriction â€” limits which item types can grant this state (references ItemTypes.txt Code)",
       "engineVerified": true
     },
     "itemtrans": {
       "type": "string",
       "description": "Color transform applied to items while this state is active",
-      "targetColumn": "Code",
       "engineVerified": true
     },
     "colorpri": {
@@ -133,13 +125,11 @@
     "onsound": {
       "type": "string",
       "description": "Sound played when this state is applied",
-      "targetColumn": "Handle",
       "engineVerified": true
     },
     "offsound": {
       "type": "string",
       "description": "Sound played when this state expires or is removed",
-      "targetColumn": "Handle",
       "engineVerified": true
     },
     "gfxtype": {

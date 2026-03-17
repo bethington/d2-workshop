@@ -3,24 +3,14 @@
   "description": "Arm animation type definitions.",
   "columns": {
     "Name": {
-      "type": "enum",
-      "values": [
-        "Heavy",
-        "Lite",
-        "Medium"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Internal name identifier",
       "engineVerified": true
     },
     "Token": {
-      "type": "enum",
-      "values": [
-        "hvy",
-        "lit",
-        "med"
-      ],
+      "type": "string",
       "description": "Animation token identifier",
       "engineVerified": true
     }

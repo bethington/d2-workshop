@@ -3,47 +3,14 @@
   "description": "Cube recipe type code definitions.",
   "columns": {
     "cube item class": {
-      "type": "enum",
-      "values": [
-        "Amulet",
-        "Armor",
-        "Axe",
-        "Belt",
-        "Dagger",
-        "Gem",
-        "Health Potion",
-        "Item",
-        "Mana Potion",
-        "None",
-        "Ring",
-        "Spear",
-        "Staff",
-        "Sword",
-        "Weapon"
-      ],
+      "type": "string",
       "required": true,
       "unique": true,
       "description": "Horadric Cube recipe item class name (e.g. Weapon, Armor, Ring)",
       "engineVerified": true
     },
     "Code": {
-      "type": "enum",
-      "values": [
-        "amu",
-        "arm",
-        "axe",
-        "blt",
-        "dag",
-        "gem",
-        "hpt",
-        "itm",
-        "mpt",
-        "rin",
-        "spr",
-        "stf",
-        "swr",
-        "wep"
-      ],
+      "type": "string",
       "description": "Short code for the cube item class",
       "engineVerified": true
     }

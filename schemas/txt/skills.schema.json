@@ -4,7 +4,6 @@
   "columns": {
     "charclass": {
       "type": "string",
-      "targetColumn": "Player Class",
       "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama).",
       "engineVerified": true
     },
@@ -55,25 +54,21 @@
     },
     "srvmissile": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Server-side missile spawned by skill",
       "engineVerified": true
     },
     "srvmissilea": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Server-side missile A (alternate)",
       "engineVerified": true
     },
     "srvmissileb": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Server-side missile B (alternate)",
       "engineVerified": true
     },
     "srvmissilec": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Server-side missile C (alternate)",
       "engineVerified": true
     },
@@ -89,13 +84,11 @@
     },
     "aurastate": {
       "type": "string",
-      "targetColumn": "state",
       "description": "State applied to the caster by this aura",
       "engineVerified": true
     },
     "auratargetstate": {
       "type": "string",
-      "targetColumn": "state",
       "description": "State applied to targets within aura range",
       "engineVerified": true
     },
@@ -111,7 +104,6 @@
     },
     "aurastat1": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 1 granted by aura",
       "engineVerified": true
     },
@@ -122,7 +114,6 @@
     },
     "aurastat2": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 2 granted by aura",
       "engineVerified": true
     },
@@ -133,7 +124,6 @@
     },
     "aurastat3": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 3 granted by aura",
       "engineVerified": true
     },
@@ -144,7 +134,6 @@
     },
     "aurastat4": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 4 granted by aura",
       "engineVerified": true
     },
@@ -155,7 +144,6 @@
     },
     "aurastat5": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 5 granted by aura",
       "engineVerified": true
     },
@@ -166,7 +154,6 @@
     },
     "aurastat6": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Stat 6 granted by aura",
       "engineVerified": true
     },
@@ -217,7 +204,6 @@
     },
     "passivestate": {
       "type": "string",
-      "targetColumn": "state",
       "description": "State applied when this passive skill is learned",
       "engineVerified": true
     },
@@ -228,7 +214,6 @@
     },
     "passivestat1": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Passive stat 1 modified by this skill",
       "engineVerified": true
     },
@@ -239,7 +224,6 @@
     },
     "passivestat2": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Passive stat 2 modified by this skill",
       "engineVerified": true
     },
@@ -250,7 +234,6 @@
     },
     "passivestat3": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Passive stat 3 modified by this skill",
       "engineVerified": true
     },
@@ -261,7 +244,6 @@
     },
     "passivestat4": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Passive stat 4 modified by this skill",
       "engineVerified": true
     },
@@ -272,7 +254,6 @@
     },
     "passivestat5": {
       "type": "string",
-      "targetColumn": "Stat",
       "description": "Passive stat 5 modified by this skill",
       "engineVerified": true
     },
@@ -298,7 +279,6 @@
     },
     "sumskill1": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Skill 1 granted to the summoned creature",
       "engineVerified": true
     },
@@ -309,7 +289,6 @@
     },
     "sumskill2": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Skill 2 granted to the summoned creature",
       "engineVerified": true
     },
@@ -320,7 +299,6 @@
     },
     "sumskill3": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Skill 3 granted to the summoned creature",
       "engineVerified": true
     },
@@ -331,7 +309,6 @@
     },
     "sumskill4": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Skill 4 granted to the summoned creature",
       "engineVerified": true
     },
@@ -342,7 +319,6 @@
     },
     "sumskill5": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Skill 5 granted to the summoned creature",
       "engineVerified": true
     },
@@ -458,25 +434,21 @@
     },
     "cltmissile": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Client-side missile (visual effect)",
       "engineVerified": true
     },
     "cltmissilea": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Client-side missile A (alternate visual)",
       "engineVerified": true
     },
     "cltmissileb": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Client-side missile B (alternate visual)",
       "engineVerified": true
     },
     "cltmissilec": {
       "type": "string",
-      "targetColumn": "Missile",
       "description": "Client-side missile C (alternate visual)",
       "engineVerified": true
     },
@@ -657,19 +629,16 @@
     },
     "reqskill1": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Prerequisite skill 1",
       "engineVerified": true
     },
     "reqskill2": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Prerequisite skill 2",
       "engineVerified": true
     },
     "reqskill3": {
       "type": "string",
-      "targetColumn": "skill",
       "description": "Prerequisite skill 3",
       "engineVerified": true
     },

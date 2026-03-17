@@ -8,7 +8,7 @@
       "engineVerified": true
     },
     "spawnable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can randomly spawn in the game",
       "engineVerified": true
     },
@@ -78,7 +78,7 @@
       "engineVerified": true
     },
     "nodurability": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item has no durability",
       "engineVerified": true
     },
@@ -93,65 +93,32 @@
       "engineVerified": true
     },
     "wclass": {
-      "type": "enum",
-      "values": [
-        "1hs",
-        "1ht",
-        "2ht",
-        "bow",
-        "stf",
-        "xbw"
-      ],
+      "type": "string",
       "description": "One-handed weapon class code",
       "engineVerified": true
     },
     "2handedwclass": {
-      "type": "enum",
-      "values": [
-        "1hs",
-        "1ht",
-        "2hs",
-        "2ht",
-        "bow",
-        "stf",
-        "xbw"
-      ],
+      "type": "string",
       "description": "Two-handed weapon class code",
       "engineVerified": true
     },
     "1or2handed": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Can be wielded in one or two hands (Barbarian)",
       "engineVerified": true
     },
     "hit class": {
-      "type": "enum",
+      "type": "string",
       "description": "Impact sound effect class",
-      "values": [
-        "hth",
-        "1hss",
-        "1hsl",
-        "2hss",
-        "2hsl",
-        "1ht",
-        "2ht",
-        "club",
-        "staf",
-        "bow",
-        "xbow",
-        "claw",
-        "over",
-        ""
-      ],
       "engineVerified": true
     },
     "2handed": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Two-handed weapon flag",
       "engineVerified": true
     },
     "stackable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item uses quantity stacking",
       "engineVerified": true
     },
@@ -181,7 +148,7 @@
       "engineVerified": true
     },
     "hasinv": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item is socketable",
       "engineVerified": true
     },
@@ -206,17 +173,17 @@
       "engineVerified": true
     },
     "useable": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Item is right-clickable",
       "engineVerified": true
     },
     "unique": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Only appears as unique quality",
       "engineVerified": true
     },
     "transparent": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Enable transparency rendering",
       "engineVerified": true
     },
@@ -236,22 +203,7 @@
       "engineVerified": true
     },
     "missiletype": {
-      "type": "enum",
-      "values": [
-        "0",
-        "1",
-        "178",
-        "35",
-        "36",
-        "37",
-        "371",
-        "44",
-        "45",
-        "46",
-        "47",
-        "48",
-        "49"
-      ],
+      "type": "string",
       "description": "Throwing weapon missile type reference",
       "engineVerified": true
     },
@@ -621,7 +573,7 @@
       "engineVerified": true
     },
     "SkipName": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Skip base name display on uniques",
       "engineVerified": true
     },
