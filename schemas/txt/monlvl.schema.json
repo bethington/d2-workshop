@@ -1,0 +1,156 @@
+{
+  "file": "monlvl.txt",
+  "description": "Monster level scaling table - base and per-level values for AC, to-hit, HP, damage, and XP across all three difficulties.",
+  "columns": {
+    "AC": {
+      "type": "integer",
+      "description": "Base armor class (Normal)",
+      "engineVerified": true
+    },
+    "AC(N)": {
+      "type": "integer",
+      "description": "Base armor class (Nightmare)",
+      "engineVerified": true
+    },
+    "AC(H)": {
+      "type": "integer",
+      "description": "Base armor class (Hell)",
+      "engineVerified": true
+    },
+    "L-AC": {
+      "type": "integer",
+      "description": "Armor class per level (Normal)",
+      "engineVerified": true
+    },
+    "L-AC(N)": {
+      "type": "integer",
+      "description": "Armor class per level (Nightmare)",
+      "engineVerified": true
+    },
+    "L-AC(H)": {
+      "type": "integer",
+      "description": "Armor class per level (Hell)",
+      "engineVerified": true
+    },
+    "TH": {
+      "type": "integer",
+      "description": "Base to-hit (Normal)",
+      "engineVerified": true
+    },
+    "TH(N)": {
+      "type": "integer",
+      "description": "Base to-hit (Nightmare)",
+      "engineVerified": true
+    },
+    "TH(H)": {
+      "type": "integer",
+      "description": "Base to-hit (Hell)",
+      "engineVerified": true
+    },
+    "L-TH": {
+      "type": "integer",
+      "description": "To-hit per level (Normal)",
+      "engineVerified": true
+    },
+    "L-TH(N)": {
+      "type": "integer",
+      "description": "To-hit per level (Nightmare)",
+      "engineVerified": true
+    },
+    "L-TH(H)": {
+      "type": "integer",
+      "description": "To-hit per level (Hell)",
+      "engineVerified": true
+    },
+    "HP": {
+      "type": "integer",
+      "description": "Base hit points (Normal)",
+      "engineVerified": true
+    },
+    "HP(N)": {
+      "type": "integer",
+      "description": "Base hit points (Nightmare)",
+      "engineVerified": true
+    },
+    "HP(H)": {
+      "type": "integer",
+      "description": "Base hit points (Hell)",
+      "engineVerified": true
+    },
+    "L-HP": {
+      "type": "integer",
+      "description": "Hit points per level (Normal)",
+      "engineVerified": true
+    },
+    "L-HP(N)": {
+      "type": "integer",
+      "description": "Hit points per level (Nightmare)",
+      "engineVerified": true
+    },
+    "L-HP(H)": {
+      "type": "integer",
+      "description": "Hit points per level (Hell)",
+      "engineVerified": true
+    },
+    "DM": {
+      "type": "integer",
+      "description": "Base damage (Normal)",
+      "engineVerified": true
+    },
+    "DM(N)": {
+      "type": "integer",
+      "description": "Base damage (Nightmare)",
+      "engineVerified": true
+    },
+    "DM(H)": {
+      "type": "integer",
+      "description": "Base damage (Hell)",
+      "engineVerified": true
+    },
+    "L-DM": {
+      "type": "integer",
+      "description": "Damage per level (Normal)",
+      "engineVerified": true
+    },
+    "L-DM(N)": {
+      "type": "integer",
+      "description": "Damage per level (Nightmare)",
+      "engineVerified": true
+    },
+    "L-DM(H)": {
+      "type": "integer",
+      "description": "Damage per level (Hell)",
+      "engineVerified": true
+    },
+    "XP": {
+      "type": "integer",
+      "description": "Base experience (Normal)",
+      "engineVerified": true
+    },
+    "XP(N)": {
+      "type": "integer",
+      "description": "Base experience (Nightmare)",
+      "engineVerified": true
+    },
+    "XP(H)": {
+      "type": "integer",
+      "description": "Base experience (Hell)",
+      "engineVerified": true
+    },
+    "L-XP": {
+      "type": "integer",
+      "description": "Experience per level (Normal)",
+      "engineVerified": true
+    },
+    "L-XP(N)": {
+      "type": "integer",
+      "description": "Experience per level (Nightmare)",
+      "engineVerified": true
+    },
+    "L-XP(H)": {
+      "type": "integer",
+      "description": "Experience per level (Hell)",
+      "engineVerified": true
+    }
+  }
+}
