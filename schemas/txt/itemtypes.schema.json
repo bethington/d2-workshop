@@ -1,191 +1,180 @@
 {
   "file": "itemtypes.txt",
-  "description": "Item type hierarchy â€” defines equipment categories, socket rules, and class restrictions.",
+  "description": "Item type hierarchy - defines equipment categories, socket rules, body locations, and class restrictions.",
   "columns": {
-    "throwable": {
-      "type": "boolean",
-      "description": "Item can be thrown",
+    "code": {
+      "type": "string",
+      "description": "Item type code identifier",
       "engineVerified": true
     },
-    "autostack": {
-      "type": "boolean",
-      "description": "Whether this item type automatically stacks in inventory",
+    "equiv1": {
+      "type": "string",
+      "description": "Equivalent parent item type 1 for inheritance",
       "engineVerified": true
     },
-    "magic": {
-      "type": "boolean",
-      "description": "Whether items of this type can spawn as magic quality",
+    "equiv2": {
+      "type": "string",
+      "description": "Equivalent parent item type 2 for inheritance",
       "engineVerified": true
     },
-    "normal": {
-      "type": "boolean",
-      "description": "Whether items of this type can spawn as normal quality",
-      "engineVerified": true
-    },
-    "beltable": {
-      "type": "boolean",
-      "description": "Can be placed in belt",
-      "engineVerified": true
-    },
-    "treasureclass": {
-      "type": "boolean",
-      "description": "Item drop classification reference",
-      "engineVerified": true
-    },
-    "staffmods": {
-      "type": "enum",
-      "values": [
-        "ass",
-        "bar",
-        "dru",
-        "nec",
-        "pal",
-        "sor"
-      ],
-      "description": "Staff auto-mod skill group",
-      "engineVerified": true
-    },
-    "costformula": {
+    "repair": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)",
+      "description": "Whether items of this type can be repaired",
       "engineVerified": true
     },
-    "Body": {
-      "type": "boolean",
+    "body": {
+      "type": "integer",
       "description": "Whether this type can be worn on body",
       "engineVerified": true
     },
-    "BodyLoc1": {
+    "bodyloc1": {
       "type": "string",
       "description": "Primary body location for equipping",
       "engineVerified": true
     },
-    "BodyLoc2": {
+    "bodyloc2": {
       "type": "string",
       "description": "Secondary body location for equipping",
       "engineVerified": true
     },
-    "Class": {
+    "shoots": {
       "type": "string",
-      "description": "Character class restriction",
+      "description": "Item type code of projectile this weapon shoots",
       "engineVerified": true
     },
-    "Code": {
+    "quiver": {
       "type": "string",
-      "description": "Item type code identifier",
-      "required": true,
+      "description": "Item type code of quiver used with this weapon",
       "engineVerified": true
     },
-    "Equiv1": {
-      "type": "string",
-      "description": "Equivalent item type 1 for inheritance",
-      "engineVerified": true
-    },
-    "Equiv2": {
-      "type": "string",
-      "description": "Equivalent item type 2 for inheritance",
-      "engineVerified": true
-    },
-    "ItemType": {
-      "type": "string",
-      "description": "Item type name",
-      "engineVerified": true
-    },
-    "MaxSock1": {
+    "throwable": {
       "type": "integer",
-      "description": "Max sockets at item level 1-25",
+      "description": "Whether items of this type can be thrown",
       "engineVerified": true
     },
-    "MaxSock25": {
+    "reload": {
       "type": "integer",
-      "description": "Max sockets at item level 25-40",
+      "description": "Whether this type requires reloading (ammo)",
       "engineVerified": true
     },
-    "MaxSock40": {
+    "reequip": {
       "type": "integer",
-      "description": "Max sockets at item level 40+",
+      "description": "Whether this type auto-reequips from inventory",
       "engineVerified": true
     },
-    "MaxSockets1": {
+    "autostack": {
       "type": "integer",
-      "description": "Maximum sockets tier 1",
+      "description": "Whether items of this type auto-stack in inventory",
       "engineVerified": true
     },
-    "MaxSockets2": {
+    "magic": {
       "type": "integer",
-      "description": "Maximum sockets tier 2",
+      "description": "Whether items of this type can be magic quality",
       "engineVerified": true
     },
-    "MaxSockets3": {
+    "rare": {
       "type": "integer",
-      "description": "Maximum sockets tier 3",
+      "description": "Whether items of this type can be rare quality",
       "engineVerified": true
     },
-    "Quiver": {
-      "type": "string",
-      "description": "Quiver type used with this weapon",
+    "normal": {
+      "type": "integer",
+      "description": "Whether items of this type can be normal quality",
       "engineVerified": true
     },
-    "Rarity": {
+    "charm": {
+      "type": "integer",
+      "description": "Whether items of this type function as charms",
+      "engineVerified": true
+    },
+    "gem": {
+      "type": "integer",
+      "description": "Whether items of this type are gems/runes",
+      "engineVerified": true
+    },
+    "beltable": {
+      "type": "integer",
+      "description": "Whether items of this type can be placed in belt slots",
+      "engineVerified": true
+    },
+    "maxsock1": {
+      "type": "integer",
+      "description": "Maximum sockets at item level 1-25",
+      "engineVerified": true
+    },
+    "maxsock25": {
+      "type": "integer",
+      "description": "Maximum sockets at item level 25-40",
+      "engineVerified": true
+    },
+    "maxsock40": {
+      "type": "integer",
+      "description": "Maximum sockets at item level 40+",
+      "engineVerified": true
+    },
+    "treasureclass": {
+      "type": "integer",
+      "description": "Whether this type participates in treasure class generation",
+      "engineVerified": true
+    },
+    "rarity": {
       "type": "integer",
       "description": "Rarity weight for item generation",
       "engineVerified": true
     },
-    "Repair": {
-      "type": "boolean",
-      "description": "Whether this item type can be repaired",
-      "engineVerified": true
-    },
-    "Shoots": {
+    "staffmods": {
       "type": "string",
-      "description": "Missile type this weapon shoots",
+      "description": "Character class whose skills get staff mods on this type",
       "engineVerified": true
     },
-    "StorePage": {
-      "type": "string",
-      "description": "Store page where this item appears",
-      "engineVerified": true
-    },
-    "VarInvGfx": {
+    "costformula": {
       "type": "integer",
-      "description": "Number of variable inventory graphics",
+      "description": "Cost calculation formula type",
       "engineVerified": true
     },
-    "invgfx1": {
+    "class": {
       "type": "string",
-      "description": "Inventory graphic variant 1",
+      "description": "Character class restriction for this item type",
       "engineVerified": true
     },
-    "invgfx2": {
+    "storepage": {
       "type": "string",
-      "description": "Inventory graphic variant 2",
-      "engineVerified": true
-    },
-    "invgfx3": {
-      "type": "string",
-      "description": "Inventory graphic variant 3",
-      "engineVerified": true
-    },
-    "invgfx4": {
-      "type": "string",
-      "description": "Inventory graphic variant 4",
-      "engineVerified": true
-    },
-    "invgfx5": {
-      "type": "string",
-      "description": "Inventory graphic variant 5",
-      "engineVerified": true
-    },
-    "invgfx6": {
-      "type": "string",
-      "description": "Inventory graphic variant 6",
+      "description": "Store page where this item type appears for purchase",
       "engineVerified": true
     },
     "varinvgfx": {
       "type": "integer",
-      "description": "Variable inventory graphic count",
+      "description": "Number of variable inventory graphic variants",
+      "engineVerified": true
+    },
+    "invgfx1": {
+      "type": "string",
+      "description": "Inventory graphic variant 1 filename",
+      "engineVerified": true
+    },
+    "invgfx2": {
+      "type": "string",
+      "description": "Inventory graphic variant 2 filename",
+      "engineVerified": true
+    },
+    "invgfx3": {
+      "type": "string",
+      "description": "Inventory graphic variant 3 filename",
+      "engineVerified": true
+    },
+    "invgfx4": {
+      "type": "string",
+      "description": "Inventory graphic variant 4 filename",
+      "engineVerified": true
+    },
+    "invgfx5": {
+      "type": "string",
+      "description": "Inventory graphic variant 5 filename",
+      "engineVerified": true
+    },
+    "invgfx6": {
+      "type": "string",
+      "description": "Inventory graphic variant 6 filename",
       "engineVerified": true
     }
   }
