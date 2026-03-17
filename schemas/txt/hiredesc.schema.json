@@ -1,38 +1,10 @@
 {
   "file": "hiredesc.txt",
-  "description": "Hireling description string key definitions.",
+  "description": "Hireling description code lookup table. Engine uses row index to map hireling description IDs to their short codes.",
   "columns": {
-    "Hireling Description": {
-      "type": "enum",
-      "values": [
-        "Cold Arrow",
-        "Cold Spells",
-        "Combat",
-        "Defensive Auras",
-        "Fire Arrow",
-        "Fire Spells",
-        "Lightning Spells",
-        "None",
-        "Offensive Auras"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Display name for the hireling specialization type",
-      "engineVerified": true
-    },
-    "Code": {
-      "type": "enum",
-      "values": [
-        "carw",
-        "cold",
-        "comb",
-        "def",
-        "farw",
-        "fire",
-        "ltng",
-        "off"
-      ],
-      "description": "Short code for the hireling description type",
+    "code": {
+      "type": "string",
+      "description": "Short code for the hireling description type (e.g. comb, def, off, fire, cold)",
       "engineVerified": true
     }
   }
