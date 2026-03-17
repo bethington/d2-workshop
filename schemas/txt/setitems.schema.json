@@ -1,81 +1,69 @@
 {
   "file": "setitems.txt",
-  "description": "Set item definitions — maps individual set pieces to their base items, fixed (blue) properties, and partial/full set (green) bonus properties.",
+  "description": "Set item definitions - individual items belonging to item sets, with base properties (prop1-9), partial set bonuses (pcode/aprop), and full set bonuses (fcode).",
   "columns": {
     "add func": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "Controls how green (partial set) bonuses are applied: 0=none, 1=bonuses depend on which specific items are equipped, 2=bonuses depend on how many items are equipped",
       "engineVerified": true
     },
     "aprop1a": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 1a — first property of pair 1, applied based on add func logic",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop1b": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 1b — second property of pair 1",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop2a": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 2a — first property of pair 2",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop2b": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 2b — second property of pair 2",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop3a": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 3a — first property of pair 3",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop3b": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 3b — second property of pair 3",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop4a": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 4a — first property of pair 4",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop4b": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 4b — second property of pair 4",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop5a": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 5a — first property of pair 5",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
     "aprop5b": {
-      "type": "ref",
+      "type": "string",
       "description": "Partial set (green) bonus 5b — second property of pair 5",
-      "target": "properties.txt",
       "targetColumn": "Code",
       "engineVerified": true
     },
@@ -90,7 +78,7 @@
       "engineVerified": true
     },
     "fparam8": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -110,7 +98,7 @@
       "engineVerified": true
     },
     "fparam7": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -130,7 +118,7 @@
       "engineVerified": true
     },
     "fparam6": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -150,7 +138,7 @@
       "engineVerified": true
     },
     "fparam5": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -170,7 +158,7 @@
       "engineVerified": true
     },
     "fparam4": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -190,7 +178,7 @@
       "engineVerified": true
     },
     "fparam3": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -210,7 +198,7 @@
       "engineVerified": true
     },
     "fparam2": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -230,7 +218,7 @@
       "engineVerified": true
     },
     "fparam1": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -240,7 +228,7 @@
       "engineVerified": true
     },
     "pparam5b": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -250,7 +238,7 @@
       "engineVerified": true
     },
     "pparam5a": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -260,7 +248,7 @@
       "engineVerified": true
     },
     "pparam4b": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -270,7 +258,7 @@
       "engineVerified": true
     },
     "pparam4a": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -280,7 +268,7 @@
       "engineVerified": true
     },
     "pparam3b": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -290,7 +278,7 @@
       "engineVerified": true
     },
     "pparam3a": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -300,7 +288,7 @@
       "engineVerified": true
     },
     "pparam2b": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
@@ -310,18 +298,13 @@
       "engineVerified": true
     },
     "pparam2a": {
-      "type": "integer",
+      "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
     },
     "pcode2a": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "*ID": {
-      "type": "integer",
-      "description": "Set item ID for reference",
       "engineVerified": true
     },
     "cost add": {
@@ -390,7 +373,7 @@
       "engineVerified": true
     },
     "par1": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 1 parameter",
       "engineVerified": true
     },
@@ -410,7 +393,7 @@
       "engineVerified": true
     },
     "par2": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 2 parameter",
       "engineVerified": true
     },
@@ -430,7 +413,7 @@
       "engineVerified": true
     },
     "par3": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 3 parameter",
       "engineVerified": true
     },
@@ -450,7 +433,7 @@
       "engineVerified": true
     },
     "par4": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 4 parameter",
       "engineVerified": true
     },
@@ -470,7 +453,7 @@
       "engineVerified": true
     },
     "par5": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 5 parameter",
       "engineVerified": true
     },
@@ -490,7 +473,7 @@
       "engineVerified": true
     },
     "par6": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 6 parameter",
       "engineVerified": true
     },
@@ -510,7 +493,7 @@
       "engineVerified": true
     },
     "par7": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 7 parameter",
       "engineVerified": true
     },
@@ -530,7 +513,7 @@
       "engineVerified": true
     },
     "par8": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 8 parameter",
       "engineVerified": true
     },
@@ -550,7 +533,7 @@
       "engineVerified": true
     },
     "par9": {
-      "type": "integer",
+      "type": "string",
       "description": "Property 9 parameter",
       "engineVerified": true
     },
@@ -642,6 +625,171 @@
     "pmax5b": {
       "type": "integer",
       "description": "Partial set 5 bonus max (b)",
+      "engineVerified": true
+    },
+    "amax1a": {
+      "type": "integer",
+      "description": "amax1a",
+      "engineVerified": true
+    },
+    "amax1b": {
+      "type": "integer",
+      "description": "amax1b",
+      "engineVerified": true
+    },
+    "amax2a": {
+      "type": "integer",
+      "description": "amax2a",
+      "engineVerified": true
+    },
+    "amax2b": {
+      "type": "integer",
+      "description": "amax2b",
+      "engineVerified": true
+    },
+    "amax3a": {
+      "type": "integer",
+      "description": "amax3a",
+      "engineVerified": true
+    },
+    "amax3b": {
+      "type": "integer",
+      "description": "amax3b",
+      "engineVerified": true
+    },
+    "amax4a": {
+      "type": "integer",
+      "description": "amax4a",
+      "engineVerified": true
+    },
+    "amax4b": {
+      "type": "integer",
+      "description": "amax4b",
+      "engineVerified": true
+    },
+    "amax5a": {
+      "type": "integer",
+      "description": "amax5a",
+      "engineVerified": true
+    },
+    "amax5b": {
+      "type": "integer",
+      "description": "amax5b",
+      "engineVerified": true
+    },
+    "amin1a": {
+      "type": "integer",
+      "description": "amin1a",
+      "engineVerified": true
+    },
+    "amin1b": {
+      "type": "integer",
+      "description": "amin1b",
+      "engineVerified": true
+    },
+    "amin2a": {
+      "type": "integer",
+      "description": "amin2a",
+      "engineVerified": true
+    },
+    "amin2b": {
+      "type": "integer",
+      "description": "amin2b",
+      "engineVerified": true
+    },
+    "amin3a": {
+      "type": "integer",
+      "description": "amin3a",
+      "engineVerified": true
+    },
+    "amin3b": {
+      "type": "integer",
+      "description": "amin3b",
+      "engineVerified": true
+    },
+    "amin4a": {
+      "type": "integer",
+      "description": "amin4a",
+      "engineVerified": true
+    },
+    "amin4b": {
+      "type": "integer",
+      "description": "amin4b",
+      "engineVerified": true
+    },
+    "amin5a": {
+      "type": "integer",
+      "description": "amin5a",
+      "engineVerified": true
+    },
+    "amin5b": {
+      "type": "integer",
+      "description": "amin5b",
+      "engineVerified": true
+    },
+    "apar1a": {
+      "type": "string",
+      "description": "apar1a",
+      "engineVerified": true
+    },
+    "apar1b": {
+      "type": "string",
+      "description": "apar1b",
+      "engineVerified": true
+    },
+    "apar2a": {
+      "type": "string",
+      "description": "apar2a",
+      "engineVerified": true
+    },
+    "apar2b": {
+      "type": "string",
+      "description": "apar2b",
+      "engineVerified": true
+    },
+    "apar3a": {
+      "type": "string",
+      "description": "apar3a",
+      "engineVerified": true
+    },
+    "apar3b": {
+      "type": "string",
+      "description": "apar3b",
+      "engineVerified": true
+    },
+    "apar4a": {
+      "type": "string",
+      "description": "apar4a",
+      "engineVerified": true
+    },
+    "apar4b": {
+      "type": "string",
+      "description": "apar4b",
+      "engineVerified": true
+    },
+    "apar5a": {
+      "type": "string",
+      "description": "apar5a",
+      "engineVerified": true
+    },
+    "apar5b": {
+      "type": "string",
+      "description": "apar5b",
+      "engineVerified": true
+    },
+    "chrtransform": {
+      "type": "string",
+      "description": "chrtransform",
+      "engineVerified": true
+    },
+    "flippyfile": {
+      "type": "string",
+      "description": "flippyfile",
+      "engineVerified": true
+    },
+    "rarity": {
+      "type": "integer",
+      "description": "rarity",
       "engineVerified": true
     }
   }
