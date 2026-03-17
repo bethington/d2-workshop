@@ -1,37 +1,15 @@
 {
   "file": "objmode.txt",
-  "description": "Object animation mode definitions.",
+  "description": "Object animation mode definitions - maps mode names to animation tokens (e.g. Neutral->NU, Operating->OP). Merged with objtype.txt at load time.",
   "columns": {
-    "Name": {
-      "type": "enum",
-      "values": [
-        "Neutral",
-        "Opened",
-        "Operating",
-        "Special1",
-        "Special2",
-        "Special3",
-        "Special4",
-        "Special5"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
+    "name": {
+      "type": "string",
+      "description": "Animation mode name (e.g. Neutral, Operating, Opened)",
       "engineVerified": true
     },
-    "Token": {
-      "type": "enum",
-      "values": [
-        "NU",
-        "ON",
-        "OP",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "S5"
-      ],
-      "description": "Animation token identifier",
+    "token": {
+      "type": "string",
+      "description": "Animation token code (e.g. NU, OP, ON, S1-S5)",
       "engineVerified": true
     }
   }
