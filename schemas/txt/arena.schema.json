@@ -14,6 +14,41 @@
       "max": -1,
       "description": "Score penalty applied when killed by a monster in arena mode",
       "engineVerified": true
+    },
+    "arena": {
+      "type": "string",
+      "required": true,
+      "description": "Arena mode identifier",
+      "engineVerified": true
+    },
+    "PlayerDeath": {
+      "type": "integer",
+      "description": "Score penalty when killed by another player",
+      "engineVerified": true
+    },
+    "PlayerDeathPercent": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "description": "Percentage of score lost on player death",
+      "engineVerified": true
+    },
+    "PlayerKill": {
+      "type": "integer",
+      "description": "Score awarded for killing another player",
+      "engineVerified": true
+    },
+    "PlayerKillPercent": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "description": "Percentage of victim score awarded to killer",
+      "engineVerified": true
+    },
+    "Suicide": {
+      "type": "integer",
+      "description": "Score penalty for suicide (dying to environment)",
+      "engineVerified": true
     }
   }
 }
