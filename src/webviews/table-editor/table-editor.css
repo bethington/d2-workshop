@@ -135,6 +135,18 @@ th.sorted-desc {
   font-weight: 600;
 }
 
+.verified-badge {
+  color: #4ec94e;
+  font-weight: bold;
+  margin-right: 3px;
+  cursor: help;
+}
+
+.header-deprecated {
+  color: var(--vscode-disabledForeground);
+  text-decoration: line-through;
+}
+
 .header-type {
   font-size: 0.8em;
   color: var(--vscode-descriptionForeground);

@@ -23,6 +23,8 @@ interface ColumnSchema {
   target?: string;
   targetColumn?: string;
   description?: string;
+  engineVerified?: boolean;
+  deprecated?: boolean;
 }
 
 interface TxtSchema {
@@ -259,9 +261,14 @@ export function TableEditor() {
           id: header || `col_${index}`,
           header: () => (
             <div className="header-cell">
-              <span className="header-name">{header}</span>
+              <span className="header-name">
+                {colSchema?.engineVerified && <span className="verified-badge" title="Verified: read by D2 game engine (v1.13c D2Common.dll)">&#x2713;</span>}
+                {header}
+              </span>
               {colSchema && (
-                <span className="header-type">{colSchema.type}</span>
+                <span className={`header-type ${colSchema.deprecated ? "header-deprecated" : ""}`}>
+                  {colSchema.type}
+                </span>
               )}
             </div>
           ),

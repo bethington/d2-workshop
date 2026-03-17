@@ -24,6 +24,8 @@ interface ColumnSchema {
   target?: string;
   targetColumn?: string;
   description?: string;
+  engineVerified?: boolean;
+  deprecated?: boolean;
 }
 
 interface TxtSchema {
@@ -129,7 +131,10 @@ function CardField({
   return (
     <div className={`card-field ${schema?.required && !value ? "field-required" : ""}`}>
       <div className="field-header">
-        <label className="field-label">{header}</label>
+        <label className="field-label">
+          {schema?.engineVerified && <span className="verified-badge" title="Verified: read by D2 game engine (v1.13c D2Common.dll)">&#x2713;</span>}
+          {header}
+        </label>
         {typeLabel && <span className="field-type">{typeLabel}</span>}
         {refLabel && <span className="field-ref">{refLabel}</span>}
       </div>
