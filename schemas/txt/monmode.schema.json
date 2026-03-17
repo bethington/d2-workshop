@@ -1,52 +1,95 @@
 {
   "file": "monmode.txt",
-  "description": "Monster animation mode definitions.",
+  "description": "Monster animation mode definitions - mode names, tokens, and direction counts per animation type.",
   "columns": {
-    "Name": {
-      "type": "enum",
-      "values": [
-        "Attack1",
-        "Attack2",
-        "Block",
-        "Cast",
-        "Dead",
-        "Death",
-        "Get Hit",
-        "Knockback",
-        "Neutral",
-        "Run",
-        "Sequence",
-        "Skill1",
-        "Skill2",
-        "Skill3",
-        "Skill4",
-        "Walk"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
+    "name": {
+      "type": "string",
+      "description": "Animation mode name (e.g. Neutral, Walk, Attack1)",
       "engineVerified": true
     },
-    "Token": {
-      "type": "enum",
-      "values": [
-        "A1",
-        "A2",
-        "BL",
-        "DD",
-        "DT",
-        "GH",
-        "NU",
-        "RN",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "SC",
-        "WL",
-        "xx"
-      ],
-      "description": "Animation token identifier",
+    "token": {
+      "type": "string",
+      "description": "Animation token identifier (e.g. NU, WL, A1)",
+      "engineVerified": true
+    },
+    "DT_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Death animation",
+      "engineVerified": true
+    },
+    "NU_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Neutral animation",
+      "engineVerified": true
+    },
+    "WL_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Walk animation",
+      "engineVerified": true
+    },
+    "GH_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Get Hit animation",
+      "engineVerified": true
+    },
+    "A1_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Attack1 animation",
+      "engineVerified": true
+    },
+    "A2_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Attack2 animation",
+      "engineVerified": true
+    },
+    "BL_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Block animation",
+      "engineVerified": true
+    },
+    "SC_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Cast animation",
+      "engineVerified": true
+    },
+    "S1_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Skill1 animation",
+      "engineVerified": true
+    },
+    "S2_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Skill2 animation",
+      "engineVerified": true
+    },
+    "S3_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Skill3 animation",
+      "engineVerified": true
+    },
+    "S4_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Skill4 animation",
+      "engineVerified": true
+    },
+    "DD_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Dead animation",
+      "engineVerified": true
+    },
+    "KB_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Knockback animation",
+      "engineVerified": true
+    },
+    "SQ_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Sequence animation",
+      "engineVerified": true
+    },
+    "RN_Dir": {
+      "type": "integer",
+      "description": "Number of directions for Run animation",
       "engineVerified": true
     }
   }
