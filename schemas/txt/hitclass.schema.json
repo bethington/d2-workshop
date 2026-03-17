@@ -22,7 +22,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Impact sound effect class"
+      "description": "Impact sound effect class",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -41,7 +42,8 @@
         "staf",
         "xbow"
       ],
-      "description": "Hit class code identifier"
+      "description": "Hit class code identifier",
+      "engineVerified": true
     }
   }
 }

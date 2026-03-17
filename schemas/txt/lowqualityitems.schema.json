@@ -12,7 +12,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     }
   }
 }

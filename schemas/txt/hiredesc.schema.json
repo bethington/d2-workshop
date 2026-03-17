@@ -17,7 +17,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Display name for the hireling specialization type"
+      "description": "Display name for the hireling specialization type",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -31,7 +32,8 @@
         "ltng",
         "off"
       ],
-      "description": "Short code for the hireling description type"
+      "description": "Short code for the hireling description type",
+      "engineVerified": true
     }
   }
 }

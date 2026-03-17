@@ -5,7 +5,8 @@
     "Description of Ai Parameters": {
       "type": "string",
       "required": true,
-      "description": "Text description of the AI behavior parameter and its effect on monster behavior"
+      "description": "Text description of the AI behavior parameter and its effect on monster behavior",
+      "engineVerified": true
     }
   }
 }

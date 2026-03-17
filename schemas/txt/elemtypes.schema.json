@@ -20,7 +20,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Display name of the elemental damage type"
+      "description": "Display name of the elemental damage type",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -37,7 +38,8 @@
         "stam",
         "stun"
       ],
-      "description": "Short element type code used in formulas and data references"
+      "description": "Short element type code used in formulas and data references",
+      "engineVerified": true
     }
   }
 }

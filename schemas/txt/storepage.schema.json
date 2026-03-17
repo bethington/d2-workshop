@@ -12,7 +12,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Display name of the NPC store inventory tab"
+      "description": "Display name of the NPC store inventory tab",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -22,7 +23,8 @@
         "misc",
         "weap"
       ],
-      "description": "Short code for the store page tab"
+      "description": "Short code for the store page tab",
+      "engineVerified": true
     }
   }
 }

@@ -24,7 +24,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "Token": {
       "type": "enum",
@@ -45,7 +46,8 @@
         "WL",
         "xx"
       ],
-      "description": "Animation token identifier"
+      "description": "Animation token identifier",
+      "engineVerified": true
     }
   }
 }

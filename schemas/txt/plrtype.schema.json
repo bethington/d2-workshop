@@ -13,7 +13,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "Token": {
       "type": "enum",
@@ -24,7 +25,8 @@
         "PA",
         "SO"
       ],
-      "description": "Animation token identifier"
+      "description": "Animation token identifier",
+      "engineVerified": true
     }
   }
 }

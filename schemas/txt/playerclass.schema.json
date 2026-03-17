@@ -15,7 +15,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Display name of the player character class"
+      "description": "Display name of the player character class",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -28,7 +29,8 @@
         "pal",
         "sor"
       ],
-      "description": "Three-letter player class code used in data references"
+      "description": "Three-letter player class code used in data references",
+      "engineVerified": true
     }
   }
 }

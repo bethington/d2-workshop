@@ -7,46 +7,53 @@
       "required": true,
       "unique": true,
       "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "Level": {
       "type": "integer",
       "description": "Level ID this maze configuration applies to. Not read by 1.13c engine",
       "min": 0,
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "Rooms": {
       "type": "integer",
       "min": 1,
       "max": 61,
       "description": "Number of rooms in the maze. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "SizeX": {
       "type": "integer",
       "min": 8,
       "max": 24,
       "description": "Width in grid cells. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "SizeY": {
       "type": "integer",
       "min": 8,
       "max": 24,
       "description": "Height in grid cells. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "Merge": {
       "type": "integer",
       "min": 0,
       "max": 1000,
       "description": "Room merge probability (0-1000). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "Beta": {
       "type": "boolean",
       "description": "Beta content flag (unused). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     }
   }
 }

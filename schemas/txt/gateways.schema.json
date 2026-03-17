@@ -6,7 +6,8 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Battle.net gateway server list version and connection entries"
+      "description": "Battle.net gateway server list version and connection entries",
+      "engineVerified": true
     }
   }
 }

@@ -5,15 +5,18 @@
     "Name": {
       "type": "string",
       "required": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "Token": {
       "type": "string",
-      "description": "Animation token identifier"
+      "description": "Animation token identifier",
+      "engineVerified": true
     },
     "Beta": {
       "type": "boolean",
-      "description": "Beta content flag (unused)"
+      "description": "Beta content flag (unused)",
+      "engineVerified": true
     }
   }
 }

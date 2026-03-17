@@ -6,11 +6,13 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Display name of the color transform palette"
+      "description": "Display name of the color transform palette",
+      "engineVerified": true
     },
     "Code": {
       "type": "string",
-      "description": "Short color transform code identifier"
+      "description": "Short color transform code identifier",
+      "engineVerified": true
     }
   }
 }

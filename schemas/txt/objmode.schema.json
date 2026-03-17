@@ -16,7 +16,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "Token": {
       "type": "enum",
@@ -30,7 +31,8 @@
         "S4",
         "S5"
       ],
-      "description": "Animation token identifier"
+      "description": "Animation token identifier",
+      "engineVerified": true
     }
   }
 }

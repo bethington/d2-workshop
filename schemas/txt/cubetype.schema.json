@@ -23,7 +23,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Horadric Cube recipe item class name (e.g. Weapon, Armor, Ring)"
+      "description": "Horadric Cube recipe item class name (e.g. Weapon, Armor, Ring)",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -43,7 +44,8 @@
         "swr",
         "wep"
       ],
-      "description": "Short code for the cube item class"
+      "description": "Short code for the cube item class",
+      "engineVerified": true
     }
   }
 }

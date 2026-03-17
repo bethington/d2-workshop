@@ -1,16 +1,18 @@
 {
   "file": "gamble.txt",
-  "description": "Gambling item pool definitions \u2014 items available from gambling NPCs.",
+  "description": "Gambling item pool definitions — items available from gambling NPCs.",
   "columns": {
     "name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier"
+      "description": "Internal name identifier",
+      "engineVerified": true
     },
     "code": {
       "type": "string",
-      "description": "Unique 3-4 character item code"
+      "description": "Unique 3-4 character item code",
+      "engineVerified": true
     }
   }
 }

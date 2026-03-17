@@ -23,7 +23,8 @@
       ],
       "required": true,
       "unique": true,
-      "description": "Display name of the weapon animation class"
+      "description": "Display name of the weapon animation class",
+      "engineVerified": true
     },
     "Code": {
       "type": "enum",
@@ -43,7 +44,8 @@
         "stf",
         "xbw"
       ],
-      "description": "Short code for the weapon animation class"
+      "description": "Short code for the weapon animation class",
+      "engineVerified": true
     }
   }
 }

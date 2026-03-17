@@ -6,11 +6,13 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Color name identifier"
+      "description": "Color name identifier",
+      "engineVerified": true
     },
     "Code": {
       "type": "string",
-      "description": "Color code used by other files"
+      "description": "Color code used by other files",
+      "engineVerified": true
     }
   }
 }

@@ -6,7 +6,8 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Monster name string"
+      "description": "Monster name string",
+      "engineVerified": true
     }
   }
 }

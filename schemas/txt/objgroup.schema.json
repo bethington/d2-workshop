@@ -6,192 +6,220 @@
       "type": "string",
       "required": true,
       "description": "Internal name of the object group (reference only). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "Offset": {
       "type": "integer",
       "min": 0,
       "max": 96,
       "description": "Group ID used in levels.txt ObjGrp0-7 columns. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID0": {
       "type": "integer",
       "min": 0,
       "max": 387,
       "description": "Object ID from objects.txt for slot 0. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY0": {
       "type": "integer",
       "min": 0,
       "max": 125,
       "description": "Minimum cells between spawned instances of object 0. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB0": {
       "type": "integer",
       "min": 0,
       "max": 100,
       "description": "Spawn probability for object 0 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID1": {
       "type": "integer",
       "min": 0,
       "max": 388,
       "description": "Object ID from objects.txt for slot 1. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY1": {
       "type": "integer",
       "min": 0,
       "max": 125,
       "description": "Minimum cells between spawned instances of object 1. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB1": {
       "type": "integer",
       "min": 0,
       "max": 50,
       "description": "Spawn probability for object 1 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID2": {
       "type": "integer",
       "min": 0,
       "max": 389,
       "description": "Object ID from objects.txt for slot 2. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY2": {
       "type": "integer",
       "min": 0,
       "max": 80,
       "description": "Minimum cells between spawned instances of object 2. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB2": {
       "type": "integer",
       "min": 0,
       "max": 80,
       "description": "Spawn probability for object 2 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID3": {
       "type": "integer",
       "min": 0,
       "max": 390,
       "description": "Object ID from objects.txt for slot 3. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY3": {
       "type": "integer",
       "min": 0,
       "max": 30,
       "description": "Minimum cells between spawned instances of object 3. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB3": {
       "type": "integer",
       "min": 0,
       "max": 25,
       "description": "Spawn probability for object 3 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID4": {
       "type": "integer",
       "min": 0,
       "max": 391,
       "description": "Object ID from objects.txt for slot 4. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY4": {
       "type": "integer",
       "min": 0,
       "max": 30,
       "description": "Minimum cells between spawned instances of object 4. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB4": {
       "type": "integer",
       "min": 0,
       "max": 24,
       "description": "Spawn probability for object 4 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID5": {
       "type": "integer",
       "min": 0,
       "max": 380,
       "description": "Object ID from objects.txt for slot 5. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY5": {
       "type": "integer",
       "min": 0,
       "max": 30,
       "description": "Minimum cells between spawned instances of object 5. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB5": {
       "type": "integer",
       "min": 0,
       "max": 20,
       "description": "Spawn probability for object 5 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID6": {
       "type": "integer",
       "min": 0,
       "max": 316,
       "description": "Object ID from objects.txt for slot 6. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY6": {
       "type": "integer",
       "min": 0,
       "max": 30,
       "description": "Minimum cells between spawned instances of object 6. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB6": {
       "type": "integer",
       "min": 0,
       "max": 13,
       "description": "Spawn probability for object 6 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "ID7": {
       "type": "integer",
       "min": 0,
       "max": 317,
       "description": "Object ID from objects.txt for slot 7. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "DENSITY7": {
       "type": "integer",
       "min": 0,
       "max": 30,
       "description": "Minimum cells between spawned instances of object 7. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "PROB7": {
       "type": "integer",
       "min": 0,
       "max": 14,
       "description": "Spawn probability for object 7 (0-100). Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "SHRINES": {
       "type": "boolean",
       "description": "Whether this group contains shrines. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     },
     "WELLS": {
       "type": "boolean",
       "description": "Whether this group contains wells. Not read by 1.13c engine",
-      "deprecated": true
+      "deprecated": true,
+      "engineVerified": true
     }
   }
 }
