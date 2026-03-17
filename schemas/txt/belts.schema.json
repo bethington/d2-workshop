@@ -6,454 +6,326 @@
       "type": "integer",
       "min": 4,
       "max": 16,
-      "description": "Number of potion slots in this belt type",
+      "description": "Number of active potion slots (must be multiple of 4: 4, 8, 12, or 16)",
       "engineVerified": true
     },
     "box1left": {
       "type": "integer",
-      "min": 343,
-      "max": 343,
       "description": "Left pixel coordinate of belt slot 1 (row 1, col 1)",
       "engineVerified": true
     },
     "box1right": {
       "type": "integer",
-      "min": 372,
-      "max": 372,
       "description": "Right pixel coordinate of belt slot 1",
       "engineVerified": true
     },
     "box1top": {
       "type": "integer",
-      "min": 442,
-      "max": 442,
       "description": "Top pixel coordinate of belt slot 1",
       "engineVerified": true
     },
     "box1bottom": {
       "type": "integer",
-      "min": 471,
-      "max": 471,
       "description": "Bottom pixel coordinate of belt slot 1",
       "engineVerified": true
     },
     "box2left": {
       "type": "integer",
-      "min": 374,
-      "max": 374,
       "description": "Left pixel coordinate of belt slot 2 (row 1, col 2)",
       "engineVerified": true
     },
     "box2right": {
       "type": "integer",
-      "min": 403,
-      "max": 403,
       "description": "Right pixel coordinate of belt slot 2",
       "engineVerified": true
     },
     "box2top": {
       "type": "integer",
-      "min": 442,
-      "max": 442,
       "description": "Top pixel coordinate of belt slot 2",
       "engineVerified": true
     },
     "box2bottom": {
       "type": "integer",
-      "min": 471,
-      "max": 471,
       "description": "Bottom pixel coordinate of belt slot 2",
       "engineVerified": true
     },
     "box3left": {
       "type": "integer",
-      "min": 405,
-      "max": 405,
       "description": "Left pixel coordinate of belt slot 3 (row 1, col 3)",
       "engineVerified": true
     },
     "box3right": {
       "type": "integer",
-      "min": 434,
-      "max": 434,
       "description": "Right pixel coordinate of belt slot 3",
       "engineVerified": true
     },
     "box3top": {
       "type": "integer",
-      "min": 442,
-      "max": 442,
       "description": "Top pixel coordinate of belt slot 3",
       "engineVerified": true
     },
     "box3bottom": {
       "type": "integer",
-      "min": 471,
-      "max": 471,
       "description": "Bottom pixel coordinate of belt slot 3",
       "engineVerified": true
     },
     "box4left": {
       "type": "integer",
-      "min": 436,
-      "max": 436,
       "description": "Left pixel coordinate of belt slot 4 (row 1, col 4)",
       "engineVerified": true
     },
     "box4right": {
       "type": "integer",
-      "min": 465,
-      "max": 465,
       "description": "Right pixel coordinate of belt slot 4",
       "engineVerified": true
     },
     "box4top": {
       "type": "integer",
-      "min": 442,
-      "max": 442,
       "description": "Top pixel coordinate of belt slot 4",
       "engineVerified": true
     },
     "box4bottom": {
       "type": "integer",
-      "min": 471,
-      "max": 471,
       "description": "Bottom pixel coordinate of belt slot 4",
       "engineVerified": true
     },
     "box5left": {
       "type": "integer",
-      "min": 343,
-      "max": 343,
       "description": "Left pixel coordinate of belt slot 5 (row 2, col 1)",
       "engineVerified": true
     },
     "box5right": {
       "type": "integer",
-      "min": 372,
-      "max": 372,
       "description": "Right pixel coordinate of belt slot 5",
       "engineVerified": true
     },
     "box5top": {
       "type": "integer",
-      "min": 410,
-      "max": 410,
       "description": "Top pixel coordinate of belt slot 5",
       "engineVerified": true
     },
     "box5bottom": {
       "type": "integer",
-      "min": 439,
-      "max": 439,
       "description": "Bottom pixel coordinate of belt slot 5",
       "engineVerified": true
     },
     "box6left": {
       "type": "integer",
-      "min": 374,
-      "max": 374,
       "description": "Left pixel coordinate of belt slot 6 (row 2, col 2)",
       "engineVerified": true
     },
     "box6right": {
       "type": "integer",
-      "min": 403,
-      "max": 403,
       "description": "Right pixel coordinate of belt slot 6",
       "engineVerified": true
     },
     "box6top": {
       "type": "integer",
-      "min": 410,
-      "max": 410,
       "description": "Top pixel coordinate of belt slot 6",
       "engineVerified": true
     },
     "box6bottom": {
       "type": "integer",
-      "min": 439,
-      "max": 439,
       "description": "Bottom pixel coordinate of belt slot 6",
       "engineVerified": true
     },
     "box7left": {
       "type": "integer",
-      "min": 405,
-      "max": 405,
       "description": "Left pixel coordinate of belt slot 7 (row 2, col 3)",
       "engineVerified": true
     },
     "box7right": {
       "type": "integer",
-      "min": 434,
-      "max": 434,
       "description": "Right pixel coordinate of belt slot 7",
       "engineVerified": true
     },
     "box7top": {
       "type": "integer",
-      "min": 410,
-      "max": 410,
       "description": "Top pixel coordinate of belt slot 7",
       "engineVerified": true
     },
     "box7bottom": {
       "type": "integer",
-      "min": 439,
-      "max": 439,
       "description": "Bottom pixel coordinate of belt slot 7",
       "engineVerified": true
     },
     "box8left": {
       "type": "integer",
-      "min": 436,
-      "max": 436,
       "description": "Left pixel coordinate of belt slot 8 (row 2, col 4)",
       "engineVerified": true
     },
     "box8right": {
       "type": "integer",
-      "min": 465,
-      "max": 465,
       "description": "Right pixel coordinate of belt slot 8",
       "engineVerified": true
     },
     "box8top": {
       "type": "integer",
-      "min": 410,
-      "max": 410,
       "description": "Top pixel coordinate of belt slot 8",
       "engineVerified": true
     },
     "box8bottom": {
       "type": "integer",
-      "min": 439,
-      "max": 439,
       "description": "Bottom pixel coordinate of belt slot 8",
       "engineVerified": true
     },
     "box9left": {
       "type": "integer",
-      "min": 343,
-      "max": 343,
       "description": "Left pixel coordinate of belt slot 9 (row 3, col 1)",
       "engineVerified": true
     },
     "box9right": {
       "type": "integer",
-      "min": 372,
-      "max": 372,
       "description": "Right pixel coordinate of belt slot 9",
       "engineVerified": true
     },
     "box9top": {
       "type": "integer",
-      "min": 378,
-      "max": 378,
       "description": "Top pixel coordinate of belt slot 9",
       "engineVerified": true
     },
     "box9bottom": {
       "type": "integer",
-      "min": 407,
-      "max": 407,
       "description": "Bottom pixel coordinate of belt slot 9",
       "engineVerified": true
     },
     "box10left": {
       "type": "integer",
-      "min": 374,
-      "max": 374,
       "description": "Left pixel coordinate of belt slot 10 (row 3, col 2)",
       "engineVerified": true
     },
     "box10right": {
       "type": "integer",
-      "min": 403,
-      "max": 403,
       "description": "Right pixel coordinate of belt slot 10",
       "engineVerified": true
     },
     "box10top": {
       "type": "integer",
-      "min": 378,
-      "max": 378,
       "description": "Top pixel coordinate of belt slot 10",
       "engineVerified": true
     },
     "box10bottom": {
       "type": "integer",
-      "min": 407,
-      "max": 407,
       "description": "Bottom pixel coordinate of belt slot 10",
       "engineVerified": true
     },
     "box11left": {
       "type": "integer",
-      "min": 405,
-      "max": 405,
       "description": "Left pixel coordinate of belt slot 11 (row 3, col 3)",
       "engineVerified": true
     },
     "box11right": {
       "type": "integer",
-      "min": 434,
-      "max": 434,
       "description": "Right pixel coordinate of belt slot 11",
       "engineVerified": true
     },
     "box11top": {
       "type": "integer",
-      "min": 378,
-      "max": 378,
       "description": "Top pixel coordinate of belt slot 11",
       "engineVerified": true
     },
     "box11bottom": {
       "type": "integer",
-      "min": 407,
-      "max": 407,
       "description": "Bottom pixel coordinate of belt slot 11",
       "engineVerified": true
     },
     "box12left": {
       "type": "integer",
-      "min": 436,
-      "max": 436,
       "description": "Left pixel coordinate of belt slot 12 (row 3, col 4)",
       "engineVerified": true
     },
     "box12right": {
       "type": "integer",
-      "min": 465,
-      "max": 465,
       "description": "Right pixel coordinate of belt slot 12",
       "engineVerified": true
     },
     "box12top": {
       "type": "integer",
-      "min": 378,
-      "max": 378,
       "description": "Top pixel coordinate of belt slot 12",
       "engineVerified": true
     },
     "box12bottom": {
       "type": "integer",
-      "min": 407,
-      "max": 407,
       "description": "Bottom pixel coordinate of belt slot 12",
       "engineVerified": true
     },
     "box13left": {
       "type": "integer",
-      "min": 343,
-      "max": 343,
       "description": "Left pixel coordinate of belt slot 13 (row 4, col 1)",
       "engineVerified": true
     },
     "box13right": {
       "type": "integer",
-      "min": 372,
-      "max": 372,
       "description": "Right pixel coordinate of belt slot 13",
       "engineVerified": true
     },
     "box13top": {
       "type": "integer",
-      "min": 346,
-      "max": 346,
       "description": "Top pixel coordinate of belt slot 13",
       "engineVerified": true
     },
     "box13bottom": {
       "type": "integer",
-      "min": 375,
-      "max": 375,
       "description": "Bottom pixel coordinate of belt slot 13",
       "engineVerified": true
     },
     "box14left": {
       "type": "integer",
-      "min": 374,
-      "max": 374,
       "description": "Left pixel coordinate of belt slot 14 (row 4, col 2)",
       "engineVerified": true
     },
     "box14right": {
       "type": "integer",
-      "min": 403,
-      "max": 403,
       "description": "Right pixel coordinate of belt slot 14",
       "engineVerified": true
     },
     "box14top": {
       "type": "integer",
-      "min": 346,
-      "max": 346,
       "description": "Top pixel coordinate of belt slot 14",
       "engineVerified": true
     },
     "box14bottom": {
       "type": "integer",
-      "min": 375,
-      "max": 375,
       "description": "Bottom pixel coordinate of belt slot 14",
       "engineVerified": true
     },
     "box15left": {
       "type": "integer",
-      "min": 405,
-      "max": 405,
       "description": "Left pixel coordinate of belt slot 15 (row 4, col 3)",
       "engineVerified": true
     },
     "box15right": {
       "type": "integer",
-      "min": 434,
-      "max": 434,
       "description": "Right pixel coordinate of belt slot 15",
       "engineVerified": true
     },
     "box15top": {
       "type": "integer",
-      "min": 346,
-      "max": 346,
       "description": "Top pixel coordinate of belt slot 15",
       "engineVerified": true
     },
     "box15bottom": {
       "type": "integer",
-      "min": 375,
-      "max": 375,
       "description": "Bottom pixel coordinate of belt slot 15",
       "engineVerified": true
     },
     "box16left": {
       "type": "integer",
-      "min": 436,
-      "max": 436,
       "description": "Left pixel coordinate of belt slot 16 (row 4, col 4)",
       "engineVerified": true
     },
     "box16right": {
       "type": "integer",
-      "min": 465,
-      "max": 465,
       "description": "Right pixel coordinate of belt slot 16",
       "engineVerified": true
     },
     "box16top": {
       "type": "integer",
-      "min": 346,
-      "max": 346,
       "description": "Top pixel coordinate of belt slot 16",
       "engineVerified": true
     },
     "box16bottom": {
       "type": "integer",
-      "min": 375,
-      "max": 375,
       "description": "Bottom pixel coordinate of belt slot 16",
       "engineVerified": true
     }
