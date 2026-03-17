@@ -339,6 +339,14 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
   ): D2TreeItem[] {
     try {
       const entries = this.mpqManager.listDirectory(mpqName, internalPath);
+
+      // Collect .bin file names to determine sync status for .txt files
+      const binFiles = new Set(
+        entries
+          .filter((e) => !e.isDirectory && e.name.toLowerCase().endsWith(".bin"))
+          .map((e) => e.name.toLowerCase())
+      );
+
       return entries
         .filter((entry) => {
           // Hide .bin files — they are generated from .txt files
@@ -360,7 +368,7 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
           }
 
           const fileType = detectMpqFileType(entry.name);
-          return new D2TreeItem(
+          const item = new D2TreeItem(
             entry.name,
             fileType,
             "",
@@ -368,6 +376,17 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
             mpqName,
             entry.fullPath
           );
+
+          // Add .bin sync indicator for .txt files
+          if (entry.name.toLowerCase().endsWith(".txt")) {
+            const binName = entry.name.toLowerCase().replace(".txt", ".bin");
+            if (binFiles.has(binName)) {
+              item.description = "(.bin)";
+              item.tooltip = `${entry.name} — compiled .bin file present`;
+            }
+          }
+
+          return item;
         });
     } catch {
       return [];
