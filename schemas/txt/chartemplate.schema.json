@@ -2,45 +2,12 @@
   "file": "chartemplate.txt",
   "description": "Character template definitions for pre-built characters",
   "columns": {
-    "Template": {
-      "type": "enum",
-      "values": [
-        "Amazon Bow",
-        "Amazon Javelin",
-        "Amazon Spear",
-        "Barbarian",
-        "Barbarian axe",
-        "Barbarian mace",
-        "Barbarian sword",
-        "Necromancer",
-        "Paladin",
-        "Paladin fighter",
-        "Paladin heal",
-        "Sorceress Cold",
-        "Sorceress Fire",
-        "Sorceress Lightning"
-      ],
-      "required": true,
-      "description": "Template name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "level": {
       "type": "integer",
       "min": 3,
       "max": 9,
       "description": "Starting character level",
       "engineVerified": true
-    },
-    "Act": {
-      "type": "integer",
-      "description": "Act number (1-5). Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "class": {
       "type": "ref",
@@ -49,82 +16,12 @@
       "description": "Character class restriction",
       "engineVerified": true
     },
-    "str": {
-      "type": "integer",
-      "min": 10,
-      "max": 40,
-      "description": "Base strength. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dex": {
-      "type": "integer",
-      "min": 15,
-      "max": 32,
-      "description": "Base dexterity. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "int": {
-      "type": "integer",
-      "min": 10,
-      "max": 40,
-      "description": "Starting energy. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "vit": {
-      "type": "integer",
-      "min": 10,
-      "max": 42,
-      "description": "Starting vitality. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tot": {
-      "type": "integer",
-      "min": 80,
-      "max": 105,
-      "description": "Total starting stat points allocated. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LifePerLevel": {
-      "type": "integer",
-      "min": 12,
-      "max": 24,
-      "description": "HP gained per level (fourths). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ManaPerLevel": {
-      "type": "integer",
-      "min": 2,
-      "max": 8,
-      "description": "Mana gained per level (fourths). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LifePerVitality": {
-      "type": "integer",
-      "min": 4,
-      "max": 8,
-      "description": "HP per vitality point (fourths). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ManaPerMagic": {
-      "type": "integer",
-      "min": 4,
-      "max": 8,
-      "description": "Mana per energy point (fourths). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Hitpoints": {
       "type": "integer",
       "min": 24,
       "max": 89,
       "description": "Starting hit points",
       "engineVerified": true
-    },
-    "Mana": {
-      "type": "integer",
-      "min": 10,
-      "max": 56,
-      "description": "Starting mana points. Not read by 1.13c engine",
-      "deprecated": true
     },
     "ManaRegenBonus": {
       "type": "integer",
@@ -146,30 +43,11 @@
       "description": "Attack speed multiplier (percentage)",
       "engineVerified": true
     },
-    "OtherRate": {
-      "type": "integer",
-      "min": 100,
-      "max": 100,
-      "description": "Other animation speed multiplier (percentage). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "RightSkill": {
       "type": "integer",
       "min": 0,
       "description": "Default right-click skill ID",
       "engineVerified": true
-    },
-    "Total Skills": {
-      "type": "integer",
-      "min": 0,
-      "max": 4,
-      "description": "Total number of pre-assigned skills. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SkillName": {
-      "type": "string",
-      "description": "Skill display name. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Skill1": {
       "type": "integer",
@@ -282,11 +160,6 @@
       "description": "Skill 9 level",
       "engineVerified": true
     },
-    "baseWClass": {
-      "type": "string",
-      "description": "Base weapon class for animations. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "item1": {
       "type": "enum",
       "values": [
@@ -312,13 +185,6 @@
       "max": 4,
       "description": "Item 1 equipment slot",
       "engineVerified": true
-    },
-    "item1count": {
-      "type": "integer",
-      "description": "Item 1 stack quantity. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
     },
     "item2": {
       "type": "enum",

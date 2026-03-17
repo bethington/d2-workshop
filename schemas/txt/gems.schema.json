@@ -2,33 +2,12 @@
   "file": "gems.txt",
   "description": "Gem and rune modifier definitions — weapon, armor, and shield bonuses per quality level.",
   "columns": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "transform": {
       "type": "integer",
       "min": 0,
       "max": 18,
       "description": "Inventory color transform index",
       "engineVerified": true
-    },
-    "code": {
-      "type": "ref",
-      "description": "Item code (references Misc.txt). Not read by 1.13c engine",
-      "target": "misc.txt",
-      "targetColumn": "code",
-      "deprecated": true
-    },
-    "nummods": {
-      "type": "integer",
-      "min": 3,
-      "max": 3,
-      "description": "Number of active modifiers. Not read by 1.13c engine",
-      "deprecated": true
     },
     "weaponmod1code": {
       "type": "enum",
@@ -305,13 +284,6 @@
       ],
       "description": "Weapon modifier 1 property code",
       "engineVerified": true
-    },
-    "weaponMod1Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for weapon modifier 1. Not read by 1.13c engine",
-      "deprecated": true
     },
     "weaponmod1min": {
       "type": "integer",
@@ -603,13 +575,6 @@
       "description": "Weapon modifier 2 property code",
       "engineVerified": true
     },
-    "weaponMod2Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for weapon modifier 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "weaponmod2min": {
       "type": "integer",
       "min": 2,
@@ -899,13 +864,6 @@
       ],
       "description": "Weapon modifier 3 property code",
       "engineVerified": true
-    },
-    "weaponMod3Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for weapon modifier 3. Not read by 1.13c engine",
-      "deprecated": true
     },
     "weaponmod3min": {
       "type": "integer",
@@ -1197,13 +1155,6 @@
       "description": "Helm modifier 1 property code",
       "engineVerified": true
     },
-    "helmMod1Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for helm modifier 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "helmmod1min": {
       "type": "integer",
       "min": 2,
@@ -1493,13 +1444,6 @@
         ""
       ],
       "engineVerified": true
-    },
-    "helmMod2Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for helm modifier 2. Not read by 1.13c engine",
-      "deprecated": true
     },
     "helmmod2min": {
       "type": "integer",
@@ -1791,13 +1735,6 @@
       ],
       "engineVerified": true
     },
-    "helmMod3Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for helm modifier 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "helmmod3min": {
       "type": "integer",
       "description": "Helm modifier 3 minimum",
@@ -2087,13 +2024,6 @@
       ],
       "description": "Shield modifier 1 property code",
       "engineVerified": true
-    },
-    "shieldMod1Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for shield modifier 1. Not read by 1.13c engine",
-      "deprecated": true
     },
     "shieldmod1min": {
       "type": "integer",
@@ -2385,13 +2315,6 @@
       ],
       "engineVerified": true
     },
-    "shieldMod2Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for shield modifier 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "shieldmod2min": {
       "type": "integer",
       "description": "Shield modifier 2 minimum",
@@ -2681,13 +2604,6 @@
         ""
       ],
       "engineVerified": true
-    },
-    "shieldMod3Offset": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Parameter offset for shield modifier 3. Not read by 1.13c engine",
-      "deprecated": true
     },
     "shieldmod3min": {
       "type": "integer",

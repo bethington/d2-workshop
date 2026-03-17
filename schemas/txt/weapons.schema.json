@@ -2,13 +2,6 @@
   "file": "weapons.txt",
   "description": "Weapon item definitions — damage values, speed, range, requirements, and visual properties.",
   "columns": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "rarity": {
       "type": "integer",
       "min": 0,
@@ -20,16 +13,6 @@
       "type": "boolean",
       "description": "Can randomly spawn in the game",
       "engineVerified": true
-    },
-    "completed": {
-      "type": "boolean",
-      "description": "Item completion flag. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "uniqueonly": {
-      "type": "boolean",
-      "description": "Only spawns as unique quality. Not read by 1.13c engine",
-      "deprecated": true
     },
     "mindam": {
       "type": "integer",
@@ -85,13 +68,6 @@
       "description": "Speed reduction modifier (negative = faster)",
       "engineVerified": true
     },
-    "weaponspeedenum": {
-      "type": "integer",
-      "min": 0,
-      "max": 6,
-      "description": "Weapon speed enumeration index. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "minmisdam": {
       "type": "integer",
       "min": 1,
@@ -105,51 +81,6 @@
       "max": 54,
       "description": "Maximum throwing/missile damage",
       "engineVerified": true
-    },
-    "misspeed": {
-      "type": "integer",
-      "min": 0,
-      "description": "Missile travel speed. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "basespeed": {
-      "type": "integer",
-      "min": 7,
-      "max": 20,
-      "description": "Base weapon attack speed. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "modspeed": {
-      "type": "enum",
-      "values": [
-        "-14",
-        "-48",
-        "-7",
-        "-8",
-        "-80",
-        "-9",
-        "0",
-        "14",
-        "16",
-        "18",
-        "20",
-        "21",
-        "24",
-        "27",
-        "28",
-        "32",
-        "7",
-        "7.2",
-        "8",
-        "9"
-      ],
-      "description": "Modified weapon speed value. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dam/frame": {
-      "type": "string",
-      "description": "Damage per frame calculation. Not read by 1.13c engine",
-      "deprecated": true
     },
     "reqstr": {
       "type": "integer",
@@ -177,40 +108,10 @@
       "description": "Item has no durability",
       "engineVerified": true
     },
-    "level": {
-      "type": "integer",
-      "min": 1,
-      "max": 999,
-      "description": "Base item level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "cost": {
-      "type": "integer",
-      "min": 6,
-      "max": 12588,
-      "description": "Base NPC gold cost. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "replenish": {
-      "type": "integer",
-      "min": 0,
-      "description": "Quantity replenishment rate. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "code": {
-      "type": "string",
-      "description": "Unique 3-4 character item code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "alternategfx": {
       "type": "string",
       "description": "Alternate character graphics code",
       "engineVerified": true
-    },
-    "OpenBetaGfx": {
-      "type": "string",
-      "description": "Open Beta graphics code (legacy). Not read by 1.13c engine",
-      "deprecated": true
     },
     "ubercode": {
       "type": "string",
@@ -244,44 +145,10 @@
       "description": "Two-handed weapon class code",
       "engineVerified": true
     },
-    "group": {
-      "type": "enum",
-      "values": [
-        "1haxe",
-        "1hmace",
-        "1hsword",
-        "2haxe",
-        "2hmace",
-        "2hsword",
-        "bow",
-        "crossbow",
-        "dagger",
-        "javelin",
-        "polearm",
-        "spear",
-        "staff",
-        "throwpotion"
-      ],
-      "description": "State group assignment. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "weapongroupenum": {
-      "type": "integer",
-      "min": 0,
-      "max": 10,
-      "description": "Weapon group enumeration index. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "1or2handed": {
       "type": "boolean",
       "description": "Can be wielded in one or two hands (Barbarian)",
       "engineVerified": true
-    },
-    "spelloffset": {
-      "type": "integer",
-      "description": "Spell effect offset index. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "hit class": {
       "type": "enum",
@@ -311,11 +178,6 @@
       "description": "Two-handed weapon flag",
       "engineVerified": true
     },
-    "throwable": {
-      "type": "boolean",
-      "description": "Item can be thrown. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "stackable": {
       "type": "boolean",
       "description": "Item uses quantity stacking",
@@ -335,85 +197,12 @@
       "description": "Maximum stack count",
       "engineVerified": true
     },
-    "class": {
-      "type": "enum",
-      "values": [
-        "amazon",
-        "barbarian",
-        "necromancer",
-        "paladin",
-        "sorceress"
-      ],
-      "description": "Character class restriction. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "reload": {
-      "type": "integer",
-      "min": 3,
-      "max": 12,
-      "description": "Reload time in frames. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "range": {
-      "type": "enum",
-      "values": [
-        ".6*d*d",
-        ".7*d*d",
-        ".8*d*d",
-        ".9*d*d",
-        "1.25*d*d",
-        "1.5*d*d",
-        "d*d"
-      ],
-      "description": "Missile range formula. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "component": {
       "type": "integer",
       "min": 5,
       "max": 6,
       "description": "Animation layer component index",
       "engineVerified": true
-    },
-    "bodyLoc1": {
-      "type": "enum",
-      "min": 4,
-      "max": 4,
-      "description": "Primary equipment slot location. Not read by 1.13c engine",
-      "values": [
-        "head",
-        "neck",
-        "tors",
-        "rarm",
-        "larm",
-        "rrin",
-        "lrin",
-        "belt",
-        "feet",
-        "glov",
-        ""
-      ],
-      "deprecated": true
-    },
-    "bodyLoc2": {
-      "type": "enum",
-      "min": 5,
-      "max": 5,
-      "description": "Secondary equipment slot location. Not read by 1.13c engine",
-      "values": [
-        "head",
-        "neck",
-        "tors",
-        "rarm",
-        "larm",
-        "rrin",
-        "lrin",
-        "belt",
-        "feet",
-        "glov",
-        ""
-      ],
-      "deprecated": true
     },
     "invwidth": {
       "type": "integer",
@@ -456,39 +245,10 @@
       "description": "Unique quality inventory DC6 file",
       "engineVerified": true
     },
-    "special": {
-      "type": "enum",
-      "values": [
-        "2 square reach",
-        "3 square reach",
-        "fires 5 shots before reload",
-        "magically charged",
-        "primarily thrown",
-        "reload lag between shots"
-      ],
-      "description": "Special weapon property description. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "useable": {
       "type": "boolean",
       "description": "Item is right-clickable",
       "engineVerified": true
-    },
-    "type": {
-      "type": "ref",
-      "min": 24,
-      "max": 43,
-      "description": "Primary item type code (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "sound": {
-      "type": "integer",
-      "min": 5,
-      "max": 30,
-      "description": "Sound effect index when item is used or dropped. Not read by 1.13c engine",
-      "deprecated": true
     },
     "unique": {
       "type": "boolean",
@@ -507,23 +267,12 @@
       "description": "Transparency type code",
       "engineVerified": true
     },
-    "quivered": {
-      "type": "boolean",
-      "description": "Item uses quiver ammunition. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "lightradius": {
       "type": "integer",
       "min": 0,
       "max": 5,
       "description": "Light radius around item/character",
       "engineVerified": true
-    },
-    "belt": {
-      "type": "integer",
-      "description": "Belt type index. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "quest": {
       "type": "integer",
@@ -559,93 +308,11 @@
       "description": "Low durability warning threshold",
       "engineVerified": true
     },
-    "qntwarning": {
-      "type": "integer",
-      "min": 0,
-      "max": 5,
-      "description": "Low quantity warning threshold. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "damvsundead": {
-      "type": "integer",
-      "min": 33,
-      "max": 150,
-      "description": "Bonus damage percentage vs undead. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "damvsdemon": {
-      "type": "integer",
-      "min": 33,
-      "max": 150,
-      "description": "Bonus damage percentage vs demons. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "damvslarge": {
-      "type": "integer",
-      "min": 33,
-      "max": 150,
-      "description": "Bonus damage percentage vs large monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "damvssmall": {
-      "type": "integer",
-      "min": 33,
-      "max": 150,
-      "description": "Bonus damage percentage vs small monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "damvsflying": {
-      "type": "integer",
-      "min": 33,
-      "max": 120,
-      "description": "Bonus damage percentage vs flying monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tohitvsundead": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack rating bonus vs undead. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tohitvsdemon": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack rating bonus vs demons. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tohitvslarge": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Attack rating bonus vs large monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tohitvssmall": {
-      "type": "integer",
-      "min": -15,
-      "max": 0,
-      "description": "Attack rating bonus vs small monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "tohitvsflying": {
-      "type": "integer",
-      "min": -15,
-      "max": 0,
-      "description": "Attack rating bonus vs flying monsters. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "gemoffset": {
       "type": "integer",
       "description": "Gem/rune starting index in Gems.txt",
       "min": 0,
       "engineVerified": true
-    },
-    "bitfield1": {
-      "type": "integer",
-      "min": 0,
-      "max": 5,
-      "description": "Bitfield flags for item properties. Not read by 1.13c engine",
-      "deprecated": true
     },
     "CharsiMin": {
       "type": "integer",
@@ -873,13 +540,6 @@
       "description": "hraltimagic maximum value",
       "min": 0,
       "engineVerified": true
-    },
-    "HratliMagicLvl": {
-      "type": "integer",
-      "min": 1,
-      "max": 255,
-      "description": "Hratli magic stock level. Not read by 1.13c engine",
-      "deprecated": true
     },
     "AlkorMin": {
       "type": "integer",
@@ -1115,41 +775,6 @@
       "max": 255,
       "description": "Jamella magic stock level",
       "engineVerified": true
-    },
-    "Source Art": {
-      "type": "string",
-      "description": "Source art reference (development use). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Game Art": {
-      "type": "string",
-      "description": "Game art reference (development use). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Amazon": {
-      "type": "boolean",
-      "description": "Amazon class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Paladin": {
-      "type": "boolean",
-      "description": "Paladin class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Barbarian": {
-      "type": "boolean",
-      "description": "Barbarian class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Necromancer": {
-      "type": "boolean",
-      "description": "Necromancer class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sorceress": {
-      "type": "boolean",
-      "description": "Sorceress class specific. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Transform": {
       "type": "integer",

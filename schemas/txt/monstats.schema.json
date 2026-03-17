@@ -2,18 +2,6 @@
   "file": "monstats.txt",
   "description": "Monster statistics — defines all monster types, their stats, AI, drops, and visual properties.",
   "columns": {
-    "Id": {
-      "type": "string",
-      "required": true,
-      "description": "Internal monster class name (referenced by other tables). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "hcIdx": {
-      "type": "integer",
-      "min": 0,
-      "description": "Hardcoded index used internally by the game engine. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "BaseId": {
       "type": "ref",
       "target": "monstats.txt",
@@ -44,26 +32,6 @@
       "description": "Reference to extended stats entry in MonStats2.txt",
       "engineVerified": true
     },
-    "MonProp": {
-      "type": "enum",
-      "values": [
-        "",
-        "baalhighpriest",
-        "baboon6",
-        "bloodraven",
-        "blunderbore",
-        "councilmember1",
-        "councilmember2",
-        "councilmember3",
-        "druidhawk",
-        "mephisto",
-        "quillrat6",
-        "quillrat7",
-        "quillrat8"
-      ],
-      "description": "Reference to monster property set in MonProp.txt. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MonType": {
       "type": "ref",
       "target": "MonType.txt",
@@ -71,26 +39,10 @@
       "description": "Monster type classification",
       "engineVerified": true
     },
-    "AI": {
-      "type": "string",
-      "description": "AI behavior type. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "DescStr": {
       "type": "string",
       "description": "String table key for monster description text",
       "engineVerified": true
-    },
-    "Code": {
-      "type": "string",
-      "required": true,
-      "description": "2-character token used in animation file paths. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "enabled": {
-      "type": "boolean",
-      "description": "Monster is enabled in the game (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "rangedtype": {
       "type": "boolean",
@@ -153,60 +105,17 @@
       "description": "Boss transfers aura/buffs to minions (1 = yes)",
       "engineVerified": true
     },
-    "PartyMin": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum number of minions in group. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "PartyMax": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum number of minions in group. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinGrp": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum number of monsters spawned together. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxGrp": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum number of monsters spawned together. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "sparsePopulate": {
       "type": "integer",
       "min": 0,
       "description": "Sparse population density percentage",
       "engineVerified": true
     },
-    "Velocity": {
-      "type": "integer",
-      "min": 0,
-      "description": "Walk speed. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Run": {
-      "type": "integer",
-      "min": 0,
-      "description": "Run speed. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Rarity": {
       "type": "integer",
       "min": 0,
       "description": "Spawn rarity weight (0=common, higher=rarer)",
       "engineVerified": true
-    },
-    "Level": {
-      "type": "integer",
-      "min": 0,
-      "max": 110,
-      "description": "Monster level (Normal difficulty). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Level(N)": {
       "type": "integer",
@@ -235,12 +144,6 @@
       "targetColumn": "Id",
       "description": "Sound set for unique/champion version",
       "engineVerified": true
-    },
-    "threat": {
-      "type": "integer",
-      "min": 0,
-      "description": "Threat level affecting AI targeting priority (1-14). Not read by 1.13c engine",
-      "deprecated": true
     },
     "aidel": {
       "type": "integer",
@@ -277,12 +180,6 @@
       "description": "AI engagement distance (Hell)",
       "engineVerified": true
     },
-    "aip1": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 1 (Normal) - meaning varies by AI type. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "aip1(N)": {
       "type": "integer",
       "min": 0,
@@ -294,12 +191,6 @@
       "min": 0,
       "description": "AI parameter 1 (Hell)",
       "engineVerified": true
-    },
-    "aip2": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 2 (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "aip2(N)": {
       "type": "integer",
@@ -313,12 +204,6 @@
       "description": "AI parameter 2 (Hell)",
       "engineVerified": true
     },
-    "aip3": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 3 (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "aip3(N)": {
       "type": "integer",
       "min": 0,
@@ -330,12 +215,6 @@
       "min": 0,
       "description": "AI parameter 3 (Hell)",
       "engineVerified": true
-    },
-    "aip4": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 4 (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "aip4(N)": {
       "type": "integer",
@@ -349,12 +228,6 @@
       "description": "AI parameter 4 (Hell)",
       "engineVerified": true
     },
-    "aip5": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 5 (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "aip5(N)": {
       "type": "integer",
       "min": 0,
@@ -366,12 +239,6 @@
       "min": 0,
       "description": "AI parameter 5 (Hell)",
       "engineVerified": true
-    },
-    "aip6": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 6 (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "aip6(N)": {
       "type": "integer",
@@ -385,12 +252,6 @@
       "description": "AI parameter 6 (Hell)",
       "engineVerified": true
     },
-    "aip7": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 7 (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "aip7(N)": {
       "type": "integer",
       "min": 0,
@@ -402,12 +263,6 @@
       "min": 0,
       "description": "AI parameter 7 (Hell)",
       "engineVerified": true
-    },
-    "aip8": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI parameter 8 (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "aip8(N)": {
       "type": "integer",
@@ -470,13 +325,6 @@
       "description": "Missile used for special/charge attack",
       "engineVerified": true
     },
-    "MissSQ": {
-      "type": "ref",
-      "target": "Missiles.txt",
-      "targetColumn": "Missile",
-      "description": "Missile used for sequence attack. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Align": {
       "type": "integer",
       "min": 0,
@@ -493,25 +341,10 @@
       "description": "Is a melee attacker (1 = yes)",
       "engineVerified": true
     },
-    "npc": {
-      "type": "boolean",
-      "description": "Is an NPC (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "interact": {
       "type": "boolean",
       "description": "Can be interacted with (1 = yes)",
       "engineVerified": true
-    },
-    "inventory": {
-      "type": "boolean",
-      "description": "Has an inventory for trading (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "inTown": {
-      "type": "boolean",
-      "description": "Appears in town (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "lUndead": {
       "type": "boolean",
@@ -528,20 +361,10 @@
       "description": "Is a demon (1 = yes)",
       "engineVerified": true
     },
-    "flying": {
-      "type": "boolean",
-      "description": "Is a flying monster (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "opendoors": {
       "type": "boolean",
       "description": "Can open doors (1 = yes)",
       "engineVerified": true
-    },
-    "boss": {
-      "type": "boolean",
-      "description": "Is a boss monster (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "primeevil": {
       "type": "boolean",
@@ -568,236 +391,10 @@
       "description": "Cannot use multishot modifier (1 = yes)",
       "engineVerified": true
     },
-    "neverCount": {
-      "type": "boolean",
-      "description": "Not counted for area monster population (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "petIgnore": {
-      "type": "boolean",
-      "description": "Ignored by pets/summons (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "deathDmg": {
-      "type": "boolean",
-      "description": "Deals damage on death (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "genericSpawn": {
       "type": "boolean",
       "description": "Can be generically spawned in random areas (1 = yes)",
       "engineVerified": true
-    },
-    "zoo": {
-      "type": "boolean",
-      "description": "Spawns in monster den/zoo areas (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SendSkills": {
-      "type": "integer",
-      "min": 0,
-      "description": "Server sends skill data to client (2 = full sync). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill1": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 1 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk1mode": {
-      "type": "string",
-      "description": "Animation mode for skill 1 (e.g. A1, S1, SC). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk1lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill2": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 2 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk2mode": {
-      "type": "string",
-      "description": "Animation mode for skill 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk2lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill3": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 3 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk3mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A1",
-        "A2",
-        "S1",
-        "S2",
-        "S3",
-        "SC",
-        "seq_durielsmite",
-        "seq_fetishres",
-        "seq_maggotlay",
-        "seq_mummyres",
-        "seq_swtigerfist"
-      ],
-      "description": "Animation mode for skill 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk3lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill4": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 4 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk4mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A1",
-        "A2",
-        "NU",
-        "S1",
-        "S2",
-        "S3",
-        "SC",
-        "seq_genericspawner",
-        "seq_nihlathakarctic",
-        "seq_queendeath",
-        "seq_swtigerfist"
-      ],
-      "description": "Animation mode for skill 4. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk4lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 4. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill5": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 5 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk5mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A1",
-        "A2",
-        "S2",
-        "SC",
-        "seq_diablorun",
-        "seq_impinferno",
-        "seq_swdragonflight",
-        "seq_undeadbestow"
-      ],
-      "description": "Animation mode for skill 5. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk5lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 5. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill6": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 6 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk6mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A2",
-        "S2",
-        "S3",
-        "seq_swtigerfist"
-      ],
-      "description": "Animation mode for skill 6. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk6lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 6. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill7": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 7 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk7mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A2",
-        "S3"
-      ],
-      "description": "Animation mode for skill 7. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk7lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 7. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Skill8": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "description": "Skill 8 used by this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk8mode": {
-      "type": "enum",
-      "values": [
-        "",
-        "A1",
-        "S3"
-      ],
-      "description": "Animation mode for skill 8. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sk8lvl": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill level for skill 8. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Drain": {
       "type": "integer",
@@ -815,129 +412,6 @@
       "min": 0,
       "description": "Life/mana drain effectiveness % (Hell)",
       "engineVerified": true
-    },
-    "coldeffect": {
-      "type": "integer",
-      "description": "How cold slows this monster (0-5, 0=immune). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "coldeffect(N)": {
-      "type": "integer",
-      "description": "Cold slow effectiveness (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "coldeffect(H)": {
-      "type": "integer",
-      "description": "Cold slow effectiveness (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResDm": {
-      "type": "integer",
-      "min": 0,
-      "description": "Physical damage resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResMa": {
-      "type": "integer",
-      "min": 0,
-      "description": "Magic damage resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResFi": {
-      "type": "integer",
-      "description": "Fire resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResLi": {
-      "type": "integer",
-      "min": 0,
-      "description": "Lightning resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResCo": {
-      "type": "integer",
-      "min": 0,
-      "description": "Cold resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResPo": {
-      "type": "integer",
-      "description": "Poison resistance % (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResDm(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Physical damage resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResMa(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Magic damage resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResFi(N)": {
-      "type": "integer",
-      "description": "Fire resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResLi(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Lightning resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResCo(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Cold resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResPo(N)": {
-      "type": "integer",
-      "description": "Poison resistance % (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResDm(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Physical damage resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResMa(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Magic damage resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResFi(H)": {
-      "type": "integer",
-      "description": "Fire resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResLi(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Lightning resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResCo(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Cold resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResPo(H)": {
-      "type": "integer",
-      "description": "Poison resistance % (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "DamageRegen": {
-      "type": "integer",
-      "min": 0,
-      "description": "Health regeneration rate (frames per HP recovered). Not read by 1.13c engine",
-      "deprecated": true
     },
     "SkillDamage": {
       "type": "enum",
@@ -979,12 +453,6 @@
       "description": "Block chance % (Hell)",
       "engineVerified": true
     },
-    "Crit": {
-      "type": "integer",
-      "min": 0,
-      "description": "Critical hit chance % (double damage). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MinHP": {
       "type": "integer",
       "min": 0,
@@ -996,18 +464,6 @@
       "min": 0,
       "description": "Maximum hit points (Normal)",
       "engineVerified": true
-    },
-    "AC": {
-      "type": "integer",
-      "min": 0,
-      "description": "Armor class / defense (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Exp": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base experience points (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "A1MinD": {
       "type": "integer",
@@ -1021,12 +477,6 @@
       "description": "Attack 1 maximum damage (Normal)",
       "engineVerified": true
     },
-    "A1TH": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 1 to-hit rating (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "A2MinD": {
       "type": "integer",
       "min": 0,
@@ -1038,12 +488,6 @@
       "min": 0,
       "description": "Attack 2 maximum damage (Normal)",
       "engineVerified": true
-    },
-    "A2TH": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 2 to-hit rating (Normal). Not read by 1.13c engine",
-      "deprecated": true
     },
     "S1MinD": {
       "type": "integer",
@@ -1057,12 +501,6 @@
       "description": "Skill 1 maximum damage (Normal)",
       "engineVerified": true
     },
-    "S1TH": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill 1 to-hit rating (Normal). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MinHP(N)": {
       "type": "integer",
       "min": 0,
@@ -1074,12 +512,6 @@
       "min": 0,
       "description": "Maximum hit points (Nightmare)",
       "engineVerified": true
-    },
-    "AC(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Armor class / defense (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Exp(N)": {
       "type": "integer",
@@ -1099,12 +531,6 @@
       "description": "Attack 1 maximum damage (Nightmare)",
       "engineVerified": true
     },
-    "A1TH(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 1 to-hit rating (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "A2MinD(N)": {
       "type": "integer",
       "min": 0,
@@ -1116,12 +542,6 @@
       "min": 0,
       "description": "Attack 2 maximum damage (Nightmare)",
       "engineVerified": true
-    },
-    "A2TH(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 2 to-hit rating (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
     },
     "S1MinD(N)": {
       "type": "integer",
@@ -1135,12 +555,6 @@
       "description": "Skill 1 maximum damage (Nightmare)",
       "engineVerified": true
     },
-    "S1TH(N)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill 1 to-hit rating (Nightmare). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MinHP(H)": {
       "type": "integer",
       "min": 0,
@@ -1152,12 +566,6 @@
       "min": 0,
       "description": "Maximum hit points (Hell)",
       "engineVerified": true
-    },
-    "AC(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Armor class / defense (Hell). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Exp(H)": {
       "type": "integer",
@@ -1177,12 +585,6 @@
       "description": "Attack 1 maximum damage (Hell)",
       "engineVerified": true
     },
-    "A1TH(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 1 to-hit rating (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "A2MinD(H)": {
       "type": "integer",
       "min": 0,
@@ -1195,12 +597,6 @@
       "description": "Attack 2 maximum damage (Hell)",
       "engineVerified": true
     },
-    "A2TH(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack 2 to-hit rating (Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "S1MinD(H)": {
       "type": "integer",
       "min": 0,
@@ -1212,12 +608,6 @@
       "min": 0,
       "description": "Skill 1 maximum damage (Hell)",
       "engineVerified": true
-    },
-    "S1TH(H)": {
-      "type": "integer",
-      "min": 0,
-      "description": "Skill 1 to-hit rating (Hell). Not read by 1.13c engine",
-      "deprecated": true
     },
     "El1Mode": {
       "type": "enum",
@@ -1573,39 +963,6 @@
       "targetColumn": "Treasure Class",
       "description": "Quest boss drop table (Hell)",
       "engineVerified": true
-    },
-    "TCQuestId": {
-      "type": "integer",
-      "min": 0,
-      "description": "Quest ID that activates TreasureClass4 drops. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "TCQuestCP": {
-      "type": "integer",
-      "min": 0,
-      "description": "Quest checkpoint that activates TreasureClass4 drops. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SplEndDeath": {
-      "type": "integer",
-      "min": 0,
-      "description": "Special end-death behavior (1=standard, 2=special). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SplGetModeChart": {
-      "type": "boolean",
-      "description": "Use special mode chart for animation (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SplEndGeneric": {
-      "type": "boolean",
-      "description": "Special generic end behavior (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SplClientEnd": {
-      "type": "boolean",
-      "description": "Special client-side end behavior (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "chance6 (H)": {
       "type": "integer",

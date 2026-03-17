@@ -2,17 +2,6 @@
   "file": "itemratio.txt",
   "description": "Item quality ratio definitions per monster level.",
   "columns": {
-    "Function": {
-      "type": "enum",
-      "values": [
-        "Ratio - (Monster Level / Ratio Divisor)",
-        "Uber"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Quality ratio function type (standard formula or Uber override). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Unique": {
       "type": "integer",
       "min": 600,
@@ -27,26 +16,12 @@
       "description": "Divisor applied to monster level when calculating unique item chance",
       "engineVerified": true
     },
-    "Rare": {
-      "type": "integer",
-      "min": 120,
-      "max": 200,
-      "description": "Base ratio for rare item quality chance. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "RareDivisor": {
       "type": "integer",
       "min": 6,
       "max": 6,
       "description": "Divisor applied to monster level when calculating rare item chance",
       "engineVerified": true
-    },
-    "Set": {
-      "type": "integer",
-      "min": 100,
-      "max": 125,
-      "description": "Base ratio value for set item quality chance. Not read by 1.13c engine",
-      "deprecated": true
     },
     "SetDivisor": {
       "type": "integer",

@@ -2,13 +2,6 @@
   "file": "runes.txt",
   "description": "Runeword definitions — rune combinations, item type restrictions, and granted properties.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "rune name": {
       "type": "string",
       "description": "Runeword display name string key",
@@ -18,74 +11,6 @@
       "type": "boolean",
       "description": "Runeword activation flag",
       "engineVerified": true
-    },
-    "server": {
-      "type": "boolean",
-      "description": "Server-side only flag. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "itype1": {
-      "type": "ref",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Required item type 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "itype2": {
-      "type": "ref",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Required item type 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "itype3": {
-      "type": "ref",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Required item type 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "itype4": {
-      "type": "ref",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Required item type 4. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "itype5": {
-      "type": "ref",
-      "description": "Required item type (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "itype6": {
-      "type": "ref",
-      "description": "Required item type (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "etype1": {
-      "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "etype2": {
-      "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "etype3": {
-      "type": "ref",
-      "description": "Excluded item type (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
     },
     "rune1": {
       "type": "ref",

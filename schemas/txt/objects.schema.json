@@ -2,24 +2,6 @@
   "file": "objects.txt",
   "description": "Game object definitions â€” shrines, chests, doors, waypoints, and interactive objects.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "description - not loaded": {
-      "type": "string",
-      "description": "Brief reference description (not loaded by game). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Id": {
-      "type": "integer",
-      "min": 0,
-      "max": 409,
-      "description": "Unique numeric ID. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Token": {
       "type": "string",
       "description": "Animation token identifier",
@@ -78,20 +60,6 @@
       "max": 20,
       "description": "Trap probability (unused)",
       "engineVerified": true
-    },
-    "SizeX": {
-      "type": "integer",
-      "min": 0,
-      "max": 32,
-      "description": "Width in grid cells. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SizeY": {
-      "type": "integer",
-      "min": 0,
-      "max": 32,
-      "description": "Height in grid cells. Not read by 1.13c engine",
-      "deprecated": true
     },
     "nTgtFX": {
       "type": "integer",
@@ -273,62 +241,6 @@
       "description": "Whether to loop animation for mode 7 (special 5)",
       "engineVerified": true
     },
-    "Lit0": {
-      "type": "integer",
-      "min": 0,
-      "max": 25,
-      "description": "Light radius in subtiles for mode 0 (neutral). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit1": {
-      "type": "integer",
-      "min": 0,
-      "max": 25,
-      "description": "Light radius in subtiles for mode 1 (operating). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit2": {
-      "type": "integer",
-      "min": 0,
-      "max": 25,
-      "description": "Light radius in subtiles for mode 2 (opened). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit3": {
-      "type": "integer",
-      "min": 0,
-      "max": 17,
-      "description": "Light radius in subtiles for mode 3 (special 1). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit4": {
-      "type": "integer",
-      "min": 0,
-      "max": 17,
-      "description": "Light radius in subtiles for mode 4 (special 2). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit5": {
-      "type": "integer",
-      "min": 0,
-      "max": 17,
-      "description": "Light radius in subtiles for mode 5 (special 3). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit6": {
-      "type": "integer",
-      "min": 0,
-      "max": 17,
-      "description": "Light radius in subtiles for mode 6 (special 4). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lit7": {
-      "type": "integer",
-      "min": 0,
-      "max": 17,
-      "description": "Light radius in subtiles for mode 7 (special 5). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "BlocksLight0": {
       "type": "boolean",
       "description": "Whether this object casts shadow in mode 0",
@@ -414,56 +326,6 @@
       "description": "Whether clicking uses kick mode (1) or neutral mode (0)",
       "engineVerified": true
     },
-    "Start0": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 0. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "Start1": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 1. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "Start2": {
-      "type": "integer",
-      "min": 0,
-      "max": 28,
-      "description": "Starting animation frame for mode 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Start3": {
-      "type": "integer",
-      "min": 0,
-      "max": 29,
-      "description": "Starting animation frame for mode 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Start4": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 4. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "Start5": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 5. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "Start6": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 6. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "Start7": {
-      "type": "integer",
-      "description": "Starting animation frame for mode 7. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
     "EnvEffect": {
       "type": "boolean",
       "description": "Whether the object produces ambient sound/environmental effects",
@@ -485,13 +347,6 @@
       "max": 3,
       "description": "Directional orientation of the object (0-3)",
       "engineVerified": true
-    },
-    "Trans": {
-      "type": "integer",
-      "min": 0,
-      "max": 7,
-      "description": "Type of palette color mapping applied. Not read by 1.13c engine",
-      "deprecated": true
     },
     "OrderFlag0": {
       "type": "integer",
@@ -624,135 +479,6 @@
       "description": "Horizontal graphical offset from animation pivot in pixels",
       "engineVerified": true
     },
-    "Draw": {
-      "type": "boolean",
-      "description": "Whether to draw the object graphics on screen. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Red": {
-      "type": "integer",
-      "min": 100,
-      "max": 255,
-      "description": "Red color channel (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Green": {
-      "type": "integer",
-      "min": 55,
-      "max": 255,
-      "description": "Green color channel (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Blue": {
-      "type": "integer",
-      "min": 0,
-      "max": 255,
-      "description": "Blue color channel (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HD": {
-      "type": "boolean",
-      "description": "Whether the head DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "TR": {
-      "type": "boolean",
-      "description": "Whether the torso DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LG": {
-      "type": "boolean",
-      "description": "Whether the legs DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RA": {
-      "type": "boolean",
-      "description": "Whether the right arm DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LA": {
-      "type": "boolean",
-      "description": "Whether the left arm DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RH": {
-      "type": "boolean",
-      "description": "Whether the right hand DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LH": {
-      "type": "boolean",
-      "description": "Whether the left hand DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SH": {
-      "type": "boolean",
-      "description": "Whether the shield DCC component is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S1": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 1 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S2": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 2 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S3": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 3 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S4": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 4 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S5": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 5 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S6": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 6 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S7": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 7 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S8": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether special DCC component 8 is used. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "TotalPieces": {
-      "type": "integer",
-      "min": 1,
-      "max": 4,
-      "description": "Total number of selectable DCC components. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "SubClass": {
       "type": "integer",
       "min": 0,
@@ -799,11 +525,6 @@
       "max": 1,
       "description": "Shrine function identifier (unused, hardcoded)",
       "engineVerified": true
-    },
-    "Restore": {
-      "type": "boolean",
-      "description": "Whether the object persists in memory (1) or disappears off-screen (0). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Parm0": {
       "type": "integer",
@@ -861,32 +582,10 @@
       "description": "General-purpose parameter 7 for object functions",
       "engineVerified": true
     },
-    "Act": {
-      "type": "integer",
-      "min": 0,
-      "max": 16,
-      "description": "Act bitmask (bitfield, not 1-5). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Lockable": {
       "type": "boolean",
       "description": "Whether this object can be locked",
       "engineVerified": true
-    },
-    "Gore": {
-      "type": "boolean",
-      "description": "Whether the object is a gore/corpse decoration. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sync": {
-      "type": "boolean",
-      "description": "Whether to keep client and server object state in sync. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Flicker": {
-      "type": "boolean",
-      "description": "Whether the emitted light should flicker. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Damage": {
       "type": "integer",
@@ -895,36 +594,10 @@
       "description": "Amount of damage dealt by this object on contact",
       "engineVerified": true
     },
-    "Beta": {
-      "type": "boolean",
-      "description": "Beta content flag (unused). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Overlay": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Whether a visual overlay is applied. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "CollisionSubst": {
       "type": "boolean",
       "description": "Whether special collision substitution checking is used",
       "engineVerified": true
-    },
-    "Left": {
-      "type": "integer",
-      "min": -50,
-      "max": 750,
-      "description": "Left boundary of bounding box in pixels. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Top": {
-      "type": "integer",
-      "min": -100,
-      "max": 301,
-      "description": "Top boundary of bounding box in pixels. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Width": {
       "type": "integer",
@@ -932,20 +605,6 @@
       "max": 100,
       "description": "Width of bounding box in pixels",
       "engineVerified": true
-    },
-    "Height": {
-      "type": "integer",
-      "min": 0,
-      "max": 110,
-      "description": "Height of bounding box in pixels. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "OperateFn": {
-      "type": "integer",
-      "min": 0,
-      "max": 59,
-      "description": "Function called when the player clicks/operates the object. Not read by 1.13c engine",
-      "deprecated": true
     },
     "PopulateFn": {
       "type": "integer",
@@ -960,18 +619,6 @@
       "max": 61,
       "description": "Initialization function called when the object is created",
       "engineVerified": true
-    },
-    "ClientFn": {
-      "type": "integer",
-      "min": 0,
-      "max": 7,
-      "description": "Client-side visual/sound effect function. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RestoreVirgins": {
-      "type": "boolean",
-      "description": "Restore only unoperated objects (1) or all objects (0). Not read by 1.13c engine",
-      "deprecated": true
     },
     "BlockMissile": {
       "type": "boolean",
@@ -989,13 +636,6 @@
       "type": "boolean",
       "description": "Whether to display warp destination text",
       "engineVerified": true
-    },
-    "AutoMap": {
-      "type": "integer",
-      "min": 0,
-      "max": 694,
-      "description": "Automap display flag. Not read by 1.13c engine",
-      "deprecated": true
     },
     "LevelMin": {
       "type": "integer",

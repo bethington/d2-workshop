@@ -46,11 +46,6 @@
       "type": "integer",
       "description": "Event trigger at this frame (e.g. missile launch, sound play)",
       "engineVerified": true
-    },
-    "eol": {
-      "type": "integer",
-      "description": "End of line marker (not loaded by game)",
-      "deprecated": true
     }
   }
 }

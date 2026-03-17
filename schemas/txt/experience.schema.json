@@ -2,50 +2,6 @@
   "file": "experience.txt",
   "description": "Experience requirements per level for each character class.",
   "columns": {
-    "Level": {
-      "type": "integer",
-      "required": true,
-      "unique": true,
-      "description": "Character level (1-99). Not read by 1.13c engine",
-      "min": 0,
-      "max": 99,
-      "deprecated": true
-    },
-    "Amazon": {
-      "type": "integer",
-      "min": 0,
-      "max": 3837739017,
-      "description": "Cumulative experience required to reach this level as Amazon. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sorceress": {
-      "type": "integer",
-      "min": 0,
-      "max": 3837739017,
-      "description": "Cumulative experience required to reach this level as Sorceress. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Necromancer": {
-      "type": "integer",
-      "min": 0,
-      "max": 3837739017,
-      "description": "Cumulative experience required to reach this level as Necromancer. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Paladin": {
-      "type": "integer",
-      "min": 0,
-      "max": 3837739017,
-      "description": "Cumulative experience required to reach this level as Paladin. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Barbarian": {
-      "type": "integer",
-      "min": 0,
-      "max": 3837739017,
-      "description": "Cumulative experience required to reach this level as Barbarian. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "ExpRatio": {
       "type": "integer",
       "description": "Column read by game engine",

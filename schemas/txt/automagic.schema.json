@@ -2,54 +2,11 @@
   "file": "automagic.txt",
   "description": "Automatic magic modifier definitions applied during item generation.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "version": {
-      "type": "integer",
-      "min": 100,
-      "max": 100,
-      "description": "Game version (0=Classic D2, 1=New Classic, 100=Expansion). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "spawnable": {
-      "type": "boolean",
-      "description": "Can randomly spawn in the game. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "rare": {
-      "type": "boolean",
-      "description": "Can spawn as rare quality. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "level": {
-      "type": "integer",
-      "min": 1,
-      "max": 75,
-      "description": "Base item level. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "maxlevel": {
       "type": "integer",
       "description": "Maximum level this can appear",
       "min": 0,
       "engineVerified": true
-    },
-    "levelreq": {
-      "type": "integer",
-      "min": 2,
-      "max": 67,
-      "description": "Minimum character level required to equip. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "class": {
-      "type": "string",
-      "description": "Character class restriction. Not read by 1.13c engine",
-      "deprecated": true
     },
     "classlevelreq": {
       "type": "integer",
@@ -960,13 +917,6 @@
       "description": "Modifier 3 maximum value",
       "engineVerified": true
     },
-    "transform": {
-      "type": "integer",
-      "description": "Character model color palette transform. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
-    },
     "transformcolor": {
       "type": "enum",
       "values": [
@@ -1057,12 +1007,6 @@
       "description": "Multiplicative cost modifier",
       "min": 0,
       "engineVerified": true
-    },
-    "add": {
-      "type": "integer",
-      "description": "Flat cost modification value. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "invtransform": {
       "type": "string",

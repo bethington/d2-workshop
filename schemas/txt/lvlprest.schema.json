@@ -2,20 +2,6 @@
   "file": "lvlprest.txt",
   "description": "Level preset definitions — pre-built map sections.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Def": {
-      "type": "integer",
-      "min": 0,
-      "max": 862,
-      "description": "Default preset definition index. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "LevelId": {
       "type": "string",
       "description": "Reference to level ID in Levels.txt that uses this preset",
@@ -26,131 +12,15 @@
       "description": "Whether to populate this preset with monsters and objects",
       "engineVerified": true
     },
-    "Logicals": {
-      "type": "boolean",
-      "description": "Whether logical connections between tiles are enforced. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Outdoors": {
-      "type": "boolean",
-      "description": "Whether this preset is used for outdoor areas. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Animate": {
       "type": "boolean",
       "description": "Whether animated tiles are enabled in this preset",
       "engineVerified": true
     },
-    "KillEdge": {
-      "type": "boolean",
-      "description": "Whether to remove edge tiles that overlap with adjacent presets. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "FillBlanks": {
       "type": "boolean",
       "description": "Whether to fill blank spaces with floor tiles",
       "engineVerified": true
-    },
-    "SizeX": {
-      "type": "integer",
-      "min": 0,
-      "max": 64,
-      "description": "Width in grid cells. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SizeY": {
-      "type": "integer",
-      "min": 0,
-      "max": 56,
-      "description": "Height in grid cells. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "AutoMap": {
-      "type": "boolean",
-      "description": "Automap display flag. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Scan": {
-      "type": "boolean",
-      "description": "Scannable by abilities. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Pops": {
-      "type": "integer",
-      "min": 0,
-      "max": 4,
-      "description": "Population density. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "PopPad": {
-      "type": "integer",
-      "min": -5,
-      "max": 0,
-      "description": "Padding distance for population placement from edges. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Files": {
-      "type": "integer",
-      "min": 0,
-      "max": 6,
-      "description": "Number of DS1 map files used by this preset. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File1": {
-      "type": "string",
-      "description": "DS1 map file path variant 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File2": {
-      "type": "string",
-      "description": "DS1 map file path variant 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File3": {
-      "type": "string",
-      "description": "DS1 map file path variant 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File4": {
-      "type": "string",
-      "description": "DS1 map file path variant 4. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File5": {
-      "type": "string",
-      "description": "DS1 map file path variant 5. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File6": {
-      "type": "enum",
-      "values": [
-        "0",
-        "Act1/Outdoors/Cott6.ds1",
-        "Act1/Outdoors/Cott6A.ds1",
-        "Act2/Maggot/MagEW6.ds1",
-        "Act2/Maggot/MagNEW4.ds1",
-        "Act2/Maggot/MagNS6.ds1",
-        "Act2/Maggot/MagNSE4.ds1",
-        "Act2/Maggot/MagNSW4.ds1",
-        "Act2/Maggot/MagSEW4.ds1",
-        "Act2/Ruin/Ruin6.ds1",
-        "Act3/Jungle/DungRm6A.ds1",
-        "Act3/Jungle/DungRm6B.ds1"
-      ],
-      "description": "DS1 map file path variant 6. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Dt1Mask": {
-      "type": "integer",
-      "min": 0,
-      "max": 268435456,
-      "description": "Bitmask controlling which DT1 tile files are loaded for this preset. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Beta": {
-      "type": "boolean",
-      "description": "Beta content flag (unused). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Expansion": {
       "type": "integer",

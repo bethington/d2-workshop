@@ -2,24 +2,6 @@
   "file": "misc.txt",
   "description": "Miscellaneous item definitions — potions, scrolls, gems, quest items, keys, and other non-equipment items.",
   "columns": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "namco": {
-      "type": "string",
-      "description": "Name override for display. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "level": {
-      "type": "integer",
-      "min": 0,
-      "max": 999,
-      "description": "Base item level. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "rarity": {
       "type": "integer",
       "min": 0,
@@ -32,11 +14,6 @@
       "description": "Can randomly spawn in the game",
       "engineVerified": true
     },
-    "completed": {
-      "type": "boolean",
-      "description": "Item completion flag. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "speed": {
       "type": "integer",
       "description": "Speed reduction modifier (negative = faster)",
@@ -48,33 +25,10 @@
       "description": "Item has no durability",
       "engineVerified": true
     },
-    "uniqueonly": {
-      "type": "boolean",
-      "description": "Only spawns as unique quality. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "cost": {
-      "type": "integer",
-      "min": 0,
-      "max": 100000,
-      "description": "Base NPC gold cost. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "code": {
-      "type": "string",
-      "description": "Unique 3-4 character item code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "alternategfx": {
       "type": "string",
       "description": "Alternate character graphics code",
       "engineVerified": true
-    },
-    "spelloffset": {
-      "type": "integer",
-      "description": "Spell effect offset index. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "component": {
       "type": "integer",
@@ -82,46 +36,6 @@
       "max": 16,
       "description": "Animation layer component index",
       "engineVerified": true
-    },
-    "bodyLoc1": {
-      "type": "enum",
-      "min": 0,
-      "max": 6,
-      "description": "Primary equipment slot location. Not read by 1.13c engine",
-      "values": [
-        "head",
-        "neck",
-        "tors",
-        "rarm",
-        "larm",
-        "rrin",
-        "lrin",
-        "belt",
-        "feet",
-        "glov",
-        ""
-      ],
-      "deprecated": true
-    },
-    "bodyLoc2": {
-      "type": "enum",
-      "min": 0,
-      "max": 7,
-      "description": "Secondary equipment slot location. Not read by 1.13c engine",
-      "values": [
-        "head",
-        "neck",
-        "tors",
-        "rarm",
-        "larm",
-        "rrin",
-        "lrin",
-        "belt",
-        "feet",
-        "glov",
-        ""
-      ],
-      "deprecated": true
     },
     "invwidth": {
       "type": "integer",
@@ -151,11 +65,6 @@
       "type": "string",
       "description": "Unique quality inventory DC6 file",
       "engineVerified": true
-    },
-    "special": {
-      "type": "string",
-      "description": "Special item property description. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Transmogrify": {
       "type": "boolean",
@@ -198,27 +107,6 @@
       "description": "Item is right-clickable",
       "engineVerified": true
     },
-    "throwable": {
-      "type": "boolean",
-      "description": "Item can be thrown. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "type": {
-      "type": "ref",
-      "min": 4,
-      "max": 41,
-      "description": "Primary item type code (references ItemTypes.txt). Not read by 1.13c engine",
-      "target": "itemtypes.txt",
-      "targetColumn": "Code",
-      "deprecated": true
-    },
-    "sound": {
-      "type": "integer",
-      "min": 1,
-      "max": 28,
-      "description": "Sound effect index when item is used or dropped. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "unique": {
       "type": "boolean",
       "description": "Only appears as unique quality",
@@ -236,23 +124,12 @@
       "description": "Transparency type code",
       "engineVerified": true
     },
-    "quivered": {
-      "type": "boolean",
-      "description": "Item uses quiver ammunition. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "lightradius": {
       "type": "integer",
       "min": 0,
       "max": 6,
       "description": "Light radius around item/character",
       "engineVerified": true
-    },
-    "belt": {
-      "type": "integer",
-      "description": "Belt type index. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "autobelt": {
       "type": "boolean",
@@ -304,28 +181,11 @@
       "min": 0,
       "engineVerified": true
     },
-    "qntwarning": {
-      "type": "integer",
-      "description": "Low quantity warning threshold. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
     "gemoffset": {
       "type": "integer",
       "description": "Gem/rune starting index in Gems.txt",
       "min": 0,
       "engineVerified": true
-    },
-    "BetterGem": {
-      "type": "string",
-      "description": "Upgraded gem/rune code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "bitfield1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bitfield flags for item properties. Not read by 1.13c engine",
-      "deprecated": true
     },
     "CharsiMin": {
       "type": "integer",
@@ -801,41 +661,6 @@
       "max": 255,
       "description": "Jamella magic stock level",
       "engineVerified": true
-    },
-    "Source Art": {
-      "type": "string",
-      "description": "Source art reference (development use). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Game Art": {
-      "type": "string",
-      "description": "Game art reference (development use). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Amazon": {
-      "type": "boolean",
-      "description": "Amazon class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Paladin": {
-      "type": "boolean",
-      "description": "Paladin class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Barbarian": {
-      "type": "boolean",
-      "description": "Barbarian class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Necromancer": {
-      "type": "boolean",
-      "description": "Necromancer class specific. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Sorceress": {
-      "type": "boolean",
-      "description": "Sorceress class specific. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Transform": {
       "type": "integer",

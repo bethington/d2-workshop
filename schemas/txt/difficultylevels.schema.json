@@ -2,18 +2,6 @@
   "file": "difficultylevels.txt",
   "description": "Difficulty scaling — resistance penalties, experience modifiers per difficulty.",
   "columns": {
-    "Name": {
-      "type": "enum",
-      "values": [
-        "Hell",
-        "Nightmare",
-        "Normal"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "ResistPenalty": {
       "type": "integer",
       "min": -50,

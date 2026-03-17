@@ -2,33 +2,12 @@
   "file": "skills.txt",
   "description": "Skill definitions â€” controls all skill properties including damage, mana cost, synergies, and visual effects.",
   "columns": {
-    "skill": {
-      "type": "string",
-      "required": true,
-      "description": "Internal skill name (used by other tables to reference this skill). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Id": {
-      "type": "integer",
-      "required": true,
-      "unique": true,
-      "min": 0,
-      "description": "Unique numeric skill ID. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "charclass": {
       "type": "ref",
       "target": "PlayerClass.txt",
       "targetColumn": "Player Class",
       "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama).",
       "engineVerified": true
-    },
-    "skilldesc": {
-      "type": "ref",
-      "target": "skilldesc.txt",
-      "targetColumn": "skilldesc",
-      "description": "Reference to skill description entry. Not read by 1.13c engine",
-      "deprecated": true
     },
     "srvstfunc": {
       "type": "integer",
@@ -41,11 +20,6 @@
       "min": 0,
       "description": "Server do function ID - executed when start function completes or periodically while held",
       "engineVerified": true
-    },
-    "prgstack": {
-      "type": "boolean",
-      "description": "Whether progressive charges stack (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "srvprgfunc1": {
       "type": "integer",
@@ -108,16 +82,6 @@
       "targetColumn": "Missile",
       "description": "Server-side missile spawned by skill",
       "engineVerified": true
-    },
-    "decquant": {
-      "type": "boolean",
-      "description": "Decreases ammunition quantity when used (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "lob": {
-      "type": "boolean",
-      "description": "Missile uses lobbed arc trajectory (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "srvmissilea": {
       "type": "ref",
@@ -476,28 +440,6 @@
       "targetColumn": "Id",
       "description": "Monster summoned by this skill (ref monstats.txt)",
       "engineVerified": true
-    },
-    "pettype": {
-      "type": "ref",
-      "target": "PetType.txt",
-      "targetColumn": "pet type",
-      "description": "Summon group controlling coexistence, UI icon, and warp behavior. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "petmax": {
-      "type": "enum",
-      "values": [
-        "",
-        "\"min(lvl,par2)\"",
-        "\"min(lvl,par3)\"",
-        "(lvl < 4) ?lvl:(2+lvl/3)",
-        "1",
-        "5",
-        "99",
-        "lvl"
-      ],
-      "description": "Maximum number of summons allowed (can be a calculation). Not read by 1.13c engine",
-      "deprecated": true
     },
     "summode": {
       "type": "enum",
@@ -889,31 +831,11 @@
       "description": "Client calculation 3 for visual parameters",
       "engineVerified": true
     },
-    "warp": {
-      "type": "boolean",
-      "description": "Skill teleports the caster (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "immediate": {
-      "type": "boolean",
-      "description": "Skill activates immediately without animation (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "enhanceable": {
-      "type": "boolean",
-      "description": "Damage can be enhanced by +% damage modifiers (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "attackrank": {
       "type": "integer",
       "min": 0,
       "description": "Priority rank for attack rating calculation (0-10)",
       "engineVerified": true
-    },
-    "noammo": {
-      "type": "boolean",
-      "description": "Skill does not consume ammunition (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "range": {
       "type": "enum",
@@ -925,12 +847,6 @@
       ],
       "description": "Attack range type",
       "engineVerified": true
-    },
-    "weapsel": {
-      "type": "integer",
-      "min": 0,
-      "description": "Weapon selection mode (1=left, 2=either, 3=both, 4=armor). Not read by 1.13c engine",
-      "deprecated": true
     },
     "itypea1": {
       "type": "enum",
@@ -1008,16 +924,6 @@
       "description": "Excluded item type B2 for weapon set B (ref ItemTypes.txt)",
       "engineVerified": true
     },
-    "anim": {
-      "type": "string",
-      "description": "Animation mode (e.g., 'SC' for spell cast). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "seqtrans": {
-      "type": "string",
-      "description": "Sequence transition mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "monanim": {
       "type": "enum",
       "values": [
@@ -1034,59 +940,15 @@
       "description": "Monster animation mode when using this skill",
       "engineVerified": true
     },
-    "seqnum": {
-      "type": "integer",
-      "min": 0,
-      "description": "Player animation sequence ID (used when anim=SQ). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "seqinput": {
-      "type": "integer",
-      "min": 0,
-      "description": "Sequence input frame for transitioning between animations. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "durability": {
-      "type": "boolean",
-      "description": "Skill drains weapon durability (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "UseAttackRate": {
       "type": "boolean",
       "description": "Use weapon attack rate for animation speed (1 = yes)",
       "engineVerified": true
     },
-    "LineOfSight": {
-      "type": "integer",
-      "min": 0,
-      "description": "Line-of-sight check mode (4 = standard wall check). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "TargetableOnly": {
       "type": "boolean",
       "description": "Can only target targetable units (1 = yes)",
       "engineVerified": true
-    },
-    "SearchEnemyXY": {
-      "type": "boolean",
-      "description": "Search for enemy at cursor position (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SearchEnemyNear": {
-      "type": "boolean",
-      "description": "Search for nearest enemy to caster (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SearchOpenXY": {
-      "type": "boolean",
-      "description": "Search for open position at target XY (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SelectProc": {
-      "type": "integer",
-      "min": 0,
-      "description": "Target selection procedure (1-6, various targeting modes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "TargetCorpse": {
       "type": "boolean",
@@ -1173,11 +1035,6 @@
       "description": "Overlay effect when skill is cast from an item",
       "engineVerified": true
     },
-    "skpoints": {
-      "type": "string",
-      "description": "Skill points column (unused in 1.10+). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "reqlevel": {
       "type": "integer",
       "min": 0,
@@ -1190,26 +1047,6 @@
       "min": 0,
       "description": "Maximum skill level",
       "engineVerified": true
-    },
-    "reqstr": {
-      "type": "string",
-      "description": "Required strength (unused, always blank). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "reqdex": {
-      "type": "string",
-      "description": "Required dexterity (unused, always blank). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "reqint": {
-      "type": "string",
-      "description": "Required intelligence (unused, always blank). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "reqvit": {
-      "type": "string",
-      "description": "Required vitality (unused, always blank). Not read by 1.13c engine",
-      "deprecated": true
     },
     "reqskill1": {
       "type": "ref",
@@ -1231,12 +1068,6 @@
       "targetColumn": "skill",
       "description": "Prerequisite skill 3",
       "engineVerified": true
-    },
-    "restrict": {
-      "type": "integer",
-      "min": 0,
-      "description": "Class restriction (1=class-specific, 2=class-specific alternate). Not read by 1.13c engine",
-      "deprecated": true
     },
     "state1": {
       "type": "enum",
@@ -1278,65 +1109,6 @@
       "description": "Skill repeats while mouse is held (1 = yes)",
       "engineVerified": true
     },
-    "checkfunc": {
-      "type": "integer",
-      "min": 0,
-      "description": "Pre-cast check function ID (1-6, various conditions). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "nocostinstate": {
-      "type": "boolean",
-      "description": "No mana cost while in a specific state (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "usemanaondo": {
-      "type": "boolean",
-      "description": "Mana is spent on do function rather than start (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "startmana": {
-      "type": "integer",
-      "min": 0,
-      "description": "Initial mana cost multiplier on first cast. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "minmana": {
-      "type": "boolean",
-      "description": "Minimum mana cost (floor). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "manashift": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bit shift for mana cost precision (higher = finer granularity). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mana": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base mana cost. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "lvlmana": {
-      "type": "integer",
-      "description": "Additional mana cost per skill level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "interrupt": {
-      "type": "boolean",
-      "description": "Skill can be interrupted by hit recovery (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "InTown": {
-      "type": "boolean",
-      "description": "Skill can be used in town (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "aura": {
-      "type": "boolean",
-      "description": "Skill is an aura (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "periodic": {
       "type": "boolean",
       "description": "Skill triggers periodically while active (1 = yes)",
@@ -1353,11 +1125,6 @@
       "description": "Delay between periodic triggers (in frames or calculation)",
       "engineVerified": true
     },
-    "finishing": {
-      "type": "boolean",
-      "description": "Skill is a finishing move that consumes charges (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "passive": {
       "type": "boolean",
       "description": "Skill is passive and always active (1 = yes)",
@@ -1368,397 +1135,15 @@
       "description": "Skill is a charge-up/progressive skill (1 = yes)",
       "engineVerified": true
     },
-    "general": {
-      "type": "boolean",
-      "description": "General skill available to all classes (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "scroll": {
       "type": "boolean",
       "description": "Skill can be used from a scroll (1 = yes)",
       "engineVerified": true
     },
-    "calc1": {
-      "type": "string",
-      "description": "General calculation 1 used by skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "calc2": {
-      "type": "string",
-      "description": "General calculation 2 used by skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "calc3": {
-      "type": "enum",
-      "values": [
-        "",
-        "2",
-        "2+lvl/4",
-        "25",
-        "3",
-        "50",
-        "dm34",
-        "dm56",
-        "ln12+skill('Resist Lightning'.blvl)*par8+skill('Salvation'.blvl)*par7",
-        "ln56",
-        "ln56/4",
-        "par3",
-        "par5"
-      ],
-      "description": "General calculation 3 used by skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "calc4": {
-      "type": "enum",
-      "values": [
-        "",
-        "100",
-        "20",
-        "dm56",
-        "ln12",
-        "par1",
-        "par1 + skill('Lightning Sentry'.blvl)/4",
-        "par2",
-        "par8",
-        "par8 + skill('Fire Trauma'.blvl)/3",
-        "par8 + skill('Lightning Sentry'.blvl)/4",
-        "skill('Berserk'.blvl)"
-      ],
-      "description": "General calculation 4 used by skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param1": {
-      "type": "integer",
-      "description": "Numeric parameter 1 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param2": {
-      "type": "integer",
-      "description": "Numeric parameter 2 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param3": {
-      "type": "integer",
-      "description": "Numeric parameter 3 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param4": {
-      "type": "integer",
-      "description": "Numeric parameter 4 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param5": {
-      "type": "integer",
-      "description": "Numeric parameter 5 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param6": {
-      "type": "integer",
-      "description": "Numeric parameter 6 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param7": {
-      "type": "integer",
-      "description": "Numeric parameter 7 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Param8": {
-      "type": "integer",
-      "min": 0,
-      "description": "Numeric parameter 8 passed to skill functions. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "InGame": {
       "type": "boolean",
       "description": "Whether skill appears in-game (1 = yes)",
       "engineVerified": true
-    },
-    "ToHit": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base attack rating bonus. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LevToHit": {
-      "type": "integer",
-      "min": 0,
-      "description": "Attack rating bonus per skill level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ToHitCalc": {
-      "type": "enum",
-      "values": [
-        "",
-        "10+lvl*5+skill('Concentrate'.blvl)*par7",
-        "15+lvl*5+skill('Concentrate'.blvl)*par7",
-        "40*lvl+40*skill('Penetrate'.blvl)"
-      ],
-      "description": "Calculation overriding ToHit/LevToHit when present. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ResultFlags": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bitfield controlling hit results (1=knockback, 4=stun, etc.). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HitFlags": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bitfield for hit behavior flags. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HitClass": {
-      "type": "integer",
-      "min": 0,
-      "description": "Hit class controlling hit sound and visual effect. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Kick": {
-      "type": "boolean",
-      "description": "Skill uses kick attack (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HitShift": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bit shift for damage precision (typically 8 = 256ths). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SrcDam": {
-      "type": "integer",
-      "min": 0,
-      "description": "Percentage of weapon damage applied (128=100%, 64=50%). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinDam": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum physical damage at base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinLevDam1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min damage bonus per level (levels 2-8). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinLevDam2": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min damage bonus per level (levels 9-16). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinLevDam3": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min damage bonus per level (levels 17-22). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinLevDam4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min damage bonus per level (levels 23-28). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinLevDam5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min damage bonus per level (levels 29+). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxDam": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum physical damage at base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxLevDam1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max damage bonus per level (levels 2-8). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxLevDam2": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max damage bonus per level (levels 9-16). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxLevDam3": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max damage bonus per level (levels 17-22). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxLevDam4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max damage bonus per level (levels 23-28). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxLevDam5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max damage bonus per level (levels 29+). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "DmgSymPerCalc": {
-      "type": "enum",
-      "values": [
-        "",
-        "(skill('Cyclone Armor'.blvl)+skill('Twister'.blvl)+skill('Hurricane'.blvl))*par8",
-        "(skill('Howl'.blvl)+skill('Taunt'.blvl)+skill('Battle Cry'.blvl))*par8",
-        "(skill('Tornado'.blvl)+skill('Hurricane'.blvl))*par8",
-        "skill('Maul'.blvl)*par8",
-        "skill('Molten Boulder'.blvl)*par7",
-        "skill('Volcano'.blvl)*par7"
-      ],
-      "description": "Synergy calculation for physical damage bonus. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EType": {
-      "type": "ref",
-      "target": "elemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Elemental damage type. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMin": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum elemental damage at base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMinLev1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min elemental damage bonus per level (levels 2-8). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMinLev2": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min elemental damage bonus per level (levels 9-16). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMinLev3": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min elemental damage bonus per level (levels 17-22). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMinLev4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min elemental damage bonus per level (levels 23-28). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMinLev5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Min elemental damage bonus per level (levels 29+). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMax": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum elemental damage at base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMaxLev1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max elemental damage bonus per level (levels 2-8). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMaxLev2": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max elemental damage bonus per level (levels 9-16). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMaxLev3": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max elemental damage bonus per level (levels 17-22). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMaxLev4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max elemental damage bonus per level (levels 23-28). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EMaxLev5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Max elemental damage bonus per level (levels 29+). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "EDmgSymPerCalc": {
-      "type": "string",
-      "description": "Synergy calculation for elemental damage bonus. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ELen": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base elemental effect duration in frames (poison/cold/stun). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ELevLen1": {
-      "type": "integer",
-      "min": 0,
-      "description": "Duration bonus per level (levels 2-8). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ELevLen2": {
-      "type": "integer",
-      "min": 0,
-      "description": "Duration bonus per level (levels 9-16). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ELevLen3": {
-      "type": "integer",
-      "min": 0,
-      "description": "Duration bonus per level (levels 17-22). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ELenSymPerCalc": {
-      "type": "enum",
-      "values": [
-        "",
-        "(skill('Freezing Arrow'.blvl)) * par7",
-        "(skill('Glacial Spike'.blvl))*par7",
-        "(skill('Ice Arrow'.blvl)) * par7",
-        "skill('War Cry'.blvl)*par6"
-      ],
-      "description": "Synergy calculation for elemental duration bonus. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "aitype": {
-      "type": "integer",
-      "min": 0,
-      "description": "AI targeting type for this skill. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "aibonus": {
-      "type": "integer",
-      "description": "AI bonus parameter for targeting priority. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "cost mult": {
-      "type": "integer",
-      "min": 0,
-      "description": "Mana cost multiplier for this skill. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "cost add": {
-      "type": "integer",
-      "min": 0,
-      "description": "Flat mana cost added to base cost. Not read by 1.13c engine",
-      "deprecated": true
     },
     "skillcalc": {
       "type": "string",

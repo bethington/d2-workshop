@@ -2,53 +2,11 @@
   "file": "arena.txt",
   "description": "PvP arena configuration definitions.",
   "columns": {
-    "Arena": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Arena mode type identifier (e.g. Deathmatch). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Suicide": {
-      "type": "integer",
-      "min": -6,
-      "max": -6,
-      "description": "Score penalty applied when a player kills themselves. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "PlayerKill": {
-      "type": "integer",
-      "min": 2,
-      "max": 2,
-      "description": "Score awarded for killing another player. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "PlayerKillPercent": {
-      "type": "integer",
-      "min": 10,
-      "max": 10,
-      "description": "Percentage of victim score transferred to killer on player kill. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MonsterKill": {
       "type": "integer",
       "description": "Score awarded for killing a monster in arena mode",
       "min": 0,
       "engineVerified": true
-    },
-    "PlayerDeath": {
-      "type": "integer",
-      "min": -2,
-      "max": -2,
-      "description": "Score penalty applied when a player is killed by another player. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "PlayerDeathPercent": {
-      "type": "integer",
-      "min": -10,
-      "max": -10,
-      "description": "Percentage of score lost when killed by another player. Not read by 1.13c engine",
-      "deprecated": true
     },
     "MonsterDeath": {
       "type": "integer",

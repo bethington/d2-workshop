@@ -2,31 +2,10 @@
   "file": "itemstatcost.txt",
   "description": "Stat definitions — controls how stats are stored, transmitted, saved, displayed on items, and how they interact via operators for derived bonuses.",
   "columns": {
-    "Stat": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Unique stat identifier used by properties.txt, skills.txt, states.txt and other files to reference this stat. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ID": {
-      "type": "integer",
-      "min": 0,
-      "max": 358,
-      "required": true,
-      "unique": true,
-      "description": "Unique sequential numeric ID for this stat, must match the row index. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "send other": {
       "type": "boolean",
       "description": "Whether this stat is sent to other players in multiplayer (used for stats affecting visuals like faster cast rate)",
       "engineVerified": true
-    },
-    "Signed": {
-      "type": "boolean",
-      "description": "Whether the stat value is signed (can be negative). Unsigned stats are always >= 0. Not read by 1.13c engine",
-      "deprecated": true
     },
     "send bits": {
       "type": "integer",
@@ -48,30 +27,10 @@
       "description": "Whether this stat is saved to the character/item save file. Unsaved stats are recalculated at load",
       "engineVerified": true
     },
-    "CSvSigned": {
-      "type": "boolean",
-      "description": "Whether the stat is signed when saved to the character save file. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "CSvBits": {
-      "type": "integer",
-      "description": "Number of bits allocated for this stat in the character save file. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "csvparam": {
       "type": "integer",
       "description": "Number of bits allocated for the stat parameter in the character save file",
       "engineVerified": true
-    },
-    "fCallback": {
-      "type": "boolean",
-      "description": "Whether the game calls a callback function when this stat changes (used for stats that trigger special behavior). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "fMin": {
-      "type": "boolean",
-      "description": "Whether the stat has a minimum value that it cannot go below. Not read by 1.13c engine",
-      "deprecated": true
     },
     "minaccr": {
       "type": "integer",
@@ -82,26 +41,6 @@
       "type": "integer",
       "description": "Encoding type for compound stats: 0=normal, 1=encode as (value * param), 2=encode with skill/level/charge, 3=encode with skill/level/chance",
       "engineVerified": true
-    },
-    "Add": {
-      "type": "integer",
-      "description": "Flat gold cost addition per stat point when this stat appears on an item. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Multiply": {
-      "type": "integer",
-      "description": "Multiplicative cost modifier per stat point when this stat appears on an item (in 1024ths). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Divide": {
-      "type": "integer",
-      "description": "Divisor applied to the stat value before the cost multiply calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ValShift": {
-      "type": "integer",
-      "description": "Bit shift applied to the stat value for fixed-point representation (e.g., 8 means value is in 256ths). Not read by 1.13c engine",
-      "deprecated": true
     },
     "1.09-save bits": {
       "type": "integer",
@@ -133,22 +72,10 @@
       "description": "Whether to keep this stat on the item even when its value is zero (prevents pruning of zero-value stats)",
       "engineVerified": true
     },
-    "op": {
-      "type": "integer",
-      "min": 0,
-      "max": 13,
-      "description": "Operator type for derived stat bonuses: 1=adds opstat by val*base/2^param, 2=time-based, 3=time-based %, 4=time-based add, 5=time-based mod, 6=is-event, 7=is-event percent, 8=per-level, 9=per-level %, 10=per-level add, 11=by-time %, 13=by-time add. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "op param": {
       "type": "integer",
       "description": "Parameter for the operator formula — typically a bit shift divisor, so the formula is statvalue * opbase / 2^opparam",
       "engineVerified": true
-    },
-    "op base": {
-      "type": "string",
-      "description": "Base stat whose value is used in the operator calculation. Must not be the same as op stat1 (causes crash). Not read by 1.13c engine",
-      "deprecated": true
     },
     "op stat1": {
       "type": "ref",
@@ -247,11 +174,6 @@
       "description": "Secondary TBL string key appended after the main description (e.g., used for 'to Mana after each Kill')",
       "engineVerified": true
     },
-    "dgrp": {
-      "type": "integer",
-      "description": "Description group ID — stats sharing the same dgrp are combined into a single description line (e.g., all resistances). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "dgrpfunc": {
       "type": "integer",
       "description": "Function ID used to format the grouped description when all stats in the dgrp have equal values",
@@ -278,16 +200,6 @@
       "type": "string",
       "description": "Secondary TBL string key appended after the grouped description",
       "engineVerified": true
-    },
-    "stuff": {
-      "type": "string",
-      "description": "Unused padding column. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "*eol": {
-      "type": "integer",
-      "description": "End of line marker — always 0, used by the game to detect row termination. Not read by 1.13c engine",
-      "deprecated": true
     },
     "bodyloc2": {
       "type": "string",

@@ -2,42 +2,12 @@
   "file": "belts.txt",
   "description": "Belt inventory layout definitions — potion slot positions per belt type.",
   "columns": {
-    "name": {
-      "type": "enum",
-      "values": [
-        "belt",
-        "default",
-        "girdle",
-        "heavy belt",
-        "light belt",
-        "sash",
-        "uber belt"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "numboxes": {
       "type": "integer",
       "min": 4,
       "max": 16,
       "description": "Number of potion slots in this belt type",
       "engineVerified": true
-    },
-    "boxwidth": {
-      "type": "integer",
-      "min": 29,
-      "max": 29,
-      "description": "Width of each belt slot in pixels. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "boxheight": {
-      "type": "integer",
-      "min": 29,
-      "max": 29,
-      "description": "Height of each belt slot in pixels. Not read by 1.13c engine",
-      "deprecated": true
     },
     "box1left": {
       "type": "integer",

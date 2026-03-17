@@ -2,13 +2,6 @@
   "file": "monstats2.txt",
   "description": "Monster visual and collision properties — animation components, light settings, hit testing, and display flags. Referenced by MonStatsEx column in MonStats.txt.",
   "columns": {
-    "Id": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Monster identifier, referenced by MonStatsEx column in MonStats.txt. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Height": {
       "type": "integer",
       "description": "Monster height in pixels (used for overlay positioning)",
@@ -24,16 +17,6 @@
       "description": "Pixel height (unused in 1.10+)",
       "engineVerified": true
     },
-    "SizeX": {
-      "type": "integer",
-      "description": "Collision box X diameter in sub-tiles. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SizeY": {
-      "type": "integer",
-      "description": "Collision box Y diameter in sub-tiles. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "spawnCol": {
       "type": "integer",
       "description": "Spawn collision mode (0 = normal, 1 = DS1 only, 2 = special)",
@@ -44,406 +27,15 @@
       "description": "Melee attack range in sub-tiles",
       "engineVerified": true
     },
-    "BaseW": {
-      "type": "integer",
-      "description": "Base weapon class for attack animation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HitClass": {
-      "type": "enum",
-      "description": "Hit class for impact sound selection. Not read by 1.13c engine",
-      "values": [
-        "hth",
-        "1hss",
-        "1hsl",
-        "2hss",
-        "2hsl",
-        "1ht",
-        "2ht",
-        "club",
-        "staf",
-        "bow",
-        "xbow",
-        "claw",
-        "over",
-        ""
-      ],
-      "deprecated": true
-    },
-    "HDv": {
-      "type": "string",
-      "description": "Head component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "TRv": {
-      "type": "string",
-      "description": "Torso component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LGv": {
-      "type": "string",
-      "description": "Legs component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Rav": {
-      "type": "string",
-      "description": "Right arm component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Lav": {
-      "type": "string",
-      "description": "Left arm component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RHv": {
-      "type": "string",
-      "description": "Right hand component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LHv": {
-      "type": "string",
-      "description": "Left hand component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SHv": {
-      "type": "string",
-      "description": "Shield component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S1v": {
-      "type": "string",
-      "description": "Special 1 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S2v": {
-      "type": "string",
-      "description": "Special 2 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S3v": {
-      "type": "string",
-      "description": "Special 3 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S4v": {
-      "type": "string",
-      "description": "Special 4 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S5v": {
-      "type": "string",
-      "description": "Special 5 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S6v": {
-      "type": "string",
-      "description": "Special 6 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S7v": {
-      "type": "string",
-      "description": "Special 7 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S8v": {
-      "type": "string",
-      "description": "Special 8 component equipment graphic code. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HD": {
-      "type": "boolean",
-      "description": "Monster has head component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "TR": {
-      "type": "boolean",
-      "description": "Monster has torso component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LG": {
-      "type": "boolean",
-      "description": "Monster has legs component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RA": {
-      "type": "boolean",
-      "description": "Monster has right arm component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LA": {
-      "type": "boolean",
-      "description": "Monster has left arm component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "RH": {
-      "type": "boolean",
-      "description": "Monster has right hand component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "LH": {
-      "type": "boolean",
-      "description": "Monster has left hand component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SH": {
-      "type": "boolean",
-      "description": "Monster has shield component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S1": {
-      "type": "boolean",
-      "description": "Monster has special 1 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S2": {
-      "type": "boolean",
-      "description": "Monster has special 2 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S3": {
-      "type": "boolean",
-      "description": "Monster has special 3 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S4": {
-      "type": "boolean",
-      "description": "Monster has special 4 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S5": {
-      "type": "boolean",
-      "description": "Monster has special 5 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S6": {
-      "type": "boolean",
-      "description": "Monster has special 6 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S7": {
-      "type": "boolean",
-      "description": "Monster has special 7 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S8": {
-      "type": "boolean",
-      "description": "Monster has special 8 component. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "TotalPieces": {
       "type": "integer",
       "description": "Total number of animation component pieces",
       "engineVerified": true
     },
-    "mDT": {
-      "type": "boolean",
-      "description": "Has Death animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mNU": {
-      "type": "boolean",
-      "description": "Has Neutral animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mWL": {
-      "type": "boolean",
-      "description": "Has Walk animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mGH": {
-      "type": "boolean",
-      "description": "Has Get Hit animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mA1": {
-      "type": "boolean",
-      "description": "Has Attack 1 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mA2": {
-      "type": "boolean",
-      "description": "Has Attack 2 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mBL": {
-      "type": "boolean",
-      "description": "Has Block animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mSC": {
-      "type": "boolean",
-      "description": "Has Cast animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mS1": {
-      "type": "boolean",
-      "description": "Has Skill 1 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mS2": {
-      "type": "boolean",
-      "description": "Has Skill 2 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mS3": {
-      "type": "boolean",
-      "description": "Has Skill 3 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mS4": {
-      "type": "boolean",
-      "description": "Has Skill 4 animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mDD": {
-      "type": "boolean",
-      "description": "Has Dead (corpse) animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mKB": {
-      "type": "boolean",
-      "description": "Has Knockback animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mSQ": {
-      "type": "boolean",
-      "description": "Has Sequence animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "mRN": {
-      "type": "boolean",
-      "description": "Has Run animation mode. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dDT": {
-      "type": "integer",
-      "description": "Death animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dNU": {
-      "type": "integer",
-      "description": "Neutral animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dWL": {
-      "type": "integer",
-      "description": "Walk animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dGH": {
-      "type": "integer",
-      "description": "Get Hit animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dA1": {
-      "type": "integer",
-      "description": "Attack 1 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dA2": {
-      "type": "integer",
-      "description": "Attack 2 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dBL": {
-      "type": "integer",
-      "description": "Block animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dSC": {
-      "type": "integer",
-      "description": "Cast animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dS1": {
-      "type": "integer",
-      "description": "Skill 1 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dS2": {
-      "type": "integer",
-      "description": "Skill 2 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dS3": {
-      "type": "integer",
-      "description": "Skill 3 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dS4": {
-      "type": "integer",
-      "description": "Skill 4 animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dDD": {
-      "type": "integer",
-      "description": "Dead animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dKB": {
-      "type": "integer",
-      "description": "Knockback animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dSQ": {
-      "type": "integer",
-      "description": "Sequence animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dRN": {
-      "type": "integer",
-      "description": "Run animation direction count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "A1mv": {
-      "type": "boolean",
-      "description": "Attack 1 can move (walking attack). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "A2mv": {
-      "type": "boolean",
-      "description": "Attack 2 can move (walking attack). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SCmv": {
-      "type": "boolean",
-      "description": "Cast can move (walking cast). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S1mv": {
-      "type": "boolean",
-      "description": "Skill 1 can move. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S2mv": {
-      "type": "boolean",
-      "description": "Skill 2 can move. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S3mv": {
-      "type": "boolean",
-      "description": "Skill 3 can move. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "S4mv": {
-      "type": "boolean",
-      "description": "Skill 4 can move. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "noGfxHitTest": {
       "type": "boolean",
       "description": "Disable pixel-accurate hit testing, use bounding box only",
       "engineVerified": true
-    },
-    "htTop": {
-      "type": "integer",
-      "description": "Hit test bounding box top offset. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "htLeft": {
-      "type": "integer",
-      "description": "Hit test bounding box left offset. Not read by 1.13c engine",
-      "deprecated": true
     },
     "htWidth": {
       "type": "integer",
@@ -455,11 +47,6 @@
       "description": "Hit test bounding box height",
       "engineVerified": true
     },
-    "restore": {
-      "type": "integer",
-      "description": "Restore animation frames on mode change. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "automapCel": {
       "type": "integer",
       "description": "Automap icon cell index",
@@ -470,75 +57,20 @@
       "description": "Do not display on automap",
       "engineVerified": true
     },
-    "noOvly": {
-      "type": "boolean",
-      "description": "Do not draw overlays on this monster. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "isSel": {
       "type": "boolean",
       "description": "Monster is selectable (default)",
       "engineVerified": true
-    },
-    "alSel": {
-      "type": "boolean",
-      "description": "Always selectable regardless of hostility. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "noSel": {
-      "type": "boolean",
-      "description": "Monster is never selectable. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "shiftSel": {
-      "type": "boolean",
-      "description": "Only selectable while holding Shift. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "corpseSel": {
-      "type": "boolean",
-      "description": "Corpse is selectable (for revive/find item). Not read by 1.13c engine",
-      "deprecated": true
     },
     "isAtt": {
       "type": "boolean",
       "description": "Monster is attackable",
       "engineVerified": true
     },
-    "revive": {
-      "type": "boolean",
-      "description": "Monster can be revived by Necromancer. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "critter": {
       "type": "boolean",
       "description": "Monster is a critter (passive, non-hostile)",
       "engineVerified": true
-    },
-    "small": {
-      "type": "boolean",
-      "description": "Uses small shadow. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "large": {
-      "type": "boolean",
-      "description": "Uses large shadow. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "soft": {
-      "type": "boolean",
-      "description": "Soft collision (can overlap other units). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "inert": {
-      "type": "boolean",
-      "description": "Monster is inert (cannot be targeted or damaged). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "objCol": {
-      "type": "boolean",
-      "description": "Uses object collision instead of monster collision. Not read by 1.13c engine",
-      "deprecated": true
     },
     "deadCol": {
       "type": "boolean",
@@ -550,75 +82,20 @@
       "description": "Corpse is not flattened on ground",
       "engineVerified": true
     },
-    "Shadow": {
-      "type": "boolean",
-      "description": "Monster casts a shadow. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "noUniqueShift": {
       "type": "boolean",
       "description": "Disable unique monster color palette shift",
       "engineVerified": true
-    },
-    "compositeDeath": {
-      "type": "boolean",
-      "description": "Use composite death animation (parts fly off). Not read by 1.13c engine",
-      "deprecated": true
     },
     "localBlood": {
       "type": "integer",
       "description": "Blood color (0 = none, 1 = blood, 2 = no blood)",
       "engineVerified": true
     },
-    "Bleed": {
-      "type": "integer",
-      "description": "Blood effect type on hit. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "light": {
       "type": "integer",
       "description": "Light radius diameter in sub-tiles",
       "engineVerified": true
-    },
-    "light-r": {
-      "type": "integer",
-      "description": "Light color red component (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "light-g": {
-      "type": "integer",
-      "description": "Light color green component (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "light-b": {
-      "type": "integer",
-      "description": "Light color blue component (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Utrans": {
-      "type": "integer",
-      "description": "Color palette transform index (Normal difficulty). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Utrans(N)": {
-      "type": "integer",
-      "description": "Color palette transform index (Nightmare difficulty). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Utrans(H)": {
-      "type": "integer",
-      "description": "Color palette transform index (Hell difficulty). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Heart": {
-      "type": "string",
-      "description": "Heart item drop (broken since 1.07, unused). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "BodyPart": {
-      "type": "string",
-      "description": "Body part item drop (broken since 1.07, unused). Not read by 1.13c engine",
-      "deprecated": true
     },
     "InfernoLen": {
       "type": "integer",
@@ -665,11 +142,6 @@
       "targetColumn": "skill",
       "description": "Skill used when monster resurrects",
       "engineVerified": true
-    },
-    "EOL": {
-      "type": "integer",
-      "description": "End of line marker (not loaded by game). Not read by 1.13c engine",
-      "deprecated": true
     },
     "montype": {
       "type": "string",

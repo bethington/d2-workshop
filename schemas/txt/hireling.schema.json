@@ -2,60 +2,6 @@
   "file": "hireling.txt",
   "description": "Mercenary definitions â€” stats, skills, level progression, and hiring costs per act and difficulty.",
   "columns": {
-    "Hireling": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Hireling type identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SubType": {
-      "type": "string",
-      "description": "Hireling sub-specialization type (e.g. Fire, Cold, Combat). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Id": {
-      "type": "integer",
-      "min": 0,
-      "max": 29,
-      "description": "Unique numeric ID. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Class": {
-      "type": "integer",
-      "min": 271,
-      "max": 561,
-      "description": "Monster class animation index. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Act": {
-      "type": "integer",
-      "min": 1,
-      "max": 5,
-      "description": "Act number (1-5). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Difficulty": {
-      "type": "integer",
-      "min": 1,
-      "max": 3,
-      "description": "Difficulty level (1=Normal, 2=Nightmare, 3=Hell). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Level": {
-      "type": "integer",
-      "min": 3,
-      "max": 75,
-      "description": "Hireling base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Seller": {
-      "type": "integer",
-      "min": 150,
-      "max": 515,
-      "description": "NPC vendor reference. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "namefirst": {
       "type": "enum",
       "values": [
@@ -78,26 +24,12 @@
       "description": "Ending index in the hireling name table for first names",
       "engineVerified": true
     },
-    "Gold": {
-      "type": "integer",
-      "min": 100,
-      "max": 32000,
-      "description": "Base hiring gold cost. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "exp/lvl": {
       "type": "integer",
       "min": 100,
       "max": 125,
       "description": "Experience scaling ratio per level",
       "engineVerified": true
-    },
-    "HP": {
-      "type": "integer",
-      "min": 45,
-      "max": 852,
-      "description": "Base hit points. Not read by 1.13c engine",
-      "deprecated": true
     },
     "hp/lvl": {
       "type": "integer",
@@ -120,26 +52,12 @@
       "description": "Defense gained per level",
       "engineVerified": true
     },
-    "Str": {
-      "type": "integer",
-      "min": 35,
-      "max": 190,
-      "description": "Base strength. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "str/lvl": {
       "type": "integer",
       "min": 10,
       "max": 15,
       "description": "Strength gained per level (eighths)",
       "engineVerified": true
-    },
-    "Dex": {
-      "type": "integer",
-      "min": 40,
-      "max": 137,
-      "description": "Base dexterity. Not read by 1.13c engine",
-      "deprecated": true
     },
     "dex/lvl": {
       "type": "integer",
@@ -148,40 +66,12 @@
       "description": "Dexterity gained per level (eighths)",
       "engineVerified": true
     },
-    "AR": {
-      "type": "integer",
-      "min": 0,
-      "max": 432,
-      "description": "Base attack rating. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "ar/lvl": {
       "type": "integer",
       "min": 0,
       "max": 12,
       "description": "Attack rating gained per level",
       "engineVerified": true
-    },
-    "Share": {
-      "type": "integer",
-      "min": 1,
-      "max": 6,
-      "description": "Percentage of experience shared with the hireling. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Dmg-Min": {
-      "type": "integer",
-      "min": 1,
-      "max": 60,
-      "description": "Base minimum damage. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Dmg-Max": {
-      "type": "integer",
-      "min": 3,
-      "max": 64,
-      "description": "Base maximum damage. Not read by 1.13c engine",
-      "deprecated": true
     },
     "dmg/lvl": {
       "type": "integer",
@@ -203,32 +93,6 @@
       "max": 8,
       "description": "All-resistances gained per level (in eighths)",
       "engineVerified": true
-    },
-    "WType1": {
-      "type": "enum",
-      "values": [
-        "bow",
-        "pole",
-        "swor"
-      ],
-      "description": "Primary weapon type code the hireling can equip. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "WType2": {
-      "type": "enum",
-      "values": [
-        "shie",
-        "spea"
-      ],
-      "description": "Secondary weapon type code the hireling can equip. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "HireDesc": {
-      "type": "ref",
-      "target": "hiredesc.txt",
-      "targetColumn": "Code",
-      "description": "Hireling description code (references hiredesc.txt). Not read by 1.13c engine",
-      "deprecated": true
     },
     "defaultchance": {
       "type": "integer",
@@ -258,20 +122,6 @@
       "description": "Skill 1 usage probability (%)",
       "engineVerified": true
     },
-    "ChancePerLevel1": {
-      "type": "integer",
-      "min": 0,
-      "max": 3,
-      "description": "Chance increase per level for hireling skill 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Level1": {
-      "type": "integer",
-      "min": 1,
-      "max": 20,
-      "description": "Minimum hireling level to unlock skill 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "lvlperlvl1": {
       "type": "integer",
       "min": 0,
@@ -299,13 +149,6 @@
       "max": 1000,
       "description": "Skill 2 usage probability (%)",
       "engineVerified": true
-    },
-    "ChancePerLevel2": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Chance increase per level for hireling skill 2. Not read by 1.13c engine",
-      "deprecated": true
     },
     "level2": {
       "type": "integer",
@@ -342,13 +185,6 @@
       "description": "Skill 3 usage probability (%)",
       "engineVerified": true
     },
-    "ChancePerLevel3": {
-      "type": "integer",
-      "min": 0,
-      "max": 1,
-      "description": "Chance increase per level for hireling skill 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "level3": {
       "type": "integer",
       "min": 1,
@@ -382,12 +218,6 @@
       "min": 0,
       "engineVerified": true
     },
-    "ChancePerLevel4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Chance increase per level for hireling skill 4. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "level4": {
       "type": "integer",
       "min": 0,
@@ -418,12 +248,6 @@
       "description": "Skill 5 usage probability (%)",
       "min": 0,
       "engineVerified": true
-    },
-    "ChancePerLevel5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Chance increase per level for hireling skill 5. Not read by 1.13c engine",
-      "deprecated": true
     },
     "level5": {
       "type": "integer",
@@ -456,12 +280,6 @@
       "min": 0,
       "engineVerified": true
     },
-    "ChancePerLevel6": {
-      "type": "integer",
-      "min": 0,
-      "description": "Chance increase per level for hireling skill 6. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "level6": {
       "type": "integer",
       "min": 0,
@@ -473,34 +291,6 @@
       "description": "Skill 6 level per character level",
       "min": 0,
       "engineVerified": true
-    },
-    "Head": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Whether the hireling can equip headgear. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Torso": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Whether the hireling can equip body armor. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Weapon": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Applies to weapons. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Shield": {
-      "type": "integer",
-      "description": "Applies to shields. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
     },
     "Weapon1": {
       "type": "string",

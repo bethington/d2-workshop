@@ -2,27 +2,6 @@
   "file": "books.txt",
   "description": "Tome and book item definitions â€” scroll/book spell codes and costs.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Namco": {
-      "type": "enum",
-      "values": [
-        "of Identify",
-        "of Ressurect",
-        "of Town Portal"
-      ],
-      "description": "Book name completion suffix (e.g. of Identify, of Town Portal). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Completed": {
-      "type": "boolean",
-      "description": "Item completion flag. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "scrollspellcode": {
       "type": "enum",
       "values": [
@@ -40,31 +19,6 @@
       ],
       "description": "Item code for the tome/book version of this spell",
       "engineVerified": true
-    },
-    "SpellOffset": {
-      "type": "integer",
-      "description": "Spell effect offset index. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "SpellIcon": {
-      "type": "integer",
-      "min": -1,
-      "max": 0,
-      "description": "Spell icon graphic index (-1 = none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SkillScrollOffset": {
-      "type": "integer",
-      "description": "Skill index offset for scroll spell lookup. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
-    },
-    "SkillBookOffset": {
-      "type": "integer",
-      "description": "Skill index offset for book spell lookup. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "basecost": {
       "type": "integer",

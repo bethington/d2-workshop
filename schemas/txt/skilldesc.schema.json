@@ -2,38 +2,6 @@
   "file": "skilldesc.txt",
   "description": "Skill description templates — controls skill UI layout, icon, description text, damage display, and synergy tooltip lines. Referenced by the skilldesc column in Skills.txt.",
   "columns": {
-    "skilldesc": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Skill description identifier, referenced by Skills.txt skilldesc column. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SkillPage": {
-      "type": "integer",
-      "description": "Skill tree page (1 = left, 2 = middle, 3 = right, 0 = not shown). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SkillRow": {
-      "type": "integer",
-      "description": "Skill tree row position (0-6, top to bottom). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SkillColumn": {
-      "type": "integer",
-      "description": "Skill tree column position (0-2, left to right). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ListRow": {
-      "type": "integer",
-      "description": "Skill list display row for right-click skill menu. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ListPool": {
-      "type": "integer",
-      "description": "Skill list pool grouping for right-click skill menu. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "iconcel": {
       "type": "integer",
       "description": "Skill icon cell index in the skill icon DC6 file",
@@ -43,26 +11,6 @@
       "type": "string",
       "description": "String table key for skill display name",
       "engineVerified": true
-    },
-    "str short": {
-      "type": "string",
-      "description": "String table key for short skill description. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "str long": {
-      "type": "string",
-      "description": "String table key for long/detailed skill description. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "str alt": {
-      "type": "string",
-      "description": "String table key for alternate skill description. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "str mana": {
-      "type": "string",
-      "description": "String table key for mana cost display text. Not read by 1.13c engine",
-      "deprecated": true
     },
     "descdam": {
       "type": "integer",
@@ -78,57 +26,6 @@
       "type": "string",
       "description": "Damage display calculation formula 2",
       "engineVerified": true
-    },
-    "p1dmelem": {
-      "type": "ref",
-      "target": "elemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Primary damage element type 1. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p1dmmin": {
-      "type": "string",
-      "description": "Primary damage 1 minimum value calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p1dmmax": {
-      "type": "string",
-      "description": "Primary damage 1 maximum value calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p2dmelem": {
-      "type": "ref",
-      "target": "elemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Primary damage element type 2. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p2dmmin": {
-      "type": "string",
-      "description": "Primary damage 2 minimum value calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p2dmmax": {
-      "type": "string",
-      "description": "Primary damage 2 maximum value calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p3dmelem": {
-      "type": "ref",
-      "target": "elemtypes.txt",
-      "targetColumn": "Code",
-      "description": "Primary damage element type 3. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p3dmmin": {
-      "type": "string",
-      "description": "Primary damage 3 minimum value calculation. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "p3dmmax": {
-      "type": "string",
-      "description": "Primary damage 3 maximum value calculation. Not read by 1.13c engine",
-      "deprecated": true
     },
     "descatt": {
       "type": "integer",
@@ -154,26 +51,6 @@
       "type": "integer",
       "description": "Description line 1 display function",
       "engineVerified": true
-    },
-    "desctexta1": {
-      "type": "string",
-      "description": "Description line 1 text key A (string table). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "desctextb1": {
-      "type": "string",
-      "description": "Description line 1 text key B (string table). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "desccalca1": {
-      "type": "string",
-      "description": "Description line 1 calculation formula A. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "desccalcb1": {
-      "type": "string",
-      "description": "Description line 1 calculation formula B. Not read by 1.13c engine",
-      "deprecated": true
     },
     "descline2": {
       "type": "integer",
@@ -305,26 +182,6 @@
       "description": "Current level description line 1 display function",
       "engineVerified": true
     },
-    "dsc2texta1": {
-      "type": "string",
-      "description": "Current level description line 1 text key A. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc2textb1": {
-      "type": "string",
-      "description": "Current level description line 1 text key B. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc2calca1": {
-      "type": "string",
-      "description": "Current level description line 1 calculation A. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc2calcb1": {
-      "type": "string",
-      "description": "Current level description line 1 calculation B. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "dsc2line2": {
       "type": "integer",
       "description": "Current level description line 2 display function",
@@ -404,26 +261,6 @@
       "type": "integer",
       "description": "Next level description line 1 display function",
       "engineVerified": true
-    },
-    "dsc3texta1": {
-      "type": "string",
-      "description": "Next level description line 1 text key A. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc3textb1": {
-      "type": "string",
-      "description": "Next level description line 1 text key B. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc3calca1": {
-      "type": "string",
-      "description": "Next level description line 1 calculation A. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "dsc3calcb1": {
-      "type": "string",
-      "description": "Next level description line 1 calculation B. Not read by 1.13c engine",
-      "deprecated": true
     },
     "dsc3line2": {
       "type": "integer",
@@ -574,11 +411,6 @@
       "type": "string",
       "description": "Next level description line 7 calculation B",
       "engineVerified": true
-    },
-    "eol": {
-      "type": "integer",
-      "description": "End of line marker (not loaded by game). Not read by 1.13c engine",
-      "deprecated": true
     },
     "skilldesccode": {
       "type": "string",

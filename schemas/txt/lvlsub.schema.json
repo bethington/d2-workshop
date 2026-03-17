@@ -2,29 +2,6 @@
   "file": "lvlsub.txt",
   "description": "Level substitution parameters for random map generation.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Type": {
-      "type": "integer",
-      "min": 0,
-      "max": 9,
-      "description": "Substitution type index controlling tile replacement behavior. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "File": {
-      "type": "string",
-      "description": "DS1 map file path for the substitution tile. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "CheckAll": {
-      "type": "boolean",
-      "description": "Whether to check all tiles before substituting or stop at first match. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "BordType": {
       "type": "integer",
       "min": -1,
@@ -37,33 +14,12 @@
       "description": "Whether substitution snaps to grid boundaries",
       "engineVerified": true
     },
-    "Dt1Mask": {
-      "type": "integer",
-      "min": 0,
-      "max": 4194305,
-      "description": "Bitmask controlling which DT1 tile files are used for substitution. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Prob0": {
       "type": "integer",
       "min": 0,
       "max": 100,
       "description": "Probability weight (0-100) for substitution group 0",
       "engineVerified": true
-    },
-    "Trials0": {
-      "type": "integer",
-      "min": -1,
-      "max": 20,
-      "description": "Number of placement attempts for substitution group 0 (-1 = unlimited). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Max0": {
-      "type": "integer",
-      "min": 0,
-      "max": 8,
-      "description": "Property 0 maximum value. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Prob1": {
       "type": "integer",
@@ -72,40 +28,12 @@
       "description": "Probability weight (0-100) for substitution group 1",
       "engineVerified": true
     },
-    "Trials1": {
-      "type": "integer",
-      "min": -1,
-      "max": 10,
-      "description": "Number of placement attempts for substitution group 1 (-1 = unlimited). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Max1": {
-      "type": "integer",
-      "min": 0,
-      "max": 4,
-      "description": "Property 1 maximum value. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Prob2": {
       "type": "integer",
       "min": 0,
       "max": 100,
       "description": "Probability weight (0-100) for substitution group 2",
       "engineVerified": true
-    },
-    "Trials2": {
-      "type": "integer",
-      "min": -1,
-      "max": 20,
-      "description": "Number of placement attempts for substitution group 2 (-1 = unlimited). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Max2": {
-      "type": "integer",
-      "min": 0,
-      "max": 12,
-      "description": "Property 2 maximum value. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Prob3": {
       "type": "integer",
@@ -114,45 +42,12 @@
       "description": "Probability weight (0-100) for substitution group 3",
       "engineVerified": true
     },
-    "Trials3": {
-      "type": "integer",
-      "min": -1,
-      "max": 20,
-      "description": "Number of placement attempts for substitution group 3 (-1 = unlimited). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Max3": {
-      "type": "integer",
-      "min": 0,
-      "max": 12,
-      "description": "Property 3 maximum value. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Prob4": {
       "type": "integer",
       "min": 0,
       "max": 100,
       "description": "Probability weight (0-100) for substitution group 4",
       "engineVerified": true
-    },
-    "Trials4": {
-      "type": "integer",
-      "min": -1,
-      "max": 20,
-      "description": "Number of placement attempts for substitution group 4 (-1 = unlimited). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Max4": {
-      "type": "integer",
-      "min": 0,
-      "max": 8,
-      "description": "Property 4 maximum value. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Beta": {
-      "type": "boolean",
-      "description": "Beta content flag (unused). Not read by 1.13c engine",
-      "deprecated": true
     },
     "File6": {
       "type": "string",

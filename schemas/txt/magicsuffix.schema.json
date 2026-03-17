@@ -2,37 +2,12 @@
   "file": "magicsuffix.txt",
   "description": "Magic suffix affix definitions — stat modifiers, spawn conditions, and item type restrictions.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "spawnable": {
-      "type": "boolean",
-      "description": "Can randomly spawn in the game. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "level": {
-      "type": "integer",
-      "min": 1,
-      "max": 70,
-      "description": "Base item level. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "group": {
       "type": "integer",
       "min": 1,
       "max": 35,
       "description": "State group assignment",
       "engineVerified": true
-    },
-    "nummods": {
-      "type": "integer",
-      "min": 2,
-      "max": 3,
-      "description": "Number of active modifiers. Not read by 1.13c engine",
-      "deprecated": true
     },
     "mod1code": {
       "type": "enum",
@@ -309,13 +284,6 @@
         ""
       ],
       "engineVerified": true
-    },
-    "mod1offset": {
-      "type": "integer",
-      "description": "Modifier 1 value offset. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
     },
     "mod1min": {
       "type": "integer",
@@ -607,13 +575,6 @@
       "description": "Modifier 2 property code",
       "engineVerified": true
     },
-    "mod2offset": {
-      "type": "integer",
-      "description": "Modifier 2 value offset. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
-    },
     "mod2min": {
       "type": "integer",
       "min": 1,
@@ -904,13 +865,6 @@
       "description": "Modifier 3 property code",
       "engineVerified": true
     },
-    "mod3offset": {
-      "type": "integer",
-      "description": "Modifier 3 value offset. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
-    },
     "mod3min": {
       "type": "integer",
       "min": 75,
@@ -925,108 +879,12 @@
       "description": "Modifier 3 maximum value",
       "engineVerified": true
     },
-    "effect1": {
-      "type": "string",
-      "description": "Visual effect 1 description. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "effect2": {
-      "type": "enum",
-      "values": [
-        "freeze for 2 frames",
-        "freeze for 8 frames"
-      ],
-      "description": "Visual effect 2 description. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "transform": {
-      "type": "integer",
-      "description": "Character model color palette transform. Not read by 1.13c engine",
-      "min": 0,
-      "max": 1,
-      "deprecated": true
-    },
     "transformcolor": {
       "type": "integer",
       "min": 0,
       "max": 19,
       "description": "Color transform palette index",
       "engineVerified": true
-    },
-    "armor": {
-      "type": "boolean",
-      "description": "Applies to armor. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "weapon": {
-      "type": "boolean",
-      "description": "Applies to weapons. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "shield": {
-      "type": "boolean",
-      "description": "Applies to shields. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "thrown": {
-      "type": "boolean",
-      "description": "Applies to throwing weapons. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "scepter": {
-      "type": "boolean",
-      "description": "Applies to scepters. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "wand": {
-      "type": "boolean",
-      "description": "Applies to wands. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "staff": {
-      "type": "boolean",
-      "description": "Applies to staves. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "bow": {
-      "type": "boolean",
-      "description": "Applies to bows. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "boots": {
-      "type": "boolean",
-      "description": "Applies to boots. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "gloves": {
-      "type": "boolean",
-      "description": "Applies to gloves. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "belt": {
-      "type": "boolean",
-      "description": "Applies to belts. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "ring": {
-      "type": "boolean",
-      "description": "Applies to rings. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "amulet": {
-      "type": "boolean",
-      "description": "Applies to amulets. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "charm": {
-      "type": "boolean",
-      "description": "Applies to charms. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "orb": {
-      "type": "boolean",
-      "description": "Applies to orbs. Not read by 1.13c engine",
-      "deprecated": true
     },
     "divide": {
       "type": "integer",
@@ -1039,12 +897,6 @@
       "description": "Multiplicative cost modifier",
       "min": 0,
       "engineVerified": true
-    },
-    "add": {
-      "type": "integer",
-      "description": "Flat cost modification value. Not read by 1.13c engine",
-      "min": 0,
-      "deprecated": true
     },
     "invtransform": {
       "type": "string",

@@ -16,45 +16,12 @@
       "description": "Number of items picked from this class",
       "engineVerified": true
     },
-    "Unique": {
-      "type": "integer",
-      "min": 800,
-      "max": 983,
-      "description": "Only appears as unique quality. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Set": {
-      "type": "integer",
-      "min": 800,
-      "max": 983,
-      "description": "Quality factor bonus for set item drops from this treasure class. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Rare": {
-      "type": "integer",
-      "min": 800,
-      "max": 983,
-      "description": "Can spawn as rare quality. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Magic": {
-      "type": "integer",
-      "min": 1024,
-      "max": 1024,
-      "description": "Quality factor bonus for magic item drops from this treasure class. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "nodrop": {
       "type": "integer",
       "min": 0,
       "max": 250,
       "description": "Weight for no item drop",
       "engineVerified": true
-    },
-    "Item1": {
-      "type": "string",
-      "description": "Starting item 1 code. Not read by 1.13c engine",
-      "deprecated": true
     },
     "prob1": {
       "type": "integer",
@@ -63,22 +30,12 @@
       "description": "Drop probability weight for Item1",
       "engineVerified": true
     },
-    "Item2": {
-      "type": "string",
-      "description": "Starting item 2 code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "prob2": {
       "type": "integer",
       "min": 1,
       "max": 32770,
       "description": "Drop probability weight for Item2",
       "engineVerified": true
-    },
-    "Item3": {
-      "type": "string",
-      "description": "Starting item 3 code. Not read by 1.13c engine",
-      "deprecated": true
     },
     "prob3": {
       "type": "integer",
@@ -87,22 +44,12 @@
       "description": "Drop probability weight for Item3",
       "engineVerified": true
     },
-    "Item4": {
-      "type": "string",
-      "description": "Starting item 4 code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "prob4": {
       "type": "integer",
       "min": 1,
       "max": 42,
       "description": "Drop probability weight for Item4",
       "engineVerified": true
-    },
-    "Item5": {
-      "type": "string",
-      "description": "Starting item 5 code. Not read by 1.13c engine",
-      "deprecated": true
     },
     "prob5": {
       "type": "integer",
@@ -111,22 +58,12 @@
       "description": "Drop probability weight for Item5",
       "engineVerified": true
     },
-    "Item6": {
-      "type": "string",
-      "description": "Starting item 6 code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "prob6": {
       "type": "integer",
       "min": 1,
       "max": 14,
       "description": "Drop probability weight for Item6",
       "engineVerified": true
-    },
-    "Item7": {
-      "type": "string",
-      "description": "Starting item 7 code. Not read by 1.13c engine",
-      "deprecated": true
     },
     "prob7": {
       "type": "integer",
@@ -135,22 +72,12 @@
       "description": "Drop probability weight for Item7",
       "engineVerified": true
     },
-    "Item8": {
-      "type": "string",
-      "description": "Starting item 8 code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "prob8": {
       "type": "integer",
       "min": 1,
       "max": 5,
       "description": "Drop probability weight for Item8",
       "engineVerified": true
-    },
-    "Item9": {
-      "type": "string",
-      "description": "Starting item 9 code. Not read by 1.13c engine",
-      "deprecated": true
     },
     "prob9": {
       "type": "integer",
@@ -159,30 +86,12 @@
       "description": "Drop probability weight for Item9",
       "engineVerified": true
     },
-    "Item10": {
-      "type": "enum",
-      "values": [
-        "Act 5 (N) Bow B",
-        "Act 5 (N) Equip C",
-        "Act 5 (N) Melee B",
-        "Act 5 Bow B",
-        "Act 5 Equip B",
-        "Act 5 Melee B"
-      ],
-      "description": "Starting item 10 code. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "prob10": {
       "type": "integer",
       "min": 100,
       "max": 1000,
       "description": "Drop probability weight for Item10",
       "engineVerified": true
-    },
-    "Term": {
-      "type": "boolean",
-      "description": "Whether this treasure class terminates the drop chain (end of line). Not read by 1.13c engine",
-      "deprecated": true
     },
     "TCQuestCP": {
       "type": "string",

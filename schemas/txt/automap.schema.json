@@ -2,12 +2,6 @@
   "file": "automap.txt",
   "description": "Automap cell type definitions mapping tiles to minimap graphics.",
   "columns": {
-    "LevelName": {
-      "type": "string",
-      "required": true,
-      "description": "Display name string key. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "TileName": {
       "type": "enum",
       "values": [
@@ -28,13 +22,6 @@
       "description": "Tile orientation type code (e.g. fl=floor, wl=wall left, co=corner)",
       "engineVerified": true
     },
-    "Style": {
-      "type": "integer",
-      "min": 0,
-      "max": 49,
-      "description": "Visual style index for the automap tile. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "StartSequence": {
       "type": "integer",
       "min": -1,
@@ -48,66 +35,6 @@
       "max": 63,
       "description": "Ending animation sequence index (-1 = none)",
       "engineVerified": true
-    },
-    "Type1": {
-      "type": "string",
-      "description": "Primary automap cell type name. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Cel1": {
-      "type": "integer",
-      "min": 0,
-      "max": 1254,
-      "description": "Primary automap cell graphic index. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Type2": {
-      "type": "enum",
-      "values": [
-        "C_WL c",
-        "C_WR c",
-        "Cave LC",
-        "Cave RC",
-        "Floor Path C",
-        "River M C",
-        "River_C",
-        "rock4",
-        "tree03"
-      ],
-      "description": "Secondary automap cell type name. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Cel2": {
-      "type": "integer",
-      "min": -1,
-      "max": 534,
-      "description": "Secondary automap cell graphic index (-1 = none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Cel3": {
-      "type": "integer",
-      "min": -1,
-      "max": 522,
-      "description": "Tertiary automap cell graphic index (-1 = none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Type4": {
-      "type": "enum",
-      "values": [
-        "C_WL d",
-        "C_WR d",
-        "Floor Path D",
-        "tree04"
-      ],
-      "description": "Quaternary automap cell type name. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Cel4": {
-      "type": "integer",
-      "min": -1,
-      "max": 475,
-      "description": "Quaternary automap cell graphic index (-1 = none). Not read by 1.13c engine",
-      "deprecated": true
     }
   }
 }

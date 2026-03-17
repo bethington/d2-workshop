@@ -9,14 +9,6 @@
       "description": "Internal missile name (referenced by skills.txt and other tables)",
       "engineVerified": true
     },
-    "Id": {
-      "type": "integer",
-      "required": true,
-      "unique": true,
-      "min": 0,
-      "description": "Unique numeric missile ID. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "pCltDoFunc": {
       "type": "integer",
       "min": 0,
@@ -193,12 +185,6 @@
       "description": "Damage calculation parameter 2",
       "engineVerified": true
     },
-    "Vel": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base velocity. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MaxVel": {
       "type": "integer",
       "min": 0,
@@ -232,36 +218,6 @@
       "min": 0,
       "description": "Light radius",
       "engineVerified": true
-    },
-    "Flicker": {
-      "type": "integer",
-      "min": 0,
-      "description": "Random light radius variation (0=none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Red": {
-      "type": "integer",
-      "min": 0,
-      "description": "Red component of missile light color (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Green": {
-      "type": "integer",
-      "min": 0,
-      "description": "Green component of missile light color (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Blue": {
-      "type": "integer",
-      "min": 0,
-      "description": "Blue component of missile light color (0-255). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "InitSteps": {
-      "type": "integer",
-      "min": 0,
-      "description": "Number of initial movement steps on creation (used to skip travel time). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Activate": {
       "type": "integer",
@@ -298,28 +254,10 @@
       "description": "Animation speed divisor",
       "engineVerified": true
     },
-    "RandStart": {
-      "type": "integer",
-      "min": 0,
-      "description": "Random start frame range for visual variety. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "SubLoop": {
       "type": "boolean",
       "description": "Animation has a looping sub-section (1 = yes)",
       "engineVerified": true
-    },
-    "SubStart": {
-      "type": "integer",
-      "min": 0,
-      "description": "Frame where sub-loop begins. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "SubStop": {
-      "type": "integer",
-      "min": 0,
-      "description": "Frame where sub-loop ends. Not read by 1.13c engine",
-      "deprecated": true
     },
     "CollideType": {
       "type": "integer",
@@ -346,11 +284,6 @@
       "type": "boolean",
       "description": "Has standard collision detection (1 = yes)",
       "engineVerified": true
-    },
-    "ClientCol": {
-      "type": "boolean",
-      "description": "Client-side collision detection (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
     },
     "ClientSend": {
       "type": "boolean",
@@ -382,12 +315,6 @@
       "type": "integer",
       "description": "Z (height) offset from source position",
       "engineVerified": true
-    },
-    "Size": {
-      "type": "integer",
-      "min": 0,
-      "description": "Collision size (1=small, 2=medium, 3=large). Not read by 1.13c engine",
-      "deprecated": true
     },
     "SrcTown": {
       "type": "boolean",
@@ -421,11 +348,6 @@
       "description": "Explosion type (1=standard, 2=nova)",
       "engineVerified": true
     },
-    "Town": {
-      "type": "boolean",
-      "description": "Missile functions in town (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "NoUniqueMod": {
       "type": "boolean",
       "description": "Cannot be modified by unique monster affixes (1 = yes)",
@@ -436,12 +358,6 @@
       "min": 0,
       "description": "Cannot be affected by multi-shot modifier (1=normal, 2=strict)",
       "engineVerified": true
-    },
-    "Holy": {
-      "type": "integer",
-      "min": 0,
-      "description": "Holy missile type (1=default, 3=hits undead only). Not read by 1.13c engine",
-      "deprecated": true
     },
     "CanSlow": {
       "type": "boolean",
@@ -475,11 +391,6 @@
       "description": "Transparency mode (1=alpha, 2=additive blend)",
       "engineVerified": true
     },
-    "Qty": {
-      "type": "boolean",
-      "description": "Missile uses ammunition quantity (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Pierce": {
       "type": "boolean",
       "description": "Passes through targets (1 = yes)",
@@ -502,12 +413,6 @@
       "description": "Associated skill",
       "engineVerified": true
     },
-    "ResultFlags": {
-      "type": "integer",
-      "min": 0,
-      "description": "Bitfield for hit result flags (4=default hit, 9=stun). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "HitFlags": {
       "type": "integer",
       "min": 0,
@@ -520,11 +425,6 @@
       "description": "Bit shift for damage precision (typically 8 = 256ths)",
       "engineVerified": true
     },
-    "ApplyMastery": {
-      "type": "boolean",
-      "description": "Apply elemental mastery damage bonus (1 = yes). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "SrcDamage": {
       "type": "integer",
       "description": "Percentage of source weapon damage (128=100%, -1=none)",
@@ -534,12 +434,6 @@
       "type": "boolean",
       "description": "Halve two-handed weapon source damage (1 = yes)",
       "engineVerified": true
-    },
-    "SrcMissDmg": {
-      "type": "integer",
-      "min": 0,
-      "description": "Inherit damage from source missile (128=100%). Not read by 1.13c engine",
-      "deprecated": true
     },
     "MinDamage": {
       "type": "integer",
@@ -636,12 +530,6 @@
       "description": "Element type for damage",
       "engineVerified": true
     },
-    "EMin": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum elemental damage at base level. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "MinELev1": {
       "type": "integer",
       "min": 0,
@@ -671,12 +559,6 @@
       "min": 0,
       "description": "Min elemental damage bonus per level (levels 29+)",
       "engineVerified": true
-    },
-    "Emax": {
-      "type": "integer",
-      "min": 0,
-      "description": "Maximum elemental damage at base level. Not read by 1.13c engine",
-      "deprecated": true
     },
     "MaxELev1": {
       "type": "integer",
@@ -727,12 +609,6 @@
       "description": "Synergy calculation for elemental damage bonus",
       "engineVerified": true
     },
-    "ELen": {
-      "type": "integer",
-      "min": 0,
-      "description": "Base elemental effect duration in frames (poison/cold/stun). Not read by 1.13c engine",
-      "deprecated": true
-    },
     "ELevLen1": {
       "type": "integer",
       "min": 0,
@@ -750,12 +626,6 @@
       "min": 0,
       "description": "Duration bonus per level (levels 17-22)",
       "engineVerified": true
-    },
-    "HitClass": {
-      "type": "integer",
-      "min": 0,
-      "description": "Hit class controlling sound and visual on impact. Not read by 1.13c engine",
-      "deprecated": true
     },
     "NumDirections": {
       "type": "integer",
@@ -918,11 +788,6 @@
       "targetColumn": "Missile",
       "description": "Client-side sub-missile 4 on hit",
       "engineVerified": true
-    },
-    "EOL": {
-      "type": "boolean",
-      "description": "End of line marker (always 0). Not read by 1.13c engine",
-      "deprecated": true
     },
     "Velocity": {
       "type": "integer",

@@ -2,54 +2,12 @@
   "file": "superuniques.txt",
   "description": "Super unique monster definitions — named bosses with fixed spawn locations.",
   "columns": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier. Not read by 1.13c engine",
-      "deprecated": true
-    },
     "Class": {
       "type": "integer",
       "min": 0,
       "max": 409,
       "description": "Monster class index (references monstats.txt Id)",
       "engineVerified": true
-    },
-    "Mod1": {
-      "type": "integer",
-      "min": 5,
-      "max": 30,
-      "description": "First unique monster modifier index (references MonUMod.txt). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Mod2": {
-      "type": "integer",
-      "min": 0,
-      "max": 30,
-      "description": "Second unique monster modifier index (references MonUMod.txt, 0 = none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "Mod3": {
-      "type": "integer",
-      "min": 0,
-      "max": 24,
-      "description": "Third unique monster modifier index (references MonUMod.txt, 0 = none). Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MinGrp": {
-      "type": "integer",
-      "min": 0,
-      "max": 9,
-      "description": "Minimum group spawn count. Not read by 1.13c engine",
-      "deprecated": true
-    },
-    "MaxGrp": {
-      "type": "integer",
-      "min": 0,
-      "max": 9,
-      "description": "Maximum group spawn count. Not read by 1.13c engine",
-      "deprecated": true
     },
     "Utrans": {
       "type": "string",

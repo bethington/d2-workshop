@@ -5336,11 +5336,6 @@
       "type": "integer",
       "description": "Hell property 6 maximum value",
       "engineVerified": true
-    },
-    "*eol": {
-      "type": "integer",
-      "description": "End of line marker (not loaded by game)",
-      "deprecated": true
     }
   }
 }
