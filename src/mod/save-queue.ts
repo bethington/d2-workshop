@@ -175,8 +175,11 @@ export class SaveQueue {
     }
 
     try {
-      // Create backups first
-      await this.createBackups();
+      // Create backups first (if enabled)
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      if (config.get<boolean>("autoBackup", true)) {
+        await this.createBackups();
+      }
 
       const mpqChanges = this.changes.filter(
         (c): c is MpqFileChange => c.type === "mpq-file"
@@ -298,7 +301,10 @@ export class SaveQueue {
 
     // Auto-delete corresponding .bin file when publishing a .txt change
     // This forces the game engine to reparse the .txt on next launch
-    if (internalPath.toLowerCase().endsWith(".txt")) {
+    const autoDeleteBin = vscode.workspace
+      .getConfiguration("d2workshop")
+      .get<boolean>("autoDeleteBin", true);
+    if (autoDeleteBin && internalPath.toLowerCase().endsWith(".txt")) {
       const binPath = internalPath.replace(/\.txt$/i, ".bin");
       try {
         this.mpqManager.deleteFile(mpqName, binPath);

@@ -209,21 +209,86 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.browseGimpPath", async () => {
+      const result = await vscode.window.showOpenDialog({
+        canSelectFiles: true,
+        canSelectFolders: false,
+        canSelectMany: false,
+        title: "Select GIMP Executable",
+        filters: process.platform === "win32"
+          ? { Executables: ["exe"] }
+          : undefined,
+      });
+      if (!result?.[0]) return;
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      await config.update("gimpPath", result[0].fsPath, vscode.ConfigurationTarget.Global);
+      vscode.window.showInformationMessage(`GIMP path set to: ${result[0].fsPath}`);
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.browseGameExe", async () => {
+      const result = await vscode.window.showOpenDialog({
+        canSelectFiles: true,
+        canSelectFolders: false,
+        canSelectMany: false,
+        title: "Select Game Executable",
+        defaultUri: vscode.Uri.file(workspaceRoot),
+        filters: process.platform === "win32"
+          ? { Executables: ["exe"] }
+          : undefined,
+      });
+      if (!result?.[0]) return;
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      await config.update("gameExePath", result[0].fsPath, vscode.ConfigurationTarget.Workspace);
+      vscode.window.showInformationMessage(`Game executable set to: ${result[0].fsPath}`);
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.browseModPath", async () => {
+      const result = await vscode.window.showOpenDialog({
+        canSelectFiles: false,
+        canSelectFolders: true,
+        canSelectMany: false,
+        title: "Select Mod Folder",
+        defaultUri: vscode.Uri.file(workspaceRoot),
+      });
+      if (!result?.[0]) return;
+      const folderPath = result[0].fsPath;
+      const folderName = path.basename(folderPath);
+      modProfiles.addProfile(folderName, folderPath);
+      vscode.window.showInformationMessage(`Added mod profile: ${folderName}`);
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerCommand("d2workshop.switchMod", async () => {
       const profiles = modProfiles.getProfiles();
-      const items = profiles.map((p) => ({
-        label: p.name,
-        description: p.isBase ? "Base installation" : p.rootPath,
-        profile: p,
-        picked: p.rootPath === modProfiles.activeProfile.rootPath,
-      }));
+      const items: (vscode.QuickPickItem & { profile?: import("./mod/mod-profiles").ModProfile; action?: string })[] = [
+        ...profiles.map((p) => ({
+          label: p.name,
+          description: p.isBase ? "Base installation" : p.rootPath,
+          profile: p,
+          picked: p.rootPath === modProfiles.activeProfile.rootPath,
+        })),
+        { label: "$(folder-opened) Browse...", description: "Add a mod folder", action: "browse" },
+      ];
 
       const selected = await vscode.window.showQuickPick(items, {
         placeHolder: "Select a mod to work with",
         title: "Switch Mod",
       });
 
-      if (!selected || selected.profile.rootPath === modProfiles.activeProfile.rootPath) return;
+      if (!selected) return;
+
+      if (selected.action === "browse") {
+        await vscode.commands.executeCommand("d2workshop.browseModPath");
+        return;
+      }
+
+      const profile = selected.profile;
+      if (!profile || profile.rootPath === modProfiles.activeProfile.rootPath) return;
 
       // Close editors from the previous mod
       for (const tab of vscode.window.tabGroups.all.flatMap((g) => g.tabs)) {
@@ -234,15 +299,15 @@ export async function activate(context: vscode.ExtensionContext) {
       }
 
       // Switch all components to the new mod
-      const newRoot = selected.profile.rootPath;
-      await modProfiles.switchProfile(selected.profile);
+      const newRoot = profile.rootPath;
+      await modProfiles.switchProfile(profile);
       mpqManager.setRoot(newRoot);
       treeProvider.setRoot(newRoot);
       saveQueue.switchRoot(newRoot, mpqManager);
       launcher.setRoot(newRoot);
-      treeView.description = selected.profile.name;
+      treeView.description = profile.name;
 
-      vscode.window.showInformationMessage(`Switched to: ${selected.profile.name}`);
+      vscode.window.showInformationMessage(`Switched to: ${profile.name}`);
     })
   );
 

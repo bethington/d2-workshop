@@ -200,6 +200,18 @@
         "command": "d2workshop.refreshQueue",
         "title": "Refresh",
         "icon": "$(refresh)"
+      },
+      {
+        "command": "d2workshop.browseGimpPath",
+        "title": "D2 Workshop: Set GIMP Path..."
+      },
+      {
+        "command": "d2workshop.browseModPath",
+        "title": "D2 Workshop: Add Mod Folder..."
+      },
+      {
+        "command": "d2workshop.browseGameExe",
+        "title": "D2 Workshop: Set Game Executable..."
       }
     ],
     "menus": {
@@ -269,10 +281,25 @@
           "default": false,
           "description": "Automatically detect when GIMP saves changes to composite PNGs."
         },
+        "d2workshop.gameExePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Game.exe or Diablo II.exe. If empty, auto-detects from the workspace."
+        },
         "d2workshop.launchFlags": {
           "type": "string",
           "default": "-w",
           "description": "Command-line flags to pass to Game.exe when launching."
+        },
+        "d2workshop.autoBackup": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically create backups of files before publishing changes."
+        },
+        "d2workshop.autoDeleteBin": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically delete .bin files from MPQ when publishing .txt changes (forces engine reparse)."
         },
         "d2workshop.activeModPath": {
           "type": "string",

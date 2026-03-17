@@ -16,9 +16,14 @@ export class GameLauncher {
   async launch(): Promise<void> {
     const gameExe = this.findGameExe();
     if (!gameExe) {
-      vscode.window.showErrorMessage(
-        "Game.exe not found in workspace folder."
+      const browse = "Browse...";
+      const choice = await vscode.window.showErrorMessage(
+        "Game executable not found. Set the path manually.",
+        browse
       );
+      if (choice === browse) {
+        await vscode.commands.executeCommand("d2workshop.browseGameExe");
+      }
       return;
     }
 
@@ -40,6 +45,15 @@ export class GameLauncher {
   }
 
   private findGameExe(): string | null {
+    // Check user-configured path first
+    const configured = vscode.workspace
+      .getConfiguration("d2workshop")
+      .get<string>("gameExePath");
+    if (configured && fs.existsSync(configured)) {
+      return configured;
+    }
+
+    // Auto-detect from workspace
     const candidates = ["Game.exe", "Diablo II.exe"];
     for (const name of candidates) {
       const fullPath = path.join(this.workspaceRoot, name);
