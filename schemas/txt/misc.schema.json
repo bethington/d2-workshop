@@ -4,8 +4,6 @@
   "columns": {
     "rarity": {
       "type": "integer",
-      "min": 0,
-      "max": 999,
       "description": "Spawn rarity ratio (1/N chance)",
       "engineVerified": true
     },
@@ -17,7 +15,6 @@
     "speed": {
       "type": "integer",
       "description": "Speed reduction modifier (negative = faster)",
-      "min": 0,
       "engineVerified": true
     },
     "nodurability": {
@@ -32,22 +29,16 @@
     },
     "component": {
       "type": "integer",
-      "min": 7,
-      "max": 16,
       "description": "Animation layer component index",
       "engineVerified": true
     },
     "invwidth": {
       "type": "integer",
-      "min": 1,
-      "max": 2,
       "description": "Inventory grid width",
       "engineVerified": true
     },
     "invheight": {
       "type": "integer",
-      "min": 1,
-      "max": 3,
       "description": "Inventory grid height",
       "engineVerified": true
     },
@@ -90,15 +81,11 @@
     },
     "TMogMin": {
       "type": "integer",
-      "min": 0,
-      "max": 10,
       "description": "tmog minimum value",
       "engineVerified": true
     },
     "TMogMax": {
       "type": "integer",
-      "min": 0,
-      "max": 40,
       "description": "tmog maximum value",
       "engineVerified": true
     },
@@ -119,15 +106,11 @@
     },
     "transtbl": {
       "type": "integer",
-      "min": 3,
-      "max": 5,
       "description": "Transparency type code",
       "engineVerified": true
     },
     "lightradius": {
       "type": "integer",
-      "min": 0,
-      "max": 6,
       "description": "Light radius around item/character",
       "engineVerified": true
     },
@@ -143,536 +126,397 @@
     },
     "minstack": {
       "type": "integer",
-      "min": 0,
-      "max": 100,
       "description": "Minimum stack count",
       "engineVerified": true
     },
     "maxstack": {
       "type": "integer",
-      "min": 0,
-      "max": 5000,
       "description": "Maximum stack count",
       "engineVerified": true
     },
     "quest": {
       "type": "integer",
-      "min": 0,
-      "max": 23,
       "description": "Quest item class identifier",
       "engineVerified": true
     },
     "missiletype": {
       "type": "integer",
       "description": "Throwing weapon missile type reference",
-      "min": 0,
       "engineVerified": true
     },
     "spellicon": {
       "type": "integer",
-      "min": -1,
-      "max": -1,
       "description": "Spell icon index (-1 for none)",
       "engineVerified": true
     },
     "durwarning": {
       "type": "integer",
       "description": "Low durability warning threshold",
-      "min": 0,
       "engineVerified": true
     },
     "gemoffset": {
       "type": "integer",
       "description": "Gem/rune starting index in Gems.txt",
-      "min": 0,
       "engineVerified": true
     },
     "CharsiMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "charsi minimum value",
       "engineVerified": true
     },
     "CharsiMax": {
       "type": "integer",
-      "min": 0,
-      "max": 5,
       "description": "charsi maximum value",
       "engineVerified": true
     },
     "CharsiMagicMin": {
       "type": "integer",
       "description": "Charsi magic stock minimum",
-      "min": 0,
       "engineVerified": true
     },
     "CharsiMagicMax": {
       "type": "integer",
       "description": "Charsi magic stock maximum",
-      "min": 0,
       "engineVerified": true
     },
     "CharsiMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Charsi magic stock level",
       "engineVerified": true
     },
     "GheedMin": {
       "type": "integer",
-      "min": 0,
-      "max": 5,
       "description": "gheed minimum value",
       "engineVerified": true
     },
     "GheedMax": {
       "type": "integer",
-      "min": 0,
-      "max": 9,
       "description": "gheed maximum value",
       "engineVerified": true
     },
     "GheedMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 5,
       "description": "gheedmagic minimum value",
       "engineVerified": true
     },
     "GheedMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 9,
       "description": "gheedmagic maximum value",
       "engineVerified": true
     },
     "GheedMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Gheed magic stock level",
       "engineVerified": true
     },
     "AkaraMin": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "akara minimum value",
       "engineVerified": true
     },
     "AkaraMax": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "akara maximum value",
       "engineVerified": true
     },
     "AkaraMagicMin": {
       "type": "integer",
       "description": "akaramagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "AkaraMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "akaramagic maximum value",
       "engineVerified": true
     },
     "AkaraMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Akara magic stock level",
       "engineVerified": true
     },
     "FaraMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "fara minimum value",
       "engineVerified": true
     },
     "FaraMax": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "fara maximum value",
       "engineVerified": true
     },
     "FaraMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "faramagic minimum value",
       "engineVerified": true
     },
     "FaraMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "faramagic maximum value",
       "engineVerified": true
     },
     "FaraMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Fara magic stock level",
       "engineVerified": true
     },
     "LysanderMin": {
       "type": "integer",
-      "min": 0,
-      "max": 9,
       "description": "lysander minimum value",
       "engineVerified": true
     },
     "LysanderMax": {
       "type": "integer",
-      "min": 0,
-      "max": 16,
       "description": "lysander maximum value",
       "engineVerified": true
     },
     "LysanderMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 9,
       "description": "lysandermagic minimum value",
       "engineVerified": true
     },
     "LysanderMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 15,
       "description": "lysandermagic maximum value",
       "engineVerified": true
     },
     "LysanderMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Lysander magic stock level",
       "engineVerified": true
     },
     "DrognanMin": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "drognan minimum value",
       "engineVerified": true
     },
     "DrognanMax": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "drognan maximum value",
       "engineVerified": true
     },
     "DrognanMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "drognanmagic minimum value",
       "engineVerified": true
     },
     "DrognanMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "drognanmagic maximum value",
       "engineVerified": true
     },
     "DrognanMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Drognan magic stock level",
       "engineVerified": true
     },
     "HraltiMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "hralti minimum value",
       "engineVerified": true
     },
     "HraltiMax": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "hralti maximum value",
       "engineVerified": true
     },
     "HraltiMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "hraltimagic minimum value",
       "engineVerified": true
     },
     "HraltiMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "hraltimagic maximum value",
       "engineVerified": true
     },
     "HraltiMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Hratli magic stock level",
       "engineVerified": true
     },
     "AlkorMin": {
       "type": "integer",
-      "min": 0,
-      "max": 8,
       "description": "alkor minimum value",
       "engineVerified": true
     },
     "AlkorMax": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "alkor maximum value",
       "engineVerified": true
     },
     "AlkorMagicMin": {
       "type": "integer",
       "description": "alkormagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "AlkorMagicMax": {
       "type": "integer",
       "description": "alkormagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "AlkorMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Alkor magic stock level",
       "engineVerified": true
     },
     "OrmusMin": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "ormus minimum value",
       "engineVerified": true
     },
     "OrmusMax": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "ormus maximum value",
       "engineVerified": true
     },
     "OrmusMagicMin": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "ormusmagic minimum value",
       "engineVerified": true
     },
     "OrmusMagicMax": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "ormusmagic maximum value",
       "engineVerified": true
     },
     "OrmusMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Ormus magic stock level",
       "engineVerified": true
     },
     "ElzixMin": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "elzix minimum value",
       "engineVerified": true
     },
     "ElzixMax": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "elzix maximum value",
       "engineVerified": true
     },
     "ElzixMagicMin": {
       "type": "integer",
       "description": "elzixmagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "ElzixMagicMax": {
       "type": "integer",
       "description": "elzixmagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "ElzixMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Elzix magic stock level",
       "engineVerified": true
     },
     "AshearaMin": {
       "type": "integer",
-      "min": 0,
-      "max": 2,
       "description": "asheara minimum value",
       "engineVerified": true
     },
     "AshearaMax": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "asheara maximum value",
       "engineVerified": true
     },
     "AshearaMagicMin": {
       "type": "integer",
       "description": "ashearamagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "AshearaMagicMax": {
       "type": "integer",
       "description": "ashearamagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "AshearaMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Asheara magic stock level",
       "engineVerified": true
     },
     "CainMin": {
       "type": "integer",
-      "min": 0,
-      "max": 8,
       "description": "cain minimum value",
       "engineVerified": true
     },
     "CainMax": {
       "type": "integer",
-      "min": 0,
-      "max": 11,
       "description": "cain maximum value",
       "engineVerified": true
     },
     "CainMagicMin": {
       "type": "integer",
       "description": "cainmagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "CainMagicMax": {
       "type": "integer",
       "description": "cainmagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "CainMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Cain magic stock level",
       "engineVerified": true
     },
     "HalbuMin": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "halbu minimum value",
       "engineVerified": true
     },
     "HalbuMax": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "halbu maximum value",
       "engineVerified": true
     },
     "HalbuMagicMin": {
       "type": "integer",
       "description": "halbumagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "HalbuMagicMax": {
       "type": "integer",
       "description": "halbumagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "HalbuMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Halbu magic stock level",
       "engineVerified": true
     },
     "JamellaMin": {
       "type": "integer",
-      "min": 0,
-      "max": 8,
       "description": "jamella minimum value",
       "engineVerified": true
     },
     "JamellaMax": {
       "type": "integer",
-      "min": 0,
-      "max": 16,
       "description": "jamella maximum value",
       "engineVerified": true
     },
     "JamellaMagicMin": {
       "type": "integer",
       "description": "jamellamagic minimum value",
-      "min": 0,
       "engineVerified": true
     },
     "JamellaMagicMax": {
       "type": "integer",
       "description": "jamellamagic maximum value",
-      "min": 0,
       "engineVerified": true
     },
     "JamellaMagicLvl": {
       "type": "integer",
-      "min": 255,
-      "max": 255,
       "description": "Jamella magic stock level",
       "engineVerified": true
     },
     "Transform": {
       "type": "integer",
       "description": "Character model color palette transform",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "InvTrans": {
       "type": "integer",
       "description": "Inventory color transform palette index",
-      "min": 0,
       "engineVerified": true
     },
     "SkipName": {
@@ -682,28 +526,22 @@
     },
     "NightmareUpgrade": {
       "type": "integer",
-      "min": 0,
-      "max": 3,
       "description": "Nightmare difficulty replacement code",
       "engineVerified": true
     },
     "HellUpgrade": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "Hell difficulty replacement code",
       "engineVerified": true
     },
     "mindam": {
       "type": "integer",
       "description": "Minimum one-handed physical damage",
-      "min": 0,
       "engineVerified": true
     },
     "maxdam": {
       "type": "integer",
       "description": "Maximum one-handed physical damage",
-      "min": 0,
       "engineVerified": true
     },
     "Nameable": {
@@ -984,11 +822,6 @@
       "description": "Column read by game engine",
       "engineVerified": true
     },
-    "absorbs": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "block": {
       "type": "integer",
       "description": "Column read by game engine",
@@ -1074,41 +907,6 @@
       "description": "Column read by game engine",
       "engineVerified": true
     },
-    "invgfx6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "invgfx5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "invgfx4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "invgfx3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "invgfx2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "invgfx1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "varinvgfx": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "code": {
       "type": "string",
       "description": "Three-letter item code identifier",
@@ -1123,6 +921,66 @@
     "type": {
       "type": "string",
       "description": "Item type classification code",
+      "engineVerified": true
+    },
+    "BetterGem": {
+      "type": "string",
+      "description": "Code of next higher gem quality",
+      "engineVerified": true
+    },
+    "belt": {
+      "type": "integer",
+      "description": "Belt slot type for this item",
+      "engineVerified": true
+    },
+    "bitfield1": {
+      "type": "integer",
+      "description": "Bitfield flags for item behavior",
+      "engineVerified": true
+    },
+    "cost": {
+      "type": "integer",
+      "description": "Base cost in gold",
+      "engineVerified": true
+    },
+    "lArm": {
+      "type": "integer",
+      "description": "Left arm component index",
+      "engineVerified": true
+    },
+    "legs": {
+      "type": "integer",
+      "description": "Legs component index",
+      "engineVerified": true
+    },
+    "len": {
+      "type": "integer",
+      "description": "Effect length/duration in frames",
+      "engineVerified": true
+    },
+    "level": {
+      "type": "integer",
+      "description": "Base item level",
+      "engineVerified": true
+    },
+    "lspad": {
+      "type": "integer",
+      "description": "Left side padding",
+      "engineVerified": true
+    },
+    "qntwarning": {
+      "type": "integer",
+      "description": "Quantity warning threshold",
+      "engineVerified": true
+    },
+    "rArm": {
+      "type": "integer",
+      "description": "Right arm component index",
+      "engineVerified": true
+    },
+    "rspad": {
+      "type": "integer",
+      "description": "Right side padding",
       "engineVerified": true
     }
   }
