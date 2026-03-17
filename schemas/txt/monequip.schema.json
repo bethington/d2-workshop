@@ -1,0 +1,66 @@
+{
+  "file": "monequip.txt",
+  "description": "Monster equipment definitions - items, body locations, and modifiers assigned to monsters on spawn.",
+  "columns": {
+    "monster": {
+      "type": "string",
+      "description": "Monster type reference from monstats.txt",
+      "engineVerified": true
+    },
+    "level": {
+      "type": "integer",
+      "description": "Level threshold for this equipment set",
+      "engineVerified": true
+    },
+    "oninit": {
+      "type": "integer",
+      "description": "Whether equipment is assigned on monster init",
+      "engineVerified": true
+    },
+    "item1": {
+      "type": "string",
+      "description": "Item 1 code from armor/weapons/misc",
+      "engineVerified": true
+    },
+    "loc1": {
+      "type": "string",
+      "description": "Body location for item 1",
+      "engineVerified": true
+    },
+    "mod1": {
+      "type": "integer",
+      "description": "Quality modifier for item 1",
+      "engineVerified": true
+    },
+    "item2": {
+      "type": "string",
+      "description": "Item 2 code from armor/weapons/misc",
+      "engineVerified": true
+    },
+    "loc2": {
+      "type": "string",
+      "description": "Body location for item 2",
+      "engineVerified": true
+    },
+    "mod2": {
+      "type": "integer",
+      "description": "Quality modifier for item 2",
+      "engineVerified": true
+    },
+    "item3": {
+      "type": "string",
+      "description": "Item 3 code from armor/weapons/misc",
+      "engineVerified": true
+    },
+    "loc3": {
+      "type": "string",
+      "description": "Body location for item 3",
+      "engineVerified": true
+    },
+    "mod3": {
+      "type": "integer",
+      "description": "Quality modifier for item 3",
+      "engineVerified": true
+    }
+  }
+}
