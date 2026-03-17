@@ -1,320 +1,45 @@
 {
   "file": "itemstatcost.txt",
-  "description": "Stat definitions — controls how stats are stored, transmitted, saved, displayed on items, and how they interact via operators for derived bonuses.",
+  "description": "Stat definitions - controls how stats are stored, transmitted, saved, displayed on items, and how they interact via operators for derived bonuses.",
   "columns": {
+    "stat": {
+      "type": "string",
+      "description": "Stat name identifier used by the engine for lookup",
+      "engineVerified": true
+    },
     "send other": {
-      "type": "boolean",
-      "description": "Whether this stat is sent to other players in multiplayer (used for stats affecting visuals like faster cast rate)",
+      "type": "integer",
+      "description": "Whether this stat is sent to other players",
+      "engineVerified": true
+    },
+    "signed": {
+      "type": "integer",
+      "description": "Whether this stat value is treated as signed",
       "engineVerified": true
     },
     "send bits": {
       "type": "integer",
-      "description": "Number of bits used to transmit this stat between client and server during gameplay",
+      "description": "Number of bits used when transmitting this stat over network",
       "engineVerified": true
     },
     "send param bits": {
       "type": "integer",
-      "description": "Number of bits used to transmit the stat parameter (e.g., skill ID for per-skill stats) between client and server",
+      "description": "Number of parameter bits sent with this stat",
       "engineVerified": true
     },
     "updateanimrate": {
-      "type": "boolean",
-      "description": "Whether changing this stat triggers a recalculation of animation speeds (used by IAS, FCR, FHR, FBR)",
+      "type": "integer",
+      "description": "Whether changing this stat updates animation rate",
       "engineVerified": true
     },
     "saved": {
-      "type": "boolean",
-      "description": "Whether this stat is saved to the character/item save file. Unsaved stats are recalculated at load",
-      "engineVerified": true
-    },
-    "csvparam": {
       "type": "integer",
-      "description": "Number of bits allocated for the stat parameter in the character save file",
+      "description": "Whether this stat is saved to character file",
       "engineVerified": true
     },
-    "minaccr": {
+    "csvsigned": {
       "type": "integer",
-      "description": "Minimum accumulation value — the minimum the stat can be reduced to by negative modifiers",
-      "engineVerified": true
-    },
-    "encode": {
-      "type": "integer",
-      "description": "Encoding type for compound stats: 0=normal, 1=encode as (value * param), 2=encode with skill/level/charge, 3=encode with skill/level/chance",
-      "engineVerified": true
-    },
-    "1.09-save bits": {
-      "type": "integer",
-      "description": "Number of bits allocated for this stat in v1.09 save files (legacy compatibility)",
-      "engineVerified": true
-    },
-    "1.09-save add": {
-      "type": "integer",
-      "description": "Offset added to saved value in v1.09 save files to allow negative values (legacy compatibility)",
-      "engineVerified": true
-    },
-    "save bits": {
-      "type": "integer",
-      "description": "Number of bits allocated for this stat value in item save data. Maximum stat value = 2^SaveBits - 1",
-      "engineVerified": true
-    },
-    "save add": {
-      "type": "integer",
-      "description": "Offset added when saving to allow negative stat ranges. Effective range: -SaveAdd to 2^SaveBits - 1 - SaveAdd",
-      "engineVerified": true
-    },
-    "save param bits": {
-      "type": "integer",
-      "description": "Number of bits allocated for the stat parameter in item save data (e.g., skill index for per-skill bonuses)",
-      "engineVerified": true
-    },
-    "keepzero": {
-      "type": "boolean",
-      "description": "Whether to keep this stat on the item even when its value is zero (prevents pruning of zero-value stats)",
-      "engineVerified": true
-    },
-    "op param": {
-      "type": "integer",
-      "description": "Parameter for the operator formula — typically a bit shift divisor, so the formula is statvalue * opbase / 2^opparam",
-      "engineVerified": true
-    },
-    "op stat1": {
-      "type": "ref",
-      "description": "First stat that receives the operator bonus calculated from this stat and op base",
-      "target": "itemstatcost.txt",
-      "targetColumn": "Stat",
-      "engineVerified": true
-    },
-    "op stat2": {
-      "type": "ref",
-      "description": "Second stat that receives the operator bonus (optional)",
-      "target": "itemstatcost.txt",
-      "targetColumn": "Stat",
-      "engineVerified": true
-    },
-    "op stat3": {
-      "type": "ref",
-      "description": "Third stat that receives the operator bonus (optional)",
-      "target": "itemstatcost.txt",
-      "targetColumn": "Stat",
-      "engineVerified": true
-    },
-    "direct": {
-      "type": "boolean",
-      "description": "Whether this stat is applied directly to the character rather than being stored on the item",
-      "engineVerified": true
-    },
-    "maxstat": {
-      "type": "ref",
-      "description": "Associated maximum stat (e.g., maxhp for hitpoints, maxmana for mana) — used for stats that have current/max pairs",
-      "target": "itemstatcost.txt",
-      "targetColumn": "Stat",
-      "engineVerified": true
-    },
-    "itemspecific": {
-      "type": "boolean",
-      "description": "Whether this stat is stored per-item rather than aggregated on the character (e.g., item durability)",
-      "engineVerified": true
-    },
-    "damagerelated": {
-      "type": "boolean",
-      "description": "Whether this stat is damage-related and should be recalculated when weapon setup changes",
-      "engineVerified": true
-    },
-    "itemevent1": {
-      "type": "string",
-      "description": "First item event trigger (e.g., 'kill', 'hit', 'gethit') that activates this stat's callback",
-      "engineVerified": true
-    },
-    "itemeventfunc1": {
-      "type": "integer",
-      "description": "Function ID executed when itemevent1 triggers",
-      "engineVerified": true
-    },
-    "itemevent2": {
-      "type": "string",
-      "description": "Second item event trigger that activates this stat's callback",
-      "engineVerified": true
-    },
-    "itemeventfunc2": {
-      "type": "integer",
-      "description": "Function ID executed when itemevent2 triggers",
-      "engineVerified": true
-    },
-    "descpriority": {
-      "type": "integer",
-      "description": "Display priority on item tooltips — higher values are shown earlier/higher on the item description",
-      "engineVerified": true
-    },
-    "descfunc": {
-      "type": "integer",
-      "min": 0,
-      "max": 28,
-      "description": "Function ID controlling how this stat is formatted in item descriptions (e.g., 1=+value, 2=value%, 3=value, 4=+value%, etc.)",
-      "engineVerified": true
-    },
-    "descval": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Where the numeric value appears in the description: 0=hidden, 1=before the string, 2=after the string",
-      "engineVerified": true
-    },
-    "descstrpos": {
-      "type": "string",
-      "description": "TBL string key used when the stat value is positive (e.g., 'strModEnhancedDamage')",
-      "engineVerified": true
-    },
-    "descstrneg": {
-      "type": "string",
-      "description": "TBL string key used when the stat value is negative",
-      "engineVerified": true
-    },
-    "descstr2": {
-      "type": "string",
-      "description": "Secondary TBL string key appended after the main description (e.g., used for 'to Mana after each Kill')",
-      "engineVerified": true
-    },
-    "dgrpfunc": {
-      "type": "integer",
-      "description": "Function ID used to format the grouped description when all stats in the dgrp have equal values",
-      "engineVerified": true
-    },
-    "dgrpval": {
-      "type": "integer",
-      "min": 0,
-      "max": 2,
-      "description": "Where the numeric value appears in the grouped description: 0=hidden, 1=before string, 2=after string",
-      "engineVerified": true
-    },
-    "dgrpstrpos": {
-      "type": "string",
-      "description": "TBL string key for the grouped description when the combined value is positive",
-      "engineVerified": true
-    },
-    "dgrpstrneg": {
-      "type": "string",
-      "description": "TBL string key for the grouped description when the combined value is negative",
-      "engineVerified": true
-    },
-    "dgrpstr2": {
-      "type": "string",
-      "description": "Secondary TBL string key appended after the grouped description",
-      "engineVerified": true
-    },
-    "bodyloc2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "bodyloc1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "repair": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "equiv2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "equiv1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "gamble": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "properties": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "stat7": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func7": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "stat6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func6": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "stat5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func5": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "stat4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func4": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func3": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func2": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "func1": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "add func": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cost add": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cost mult": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ID": {
-      "type": "integer",
-      "description": "Stat ID number",
-      "engineVerified": true
-    },
-    "Stat": {
-      "type": "string",
-      "description": "Stat name identifier",
-      "required": true,
+      "description": "Whether CSV value is treated as signed",
       "engineVerified": true
     },
     "csvbits": {
@@ -322,34 +47,214 @@
       "description": "Number of bits used in CSV storage",
       "engineVerified": true
     },
-    "csvsigned": {
-      "type": "boolean",
-      "description": "Whether CSV value is signed",
+    "csvparam": {
+      "type": "integer",
+      "description": "Number of parameter bits in CSV storage",
+      "engineVerified": true
+    },
+    "divide": {
+      "type": "integer",
+      "description": "Divisor applied to stat value",
+      "engineVerified": true
+    },
+    "multiply": {
+      "type": "integer",
+      "description": "Multiplier applied to stat value",
+      "engineVerified": true
+    },
+    "add": {
+      "type": "integer",
+      "description": "Value added to stat after multiply/divide",
+      "engineVerified": true
+    },
+    "valshift": {
+      "type": "integer",
+      "description": "Bit shift applied to stat value",
+      "engineVerified": true
+    },
+    "save bits": {
+      "type": "integer",
+      "description": "Number of bits used when saving this stat",
+      "engineVerified": true
+    },
+    "save add": {
+      "type": "integer",
+      "description": "Value added before saving (bias for unsigned storage)",
+      "engineVerified": true
+    },
+    "save param bits": {
+      "type": "integer",
+      "description": "Number of parameter bits saved",
+      "engineVerified": true
+    },
+    "1.09-save bits": {
+      "type": "integer",
+      "description": "Number of save bits in 1.09 format (backwards compat)",
+      "engineVerified": true
+    },
+    "1.09-save add": {
+      "type": "integer",
+      "description": "Save add value in 1.09 format (backwards compat)",
+      "engineVerified": true
+    },
+    "minaccr": {
+      "type": "integer",
+      "description": "Minimum accrued value for this stat",
+      "engineVerified": true
+    },
+    "encode": {
+      "type": "integer",
+      "description": "Encoding type for stat storage",
+      "engineVerified": true
+    },
+    "fmin": {
+      "type": "integer",
+      "description": "Whether stat has a functional minimum",
+      "engineVerified": true
+    },
+    "damagerelated": {
+      "type": "integer",
+      "description": "Whether this stat is damage-related",
+      "engineVerified": true
+    },
+    "itemspecific": {
+      "type": "integer",
+      "description": "Whether this stat is item-specific (not transferable)",
+      "engineVerified": true
+    },
+    "direct": {
+      "type": "integer",
+      "description": "Whether stat is applied directly without calculation",
+      "engineVerified": true
+    },
+    "fcallback": {
+      "type": "integer",
+      "description": "Whether stat has a function callback on change",
+      "engineVerified": true
+    },
+    "maxstat": {
+      "type": "string",
+      "description": "Reference to stat that acts as the maximum for this stat",
+      "engineVerified": true
+    },
+    "itemevent1": {
+      "type": "string",
+      "description": "Event 1 that triggers this stat's item effect",
+      "engineVerified": true
+    },
+    "itemeventfunc1": {
+      "type": "integer",
+      "description": "Function called when item event 1 fires",
+      "engineVerified": true
+    },
+    "itemevent2": {
+      "type": "string",
+      "description": "Event 2 that triggers this stat's item effect",
+      "engineVerified": true
+    },
+    "itemeventfunc2": {
+      "type": "integer",
+      "description": "Function called when item event 2 fires",
+      "engineVerified": true
+    },
+    "descpriority": {
+      "type": "integer",
+      "description": "Display priority for stat description sorting",
+      "engineVerified": true
+    },
+    "descfunc": {
+      "type": "integer",
+      "description": "Description function ID for displaying stat value",
+      "engineVerified": true
+    },
+    "descval": {
+      "type": "integer",
+      "description": "How the value is shown in description (0=none, 1=value, 2=percent)",
+      "engineVerified": true
+    },
+    "descstrpos": {
+      "type": "string",
+      "description": "String key for positive stat description",
+      "engineVerified": true
+    },
+    "descstrneg": {
+      "type": "string",
+      "description": "String key for negative stat description",
+      "engineVerified": true
+    },
+    "descstr2": {
+      "type": "string",
+      "description": "Secondary string key for stat description",
+      "engineVerified": true
+    },
+    "dgrp": {
+      "type": "integer",
+      "description": "Description group ID for grouping related stats",
+      "engineVerified": true
+    },
+    "dgrpfunc": {
+      "type": "integer",
+      "description": "Description group function ID",
+      "engineVerified": true
+    },
+    "dgrpval": {
+      "type": "integer",
+      "description": "Description group value display mode",
+      "engineVerified": true
+    },
+    "dgrpstrpos": {
+      "type": "string",
+      "description": "String key for positive group description",
+      "engineVerified": true
+    },
+    "dgrpstrneg": {
+      "type": "string",
+      "description": "String key for negative group description",
+      "engineVerified": true
+    },
+    "dgrpstr2": {
+      "type": "string",
+      "description": "Secondary string key for group description",
+      "engineVerified": true
+    },
+    "keepzero": {
+      "type": "integer",
+      "description": "Whether to keep stat when value is zero",
       "engineVerified": true
     },
     "op": {
       "type": "integer",
-      "description": "Operator type for stat calculation",
+      "description": "Operator type for derived stat calculation",
+      "engineVerified": true
+    },
+    "op param": {
+      "type": "integer",
+      "description": "Parameter for operator calculation",
       "engineVerified": true
     },
     "op base": {
       "type": "string",
-      "description": "Base stat for operator calculation",
+      "description": "Base stat reference for operator calculation",
       "engineVerified": true
     },
-    "stat1": {
+    "op stat1": {
       "type": "string",
-      "description": "Related stat 1 for compound stats",
+      "description": "Operator target stat 1",
       "engineVerified": true
     },
-    "stat2": {
+    "op stat2": {
       "type": "string",
-      "description": "Related stat 2 for compound stats",
+      "description": "Operator target stat 2",
       "engineVerified": true
     },
-    "stat3": {
+    "op stat3": {
       "type": "string",
-      "description": "Related stat 3 for compound stats",
+      "description": "Operator target stat 3",
+      "engineVerified": true
+    },
+    "stuff": {
+      "type": "integer",
+      "description": "Miscellaneous data field",
       "engineVerified": true
     }
   }
