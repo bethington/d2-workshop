@@ -1,170 +1,115 @@
 {
   "file": "soundenviron.txt",
-  "description": "Environmental sound effect definitions per area type.",
+  "description": "Sound environment definitions - ambient sounds, music, footstep materials, and EAX reverb parameters per area type. Loaded by D2Client.dll.",
   "columns": {
-    "Handle": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Identifier for the sound environment configuration",
-      "engineVerified": true
-    },
-    "Index": {
-      "type": "integer",
-      "min": 0,
-      "max": 35,
-      "description": "Unique index identifier",
-      "engineVerified": true
-    },
     "Song": {
       "type": "integer",
-      "min": 0,
-      "max": 3576,
       "description": "Background music reference from sounds.txt index",
-      "engineVerified": true
-    },
-    "Day Amb": {
-      "type": "integer",
-      "min": 0,
-      "max": 63,
-      "description": "Daytime ambient sound from sounds.txt index",
-      "engineVerified": true
-    },
-    "Night Amb": {
-      "type": "integer",
-      "min": 0,
-      "max": 64,
-      "description": "Nighttime ambient sound from sounds.txt index",
       "engineVerified": true
     },
     "Day Event": {
       "type": "integer",
-      "min": 0,
-      "max": 185,
       "description": "Daytime random event sound from sounds.txt index",
       "engineVerified": true
     },
     "Night Event": {
       "type": "integer",
-      "min": 0,
-      "max": 190,
       "description": "Nighttime random event sound from sounds.txt index",
       "engineVerified": true
     },
     "Event Delay": {
       "type": "integer",
-      "min": 150,
-      "max": 800,
       "description": "Delay between random event sounds in frames",
       "engineVerified": true
     },
     "Indoors": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Whether this is an indoor area (affects sound processing)",
       "engineVerified": true
     },
     "Material 1": {
       "type": "integer",
-      "min": 0,
-      "max": 4,
       "description": "Primary ground material type for footstep sounds",
       "engineVerified": true
     },
     "Material 2": {
       "type": "integer",
-      "min": 0,
-      "max": 5,
       "description": "Secondary ground material type for footstep sounds",
       "engineVerified": true
     },
     "EAX Environ": {
       "type": "integer",
-      "min": 0,
-      "max": 17,
       "description": "EAX preset environment type for 3D audio reverb",
       "engineVerified": true
     },
     "EAX Env Size": {
       "type": "integer",
-      "min": 0,
-      "max": 100000,
       "description": "EAX environment size parameter",
       "engineVerified": true
     },
     "EAX Env Diff": {
       "type": "integer",
-      "min": 0,
-      "max": 1000,
       "description": "EAX environment diffusion",
       "engineVerified": true
     },
     "EAX Room Vol": {
       "type": "integer",
-      "min": -10000,
-      "max": -1000,
       "description": "EAX room volume attenuation in millibels",
       "engineVerified": true
     },
     "EAX Room HF": {
       "type": "integer",
-      "min": -10000,
-      "max": -237,
       "description": "EAX room high-frequency attenuation in millibels",
       "engineVerified": true
     },
     "EAX Decay Time": {
       "type": "integer",
-      "min": 0,
-      "max": 4750,
       "description": "EAX reverb decay time in milliseconds",
       "engineVerified": true
     },
     "EAX Decay HF": {
       "type": "integer",
-      "min": 0,
-      "max": 1167,
       "description": "EAX high-frequency decay ratio",
       "engineVerified": true
     },
     "EAX Reflect": {
       "type": "integer",
-      "min": -2780,
-      "max": 0,
       "description": "EAX early reflections level in millibels",
       "engineVerified": true
     },
     "EAX Reflect Delay": {
       "type": "integer",
-      "min": 0,
-      "max": 226,
       "description": "EAX early reflections delay in milliseconds",
       "engineVerified": true
     },
     "EAX Reverb": {
       "type": "integer",
-      "min": -1434,
-      "max": 441,
       "description": "EAX late reverb level in millibels",
       "engineVerified": true
     },
     "EAX Rev Delay": {
       "type": "integer",
-      "min": 0,
-      "max": 100,
       "description": "EAX late reverb delay in milliseconds",
       "engineVerified": true
     },
     "EAX Room Roll": {
       "type": "integer",
       "description": "EAX room rolloff factor for distance attenuation",
-      "min": 0,
       "engineVerified": true
     },
     "EAX Air Absorb": {
       "type": "integer",
-      "min": -5000,
-      "max": 0,
       "description": "EAX air absorption high-frequency attenuation",
+      "engineVerified": true
+    },
+    "Day Ambience": {
+      "type": "integer",
+      "description": "Daytime ambient sound ID",
+      "engineVerified": true
+    },
+    "Night Ambience": {
+      "type": "integer",
+      "description": "Nighttime ambient sound ID",
       "engineVerified": true
     }
   }
