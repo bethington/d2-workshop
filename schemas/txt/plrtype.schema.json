@@ -1,31 +1,15 @@
 {
   "file": "plrtype.txt",
-  "description": "Player animation type definitions.",
+  "description": "Player animation type definitions - maps player type names to animation tokens. Merged with plrmode.txt at load time.",
   "columns": {
-    "Name": {
-      "type": "enum",
-      "values": [
-        "Amazon",
-        "Barbarian",
-        "Necromancer",
-        "Paladin",
-        "Sorceress"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
+    "name": {
+      "type": "string",
+      "description": "Player type name (e.g. Amazon, Sorceress, Paladin)",
       "engineVerified": true
     },
-    "Token": {
-      "type": "enum",
-      "values": [
-        "AM",
-        "BA",
-        "NE",
-        "PA",
-        "SO"
-      ],
-      "description": "Animation token identifier",
+    "token": {
+      "type": "string",
+      "description": "Animation token code (e.g. AM, SO, PA, NE, BA)",
       "engineVerified": true
     }
   }
