@@ -1,48 +1,10 @@
 {
   "file": "hitclass.txt",
-  "description": "Hit/impact sound class definitions.",
+  "description": "Hit/impact sound class code lookup table. Engine uses row index to map hit class IDs to their short codes.",
   "columns": {
-    "Hit Class": {
-      "type": "enum",
-      "values": [
-        "Bow",
-        "Claw",
-        "Club",
-        "Crossbow",
-        "Hand To Hand",
-        "None",
-        "One Hand Swing vs. Large",
-        "One Hand Swing vs. Small",
-        "One Hand Thrust",
-        "Overlay",
-        "Staff",
-        "Two Hand Swing vs. Large",
-        "Two Hand Swing vs. Small",
-        "Two Hand Thrust"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Impact sound effect class",
-      "engineVerified": true
-    },
-    "Code": {
-      "type": "enum",
-      "values": [
-        "1hsl",
-        "1hss",
-        "1ht",
-        "2hsl",
-        "2hss",
-        "2ht",
-        "bow",
-        "claw",
-        "club",
-        "hth",
-        "over",
-        "staf",
-        "xbow"
-      ],
-      "description": "Hit class code identifier",
+    "code": {
+      "type": "string",
+      "description": "Hit class code identifier (e.g. hth, bow, 1hss, 2hsl, club, staf)",
       "engineVerified": true
     }
   }
