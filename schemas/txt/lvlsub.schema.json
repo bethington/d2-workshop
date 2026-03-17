@@ -1,102 +1,115 @@
 {
   "file": "lvlsub.txt",
-  "description": "Level substitution parameters for random map generation.",
+  "description": "Level substitution definitions - tile replacement rules with probability, trial counts, and grid parameters.",
   "columns": {
+    "Type": {
+      "type": "integer",
+      "description": "Substitution type classification",
+      "engineVerified": true
+    },
+    "File": {
+      "type": "string",
+      "description": "DS1 tile file path for this substitution",
+      "engineVerified": true
+    },
+    "CheckAll": {
+      "type": "integer",
+      "description": "Whether to check all tiles for substitution",
+      "engineVerified": true
+    },
     "BordType": {
       "type": "integer",
-      "min": -1,
-      "max": 2,
-      "description": "Border type for tile matching (-1 = any, 0 = none, 1-2 = specific edge types)",
-      "engineVerified": true
-    },
-    "GridSize": {
-      "type": "boolean",
-      "description": "Whether substitution snaps to grid boundaries",
-      "engineVerified": true
-    },
-    "Prob0": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Probability weight (0-100) for substitution group 0",
-      "engineVerified": true
-    },
-    "Prob1": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Probability weight (0-100) for substitution group 1",
-      "engineVerified": true
-    },
-    "Prob2": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Probability weight (0-100) for substitution group 2",
-      "engineVerified": true
-    },
-    "Prob3": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Probability weight (0-100) for substitution group 3",
-      "engineVerified": true
-    },
-    "Prob4": {
-      "type": "integer",
-      "min": 0,
-      "max": 100,
-      "description": "Probability weight (0-100) for substitution group 4",
-      "engineVerified": true
-    },
-    "File6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Files": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "description": "Border type for substitution matching",
       "engineVerified": true
     },
     "Dt1Mask": {
       "type": "integer",
-      "description": "DT1 tile mask for substitution",
+      "description": "DT1 tile mask for level type file selection",
       "engineVerified": true
     },
-    "Name": {
-      "type": "string",
-      "description": "Substitution name identifier",
-      "engineVerified": true
-    },
-    "Type": {
+    "GridSize": {
       "type": "integer",
-      "description": "Substitution type classification",
+      "description": "Grid size for substitution placement",
+      "engineVerified": true
+    },
+    "Prob0": {
+      "type": "integer",
+      "description": "Probability for substitution group 0",
+      "engineVerified": true
+    },
+    "Trials0": {
+      "type": "integer",
+      "description": "Number of placement trials for group 0",
+      "engineVerified": true
+    },
+    "Max0": {
+      "type": "integer",
+      "description": "Maximum placements for group 0",
+      "engineVerified": true
+    },
+    "Prob1": {
+      "type": "integer",
+      "description": "Probability for substitution group 1",
+      "engineVerified": true
+    },
+    "Trials1": {
+      "type": "integer",
+      "description": "Number of placement trials for group 1",
+      "engineVerified": true
+    },
+    "Max1": {
+      "type": "integer",
+      "description": "Maximum placements for group 1",
+      "engineVerified": true
+    },
+    "Prob2": {
+      "type": "integer",
+      "description": "Probability for substitution group 2",
+      "engineVerified": true
+    },
+    "Trials2": {
+      "type": "integer",
+      "description": "Number of placement trials for group 2",
+      "engineVerified": true
+    },
+    "Max2": {
+      "type": "integer",
+      "description": "Maximum placements for group 2",
+      "engineVerified": true
+    },
+    "Prob3": {
+      "type": "integer",
+      "description": "Probability for substitution group 3",
+      "engineVerified": true
+    },
+    "Trials3": {
+      "type": "integer",
+      "description": "Number of placement trials for group 3",
+      "engineVerified": true
+    },
+    "Max3": {
+      "type": "integer",
+      "description": "Maximum placements for group 3",
+      "engineVerified": true
+    },
+    "Prob4": {
+      "type": "integer",
+      "description": "Probability for substitution group 4",
+      "engineVerified": true
+    },
+    "Trials4": {
+      "type": "integer",
+      "description": "Number of placement trials for group 4",
+      "engineVerified": true
+    },
+    "Max4": {
+      "type": "integer",
+      "description": "Maximum placements for group 4",
+      "engineVerified": true
+    },
+    "Expansion": {
+      "type": "integer",
+      "description": "Whether this substitution is expansion-only content",
       "engineVerified": true
     }
   }
