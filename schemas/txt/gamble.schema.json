@@ -1,17 +1,10 @@
 {
   "file": "gamble.txt",
-  "description": "Gambling item pool definitions — items available from gambling NPCs.",
+  "description": "Gambling item pool — items available from gambling NPCs. Engine resolves each code to an item record and sorts by level.",
   "columns": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
-      "engineVerified": true
-    },
     "code": {
       "type": "string",
-      "description": "Unique 3-4 character item code",
+      "description": "Item code resolved to item record via binary search (e.g. cap, skp, hlm)",
       "engineVerified": true
     }
   }
