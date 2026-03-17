@@ -1,200 +1,120 @@
 {
   "file": "lvlprest.txt",
-  "description": "Level preset definitions — pre-built map sections.",
+  "description": "Level preset definitions - pre-built map sections with tile files, sizing, and population rules.",
   "columns": {
+    "Def": {
+      "type": "integer",
+      "description": "Preset definition ID",
+      "engineVerified": true
+    },
     "LevelId": {
-      "type": "string",
-      "description": "Reference to level ID in Levels.txt that uses this preset",
+      "type": "integer",
+      "description": "Level ID this preset belongs to",
       "engineVerified": true
     },
     "Populate": {
-      "type": "boolean",
-      "description": "Whether to populate this preset with monsters and objects",
+      "type": "integer",
+      "description": "Whether this preset populates with monsters/objects",
+      "engineVerified": true
+    },
+    "Logicals": {
+      "type": "integer",
+      "description": "Whether logical group connections are used",
+      "engineVerified": true
+    },
+    "Outdoors": {
+      "type": "integer",
+      "description": "Whether this preset is an outdoor area",
       "engineVerified": true
     },
     "Animate": {
-      "type": "boolean",
-      "description": "Whether animated tiles are enabled in this preset",
+      "type": "integer",
+      "description": "Whether animated tiles are enabled",
+      "engineVerified": true
+    },
+    "KillEdge": {
+      "type": "integer",
+      "description": "Whether edge tiles are removed",
       "engineVerified": true
     },
     "FillBlanks": {
-      "type": "boolean",
-      "description": "Whether to fill blank spaces with floor tiles",
+      "type": "integer",
+      "description": "Whether blank areas are filled with default tiles",
       "engineVerified": true
     },
     "Expansion": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Whether this preset is expansion-only content",
       "engineVerified": true
     },
-    "File 32": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 31": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 7": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 8": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 9": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 10": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 11": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 12": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 13": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 14": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 15": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 16": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 17": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 18": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 19": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 20": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 21": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 22": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 23": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 24": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 25": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 26": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 27": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 28": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 29": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "File 30": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Def": {
+    "SizeX": {
       "type": "integer",
-      "description": "Default preset definition ID",
+      "description": "Horizontal size of the preset in tiles",
       "engineVerified": true
     },
-    "Name": {
+    "SizeY": {
+      "type": "integer",
+      "description": "Vertical size of the preset in tiles",
+      "engineVerified": true
+    },
+    "AutoMap": {
+      "type": "integer",
+      "description": "Whether automap reveals this preset",
+      "engineVerified": true
+    },
+    "Scan": {
+      "type": "integer",
+      "description": "Scan range for preset placement",
+      "engineVerified": true
+    },
+    "Pops": {
+      "type": "integer",
+      "description": "Number of pop-up wall segments",
+      "engineVerified": true
+    },
+    "PopPad": {
+      "type": "integer",
+      "description": "Padding around pop-up segments",
+      "engineVerified": true
+    },
+    "Files": {
+      "type": "integer",
+      "description": "Number of DS1 tile files used by this preset",
+      "engineVerified": true
+    },
+    "File1": {
       "type": "string",
-      "description": "Preset level name identifier",
+      "description": "DS1 tile file 1 path",
+      "engineVerified": true
+    },
+    "File2": {
+      "type": "string",
+      "description": "DS1 tile file 2 path",
+      "engineVerified": true
+    },
+    "File3": {
+      "type": "string",
+      "description": "DS1 tile file 3 path",
+      "engineVerified": true
+    },
+    "File4": {
+      "type": "string",
+      "description": "DS1 tile file 4 path",
+      "engineVerified": true
+    },
+    "File5": {
+      "type": "string",
+      "description": "DS1 tile file 5 path",
+      "engineVerified": true
+    },
+    "File6": {
+      "type": "string",
+      "description": "DS1 tile file 6 path",
+      "engineVerified": true
+    },
+    "Dt1Mask": {
+      "type": "integer",
+      "description": "DT1 tile mask for level type file selection",
       "engineVerified": true
     }
   }
