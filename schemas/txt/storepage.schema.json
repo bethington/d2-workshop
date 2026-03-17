@@ -1,29 +1,10 @@
 {
   "file": "storepage.txt",
-  "description": "NPC store page layout definitions.",
+  "description": "Store page lookup table - maps store page codes to internal indices for shop UI tab assignment.",
   "columns": {
-    "Store Page": {
-      "type": "enum",
-      "values": [
-        "Armor Page",
-        "Magic Page",
-        "Misc Page",
-        "Weapons Page"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Display name of the NPC store inventory tab",
-      "engineVerified": true
-    },
-    "Code": {
-      "type": "enum",
-      "values": [
-        "armo",
-        "mag",
-        "misc",
-        "weap"
-      ],
-      "description": "Short code for the store page tab",
+    "code": {
+      "type": "string",
+      "description": "Store page code identifier (used by item types to specify which shop tab items appear in)",
       "engineVerified": true
     }
   }
