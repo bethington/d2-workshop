@@ -5,112 +5,112 @@
     "Song": {
       "type": "integer",
       "description": "Background music reference from sounds.txt index",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Day Event": {
       "type": "integer",
       "description": "Daytime random event sound from sounds.txt index",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Night Event": {
       "type": "integer",
       "description": "Nighttime random event sound from sounds.txt index",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Event Delay": {
       "type": "integer",
       "description": "Delay between random event sounds in frames",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Indoors": {
       "type": "integer",
       "description": "Whether this is an indoor area (affects sound processing)",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Material 1": {
       "type": "integer",
       "description": "Primary ground material type for footstep sounds",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Material 2": {
       "type": "integer",
       "description": "Secondary ground material type for footstep sounds",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Environ": {
       "type": "integer",
       "description": "EAX preset environment type for 3D audio reverb",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Env Size": {
       "type": "integer",
       "description": "EAX environment size parameter",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Env Diff": {
       "type": "integer",
       "description": "EAX environment diffusion",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Room Vol": {
       "type": "integer",
       "description": "EAX room volume attenuation in millibels",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Room HF": {
       "type": "integer",
       "description": "EAX room high-frequency attenuation in millibels",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Decay Time": {
       "type": "integer",
       "description": "EAX reverb decay time in milliseconds",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Decay HF": {
       "type": "integer",
       "description": "EAX high-frequency decay ratio",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Reflect": {
       "type": "integer",
       "description": "EAX early reflections level in millibels",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Reflect Delay": {
       "type": "integer",
       "description": "EAX early reflections delay in milliseconds",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Reverb": {
       "type": "integer",
       "description": "EAX late reverb level in millibels",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Rev Delay": {
       "type": "integer",
       "description": "EAX late reverb delay in milliseconds",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Room Roll": {
       "type": "integer",
       "description": "EAX room rolloff factor for distance attenuation",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "EAX Air Absorb": {
       "type": "integer",
       "description": "EAX air absorption high-frequency attenuation",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Day Ambience": {
       "type": "integer",
       "description": "Daytime ambient sound ID",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     },
     "Night Ambience": {
       "type": "integer",
       "description": "Nighttime ambient sound ID",
-      "engineVerified": true
+      "engineVerified": "D2Client.dll"
     }
   }
 }
