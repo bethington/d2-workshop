@@ -98,8 +98,8 @@
       "engineVerified": true
     },
     "Id": {
-      "type": "integer",
-      "description": "Monster sound entry ID",
+      "type": "string",
+      "description": "Monster sound set identifier",
       "engineVerified": true
     },
     "Init": {
