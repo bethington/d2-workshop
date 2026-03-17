@@ -1,12 +1,7 @@
 {
   "file": "shrines.txt",
-  "description": "Shrine effect definitions — duration, stat modifiers, and visual effects.",
+  "description": "Shrine definitions - effect codes, arguments, duration, rarity, level requirements, and display text for activatable shrines.",
   "columns": {
-    "ShrineFunction": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "Arg0": {
       "type": "integer",
       "description": "Shrine effect argument 0",
@@ -22,19 +17,9 @@
       "description": "Shrine type code",
       "engineVerified": true
     },
-    "DurationInFrames": {
-      "type": "integer",
-      "description": "Effect duration in frames",
-      "engineVerified": true
-    },
     "LevelMin": {
       "type": "integer",
       "description": "Minimum level to activate shrine",
-      "engineVerified": true
-    },
-    "Name": {
-      "type": "string",
-      "description": "Shrine name identifier",
       "engineVerified": true
     },
     "effectclass": {
@@ -42,24 +27,29 @@
       "description": "Visual effect class",
       "engineVerified": true
     },
-    "niftytime": {
-      "type": "integer",
-      "description": "Special time parameter for shrine effect",
-      "engineVerified": true
-    },
     "rarity": {
       "type": "integer",
       "description": "Shrine spawn rarity weight",
       "engineVerified": true
     },
-    "reset on enter": {
-      "type": "boolean",
-      "description": "Whether shrine resets on level entry",
-      "engineVerified": true
-    },
     "view name": {
       "type": "string",
       "description": "Display name string key",
+      "engineVerified": true
+    },
+    "Duration in frames": {
+      "type": "integer",
+      "description": "Shrine effect duration in game frames",
+      "engineVerified": true
+    },
+    "niftyphrase": {
+      "type": "string",
+      "description": "Flavor text string displayed on activation",
+      "engineVerified": true
+    },
+    "reset time in minutes": {
+      "type": "integer",
+      "description": "Time in minutes before shrine resets",
       "engineVerified": true
     }
   }
