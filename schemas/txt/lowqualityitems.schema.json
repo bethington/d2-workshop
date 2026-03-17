@@ -1,18 +1,10 @@
 {
   "file": "lowqualityitems.txt",
-  "description": "Low quality item prefix definitions (Crude, Cracked, etc.).",
+  "description": "Low quality item prefix definitions (Crude, Cracked, etc.). Engine resolves each name to a string table index.",
   "columns": {
     "Name": {
-      "type": "enum",
-      "values": [
-        "Cracked",
-        "Crude",
-        "Damaged",
-        "Low Quality"
-      ],
-      "required": true,
-      "unique": true,
-      "description": "Internal name identifier",
+      "type": "string",
+      "description": "Low quality prefix name resolved to string table index (e.g. Crude, Cracked, Damaged, Low Quality)",
       "engineVerified": true
     }
   }
