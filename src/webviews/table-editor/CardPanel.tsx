@@ -24,7 +24,7 @@ interface ColumnSchema {
   target?: string;
   targetColumn?: string;
   description?: string;
-  engineVerified?: boolean;
+  engineVerified?: boolean | string;
   deprecated?: boolean;
 }
 
@@ -132,7 +132,7 @@ function CardField({
     <div className={`card-field ${schema?.required && !value ? "field-required" : ""}`}>
       <div className="field-header">
         <label className="field-label">
-          {schema?.engineVerified && <span className="verified-badge" title="Verified: read by D2 game engine (v1.13c D2Common.dll)">&#x2713;</span>}
+          {schema?.engineVerified && <span className="verified-badge" title={`Verified: read by D2 game engine (v1.13c ${typeof schema.engineVerified === 'string' ? schema.engineVerified : 'D2Common.dll'})`}>&#x2713;</span>}
           {header}
         </label>
         {typeLabel && <span className="field-type">{typeLabel}</span>}

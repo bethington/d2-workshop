@@ -23,7 +23,7 @@ interface ColumnSchema {
   target?: string;
   targetColumn?: string;
   description?: string;
-  engineVerified?: boolean;
+  engineVerified?: boolean | string;
   deprecated?: boolean;
 }
 
@@ -262,7 +262,7 @@ export function TableEditor() {
           header: () => (
             <div className="header-cell">
               <span className="header-name">
-                {colSchema?.engineVerified && <span className="verified-badge" title="Verified: read by D2 game engine (v1.13c D2Common.dll)">&#x2713;</span>}
+                {colSchema?.engineVerified && <span className="verified-badge" title={`Verified: read by D2 game engine (v1.13c ${typeof colSchema.engineVerified === 'string' ? colSchema.engineVerified : 'D2Common.dll'})`}>&#x2713;</span>}
                 {header}
               </span>
               {colSchema && (
