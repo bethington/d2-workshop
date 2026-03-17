@@ -33,7 +33,7 @@
       "engineVerified": true
     },
     "noGfxHitTest": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Disable pixel-accurate hit testing, use bounding box only",
       "engineVerified": true
     },
@@ -53,37 +53,37 @@
       "engineVerified": true
     },
     "noMap": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Do not display on automap",
       "engineVerified": true
     },
     "isSel": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Monster is selectable (default)",
       "engineVerified": true
     },
     "isAtt": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Monster is attackable",
       "engineVerified": true
     },
     "critter": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Monster is a critter (passive, non-hostile)",
       "engineVerified": true
     },
     "deadCol": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Corpse has collision",
       "engineVerified": true
     },
     "unflatDead": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Corpse is not flattened on ground",
       "engineVerified": true
     },
     "noUniqueShift": {
-      "type": "boolean",
+      "type": "integer",
       "description": "Disable unique monster color palette shift",
       "engineVerified": true
     },
@@ -113,33 +113,12 @@
       "engineVerified": true
     },
     "ResurrectMode": {
-      "type": "enum",
+      "type": "string",
       "description": "Animation mode token used when resurrected",
-      "values": [
-        "DT",
-        "NU",
-        "WL",
-        "GH",
-        "A1",
-        "A2",
-        "BL",
-        "SC",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "DD",
-        "KB",
-        "xx",
-        "RN",
-        ""
-      ],
       "engineVerified": true
     },
     "ResurrectSkill": {
-      "type": "ref",
-      "target": "skills.txt",
-      "targetColumn": "skill",
+      "type": "string",
       "description": "Skill used when monster resurrects",
       "engineVerified": true
     },
@@ -165,82 +144,82 @@
       "engineVerified": true
     },
     "HD": {
-      "type": "integer",
+      "type": "string",
       "description": "Head component",
       "engineVerified": true
     },
     "TR": {
-      "type": "integer",
+      "type": "string",
       "description": "Torso component",
       "engineVerified": true
     },
     "LG": {
-      "type": "integer",
+      "type": "string",
       "description": "Legs component",
       "engineVerified": true
     },
     "RA": {
-      "type": "integer",
+      "type": "string",
       "description": "Right arm component",
       "engineVerified": true
     },
     "LA": {
-      "type": "integer",
+      "type": "string",
       "description": "Left arm component",
       "engineVerified": true
     },
     "RH": {
-      "type": "integer",
+      "type": "string",
       "description": "Right hand component",
       "engineVerified": true
     },
     "LH": {
-      "type": "integer",
+      "type": "string",
       "description": "Left hand component",
       "engineVerified": true
     },
     "SH": {
-      "type": "integer",
+      "type": "string",
       "description": "Shield component",
       "engineVerified": true
     },
     "S1": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 1 component",
       "engineVerified": true
     },
     "S2": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 2 component",
       "engineVerified": true
     },
     "S3": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 3 component",
       "engineVerified": true
     },
     "S4": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 4 component",
       "engineVerified": true
     },
     "S5": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 5 component",
       "engineVerified": true
     },
     "S6": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 6 component",
       "engineVerified": true
     },
     "S7": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 7 component",
       "engineVerified": true
     },
     "S8": {
-      "type": "integer",
+      "type": "string",
       "description": "Special 8 component",
       "engineVerified": true
     },
@@ -525,12 +504,12 @@
       "engineVerified": true
     },
     "BodyPart": {
-      "type": "integer",
+      "type": "string",
       "description": "Whether monster drops body parts",
       "engineVerified": true
     },
     "Heart": {
-      "type": "integer",
+      "type": "string",
       "description": "Whether monster drops hearts",
       "engineVerified": true
     },
