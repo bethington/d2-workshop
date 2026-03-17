@@ -1,21 +1,15 @@
 {
   "file": "objtype.txt",
-  "description": "Object type classification definitions.",
+  "description": "Object type classification definitions - maps object type names to animation tokens. Merged with objmode.txt at load time.",
   "columns": {
-    "Name": {
+    "name": {
       "type": "string",
-      "required": true,
-      "description": "Internal name identifier",
+      "description": "Object type name (e.g. Player, Monster, Object, Missile, Item)",
       "engineVerified": true
     },
-    "Token": {
+    "token": {
       "type": "string",
-      "description": "Animation token identifier",
-      "engineVerified": true
-    },
-    "Beta": {
-      "type": "boolean",
-      "description": "Beta content flag (unused)",
+      "description": "Animation token code",
       "engineVerified": true
     }
   }
