@@ -312,6 +312,16 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "*Runes": {
+      "type": "string",
+      "description": "Runeword display name",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Runeword name string key",
+      "engineVerified": true
     }
   }
 }

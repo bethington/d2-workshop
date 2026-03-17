@@ -746,6 +746,141 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Act": {
+      "type": "integer",
+      "description": "Act where this object appears",
+      "engineVerified": true
+    },
+    "Beta": {
+      "type": "boolean",
+      "description": "Whether this is beta content",
+      "engineVerified": true
+    },
+    "Class": {
+      "type": "integer",
+      "description": "Object class type",
+      "engineVerified": true
+    },
+    "HasAnimationMode0": {
+      "type": "boolean",
+      "description": "Has animation mode 0",
+      "engineVerified": true
+    },
+    "HasAnimationMode1": {
+      "type": "boolean",
+      "description": "Has animation mode 1",
+      "engineVerified": true
+    },
+    "HasAnimationMode2": {
+      "type": "boolean",
+      "description": "Has animation mode 2",
+      "engineVerified": true
+    },
+    "HasAnimationMode3": {
+      "type": "boolean",
+      "description": "Has animation mode 3",
+      "engineVerified": true
+    },
+    "HasAnimationMode4": {
+      "type": "boolean",
+      "description": "Has animation mode 4",
+      "engineVerified": true
+    },
+    "HasAnimationMode5": {
+      "type": "boolean",
+      "description": "Has animation mode 5",
+      "engineVerified": true
+    },
+    "HasAnimationMode6": {
+      "type": "boolean",
+      "description": "Has animation mode 6",
+      "engineVerified": true
+    },
+    "HasAnimationMode7": {
+      "type": "boolean",
+      "description": "Has animation mode 7",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique object ID",
+      "engineVerified": true
+    },
+    "Left": {
+      "type": "integer",
+      "description": "Left boundary offset",
+      "engineVerified": true
+    },
+    "Light": {
+      "type": "integer",
+      "description": "Light radius emitted",
+      "engineVerified": true
+    },
+    "LightB": {
+      "type": "integer",
+      "description": "Light blue component",
+      "engineVerified": true
+    },
+    "LightG": {
+      "type": "integer",
+      "description": "Light green component",
+      "engineVerified": true
+    },
+    "LightR": {
+      "type": "integer",
+      "description": "Light red component",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Object name identifier",
+      "engineVerified": true
+    },
+    "Overlay": {
+      "type": "boolean",
+      "description": "Whether object uses overlay drawing",
+      "engineVerified": true
+    },
+    "SizeX": {
+      "type": "integer",
+      "description": "Horizontal size in cells",
+      "engineVerified": true
+    },
+    "SizeY": {
+      "type": "integer",
+      "description": "Vertical size in cells",
+      "engineVerified": true
+    },
+    "Speed": {
+      "type": "integer",
+      "description": "Animation speed",
+      "engineVerified": true
+    },
+    "Start": {
+      "type": "integer",
+      "description": "Starting animation frame",
+      "engineVerified": true
+    },
+    "Top": {
+      "type": "integer",
+      "description": "Top boundary offset",
+      "engineVerified": true
+    },
+    "Trans": {
+      "type": "integer",
+      "description": "Transparency level",
+      "engineVerified": true
+    },
+    "Trap": {
+      "type": "boolean",
+      "description": "Whether this object is a trap",
+      "engineVerified": true
+    },
+    "Type": {
+      "type": "integer",
+      "description": "Object type classification",
+      "engineVerified": true
     }
   }
 }

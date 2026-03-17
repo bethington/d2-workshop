@@ -18,6 +18,146 @@
       "type": "integer",
       "description": "Death sound delay in frames",
       "engineVerified": true
+    },
+    "Attack1": {
+      "type": "string",
+      "description": "Sound for primary attack",
+      "engineVerified": true
+    },
+    "Attack2": {
+      "type": "string",
+      "description": "Sound for secondary attack",
+      "engineVerified": true
+    },
+    "CvtMo1": {
+      "type": "string",
+      "description": "Conversion mode 1",
+      "engineVerified": true
+    },
+    "CvtMo2": {
+      "type": "string",
+      "description": "Conversion mode 2",
+      "engineVerified": true
+    },
+    "CvtMo3": {
+      "type": "string",
+      "description": "Conversion mode 3",
+      "engineVerified": true
+    },
+    "CvtSk1": {
+      "type": "string",
+      "description": "Conversion skill 1",
+      "engineVerified": true
+    },
+    "CvtSk2": {
+      "type": "string",
+      "description": "Conversion skill 2",
+      "engineVerified": true
+    },
+    "CvtSk3": {
+      "type": "string",
+      "description": "Conversion skill 3",
+      "engineVerified": true
+    },
+    "CvtTgt1": {
+      "type": "string",
+      "description": "Conversion target 1",
+      "engineVerified": true
+    },
+    "CvtTgt2": {
+      "type": "string",
+      "description": "Conversion target 2",
+      "engineVerified": true
+    },
+    "CvtTgt3": {
+      "type": "string",
+      "description": "Conversion target 3",
+      "engineVerified": true
+    },
+    "Death": {
+      "type": "string",
+      "description": "Death sound",
+      "engineVerified": true
+    },
+    "Flee": {
+      "type": "string",
+      "description": "Flee/retreat sound",
+      "engineVerified": true
+    },
+    "Footstep": {
+      "type": "string",
+      "description": "Footstep sound",
+      "engineVerified": true
+    },
+    "FootstepLayer": {
+      "type": "string",
+      "description": "Footstep layer sound",
+      "engineVerified": true
+    },
+    "FsOff": {
+      "type": "integer",
+      "description": "Footstep sound offset frame",
+      "engineVerified": true
+    },
+    "HitSound": {
+      "type": "string",
+      "description": "Sound when hit",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Monster sound entry ID",
+      "engineVerified": true
+    },
+    "Init": {
+      "type": "string",
+      "description": "Initialization sound",
+      "engineVerified": true
+    },
+    "Neutral": {
+      "type": "string",
+      "description": "Neutral/idle sound",
+      "engineVerified": true
+    },
+    "NeutralTime": {
+      "type": "integer",
+      "description": "Neutral sound interval in frames",
+      "engineVerified": true
+    },
+    "Skill1": {
+      "type": "string",
+      "description": "Skill 1 sound",
+      "engineVerified": true
+    },
+    "Skill2": {
+      "type": "string",
+      "description": "Skill 2 sound",
+      "engineVerified": true
+    },
+    "Skill3": {
+      "type": "string",
+      "description": "Skill 3 sound",
+      "engineVerified": true
+    },
+    "Skill4": {
+      "type": "string",
+      "description": "Skill 4 sound",
+      "engineVerified": true
+    },
+    "Taunt": {
+      "type": "string",
+      "description": "Taunt sound",
+      "engineVerified": true
+    },
+    "Weapon1": {
+      "type": "string",
+      "description": "Weapon 1 sound",
+      "engineVerified": true
+    },
+    "Weapon2": {
+      "type": "string",
+      "description": "Weapon 2 sound",
+      "engineVerified": true
     }
   }
 }

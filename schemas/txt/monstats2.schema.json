@@ -147,6 +147,27 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "BaseW": {
+      "type": "integer",
+      "description": "Base weapon class",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "string",
+      "description": "Monster stats2 identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "SizeX": {
+      "type": "integer",
+      "description": "Horizontal collision size",
+      "engineVerified": true
+    },
+    "SizeY": {
+      "type": "integer",
+      "description": "Vertical collision size",
+      "engineVerified": true
     }
   }
 }

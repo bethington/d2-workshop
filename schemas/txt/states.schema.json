@@ -237,6 +237,127 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "armblue": {
+      "type": "integer",
+      "description": "Blue color shift for armor",
+      "engineVerified": true
+    },
+    "attblue": {
+      "type": "integer",
+      "description": "Blue color shift for attack",
+      "engineVerified": true
+    },
+    "aura": {
+      "type": "boolean",
+      "description": "Whether this state is an aura",
+      "engineVerified": true
+    },
+    "curable": {
+      "type": "boolean",
+      "description": "Whether this state can be cured",
+      "engineVerified": true
+    },
+    "curse": {
+      "type": "boolean",
+      "description": "Whether this state is a curse",
+      "engineVerified": true
+    },
+    "damblue": {
+      "type": "integer",
+      "description": "Blue color shift for damage",
+      "engineVerified": true
+    },
+    "disguise": {
+      "type": "boolean",
+      "description": "Whether this state disguises the unit",
+      "engineVerified": true
+    },
+    "exp": {
+      "type": "integer",
+      "description": "Experience modifier",
+      "engineVerified": true
+    },
+    "group": {
+      "type": "integer",
+      "description": "State group for mutual exclusion",
+      "engineVerified": true
+    },
+    "hide": {
+      "type": "boolean",
+      "description": "Whether this state hides the unit",
+      "engineVerified": true
+    },
+    "id": {
+      "type": "integer",
+      "description": "State ID number",
+      "engineVerified": true
+    },
+    "monstaydeath": {
+      "type": "boolean",
+      "description": "Whether state persists through monster death",
+      "engineVerified": true
+    },
+    "pgsv": {
+      "type": "boolean",
+      "description": "Whether state is saved per game",
+      "engineVerified": true
+    },
+    "plrstaydeath": {
+      "type": "boolean",
+      "description": "Whether state persists through player death",
+      "engineVerified": true
+    },
+    "rcblue": {
+      "type": "integer",
+      "description": "Blue color shift for cold resistance",
+      "engineVerified": true
+    },
+    "restrict": {
+      "type": "integer",
+      "description": "Restriction flags",
+      "engineVerified": true
+    },
+    "rfblue": {
+      "type": "integer",
+      "description": "Blue color shift for fire resistance",
+      "engineVerified": true
+    },
+    "rlblue": {
+      "type": "integer",
+      "description": "Blue color shift for lightning resistance",
+      "engineVerified": true
+    },
+    "rpblue": {
+      "type": "integer",
+      "description": "Blue color shift for poison resistance",
+      "engineVerified": true
+    },
+    "shatter": {
+      "type": "boolean",
+      "description": "Whether state causes shatter on death",
+      "engineVerified": true
+    },
+    "skill": {
+      "type": "string",
+      "description": "Associated skill reference",
+      "engineVerified": true
+    },
+    "stambarblue": {
+      "type": "integer",
+      "description": "Blue color shift for stamina bar",
+      "engineVerified": true
+    },
+    "state": {
+      "type": "string",
+      "description": "State name identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "transform": {
+      "type": "boolean",
+      "description": "Whether state transforms the unit",
+      "engineVerified": true
     }
   }
 }

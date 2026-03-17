@@ -305,6 +305,52 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "ID": {
+      "type": "integer",
+      "description": "Stat ID number",
+      "engineVerified": true
+    },
+    "Stat": {
+      "type": "string",
+      "description": "Stat name identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "csvbits": {
+      "type": "integer",
+      "description": "Number of bits used in CSV storage",
+      "engineVerified": true
+    },
+    "csvsigned": {
+      "type": "boolean",
+      "description": "Whether CSV value is signed",
+      "engineVerified": true
+    },
+    "op": {
+      "type": "integer",
+      "description": "Operator type for stat calculation",
+      "engineVerified": true
+    },
+    "op base": {
+      "type": "string",
+      "description": "Base stat for operator calculation",
+      "engineVerified": true
+    },
+    "stat1": {
+      "type": "string",
+      "description": "Related stat 1 for compound stats",
+      "engineVerified": true
+    },
+    "stat2": {
+      "type": "string",
+      "description": "Related stat 2 for compound stats",
+      "engineVerified": true
+    },
+    "stat3": {
+      "type": "string",
+      "description": "Related stat 3 for compound stats",
+      "engineVerified": true
     }
   }
 }

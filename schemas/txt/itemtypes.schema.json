@@ -51,6 +51,142 @@
       "max": 2,
       "description": "Cost calculation formula type (0 = standard, 1 = armor, 2 = weapon)",
       "engineVerified": true
+    },
+    "Body": {
+      "type": "boolean",
+      "description": "Whether this type can be worn on body",
+      "engineVerified": true
+    },
+    "BodyLoc1": {
+      "type": "string",
+      "description": "Primary body location for equipping",
+      "engineVerified": true
+    },
+    "BodyLoc2": {
+      "type": "string",
+      "description": "Secondary body location for equipping",
+      "engineVerified": true
+    },
+    "Class": {
+      "type": "string",
+      "description": "Character class restriction",
+      "engineVerified": true
+    },
+    "Code": {
+      "type": "string",
+      "description": "Item type code identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "Equiv1": {
+      "type": "string",
+      "description": "Equivalent item type 1 for inheritance",
+      "engineVerified": true
+    },
+    "Equiv2": {
+      "type": "string",
+      "description": "Equivalent item type 2 for inheritance",
+      "engineVerified": true
+    },
+    "ItemType": {
+      "type": "string",
+      "description": "Item type name",
+      "engineVerified": true
+    },
+    "MaxSock1": {
+      "type": "integer",
+      "description": "Max sockets at item level 1-25",
+      "engineVerified": true
+    },
+    "MaxSock25": {
+      "type": "integer",
+      "description": "Max sockets at item level 25-40",
+      "engineVerified": true
+    },
+    "MaxSock40": {
+      "type": "integer",
+      "description": "Max sockets at item level 40+",
+      "engineVerified": true
+    },
+    "MaxSockets1": {
+      "type": "integer",
+      "description": "Maximum sockets tier 1",
+      "engineVerified": true
+    },
+    "MaxSockets2": {
+      "type": "integer",
+      "description": "Maximum sockets tier 2",
+      "engineVerified": true
+    },
+    "MaxSockets3": {
+      "type": "integer",
+      "description": "Maximum sockets tier 3",
+      "engineVerified": true
+    },
+    "Quiver": {
+      "type": "string",
+      "description": "Quiver type used with this weapon",
+      "engineVerified": true
+    },
+    "Rarity": {
+      "type": "integer",
+      "description": "Rarity weight for item generation",
+      "engineVerified": true
+    },
+    "Repair": {
+      "type": "boolean",
+      "description": "Whether this item type can be repaired",
+      "engineVerified": true
+    },
+    "Shoots": {
+      "type": "string",
+      "description": "Missile type this weapon shoots",
+      "engineVerified": true
+    },
+    "StorePage": {
+      "type": "string",
+      "description": "Store page where this item appears",
+      "engineVerified": true
+    },
+    "VarInvGfx": {
+      "type": "integer",
+      "description": "Number of variable inventory graphics",
+      "engineVerified": true
+    },
+    "invgfx1": {
+      "type": "string",
+      "description": "Inventory graphic variant 1",
+      "engineVerified": true
+    },
+    "invgfx2": {
+      "type": "string",
+      "description": "Inventory graphic variant 2",
+      "engineVerified": true
+    },
+    "invgfx3": {
+      "type": "string",
+      "description": "Inventory graphic variant 3",
+      "engineVerified": true
+    },
+    "invgfx4": {
+      "type": "string",
+      "description": "Inventory graphic variant 4",
+      "engineVerified": true
+    },
+    "invgfx5": {
+      "type": "string",
+      "description": "Inventory graphic variant 5",
+      "engineVerified": true
+    },
+    "invgfx6": {
+      "type": "string",
+      "description": "Inventory graphic variant 6",
+      "engineVerified": true
+    },
+    "varinvgfx": {
+      "type": "integer",
+      "description": "Variable inventory graphic count",
+      "engineVerified": true
     }
   }
 }

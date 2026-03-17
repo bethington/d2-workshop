@@ -1081,6 +1081,22 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "code": {
+      "type": "string",
+      "description": "Three-letter item code identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Item name string key",
+      "engineVerified": true
+    },
+    "type": {
+      "type": "string",
+      "description": "Item type classification code",
+      "engineVerified": true
     }
   }
 }

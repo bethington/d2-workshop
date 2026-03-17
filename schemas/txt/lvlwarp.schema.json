@@ -31,6 +31,31 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Warp name identifier",
+      "engineVerified": true
+    },
+    "SelectDX": {
+      "type": "integer",
+      "description": "Selection box delta X offset",
+      "engineVerified": true
+    },
+    "SelectDY": {
+      "type": "integer",
+      "description": "Selection box delta Y offset",
+      "engineVerified": true
+    },
+    "SelectX": {
+      "type": "integer",
+      "description": "Selection box X position",
+      "engineVerified": true
+    },
+    "SelectY": {
+      "type": "integer",
+      "description": "Selection box Y position",
+      "engineVerified": true
     }
   }
 }

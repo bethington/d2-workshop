@@ -1023,6 +1023,36 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Magic prefix name string key",
+      "engineVerified": true
+    },
+    "level": {
+      "type": "integer",
+      "description": "Internal affix level",
+      "engineVerified": true
+    },
+    "levelreq": {
+      "type": "integer",
+      "description": "Required character level to use",
+      "engineVerified": true
+    },
+    "rare": {
+      "type": "boolean",
+      "description": "Whether this affix can appear on rare items",
+      "engineVerified": true
+    },
+    "spawnable": {
+      "type": "boolean",
+      "description": "Whether this affix can spawn on items",
+      "engineVerified": true
+    },
+    "version": {
+      "type": "integer",
+      "description": "Game version this affix was introduced",
+      "engineVerified": true
     }
   }
 }

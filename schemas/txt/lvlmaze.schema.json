@@ -1,5 +1,36 @@
 {
   "file": "lvlmaze.txt",
   "description": "Level maze generation parameters.",
-  "columns": {}
+  "columns": {
+    "Level": {
+      "type": "integer",
+      "description": "Level ID this maze definition applies to",
+      "engineVerified": true
+    },
+    "Merge": {
+      "type": "integer",
+      "description": "Whether maze rooms merge",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Maze name identifier",
+      "engineVerified": true
+    },
+    "Rooms": {
+      "type": "integer",
+      "description": "Number of rooms in the maze",
+      "engineVerified": true
+    },
+    "SizeX": {
+      "type": "integer",
+      "description": "Horizontal size of the maze",
+      "engineVerified": true
+    },
+    "SizeY": {
+      "type": "integer",
+      "description": "Vertical size of the maze",
+      "engineVerified": true
+    }
+  }
 }

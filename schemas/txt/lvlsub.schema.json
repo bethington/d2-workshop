@@ -83,6 +83,21 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Dt1Mask": {
+      "type": "integer",
+      "description": "DT1 tile mask for substitution",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Substitution name identifier",
+      "engineVerified": true
+    },
+    "Type": {
+      "type": "integer",
+      "description": "Substitution type classification",
+      "engineVerified": true
     }
   }
 }

@@ -2663,6 +2663,26 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "code": {
+      "type": "string",
+      "description": "Gem item code",
+      "engineVerified": true
+    },
+    "letter": {
+      "type": "string",
+      "description": "Letter displayed in item name for rune/gem",
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Gem name string key",
+      "engineVerified": true
+    },
+    "nummods": {
+      "type": "integer",
+      "description": "Number of modifiers applied by this gem",
+      "engineVerified": true
     }
   }
 }

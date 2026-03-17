@@ -153,6 +153,26 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "BlockFactor": {
+      "type": "integer",
+      "description": "Block chance reduction factor for this difficulty",
+      "engineVerified": true
+    },
+    "DropFactor": {
+      "type": "integer",
+      "description": "Item drop rate factor for this difficulty",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Difficulty name identifier",
+      "engineVerified": true
+    },
+    "ResistPenaltyNonExpansion": {
+      "type": "integer",
+      "description": "Resistance penalty for non-expansion characters",
+      "engineVerified": true
     }
   }
 }

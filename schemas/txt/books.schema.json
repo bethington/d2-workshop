@@ -45,6 +45,21 @@
       "ref": "skills.txt",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Book name string key",
+      "engineVerified": true
+    },
+    "SpellIcon": {
+      "type": "integer",
+      "description": "Spell icon index for the book",
+      "engineVerified": true
+    },
+    "pSpell": {
+      "type": "integer",
+      "description": "Spell function pointer index",
+      "engineVerified": true
     }
   }
 }

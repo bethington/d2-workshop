@@ -318,6 +318,331 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "*ID": {
+      "type": "integer",
+      "description": "Set item ID for reference",
+      "engineVerified": true
+    },
+    "cost add": {
+      "type": "integer",
+      "description": "Added cost for this set item",
+      "engineVerified": true
+    },
+    "cost mult": {
+      "type": "integer",
+      "description": "Cost multiplier for this set item",
+      "engineVerified": true
+    },
+    "dropsfxframe": {
+      "type": "integer",
+      "description": "Frame when drop sound plays",
+      "engineVerified": true
+    },
+    "dropsound": {
+      "type": "string",
+      "description": "Sound played when item drops",
+      "engineVerified": true
+    },
+    "index": {
+      "type": "string",
+      "description": "Set item name string key",
+      "engineVerified": true
+    },
+    "invfile": {
+      "type": "string",
+      "description": "Inventory graphic file",
+      "engineVerified": true
+    },
+    "invtransform": {
+      "type": "string",
+      "description": "Inventory color transform",
+      "engineVerified": true
+    },
+    "item": {
+      "type": "string",
+      "description": "Base item code",
+      "engineVerified": true
+    },
+    "lvl": {
+      "type": "integer",
+      "description": "Item level",
+      "engineVerified": true
+    },
+    "lvl req": {
+      "type": "integer",
+      "description": "Required character level",
+      "engineVerified": true
+    },
+    "set": {
+      "type": "string",
+      "description": "Set name this item belongs to",
+      "engineVerified": true
+    },
+    "usesound": {
+      "type": "string",
+      "description": "Sound played when item is used",
+      "engineVerified": true
+    },
+    "prop1": {
+      "type": "string",
+      "description": "Property 1 code",
+      "engineVerified": true
+    },
+    "par1": {
+      "type": "integer",
+      "description": "Property 1 parameter",
+      "engineVerified": true
+    },
+    "min1": {
+      "type": "integer",
+      "description": "Property 1 minimum value",
+      "engineVerified": true
+    },
+    "max1": {
+      "type": "integer",
+      "description": "Property 1 maximum value",
+      "engineVerified": true
+    },
+    "prop2": {
+      "type": "string",
+      "description": "Property 2 code",
+      "engineVerified": true
+    },
+    "par2": {
+      "type": "integer",
+      "description": "Property 2 parameter",
+      "engineVerified": true
+    },
+    "min2": {
+      "type": "integer",
+      "description": "Property 2 minimum value",
+      "engineVerified": true
+    },
+    "max2": {
+      "type": "integer",
+      "description": "Property 2 maximum value",
+      "engineVerified": true
+    },
+    "prop3": {
+      "type": "string",
+      "description": "Property 3 code",
+      "engineVerified": true
+    },
+    "par3": {
+      "type": "integer",
+      "description": "Property 3 parameter",
+      "engineVerified": true
+    },
+    "min3": {
+      "type": "integer",
+      "description": "Property 3 minimum value",
+      "engineVerified": true
+    },
+    "max3": {
+      "type": "integer",
+      "description": "Property 3 maximum value",
+      "engineVerified": true
+    },
+    "prop4": {
+      "type": "string",
+      "description": "Property 4 code",
+      "engineVerified": true
+    },
+    "par4": {
+      "type": "integer",
+      "description": "Property 4 parameter",
+      "engineVerified": true
+    },
+    "min4": {
+      "type": "integer",
+      "description": "Property 4 minimum value",
+      "engineVerified": true
+    },
+    "max4": {
+      "type": "integer",
+      "description": "Property 4 maximum value",
+      "engineVerified": true
+    },
+    "prop5": {
+      "type": "string",
+      "description": "Property 5 code",
+      "engineVerified": true
+    },
+    "par5": {
+      "type": "integer",
+      "description": "Property 5 parameter",
+      "engineVerified": true
+    },
+    "min5": {
+      "type": "integer",
+      "description": "Property 5 minimum value",
+      "engineVerified": true
+    },
+    "max5": {
+      "type": "integer",
+      "description": "Property 5 maximum value",
+      "engineVerified": true
+    },
+    "prop6": {
+      "type": "string",
+      "description": "Property 6 code",
+      "engineVerified": true
+    },
+    "par6": {
+      "type": "integer",
+      "description": "Property 6 parameter",
+      "engineVerified": true
+    },
+    "min6": {
+      "type": "integer",
+      "description": "Property 6 minimum value",
+      "engineVerified": true
+    },
+    "max6": {
+      "type": "integer",
+      "description": "Property 6 maximum value",
+      "engineVerified": true
+    },
+    "prop7": {
+      "type": "string",
+      "description": "Property 7 code",
+      "engineVerified": true
+    },
+    "par7": {
+      "type": "integer",
+      "description": "Property 7 parameter",
+      "engineVerified": true
+    },
+    "min7": {
+      "type": "integer",
+      "description": "Property 7 minimum value",
+      "engineVerified": true
+    },
+    "max7": {
+      "type": "integer",
+      "description": "Property 7 maximum value",
+      "engineVerified": true
+    },
+    "prop8": {
+      "type": "string",
+      "description": "Property 8 code",
+      "engineVerified": true
+    },
+    "par8": {
+      "type": "integer",
+      "description": "Property 8 parameter",
+      "engineVerified": true
+    },
+    "min8": {
+      "type": "integer",
+      "description": "Property 8 minimum value",
+      "engineVerified": true
+    },
+    "max8": {
+      "type": "integer",
+      "description": "Property 8 maximum value",
+      "engineVerified": true
+    },
+    "prop9": {
+      "type": "string",
+      "description": "Property 9 code",
+      "engineVerified": true
+    },
+    "par9": {
+      "type": "integer",
+      "description": "Property 9 parameter",
+      "engineVerified": true
+    },
+    "min9": {
+      "type": "integer",
+      "description": "Property 9 minimum value",
+      "engineVerified": true
+    },
+    "max9": {
+      "type": "integer",
+      "description": "Property 9 maximum value",
+      "engineVerified": true
+    },
+    "pmin2a": {
+      "type": "integer",
+      "description": "Partial set 2 bonus min (a)",
+      "engineVerified": true
+    },
+    "pmax2a": {
+      "type": "integer",
+      "description": "Partial set 2 bonus max (a)",
+      "engineVerified": true
+    },
+    "pmin2b": {
+      "type": "integer",
+      "description": "Partial set 2 bonus min (b)",
+      "engineVerified": true
+    },
+    "pmax2b": {
+      "type": "integer",
+      "description": "Partial set 2 bonus max (b)",
+      "engineVerified": true
+    },
+    "pmin3a": {
+      "type": "integer",
+      "description": "Partial set 3 bonus min (a)",
+      "engineVerified": true
+    },
+    "pmax3a": {
+      "type": "integer",
+      "description": "Partial set 3 bonus max (a)",
+      "engineVerified": true
+    },
+    "pmin3b": {
+      "type": "integer",
+      "description": "Partial set 3 bonus min (b)",
+      "engineVerified": true
+    },
+    "pmax3b": {
+      "type": "integer",
+      "description": "Partial set 3 bonus max (b)",
+      "engineVerified": true
+    },
+    "pmin4a": {
+      "type": "integer",
+      "description": "Partial set 4 bonus min (a)",
+      "engineVerified": true
+    },
+    "pmax4a": {
+      "type": "integer",
+      "description": "Partial set 4 bonus max (a)",
+      "engineVerified": true
+    },
+    "pmin4b": {
+      "type": "integer",
+      "description": "Partial set 4 bonus min (b)",
+      "engineVerified": true
+    },
+    "pmax4b": {
+      "type": "integer",
+      "description": "Partial set 4 bonus max (b)",
+      "engineVerified": true
+    },
+    "pmin5a": {
+      "type": "integer",
+      "description": "Partial set 5 bonus min (a)",
+      "engineVerified": true
+    },
+    "pmax5a": {
+      "type": "integer",
+      "description": "Partial set 5 bonus max (a)",
+      "engineVerified": true
+    },
+    "pmin5b": {
+      "type": "integer",
+      "description": "Partial set 5 bonus min (b)",
+      "engineVerified": true
+    },
+    "pmax5b": {
+      "type": "integer",
+      "description": "Partial set 5 bonus max (b)",
+      "engineVerified": true
     }
   }
 }

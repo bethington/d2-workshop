@@ -186,6 +186,16 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Def": {
+      "type": "integer",
+      "description": "Default preset definition ID",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Preset level name identifier",
+      "engineVerified": true
     }
   }
 }

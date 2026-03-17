@@ -11,6 +11,191 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Act": {
+      "type": "integer",
+      "description": "Act number for this level type",
+      "engineVerified": true
+    },
+    "Beta": {
+      "type": "boolean",
+      "description": "Whether this entry is beta content",
+      "engineVerified": true
+    },
+    "Expansion": {
+      "type": "boolean",
+      "description": "Whether this is expansion-only content",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Level type ID",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Level type name identifier",
+      "engineVerified": true
+    },
+    "File 1": {
+      "type": "string",
+      "description": "DT1 tile file 1",
+      "engineVerified": true
+    },
+    "File 2": {
+      "type": "string",
+      "description": "DT1 tile file 2",
+      "engineVerified": true
+    },
+    "File 3": {
+      "type": "string",
+      "description": "DT1 tile file 3",
+      "engineVerified": true
+    },
+    "File 4": {
+      "type": "string",
+      "description": "DT1 tile file 4",
+      "engineVerified": true
+    },
+    "File 5": {
+      "type": "string",
+      "description": "DT1 tile file 5",
+      "engineVerified": true
+    },
+    "File 6": {
+      "type": "string",
+      "description": "DT1 tile file 6",
+      "engineVerified": true
+    },
+    "File 7": {
+      "type": "string",
+      "description": "DT1 tile file 7",
+      "engineVerified": true
+    },
+    "File 8": {
+      "type": "string",
+      "description": "DT1 tile file 8",
+      "engineVerified": true
+    },
+    "File 9": {
+      "type": "string",
+      "description": "DT1 tile file 9",
+      "engineVerified": true
+    },
+    "File 10": {
+      "type": "string",
+      "description": "DT1 tile file 10",
+      "engineVerified": true
+    },
+    "File 11": {
+      "type": "string",
+      "description": "DT1 tile file 11",
+      "engineVerified": true
+    },
+    "File 12": {
+      "type": "string",
+      "description": "DT1 tile file 12",
+      "engineVerified": true
+    },
+    "File 13": {
+      "type": "string",
+      "description": "DT1 tile file 13",
+      "engineVerified": true
+    },
+    "File 14": {
+      "type": "string",
+      "description": "DT1 tile file 14",
+      "engineVerified": true
+    },
+    "File 15": {
+      "type": "string",
+      "description": "DT1 tile file 15",
+      "engineVerified": true
+    },
+    "File 16": {
+      "type": "string",
+      "description": "DT1 tile file 16",
+      "engineVerified": true
+    },
+    "File 17": {
+      "type": "string",
+      "description": "DT1 tile file 17",
+      "engineVerified": true
+    },
+    "File 18": {
+      "type": "string",
+      "description": "DT1 tile file 18",
+      "engineVerified": true
+    },
+    "File 19": {
+      "type": "string",
+      "description": "DT1 tile file 19",
+      "engineVerified": true
+    },
+    "File 20": {
+      "type": "string",
+      "description": "DT1 tile file 20",
+      "engineVerified": true
+    },
+    "File 21": {
+      "type": "string",
+      "description": "DT1 tile file 21",
+      "engineVerified": true
+    },
+    "File 22": {
+      "type": "string",
+      "description": "DT1 tile file 22",
+      "engineVerified": true
+    },
+    "File 23": {
+      "type": "string",
+      "description": "DT1 tile file 23",
+      "engineVerified": true
+    },
+    "File 24": {
+      "type": "string",
+      "description": "DT1 tile file 24",
+      "engineVerified": true
+    },
+    "File 25": {
+      "type": "string",
+      "description": "DT1 tile file 25",
+      "engineVerified": true
+    },
+    "File 26": {
+      "type": "string",
+      "description": "DT1 tile file 26",
+      "engineVerified": true
+    },
+    "File 27": {
+      "type": "string",
+      "description": "DT1 tile file 27",
+      "engineVerified": true
+    },
+    "File 28": {
+      "type": "string",
+      "description": "DT1 tile file 28",
+      "engineVerified": true
+    },
+    "File 29": {
+      "type": "string",
+      "description": "DT1 tile file 29",
+      "engineVerified": true
+    },
+    "File 30": {
+      "type": "string",
+      "description": "DT1 tile file 30",
+      "engineVerified": true
+    },
+    "File 31": {
+      "type": "string",
+      "description": "DT1 tile file 31",
+      "engineVerified": true
+    },
+    "File 32": {
+      "type": "string",
+      "description": "DT1 tile file 32",
+      "engineVerified": true
     }
   }
 }

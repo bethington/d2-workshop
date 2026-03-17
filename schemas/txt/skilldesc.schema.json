@@ -416,6 +416,132 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "ListPool": {
+      "type": "integer",
+      "description": "List pool for skill grouping",
+      "engineVerified": true
+    },
+    "ListRow": {
+      "type": "integer",
+      "description": "Row position in skill list",
+      "engineVerified": true
+    },
+    "PrgCalc1": {
+      "type": "string",
+      "description": "Progress calculation formula 1",
+      "engineVerified": true
+    },
+    "PrgCalc2": {
+      "type": "string",
+      "description": "Progress calculation formula 2",
+      "engineVerified": true
+    },
+    "PrgCalc3": {
+      "type": "string",
+      "description": "Progress calculation formula 3",
+      "engineVerified": true
+    },
+    "SkillColumn": {
+      "type": "integer",
+      "description": "Column position in skill tree",
+      "engineVerified": true
+    },
+    "SkillPage": {
+      "type": "integer",
+      "description": "Skill tree page number",
+      "engineVerified": true
+    },
+    "SkillRow": {
+      "type": "integer",
+      "description": "Row position in skill tree",
+      "engineVerified": true
+    },
+    "desccalca1": {
+      "type": "string",
+      "description": "Description calc A formula 1",
+      "engineVerified": true
+    },
+    "desccalcb1": {
+      "type": "string",
+      "description": "Description calc B formula 1",
+      "engineVerified": true
+    },
+    "desctexta1": {
+      "type": "string",
+      "description": "Description text A string key 1",
+      "engineVerified": true
+    },
+    "desctextb1": {
+      "type": "string",
+      "description": "Description text B string key 1",
+      "engineVerified": true
+    },
+    "dsc2calca1": {
+      "type": "string",
+      "description": "Description 2 calc A formula 1",
+      "engineVerified": true
+    },
+    "dsc2calcb1": {
+      "type": "string",
+      "description": "Description 2 calc B formula 1",
+      "engineVerified": true
+    },
+    "dsc2texta1": {
+      "type": "string",
+      "description": "Description 2 text A string key 1",
+      "engineVerified": true
+    },
+    "dsc2textb1": {
+      "type": "string",
+      "description": "Description 2 text B string key 1",
+      "engineVerified": true
+    },
+    "dsc3calca1": {
+      "type": "string",
+      "description": "Description 3 calc A formula 1",
+      "engineVerified": true
+    },
+    "dsc3calcb1": {
+      "type": "string",
+      "description": "Description 3 calc B formula 1",
+      "engineVerified": true
+    },
+    "dsc3texta1": {
+      "type": "string",
+      "description": "Description 3 text A string key 1",
+      "engineVerified": true
+    },
+    "dsc3textb1": {
+      "type": "string",
+      "description": "Description 3 text B string key 1",
+      "engineVerified": true
+    },
+    "skilldesc": {
+      "type": "string",
+      "description": "Skill description identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "str alt": {
+      "type": "string",
+      "description": "Alternate display string key",
+      "engineVerified": true
+    },
+    "str long": {
+      "type": "string",
+      "description": "Long description string key",
+      "engineVerified": true
+    },
+    "str mana": {
+      "type": "string",
+      "description": "Mana cost description string key",
+      "engineVerified": true
+    },
+    "str short": {
+      "type": "string",
+      "description": "Short description string key",
+      "engineVerified": true
     }
   }
 }

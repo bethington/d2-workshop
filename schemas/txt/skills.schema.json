@@ -1155,6 +1155,457 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "CostAdd": {
+      "type": "integer",
+      "description": "Flat cost addition per level",
+      "engineVerified": true
+    },
+    "CostMult": {
+      "type": "integer",
+      "description": "Cost multiplier per level",
+      "engineVerified": true
+    },
+    "DmgSymPerCalc": {
+      "type": "string",
+      "description": "Synergy damage per calc formula",
+      "engineVerified": true
+    },
+    "EDmgSymPerCalc": {
+      "type": "string",
+      "description": "Elemental synergy damage per calc formula",
+      "engineVerified": true
+    },
+    "ELen": {
+      "type": "integer",
+      "description": "Elemental effect length in frames",
+      "engineVerified": true
+    },
+    "ELenSymPerCalc": {
+      "type": "string",
+      "description": "Elemental length synergy per calc formula",
+      "engineVerified": true
+    },
+    "ELevLen1": {
+      "type": "integer",
+      "description": "Elemental length per level tier 1",
+      "engineVerified": true
+    },
+    "ELevLen2": {
+      "type": "integer",
+      "description": "Elemental length per level tier 2",
+      "engineVerified": true
+    },
+    "ELevLen3": {
+      "type": "integer",
+      "description": "Elemental length per level tier 3",
+      "engineVerified": true
+    },
+    "EMax": {
+      "type": "integer",
+      "description": "Maximum elemental damage",
+      "engineVerified": true
+    },
+    "EMaxLev1": {
+      "type": "integer",
+      "description": "Elemental max damage per level tier 1",
+      "engineVerified": true
+    },
+    "EMaxLev2": {
+      "type": "integer",
+      "description": "Elemental max damage per level tier 2",
+      "engineVerified": true
+    },
+    "EMaxLev3": {
+      "type": "integer",
+      "description": "Elemental max damage per level tier 3",
+      "engineVerified": true
+    },
+    "EMaxLev4": {
+      "type": "integer",
+      "description": "Elemental max damage per level tier 4",
+      "engineVerified": true
+    },
+    "EMaxLev5": {
+      "type": "integer",
+      "description": "Elemental max damage per level tier 5",
+      "engineVerified": true
+    },
+    "EMin": {
+      "type": "integer",
+      "description": "Minimum elemental damage",
+      "engineVerified": true
+    },
+    "EMinLev1": {
+      "type": "integer",
+      "description": "Elemental min damage per level tier 1",
+      "engineVerified": true
+    },
+    "EMinLev2": {
+      "type": "integer",
+      "description": "Elemental min damage per level tier 2",
+      "engineVerified": true
+    },
+    "EMinLev3": {
+      "type": "integer",
+      "description": "Elemental min damage per level tier 3",
+      "engineVerified": true
+    },
+    "EMinLev4": {
+      "type": "integer",
+      "description": "Elemental min damage per level tier 4",
+      "engineVerified": true
+    },
+    "EMinLev5": {
+      "type": "integer",
+      "description": "Elemental min damage per level tier 5",
+      "engineVerified": true
+    },
+    "EType": {
+      "type": "string",
+      "description": "Elemental damage type",
+      "engineVerified": true
+    },
+    "EthReq": {
+      "type": "integer",
+      "description": "Ethereal requirement",
+      "engineVerified": true
+    },
+    "HitClass": {
+      "type": "integer",
+      "description": "Hit class for sound/visual effects",
+      "engineVerified": true
+    },
+    "HitFlags": {
+      "type": "integer",
+      "description": "Hit behavior flags",
+      "engineVerified": true
+    },
+    "HitShift": {
+      "type": "integer",
+      "description": "Hit damage shift divisor (256ths)",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique skill ID",
+      "engineVerified": true
+    },
+    "InTown": {
+      "type": "boolean",
+      "description": "Whether skill can be used in town",
+      "engineVerified": true
+    },
+    "LevToHit": {
+      "type": "integer",
+      "description": "To-hit bonus per level",
+      "engineVerified": true
+    },
+    "LineOfSight": {
+      "type": "boolean",
+      "description": "Whether skill requires line of sight",
+      "engineVerified": true
+    },
+    "Mana": {
+      "type": "integer",
+      "description": "Base mana cost",
+      "engineVerified": true
+    },
+    "ManaShift": {
+      "type": "integer",
+      "description": "Mana cost shift (256ths)",
+      "engineVerified": true
+    },
+    "MaxDam": {
+      "type": "integer",
+      "description": "Maximum physical damage",
+      "engineVerified": true
+    },
+    "MaxLevDam1": {
+      "type": "integer",
+      "description": "Max damage per level tier 1",
+      "engineVerified": true
+    },
+    "MaxLevDam2": {
+      "type": "integer",
+      "description": "Max damage per level tier 2",
+      "engineVerified": true
+    },
+    "MaxLevDam3": {
+      "type": "integer",
+      "description": "Max damage per level tier 3",
+      "engineVerified": true
+    },
+    "MaxLevDam4": {
+      "type": "integer",
+      "description": "Max damage per level tier 4",
+      "engineVerified": true
+    },
+    "MaxLevDam5": {
+      "type": "integer",
+      "description": "Max damage per level tier 5",
+      "engineVerified": true
+    },
+    "MinDam": {
+      "type": "integer",
+      "description": "Minimum physical damage",
+      "engineVerified": true
+    },
+    "MinLevDam1": {
+      "type": "integer",
+      "description": "Min damage per level tier 1",
+      "engineVerified": true
+    },
+    "MinLevDam2": {
+      "type": "integer",
+      "description": "Min damage per level tier 2",
+      "engineVerified": true
+    },
+    "MinLevDam3": {
+      "type": "integer",
+      "description": "Min damage per level tier 3",
+      "engineVerified": true
+    },
+    "MinLevDam4": {
+      "type": "integer",
+      "description": "Min damage per level tier 4",
+      "engineVerified": true
+    },
+    "MinLevDam5": {
+      "type": "integer",
+      "description": "Min damage per level tier 5",
+      "engineVerified": true
+    },
+    "MinMana": {
+      "type": "integer",
+      "description": "Minimum mana cost",
+      "engineVerified": true
+    },
+    "Param1": {
+      "type": "integer",
+      "description": "Skill parameter 1",
+      "engineVerified": true
+    },
+    "Param2": {
+      "type": "integer",
+      "description": "Skill parameter 2",
+      "engineVerified": true
+    },
+    "Param3": {
+      "type": "integer",
+      "description": "Skill parameter 3",
+      "engineVerified": true
+    },
+    "Param4": {
+      "type": "integer",
+      "description": "Skill parameter 4",
+      "engineVerified": true
+    },
+    "Param5": {
+      "type": "integer",
+      "description": "Skill parameter 5",
+      "engineVerified": true
+    },
+    "Param6": {
+      "type": "integer",
+      "description": "Skill parameter 6",
+      "engineVerified": true
+    },
+    "Param7": {
+      "type": "integer",
+      "description": "Skill parameter 7",
+      "engineVerified": true
+    },
+    "Param8": {
+      "type": "integer",
+      "description": "Skill parameter 8",
+      "engineVerified": true
+    },
+    "ResultFlags": {
+      "type": "integer",
+      "description": "Result behavior flags",
+      "engineVerified": true
+    },
+    "SearchEnemyNear": {
+      "type": "boolean",
+      "description": "Whether skill searches for nearby enemies",
+      "engineVerified": true
+    },
+    "SearchEnemyXY": {
+      "type": "boolean",
+      "description": "Whether skill searches enemies by coordinates",
+      "engineVerified": true
+    },
+    "SearchOpenXY": {
+      "type": "boolean",
+      "description": "Whether skill searches for open coordinates",
+      "engineVerified": true
+    },
+    "SelectProc": {
+      "type": "integer",
+      "description": "Selection procedure type",
+      "engineVerified": true
+    },
+    "SrcDam": {
+      "type": "integer",
+      "description": "Source damage percentage applied",
+      "engineVerified": true
+    },
+    "StartMana": {
+      "type": "integer",
+      "description": "Starting mana cost",
+      "engineVerified": true
+    },
+    "ToHit": {
+      "type": "integer",
+      "description": "Base to-hit bonus",
+      "engineVerified": true
+    },
+    "ToHitCalc": {
+      "type": "string",
+      "description": "To-hit calculation formula",
+      "engineVerified": true
+    },
+    "UseServerMissilesOnRemoteClients": {
+      "type": "boolean",
+      "description": "Whether to use server missiles on remote clients",
+      "engineVerified": true
+    },
+    "anim": {
+      "type": "string",
+      "description": "Animation mode when using skill",
+      "engineVerified": true
+    },
+    "aura": {
+      "type": "boolean",
+      "description": "Whether this skill is an aura",
+      "engineVerified": true
+    },
+    "calc1": {
+      "type": "string",
+      "description": "Calculation formula 1",
+      "engineVerified": true
+    },
+    "calc2": {
+      "type": "string",
+      "description": "Calculation formula 2",
+      "engineVerified": true
+    },
+    "calc3": {
+      "type": "string",
+      "description": "Calculation formula 3",
+      "engineVerified": true
+    },
+    "calc4": {
+      "type": "string",
+      "description": "Calculation formula 4",
+      "engineVerified": true
+    },
+    "decquant": {
+      "type": "boolean",
+      "description": "Whether skill decreases item quantity",
+      "engineVerified": true
+    },
+    "durability": {
+      "type": "boolean",
+      "description": "Whether skill affects durability",
+      "engineVerified": true
+    },
+    "enhanceable": {
+      "type": "boolean",
+      "description": "Whether skill can be enhanced",
+      "engineVerified": true
+    },
+    "finishing": {
+      "type": "boolean",
+      "description": "Whether this is a finishing move",
+      "engineVerified": true
+    },
+    "immediate": {
+      "type": "boolean",
+      "description": "Whether skill triggers immediately",
+      "engineVerified": true
+    },
+    "interrupt": {
+      "type": "boolean",
+      "description": "Whether skill can be interrupted",
+      "engineVerified": true
+    },
+    "lob": {
+      "type": "boolean",
+      "description": "Whether projectile uses lob trajectory",
+      "engineVerified": true
+    },
+    "lvlmana": {
+      "type": "integer",
+      "description": "Mana cost increase per level",
+      "engineVerified": true
+    },
+    "pettype": {
+      "type": "string",
+      "description": "Pet type created by this skill",
+      "engineVerified": true
+    },
+    "reqdex": {
+      "type": "integer",
+      "description": "Required dexterity",
+      "engineVerified": true
+    },
+    "reqskill4": {
+      "type": "string",
+      "description": "Required prerequisite skill 4",
+      "engineVerified": true
+    },
+    "reqskill5": {
+      "type": "string",
+      "description": "Required prerequisite skill 5",
+      "engineVerified": true
+    },
+    "reqskill6": {
+      "type": "string",
+      "description": "Required prerequisite skill 6",
+      "engineVerified": true
+    },
+    "reqstr": {
+      "type": "integer",
+      "description": "Required strength",
+      "engineVerified": true
+    },
+    "restrict": {
+      "type": "integer",
+      "description": "Restriction flags",
+      "engineVerified": true
+    },
+    "seqtrans": {
+      "type": "string",
+      "description": "Sequence transition mode",
+      "engineVerified": true
+    },
+    "skill": {
+      "type": "string",
+      "description": "Skill name identifier",
+      "required": true,
+      "engineVerified": true
+    },
+    "skilldesc": {
+      "type": "string",
+      "description": "Skill description reference",
+      "engineVerified": true
+    },
+    "statescolor": {
+      "type": "string",
+      "description": "State color transform",
+      "engineVerified": true
+    },
+    "warp": {
+      "type": "boolean",
+      "description": "Whether skill causes warping",
+      "engineVerified": true
+    },
+    "weapsel": {
+      "type": "integer",
+      "description": "Weapon selection mode",
+      "engineVerified": true
     }
   }
 }

@@ -61,6 +61,271 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "*ID": {
+      "type": "integer",
+      "description": "Unique item ID for reference",
+      "engineVerified": true
+    },
+    "code": {
+      "type": "string",
+      "description": "Base item code",
+      "engineVerified": true
+    },
+    "cost add": {
+      "type": "integer",
+      "description": "Added cost for this unique",
+      "engineVerified": true
+    },
+    "cost mult": {
+      "type": "integer",
+      "description": "Cost multiplier for this unique",
+      "engineVerified": true
+    },
+    "dropsfxframe": {
+      "type": "integer",
+      "description": "Frame when drop sound plays",
+      "engineVerified": true
+    },
+    "dropsound": {
+      "type": "string",
+      "description": "Sound played when item drops",
+      "engineVerified": true
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether this unique is enabled",
+      "engineVerified": true
+    },
+    "index": {
+      "type": "string",
+      "description": "Unique item name string key",
+      "engineVerified": true
+    },
+    "invfile": {
+      "type": "string",
+      "description": "Inventory graphic file",
+      "engineVerified": true
+    },
+    "invtransform": {
+      "type": "string",
+      "description": "Inventory color transform",
+      "engineVerified": true
+    },
+    "ladder": {
+      "type": "boolean",
+      "description": "Whether this unique is ladder-only",
+      "engineVerified": true
+    },
+    "lvl": {
+      "type": "integer",
+      "description": "Item level",
+      "engineVerified": true
+    },
+    "lvl req": {
+      "type": "integer",
+      "description": "Required character level",
+      "engineVerified": true
+    },
+    "nolimit": {
+      "type": "boolean",
+      "description": "Whether item has no level limit",
+      "engineVerified": true
+    },
+    "rarity": {
+      "type": "integer",
+      "description": "Drop rarity weight",
+      "engineVerified": true
+    },
+    "usesound": {
+      "type": "string",
+      "description": "Sound played when item is used",
+      "engineVerified": true
+    },
+    "version": {
+      "type": "integer",
+      "description": "Game version this item was introduced",
+      "engineVerified": true
+    },
+    "par1": {
+      "type": "integer",
+      "description": "Property 1 parameter",
+      "engineVerified": true
+    },
+    "min1": {
+      "type": "integer",
+      "description": "Property 1 minimum value",
+      "engineVerified": true
+    },
+    "max1": {
+      "type": "integer",
+      "description": "Property 1 maximum value",
+      "engineVerified": true
+    },
+    "par2": {
+      "type": "integer",
+      "description": "Property 2 parameter",
+      "engineVerified": true
+    },
+    "min2": {
+      "type": "integer",
+      "description": "Property 2 minimum value",
+      "engineVerified": true
+    },
+    "max2": {
+      "type": "integer",
+      "description": "Property 2 maximum value",
+      "engineVerified": true
+    },
+    "par3": {
+      "type": "integer",
+      "description": "Property 3 parameter",
+      "engineVerified": true
+    },
+    "min3": {
+      "type": "integer",
+      "description": "Property 3 minimum value",
+      "engineVerified": true
+    },
+    "max3": {
+      "type": "integer",
+      "description": "Property 3 maximum value",
+      "engineVerified": true
+    },
+    "par4": {
+      "type": "integer",
+      "description": "Property 4 parameter",
+      "engineVerified": true
+    },
+    "min4": {
+      "type": "integer",
+      "description": "Property 4 minimum value",
+      "engineVerified": true
+    },
+    "max4": {
+      "type": "integer",
+      "description": "Property 4 maximum value",
+      "engineVerified": true
+    },
+    "par5": {
+      "type": "integer",
+      "description": "Property 5 parameter",
+      "engineVerified": true
+    },
+    "min5": {
+      "type": "integer",
+      "description": "Property 5 minimum value",
+      "engineVerified": true
+    },
+    "max5": {
+      "type": "integer",
+      "description": "Property 5 maximum value",
+      "engineVerified": true
+    },
+    "par6": {
+      "type": "integer",
+      "description": "Property 6 parameter",
+      "engineVerified": true
+    },
+    "min6": {
+      "type": "integer",
+      "description": "Property 6 minimum value",
+      "engineVerified": true
+    },
+    "max6": {
+      "type": "integer",
+      "description": "Property 6 maximum value",
+      "engineVerified": true
+    },
+    "par7": {
+      "type": "integer",
+      "description": "Property 7 parameter",
+      "engineVerified": true
+    },
+    "min7": {
+      "type": "integer",
+      "description": "Property 7 minimum value",
+      "engineVerified": true
+    },
+    "max7": {
+      "type": "integer",
+      "description": "Property 7 maximum value",
+      "engineVerified": true
+    },
+    "par8": {
+      "type": "integer",
+      "description": "Property 8 parameter",
+      "engineVerified": true
+    },
+    "min8": {
+      "type": "integer",
+      "description": "Property 8 minimum value",
+      "engineVerified": true
+    },
+    "max8": {
+      "type": "integer",
+      "description": "Property 8 maximum value",
+      "engineVerified": true
+    },
+    "par9": {
+      "type": "integer",
+      "description": "Property 9 parameter",
+      "engineVerified": true
+    },
+    "min9": {
+      "type": "integer",
+      "description": "Property 9 minimum value",
+      "engineVerified": true
+    },
+    "max9": {
+      "type": "integer",
+      "description": "Property 9 maximum value",
+      "engineVerified": true
+    },
+    "par10": {
+      "type": "integer",
+      "description": "Property 10 parameter",
+      "engineVerified": true
+    },
+    "min10": {
+      "type": "integer",
+      "description": "Property 10 minimum value",
+      "engineVerified": true
+    },
+    "max10": {
+      "type": "integer",
+      "description": "Property 10 maximum value",
+      "engineVerified": true
+    },
+    "par11": {
+      "type": "integer",
+      "description": "Property 11 parameter",
+      "engineVerified": true
+    },
+    "min11": {
+      "type": "integer",
+      "description": "Property 11 minimum value",
+      "engineVerified": true
+    },
+    "max11": {
+      "type": "integer",
+      "description": "Property 11 maximum value",
+      "engineVerified": true
+    },
+    "par12": {
+      "type": "integer",
+      "description": "Property 12 parameter",
+      "engineVerified": true
+    },
+    "min12": {
+      "type": "integer",
+      "description": "Property 12 minimum value",
+      "engineVerified": true
+    },
+    "max12": {
+      "type": "integer",
+      "description": "Property 12 maximum value",
+      "engineVerified": true
     }
   }
 }

@@ -737,6 +737,116 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Act": {
+      "type": "integer",
+      "description": "Act number this level belongs to",
+      "engineVerified": true
+    },
+    "Blue": {
+      "type": "integer",
+      "description": "Blue color component for level lighting",
+      "engineVerified": true
+    },
+    "Green": {
+      "type": "integer",
+      "description": "Green color component for level lighting",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique level ID number",
+      "engineVerified": true
+    },
+    "Intensity": {
+      "type": "integer",
+      "description": "Light intensity for this level",
+      "engineVerified": true
+    },
+    "IsInside": {
+      "type": "boolean",
+      "description": "Whether this level is indoors",
+      "engineVerified": true
+    },
+    "Layer": {
+      "type": "integer",
+      "description": "Layer number for level rendering",
+      "engineVerified": true
+    },
+    "LevelGroup": {
+      "type": "integer",
+      "description": "Group ID for related levels",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Level name string key",
+      "engineVerified": true
+    },
+    "Pal": {
+      "type": "integer",
+      "description": "Palette index for this level",
+      "engineVerified": true
+    },
+    "Position": {
+      "type": "integer",
+      "description": "Position ordering within act",
+      "engineVerified": true
+    },
+    "Rain": {
+      "type": "boolean",
+      "description": "Whether rain occurs in this level",
+      "engineVerified": true
+    },
+    "Red": {
+      "type": "integer",
+      "description": "Red color component for level lighting",
+      "engineVerified": true
+    },
+    "Vis0": {
+      "type": "integer",
+      "description": "Visible adjacent level 0",
+      "engineVerified": true
+    },
+    "Vis1": {
+      "type": "integer",
+      "description": "Visible adjacent level 1",
+      "engineVerified": true
+    },
+    "Vis2": {
+      "type": "integer",
+      "description": "Visible adjacent level 2",
+      "engineVerified": true
+    },
+    "Vis3": {
+      "type": "integer",
+      "description": "Visible adjacent level 3",
+      "engineVerified": true
+    },
+    "Vis4": {
+      "type": "integer",
+      "description": "Visible adjacent level 4",
+      "engineVerified": true
+    },
+    "Vis5": {
+      "type": "integer",
+      "description": "Visible adjacent level 5",
+      "engineVerified": true
+    },
+    "Vis6": {
+      "type": "integer",
+      "description": "Visible adjacent level 6",
+      "engineVerified": true
+    },
+    "Vis7": {
+      "type": "integer",
+      "description": "Visible adjacent level 7",
+      "engineVerified": true
+    },
+    "Waypoint": {
+      "type": "integer",
+      "description": "Waypoint index for this level",
+      "engineVerified": true
     }
   }
 }

@@ -416,6 +416,156 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "AR": {
+      "type": "integer",
+      "description": "Base attack rating",
+      "engineVerified": true
+    },
+    "Act": {
+      "type": "integer",
+      "description": "Act where this hireling is available",
+      "engineVerified": true
+    },
+    "Class": {
+      "type": "string",
+      "description": "Hireling class type",
+      "engineVerified": true
+    },
+    "Dex": {
+      "type": "integer",
+      "description": "Base dexterity",
+      "engineVerified": true
+    },
+    "Difficulty": {
+      "type": "integer",
+      "description": "Difficulty level for this hireling entry",
+      "engineVerified": true
+    },
+    "Dmg-Max": {
+      "type": "integer",
+      "description": "Maximum base damage",
+      "engineVerified": true
+    },
+    "Dmg-Min": {
+      "type": "integer",
+      "description": "Minimum base damage",
+      "engineVerified": true
+    },
+    "Gold": {
+      "type": "integer",
+      "description": "Hiring cost in gold",
+      "engineVerified": true
+    },
+    "HP": {
+      "type": "integer",
+      "description": "Base hit points",
+      "engineVerified": true
+    },
+    "Head": {
+      "type": "string",
+      "description": "Head equipment type allowed",
+      "engineVerified": true
+    },
+    "HireDesc": {
+      "type": "string",
+      "description": "Hiring description string key",
+      "engineVerified": true
+    },
+    "Hireling": {
+      "type": "string",
+      "description": "Hireling name identifier",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique hireling entry ID",
+      "engineVerified": true
+    },
+    "LArm": {
+      "type": "string",
+      "description": "Left arm equipment type allowed",
+      "engineVerified": true
+    },
+    "Legs": {
+      "type": "string",
+      "description": "Legs equipment type allowed",
+      "engineVerified": true
+    },
+    "Level": {
+      "type": "integer",
+      "description": "Hireling level",
+      "engineVerified": true
+    },
+    "Level1": {
+      "type": "integer",
+      "description": "Alternative level field",
+      "engineVerified": true
+    },
+    "RArm": {
+      "type": "string",
+      "description": "Right arm equipment type allowed",
+      "engineVerified": true
+    },
+    "ResistCold": {
+      "type": "integer",
+      "description": "Cold resistance value",
+      "engineVerified": true
+    },
+    "ResistFire": {
+      "type": "integer",
+      "description": "Fire resistance value",
+      "engineVerified": true
+    },
+    "ResistLightning": {
+      "type": "integer",
+      "description": "Lightning resistance value",
+      "engineVerified": true
+    },
+    "ResistPoison": {
+      "type": "integer",
+      "description": "Poison resistance value",
+      "engineVerified": true
+    },
+    "Seller": {
+      "type": "integer",
+      "description": "NPC seller ID",
+      "engineVerified": true
+    },
+    "Shield": {
+      "type": "string",
+      "description": "Shield equipment type allowed",
+      "engineVerified": true
+    },
+    "Str": {
+      "type": "integer",
+      "description": "Base strength",
+      "engineVerified": true
+    },
+    "SubType": {
+      "type": "string",
+      "description": "Hireling subtype classification",
+      "engineVerified": true
+    },
+    "Torso": {
+      "type": "string",
+      "description": "Torso equipment type allowed",
+      "engineVerified": true
+    },
+    "WType1": {
+      "type": "string",
+      "description": "Primary weapon type allowed",
+      "engineVerified": true
+    },
+    "WType2": {
+      "type": "string",
+      "description": "Secondary weapon type allowed",
+      "engineVerified": true
+    },
+    "level1": {
+      "type": "integer",
+      "description": "Level scaling field",
+      "engineVerified": true
     }
   }
 }

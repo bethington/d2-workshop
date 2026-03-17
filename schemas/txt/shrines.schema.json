@@ -6,6 +6,61 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Arg0": {
+      "type": "integer",
+      "description": "Shrine effect argument 0",
+      "engineVerified": true
+    },
+    "Arg1": {
+      "type": "integer",
+      "description": "Shrine effect argument 1",
+      "engineVerified": true
+    },
+    "Code": {
+      "type": "integer",
+      "description": "Shrine type code",
+      "engineVerified": true
+    },
+    "DurationInFrames": {
+      "type": "integer",
+      "description": "Effect duration in frames",
+      "engineVerified": true
+    },
+    "LevelMin": {
+      "type": "integer",
+      "description": "Minimum level to activate shrine",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Shrine name identifier",
+      "engineVerified": true
+    },
+    "effectclass": {
+      "type": "integer",
+      "description": "Visual effect class",
+      "engineVerified": true
+    },
+    "niftytime": {
+      "type": "integer",
+      "description": "Special time parameter for shrine effect",
+      "engineVerified": true
+    },
+    "rarity": {
+      "type": "integer",
+      "description": "Shrine spawn rarity weight",
+      "engineVerified": true
+    },
+    "reset on enter": {
+      "type": "boolean",
+      "description": "Whether shrine resets on level entry",
+      "engineVerified": true
+    },
+    "view name": {
+      "type": "string",
+      "description": "Display name string key",
+      "engineVerified": true
     }
   }
 }

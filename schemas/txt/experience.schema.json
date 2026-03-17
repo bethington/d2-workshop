@@ -6,6 +6,46 @@
       "type": "integer",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Amazon": {
+      "type": "integer",
+      "description": "Experience required for Amazon at this level",
+      "engineVerified": true
+    },
+    "Assassin": {
+      "type": "integer",
+      "description": "Experience required for Assassin at this level",
+      "engineVerified": true
+    },
+    "Barbarian": {
+      "type": "integer",
+      "description": "Experience required for Barbarian at this level",
+      "engineVerified": true
+    },
+    "Druid": {
+      "type": "integer",
+      "description": "Experience required for Druid at this level",
+      "engineVerified": true
+    },
+    "MaxLvl": {
+      "type": "integer",
+      "description": "Maximum level indicator",
+      "engineVerified": true
+    },
+    "Necromancer": {
+      "type": "integer",
+      "description": "Experience required for Necromancer at this level",
+      "engineVerified": true
+    },
+    "Paladin": {
+      "type": "integer",
+      "description": "Experience required for Paladin at this level",
+      "engineVerified": true
+    },
+    "Sorceress": {
+      "type": "integer",
+      "description": "Experience required for Sorceress at this level",
+      "engineVerified": true
     }
   }
 }

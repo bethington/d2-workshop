@@ -641,6 +641,36 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "armor": {
+      "type": "boolean",
+      "description": "Whether this quality applies to armor",
+      "engineVerified": true
+    },
+    "belt": {
+      "type": "boolean",
+      "description": "Whether this quality applies to belts",
+      "engineVerified": true
+    },
+    "boots": {
+      "type": "boolean",
+      "description": "Whether this quality applies to boots",
+      "engineVerified": true
+    },
+    "effect1": {
+      "type": "string",
+      "description": "Visual effect 1",
+      "engineVerified": true
+    },
+    "effect2": {
+      "type": "string",
+      "description": "Visual effect 2",
+      "engineVerified": true
+    },
+    "helm": {
+      "type": "boolean",
+      "description": "Whether this quality applies to helms",
+      "engineVerified": true
     }
   }
 }

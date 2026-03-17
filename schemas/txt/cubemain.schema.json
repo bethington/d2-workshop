@@ -588,6 +588,16 @@
       "type": "boolean",
       "description": "Use input item as base for output",
       "engineVerified": true
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the cube recipe",
+      "engineVerified": true
+    },
+    "lvl": {
+      "type": "integer",
+      "description": "Required character level for this recipe",
+      "engineVerified": true
     }
   }
 }

@@ -67,6 +67,71 @@
       "max": 7000,
       "description": "Wait time between loop iterations (frames)",
       "engineVerified": true
+    },
+    "Beta": {
+      "type": "boolean",
+      "description": "Whether this is beta content",
+      "engineVerified": true
+    },
+    "Blue": {
+      "type": "integer",
+      "description": "Blue color component",
+      "engineVerified": true
+    },
+    "Character": {
+      "type": "boolean",
+      "description": "Whether overlay is attached to character",
+      "engineVerified": true
+    },
+    "Dir": {
+      "type": "integer",
+      "description": "Number of directions for animation",
+      "engineVerified": true
+    },
+    "Green": {
+      "type": "integer",
+      "description": "Green color component",
+      "engineVerified": true
+    },
+    "InitRadius": {
+      "type": "integer",
+      "description": "Initial radius of overlay effect",
+      "engineVerified": true
+    },
+    "LocalBlood": {
+      "type": "integer",
+      "description": "Local blood overlay type",
+      "engineVerified": true
+    },
+    "NumDirections": {
+      "type": "integer",
+      "description": "Number of animation directions",
+      "engineVerified": true
+    },
+    "Open": {
+      "type": "boolean",
+      "description": "Whether overlay renders in open areas",
+      "engineVerified": true
+    },
+    "Radius": {
+      "type": "integer",
+      "description": "Effect radius",
+      "engineVerified": true
+    },
+    "Red": {
+      "type": "integer",
+      "description": "Red color component",
+      "engineVerified": true
+    },
+    "Trans": {
+      "type": "integer",
+      "description": "Transparency level",
+      "engineVerified": true
+    },
+    "isOverlay": {
+      "type": "boolean",
+      "description": "Whether this entry is an overlay type",
+      "engineVerified": true
     }
   }
 }

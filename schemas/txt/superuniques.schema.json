@@ -219,6 +219,61 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "MaxGrp": {
+      "type": "integer",
+      "description": "Maximum minion group size",
+      "engineVerified": true
+    },
+    "MinGrp": {
+      "type": "integer",
+      "description": "Minimum minion group size",
+      "engineVerified": true
+    },
+    "Mod1": {
+      "type": "integer",
+      "description": "Monster modifier 1",
+      "engineVerified": true
+    },
+    "Mod2": {
+      "type": "integer",
+      "description": "Monster modifier 2",
+      "engineVerified": true
+    },
+    "Mod3": {
+      "type": "integer",
+      "description": "Monster modifier 3",
+      "engineVerified": true
+    },
+    "MonSound": {
+      "type": "string",
+      "description": "Monster sound reference",
+      "engineVerified": true
+    },
+    "Name": {
+      "type": "string",
+      "description": "Super unique name identifier",
+      "engineVerified": true
+    },
+    "Stacks": {
+      "type": "boolean",
+      "description": "Whether modifiers can stack",
+      "engineVerified": true
+    },
+    "TC": {
+      "type": "string",
+      "description": "Treasure class (Normal)",
+      "engineVerified": true
+    },
+    "TC(H)": {
+      "type": "string",
+      "description": "Treasure class (Hell)",
+      "engineVerified": true
+    },
+    "TC(N)": {
+      "type": "string",
+      "description": "Treasure class (Nightmare)",
+      "engineVerified": true
     }
   }
 }

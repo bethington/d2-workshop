@@ -8,6 +8,91 @@
       "unique": true,
       "description": "Pet type name identifier, referenced by Skills.txt pettype column",
       "engineVerified": true
+    },
+    "automap": {
+      "type": "boolean",
+      "description": "Whether pet appears on automap",
+      "engineVerified": true
+    },
+    "baseicon": {
+      "type": "string",
+      "description": "Base icon graphic",
+      "engineVerified": true
+    },
+    "basemax": {
+      "type": "integer",
+      "description": "Maximum base pets of this type",
+      "engineVerified": true
+    },
+    "drawhp": {
+      "type": "boolean",
+      "description": "Whether to draw HP bar for pet",
+      "engineVerified": true
+    },
+    "group": {
+      "type": "integer",
+      "description": "Pet group for UI grouping",
+      "engineVerified": true
+    },
+    "icontype": {
+      "type": "integer",
+      "description": "Icon display type",
+      "engineVerified": true
+    },
+    "idx": {
+      "type": "integer",
+      "description": "Pet type index ID",
+      "engineVerified": true
+    },
+    "mclass1": {
+      "type": "integer",
+      "description": "Monster class 1 for this pet type",
+      "engineVerified": true
+    },
+    "micon1": {
+      "type": "string",
+      "description": "Monster icon 1",
+      "engineVerified": true
+    },
+    "micon2": {
+      "type": "string",
+      "description": "Monster icon 2",
+      "engineVerified": true
+    },
+    "micon3": {
+      "type": "string",
+      "description": "Monster icon 3",
+      "engineVerified": true
+    },
+    "micon4": {
+      "type": "string",
+      "description": "Monster icon 4",
+      "engineVerified": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Pet type name string key",
+      "engineVerified": true
+    },
+    "partysend": {
+      "type": "boolean",
+      "description": "Whether pet type is sent to party",
+      "engineVerified": true
+    },
+    "range": {
+      "type": "boolean",
+      "description": "Whether pet uses ranged attacks",
+      "engineVerified": true
+    },
+    "unsummon": {
+      "type": "boolean",
+      "description": "Whether pet can be unsummoned",
+      "engineVerified": true
+    },
+    "warp": {
+      "type": "boolean",
+      "description": "Whether pet warps to owner",
+      "engineVerified": true
     }
   }
 }

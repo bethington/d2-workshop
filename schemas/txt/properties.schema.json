@@ -142,6 +142,21 @@
       "type": "integer",
       "description": "End of line marker (not loaded by game)",
       "engineVerified": true
+    },
+    "stat1": {
+      "type": "string",
+      "description": "Stat reference 1 for this property",
+      "engineVerified": true
+    },
+    "stat2": {
+      "type": "string",
+      "description": "Stat reference 2 for this property",
+      "engineVerified": true
+    },
+    "stat3": {
+      "type": "string",
+      "description": "Stat reference 3 for this property",
+      "engineVerified": true
     }
   }
 }

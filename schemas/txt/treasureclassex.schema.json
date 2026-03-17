@@ -162,6 +162,86 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "Item1": {
+      "type": "string",
+      "description": "Treasure item/group 1",
+      "engineVerified": true
+    },
+    "Item10": {
+      "type": "string",
+      "description": "Treasure item/group 10",
+      "engineVerified": true
+    },
+    "Item2": {
+      "type": "string",
+      "description": "Treasure item/group 2",
+      "engineVerified": true
+    },
+    "Item3": {
+      "type": "string",
+      "description": "Treasure item/group 3",
+      "engineVerified": true
+    },
+    "Item4": {
+      "type": "string",
+      "description": "Treasure item/group 4",
+      "engineVerified": true
+    },
+    "Item5": {
+      "type": "string",
+      "description": "Treasure item/group 5",
+      "engineVerified": true
+    },
+    "Item6": {
+      "type": "string",
+      "description": "Treasure item/group 6",
+      "engineVerified": true
+    },
+    "Item7": {
+      "type": "string",
+      "description": "Treasure item/group 7",
+      "engineVerified": true
+    },
+    "Item8": {
+      "type": "string",
+      "description": "Treasure item/group 8",
+      "engineVerified": true
+    },
+    "Item9": {
+      "type": "string",
+      "description": "Treasure item/group 9",
+      "engineVerified": true
+    },
+    "Magic": {
+      "type": "integer",
+      "description": "Magic find factor",
+      "engineVerified": true
+    },
+    "Rare": {
+      "type": "integer",
+      "description": "Rare find factor",
+      "engineVerified": true
+    },
+    "Set": {
+      "type": "integer",
+      "description": "Set find factor",
+      "engineVerified": true
+    },
+    "Unique": {
+      "type": "integer",
+      "description": "Unique find factor",
+      "engineVerified": true
+    },
+    "group": {
+      "type": "integer",
+      "description": "Treasure class group ID",
+      "engineVerified": true
+    },
+    "level": {
+      "type": "integer",
+      "description": "Treasure class level",
+      "engineVerified": true
     }
   }
 }

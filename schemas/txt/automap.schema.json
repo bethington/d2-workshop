@@ -35,6 +35,11 @@
       "max": 63,
       "description": "Ending animation sequence index (-1 = none)",
       "engineVerified": true
+    },
+    "AutoMap": {
+      "type": "string",
+      "description": "Automap entry name identifier",
+      "engineVerified": true
     }
   }
 }

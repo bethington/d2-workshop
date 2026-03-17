@@ -1083,6 +1083,306 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "A1TH": {
+      "type": "integer",
+      "description": "Attack 1 to-hit bonus",
+      "engineVerified": true
+    },
+    "A1TH(H)": {
+      "type": "integer",
+      "description": "Attack 1 to-hit bonus (Hell)",
+      "engineVerified": true
+    },
+    "A1TH(N)": {
+      "type": "integer",
+      "description": "Attack 1 to-hit bonus (Nightmare)",
+      "engineVerified": true
+    },
+    "A2TH": {
+      "type": "integer",
+      "description": "Attack 2 to-hit bonus",
+      "engineVerified": true
+    },
+    "A2TH(H)": {
+      "type": "integer",
+      "description": "Attack 2 to-hit bonus (Hell)",
+      "engineVerified": true
+    },
+    "A2TH(N)": {
+      "type": "integer",
+      "description": "Attack 2 to-hit bonus (Nightmare)",
+      "engineVerified": true
+    },
+    "AC": {
+      "type": "integer",
+      "description": "Armor class (defense)",
+      "engineVerified": true
+    },
+    "AC(H)": {
+      "type": "integer",
+      "description": "Armor class (Hell)",
+      "engineVerified": true
+    },
+    "AC(N)": {
+      "type": "integer",
+      "description": "Armor class (Nightmare)",
+      "engineVerified": true
+    },
+    "AI": {
+      "type": "string",
+      "description": "AI type identifier",
+      "engineVerified": true
+    },
+    "Anim": {
+      "type": "string",
+      "description": "Animation mode",
+      "engineVerified": true
+    },
+    "Code": {
+      "type": "string",
+      "description": "Monster type code",
+      "engineVerified": true
+    },
+    "DamageRegen": {
+      "type": "integer",
+      "description": "Damage regeneration rate",
+      "engineVerified": true
+    },
+    "Def(H)": {
+      "type": "integer",
+      "description": "Defense rating (Hell)",
+      "engineVerified": true
+    },
+    "Def(N)": {
+      "type": "integer",
+      "description": "Defense rating (Nightmare)",
+      "engineVerified": true
+    },
+    "Enabled": {
+      "type": "boolean",
+      "description": "Whether this monster is enabled",
+      "engineVerified": true
+    },
+    "Exp": {
+      "type": "integer",
+      "description": "Base experience awarded",
+      "engineVerified": true
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique monster ID",
+      "engineVerified": true
+    },
+    "Level": {
+      "type": "integer",
+      "description": "Monster level",
+      "engineVerified": true
+    },
+    "MonProp": {
+      "type": "string",
+      "description": "Monster property reference",
+      "engineVerified": true
+    },
+    "MonPropPct": {
+      "type": "integer",
+      "description": "Monster property chance percentage",
+      "engineVerified": true
+    },
+    "ResCo": {
+      "type": "integer",
+      "description": "Cold resistance",
+      "engineVerified": true
+    },
+    "ResCo(H)": {
+      "type": "integer",
+      "description": "Cold resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResCo(N)": {
+      "type": "integer",
+      "description": "Cold resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "ResDm": {
+      "type": "integer",
+      "description": "Physical damage resistance",
+      "engineVerified": true
+    },
+    "ResDm(H)": {
+      "type": "integer",
+      "description": "Physical damage resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResDm(N)": {
+      "type": "integer",
+      "description": "Physical damage resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "ResFi": {
+      "type": "integer",
+      "description": "Fire resistance",
+      "engineVerified": true
+    },
+    "ResFi(H)": {
+      "type": "integer",
+      "description": "Fire resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResFi(N)": {
+      "type": "integer",
+      "description": "Fire resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "ResLi": {
+      "type": "integer",
+      "description": "Lightning resistance",
+      "engineVerified": true
+    },
+    "ResLi(H)": {
+      "type": "integer",
+      "description": "Lightning resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResLi(N)": {
+      "type": "integer",
+      "description": "Lightning resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "ResMa": {
+      "type": "integer",
+      "description": "Magic resistance",
+      "engineVerified": true
+    },
+    "ResMa(H)": {
+      "type": "integer",
+      "description": "Magic resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResMa(N)": {
+      "type": "integer",
+      "description": "Magic resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "ResPo": {
+      "type": "integer",
+      "description": "Poison resistance",
+      "engineVerified": true
+    },
+    "ResPo(H)": {
+      "type": "integer",
+      "description": "Poison resistance (Hell)",
+      "engineVerified": true
+    },
+    "ResPo(N)": {
+      "type": "integer",
+      "description": "Poison resistance (Nightmare)",
+      "engineVerified": true
+    },
+    "Run": {
+      "type": "integer",
+      "description": "Run speed",
+      "engineVerified": true
+    },
+    "S1TH": {
+      "type": "integer",
+      "description": "Skill 1 to-hit bonus",
+      "engineVerified": true
+    },
+    "S1TH(H)": {
+      "type": "integer",
+      "description": "Skill 1 to-hit bonus (Hell)",
+      "engineVerified": true
+    },
+    "S1TH(N)": {
+      "type": "integer",
+      "description": "Skill 1 to-hit bonus (Nightmare)",
+      "engineVerified": true
+    },
+    "SplClientEnd": {
+      "type": "integer",
+      "description": "Special client end function",
+      "engineVerified": true
+    },
+    "SplEndDeath": {
+      "type": "integer",
+      "description": "Special end death function",
+      "engineVerified": true
+    },
+    "SplEndGeneric": {
+      "type": "integer",
+      "description": "Special end generic function",
+      "engineVerified": true
+    },
+    "SplGetModeChart": {
+      "type": "integer",
+      "description": "Special get mode chart function",
+      "engineVerified": true
+    },
+    "TCQuestCP": {
+      "type": "integer",
+      "description": "Treasure class quest checkpoint",
+      "engineVerified": true
+    },
+    "TCQuestId": {
+      "type": "integer",
+      "description": "Treasure class quest ID",
+      "engineVerified": true
+    },
+    "Velocity": {
+      "type": "integer",
+      "description": "Movement velocity",
+      "engineVerified": true
+    },
+    "aip1": {
+      "type": "integer",
+      "description": "AI parameter 1",
+      "engineVerified": true
+    },
+    "aip2": {
+      "type": "integer",
+      "description": "AI parameter 2",
+      "engineVerified": true
+    },
+    "aip3": {
+      "type": "integer",
+      "description": "AI parameter 3",
+      "engineVerified": true
+    },
+    "aip4": {
+      "type": "integer",
+      "description": "AI parameter 4",
+      "engineVerified": true
+    },
+    "aip5": {
+      "type": "integer",
+      "description": "AI parameter 5",
+      "engineVerified": true
+    },
+    "aip6": {
+      "type": "integer",
+      "description": "AI parameter 6",
+      "engineVerified": true
+    },
+    "aip7": {
+      "type": "integer",
+      "description": "AI parameter 7",
+      "engineVerified": true
+    },
+    "aip8": {
+      "type": "integer",
+      "description": "AI parameter 8",
+      "engineVerified": true
+    },
+    "hcIdx": {
+      "type": "string",
+      "description": "Hit class index",
+      "engineVerified": true
+    },
+    "threat": {
+      "type": "integer",
+      "description": "Threat level for AI targeting",
+      "engineVerified": true
     }
   }
 }

@@ -1,5 +1,141 @@
 {
   "file": "objgroup.txt",
   "description": "Object group definitions for random object placement.",
-  "columns": {}
+  "columns": {
+    "DENSITY0": {
+      "type": "integer",
+      "description": "Object density for slot 0",
+      "engineVerified": true
+    },
+    "DENSITY1": {
+      "type": "integer",
+      "description": "Object density for slot 1",
+      "engineVerified": true
+    },
+    "DENSITY2": {
+      "type": "integer",
+      "description": "Object density for slot 2",
+      "engineVerified": true
+    },
+    "DENSITY3": {
+      "type": "integer",
+      "description": "Object density for slot 3",
+      "engineVerified": true
+    },
+    "DENSITY4": {
+      "type": "integer",
+      "description": "Object density for slot 4",
+      "engineVerified": true
+    },
+    "DENSITY5": {
+      "type": "integer",
+      "description": "Object density for slot 5",
+      "engineVerified": true
+    },
+    "DENSITY6": {
+      "type": "integer",
+      "description": "Object density for slot 6",
+      "engineVerified": true
+    },
+    "DENSITY7": {
+      "type": "integer",
+      "description": "Object density for slot 7",
+      "engineVerified": true
+    },
+    "GroupName": {
+      "type": "string",
+      "description": "Object group name identifier",
+      "engineVerified": true
+    },
+    "ID0": {
+      "type": "integer",
+      "description": "Object ID for slot 0",
+      "engineVerified": true
+    },
+    "ID1": {
+      "type": "integer",
+      "description": "Object ID for slot 1",
+      "engineVerified": true
+    },
+    "ID2": {
+      "type": "integer",
+      "description": "Object ID for slot 2",
+      "engineVerified": true
+    },
+    "ID3": {
+      "type": "integer",
+      "description": "Object ID for slot 3",
+      "engineVerified": true
+    },
+    "ID4": {
+      "type": "integer",
+      "description": "Object ID for slot 4",
+      "engineVerified": true
+    },
+    "ID5": {
+      "type": "integer",
+      "description": "Object ID for slot 5",
+      "engineVerified": true
+    },
+    "ID6": {
+      "type": "integer",
+      "description": "Object ID for slot 6",
+      "engineVerified": true
+    },
+    "ID7": {
+      "type": "integer",
+      "description": "Object ID for slot 7",
+      "engineVerified": true
+    },
+    "Offset": {
+      "type": "integer",
+      "description": "Offset value for group placement",
+      "engineVerified": true
+    },
+    "PROB0": {
+      "type": "integer",
+      "description": "Spawn probability for slot 0",
+      "engineVerified": true
+    },
+    "PROB1": {
+      "type": "integer",
+      "description": "Spawn probability for slot 1",
+      "engineVerified": true
+    },
+    "PROB2": {
+      "type": "integer",
+      "description": "Spawn probability for slot 2",
+      "engineVerified": true
+    },
+    "PROB3": {
+      "type": "integer",
+      "description": "Spawn probability for slot 3",
+      "engineVerified": true
+    },
+    "PROB4": {
+      "type": "integer",
+      "description": "Spawn probability for slot 4",
+      "engineVerified": true
+    },
+    "PROB5": {
+      "type": "integer",
+      "description": "Spawn probability for slot 5",
+      "engineVerified": true
+    },
+    "PROB6": {
+      "type": "integer",
+      "description": "Spawn probability for slot 6",
+      "engineVerified": true
+    },
+    "PROB7": {
+      "type": "integer",
+      "description": "Spawn probability for slot 7",
+      "engineVerified": true
+    },
+    "SHRINES": {
+      "type": "boolean",
+      "description": "Whether this group contains shrines",
+      "engineVerified": true
+    }
+  }
 }

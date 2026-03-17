@@ -903,6 +903,11 @@
       "type": "string",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "HitClass": {
+      "type": "integer",
+      "description": "Hit class for sound/visual effects on impact",
+      "engineVerified": true
     }
   }
 }

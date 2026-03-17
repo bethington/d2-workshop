@@ -215,6 +215,16 @@
       "ref": "skills.txt",
       "description": "Column read by game engine",
       "engineVerified": true
+    },
+    "experience": {
+      "type": "string",
+      "description": "Reference to experience table for this class",
+      "engineVerified": true
+    },
+    "skilldesc": {
+      "type": "string",
+      "description": "Reference to skill description for this class",
+      "engineVerified": true
     }
   }
 }
