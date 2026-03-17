@@ -74,11 +74,6 @@
       "description": "Conversion target 3",
       "engineVerified": true
     },
-    "Death": {
-      "type": "string",
-      "description": "Death sound",
-      "engineVerified": true
-    },
     "Flee": {
       "type": "string",
       "description": "Flee/retreat sound",
@@ -119,11 +114,6 @@
       "description": "Neutral/idle sound",
       "engineVerified": true
     },
-    "NeutralTime": {
-      "type": "integer",
-      "description": "Neutral sound interval in frames",
-      "engineVerified": true
-    },
     "Skill1": {
       "type": "string",
       "description": "Skill 1 sound",
@@ -157,6 +147,61 @@
     "Weapon2": {
       "type": "string",
       "description": "Weapon 2 sound",
+      "engineVerified": true
+    },
+    "Att1Del": {
+      "type": "integer",
+      "description": "Attack 1 sound delay in frames",
+      "engineVerified": true
+    },
+    "Att1Prb": {
+      "type": "integer",
+      "description": "Attack 1 sound probability",
+      "engineVerified": true
+    },
+    "Att2Del": {
+      "type": "integer",
+      "description": "Attack 2 sound delay in frames",
+      "engineVerified": true
+    },
+    "Att2Prb": {
+      "type": "integer",
+      "description": "Attack 2 sound probability",
+      "engineVerified": true
+    },
+    "FsCnt": {
+      "type": "integer",
+      "description": "Footstep sound count",
+      "engineVerified": true
+    },
+    "FsPrb": {
+      "type": "integer",
+      "description": "Footstep sound probability",
+      "engineVerified": true
+    },
+    "NeuTime": {
+      "type": "integer",
+      "description": "Neutral sound interval in frames",
+      "engineVerified": true
+    },
+    "Wea1Del": {
+      "type": "integer",
+      "description": "Weapon 1 sound delay in frames",
+      "engineVerified": true
+    },
+    "Wea1Vol": {
+      "type": "integer",
+      "description": "Weapon 1 sound volume",
+      "engineVerified": true
+    },
+    "Wea2Del": {
+      "type": "integer",
+      "description": "Weapon 2 sound delay in frames",
+      "engineVerified": true
+    },
+    "Wea2Vol": {
+      "type": "integer",
+      "description": "Weapon 2 sound volume",
       "engineVerified": true
     }
   }
