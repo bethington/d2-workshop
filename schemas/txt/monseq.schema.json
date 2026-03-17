@@ -3,9 +3,9 @@
   "description": "Monster animation sequences — defines composite animation sequences built from frames of other animation modes. Used for special monster animations that combine multiple modes.",
   "columns": {
     "sequence": {
-      "type": "integer",
+      "type": "string",
       "required": true,
-      "description": "Sequence group index (multiple rows share the same sequence number to form one animation)",
+      "description": "Sequence group identifier (format type 0x11, string lookup)",
       "engineVerified": true
     },
     "mode": {
