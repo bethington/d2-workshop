@@ -9,27 +9,8 @@
       "engineVerified": true
     },
     "mode": {
-      "type": "enum",
+      "type": "string",
       "description": "Source animation mode token to pull frames from (e.g. A1, S1, NU)",
-      "values": [
-        "DT",
-        "NU",
-        "WL",
-        "GH",
-        "A1",
-        "A2",
-        "BL",
-        "SC",
-        "S1",
-        "S2",
-        "S3",
-        "S4",
-        "DD",
-        "KB",
-        "xx",
-        "RN",
-        ""
-      ],
       "engineVerified": true
     },
     "frame": {
