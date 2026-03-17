@@ -4,8 +4,6 @@
   "columns": {
     "transform": {
       "type": "integer",
-      "min": 0,
-      "max": 18,
       "description": "Inventory color transform index",
       "engineVerified": true
     },
@@ -287,15 +285,11 @@
     },
     "weaponmod1min": {
       "type": "integer",
-      "min": 1,
-      "max": 56,
       "description": "Weapon modifier 1 minimum",
       "engineVerified": true
     },
     "weaponmod1max": {
       "type": "integer",
-      "min": 1,
-      "max": 70,
       "description": "Weapon modifier 1 maximum",
       "engineVerified": true
     },
@@ -577,15 +571,11 @@
     },
     "weaponmod2min": {
       "type": "integer",
-      "min": 2,
-      "max": 20,
       "description": "Weapon modifier 2 minimum",
       "engineVerified": true
     },
     "weaponmod2max": {
       "type": "integer",
-      "min": 2,
-      "max": 20,
       "description": "Weapon modifier 2 maximum",
       "engineVerified": true
     },
@@ -867,15 +857,11 @@
     },
     "weaponmod3min": {
       "type": "integer",
-      "min": 0,
-      "max": 75,
       "description": "Weapon modifier 3 minimum",
       "engineVerified": true
     },
     "weaponmod3max": {
       "type": "integer",
-      "min": 0,
-      "max": 75,
       "description": "Weapon modifier 3 maximum",
       "engineVerified": true
     },
@@ -1157,15 +1143,11 @@
     },
     "helmmod1min": {
       "type": "integer",
-      "min": 2,
-      "max": 30,
       "description": "Helm modifier 1 minimum",
       "engineVerified": true
     },
     "helmmod1max": {
       "type": "integer",
-      "min": 2,
-      "max": 30,
       "description": "Helm modifier 1 maximum",
       "engineVerified": true
     },
@@ -1447,15 +1429,11 @@
     },
     "helmmod2min": {
       "type": "integer",
-      "min": 0,
-      "max": 16,
       "description": "Helm modifier 2 minimum",
       "engineVerified": true
     },
     "helmmod2max": {
       "type": "integer",
-      "min": 0,
-      "max": 20,
       "description": "Helm modifier 2 maximum",
       "engineVerified": true
     },
@@ -1738,15 +1716,11 @@
     "helmmod3min": {
       "type": "integer",
       "description": "Helm modifier 3 minimum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "helmmod3max": {
       "type": "integer",
       "description": "Helm modifier 3 maximum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "shieldmod1code": {
@@ -2027,15 +2001,11 @@
     },
     "shieldmod1min": {
       "type": "integer",
-      "min": 2,
-      "max": 26,
       "description": "Shield modifier 1 minimum",
       "engineVerified": true
     },
     "shieldmod1max": {
       "type": "integer",
-      "min": 2,
-      "max": 30,
       "description": "Shield modifier 1 maximum",
       "engineVerified": true
     },
@@ -2318,15 +2288,11 @@
     "shieldmod2min": {
       "type": "integer",
       "description": "Shield modifier 2 minimum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "shieldmod2max": {
       "type": "integer",
       "description": "Shield modifier 2 maximum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "shieldmod3code": {
@@ -2608,15 +2574,11 @@
     "shieldmod3min": {
       "type": "integer",
       "description": "Shield modifier 3 minimum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "shieldmod3max": {
       "type": "integer",
       "description": "Shield modifier 3 maximum",
-      "min": 0,
-      "max": 1,
       "engineVerified": true
     },
     "shieldmod3param": {
