@@ -339,28 +339,36 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
   ): D2TreeItem[] {
     try {
       const entries = this.mpqManager.listDirectory(mpqName, internalPath);
-      return entries.map((entry) => {
-        if (entry.isDirectory) {
+      return entries
+        .filter((entry) => {
+          // Hide .bin files — they are generated from .txt files
+          if (!entry.isDirectory && entry.name.toLowerCase().endsWith(".bin")) {
+            return false;
+          }
+          return true;
+        })
+        .map((entry) => {
+          if (entry.isDirectory) {
+            return new D2TreeItem(
+              entry.name,
+              D2FileType.Folder,
+              "",
+              vscode.TreeItemCollapsibleState.Collapsed,
+              mpqName,
+              entry.fullPath
+            );
+          }
+
+          const fileType = detectMpqFileType(entry.name);
           return new D2TreeItem(
             entry.name,
-            D2FileType.Folder,
+            fileType,
             "",
-            vscode.TreeItemCollapsibleState.Collapsed,
+            vscode.TreeItemCollapsibleState.None,
             mpqName,
             entry.fullPath
           );
-        }
-
-        const fileType = detectMpqFileType(entry.name);
-        return new D2TreeItem(
-          entry.name,
-          fileType,
-          "",
-          vscode.TreeItemCollapsibleState.None,
-          mpqName,
-          entry.fullPath
-        );
-      });
+        });
     } catch {
       return [];
     }

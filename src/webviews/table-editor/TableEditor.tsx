@@ -343,6 +343,25 @@ export function TableEditor() {
         >
           Queue Save
         </button>
+        <button
+          className="toolbar-btn clean-btn"
+          title="Clean file: normalize tabs, trim whitespace, fix column count to match header"
+          onClick={() => {
+            setData((prev) => {
+              const colCount = prev.headers.length;
+              const cleanedRows = prev.rows.map((row) => {
+                const cleaned = row.map((cell) => cell.trim());
+                // Pad to header count or trim excess
+                while (cleaned.length < colCount) cleaned.push("");
+                return cleaned.slice(0, colCount);
+              });
+              setDirty(true);
+              return { ...prev, rows: cleanedRows };
+            });
+          }}
+        >
+          Clean
+        </button>
       </div>
       <div className="content-area">
         <div className="grid-container">

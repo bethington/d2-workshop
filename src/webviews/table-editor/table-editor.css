@@ -71,6 +71,21 @@
   background: var(--vscode-button-hoverBackground);
 }
 
+.clean-btn {
+  padding: 4px 12px;
+  background: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: inherit;
+  margin-left: 4px;
+}
+
+.clean-btn:hover {
+  background: var(--vscode-button-secondaryHoverBackground);
+}
+
 .save-btn:disabled {
   opacity: 0.5;
   cursor: default;
