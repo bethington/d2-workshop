@@ -1,0 +1,16 @@
+{
+  "file": "monpreset.txt",
+  "description": "Monster preset placement definitions - maps act numbers to preset monster placement entries.",
+  "columns": {
+    "Act": {
+      "type": "integer",
+      "description": "Act number for this preset entry",
+      "engineVerified": true
+    },
+    "Place": {
+      "type": "string",
+      "description": "Placement reference resolved via callback function",
+      "engineVerified": true
+    }
+  }
+}
