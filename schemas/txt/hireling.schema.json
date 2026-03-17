@@ -1,570 +1,350 @@
 {
   "file": "hireling.txt",
-  "description": "Mercenary definitions â€” stats, skills, level progression, and hiring costs per act and difficulty.",
+  "description": "Hireling stat definitions - base stats, skills, equipment, and scaling per level for each hireling type and difficulty.",
   "columns": {
+    "version": {
+      "type": "integer",
+      "description": "Hireling version flag (0 = classic, 100 = expansion)",
+      "engineVerified": true
+    },
+    "id": {
+      "type": "integer",
+      "description": "Hireling type ID",
+      "engineVerified": true
+    },
+    "class": {
+      "type": "integer",
+      "description": "Hireling class type index",
+      "engineVerified": true
+    },
+    "act": {
+      "type": "integer",
+      "description": "Act where this hireling is available",
+      "engineVerified": true
+    },
+    "difficulty": {
+      "type": "integer",
+      "description": "Difficulty level for this hireling entry",
+      "engineVerified": true
+    },
+    "seller": {
+      "type": "integer",
+      "description": "NPC seller ID",
+      "engineVerified": true
+    },
+    "gold": {
+      "type": "integer",
+      "description": "Hiring cost in gold",
+      "engineVerified": true
+    },
+    "level": {
+      "type": "integer",
+      "description": "Hireling level",
+      "engineVerified": true
+    },
     "namefirst": {
-      "type": "enum",
-      "values": [
-        "MercX101",
-        "merc01",
-        "merca201",
-        "merca222"
-      ],
-      "description": "Starting index in the hireling name table for first names",
+      "type": "string",
+      "description": "First name table starting string key",
       "engineVerified": true
     },
     "namelast": {
-      "type": "enum",
-      "values": [
-        "MercX167",
-        "merc41",
-        "merca221",
-        "merca241"
-      ],
-      "description": "Ending index in the hireling name table for first names",
+      "type": "string",
+      "description": "Last name table starting string key",
       "engineVerified": true
     },
     "exp/lvl": {
       "type": "integer",
-      "min": 100,
-      "max": 125,
-      "description": "Experience scaling ratio per level",
+      "description": "Experience required per level",
+      "engineVerified": true
+    },
+    "hp": {
+      "type": "integer",
+      "description": "Base hit points",
       "engineVerified": true
     },
     "hp/lvl": {
       "type": "integer",
-      "min": 6,
-      "max": 12,
       "description": "Hit points gained per level",
       "engineVerified": true
     },
     "defense": {
       "type": "integer",
-      "min": 15,
-      "max": 509,
       "description": "Base defense rating",
       "engineVerified": true
     },
     "def/lvl": {
       "type": "integer",
-      "min": 4,
-      "max": 9,
       "description": "Defense gained per level",
       "engineVerified": true
     },
-    "str/lvl": {
-      "type": "integer",
-      "min": 10,
-      "max": 15,
-      "description": "Strength gained per level (eighths)",
-      "engineVerified": true
-    },
-    "dex/lvl": {
-      "type": "integer",
-      "min": 8,
-      "max": 16,
-      "description": "Dexterity gained per level (eighths)",
-      "engineVerified": true
-    },
-    "ar/lvl": {
-      "type": "integer",
-      "min": 0,
-      "max": 12,
-      "description": "Attack rating gained per level",
-      "engineVerified": true
-    },
-    "dmg/lvl": {
-      "type": "integer",
-      "min": 2,
-      "max": 8,
-      "description": "Damage gained per level (eighths)",
-      "engineVerified": true
-    },
-    "resist": {
-      "type": "integer",
-      "min": 0,
-      "max": 139,
-      "description": "Base all-resistances value at hire level",
-      "engineVerified": true
-    },
-    "resist/lvl": {
-      "type": "integer",
-      "min": 4,
-      "max": 8,
-      "description": "All-resistances gained per level (in eighths)",
-      "engineVerified": true
-    },
-    "defaultchance": {
-      "type": "integer",
-      "min": 10,
-      "max": 75,
-      "description": "Base percentage chance to use default attack",
-      "engineVerified": true
-    },
-    "skill1": {
-      "type": "ref",
-      "description": "Skill 1 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode1": {
-      "type": "integer",
-      "min": 4,
-      "max": 14,
-      "description": "Skill 1 usage mode",
-      "engineVerified": true
-    },
-    "chance1": {
-      "type": "integer",
-      "min": 10,
-      "max": 208,
-      "description": "Skill 1 usage probability (%)",
-      "engineVerified": true
-    },
-    "lvlperlvl1": {
-      "type": "integer",
-      "min": 0,
-      "max": 10,
-      "description": "Skill 1 level per character level",
-      "engineVerified": true
-    },
-    "skill2": {
-      "type": "ref",
-      "description": "Skill 2 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode2": {
-      "type": "integer",
-      "min": 1,
-      "max": 7,
-      "description": "Skill 2 usage mode",
-      "engineVerified": true
-    },
-    "chance2": {
-      "type": "integer",
-      "min": 10,
-      "max": 1000,
-      "description": "Skill 2 usage probability (%)",
-      "engineVerified": true
-    },
-    "level2": {
-      "type": "integer",
-      "min": 1,
-      "max": 18,
-      "description": "Minimum hireling level to unlock skill 2",
-      "engineVerified": true
-    },
-    "lvlperlvl2": {
-      "type": "integer",
-      "min": 0,
-      "max": 10,
-      "description": "Skill 2 level per character level",
-      "engineVerified": true
-    },
-    "skill3": {
-      "type": "ref",
-      "description": "Skill 3 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode3": {
-      "type": "integer",
-      "min": 1,
-      "max": 7,
-      "description": "Skill 3 usage mode",
-      "engineVerified": true
-    },
-    "chance3": {
-      "type": "integer",
-      "min": 5,
-      "max": 240,
-      "description": "Skill 3 usage probability (%)",
-      "engineVerified": true
-    },
-    "level3": {
-      "type": "integer",
-      "min": 1,
-      "max": 20,
-      "description": "Minimum hireling level to unlock skill 3",
-      "engineVerified": true
-    },
-    "lvlperlvl3": {
-      "type": "integer",
-      "min": 0,
-      "max": 10,
-      "description": "Skill 3 level per character level",
-      "engineVerified": true
-    },
-    "skill4": {
-      "type": "ref",
-      "description": "Skill 4 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode4": {
-      "type": "integer",
-      "description": "Skill 4 usage mode",
-      "min": 0,
-      "engineVerified": true
-    },
-    "chance4": {
-      "type": "integer",
-      "description": "Skill 4 usage probability (%)",
-      "min": 0,
-      "engineVerified": true
-    },
-    "level4": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum hireling level to unlock skill 4",
-      "engineVerified": true
-    },
-    "lvlperlvl4": {
-      "type": "integer",
-      "description": "Skill 4 level per character level",
-      "min": 0,
-      "engineVerified": true
-    },
-    "skill5": {
-      "type": "ref",
-      "description": "Skill 5 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode5": {
-      "type": "integer",
-      "description": "Skill 5 usage mode",
-      "min": 0,
-      "engineVerified": true
-    },
-    "chance5": {
-      "type": "integer",
-      "description": "Skill 5 usage probability (%)",
-      "min": 0,
-      "engineVerified": true
-    },
-    "level5": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum hireling level to unlock skill 5",
-      "engineVerified": true
-    },
-    "lvlperlvl5": {
-      "type": "integer",
-      "description": "Skill 5 level per character level",
-      "min": 0,
-      "engineVerified": true
-    },
-    "skill6": {
-      "type": "ref",
-      "description": "Skill 6 reference",
-      "target": "skills.txt",
-      "targetColumn": "skill",
-      "engineVerified": true
-    },
-    "mode6": {
-      "type": "integer",
-      "description": "Skill 6 usage mode",
-      "min": 0,
-      "engineVerified": true
-    },
-    "chance6": {
-      "type": "integer",
-      "description": "Skill 6 usage probability (%)",
-      "min": 0,
-      "engineVerified": true
-    },
-    "level6": {
-      "type": "integer",
-      "min": 0,
-      "description": "Minimum hireling level to unlock skill 6",
-      "engineVerified": true
-    },
-    "lvlperlvl6": {
-      "type": "integer",
-      "description": "Skill 6 level per character level",
-      "min": 0,
-      "engineVerified": true
-    },
-    "Weapon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Weapon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Attack2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Attack1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questrepmult C": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questrepmult B": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questrepmult A": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questbuymult C": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questbuymult B": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questbuymult A": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questsellmult C": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questsellmult B": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questsellmult A": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questflag C": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questflag B": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "questflag A": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "rep mult": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "buy mult": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "sell mult": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl6": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl1": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl2": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl3": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl4": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chanceperlvl5": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "AR": {
-      "type": "integer",
-      "description": "Base attack rating",
-      "engineVerified": true
-    },
-    "Act": {
-      "type": "integer",
-      "description": "Act where this hireling is available",
-      "engineVerified": true
-    },
-    "Class": {
-      "type": "string",
-      "description": "Hireling class type",
-      "engineVerified": true
-    },
-    "Dex": {
-      "type": "integer",
-      "description": "Base dexterity",
-      "engineVerified": true
-    },
-    "Difficulty": {
-      "type": "integer",
-      "description": "Difficulty level for this hireling entry",
-      "engineVerified": true
-    },
-    "Dmg-Max": {
-      "type": "integer",
-      "description": "Maximum base damage",
-      "engineVerified": true
-    },
-    "Dmg-Min": {
-      "type": "integer",
-      "description": "Minimum base damage",
-      "engineVerified": true
-    },
-    "Gold": {
-      "type": "integer",
-      "description": "Hiring cost in gold",
-      "engineVerified": true
-    },
-    "HP": {
-      "type": "integer",
-      "description": "Base hit points",
-      "engineVerified": true
-    },
-    "Head": {
-      "type": "string",
-      "description": "Head equipment type allowed",
-      "engineVerified": true
-    },
-    "HireDesc": {
-      "type": "string",
-      "description": "Hiring description string key",
-      "engineVerified": true
-    },
-    "Hireling": {
-      "type": "string",
-      "description": "Hireling name identifier",
-      "engineVerified": true
-    },
-    "Id": {
-      "type": "integer",
-      "description": "Unique hireling entry ID",
-      "engineVerified": true
-    },
-    "LArm": {
-      "type": "string",
-      "description": "Left arm equipment type allowed",
-      "engineVerified": true
-    },
-    "Legs": {
-      "type": "string",
-      "description": "Legs equipment type allowed",
-      "engineVerified": true
-    },
-    "Level": {
-      "type": "integer",
-      "description": "Hireling level",
-      "engineVerified": true
-    },
-    "Level1": {
-      "type": "integer",
-      "description": "Alternative level field",
-      "engineVerified": true
-    },
-    "RArm": {
-      "type": "string",
-      "description": "Right arm equipment type allowed",
-      "engineVerified": true
-    },
-    "ResistCold": {
-      "type": "integer",
-      "description": "Cold resistance value",
-      "engineVerified": true
-    },
-    "ResistFire": {
-      "type": "integer",
-      "description": "Fire resistance value",
-      "engineVerified": true
-    },
-    "ResistLightning": {
-      "type": "integer",
-      "description": "Lightning resistance value",
-      "engineVerified": true
-    },
-    "ResistPoison": {
-      "type": "integer",
-      "description": "Poison resistance value",
-      "engineVerified": true
-    },
-    "Seller": {
-      "type": "integer",
-      "description": "NPC seller ID",
-      "engineVerified": true
-    },
-    "Shield": {
-      "type": "string",
-      "description": "Shield equipment type allowed",
-      "engineVerified": true
-    },
-    "Str": {
+    "str": {
       "type": "integer",
       "description": "Base strength",
       "engineVerified": true
     },
-    "SubType": {
-      "type": "string",
-      "description": "Hireling subtype classification",
+    "str/lvl": {
+      "type": "integer",
+      "description": "Strength gained per level",
       "engineVerified": true
     },
-    "Torso": {
-      "type": "string",
-      "description": "Torso equipment type allowed",
+    "dex": {
+      "type": "integer",
+      "description": "Base dexterity",
       "engineVerified": true
     },
-    "WType1": {
-      "type": "string",
-      "description": "Primary weapon type allowed",
+    "dex/lvl": {
+      "type": "integer",
+      "description": "Dexterity gained per level",
       "engineVerified": true
     },
-    "WType2": {
+    "ar": {
+      "type": "integer",
+      "description": "Base attack rating",
+      "engineVerified": true
+    },
+    "ar/lvl": {
+      "type": "integer",
+      "description": "Attack rating gained per level",
+      "engineVerified": true
+    },
+    "share": {
+      "type": "integer",
+      "description": "Experience share percentage with player",
+      "engineVerified": true
+    },
+    "dmg-min": {
+      "type": "integer",
+      "description": "Minimum base damage",
+      "engineVerified": true
+    },
+    "dmg-max": {
+      "type": "integer",
+      "description": "Maximum base damage",
+      "engineVerified": true
+    },
+    "dmg/lvl": {
+      "type": "integer",
+      "description": "Damage gained per level",
+      "engineVerified": true
+    },
+    "resist": {
+      "type": "integer",
+      "description": "Base all-resistance value",
+      "engineVerified": true
+    },
+    "resist/lvl": {
+      "type": "integer",
+      "description": "Resistance gained per level",
+      "engineVerified": true
+    },
+    "hiredesc": {
       "type": "string",
-      "description": "Secondary weapon type allowed",
+      "description": "Hireling description code reference (lookup into hiredesc.txt)",
+      "engineVerified": true
+    },
+    "defaultchance": {
+      "type": "integer",
+      "description": "Default skill use chance",
+      "engineVerified": true
+    },
+    "skill1": {
+      "type": "string",
+      "description": "Skill 1 reference",
+      "engineVerified": true
+    },
+    "mode1": {
+      "type": "integer",
+      "description": "Skill 1 use mode",
+      "engineVerified": true
+    },
+    "chance1": {
+      "type": "integer",
+      "description": "Skill 1 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl1": {
+      "type": "integer",
+      "description": "Skill 1 chance increase per level",
       "engineVerified": true
     },
     "level1": {
       "type": "integer",
-      "description": "Level scaling field",
+      "description": "Skill 1 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl1": {
+      "type": "integer",
+      "description": "Skill 1 level increase per hireling level",
+      "engineVerified": true
+    },
+    "skill2": {
+      "type": "string",
+      "description": "Skill 2 reference",
+      "engineVerified": true
+    },
+    "mode2": {
+      "type": "integer",
+      "description": "Skill 2 use mode",
+      "engineVerified": true
+    },
+    "chance2": {
+      "type": "integer",
+      "description": "Skill 2 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl2": {
+      "type": "integer",
+      "description": "Skill 2 chance increase per level",
+      "engineVerified": true
+    },
+    "level2": {
+      "type": "integer",
+      "description": "Skill 2 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl2": {
+      "type": "integer",
+      "description": "Skill 2 level increase per hireling level",
+      "engineVerified": true
+    },
+    "skill3": {
+      "type": "string",
+      "description": "Skill 3 reference",
+      "engineVerified": true
+    },
+    "mode3": {
+      "type": "integer",
+      "description": "Skill 3 use mode",
+      "engineVerified": true
+    },
+    "chance3": {
+      "type": "integer",
+      "description": "Skill 3 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl3": {
+      "type": "integer",
+      "description": "Skill 3 chance increase per level",
+      "engineVerified": true
+    },
+    "level3": {
+      "type": "integer",
+      "description": "Skill 3 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl3": {
+      "type": "integer",
+      "description": "Skill 3 level increase per hireling level",
+      "engineVerified": true
+    },
+    "skill4": {
+      "type": "string",
+      "description": "Skill 4 reference",
+      "engineVerified": true
+    },
+    "mode4": {
+      "type": "integer",
+      "description": "Skill 4 use mode",
+      "engineVerified": true
+    },
+    "chance4": {
+      "type": "integer",
+      "description": "Skill 4 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl4": {
+      "type": "integer",
+      "description": "Skill 4 chance increase per level",
+      "engineVerified": true
+    },
+    "level4": {
+      "type": "integer",
+      "description": "Skill 4 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl4": {
+      "type": "integer",
+      "description": "Skill 4 level increase per hireling level",
+      "engineVerified": true
+    },
+    "skill5": {
+      "type": "string",
+      "description": "Skill 5 reference",
+      "engineVerified": true
+    },
+    "mode5": {
+      "type": "integer",
+      "description": "Skill 5 use mode",
+      "engineVerified": true
+    },
+    "chance5": {
+      "type": "integer",
+      "description": "Skill 5 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl5": {
+      "type": "integer",
+      "description": "Skill 5 chance increase per level",
+      "engineVerified": true
+    },
+    "level5": {
+      "type": "integer",
+      "description": "Skill 5 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl5": {
+      "type": "integer",
+      "description": "Skill 5 level increase per hireling level",
+      "engineVerified": true
+    },
+    "skill6": {
+      "type": "string",
+      "description": "Skill 6 reference",
+      "engineVerified": true
+    },
+    "mode6": {
+      "type": "integer",
+      "description": "Skill 6 use mode",
+      "engineVerified": true
+    },
+    "chance6": {
+      "type": "integer",
+      "description": "Skill 6 use chance",
+      "engineVerified": true
+    },
+    "chanceperlvl6": {
+      "type": "integer",
+      "description": "Skill 6 chance increase per level",
+      "engineVerified": true
+    },
+    "level6": {
+      "type": "integer",
+      "description": "Skill 6 base level",
+      "engineVerified": true
+    },
+    "lvlperlvl6": {
+      "type": "integer",
+      "description": "Skill 6 level increase per hireling level",
+      "engineVerified": true
+    },
+    "head": {
+      "type": "integer",
+      "description": "Head equipment type allowed",
+      "engineVerified": true
+    },
+    "torso": {
+      "type": "integer",
+      "description": "Torso equipment type allowed",
+      "engineVerified": true
+    },
+    "weapon": {
+      "type": "integer",
+      "description": "Weapon equipment type allowed",
+      "engineVerified": true
+    },
+    "shield": {
+      "type": "integer",
+      "description": "Shield equipment type allowed",
       "engineVerified": true
     }
   }
