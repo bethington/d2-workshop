@@ -18,7 +18,6 @@
     },
     "TransLvl": {
       "type": "integer",
-      "min": 0,
       "description": "Transform level controlling color palette variation (0-7)",
       "engineVerified": true
     },
@@ -107,27 +106,21 @@
     },
     "sparsePopulate": {
       "type": "integer",
-      "min": 0,
       "description": "Sparse population density percentage",
       "engineVerified": true
     },
     "Rarity": {
       "type": "integer",
-      "min": 0,
       "description": "Spawn rarity weight (0=common, higher=rarer)",
       "engineVerified": true
     },
     "Level(N)": {
       "type": "integer",
-      "min": 0,
-      "max": 110,
       "description": "Monster level (Nightmare difficulty)",
       "engineVerified": true
     },
     "Level(H)": {
       "type": "integer",
-      "min": 0,
-      "max": 110,
       "description": "Monster level (Hell difficulty)",
       "engineVerified": true
     },
@@ -147,19 +140,16 @@
     },
     "aidel": {
       "type": "integer",
-      "min": 0,
       "description": "AI action delay in frames (Normal)",
       "engineVerified": true
     },
     "aidel(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI action delay in frames (Nightmare)",
       "engineVerified": true
     },
     "aidel(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI action delay in frames (Hell)",
       "engineVerified": true
     },
@@ -170,109 +160,91 @@
     },
     "aidist(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI engagement distance (Nightmare)",
       "engineVerified": true
     },
     "aidist(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI engagement distance (Hell)",
       "engineVerified": true
     },
     "aip1(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 1 (Nightmare)",
       "engineVerified": true
     },
     "aip1(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 1 (Hell)",
       "engineVerified": true
     },
     "aip2(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 2 (Nightmare)",
       "engineVerified": true
     },
     "aip2(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 2 (Hell)",
       "engineVerified": true
     },
     "aip3(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 3 (Nightmare)",
       "engineVerified": true
     },
     "aip3(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 3 (Hell)",
       "engineVerified": true
     },
     "aip4(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 4 (Nightmare)",
       "engineVerified": true
     },
     "aip4(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 4 (Hell)",
       "engineVerified": true
     },
     "aip5(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 5 (Nightmare)",
       "engineVerified": true
     },
     "aip5(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 5 (Hell)",
       "engineVerified": true
     },
     "aip6(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 6 (Nightmare)",
       "engineVerified": true
     },
     "aip6(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 6 (Hell)",
       "engineVerified": true
     },
     "aip7(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 7 (Nightmare)",
       "engineVerified": true
     },
     "aip7(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 7 (Hell)",
       "engineVerified": true
     },
     "aip8(N)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 8 (Nightmare)",
       "engineVerified": true
     },
     "aip8(H)": {
       "type": "integer",
-      "min": 0,
       "description": "AI parameter 8 (Hell)",
       "engineVerified": true
     },
@@ -327,7 +299,6 @@
     },
     "Align": {
       "type": "integer",
-      "min": 0,
       "description": "Alignment (0=enemy, 1=allied/friendly, 2=neutral)",
       "engineVerified": true
     },
@@ -403,13 +374,11 @@
     },
     "Drain(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Life/mana drain effectiveness % (Nightmare)",
       "engineVerified": true
     },
     "Drain(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Life/mana drain effectiveness % (Hell)",
       "engineVerified": true
     },
@@ -437,175 +406,146 @@
     },
     "ToBlock": {
       "type": "integer",
-      "min": 0,
       "description": "Block chance % (Normal)",
       "engineVerified": true
     },
     "ToBlock(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Block chance % (Nightmare)",
       "engineVerified": true
     },
     "ToBlock(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Block chance % (Hell)",
       "engineVerified": true
     },
     "MinHP": {
       "type": "integer",
-      "min": 0,
       "description": "Minimum hit points (Normal)",
       "engineVerified": true
     },
     "MaxHP": {
       "type": "integer",
-      "min": 0,
       "description": "Maximum hit points (Normal)",
       "engineVerified": true
     },
     "A1MinD": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 minimum damage (Normal)",
       "engineVerified": true
     },
     "A1MaxD": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 maximum damage (Normal)",
       "engineVerified": true
     },
     "A2MinD": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 minimum damage (Normal)",
       "engineVerified": true
     },
     "A2MaxD": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 maximum damage (Normal)",
       "engineVerified": true
     },
     "S1MinD": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 minimum damage (Normal)",
       "engineVerified": true
     },
     "S1MaxD": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 maximum damage (Normal)",
       "engineVerified": true
     },
     "MinHP(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Minimum hit points (Nightmare)",
       "engineVerified": true
     },
     "MaxHP(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Maximum hit points (Nightmare)",
       "engineVerified": true
     },
     "Exp(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Base experience points (Nightmare)",
       "engineVerified": true
     },
     "A1MinD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 minimum damage (Nightmare)",
       "engineVerified": true
     },
     "A1MaxD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 maximum damage (Nightmare)",
       "engineVerified": true
     },
     "A2MinD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 minimum damage (Nightmare)",
       "engineVerified": true
     },
     "A2MaxD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 maximum damage (Nightmare)",
       "engineVerified": true
     },
     "S1MinD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 minimum damage (Nightmare)",
       "engineVerified": true
     },
     "S1MaxD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 maximum damage (Nightmare)",
       "engineVerified": true
     },
     "MinHP(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Minimum hit points (Hell)",
       "engineVerified": true
     },
     "MaxHP(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Maximum hit points (Hell)",
       "engineVerified": true
     },
     "Exp(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Base experience points (Hell)",
       "engineVerified": true
     },
     "A1MinD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 minimum damage (Hell)",
       "engineVerified": true
     },
     "A1MaxD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 1 maximum damage (Hell)",
       "engineVerified": true
     },
     "A2MinD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 minimum damage (Hell)",
       "engineVerified": true
     },
     "A2MaxD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Attack 2 maximum damage (Hell)",
       "engineVerified": true
     },
     "S1MinD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 minimum damage (Hell)",
       "engineVerified": true
     },
     "S1MaxD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Skill 1 maximum damage (Hell)",
       "engineVerified": true
     },
@@ -648,73 +588,61 @@
     },
     "El1Pct": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 chance % (Normal)",
       "engineVerified": true
     },
     "El1MinD": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 minimum damage (Normal)",
       "engineVerified": true
     },
     "El1MaxD": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 maximum damage (Normal)",
       "engineVerified": true
     },
     "El1Dur": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 duration in frames (Normal)",
       "engineVerified": true
     },
     "El1Pct(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 chance % (Nightmare)",
       "engineVerified": true
     },
     "El1MinD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 minimum damage (Nightmare)",
       "engineVerified": true
     },
     "El1MaxD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 maximum damage (Nightmare)",
       "engineVerified": true
     },
     "El1Dur(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 duration in frames (Nightmare)",
       "engineVerified": true
     },
     "El1Pct(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 chance % (Hell)",
       "engineVerified": true
     },
     "El1MinD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 minimum damage (Hell)",
       "engineVerified": true
     },
     "El1MaxD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 maximum damage (Hell)",
       "engineVerified": true
     },
     "El1Dur(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 1 duration in frames (Hell)",
       "engineVerified": true
     },
@@ -738,73 +666,61 @@
     },
     "El2Pct": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 chance % (Normal)",
       "engineVerified": true
     },
     "El2MinD": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 minimum damage (Normal)",
       "engineVerified": true
     },
     "El2MaxD": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 maximum damage (Normal)",
       "engineVerified": true
     },
     "El2Dur": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 duration in frames (Normal)",
       "engineVerified": true
     },
     "El2Pct(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 chance % (Nightmare)",
       "engineVerified": true
     },
     "El2MinD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 minimum damage (Nightmare)",
       "engineVerified": true
     },
     "El2MaxD(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 maximum damage (Nightmare)",
       "engineVerified": true
     },
     "El2Dur(N)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 duration in frames (Nightmare)",
       "engineVerified": true
     },
     "El2Pct(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 chance % (Hell)",
       "engineVerified": true
     },
     "El2MinD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 minimum damage (Hell)",
       "engineVerified": true
     },
     "El2MaxD(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 maximum damage (Hell)",
       "engineVerified": true
     },
     "El2Dur(H)": {
       "type": "integer",
-      "min": 0,
       "description": "Elemental attack 2 duration in frames (Hell)",
       "engineVerified": true
     },
@@ -964,126 +880,6 @@
       "description": "Quest boss drop table (Hell)",
       "engineVerified": true
     },
-    "chance6 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop6 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance5 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop5 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance4 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop4 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance3 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop3 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance2 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop2 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance1 (H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop1 (H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance6 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop6 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance5 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop5 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance4 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop4 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance3 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop3 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance2 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop2 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "chance1 (N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "prop1 (N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
     "A1TH": {
       "type": "integer",
       "description": "Attack 1 to-hit bonus",
@@ -1134,11 +930,6 @@
       "description": "AI type identifier",
       "engineVerified": true
     },
-    "Anim": {
-      "type": "string",
-      "description": "Animation mode",
-      "engineVerified": true
-    },
     "Code": {
       "type": "string",
       "description": "Monster type code",
@@ -1147,21 +938,6 @@
     "DamageRegen": {
       "type": "integer",
       "description": "Damage regeneration rate",
-      "engineVerified": true
-    },
-    "Def(H)": {
-      "type": "integer",
-      "description": "Defense rating (Hell)",
-      "engineVerified": true
-    },
-    "Def(N)": {
-      "type": "integer",
-      "description": "Defense rating (Nightmare)",
-      "engineVerified": true
-    },
-    "Enabled": {
-      "type": "boolean",
-      "description": "Whether this monster is enabled",
       "engineVerified": true
     },
     "Exp": {
@@ -1182,11 +958,6 @@
     "MonProp": {
       "type": "string",
       "description": "Monster property reference",
-      "engineVerified": true
-    },
-    "MonPropPct": {
-      "type": "integer",
-      "description": "Monster property chance percentage",
       "engineVerified": true
     },
     "ResCo": {
@@ -1374,14 +1145,229 @@
       "description": "AI parameter 8",
       "engineVerified": true
     },
-    "hcIdx": {
-      "type": "string",
-      "description": "Hit class index",
-      "engineVerified": true
-    },
     "threat": {
       "type": "integer",
       "description": "Threat level for AI targeting",
+      "engineVerified": true
+    },
+    "ColdEffect": {
+      "type": "integer",
+      "description": "Cold effect type (Normal)",
+      "engineVerified": true
+    },
+    "ColdEffect(H)": {
+      "type": "integer",
+      "description": "Cold effect type (Hell)",
+      "engineVerified": true
+    },
+    "ColdEffect(N)": {
+      "type": "integer",
+      "description": "Cold effect type (Nightmare)",
+      "engineVerified": true
+    },
+    "Crit": {
+      "type": "integer",
+      "description": "Critical hit chance percentage",
+      "engineVerified": true
+    },
+    "MaxGrp": {
+      "type": "integer",
+      "description": "Maximum group size",
+      "engineVerified": true
+    },
+    "MinGrp": {
+      "type": "integer",
+      "description": "Minimum group size",
+      "engineVerified": true
+    },
+    "MissSQ": {
+      "type": "string",
+      "description": "Sequence missile reference",
+      "engineVerified": true
+    },
+    "PartyMax": {
+      "type": "integer",
+      "description": "Maximum party member count",
+      "engineVerified": true
+    },
+    "PartyMin": {
+      "type": "integer",
+      "description": "Minimum party member count",
+      "engineVerified": true
+    },
+    "SendSkills": {
+      "type": "integer",
+      "description": "Whether skill data is sent to client",
+      "engineVerified": true
+    },
+    "boss": {
+      "type": "integer",
+      "description": "Whether this monster is a boss type",
+      "engineVerified": true
+    },
+    "deathDmg": {
+      "type": "integer",
+      "description": "Whether monster deals damage on death",
+      "engineVerified": true
+    },
+    "enabled": {
+      "type": "integer",
+      "description": "Whether this monster is enabled",
+      "engineVerified": true
+    },
+    "flying": {
+      "type": "integer",
+      "description": "Whether this monster flies",
+      "engineVerified": true
+    },
+    "inTown": {
+      "type": "integer",
+      "description": "Whether this monster appears in town",
+      "engineVerified": true
+    },
+    "inventory": {
+      "type": "integer",
+      "description": "Whether this monster has inventory",
+      "engineVerified": true
+    },
+    "neverCount": {
+      "type": "integer",
+      "description": "Whether this monster is excluded from counts",
+      "engineVerified": true
+    },
+    "npc": {
+      "type": "integer",
+      "description": "Whether this monster is an NPC",
+      "engineVerified": true
+    },
+    "petIgnore": {
+      "type": "integer",
+      "description": "Whether pets ignore this monster",
+      "engineVerified": true
+    },
+    "zoo": {
+      "type": "integer",
+      "description": "Whether this monster is a zoo/summon type",
+      "engineVerified": true
+    },
+    "Skill1": {
+      "type": "string",
+      "description": "Skill 1 reference",
+      "engineVerified": true
+    },
+    "Sk1mode": {
+      "type": "integer",
+      "description": "Skill 1 use mode",
+      "engineVerified": true
+    },
+    "Sk1lvl": {
+      "type": "integer",
+      "description": "Skill 1 level",
+      "engineVerified": true
+    },
+    "Skill2": {
+      "type": "string",
+      "description": "Skill 2 reference",
+      "engineVerified": true
+    },
+    "Sk2mode": {
+      "type": "integer",
+      "description": "Skill 2 use mode",
+      "engineVerified": true
+    },
+    "Sk2lvl": {
+      "type": "integer",
+      "description": "Skill 2 level",
+      "engineVerified": true
+    },
+    "Skill3": {
+      "type": "string",
+      "description": "Skill 3 reference",
+      "engineVerified": true
+    },
+    "Sk3mode": {
+      "type": "integer",
+      "description": "Skill 3 use mode",
+      "engineVerified": true
+    },
+    "Sk3lvl": {
+      "type": "integer",
+      "description": "Skill 3 level",
+      "engineVerified": true
+    },
+    "Skill4": {
+      "type": "string",
+      "description": "Skill 4 reference",
+      "engineVerified": true
+    },
+    "Sk4mode": {
+      "type": "integer",
+      "description": "Skill 4 use mode",
+      "engineVerified": true
+    },
+    "Sk4lvl": {
+      "type": "integer",
+      "description": "Skill 4 level",
+      "engineVerified": true
+    },
+    "Skill5": {
+      "type": "string",
+      "description": "Skill 5 reference",
+      "engineVerified": true
+    },
+    "Sk5mode": {
+      "type": "integer",
+      "description": "Skill 5 use mode",
+      "engineVerified": true
+    },
+    "Sk5lvl": {
+      "type": "integer",
+      "description": "Skill 5 level",
+      "engineVerified": true
+    },
+    "Skill6": {
+      "type": "string",
+      "description": "Skill 6 reference",
+      "engineVerified": true
+    },
+    "Sk6mode": {
+      "type": "integer",
+      "description": "Skill 6 use mode",
+      "engineVerified": true
+    },
+    "Sk6lvl": {
+      "type": "integer",
+      "description": "Skill 6 level",
+      "engineVerified": true
+    },
+    "Skill7": {
+      "type": "string",
+      "description": "Skill 7 reference",
+      "engineVerified": true
+    },
+    "Sk7mode": {
+      "type": "integer",
+      "description": "Skill 7 use mode",
+      "engineVerified": true
+    },
+    "Sk7lvl": {
+      "type": "integer",
+      "description": "Skill 7 level",
+      "engineVerified": true
+    },
+    "Skill8": {
+      "type": "string",
+      "description": "Skill 8 reference",
+      "engineVerified": true
+    },
+    "Sk8mode": {
+      "type": "integer",
+      "description": "Skill 8 use mode",
+      "engineVerified": true
+    },
+    "Sk8lvl": {
+      "type": "integer",
+      "description": "Skill 8 level",
       "engineVerified": true
     }
   }
