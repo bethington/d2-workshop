@@ -10,7 +10,8 @@
     "weaponmod1code": {
       "type": "string",
       "description": "Weapon modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "weaponmod1min": {
       "type": "integer",
@@ -25,7 +26,8 @@
     "weaponmod2code": {
       "type": "string",
       "description": "Weapon modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "weaponmod2min": {
       "type": "integer",
@@ -40,7 +42,8 @@
     "weaponmod3code": {
       "type": "string",
       "description": "Weapon modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "weaponmod3min": {
       "type": "integer",
@@ -55,7 +58,8 @@
     "helmmod1code": {
       "type": "string",
       "description": "Helm modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "helmmod1min": {
       "type": "integer",
@@ -70,7 +74,8 @@
     "helmmod2code": {
       "type": "string",
       "description": "Helm modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "helmmod2min": {
       "type": "integer",
@@ -85,7 +90,8 @@
     "helmmod3code": {
       "type": "string",
       "description": "Helm modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "helmmod3min": {
       "type": "integer",
@@ -100,7 +106,8 @@
     "shieldmod1code": {
       "type": "string",
       "description": "Shield modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "shieldmod1min": {
       "type": "integer",
@@ -115,7 +122,8 @@
     "shieldmod2code": {
       "type": "string",
       "description": "Shield modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "shieldmod2min": {
       "type": "integer",
@@ -130,7 +138,8 @@
     "shieldmod3code": {
       "type": "string",
       "description": "Shield modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "shieldmod3min": {
       "type": "integer",
@@ -190,7 +199,8 @@
     "code": {
       "type": "string",
       "description": "Gem item code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "letter": {
       "type": "string",
@@ -200,7 +210,9 @@
     "name": {
       "type": "string",
       "description": "Gem name string key",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "nummods": {
       "type": "integer",

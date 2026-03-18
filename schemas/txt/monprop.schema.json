@@ -12,11 +12,14 @@
     "prop1": {
       "type": "string",
       "description": "Normal difficulty property 1 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance1": {
       "type": "integer",
       "description": "Normal property 1 spawn chance (blank = always)",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par1": {
@@ -37,11 +40,14 @@
     "prop2": {
       "type": "string",
       "description": "Normal difficulty property 2 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance2": {
       "type": "integer",
       "description": "Normal property 2 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par2": {
@@ -62,11 +68,14 @@
     "prop3": {
       "type": "string",
       "description": "Normal difficulty property 3 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance3": {
       "type": "integer",
       "description": "Normal property 3 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par3": {
@@ -87,11 +96,14 @@
     "prop4": {
       "type": "string",
       "description": "Normal difficulty property 4 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance4": {
       "type": "integer",
       "description": "Normal property 4 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par4": {
@@ -112,11 +124,14 @@
     "prop5": {
       "type": "string",
       "description": "Normal difficulty property 5 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance5": {
       "type": "integer",
       "description": "Normal property 5 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par5": {
@@ -137,11 +152,14 @@
     "prop6": {
       "type": "string",
       "description": "Normal difficulty property 6 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance6": {
       "type": "integer",
       "description": "Normal property 6 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par6": {
@@ -162,11 +180,14 @@
     "prop1 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 1 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance1 (N)": {
       "type": "integer",
       "description": "Nightmare property 1 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par1 (N)": {
@@ -187,11 +208,14 @@
     "prop2 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 2 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance2 (N)": {
       "type": "integer",
       "description": "Nightmare property 2 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par2 (N)": {
@@ -212,11 +236,14 @@
     "prop3 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 3 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance3 (N)": {
       "type": "integer",
       "description": "Nightmare property 3 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par3 (N)": {
@@ -237,11 +264,14 @@
     "prop4 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 4 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance4 (N)": {
       "type": "integer",
       "description": "Nightmare property 4 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par4 (N)": {
@@ -262,11 +292,14 @@
     "prop5 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 5 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance5 (N)": {
       "type": "integer",
       "description": "Nightmare property 5 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par5 (N)": {
@@ -287,11 +320,14 @@
     "prop6 (N)": {
       "type": "string",
       "description": "Nightmare difficulty property 6 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance6 (N)": {
       "type": "integer",
       "description": "Nightmare property 6 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par6 (N)": {
@@ -312,11 +348,14 @@
     "prop1 (H)": {
       "type": "string",
       "description": "Hell difficulty property 1 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance1 (H)": {
       "type": "integer",
       "description": "Hell property 1 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par1 (H)": {
@@ -337,11 +376,14 @@
     "prop2 (H)": {
       "type": "string",
       "description": "Hell difficulty property 2 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance2 (H)": {
       "type": "integer",
       "description": "Hell property 2 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par2 (H)": {
@@ -362,11 +404,14 @@
     "prop3 (H)": {
       "type": "string",
       "description": "Hell difficulty property 3 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance3 (H)": {
       "type": "integer",
       "description": "Hell property 3 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par3 (H)": {
@@ -387,11 +432,14 @@
     "prop4 (H)": {
       "type": "string",
       "description": "Hell difficulty property 4 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance4 (H)": {
       "type": "integer",
       "description": "Hell property 4 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par4 (H)": {
@@ -412,11 +460,14 @@
     "prop5 (H)": {
       "type": "string",
       "description": "Hell difficulty property 5 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance5 (H)": {
       "type": "integer",
       "description": "Hell property 5 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par5 (H)": {
@@ -437,11 +488,14 @@
     "prop6 (H)": {
       "type": "string",
       "description": "Hell difficulty property 6 code",
+      "ref": "properties.txt",
       "engineVerified": true
     },
     "chance6 (H)": {
       "type": "integer",
       "description": "Hell property 6 spawn chance",
+      "min": 0,
+      "max": 100,
       "engineVerified": true
     },
     "par6 (H)": {

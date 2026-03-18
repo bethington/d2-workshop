@@ -5,12 +5,14 @@
     "BaseId": {
       "type": "string",
       "description": "Base monster class (for variants)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "NextInClass": {
       "type": "string",
       "description": "Next monster in class chain (for superunique variants)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "TransLvl": {
       "type": "integer",
@@ -25,12 +27,14 @@
     "MonStatsEx": {
       "type": "string",
       "description": "Reference to extended stats entry in MonStats2.txt",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats2.txt"
     },
     "MonType": {
       "type": "string",
       "description": "Monster type classification",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "montype.txt/type"
     },
     "DescStr": {
       "type": "string",
@@ -40,17 +44,20 @@
     "rangedtype": {
       "type": "integer",
       "description": "Monster uses ranged attacks (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "placespawn": {
       "type": "integer",
       "description": "Monster can be placed by level spawning (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "spawn": {
       "type": "string",
       "description": "Monster spawned by this monster",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "spawnx": {
       "type": "integer",
@@ -65,27 +72,32 @@
     "spawnmode": {
       "type": "string",
       "description": "Animation mode for spawn (NU=neutral, S1=skill 1)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monmode.txt/token"
     },
     "minion1": {
       "type": "string",
       "description": "Minion type 1 that accompanies this monster",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "minion2": {
       "type": "string",
       "description": "Minion type 2 that accompanies this monster",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "SetBoss": {
       "type": "integer",
       "description": "Is a set boss with fixed affixes (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "BossXfer": {
       "type": "integer",
       "description": "Boss transfers aura/buffs to minions (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "sparsePopulate": {
       "type": "integer",
@@ -110,12 +122,14 @@
     "MonSound": {
       "type": "string",
       "description": "Sound set for normal version",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monsounds.txt"
     },
     "UMonSound": {
       "type": "string",
       "description": "Sound set for unique/champion version",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monsounds.txt"
     },
     "aidel": {
       "type": "integer",
@@ -270,67 +284,80 @@
     "isSpawn": {
       "type": "integer",
       "description": "Can be spawned by other monsters (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "isMelee": {
       "type": "integer",
       "description": "Is a melee attacker (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "interact": {
       "type": "integer",
       "description": "Can be interacted with (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "lUndead": {
       "type": "integer",
       "description": "Is a low undead (skeleton, zombie) (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "hUndead": {
       "type": "integer",
       "description": "Is a high undead (ghost, mummy) (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "demon": {
       "type": "integer",
       "description": "Is a demon (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "opendoors": {
       "type": "integer",
       "description": "Can open doors (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "primeevil": {
       "type": "integer",
       "description": "Is a prime evil (Diablo, Mephisto, Baal) (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "killable": {
       "type": "integer",
       "description": "Can be killed (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "switchai": {
       "type": "integer",
       "description": "Can switch AI behavior (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "noaura": {
       "type": "integer",
       "description": "Cannot receive aura effects (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "nomultishot": {
       "type": "integer",
       "description": "Cannot use multishot modifier (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "genericSpawn": {
       "type": "integer",
       "description": "Can be generically spawned in random areas (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Drain": {
       "type": "integer",
@@ -355,12 +382,14 @@
     "noRatio": {
       "type": "integer",
       "description": "Ignores level-based damage reduction ratio (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "NoShldBlock": {
       "type": "integer",
       "description": "Player cannot block attacks from this monster (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "ToBlock": {
       "type": "integer",
@@ -515,7 +544,8 @@
     "El1Type": {
       "type": "string",
       "description": "Elemental attack 1 damage type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "elemtypes.txt"
     },
     "El1Pct": {
       "type": "integer",
@@ -585,7 +615,8 @@
     "El2Type": {
       "type": "string",
       "description": "Elemental attack 2 damage type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "elemtypes.txt"
     },
     "El2Pct": {
       "type": "integer",
@@ -655,7 +686,8 @@
     "El3Type": {
       "type": "string",
       "description": "Elemental attack 3 damage type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "elemtypes.txt"
     },
     "El3Pct": {
       "type": "integer",
@@ -720,62 +752,74 @@
     "TreasureClass1": {
       "type": "string",
       "description": "Drop table (Normal difficulty)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass2": {
       "type": "string",
       "description": "Champion drop table (Normal)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass3": {
       "type": "string",
       "description": "Unique/boss drop table (Normal)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass4": {
       "type": "string",
       "description": "Quest boss drop table (Normal)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass1(N)": {
       "type": "string",
       "description": "Drop table (Nightmare difficulty)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass2(N)": {
       "type": "string",
       "description": "Champion drop table (Nightmare)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass3(N)": {
       "type": "string",
       "description": "Unique/boss drop table (Nightmare)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass4(N)": {
       "type": "string",
       "description": "Quest boss drop table (Nightmare)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass1(H)": {
       "type": "string",
       "description": "Drop table (Hell difficulty)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass2(H)": {
       "type": "string",
       "description": "Champion drop table (Hell)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass3(H)": {
       "type": "string",
       "description": "Unique/boss drop table (Hell)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "TreasureClass4(H)": {
       "type": "string",
       "description": "Quest boss drop table (Hell)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "treasureclassex.txt"
     },
     "A1TH": {
       "type": "integer",
@@ -825,7 +869,8 @@
     "AI": {
       "type": "string",
       "description": "AI type identifier",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monai.txt"
     },
     "Code": {
       "type": "string",
@@ -845,7 +890,9 @@
     "Id": {
       "type": "string",
       "description": "Unique monster ID",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "Level": {
       "type": "integer",
@@ -1095,62 +1142,74 @@
     "SendSkills": {
       "type": "integer",
       "description": "Whether skill data is sent to client",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "boss": {
       "type": "integer",
       "description": "Whether this monster is a boss type",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "deathDmg": {
       "type": "integer",
       "description": "Whether monster deals damage on death",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "enabled": {
       "type": "integer",
       "description": "Whether this monster is enabled",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "flying": {
       "type": "integer",
       "description": "Whether this monster flies",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "inTown": {
       "type": "integer",
       "description": "Whether this monster appears in town",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "inventory": {
       "type": "integer",
       "description": "Whether this monster has inventory",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "neverCount": {
       "type": "integer",
       "description": "Whether this monster is excluded from counts",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "npc": {
       "type": "integer",
       "description": "Whether this monster is an NPC",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "petIgnore": {
       "type": "integer",
       "description": "Whether pets ignore this monster",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "zoo": {
       "type": "integer",
       "description": "Whether this monster is a zoo/summon type",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Skill1": {
       "type": "string",
       "description": "Skill 1 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk1mode": {
       "type": "string",
@@ -1165,7 +1224,8 @@
     "Skill2": {
       "type": "string",
       "description": "Skill 2 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk2mode": {
       "type": "string",
@@ -1180,7 +1240,8 @@
     "Skill3": {
       "type": "string",
       "description": "Skill 3 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk3mode": {
       "type": "string",
@@ -1195,7 +1256,8 @@
     "Skill4": {
       "type": "string",
       "description": "Skill 4 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk4mode": {
       "type": "string",
@@ -1210,7 +1272,8 @@
     "Skill5": {
       "type": "string",
       "description": "Skill 5 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk5mode": {
       "type": "string",
@@ -1225,7 +1288,8 @@
     "Skill6": {
       "type": "string",
       "description": "Skill 6 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk6mode": {
       "type": "string",
@@ -1240,7 +1304,8 @@
     "Skill7": {
       "type": "string",
       "description": "Skill 7 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk7mode": {
       "type": "string",
@@ -1255,7 +1320,8 @@
     "Skill8": {
       "type": "string",
       "description": "Skill 8 reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "Sk8mode": {
       "type": "string",

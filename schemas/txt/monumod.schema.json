@@ -4,6 +4,8 @@
   "columns": {
     "uniquemod": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Unique modifier name identifier",
       "engineVerified": true
     },
@@ -14,16 +16,19 @@
     },
     "enabled": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this modifier is enabled",
       "engineVerified": true
     },
     "xfer": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this modifier transfers to minions",
       "engineVerified": true
     },
     "champion": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this modifier can appear on champion monsters",
       "engineVerified": true
     },

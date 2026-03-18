@@ -10,7 +10,8 @@
     "spawnable": {
       "type": "integer",
       "description": "Can randomly spawn in the game",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "minac": {
       "type": "integer",
@@ -35,17 +36,22 @@
     "block": {
       "type": "integer",
       "description": "Block chance percentage (0-75)",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 0,
+      "max": 75
     },
     "durability": {
       "type": "integer",
       "description": "Base durability value (0-255)",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 0,
+      "max": 255
     },
     "nodurability": {
       "type": "integer",
       "description": "Item has no durability",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "alternategfx": {
       "type": "string",
@@ -55,7 +61,8 @@
     "ubercode": {
       "type": "string",
       "description": "Exceptional quality item code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "component": {
       "type": "integer",
@@ -65,17 +72,22 @@
     "invwidth": {
       "type": "integer",
       "description": "Inventory grid width",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 4
     },
     "invheight": {
       "type": "integer",
       "description": "Inventory grid height",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 4
     },
     "hasinv": {
       "type": "integer",
       "description": "Item is socketable",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "gemsockets": {
       "type": "integer",
@@ -105,12 +117,14 @@
     "useable": {
       "type": "integer",
       "description": "Item is right-clickable",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "stackable": {
       "type": "integer",
       "description": "Item uses quantity stacking",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "minstack": {
       "type": "integer",
@@ -125,12 +139,14 @@
     "unique": {
       "type": "integer",
       "description": "Only appears as unique quality",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "transparent": {
       "type": "integer",
       "description": "Enable transparency rendering",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "transtbl": {
       "type": "integer",
@@ -145,7 +161,8 @@
     "quest": {
       "type": "integer",
       "description": "Quest item class identifier",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "missiletype": {
       "type": "integer",
@@ -530,32 +547,38 @@
     "SkipName": {
       "type": "integer",
       "description": "Skip base name display on uniques",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "NightmareUpgrade": {
       "type": "string",
       "description": "Nightmare difficulty replacement code",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "HellUpgrade": {
       "type": "string",
       "description": "Hell difficulty replacement code",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Nameable": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "multibuy": {
       "type": "integer",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "PermStoreItem": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TMogMax": {
       "type": "integer",
@@ -575,7 +598,8 @@
     "Transmogrify": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "DrehyaMagicLvl": {
       "type": "integer",
@@ -730,12 +754,14 @@
     "autobelt": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "questdiffcheck": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "usesound": {
       "type": "string",
@@ -762,32 +788,38 @@
     "2handed": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "1or2handed": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "2handedwclass": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "weaponclass.txt/Code"
     },
     "wclass": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "weaponclass.txt/Code"
     },
     "ultracode": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "normcode": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "missile": {
       "type": "string",
@@ -873,17 +905,20 @@
     "hit class": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "hitclass.txt"
     },
     "type2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "compactsave": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "version": {
       "type": "string",
@@ -899,7 +934,8 @@
       "type": "string",
       "description": "Three-letter item code identifier",
       "required": true,
-      "engineVerified": true
+      "engineVerified": true,
+      "unique": true
     },
     "name": {
       "type": "string",
@@ -909,7 +945,8 @@
     "type": {
       "type": "string",
       "description": "Item type classification code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "BetterGem": {
       "type": "string",
@@ -949,7 +986,9 @@
     "level": {
       "type": "integer",
       "description": "Base item level",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "lspad": {
       "type": "integer",

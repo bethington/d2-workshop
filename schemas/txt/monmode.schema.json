@@ -4,11 +4,15 @@
   "columns": {
     "name": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Animation mode name (e.g. Neutral, Walk, Attack1)",
       "engineVerified": true
     },
     "token": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Animation token identifier (e.g. NU, WL, A1)",
       "engineVerified": true
     },

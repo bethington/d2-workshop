@@ -2,6 +2,13 @@
   "file": "levels.txt",
   "description": "Level/area definitions â€” monster levels, density, waypoints, and act assignments.",
   "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Unique level name identifier",
+      "engineVerified": true
+    },
     "SizeX": {
       "type": "integer",
       "description": "Width in grid cells",
@@ -35,6 +42,7 @@
     "LevelType": {
       "type": "integer",
       "description": "Visual level type ID from lvltypes.txt",
+      "ref": "lvltypes.txt",
       "engineVerified": true
     },
     "SubType": {
@@ -235,357 +243,428 @@
     "cmon4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "cmon3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "cmon2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "cmon1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon25": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon24": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon23": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon22": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon21": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon20": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon19": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon18": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon17": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon16": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon15": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon14": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon13": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon12": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon11": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon10": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon9": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon8": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "umon1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon25": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon24": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon23": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon22": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon21": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon20": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon19": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon18": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon17": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon16": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon15": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon14": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon13": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon12": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon11": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon10": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon9": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon8": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "nmon1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "rangedspawn": {
       "type": "integer",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "mon25": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon24": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon23": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon22": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon21": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon20": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon19": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon18": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon17": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon16": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon15": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon14": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon13": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon12": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon11": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon10": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "MonDen(H)": {
       "type": "integer",
@@ -625,47 +704,56 @@
     "mon1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon8": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "mon9": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "monstats.txt"
     },
     "Act": {
       "type": "integer",
@@ -695,7 +783,8 @@
     "IsInside": {
       "type": "integer",
       "description": "Whether this level is indoors",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Layer": {
       "type": "integer",
@@ -715,7 +804,8 @@
     "Rain": {
       "type": "integer",
       "description": "Whether rain occurs in this level",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Red": {
       "type": "integer",
@@ -770,17 +860,20 @@
     "BlankScreen": {
       "type": "integer",
       "description": "Whether to blank screen on level transition",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "LOSDraw": {
       "type": "integer",
       "description": "Whether to draw line-of-sight walls",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "MonSpcWalk": {
       "type": "integer",
       "description": "Whether monsters use special walk AI",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "MonUMax": {
       "type": "integer",
@@ -815,17 +908,20 @@
     "MonWndr": {
       "type": "integer",
       "description": "Whether monsters wander in this level",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "Mud": {
       "type": "integer",
       "description": "Whether mud effect is active",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "NoPer": {
       "type": "integer",
       "description": "Whether perspective mode is disabled",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "NumMon": {
       "type": "integer",
@@ -835,12 +931,14 @@
     "Portal": {
       "type": "integer",
       "description": "Whether town portal can be used",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "SaveMonsters": {
       "type": "integer",
       "description": "Whether monster state is saved",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "SubTheme": {
       "type": "integer",

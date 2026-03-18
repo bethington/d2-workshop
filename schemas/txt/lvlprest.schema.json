@@ -4,47 +4,57 @@
   "columns": {
     "Def": {
       "type": "integer",
+      "required": true,
+      "unique": true,
       "description": "Preset definition ID",
       "engineVerified": true
     },
     "LevelId": {
       "type": "integer",
       "description": "Level ID this preset belongs to",
+      "ref": "levels.txt",
       "engineVerified": true
     },
     "Populate": {
       "type": "integer",
       "description": "Whether this preset populates with monsters/objects",
+      "format": "boolean",
       "engineVerified": true
     },
     "Logicals": {
       "type": "integer",
       "description": "Whether logical group connections are used",
+      "format": "boolean",
       "engineVerified": true
     },
     "Outdoors": {
       "type": "integer",
       "description": "Whether this preset is an outdoor area",
+      "format": "boolean",
       "engineVerified": true
     },
     "Animate": {
       "type": "integer",
       "description": "Whether animated tiles are enabled",
+      "format": "boolean",
       "engineVerified": true
     },
     "KillEdge": {
       "type": "integer",
       "description": "Whether edge tiles are removed",
+      "format": "boolean",
       "engineVerified": true
     },
     "FillBlanks": {
       "type": "integer",
       "description": "Whether blank areas are filled with default tiles",
+      "format": "boolean",
       "engineVerified": true
     },
     "Expansion": {
       "type": "integer",
       "description": "Whether this preset is expansion-only content",
+      "format": "boolean",
       "engineVerified": true
     },
     "SizeX": {
@@ -60,6 +70,7 @@
     "AutoMap": {
       "type": "integer",
       "description": "Whether automap reveals this preset",
+      "format": "boolean",
       "engineVerified": true
     },
     "Scan": {

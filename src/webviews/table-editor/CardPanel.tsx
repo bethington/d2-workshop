@@ -21,6 +21,8 @@ interface ColumnSchema {
   min?: number;
   max?: number;
   values?: string[];
+  ref?: string;
+  format?: string;
   target?: string;
   targetColumn?: string;
   description?: string;
@@ -125,8 +127,11 @@ function CardField({
     ? `${schema.type}${schema.required ? " *" : ""}`
     : "";
 
-  const refLabel =
-    schema?.type === "ref" ? `\u2192 ${schema.target}` : "";
+  const refLabel = schema?.ref
+    ? `\u2192 ${schema.ref}`
+    : schema?.type === "ref" && schema?.target
+      ? `\u2192 ${schema.target}`
+      : "";
 
   return (
     <div className={`card-field ${schema?.required && !value ? "field-required" : ""}`}>
@@ -143,7 +148,7 @@ function CardField({
       )}
       {editing ? (
         <div className="field-edit">
-          {(schema?.type === "enum" || schema?.type === "ref") && schema?.values?.length ? (
+          {(schema?.type === "enum" || schema?.type === "ref" || schema?.ref) && schema?.values?.length ? (
             <select
               value={editValue}
               onChange={(e) => {
@@ -161,7 +166,7 @@ function CardField({
                 </option>
               ))}
             </select>
-          ) : schema?.type === "boolean" ? (
+          ) : (schema?.type === "boolean" || (schema?.type === "integer" && schema?.format === "boolean")) ? (
             <select
               value={editValue}
               onChange={(e) => {
@@ -178,7 +183,7 @@ function CardField({
           ) : (
             <input
               type={
-                schema?.type === "integer" || schema?.type === "float"
+                (schema?.type === "integer" && schema?.format !== "boolean") || schema?.type === "float"
                   ? "number"
                   : "text"
               }

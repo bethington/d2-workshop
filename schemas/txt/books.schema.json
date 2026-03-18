@@ -4,11 +4,13 @@
   "columns": {
     "scrollspellcode": {
       "type": "string",
+      "ref": "misc.txt",
       "description": "Item code for the scroll version of this spell",
       "engineVerified": true
     },
     "bookspellcode": {
       "type": "string",
+      "ref": "misc.txt",
       "description": "Item code for the tome/book version of this spell",
       "engineVerified": true
     },

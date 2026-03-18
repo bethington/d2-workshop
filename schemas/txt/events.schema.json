@@ -4,6 +4,8 @@
   "columns": {
     "event": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Event type identifier string used by the skill and state systems",
       "engineVerified": true
     }

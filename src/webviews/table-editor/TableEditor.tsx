@@ -20,6 +20,8 @@ interface ColumnSchema {
   min?: number;
   max?: number;
   values?: string[];
+  ref?: string;
+  format?: string;
   target?: string;
   targetColumn?: string;
   description?: string;
@@ -97,6 +99,8 @@ function validateCell(
     case "integer": {
       const num = parseInt(value, 10);
       if (isNaN(num)) return "Must be an integer";
+      if (schema.format === "boolean" && value !== "0" && value !== "1")
+        return "Must be 0 or 1";
       if (schema.min !== undefined && num < schema.min)
         return `Min: ${schema.min}`;
       if (schema.max !== undefined && num > schema.max)
@@ -110,17 +114,33 @@ function validateCell(
     }
     case "enum":
     case "ref": {
-      if (schema.values && schema.values.length > 0 && !schema.values.includes(value)) {
-        if (schema.values.length <= 20) {
-          return `Must be one of: ${schema.values.join(", ")}`;
+      if (schema.values && schema.values.length > 0) {
+        const lower = value.toLowerCase();
+        const match = schema.values.some(v => v === value || v.toLowerCase() === lower);
+        if (!match) {
+          if (schema.values.length <= 20) {
+            return `Must be one of: ${schema.values.join(", ")}`;
+          }
+          return `Unknown value "${value}" (${schema.values.length} valid options)`;
         }
-        return `Unknown value "${value}" (${schema.values.length} valid options)`;
       }
       break;
     }
     case "boolean": {
       if (value !== "0" && value !== "1") return "Must be 0 or 1";
       break;
+    }
+  }
+
+  // Validate ref-populated values on columns with any base type (e.g., type:"string" with ref)
+  if (schema.ref && schema.values?.length && schema.type !== "enum" && schema.type !== "ref") {
+    const lower = value.toLowerCase();
+    const match = schema.values.some(v => v === value || v.toLowerCase() === lower);
+    if (!match) {
+      if (schema.values.length <= 20) {
+        return `Must be one of: ${schema.values.join(", ")}`;
+      }
+      return `Unknown value "${value}" (${schema.values.length} valid options)`;
     }
   }
 
@@ -223,13 +243,16 @@ export function TableEditor() {
     for (const [i, header] of data.headers.entries()) {
       const colSchema = schema ? getColumnSchema(schema.columns, header) : undefined;
       if (colSchema) {
-        if ((colSchema.type === "enum" || colSchema.type === "ref") && colSchema.values?.length) {
+        // Merge schema values with data values for columns that have a values list
+        // (from type:"enum", type:"ref", or ref-populated string columns)
+        const hasRefValues = (colSchema.type === "enum" || colSchema.type === "ref" || colSchema.ref) && colSchema.values?.length;
+        if (hasRefValues) {
           const dataValues = new Set<string>();
           for (const row of data.rows) {
             const v = row[i]?.trim();
             if (v) dataValues.add(v);
           }
-          const merged = new Set([...colSchema.values, ...dataValues]);
+          const merged = new Set([...colSchema.values!, ...dataValues]);
           result[header] = { ...colSchema, values: Array.from(merged).sort() };
         } else {
           result[header] = colSchema;
@@ -571,9 +594,29 @@ function EditableCell({
   if (editing) {
     const enumValues = schema?.values;
     const hasValues = enumValues && enumValues.length > 0;
+    const isRefOrEnum = schema?.type === "enum" || schema?.type === "ref" || !!schema?.ref;
 
-    // Enum or ref with values: always show dropdown select
-    if ((schema?.type === "enum" || schema?.type === "ref") && hasValues) {
+    // Large value set: autocomplete input with filtering
+    if (hasValues && enumValues.length > AUTOCOMPLETE_THRESHOLD) {
+      return (
+        <AutocompleteInput
+          value={editValue}
+          options={enumValues}
+          onCommit={(val) => {
+            setEditValue(val);
+            if (val !== value) onChange(val);
+            setEditing(false);
+          }}
+          onCancel={() => {
+            setEditing(false);
+            setEditValue(value);
+          }}
+        />
+      );
+    }
+
+    // Small value set: dropdown select
+    if ((isRefOrEnum || hasValues) && hasValues) {
       return (
         <select
           className="cell-select"
@@ -597,27 +640,8 @@ function EditableCell({
       );
     }
 
-    // Large enum or ref with values: autocomplete
-    if (hasValues && enumValues.length > AUTOCOMPLETE_THRESHOLD) {
-      return (
-        <AutocompleteInput
-          value={editValue}
-          options={enumValues}
-          onCommit={(val) => {
-            setEditValue(val);
-            if (val !== value) onChange(val);
-            setEditing(false);
-          }}
-          onCancel={() => {
-            setEditing(false);
-            setEditValue(value);
-          }}
-        />
-      );
-    }
-
-    // Boolean: simple toggle (use effect to avoid state update during render)
-    if (schema?.type === "boolean") {
+    // Boolean: simple toggle (type:"boolean" or integer with format:"boolean")
+    if (schema?.type === "boolean" || (schema?.type === "integer" && schema?.format === "boolean")) {
       return (
         <BooleanToggle
           value={value}

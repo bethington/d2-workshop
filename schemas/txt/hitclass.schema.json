@@ -4,6 +4,8 @@
   "columns": {
     "code": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Hit class code identifier (e.g. hth, bow, 1hss, 2hsl, club, staf)",
       "engineVerified": true
     }

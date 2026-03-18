@@ -9,6 +9,7 @@
     },
     "mod1code": {
       "type": "string",
+      "ref": "properties.txt",
       "description": "Modifier 1 property code",
       "engineVerified": true
     },
@@ -24,6 +25,7 @@
     },
     "mod2code": {
       "type": "string",
+      "ref": "properties.txt",
       "description": "Modifier 2 property code",
       "engineVerified": true
     },
@@ -39,21 +41,25 @@
     },
     "weapon": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to weapons",
       "engineVerified": true
     },
     "shield": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to shields",
       "engineVerified": true
     },
     "staff": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to staves",
       "engineVerified": true
     },
     "gloves": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to gloves",
       "engineVerified": true
     },
@@ -69,16 +75,19 @@
     },
     "armor": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to armor items",
       "engineVerified": true
     },
     "belt": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to belt items",
       "engineVerified": true
     },
     "boots": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to boot items",
       "engineVerified": true
     },
@@ -94,16 +103,19 @@
     },
     "bow": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to bow items",
       "engineVerified": true
     },
     "scepter": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to scepter items",
       "engineVerified": true
     },
     "wand": {
       "type": "integer",
+      "format": "boolean",
       "description": "Applies to wand items",
       "engineVerified": true
     }

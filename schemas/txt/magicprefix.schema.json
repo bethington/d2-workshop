@@ -10,7 +10,8 @@
     "mod1code": {
       "type": "string",
       "description": "Modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod1min": {
       "type": "integer",
@@ -25,7 +26,8 @@
     "mod2code": {
       "type": "string",
       "description": "Modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod2min": {
       "type": "integer",
@@ -40,7 +42,8 @@
     "mod3code": {
       "type": "string",
       "description": "Modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod3min": {
       "type": "integer",
@@ -70,62 +73,74 @@
     "itype7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "mod1param": {
       "type": "integer",
@@ -155,32 +170,41 @@
     "classspecific": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     },
     "maxlevel": {
       "type": "integer",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "level": {
       "type": "integer",
       "description": "Internal affix level",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "levelreq": {
       "type": "integer",
       "description": "Required character level to use",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "rare": {
       "type": "integer",
       "description": "Whether this affix can appear on rare items",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "spawnable": {
       "type": "integer",
       "description": "Whether this affix can spawn on items",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "version": {
       "type": "integer",
@@ -190,6 +214,7 @@
     "name": {
       "type": "string",
       "description": "Affix name string key",
+      "required": true,
       "engineVerified": true
     },
     "add": {
@@ -200,7 +225,8 @@
     "class": {
       "type": "string",
       "description": "Character class restriction",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     }
   }
 }

@@ -18,6 +18,8 @@ interface TxtSchema {
       min?: number;
       max?: number;
       values?: string[];
+      ref?: string;
+      format?: string;
       target?: string;
       targetColumn?: string;
       assetType?: string;
@@ -224,29 +226,72 @@ export class TableEditorProvider
   }
 
   /**
+   * Parse a ref string into target file/column pairs.
+   * Supports: "file.txt", "file.txt/col", "a.txt|b.txt", "a.txt/col|b.txt/col"
+   */
+  private parseRef(ref: string): Array<{ file: string; column: string | null }> {
+    return ref.split("|").map(part => {
+      const slashIdx = part.indexOf("/");
+      if (slashIdx === -1) {
+        return { file: part.trim(), column: null };
+      }
+      return {
+        file: part.substring(0, slashIdx).trim(),
+        column: part.substring(slashIdx + 1).trim() || null,
+      };
+    });
+  }
+
+  /** Static cache for resolved ref values to avoid re-reading MPQ across editors */
+  private static refCache = new Map<string, { values: string[]; timestamp: number }>();
+  private static REF_CACHE_TTL = 60_000; // 60 seconds
+
+  /**
    * Resolve ref column values by reading target files from MPQ.
    * Populates schema.columns[x].values with actual values from the referenced file.
+   * Supports slash-style refs ("file.txt/col") and legacy target/targetColumn format.
    */
   private async resolveRefValues(schema: TxtSchema, sourceUri: vscode.Uri): Promise<TxtSchema> {
-    // Collect unique target files needed
-    const targets = new Map<string, { file: string; column: string }>();
+    // Collect unique target file:column pairs needed
+    const targets = new Map<string, { file: string; column: string | null }>();
+    const colRefMap = new Map<string, string>(); // colName -> cache key
+
     for (const [colName, col] of Object.entries(schema.columns)) {
-      if (col.type === "ref" && col.target && col.targetColumn && !col.values?.length) {
-        const key = `${col.target}:${col.targetColumn}`;
+      if (col.values?.length) continue; // already has values
+
+      // Support new slash-style ref property, or legacy type:"ref" + target/targetColumn
+      const refStr = col.ref
+        || (col.type === "ref" && col.target
+          ? `${col.target}${col.targetColumn ? "/" + col.targetColumn : ""}`
+          : null);
+      if (!refStr) continue;
+
+      const parsed = this.parseRef(refStr);
+      for (const { file, column } of parsed) {
+        const key = `${file}:${column || "*"}`;
         if (!targets.has(key)) {
-          targets.set(key, { file: col.target, column: col.targetColumn });
+          targets.set(key, { file, column });
         }
       }
+      // Map this column to its ref targets for injection later
+      const cacheKeys = parsed.map(p => `${p.file}:${p.column || "*"}`);
+      colRefMap.set(colName, cacheKeys.join("+"));
     }
 
     if (targets.size === 0) return schema;
 
-    // Determine which MPQ to read from based on source URI
-    const mpqName = sourceUri.scheme === "d2mpq" ? sourceUri.authority : "d2exp.mpq";
+    const now = Date.now();
+    const resolvedValues = new Map<string, string[]>();
 
     // Read each target file and extract the column values
-    const resolvedValues = new Map<string, string[]>();
     for (const [key, { file, column }] of targets) {
+      // Check cache first
+      const cached = TableEditorProvider.refCache.get(key);
+      if (cached && (now - cached.timestamp) < TableEditorProvider.REF_CACHE_TTL) {
+        resolvedValues.set(key, cached.values);
+        continue;
+      }
+
       try {
         const targetPath = `data\\global\\excel\\${file}`;
         // Try MPQs in priority order: patch_d2 (1.13c final), d2exp (LoD base), d2data (classic)
@@ -265,32 +310,26 @@ export class TableEditorProvider
         if (lines.length < 2) continue;
 
         const headers = lines[0].split("\t");
-        const colIdx = headers.findIndex(h => h.toLowerCase() === column.toLowerCase());
+        // When column is null, use first column (index 0) as default key
+        const colIdx = column
+          ? headers.findIndex(h => h.toLowerCase() === column.toLowerCase())
+          : 0;
         if (colIdx < 0) continue;
 
         const values = new Set<string>();
-        // For small lookup tables (≤5 columns), extract values from ALL columns
-        // This handles cases like PlayerClass.txt where both "Player Class" (full name)
-        // and "Code" (3-letter) are valid values for the same field across game versions
-        const isSmallLookup = headers.length <= 5;
-        const colsToExtract = isSmallLookup
-          ? headers.map((_, i) => i)
-          : [colIdx];
-
         for (let i = 1; i < lines.length; i++) {
           const cells = lines[i].split("\t");
-          for (const ci of colsToExtract) {
-            const val = cells[ci]?.trim();
-            if (val && val !== "Expansion" && val !== "expansion") {
-              values.add(val);
-              // Also add lowercase variant for case-insensitive matching
-              if (val !== val.toLowerCase()) {
-                values.add(val.toLowerCase());
-              }
+          const val = cells[colIdx]?.trim();
+          if (val && val !== "Expansion" && val !== "expansion") {
+            values.add(val);
+            if (val !== val.toLowerCase()) {
+              values.add(val.toLowerCase());
             }
           }
         }
-        resolvedValues.set(key, Array.from(values).sort());
+        const sorted = Array.from(values).sort();
+        resolvedValues.set(key, sorted);
+        TableEditorProvider.refCache.set(key, { values: sorted, timestamp: now });
       } catch (err) {
         console.warn(`[D2 Workshop] Could not resolve ref ${key}: ${err}`);
       }
@@ -301,16 +340,22 @@ export class TableEditorProvider
     // Clone schema and inject values
     const enriched: TxtSchema = JSON.parse(JSON.stringify(schema));
     for (const [colName, col] of Object.entries(enriched.columns)) {
-      if (col.type === "ref" && col.target && col.targetColumn) {
-        const key = `${col.target}:${col.targetColumn}`;
+      const refKeys = colRefMap.get(colName);
+      if (!refKeys) continue;
+
+      // Merge values from all ref targets (supports multi-file refs like "a.txt|b.txt")
+      const merged = new Set<string>();
+      for (const key of refKeys.split("+")) {
         const vals = resolvedValues.get(key);
-        if (vals) {
-          col.values = vals;
-        }
+        if (vals) vals.forEach(v => merged.add(v));
+      }
+      if (merged.size > 0) {
+        col.values = Array.from(merged).sort();
       }
     }
 
-    console.log(`[D2 Workshop] Resolved ${resolvedValues.size} ref targets with ${Array.from(resolvedValues.values()).reduce((s, v) => s + v.length, 0)} total values`);
+    const totalValues = Array.from(resolvedValues.values()).reduce((s, v) => s + v.length, 0);
+    console.log(`[D2 Workshop] Resolved ${resolvedValues.size} ref targets with ${totalValues} total values`);
     return enriched;
   }
 

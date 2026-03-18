@@ -74,56 +74,68 @@
     },
     "Treasure Class": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Treasure class name identifier",
       "engineVerified": true
     },
     "item1": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 1",
       "engineVerified": true
     },
     "item10": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 10",
       "engineVerified": true
     },
     "item2": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 2",
       "engineVerified": true
     },
     "item3": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 3",
       "engineVerified": true
     },
     "item4": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 4",
       "engineVerified": true
     },
     "item5": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 5",
       "engineVerified": true
     },
     "item6": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 6",
       "engineVerified": true
     },
     "item7": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 7",
       "engineVerified": true
     },
     "item8": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 8",
       "engineVerified": true
     },
     "item9": {
       "type": "string",
+      "ref": "treasureclassex.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item/sub-TC reference 9",
       "engineVerified": true
     },

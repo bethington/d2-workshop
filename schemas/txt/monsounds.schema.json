@@ -5,6 +5,7 @@
     "DeathSound": {
       "type": "string",
       "description": "Sound effect when monster dies",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "HitDelay": {
@@ -20,11 +21,13 @@
     "Attack1": {
       "type": "string",
       "description": "Sound for primary attack",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Attack2": {
       "type": "string",
       "description": "Sound for secondary attack",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "CvtMo1": {
@@ -75,16 +78,19 @@
     "Flee": {
       "type": "string",
       "description": "Flee/retreat sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Footstep": {
       "type": "string",
       "description": "Footstep sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "FootstepLayer": {
       "type": "string",
       "description": "Footstep layer sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "FsOff": {
@@ -95,56 +101,68 @@
     "HitSound": {
       "type": "string",
       "description": "Sound when hit",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Id": {
       "type": "string",
       "description": "Monster sound set identifier",
+      "required": true,
+      "unique": true,
       "engineVerified": true
     },
     "Init": {
       "type": "string",
       "description": "Initialization sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Neutral": {
       "type": "string",
       "description": "Neutral/idle sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Skill1": {
       "type": "string",
       "description": "Skill 1 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Skill2": {
       "type": "string",
       "description": "Skill 2 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Skill3": {
       "type": "string",
       "description": "Skill 3 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Skill4": {
       "type": "string",
       "description": "Skill 4 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Taunt": {
       "type": "string",
       "description": "Taunt sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Weapon1": {
       "type": "string",
       "description": "Weapon 1 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Weapon2": {
       "type": "string",
       "description": "Weapon 2 sound",
+      "ref": "sounds.txt",
       "engineVerified": true
     },
     "Att1Del": {

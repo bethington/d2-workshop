@@ -5,6 +5,7 @@
     "Class": {
       "type": "string",
       "description": "Monster class index (references monstats.txt Id)",
+      "ref": "monstats.txt",
       "engineVerified": true
     },
     "Utrans": {
@@ -25,6 +26,7 @@
     "Replaceable": {
       "type": "integer",
       "description": "Column read by game engine",
+      "format": "boolean",
       "engineVerified": true
     },
     "EClass": {
@@ -35,16 +37,20 @@
     "AutoPos": {
       "type": "integer",
       "description": "Column read by game engine",
+      "format": "boolean",
       "engineVerified": true
     },
     "hcIdx": {
       "type": "integer",
       "description": "Column read by game engine",
+      "ref": "monstats.txt",
       "engineVerified": true
     },
     "Superunique": {
       "type": "string",
       "description": "Column read by game engine",
+      "required": true,
+      "unique": true,
       "engineVerified": true
     },
     "MaxGrp": {
@@ -75,6 +81,7 @@
     "MonSound": {
       "type": "string",
       "description": "Monster sound reference",
+      "ref": "monsounds.txt",
       "engineVerified": true
     },
     "Name": {
@@ -85,21 +92,25 @@
     "Stacks": {
       "type": "integer",
       "description": "Whether modifiers can stack",
+      "format": "boolean",
       "engineVerified": true
     },
     "TC": {
       "type": "string",
       "description": "Treasure class (Normal)",
+      "ref": "treasureclassex.txt",
       "engineVerified": true
     },
     "TC(H)": {
       "type": "string",
       "description": "Treasure class (Hell)",
+      "ref": "treasureclassex.txt",
       "engineVerified": true
     },
     "TC(N)": {
       "type": "string",
       "description": "Treasure class (Nightmare)",
+      "ref": "treasureclassex.txt",
       "engineVerified": true
     }
   }

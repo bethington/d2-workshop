@@ -5,7 +5,8 @@
     "enabled": {
       "type": "integer",
       "description": "Recipe is functional (1=active, 0=disabled)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "numinputs": {
       "type": "integer",
@@ -45,12 +46,14 @@
     "ladder": {
       "type": "integer",
       "description": "Ladder-only recipe",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "class": {
       "type": "string",
       "description": "Class restriction for recipe",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     },
     "c ilvl": {
       "type": "integer",
@@ -235,17 +238,20 @@
     "c mod 5": {
       "type": "string",
       "description": "Output C modifier 5 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "c mod 4": {
       "type": "string",
       "description": "Output C modifier 4 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "c mod 3": {
       "type": "string",
       "description": "Output C modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "c mod 5 max": {
       "type": "integer",
@@ -280,7 +286,8 @@
     "mod 1": {
       "type": "string",
       "description": "Output A modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod 1 min": {
       "type": "integer",
@@ -295,7 +302,8 @@
     "mod 2": {
       "type": "string",
       "description": "Output A modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod 2 min": {
       "type": "integer",
@@ -310,7 +318,8 @@
     "mod 3": {
       "type": "string",
       "description": "Output A modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod 3 min": {
       "type": "integer",
@@ -325,7 +334,8 @@
     "mod 4": {
       "type": "string",
       "description": "Output A modifier 4 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod 4 min": {
       "type": "integer",
@@ -340,7 +350,8 @@
     "mod 5": {
       "type": "string",
       "description": "Output A modifier 5 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "mod 5 min": {
       "type": "integer",
@@ -355,7 +366,8 @@
     "b mod 1": {
       "type": "string",
       "description": "Output B modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "b mod 1 min": {
       "type": "integer",
@@ -370,7 +382,8 @@
     "b mod 2": {
       "type": "string",
       "description": "Output B modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "b mod 2 min": {
       "type": "integer",
@@ -385,7 +398,8 @@
     "b mod 3": {
       "type": "string",
       "description": "Output B modifier 3 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "b mod 3 min": {
       "type": "integer",
@@ -400,7 +414,8 @@
     "b mod 4": {
       "type": "string",
       "description": "Output B modifier 4 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "b mod 4 min": {
       "type": "integer",
@@ -415,7 +430,8 @@
     "b mod 5": {
       "type": "string",
       "description": "Output B modifier 5 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "b mod 5 min": {
       "type": "integer",
@@ -430,7 +446,8 @@
     "c mod 1": {
       "type": "string",
       "description": "Output C modifier 1 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "c mod 1 min": {
       "type": "integer",
@@ -445,7 +462,8 @@
     "c mod 2": {
       "type": "string",
       "description": "Output C modifier 2 property code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "c mod 2 min": {
       "type": "integer",
@@ -515,46 +533,55 @@
     "rch": {
       "type": "integer",
       "description": "Output can have random charged skill affixes",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "rep": {
       "type": "integer",
       "description": "Output can have replenish quantity affix",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "reg": {
       "type": "integer",
       "description": "Output can have regeneration affix",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "rem": {
       "type": "integer",
       "description": "Output can have remaining charges affix",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "uns": {
       "type": "integer",
       "description": "Output can be unsocketed",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "suf": {
       "type": "integer",
       "description": "Output preserves suffix",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "pre": {
       "type": "integer",
       "description": "Output preserves prefix",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "useitem": {
       "type": "integer",
       "description": "Use input item as base for output",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "description": {
       "type": "string",
       "description": "Description of the cube recipe",
+      "required": true,
       "engineVerified": true
     },
     "lvl": {

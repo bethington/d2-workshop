@@ -5,97 +5,117 @@
     "code": {
       "type": "string",
       "description": "Item type code identifier",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "equiv1": {
       "type": "string",
       "description": "Equivalent parent item type 1 for inheritance",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "equiv2": {
       "type": "string",
       "description": "Equivalent parent item type 2 for inheritance",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "repair": {
       "type": "integer",
       "description": "Whether items of this type can be repaired",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "body": {
       "type": "integer",
       "description": "Whether this type can be worn on body",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "bodyloc1": {
       "type": "string",
       "description": "Primary body location for equipping",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "bodylocs.txt/Code"
     },
     "bodyloc2": {
       "type": "string",
       "description": "Secondary body location for equipping",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "bodylocs.txt/Code"
     },
     "shoots": {
       "type": "string",
       "description": "Item type code of projectile this weapon shoots",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "quiver": {
       "type": "string",
       "description": "Item type code of quiver used with this weapon",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "throwable": {
       "type": "integer",
       "description": "Whether items of this type can be thrown",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "reload": {
       "type": "integer",
       "description": "Whether this type requires reloading (ammo)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "reequip": {
       "type": "integer",
       "description": "Whether this type auto-reequips from inventory",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "autostack": {
       "type": "integer",
       "description": "Whether items of this type auto-stack in inventory",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "magic": {
       "type": "integer",
       "description": "Whether items of this type can be magic quality",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "rare": {
       "type": "integer",
       "description": "Whether items of this type can be rare quality",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "normal": {
       "type": "integer",
       "description": "Whether items of this type can be normal quality",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "charm": {
       "type": "integer",
       "description": "Whether items of this type function as charms",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "gem": {
       "type": "integer",
       "description": "Whether items of this type are gems/runes",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "beltable": {
       "type": "integer",
       "description": "Whether items of this type can be placed in belt slots",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "maxsock1": {
       "type": "integer",
@@ -125,7 +145,8 @@
     "staffmods": {
       "type": "string",
       "description": "Character class whose skills get staff mods on this type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     },
     "costformula": {
       "type": "integer",
@@ -135,12 +156,14 @@
     "class": {
       "type": "string",
       "description": "Character class restriction for this item type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     },
     "storepage": {
       "type": "string",
       "description": "Store page where this item type appears for purchase",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "storepage.txt"
     },
     "varinvgfx": {
       "type": "integer",

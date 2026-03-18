@@ -2,6 +2,13 @@
   "file": "lvlwarp.txt",
   "description": "Level warp/transition definitions - selection areas, exit positions, offsets, and visual properties.",
   "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Warp definition name identifier",
+      "engineVerified": true
+    },
     "Id": {
       "type": "integer",
       "description": "Warp definition ID",
@@ -50,6 +57,7 @@
     "LitVersion": {
       "type": "integer",
       "description": "Whether this warp has an alternate lit (highlighted) visual version",
+      "format": "boolean",
       "engineVerified": true
     },
     "Tiles": {

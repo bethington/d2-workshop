@@ -2,6 +2,13 @@
   "file": "lvlsub.txt",
   "description": "Level substitution definitions - tile replacement rules with probability, trial counts, and grid parameters.",
   "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Substitution definition name identifier",
+      "engineVerified": true
+    },
     "Type": {
       "type": "integer",
       "description": "Substitution type classification",
@@ -15,6 +22,7 @@
     "CheckAll": {
       "type": "integer",
       "description": "Whether to check all tiles for substitution",
+      "format": "boolean",
       "engineVerified": true
     },
     "BordType": {
@@ -110,6 +118,7 @@
     "Expansion": {
       "type": "integer",
       "description": "Whether this substitution is expansion-only content",
+      "format": "boolean",
       "engineVerified": true
     }
   }

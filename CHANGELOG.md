@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.7 - 2026-03-17
+
+### Added
+
+- **Ref/enum validation system** — columns that reference other .txt files now show dropdowns or autocomplete with valid values from the referenced file
+- **Multi-file refs** — columns like item codes that span armor.txt, weapons.txt, and misc.txt merge all valid options
+- **Boolean format hints** — 0/1 flag columns render as toggles in the table editor and card panel
+- **Integer range validation** — known bounded fields (durability, block chance, level, palette index, etc.) show min/max errors
+- **Case-insensitive ref matching** — values are matched regardless of casing
+- **Ref value caching** — resolved values are cached for 60 seconds to avoid redundant MPQ reads across editors
+- **MCP validation enhancements** — `d2_validate_table` now checks ref/enum values, boolean format, min/max ranges, and required fields (previously only checked integer format)
+
+### Changed
+
+- 556 ref annotations added across 40+ schema files linking columns to their valid value sources
+- 32 schema files annotated with boolean format hints for 0/1 flag columns
+- 12 schema files annotated with min/max integer ranges
+- Lookup table key columns (playerclass, elemtypes, bodylocs, hitclass, monmode, etc.) marked as required/unique
+- Large value sets (>20 options) now use autocomplete input instead of dropdown select
+
 ## 0.1.6 - 2026-03-17
 
 ### Added

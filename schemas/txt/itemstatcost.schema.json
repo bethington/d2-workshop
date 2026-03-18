@@ -5,22 +5,28 @@
     "stat": {
       "type": "string",
       "description": "Stat name identifier used by the engine for lookup",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "send other": {
       "type": "integer",
       "description": "Whether this stat is sent to other players",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "signed": {
       "type": "integer",
       "description": "Whether this stat value is treated as signed",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "send bits": {
       "type": "integer",
       "description": "Number of bits used when transmitting this stat over network",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 0,
+      "max": 32
     },
     "send param bits": {
       "type": "integer",
@@ -30,17 +36,20 @@
     "updateanimrate": {
       "type": "integer",
       "description": "Whether changing this stat updates animation rate",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "saved": {
       "type": "integer",
       "description": "Whether this stat is saved to character file",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "csvsigned": {
       "type": "integer",
       "description": "Whether CSV value is treated as signed",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "csvbits": {
       "type": "integer",
@@ -75,7 +84,9 @@
     "save bits": {
       "type": "integer",
       "description": "Number of bits used when saving this stat",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 0,
+      "max": 32
     },
     "save add": {
       "type": "integer",
@@ -110,32 +121,38 @@
     "fmin": {
       "type": "integer",
       "description": "Whether stat has a functional minimum",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "damagerelated": {
       "type": "integer",
       "description": "Whether this stat is damage-related",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "itemspecific": {
       "type": "integer",
       "description": "Whether this stat is item-specific (not transferable)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "direct": {
       "type": "integer",
       "description": "Whether stat is applied directly without calculation",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "fcallback": {
       "type": "integer",
       "description": "Whether stat has a function callback on change",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "maxstat": {
       "type": "string",
       "description": "Reference to stat that acts as the maximum for this stat",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "itemevent1": {
       "type": "string",
@@ -220,12 +237,15 @@
     "keepzero": {
       "type": "integer",
       "description": "Whether to keep stat when value is zero",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "op": {
       "type": "integer",
       "description": "Operator type for derived stat calculation",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 0,
+      "max": 13
     },
     "op param": {
       "type": "integer",
@@ -235,22 +255,26 @@
     "op base": {
       "type": "string",
       "description": "Base stat reference for operator calculation",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "op stat1": {
       "type": "string",
       "description": "Operator target stat 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "op stat2": {
       "type": "string",
       "description": "Operator target stat 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "op stat3": {
       "type": "string",
       "description": "Operator target stat 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stuff": {
       "type": "integer",

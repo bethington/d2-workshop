@@ -14,41 +14,49 @@
     },
     "Selectable0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 0 (neutral)",
       "engineVerified": true
     },
     "Selectable1": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 1 (operating)",
       "engineVerified": true
     },
     "Selectable2": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 2 (opened)",
       "engineVerified": true
     },
     "Selectable3": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 3 (special 1)",
       "engineVerified": true
     },
     "Selectable4": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 4 (special 2)",
       "engineVerified": true
     },
     "Selectable5": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 5 (special 3)",
       "engineVerified": true
     },
     "Selectable6": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 6 (special 4)",
       "engineVerified": true
     },
     "Selectable7": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether selectable in mode 7 (special 5)",
       "engineVerified": true
     },
@@ -159,141 +167,169 @@
     },
     "CycleAnim0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 0 (neutral)",
       "engineVerified": true
     },
     "CycleAnim1": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 1 (operating)",
       "engineVerified": true
     },
     "CycleAnim2": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 2 (opened)",
       "engineVerified": true
     },
     "CycleAnim3": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 3 (special 1)",
       "engineVerified": true
     },
     "CycleAnim4": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 4 (special 2)",
       "engineVerified": true
     },
     "CycleAnim5": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 5 (special 3)",
       "engineVerified": true
     },
     "CycleAnim6": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 6 (special 4)",
       "engineVerified": true
     },
     "CycleAnim7": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to loop animation for mode 7 (special 5)",
       "engineVerified": true
     },
     "BlocksLight0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 0",
       "engineVerified": true
     },
     "BlocksLight1": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 1",
       "engineVerified": true
     },
     "BlocksLight2": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 2",
       "engineVerified": true
     },
     "BlocksLight3": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 3",
       "engineVerified": true
     },
     "BlocksLight4": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 4",
       "engineVerified": true
     },
     "BlocksLight5": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 5",
       "engineVerified": true
     },
     "BlocksLight6": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 6",
       "engineVerified": true
     },
     "BlocksLight7": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object casts shadow in mode 7",
       "engineVerified": true
     },
     "HasCollision0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 0",
       "engineVerified": true
     },
     "HasCollision1": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 1",
       "engineVerified": true
     },
     "HasCollision2": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 2",
       "engineVerified": true
     },
     "HasCollision3": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 3",
       "engineVerified": true
     },
     "HasCollision4": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 4",
       "engineVerified": true
     },
     "HasCollision5": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 5",
       "engineVerified": true
     },
     "HasCollision6": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 6",
       "engineVerified": true
     },
     "HasCollision7": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision checking is used in mode 7",
       "engineVerified": true
     },
     "IsAttackable0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether clicking uses kick mode (1) or neutral mode (0)",
       "engineVerified": true
     },
     "EnvEffect": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether the object produces ambient sound/environmental effects",
       "engineVerified": true
     },
     "IsDoor": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether the object is treated as a door",
       "engineVerified": true
     },
     "BlocksVis": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether the object blocks player vision (works with IsDoor)",
       "engineVerified": true
     },
@@ -344,6 +380,7 @@
     },
     "PreOperate": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether the object runs its operate function before player interaction",
       "engineVerified": true
     },
@@ -419,6 +456,7 @@
     },
     "MonsterOK": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether monsters can spawn near this object",
       "engineVerified": true
     },
@@ -474,6 +512,7 @@
     },
     "Lockable": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this object can be locked",
       "engineVerified": true
     },
@@ -484,6 +523,7 @@
     },
     "CollisionSubst": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether special collision substitution checking is used",
       "engineVerified": true
     },
@@ -504,16 +544,19 @@
     },
     "BlockMissile": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether missiles collide with this object",
       "engineVerified": true
     },
     "DrawUnder": {
       "type": "integer",
+      "format": "boolean",
       "description": "Draw as floor tile (1) instead of normal rendering (0)",
       "engineVerified": true
     },
     "OpenWarp": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to display warp destination text",
       "engineVerified": true
     },
@@ -524,6 +567,7 @@
     },
     "Beta": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this is beta content",
       "engineVerified": true
     },
@@ -534,11 +578,14 @@
     },
     "Name": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Object name identifier",
       "engineVerified": true
     },
     "Overlay": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether object uses overlay drawing",
       "engineVerified": true
     },
@@ -584,6 +631,7 @@
     },
     "Gore": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether object shows gore effects",
       "engineVerified": true
     },
@@ -679,11 +727,13 @@
     },
     "Restore": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether object restores on level re-entry",
       "engineVerified": true
     },
     "RestoreVirgins": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether virgin state restores",
       "engineVerified": true
     },
@@ -774,6 +824,7 @@
     },
     "Sync": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether state syncs across players",
       "engineVerified": true
     },

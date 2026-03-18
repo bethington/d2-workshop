@@ -21,51 +21,61 @@
     },
     "Item1": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 1",
       "engineVerified": true
     },
     "Item2": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 2",
       "engineVerified": true
     },
     "Item3": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 3",
       "engineVerified": true
     },
     "Item4": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 4",
       "engineVerified": true
     },
     "Item5": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 5",
       "engineVerified": true
     },
     "Item6": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 6",
       "engineVerified": true
     },
     "Item7": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 7",
       "engineVerified": true
     },
     "Item8": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 8",
       "engineVerified": true
     },
     "Item9": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 9",
       "engineVerified": true
     },
     "Item10": {
       "type": "string",
+      "ref": "treasureclass.txt|armor.txt|weapons.txt|misc.txt",
       "description": "Item code or treasure class name for drop slot 10",
       "engineVerified": true
     },

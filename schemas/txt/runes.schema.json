@@ -10,7 +10,8 @@
     "complete": {
       "type": "integer",
       "description": "Runeword activation flag",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "rune1": {
       "type": "string",
@@ -45,7 +46,8 @@
     "t1code1": {
       "type": "string",
       "description": "Runeword property 1 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param1": {
       "type": "string",
@@ -65,7 +67,8 @@
     "t1code2": {
       "type": "string",
       "description": "Runeword property 2 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param2": {
       "type": "string",
@@ -85,7 +88,8 @@
     "t1code3": {
       "type": "string",
       "description": "Runeword property 3 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param3": {
       "type": "string",
@@ -105,7 +109,8 @@
     "t1code4": {
       "type": "string",
       "description": "Runeword property 4 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param4": {
       "type": "string",
@@ -125,7 +130,8 @@
     "t1code5": {
       "type": "string",
       "description": "Runeword property 5 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param5": {
       "type": "string",
@@ -145,7 +151,8 @@
     "t1code6": {
       "type": "string",
       "description": "Runeword property 6 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "t1param6": {
       "type": "string",
@@ -180,62 +187,75 @@
     "t1code7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "etype1": {
       "type": "string",
       "description": "Excluded item type 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype2": {
       "type": "string",
       "description": "Excluded item type 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "etype3": {
       "type": "string",
       "description": "Excluded item type 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype1": {
       "type": "string",
       "description": "Included item type 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype2": {
       "type": "string",
       "description": "Included item type 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype3": {
       "type": "string",
       "description": "Included item type 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype4": {
       "type": "string",
       "description": "Included item type 4",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype5": {
       "type": "string",
       "description": "Included item type 5",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "itype6": {
       "type": "string",
       "description": "Included item type 6",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemtypes.txt/code"
     },
     "name": {
       "type": "string",
       "description": "Runeword internal name identifier",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "server": {
       "type": "integer",
       "description": "Whether this runeword requires server validation",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     }
   }
 }

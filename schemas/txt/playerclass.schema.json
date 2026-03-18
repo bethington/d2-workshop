@@ -4,6 +4,8 @@
   "columns": {
     "code": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Three-letter player class code (e.g. ama, sor, nec, pal, bar, dru, ass)",
       "engineVerified": true
     }

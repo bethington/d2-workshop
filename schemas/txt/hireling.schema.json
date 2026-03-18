@@ -139,6 +139,7 @@
     },
     "hiredesc": {
       "type": "string",
+      "ref": "hiredesc.txt",
       "description": "Hireling description code reference (lookup into hiredesc.txt)",
       "engineVerified": true
     },
@@ -149,6 +150,7 @@
     },
     "skill1": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 1 reference",
       "engineVerified": true
     },
@@ -179,6 +181,7 @@
     },
     "skill2": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 2 reference",
       "engineVerified": true
     },
@@ -209,6 +212,7 @@
     },
     "skill3": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 3 reference",
       "engineVerified": true
     },
@@ -239,6 +243,7 @@
     },
     "skill4": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 4 reference",
       "engineVerified": true
     },
@@ -269,6 +274,7 @@
     },
     "skill5": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 5 reference",
       "engineVerified": true
     },
@@ -299,6 +305,7 @@
     },
     "skill6": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Skill 6 reference",
       "engineVerified": true
     },

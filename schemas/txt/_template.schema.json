@@ -2,28 +2,42 @@
   "file": "example.txt",
   "description": "Template schema — copy and customize for new .txt files",
   "columns": {
-    "ColumnName": {
+    "KeyColumn": {
       "type": "string",
-      "required": false,
-      "description": "Description of what this column contains"
+      "required": true,
+      "unique": true,
+      "description": "Primary key column"
     },
-    "NumericColumn": {
+    "RefToSpecificColumn": {
+      "type": "string",
+      "ref": "othertable.txt/KeyColumn",
+      "description": "References a specific column in another .txt file"
+    },
+    "RefToFirstColumn": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "References the first column of the target file (default key)"
+    },
+    "MultiFileRef": {
+      "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
+      "description": "References values from multiple .txt files (merged)"
+    },
+    "BooleanFlag": {
       "type": "integer",
-      "required": false,
-      "min": 0,
-      "max": 999,
-      "description": "A numeric column with range validation"
+      "format": "boolean",
+      "description": "A 0/1 flag rendered as a toggle"
     },
     "EnumColumn": {
-      "type": "enum",
+      "type": "string",
       "values": ["value1", "value2", "value3"],
-      "description": "A column with a fixed set of valid values"
+      "description": "Hardcoded values when no lookup .txt file exists"
     },
-    "ReferenceColumn": {
-      "type": "ref",
-      "target": "OtherFile.txt",
-      "targetColumn": "KeyColumn",
-      "description": "A column that references a row in another .txt file"
+    "RangeColumn": {
+      "type": "integer",
+      "min": 0,
+      "max": 255,
+      "description": "An integer column with range validation"
     },
     "AssetColumn": {
       "type": "asset",

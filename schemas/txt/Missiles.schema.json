@@ -204,6 +204,7 @@
     },
     "SubLoop": {
       "type": "integer",
+      "format": "boolean",
       "description": "Animation has a looping sub-section (1 = yes)",
       "engineVerified": true
     },
@@ -214,31 +215,37 @@
     },
     "CollideKill": {
       "type": "integer",
+      "format": "boolean",
       "description": "Missile is destroyed on collision (1 = yes)",
       "engineVerified": true
     },
     "CollideFriend": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can collide with friendly units (1 = yes)",
       "engineVerified": true
     },
     "LastCollide": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can only hit the last target (1 = yes)",
       "engineVerified": true
     },
     "Collision": {
       "type": "integer",
+      "format": "boolean",
       "description": "Has standard collision detection (1 = yes)",
       "engineVerified": true
     },
     "ClientSend": {
       "type": "integer",
+      "format": "boolean",
       "description": "Client notifies server of collision (1 = yes)",
       "engineVerified": true
     },
     "NextHit": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can trigger next-hit delay on target (1 = yes)",
       "engineVerified": true
     },
@@ -264,6 +271,7 @@
     },
     "SrcTown": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can be created in town on server (1 = yes)",
       "engineVerified": true
     },
@@ -274,16 +282,19 @@
     },
     "CanDestroy": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can destroy destructible objects (1 = yes)",
       "engineVerified": true
     },
     "ToHit": {
       "type": "integer",
+      "format": "boolean",
       "description": "Uses attack rating check (1 = yes)",
       "engineVerified": true
     },
     "AlwaysExplode": {
       "type": "integer",
+      "format": "boolean",
       "description": "Always plays explosion animation even on miss (1 = yes)",
       "engineVerified": true
     },
@@ -294,6 +305,7 @@
     },
     "NoUniqueMod": {
       "type": "integer",
+      "format": "boolean",
       "description": "Cannot be modified by unique monster affixes (1 = yes)",
       "engineVerified": true
     },
@@ -304,21 +316,25 @@
     },
     "CanSlow": {
       "type": "integer",
+      "format": "boolean",
       "description": "Can be slowed by cold/chill effects (1 = yes)",
       "engineVerified": true
     },
     "ReturnFire": {
       "type": "integer",
+      "format": "boolean",
       "description": "Target returns fire at missile source (1 = yes)",
       "engineVerified": true
     },
     "GetHit": {
       "type": "integer",
+      "format": "boolean",
       "description": "Target plays hit recovery animation (1 = yes)",
       "engineVerified": true
     },
     "SoftHit": {
       "type": "integer",
+      "format": "boolean",
       "description": "Soft hit - reduced stagger effect (1 = yes)",
       "engineVerified": true
     },
@@ -334,21 +350,25 @@
     },
     "Pierce": {
       "type": "integer",
+      "format": "boolean",
       "description": "Passes through targets (1 = yes)",
       "engineVerified": true
     },
     "SpecialSetup": {
       "type": "integer",
+      "format": "boolean",
       "description": "Uses special setup function (1 = yes)",
       "engineVerified": true
     },
     "MissileSkill": {
       "type": "integer",
+      "format": "boolean",
       "description": "Missile acts as a skill for damage purposes (1 = yes)",
       "engineVerified": true
     },
     "Skill": {
       "type": "string",
+      "ref": "skills.txt",
       "description": "Associated skill",
       "engineVerified": true
     },
@@ -369,6 +389,7 @@
     },
     "Half2HSrc": {
       "type": "integer",
+      "format": "boolean",
       "description": "Halve two-handed weapon source damage (1 = yes)",
       "engineVerified": true
     },
@@ -439,6 +460,7 @@
     },
     "EType": {
       "type": "string",
+      "ref": "elemtypes.txt",
       "description": "Element type for damage",
       "engineVerified": true
     },
@@ -519,6 +541,7 @@
     },
     "LocalBlood": {
       "type": "integer",
+      "format": "boolean",
       "description": "Show blood effect on hit (1 = yes)",
       "engineVerified": true
     },
@@ -529,96 +552,115 @@
     },
     "TravelSound": {
       "type": "string",
+      "ref": "sounds.txt",
       "description": "Sound played while missile travels",
       "engineVerified": true
     },
     "HitSound": {
       "type": "string",
+      "ref": "sounds.txt",
       "description": "Sound played on missile impact",
       "engineVerified": true
     },
     "ProgSound": {
       "type": "string",
+      "ref": "sounds.txt",
       "description": "Sound played during progressive/charge phase",
       "engineVerified": true
     },
     "ProgOverlay": {
       "type": "string",
+      "ref": "overlay.txt",
       "description": "Overlay effect during progressive/charge phase",
       "engineVerified": true
     },
     "ExplosionMissile": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Missile spawned as explosion effect on impact",
       "engineVerified": true
     },
     "SubMissile1": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile spawned on creation",
       "engineVerified": true
     },
     "SubMissile2": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile 2 spawned on creation",
       "engineVerified": true
     },
     "SubMissile3": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile 3 spawned on creation",
       "engineVerified": true
     },
     "HitSubMissile1": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile2": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile 2 spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile3": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile 3 spawned on hit",
       "engineVerified": true
     },
     "HitSubMissile4": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Sub-missile 4 spawned on hit",
       "engineVerified": true
     },
     "CltSubMissile1": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile on creation",
       "engineVerified": true
     },
     "CltSubMissile2": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile 2 on creation",
       "engineVerified": true
     },
     "CltSubMissile3": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile 3 on creation",
       "engineVerified": true
     },
     "CltHitSubMissile1": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile on hit",
       "engineVerified": true
     },
     "CltHitSubMissile2": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile 2 on hit",
       "engineVerified": true
     },
     "CltHitSubMissile3": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile 3 on hit",
       "engineVerified": true
     },
     "CltHitSubMissile4": {
       "type": "string",
+      "ref": "Missiles.txt",
       "description": "Client-side sub-missile 4 on hit",
       "engineVerified": true
     },
@@ -629,11 +671,14 @@
     },
     "missiles": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Missile name identifier",
       "engineVerified": true
     },
     "ApplyMastery": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether elemental mastery bonus applies",
       "engineVerified": true
     },
@@ -644,6 +689,7 @@
     },
     "ClientCol": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether collision is checked on client",
       "engineVerified": true
     },
@@ -674,6 +720,7 @@
     },
     "Holy": {
       "type": "integer",
+      "format": "boolean",
       "description": "Holy flag for undead interaction",
       "engineVerified": true
     },
@@ -724,6 +771,7 @@
     },
     "Town": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether missile functions in town",
       "engineVerified": true
     },

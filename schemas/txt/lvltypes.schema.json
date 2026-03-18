@@ -2,6 +2,13 @@
   "file": "lvltypes.txt",
   "description": "Level visual type definitions â€” tileset assignments and lighting.",
   "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Level type name identifier",
+      "engineVerified": true
+    },
     "Act": {
       "type": "integer",
       "description": "Act number for this level type",
@@ -10,6 +17,7 @@
     "Expansion": {
       "type": "integer",
       "description": "Whether this is expansion-only content",
+      "format": "boolean",
       "engineVerified": true
     },
     "File 1": {

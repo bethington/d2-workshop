@@ -4,6 +4,8 @@
   "columns": {
     "code": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Store page code identifier (used by item types to specify which shop tab items appear in)",
       "engineVerified": true
     }

@@ -4,11 +4,15 @@
   "columns": {
     "name": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Player type name (e.g. Amazon, Sorceress, Paladin)",
       "engineVerified": true
     },
     "token": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Animation token code (e.g. AM, SO, PA, NE, BA)",
       "engineVerified": true
     }

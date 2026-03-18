@@ -124,11 +124,13 @@
     },
     "SHRINES": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this group contains shrines",
       "engineVerified": true
     },
     "WELLS": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this group contains wells",
       "engineVerified": true
     }

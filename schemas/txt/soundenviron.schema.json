@@ -24,6 +24,7 @@
     },
     "Indoors": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this is an indoor area (affects sound processing)",
       "engineVerified": "D2Client.dll"
     },

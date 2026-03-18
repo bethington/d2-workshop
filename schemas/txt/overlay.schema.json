@@ -120,7 +120,9 @@
     "overlay": {
       "type": "string",
       "description": "Overlay identifier string",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "version": {
       "type": "integer",

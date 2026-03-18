@@ -9,56 +9,67 @@
     },
     "itype1": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 1",
       "engineVerified": true
     },
     "itype2": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 2",
       "engineVerified": true
     },
     "itype3": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 3",
       "engineVerified": true
     },
     "itype4": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 4",
       "engineVerified": true
     },
     "itype5": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 5",
       "engineVerified": true
     },
     "itype6": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 6",
       "engineVerified": true
     },
     "itype7": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Included item type 7",
       "engineVerified": true
     },
     "etype1": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Excluded item type 1",
       "engineVerified": true
     },
     "etype2": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Excluded item type 2",
       "engineVerified": true
     },
     "etype3": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Excluded item type 3",
       "engineVerified": true
     },
     "etype4": {
       "type": "string",
+      "ref": "itemtypes.txt",
       "description": "Excluded item type 4",
       "engineVerified": true
     },

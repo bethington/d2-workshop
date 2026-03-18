@@ -5,7 +5,8 @@
     "charclass": {
       "type": "string",
       "description": "Character class this skill belongs to (empty = all classes). Classic uses full names (amazon), patch uses codes (ama).",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "playerclass.txt"
     },
     "srvstfunc": {
       "type": "integer",
@@ -55,27 +56,32 @@
     "srvmissile": {
       "type": "string",
       "description": "Server-side missile spawned by skill",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "srvmissilea": {
       "type": "string",
       "description": "Server-side missile A (alternate)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "srvmissileb": {
       "type": "string",
       "description": "Server-side missile B (alternate)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "srvmissilec": {
       "type": "string",
       "description": "Server-side missile C (alternate)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "srvoverlay": {
       "type": "string",
       "description": "Server-side overlay effect applied when skill is used",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "aurafilter": {
       "type": "integer",
@@ -85,12 +91,14 @@
     "aurastate": {
       "type": "string",
       "description": "State applied to the caster by this aura",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "auratargetstate": {
       "type": "string",
       "description": "State applied to targets within aura range",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "auralencalc": {
       "type": "string",
@@ -205,7 +213,8 @@
     "passivestate": {
       "type": "string",
       "description": "State applied when this passive skill is learned",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "passiveitype": {
       "type": "string",
@@ -280,7 +289,8 @@
     "sumskill1": {
       "type": "string",
       "description": "Skill 1 granted to the summoned creature",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "sumsk1calc": {
       "type": "string",
@@ -290,7 +300,8 @@
     "sumskill2": {
       "type": "string",
       "description": "Skill 2 granted to the summoned creature",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "sumsk2calc": {
       "type": "string",
@@ -300,7 +311,8 @@
     "sumskill3": {
       "type": "string",
       "description": "Skill 3 granted to the summoned creature",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "sumsk3calc": {
       "type": "string",
@@ -310,7 +322,8 @@
     "sumskill4": {
       "type": "string",
       "description": "Skill 4 granted to the summoned creature",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "sumsk4calc": {
       "type": "string",
@@ -320,7 +333,8 @@
     "sumskill5": {
       "type": "string",
       "description": "Skill 5 granted to the summoned creature",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "sumsk5calc": {
       "type": "string",
@@ -335,77 +349,92 @@
     "sumoverlay": {
       "type": "string",
       "description": "Overlay effect displayed when summon appears",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "stsuccessonly": {
       "type": "integer",
       "description": "Sound plays only on successful cast (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "stsound": {
       "type": "string",
       "description": "Sound played when skill starts casting",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "stsoundclass": {
       "type": "string",
       "description": "Class-specific sound played on skill start",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "stsounddelay": {
       "type": "integer",
       "description": "Whether the start sound is delayed (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "weaponsnd": {
       "type": "integer",
       "description": "Play weapon swing sound (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "dosound": {
       "type": "string",
       "description": "Sound played when skill do function executes",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "dosound b": {
       "type": "string",
       "description": "Alternate do sound B",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "tgtoverlay": {
       "type": "string",
       "description": "Overlay effect displayed on target",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "tgtsound": {
       "type": "string",
       "description": "Sound played on target when hit by this skill",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "prgoverlay": {
       "type": "string",
       "description": "Overlay effect for progressive/charge-up display",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "prgsound": {
       "type": "string",
       "description": "Sound played during progressive/charge-up",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "castoverlay": {
       "type": "string",
       "description": "Overlay effect displayed on caster during cast",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "cltoverlaya": {
       "type": "string",
       "description": "Client overlay A (e.g. shapeshift transformation in)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "cltoverlayb": {
       "type": "string",
       "description": "Client overlay B (e.g. shapeshift transformation out)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "cltstfunc": {
       "type": "integer",
@@ -435,27 +464,32 @@
     "cltmissile": {
       "type": "string",
       "description": "Client-side missile (visual effect)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "cltmissilea": {
       "type": "string",
       "description": "Client-side missile A (alternate visual)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "cltmissileb": {
       "type": "string",
       "description": "Client-side missile B (alternate visual)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "cltmissilec": {
       "type": "string",
       "description": "Client-side missile C (alternate visual)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "cltmissiled": {
       "type": "string",
       "description": "Client-side missile D (alternate visual)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "Missiles.txt"
     },
     "cltcalc1": {
       "type": "string",
@@ -540,42 +574,50 @@
     "UseAttackRate": {
       "type": "integer",
       "description": "Use weapon attack rate for animation speed (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TargetableOnly": {
       "type": "integer",
       "description": "Can only target targetable units (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TargetCorpse": {
       "type": "integer",
       "description": "Can target corpses (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TargetPet": {
       "type": "integer",
       "description": "Can target pets/summons (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TargetAlly": {
       "type": "integer",
       "description": "Can target allies (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TargetItem": {
       "type": "integer",
       "description": "Can target items on ground (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "AttackNoMana": {
       "type": "integer",
       "description": "Attack continues even when mana runs out (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "TgtPlaceCheck": {
       "type": "integer",
       "description": "Check if target location is valid placement (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "ItemEffect": {
       "type": "integer",
@@ -590,7 +632,8 @@
     "ItemTgtDo": {
       "type": "integer",
       "description": "Apply item target do function (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "ItemTarget": {
       "type": "integer",
@@ -600,22 +643,26 @@
     "ItemCheckStart": {
       "type": "integer",
       "description": "Server-side check on item-triggered skill start (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "ItemCltCheckStart": {
       "type": "integer",
       "description": "Client-side check on item-triggered skill start (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "ItemCastSound": {
       "type": "string",
       "description": "Sound played when skill is cast from an item",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sounds.txt"
     },
     "ItemCastOverlay": {
       "type": "string",
       "description": "Overlay effect when skill is cast from an item",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "overlay.txt"
     },
     "reqlevel": {
       "type": "integer",
@@ -630,32 +677,38 @@
     "reqskill1": {
       "type": "string",
       "description": "Prerequisite skill 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "reqskill2": {
       "type": "string",
       "description": "Prerequisite skill 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "reqskill3": {
       "type": "string",
       "description": "Prerequisite skill 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skills.txt"
     },
     "state1": {
       "type": "string",
       "description": "Required state 1 to use this skill (e.g. bear, wolf)",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "state2": {
       "type": "string",
       "description": "Required state 2 to use this skill",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "state3": {
       "type": "string",
       "description": "Required state 3 to use this skill",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "states.txt"
     },
     "delay": {
       "type": "string",
@@ -665,17 +718,20 @@
     "leftskill": {
       "type": "integer",
       "description": "Can be assigned to left mouse button (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "repeat": {
       "type": "integer",
       "description": "Skill repeats while mouse is held (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "periodic": {
       "type": "integer",
       "description": "Skill triggers periodically while active (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "perdelay": {
       "type": "string",
@@ -685,22 +741,26 @@
     "passive": {
       "type": "integer",
       "description": "Skill is passive and always active (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "progressive": {
       "type": "integer",
       "description": "Skill is a charge-up/progressive skill (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "scroll": {
       "type": "integer",
       "description": "Skill can be used from a scroll (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "InGame": {
       "type": "integer",
       "description": "Whether skill appears in-game (1 = yes)",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "DmgSymPerCalc": {
       "type": "string",
@@ -800,7 +860,8 @@
     "EType": {
       "type": "string",
       "description": "Elemental damage type",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "elemtypes.txt"
     },
     "HitClass": {
       "type": "integer",
@@ -820,7 +881,8 @@
     "InTown": {
       "type": "integer",
       "description": "Whether skill can be used in town",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "LevToHit": {
       "type": "integer",
@@ -935,17 +997,20 @@
     "SearchEnemyNear": {
       "type": "integer",
       "description": "Whether skill searches for nearby enemies",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "SearchEnemyXY": {
       "type": "integer",
       "description": "Whether skill searches enemies by coordinates",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "SearchOpenXY": {
       "type": "integer",
       "description": "Whether skill searches for open coordinates",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "SelectProc": {
       "type": "integer",
@@ -975,7 +1040,8 @@
     "aura": {
       "type": "integer",
       "description": "Whether this skill is an aura",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "calc1": {
       "type": "string",
@@ -1000,37 +1066,44 @@
     "decquant": {
       "type": "integer",
       "description": "Whether skill decreases item quantity",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "durability": {
       "type": "integer",
       "description": "Whether skill affects durability",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "enhanceable": {
       "type": "integer",
       "description": "Whether skill can be enhanced",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "finishing": {
       "type": "integer",
       "description": "Whether this is a finishing move",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "immediate": {
       "type": "integer",
       "description": "Whether skill triggers immediately",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "interrupt": {
       "type": "integer",
       "description": "Whether skill can be interrupted",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "lob": {
       "type": "integer",
       "description": "Whether projectile uses lob trajectory",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "lvlmana": {
       "type": "integer",
@@ -1040,7 +1113,8 @@
     "pettype": {
       "type": "integer",
       "description": "Pet type created by this skill",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "pettype.txt"
     },
     "reqdex": {
       "type": "integer",
@@ -1070,12 +1144,14 @@
     "skilldesc": {
       "type": "string",
       "description": "Skill description reference",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "skilldesc.txt"
     },
     "warp": {
       "type": "integer",
       "description": "Whether skill causes warping",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "weapsel": {
       "type": "integer",
@@ -1085,7 +1161,8 @@
     "Kick": {
       "type": "integer",
       "description": "Kick",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "aibonus": {
       "type": "integer",
@@ -1115,7 +1192,8 @@
     "lineofsight": {
       "type": "integer",
       "description": "lineofsight",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "mana": {
       "type": "integer",
@@ -1135,7 +1213,8 @@
     "noammo": {
       "type": "integer",
       "description": "noammo",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "petmax": {
       "type": "string",
@@ -1180,7 +1259,8 @@
     "usemanaondo": {
       "type": "integer",
       "description": "usemanaondo",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     }
   }
 }

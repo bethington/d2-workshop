@@ -4,11 +4,14 @@
   "columns": {
     "pet type": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Pet type name identifier, referenced by Skills.txt pettype column",
       "engineVerified": true
     },
     "automap": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether pet appears on automap",
       "engineVerified": true
     },
@@ -24,6 +27,7 @@
     },
     "drawhp": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether to draw HP bar for pet",
       "engineVerified": true
     },
@@ -69,21 +73,25 @@
     },
     "partysend": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether pet type is sent to party",
       "engineVerified": true
     },
     "range": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether pet uses ranged attacks",
       "engineVerified": true
     },
     "unsummon": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether pet can be unsummoned",
       "engineVerified": true
     },
     "warp": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether pet warps to owner",
       "engineVerified": true
     },

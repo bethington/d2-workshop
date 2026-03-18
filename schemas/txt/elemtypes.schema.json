@@ -4,6 +4,8 @@
   "columns": {
     "code": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Short element type code used in formulas and data references (e.g. fire, cold, ltng, pois)",
       "engineVerified": true
     }

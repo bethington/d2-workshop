@@ -2,9 +2,17 @@
   "file": "lvlmaze.txt",
   "description": "Level maze generation parameters - room counts, dimensions, and merge behavior per level and difficulty.",
   "columns": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Maze definition name identifier",
+      "engineVerified": true
+    },
     "Level": {
       "type": "integer",
       "description": "Level ID this maze definition applies to",
+      "ref": "levels.txt",
       "engineVerified": true
     },
     "Rooms": {
@@ -34,6 +42,7 @@
     },
     "Merge": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether adjacent maze rooms merge together",
       "engineVerified": true
     }

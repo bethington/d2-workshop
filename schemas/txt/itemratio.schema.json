@@ -9,11 +9,13 @@
     },
     "Uber": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this row applies to exceptional/elite base items",
       "engineVerified": true
     },
     "Class Specific": {
       "type": "integer",
+      "format": "boolean",
       "description": "Whether this row applies to class-specific items",
       "engineVerified": true
     },

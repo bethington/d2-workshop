@@ -5,6 +5,7 @@
     "Sound": {
       "type": "string",
       "required": true,
+      "unique": true,
       "description": "Sound effect name/handle identifier",
       "engineVerified": true
     },

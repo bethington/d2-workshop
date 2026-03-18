@@ -4,11 +4,15 @@
   "columns": {
     "name": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Object type name (e.g. Player, Monster, Object, Missile, Item)",
       "engineVerified": true
     },
     "token": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Animation token code",
       "engineVerified": true
     }

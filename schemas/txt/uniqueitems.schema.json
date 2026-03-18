@@ -5,67 +5,80 @@
     "prop12": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop11": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop10": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop9": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop8": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "prop1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "code": {
       "type": "string",
       "description": "Base item code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "cost add": {
       "type": "integer",
@@ -90,12 +103,15 @@
     "enabled": {
       "type": "integer",
       "description": "Whether this unique is enabled",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "index": {
       "type": "string",
       "description": "Unique item name string key",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "invfile": {
       "type": "string",
@@ -110,12 +126,15 @@
     "ladder": {
       "type": "integer",
       "description": "Whether this unique is ladder-only",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "lvl": {
       "type": "integer",
       "description": "Item level",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "lvl req": {
       "type": "integer",
@@ -125,7 +144,8 @@
     "nolimit": {
       "type": "integer",
       "description": "Whether item has no level limit",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "rarity": {
       "type": "integer",
@@ -325,7 +345,8 @@
     "carry1": {
       "type": "integer",
       "description": "Whether only one can be carried",
-      "engineVerified": true
+      "engineVerified": true,
+      "format": "boolean"
     },
     "chrtransform": {
       "type": "string",

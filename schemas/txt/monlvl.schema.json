@@ -2,6 +2,13 @@
   "file": "monlvl.txt",
   "description": "Monster level scaling table - base and per-level values for AC, to-hit, HP, damage, and XP across all three difficulties.",
   "columns": {
+    "Level": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "description": "Monster level",
+      "engineVerified": true
+    },
     "AC": {
       "type": "integer",
       "description": "Base armor class (Normal)",

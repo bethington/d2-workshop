@@ -11,6 +11,7 @@
     "mode": {
       "type": "string",
       "description": "Source animation mode token to pull frames from (e.g. A1, S1, NU)",
+      "ref": "monmode.txt/token",
       "engineVerified": true
     },
     "frame": {

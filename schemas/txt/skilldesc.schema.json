@@ -484,6 +484,8 @@
     },
     "skilldesc": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "description": "Skill description identifier",
       "engineVerified": true
     },

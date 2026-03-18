@@ -70,7 +70,8 @@
     "stat4": {
       "type": "string",
       "description": "Stat reference for property function 4",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "set5": {
       "type": "integer",
@@ -90,7 +91,8 @@
     "stat5": {
       "type": "string",
       "description": "Stat reference for property function 5",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "set6": {
       "type": "integer",
@@ -110,7 +112,8 @@
     "stat6": {
       "type": "string",
       "description": "Stat reference for property function 6",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "set7": {
       "type": "integer",
@@ -130,22 +133,26 @@
     "stat7": {
       "type": "string",
       "description": "Stat reference for property function 7",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stat1": {
       "type": "string",
       "description": "Stat reference for property function 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stat2": {
       "type": "string",
       "description": "Stat reference for property function 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stat3": {
       "type": "string",
       "description": "Stat reference for property function 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     }
   }
 }

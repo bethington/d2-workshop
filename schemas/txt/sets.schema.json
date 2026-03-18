@@ -5,7 +5,9 @@
     "index": {
       "type": "string",
       "description": "Internal set identifier, referenced by the set column in SetItems.txt",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "name": {
       "type": "string",
@@ -20,42 +22,50 @@
     "fcode1": {
       "type": "string",
       "description": "fcode1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode2": {
       "type": "string",
       "description": "fcode2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode3": {
       "type": "string",
       "description": "fcode3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode4": {
       "type": "string",
       "description": "fcode4",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode5": {
       "type": "string",
       "description": "fcode5",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode6": {
       "type": "string",
       "description": "fcode6",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode7": {
       "type": "string",
       "description": "fcode7",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fcode8": {
       "type": "string",
       "description": "fcode8",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax1": {
       "type": "integer",
@@ -180,42 +190,50 @@
     "pcode2a": {
       "type": "string",
       "description": "pcode2a",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode2b": {
       "type": "string",
       "description": "pcode2b",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode3a": {
       "type": "string",
       "description": "pcode3a",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode3b": {
       "type": "string",
       "description": "pcode3b",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode4a": {
       "type": "string",
       "description": "pcode4a",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode4b": {
       "type": "string",
       "description": "pcode4b",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode5a": {
       "type": "string",
       "description": "pcode5a",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pcode5b": {
       "type": "string",
       "description": "pcode5b",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pmax2a": {
       "type": "integer",

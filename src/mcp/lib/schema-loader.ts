@@ -6,6 +6,13 @@ export interface ColumnSchema {
   description?: string;
   engineVerified?: boolean | string | string[];
   required?: boolean;
+  unique?: boolean;
+  min?: number;
+  max?: number;
+  values?: string[];
+  ref?: string;
+  format?: string;
+  deprecated?: boolean;
 }
 
 export interface TxtSchema {

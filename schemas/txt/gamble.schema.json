@@ -4,6 +4,7 @@
   "columns": {
     "code": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Item code resolved to item record via binary search (e.g. cap, skp, hlm)",
       "engineVerified": true
     }

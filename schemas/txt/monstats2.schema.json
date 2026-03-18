@@ -35,6 +35,7 @@
     "noGfxHitTest": {
       "type": "integer",
       "description": "Disable pixel-accurate hit testing, use bounding box only",
+      "format": "boolean",
       "engineVerified": true
     },
     "htWidth": {
@@ -55,36 +56,43 @@
     "noMap": {
       "type": "integer",
       "description": "Do not display on automap",
+      "format": "boolean",
       "engineVerified": true
     },
     "isSel": {
       "type": "integer",
       "description": "Monster is selectable (default)",
+      "format": "boolean",
       "engineVerified": true
     },
     "isAtt": {
       "type": "integer",
       "description": "Monster is attackable",
+      "format": "boolean",
       "engineVerified": true
     },
     "critter": {
       "type": "integer",
       "description": "Monster is a critter (passive, non-hostile)",
+      "format": "boolean",
       "engineVerified": true
     },
     "deadCol": {
       "type": "integer",
       "description": "Corpse has collision",
+      "format": "boolean",
       "engineVerified": true
     },
     "unflatDead": {
       "type": "integer",
       "description": "Corpse is not flattened on ground",
+      "format": "boolean",
       "engineVerified": true
     },
     "noUniqueShift": {
       "type": "integer",
       "description": "Disable unique monster color palette shift",
+      "format": "boolean",
       "engineVerified": true
     },
     "localBlood": {
@@ -131,6 +139,7 @@
       "type": "string",
       "description": "Monster stats2 identifier",
       "required": true,
+      "unique": true,
       "engineVerified": true
     },
     "SizeX": {
@@ -146,81 +155,97 @@
     "HD": {
       "type": "string",
       "description": "Head component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "TR": {
       "type": "string",
       "description": "Torso component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "LG": {
       "type": "string",
       "description": "Legs component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "RA": {
       "type": "string",
       "description": "Right arm component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "LA": {
       "type": "string",
       "description": "Left arm component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "RH": {
       "type": "string",
       "description": "Right hand component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "LH": {
       "type": "string",
       "description": "Left hand component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "SH": {
       "type": "string",
       "description": "Shield component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S1": {
       "type": "string",
       "description": "Special 1 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S2": {
       "type": "string",
       "description": "Special 2 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S3": {
       "type": "string",
       "description": "Special 3 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S4": {
       "type": "string",
       "description": "Special 4 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S5": {
       "type": "string",
       "description": "Special 5 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S6": {
       "type": "string",
       "description": "Special 6 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S7": {
       "type": "string",
       "description": "Special 7 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "S8": {
       "type": "string",
       "description": "Special 8 component",
+      "ref": "composit.txt",
       "engineVerified": true
     },
     "HDv": {
@@ -386,116 +411,139 @@
     "mDT": {
       "type": "integer",
       "description": "Death has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mNU": {
       "type": "integer",
       "description": "Neutral has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mWL": {
       "type": "integer",
       "description": "Walk has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mGH": {
       "type": "integer",
       "description": "Get hit has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mA1": {
       "type": "integer",
       "description": "Attack 1 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mA2": {
       "type": "integer",
       "description": "Attack 2 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mBL": {
       "type": "integer",
       "description": "Block has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mSC": {
       "type": "integer",
       "description": "Cast has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mS1": {
       "type": "integer",
       "description": "Skill 1 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mS2": {
       "type": "integer",
       "description": "Skill 2 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mS3": {
       "type": "integer",
       "description": "Skill 3 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mS4": {
       "type": "integer",
       "description": "Skill 4 has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mDD": {
       "type": "integer",
       "description": "Dead has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mKB": {
       "type": "integer",
       "description": "Knockback has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mSQ": {
       "type": "integer",
       "description": "Sequence has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "mRN": {
       "type": "integer",
       "description": "Run has missile",
+      "format": "boolean",
       "engineVerified": true
     },
     "A1mv": {
       "type": "integer",
       "description": "Attack 1 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "A2mv": {
       "type": "integer",
       "description": "Attack 2 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "SCmv": {
       "type": "integer",
       "description": "Cast while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "S1mv": {
       "type": "integer",
       "description": "Skill 1 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "S2mv": {
       "type": "integer",
       "description": "Skill 2 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "S3mv": {
       "type": "integer",
       "description": "Skill 3 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "S4mv": {
       "type": "integer",
       "description": "Skill 4 while moving",
+      "format": "boolean",
       "engineVerified": true
     },
     "HitClass": {
@@ -561,46 +609,55 @@
     "small": {
       "type": "integer",
       "description": "Whether monster is small size",
+      "format": "boolean",
       "engineVerified": true
     },
     "large": {
       "type": "integer",
       "description": "Whether monster is large size",
+      "format": "boolean",
       "engineVerified": true
     },
     "soft": {
       "type": "integer",
       "description": "Whether monster uses soft hit",
+      "format": "boolean",
       "engineVerified": true
     },
     "shadow": {
       "type": "integer",
       "description": "Whether monster casts shadow",
+      "format": "boolean",
       "engineVerified": true
     },
     "noOvly": {
       "type": "integer",
       "description": "Whether overlay is disabled",
+      "format": "boolean",
       "engineVerified": true
     },
     "noSel": {
       "type": "integer",
       "description": "Whether monster is not selectable",
+      "format": "boolean",
       "engineVerified": true
     },
     "shiftSel": {
       "type": "integer",
       "description": "Whether shift-click selects",
+      "format": "boolean",
       "engineVerified": true
     },
     "corpseSel": {
       "type": "integer",
       "description": "Whether corpse is selectable",
+      "format": "boolean",
       "engineVerified": true
     },
     "revive": {
       "type": "integer",
       "description": "Whether monster can be revived",
+      "format": "boolean",
       "engineVerified": true
     },
     "objCol": {
@@ -611,21 +668,25 @@
     "compositeDeath": {
       "type": "integer",
       "description": "Whether death uses composite mode",
+      "format": "boolean",
       "engineVerified": true
     },
     "inert": {
       "type": "integer",
       "description": "Whether monster is inert",
+      "format": "boolean",
       "engineVerified": true
     },
     "alSel": {
       "type": "integer",
       "description": "Whether always selectable",
+      "format": "boolean",
       "engineVerified": true
     },
     "restore": {
       "type": "integer",
       "description": "Whether monster restores on level re-entry",
+      "format": "boolean",
       "engineVerified": true
     }
   }

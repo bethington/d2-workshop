@@ -10,52 +10,62 @@
     "aprop1a": {
       "type": "string",
       "description": "Partial set (green) bonus 1a — first property of pair 1, applied based on add func logic",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop1b": {
       "type": "string",
       "description": "Partial set (green) bonus 1b — second property of pair 1",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop2a": {
       "type": "string",
       "description": "Partial set (green) bonus 2a — first property of pair 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop2b": {
       "type": "string",
       "description": "Partial set (green) bonus 2b — second property of pair 2",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop3a": {
       "type": "string",
       "description": "Partial set (green) bonus 3a — first property of pair 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop3b": {
       "type": "string",
       "description": "Partial set (green) bonus 3b — second property of pair 3",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop4a": {
       "type": "string",
       "description": "Partial set (green) bonus 4a — first property of pair 4",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop4b": {
       "type": "string",
       "description": "Partial set (green) bonus 4b — second property of pair 4",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop5a": {
       "type": "string",
       "description": "Partial set (green) bonus 5a — first property of pair 5",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "aprop5b": {
       "type": "string",
       "description": "Partial set (green) bonus 5b — second property of pair 5",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax8": {
       "type": "integer",
@@ -75,7 +85,8 @@
     "fcode8": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax7": {
       "type": "integer",
@@ -95,7 +106,8 @@
     "fcode7": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax6": {
       "type": "integer",
@@ -115,7 +127,8 @@
     "fcode6": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax5": {
       "type": "integer",
@@ -135,7 +148,8 @@
     "fcode5": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax4": {
       "type": "integer",
@@ -155,7 +169,8 @@
     "fcode4": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax3": {
       "type": "integer",
@@ -175,7 +190,8 @@
     "fcode3": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax2": {
       "type": "integer",
@@ -195,7 +211,8 @@
     "fcode2": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "fmax1": {
       "type": "integer",
@@ -215,7 +232,8 @@
     "fcode1": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam5b": {
       "type": "string",
@@ -225,7 +243,8 @@
     "pcode5b": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam5a": {
       "type": "string",
@@ -235,7 +254,8 @@
     "pcode5a": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam4b": {
       "type": "string",
@@ -245,7 +265,8 @@
     "pcode4b": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam4a": {
       "type": "string",
@@ -255,7 +276,8 @@
     "pcode4a": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam3b": {
       "type": "string",
@@ -265,7 +287,8 @@
     "pcode3b": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam3a": {
       "type": "string",
@@ -275,7 +298,8 @@
     "pcode3a": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam2b": {
       "type": "string",
@@ -285,7 +309,8 @@
     "pcode2b": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "pparam2a": {
       "type": "string",
@@ -295,7 +320,8 @@
     "pcode2a": {
       "type": "string",
       "description": "Column read by game engine",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "cost add": {
       "type": "integer",
@@ -320,7 +346,9 @@
     "index": {
       "type": "string",
       "description": "Set item name string key",
-      "engineVerified": true
+      "engineVerified": true,
+      "required": true,
+      "unique": true
     },
     "invfile": {
       "type": "string",
@@ -335,12 +363,15 @@
     "item": {
       "type": "string",
       "description": "Base item code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "lvl": {
       "type": "integer",
       "description": "Item level",
-      "engineVerified": true
+      "engineVerified": true,
+      "min": 1,
+      "max": 99
     },
     "lvl req": {
       "type": "integer",
@@ -350,7 +381,8 @@
     "set": {
       "type": "string",
       "description": "Set name this item belongs to",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "sets.txt"
     },
     "usesound": {
       "type": "string",
@@ -360,7 +392,8 @@
     "prop1": {
       "type": "string",
       "description": "Property 1 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par1": {
       "type": "string",
@@ -380,7 +413,8 @@
     "prop2": {
       "type": "string",
       "description": "Property 2 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par2": {
       "type": "string",
@@ -400,7 +434,8 @@
     "prop3": {
       "type": "string",
       "description": "Property 3 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par3": {
       "type": "string",
@@ -420,7 +455,8 @@
     "prop4": {
       "type": "string",
       "description": "Property 4 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par4": {
       "type": "string",
@@ -440,7 +476,8 @@
     "prop5": {
       "type": "string",
       "description": "Property 5 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par5": {
       "type": "string",
@@ -460,7 +497,8 @@
     "prop6": {
       "type": "string",
       "description": "Property 6 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par6": {
       "type": "string",
@@ -480,7 +518,8 @@
     "prop7": {
       "type": "string",
       "description": "Property 7 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par7": {
       "type": "string",
@@ -500,7 +539,8 @@
     "prop8": {
       "type": "string",
       "description": "Property 8 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par8": {
       "type": "string",
@@ -520,7 +560,8 @@
     "prop9": {
       "type": "string",
       "description": "Property 9 code",
-      "engineVerified": true
+      "engineVerified": true,
+      "ref": "properties.txt"
     },
     "par9": {
       "type": "string",

@@ -16,6 +16,62 @@ const workspaceSchemasDir = process.env.D2_WORKSPACE_SCHEMAS_DIR;
 
 const schemaLoader = new SchemaLoader(schemasDir, workspaceSchemasDir);
 
+/** Parse a ref string into target file/column pairs */
+function parseRef(ref: string): Array<{ file: string; column: string | null }> {
+  return ref.split("|").map(part => {
+    const slashIdx = part.indexOf("/");
+    if (slashIdx === -1) return { file: part.trim(), column: null };
+    return {
+      file: part.substring(0, slashIdx).trim(),
+      column: part.substring(slashIdx + 1).trim() || null,
+    };
+  });
+}
+
+/** Resolve ref column values by reading target .txt files from workspace */
+function resolveSchemaRefs(schema: import("./lib/schema-loader").TxtSchema): import("./lib/schema-loader").TxtSchema {
+  const enriched = JSON.parse(JSON.stringify(schema));
+  const refCache = new Map<string, string[]>();
+
+  for (const [, col] of Object.entries(enriched.columns) as [string, import("./lib/schema-loader").ColumnSchema][]) {
+    const refStr = col.ref
+      || (col.type === "ref" && (col as any).target
+        ? `${(col as any).target}${(col as any).targetColumn ? "/" + (col as any).targetColumn : ""}`
+        : null);
+    if (!refStr || col.values?.length) continue;
+
+    const parsed = parseRef(refStr);
+    const merged = new Set<string>();
+    for (const { file, column } of parsed) {
+      const cacheKey = `${file}:${column || "*"}`;
+      if (refCache.has(cacheKey)) {
+        refCache.get(cacheKey)!.forEach(v => merged.add(v));
+        continue;
+      }
+      const filePath = resolveTxtPath(workspaceRoot, file);
+      if (!filePath) continue;
+      try {
+        const table = readTxtFile(filePath);
+        const colIdx = column
+          ? table.headers.findIndex(h => h.toLowerCase() === column.toLowerCase())
+          : 0;
+        if (colIdx < 0) continue;
+        const vals: string[] = [];
+        for (const row of table.rows) {
+          const v = row[colIdx]?.trim();
+          if (v && v.toLowerCase() !== "expansion") {
+            vals.push(v);
+            merged.add(v);
+          }
+        }
+        refCache.set(cacheKey, vals);
+      } catch { /* skip unreadable files */ }
+    }
+    if (merged.size > 0) col.values = Array.from(merged).sort();
+  }
+  return enriched;
+}
+
 const server = new McpServer({
   name: "d2-workshop",
   version: "0.1.2",
@@ -360,30 +416,53 @@ server.tool(
     }> = [];
 
     // Check for missing schema columns
-    const schemaColumns = Object.keys(schema.columns);
+    const enriched = resolveSchemaRefs(schema);
+    const schemaColumns = Object.keys(enriched.columns);
     const missingInFile = schemaColumns.filter(
       (c) => !table.headers.includes(c)
     );
     const extraInFile = table.headers.filter(
-      (h) => !schema.columns[h]
+      (h) => !enriched.columns[h]
     );
 
-    // Validate cell types
+    // Validate cell types, ranges, refs, and enums
     for (let r = 0; r < table.rows.length; r++) {
-      for (const [colName, colDef] of Object.entries(schema.columns)) {
+      for (const [colName, colDef] of Object.entries(enriched.columns)) {
         const ci = table.headers.indexOf(colName);
         if (ci === -1) continue;
         const val = table.rows[r][ci] || "";
+
+        // Required check
+        if (colDef.required && !val.trim()) {
+          errors.push({ row: r, column: colName, issue: "Required field is empty", value: val });
+          continue;
+        }
         if (val === "") continue;
 
+        // Integer validation
         if (colDef.type === "integer") {
           if (!/^-?\d+$/.test(val)) {
-            errors.push({
-              row: r,
-              column: colName,
-              issue: "Expected integer",
-              value: val,
-            });
+            errors.push({ row: r, column: colName, issue: "Expected integer", value: val });
+            continue;
+          }
+          const num = parseInt(val, 10);
+          if (colDef.format === "boolean" && val !== "0" && val !== "1") {
+            errors.push({ row: r, column: colName, issue: "Boolean must be 0 or 1", value: val });
+          }
+          if (colDef.min !== undefined && num < colDef.min) {
+            errors.push({ row: r, column: colName, issue: `Below minimum ${colDef.min}`, value: val });
+          }
+          if (colDef.max !== undefined && num > colDef.max) {
+            errors.push({ row: r, column: colName, issue: `Above maximum ${colDef.max}`, value: val });
+          }
+        }
+
+        // Ref/enum value validation
+        if (colDef.values?.length) {
+          const lower = val.toLowerCase();
+          const match = colDef.values.some(v => v === val || v.toLowerCase() === lower);
+          if (!match) {
+            errors.push({ row: r, column: colName, issue: `Invalid value (${colDef.values.length} valid options)`, value: val });
           }
         }
       }

@@ -5,6 +5,8 @@
     "AI": {
       "type": "string",
       "description": "Monster AI type identifier string",
+      "required": true,
+      "unique": true,
       "engineVerified": true
     }
   }

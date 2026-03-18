@@ -5,6 +5,7 @@
     "monster": {
       "type": "string",
       "description": "Monster type reference from monstats.txt",
+      "ref": "monstats.txt",
       "engineVerified": true
     },
     "level": {
@@ -15,11 +16,13 @@
     "oninit": {
       "type": "integer",
       "description": "Whether equipment is assigned on monster init",
+      "format": "boolean",
       "engineVerified": true
     },
     "item1": {
       "type": "string",
       "description": "Item 1 code from armor/weapons/misc",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "engineVerified": true
     },
     "loc1": {
@@ -35,6 +38,7 @@
     "item2": {
       "type": "string",
       "description": "Item 2 code from armor/weapons/misc",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "engineVerified": true
     },
     "loc2": {
@@ -50,6 +54,7 @@
     "item3": {
       "type": "string",
       "description": "Item 3 code from armor/weapons/misc",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "engineVerified": true
     },
     "loc3": {

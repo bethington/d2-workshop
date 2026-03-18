@@ -9,6 +9,7 @@
     },
     "class": {
       "type": "string",
+      "ref": "playerclass.txt",
       "description": "Character class restriction",
       "engineVerified": true
     },
@@ -129,6 +130,7 @@
     },
     "item1": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 1 code",
       "engineVerified": true
     },
@@ -139,6 +141,7 @@
     },
     "item2": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 2 code",
       "engineVerified": true
     },
@@ -154,6 +157,7 @@
     },
     "item3": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 3 code",
       "engineVerified": true
     },
@@ -169,6 +173,7 @@
     },
     "item4": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 4 code",
       "engineVerified": true
     },
@@ -184,6 +189,7 @@
     },
     "item5": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 5 code",
       "engineVerified": true
     },
@@ -199,6 +205,7 @@
     },
     "item6": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 6 code",
       "engineVerified": true
     },
@@ -214,6 +221,7 @@
     },
     "item7": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 7 code",
       "engineVerified": true
     },
@@ -229,6 +237,7 @@
     },
     "item8": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 8 code",
       "engineVerified": true
     },
@@ -244,6 +253,7 @@
     },
     "item9": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 9 code",
       "engineVerified": true
     },
@@ -259,6 +269,7 @@
     },
     "item10": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 10 code",
       "engineVerified": true
     },
@@ -274,6 +285,7 @@
     },
     "item11": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 11 code",
       "engineVerified": true
     },
@@ -289,6 +301,7 @@
     },
     "item12": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 12 code",
       "engineVerified": true
     },
@@ -304,6 +317,7 @@
     },
     "item13": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 13 code",
       "engineVerified": true
     },
@@ -319,6 +333,7 @@
     },
     "item14": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 14 code",
       "engineVerified": true
     },
@@ -334,6 +349,7 @@
     },
     "item15": {
       "type": "string",
+      "ref": "armor.txt|weapons.txt|misc.txt",
       "description": "Starting item 15 code",
       "engineVerified": true
     },
