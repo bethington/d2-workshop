@@ -44,6 +44,63 @@ A VS Code extension for Diablo II 1.13c modding. Browse MPQ archives, edit game 
 ### Game Launcher
 - Launch Diablo II directly from VS Code with configurable command-line flags
 
+### Schema Validation
+- Columns that reference other `.txt` files show **dropdowns** or **autocomplete** with valid values
+- Multi-file refs (e.g., item codes from armor/weapons/misc) merge all valid options
+- Boolean flag columns (0/1) render as **toggles**
+- Integer columns validate against min/max ranges
+- Duplicate values are flagged on columns marked as unique keys
+
+#### Custom Schema Overrides
+
+You can override or extend the built-in schemas by placing `.schema.json` files in your workspace:
+
+```
+<workspace>/.d2workshop/schemas/txt/armor.schema.json
+```
+
+Workspace schemas take priority over the bundled ones. This is useful when your mod adds custom columns or changes valid values. The schema format:
+
+```json
+{
+  "file": "armor.txt",
+  "description": "My custom armor schema",
+  "columns": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Item code"
+    },
+    "type": {
+      "type": "string",
+      "ref": "itemtypes.txt/code",
+      "description": "Item type reference"
+    },
+    "spawnable": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Can this item spawn"
+    },
+    "myCustomCol": {
+      "type": "string",
+      "values": ["opt1", "opt2"],
+      "description": "My mod-specific column"
+    }
+  }
+}
+```
+
+**Schema properties:**
+| Property | Description |
+|----------|-------------|
+| `ref` | Reference to another file: `"file.txt"`, `"file.txt/column"`, or `"a.txt\|b.txt"` for multi-file |
+| `values` | Inline array of valid values (when no `.txt` file to reference) |
+| `format` | `"boolean"` renders integer 0/1 as a toggle |
+| `min` / `max` | Integer range bounds |
+| `required` | Cell cannot be empty |
+| `unique` | No duplicate values allowed in this column |
+
 ## Requirements
 
 - **VS Code** 1.85.0 or later
@@ -88,8 +145,12 @@ Then press **F5** in VS Code to launch the Extension Development Host.
 
 | Setting | Default | Description |
 |---------|---------|-------------|
+| `d2workshop.gameDirectory` | `""` | Path to Diablo II install folder. Falls back to workspace root. |
+| `d2workshop.gameExePath` | `""` | Path to Game.exe / Diablo II.exe. Falls back to auto-detection. |
 | `d2workshop.gimpPath` | `""` | Path to GIMP executable. Leave empty for auto-detection. |
 | `d2workshop.autoDetectGimpChanges` | `false` | Auto-import when GIMP saves changes to exported sprite files. |
+| `d2workshop.autoBackup` | `true` | Automatic backups before publishing changes. |
+| `d2workshop.autoDeleteBin` | `true` | Auto-delete .bin files when publishing .txt changes. |
 | `d2workshop.launchFlags` | `"-w"` | Command-line flags for launching Diablo II (e.g., `-w -nofixaspect`). |
 
 ## Project Structure

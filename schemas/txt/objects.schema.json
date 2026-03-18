@@ -386,41 +386,49 @@
     },
     "Mode0": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 0 enabled",
       "engineVerified": true
     },
     "Mode1": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 1 enabled",
       "engineVerified": true
     },
     "Mode2": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 2 enabled",
       "engineVerified": true
     },
     "Mode3": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 3 enabled",
       "engineVerified": true
     },
     "Mode4": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 4 enabled",
       "engineVerified": true
     },
     "Mode5": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 5 enabled",
       "engineVerified": true
     },
     "Mode6": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 6 enabled",
       "engineVerified": true
     },
     "Mode7": {
       "type": "integer",
+      "format": "boolean",
       "description": "Object animation mode 7 enabled",
       "engineVerified": true
     },
@@ -642,6 +650,7 @@
     },
     "HD": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Head component",
       "engineVerified": true
     },
@@ -652,16 +661,19 @@
     },
     "LA": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Left arm component",
       "engineVerified": true
     },
     "LG": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Legs component",
       "engineVerified": true
     },
     "LH": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Left hand component",
       "engineVerified": true
     },
@@ -712,11 +724,13 @@
     },
     "RA": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Right arm component",
       "engineVerified": true
     },
     "RH": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Right hand component",
       "engineVerified": true
     },
@@ -739,46 +753,55 @@
     },
     "S1": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 1 component",
       "engineVerified": true
     },
     "S2": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 2 component",
       "engineVerified": true
     },
     "S3": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 3 component",
       "engineVerified": true
     },
     "S4": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 4 component",
       "engineVerified": true
     },
     "S5": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 5 component",
       "engineVerified": true
     },
     "S6": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 6 component",
       "engineVerified": true
     },
     "S7": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 7 component",
       "engineVerified": true
     },
     "S8": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Special 8 component",
       "engineVerified": true
     },
     "SH": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Shield component",
       "engineVerified": true
     },
@@ -830,6 +853,7 @@
     },
     "TR": {
       "type": "integer",
+      "ref": "composit.txt",
       "description": "Torso component",
       "engineVerified": true
     },
@@ -837,6 +861,184 @@
       "type": "integer",
       "description": "Total animation component pieces",
       "engineVerified": true
+    },
+    "OpenSound": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Sound played when object is opened/operated"
+    },
+    "CloseSound": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Sound played when object is closed"
+    },
+    "CursorHover": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Sound played when cursor hovers over object"
+    },
+    "OperateSound": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Sound played when object is operated"
+    },
+    "LockSound": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Sound played when locked object is interacted with"
+    },
+    "SoundSpecial": {
+      "type": "string",
+      "ref": "sounds.txt",
+      "description": "Special sound effect for object"
+    },
+    "CastOverlay": {
+      "type": "string",
+      "ref": "overlay.txt",
+      "description": "Overlay displayed when object casts/activates"
+    },
+    "Draw0": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 0"
+    },
+    "Draw1": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 1"
+    },
+    "Draw2": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 2"
+    },
+    "Draw3": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 3"
+    },
+    "Draw4": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 4"
+    },
+    "Draw5": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 5"
+    },
+    "Draw6": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 6"
+    },
+    "Draw7": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether to draw component in mode 7"
+    },
+    "HasAnimSpeed0": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 0"
+    },
+    "HasAnimSpeed1": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 1"
+    },
+    "HasAnimSpeed2": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 2"
+    },
+    "HasAnimSpeed3": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 3"
+    },
+    "HasAnimSpeed4": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 4"
+    },
+    "HasAnimSpeed5": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 5"
+    },
+    "HasAnimSpeed6": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 6"
+    },
+    "HasAnimSpeed7": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether custom animation speed is used for mode 7"
+    },
+    "Flicker": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether light flickers"
+    },
+    "HasLight": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the object emits light"
+    },
+    "BlocksPlayerBlock": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the object blocks player pathing"
+    },
+    "AutoClose": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the door auto-closes"
+    },
+    "IsTrap": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the object is a trap"
+    },
+    "Trap": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the object can be trapped"
+    },
+    "CompactSave": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether the object uses compact save format"
+    },
+    "Quest": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether this is a quest-related object"
+    },
+    "Staircase": {
+      "type": "integer",
+      "format": "boolean",
+      "description": "Whether this object is a staircase/warp"
+    },
+    "Light": {
+      "type": "integer",
+      "description": "Light radius emitted by object"
+    },
+    "ObjectClass": {
+      "type": "integer",
+      "description": "Object classification type"
+    },
+    "Id": {
+      "type": "integer",
+      "description": "Unique numeric object type identifier",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "string",
+      "description": "Human-readable object description"
     }
   }
 }

@@ -22,6 +22,8 @@
     "Volume": {
       "type": "integer",
       "description": "Playback volume (0-255)",
+      "min": 0,
+      "max": 255,
       "engineVerified": true
     },
     "Group Size": {
@@ -31,6 +33,7 @@
     },
     "Loop": {
       "type": "integer",
+      "format": "boolean",
       "description": "Enable looping playback",
       "engineVerified": true
     },
@@ -46,11 +49,13 @@
     },
     "Defer Inst": {
       "type": "integer",
+      "format": "boolean",
       "description": "Deferred instantiation flag",
       "engineVerified": true
     },
     "Stop Inst": {
       "type": "integer",
+      "format": "boolean",
       "description": "Stop other instances when playing",
       "engineVerified": true
     },
@@ -61,56 +66,68 @@
     },
     "Compound": {
       "type": "integer",
-      "description": "Compound sound priority",
+      "ref": "sounds.txt",
+      "description": "Compound sound reference (index into sounds.txt for layered playback)",
       "engineVerified": true
     },
     "Reverb": {
       "type": "integer",
+      "format": "boolean",
       "description": "Reverb effect enabled",
       "engineVerified": true
     },
     "Falloff": {
       "type": "integer",
       "description": "Distance falloff rate",
+      "min": 0,
       "engineVerified": true
     },
     "Cache": {
       "type": "integer",
+      "format": "boolean",
       "description": "Cache sound in memory",
       "engineVerified": true
     },
     "Async Only": {
       "type": "integer",
+      "format": "boolean",
       "description": "Asynchronous playback only",
       "engineVerified": true
     },
     "Priority": {
       "type": "integer",
       "description": "Playback priority (0-255, higher = more important)",
+      "min": 0,
+      "max": 255,
       "engineVerified": true
     },
     "Stream": {
       "type": "integer",
+      "format": "boolean",
       "description": "Stream from disk instead of loading into memory",
       "engineVerified": true
     },
     "Stereo": {
       "type": "integer",
+      "format": "boolean",
       "description": "Stereo audio playback",
       "engineVerified": true
     },
     "Tracking": {
       "type": "integer",
+      "format": "boolean",
       "description": "Position tracking enabled",
       "engineVerified": true
     },
     "Solo": {
       "type": "integer",
+      "format": "boolean",
       "description": "Solo playback (mute others)",
       "engineVerified": true
     },
     "Music Vol": {
       "type": "integer",
+      "format": "boolean",
       "description": "Use music volume slider",
       "engineVerified": true
     },

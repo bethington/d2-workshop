@@ -285,6 +285,29 @@ export function TableEditor() {
     return result;
   }, [schema, data]);
 
+  // Build set of duplicate values for columns marked unique
+  const duplicateValues = useMemo(() => {
+    const result = new Map<number, Set<string>>();
+    for (const [i, header] of data.headers.entries()) {
+      const colSchema = mergedColumnSchemas[header];
+      if (!colSchema?.unique) continue;
+      const seen = new Map<string, number>();
+      const dupes = new Set<string>();
+      for (const row of data.rows) {
+        const v = (row[i] || "").trim();
+        if (!v) continue;
+        const lower = v.toLowerCase();
+        if (seen.has(lower)) {
+          dupes.add(lower);
+        } else {
+          seen.set(lower, 1);
+        }
+      }
+      if (dupes.size > 0) result.set(i, dupes);
+    }
+    return result;
+  }, [data, mergedColumnSchemas]);
+
   const columns = useMemo(
     () =>
       data.headers.map((header, index) => {
@@ -307,7 +330,9 @@ export function TableEditor() {
           ),
           cell: (info) => {
             const value = info.getValue();
-            const error = validateCell(value, colSchema);
+            const dupes = duplicateValues.get(index);
+            const error = validateCell(value, colSchema)
+              || (dupes && value.trim() && dupes.has(value.trim().toLowerCase()) ? "Duplicate value (must be unique)" : null);
             return (
               <EditableCell
                 value={value}
@@ -322,7 +347,7 @@ export function TableEditor() {
           size: Math.max(80, Math.min(200, header.length * 9)),
         });
       }),
-    [data.headers, schema, mergedColumnSchemas, updateCell]
+    [data.headers, schema, mergedColumnSchemas, duplicateValues, updateCell]
   );
 
   const table = useReactTable({

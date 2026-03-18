@@ -470,6 +470,28 @@ server.tool(
       if (errors.length >= 100) break;
     }
 
+    // Unique constraint validation
+    const uniqueErrors: typeof errors = [];
+    for (const [colName, colDef] of Object.entries(enriched.columns)) {
+      if (!colDef.unique) continue;
+      const ci = table.headers.indexOf(colName);
+      if (ci === -1) continue;
+      const seen = new Map<string, number>();
+      for (let r = 0; r < table.rows.length; r++) {
+        const val = (table.rows[r][ci] || "").trim();
+        if (!val) continue;
+        const lower = val.toLowerCase();
+        const prevRow = seen.get(lower);
+        if (prevRow !== undefined) {
+          uniqueErrors.push({ row: r, column: colName, issue: `Duplicate value (first at row ${prevRow})`, value: val });
+        } else {
+          seen.set(lower, r);
+        }
+      }
+      if (errors.length + uniqueErrors.length >= 100) break;
+    }
+    errors.push(...uniqueErrors);
+
     return {
       content: [
         {

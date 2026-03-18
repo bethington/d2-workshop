@@ -10,56 +10,67 @@
     "nodrop": {
       "type": "integer",
       "description": "Weight for no item drop",
+      "min": 0,
       "engineVerified": true
     },
     "prob1": {
       "type": "integer",
       "description": "Drop probability weight for Item1",
+      "min": 0,
       "engineVerified": true
     },
     "prob2": {
       "type": "integer",
       "description": "Drop probability weight for Item2",
+      "min": 0,
       "engineVerified": true
     },
     "prob3": {
       "type": "integer",
       "description": "Drop probability weight for Item3",
+      "min": 0,
       "engineVerified": true
     },
     "prob4": {
       "type": "integer",
       "description": "Drop probability weight for Item4",
+      "min": 0,
       "engineVerified": true
     },
     "prob5": {
       "type": "integer",
       "description": "Drop probability weight for Item5",
+      "min": 0,
       "engineVerified": true
     },
     "prob6": {
       "type": "integer",
       "description": "Drop probability weight for Item6",
+      "min": 0,
       "engineVerified": true
     },
     "prob7": {
       "type": "integer",
       "description": "Drop probability weight for Item7",
+      "min": 0,
       "engineVerified": true
     },
     "prob8": {
       "type": "integer",
       "description": "Drop probability weight for Item8",
+      "min": 0,
       "engineVerified": true
     },
     "prob9": {
       "type": "integer",
       "description": "Drop probability weight for Item9",
+      "min": 0,
       "engineVerified": true
     },
     "prob10": {
       "type": "integer",
       "description": "Drop probability weight for Item10",
+      "min": 0,
       "engineVerified": true
     },
     "group": {
@@ -142,21 +153,29 @@
     "magic": {
       "type": "integer",
       "description": "Magic item find factor",
+      "min": 0,
+      "max": 1024,
       "engineVerified": true
     },
     "rare": {
       "type": "integer",
       "description": "Rare item find factor",
+      "min": 0,
+      "max": 1024,
       "engineVerified": true
     },
     "set": {
       "type": "integer",
       "description": "Set item find factor",
+      "min": 0,
+      "max": 1024,
       "engineVerified": true
     },
     "unique": {
       "type": "integer",
       "description": "Unique item find factor",
+      "min": 0,
+      "max": 1024,
       "engineVerified": true
     }
   }
