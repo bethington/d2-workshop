@@ -1,6 +1,7 @@
 {
   "file": "monai.txt",
   "description": "Monster AI type lookup table. Engine uses row index to map AI type IDs to their string identifiers.",
+  "category": "Monsters",
   "columns": {
     "AI": {
       "type": "string",

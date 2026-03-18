@@ -1,6 +1,7 @@
 {
   "file": "automap.txt",
   "description": "Automap cell type definitions mapping tiles to minimap graphics.",
+  "category": "Levels",
   "columns": {
     "TileName": {
       "type": "string",

@@ -76,7 +76,8 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   // Register D2 Explorer tree view
-  const treeProvider = new D2TreeProvider(gameDirectory, mpqManager);
+  const schemasDir = path.join(context.extensionUri.fsPath, "schemas", "txt");
+  const treeProvider = new D2TreeProvider(gameDirectory, mpqManager, schemasDir);
   const treeView = vscode.window.createTreeView("d2ExplorerView", {
     treeDataProvider: treeProvider,
   });
@@ -320,11 +321,14 @@ export async function activate(context: vscode.ExtensionContext) {
       if (!profile || profile.rootPath === modProfiles.activeProfile.rootPath) return;
 
       // Close editors from the previous mod
-      for (const tab of vscode.window.tabGroups.all.flatMap((g) => g.tabs)) {
-        const input = tab.input as { uri?: vscode.Uri };
-        if (input?.uri?.scheme === "d2mpq") {
-          await vscode.window.tabGroups.close(tab);
-        }
+      const mpqTabs = vscode.window.tabGroups.all
+        .flatMap((g) => g.tabs)
+        .filter((tab) => {
+          const input = tab.input as { uri?: vscode.Uri };
+          return input?.uri?.scheme === "d2mpq";
+        });
+      if (mpqTabs.length > 0) {
+        await vscode.window.tabGroups.close(mpqTabs);
       }
 
       // Switch all components to the new mod
@@ -389,6 +393,48 @@ export async function activate(context: vscode.ExtensionContext) {
     )
   );
 
+  // Hide/show file commands — all files visible by default
+  vscode.commands.executeCommand("setContext", "d2workshop.showingHidden", true);
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.toggleHiddenFiles", () => {
+      treeProvider.toggleShowHidden();
+    })
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.toggleHiddenFilesOff", () => {
+      treeProvider.toggleShowHidden();
+    })
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.hideFile", async (item: { label: string }) => {
+      if (!item?.label) return;
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      const hidden = [...config.get<string[]>("hiddenFiles", [])];
+      const fileName = item.label.toLowerCase();
+
+      if (!hidden.some((f) => f.toLowerCase() === fileName)) {
+        hidden.push(item.label);
+      }
+
+      await config.update("hiddenFiles", hidden, vscode.ConfigurationTarget.Workspace);
+      treeProvider.refresh();
+    })
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand("d2workshop.showFile", async (item: { label: string }) => {
+      if (!item?.label) return;
+      const config = vscode.workspace.getConfiguration("d2workshop");
+      const hidden = [...config.get<string[]>("hiddenFiles", [])];
+      const fileName = item.label.toLowerCase();
+
+      const idx = hidden.findIndex((f) => f.toLowerCase() === fileName);
+      if (idx >= 0) hidden.splice(idx, 1);
+
+      await config.update("hiddenFiles", hidden, vscode.ConfigurationTarget.Workspace);
+      treeProvider.refresh();
+    })
+  );
+
   // Refresh tree when files change
   const watcher = vscode.workspace.createFileSystemWatcher(
     "**/*.{mpq,dll,exe}"
@@ -401,6 +447,9 @@ export async function activate(context: vscode.ExtensionContext) {
   // Re-initialize components when game directory setting changes
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration((e) => {
+      if (e.affectsConfiguration("d2workshop.hiddenFiles")) {
+        treeProvider.refresh();
+      }
       if (e.affectsConfiguration("d2workshop.gameDirectory")) {
         const newDir = getGameDirectory();
         if (newDir !== gameDirectory) {

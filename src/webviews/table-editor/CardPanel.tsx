@@ -28,6 +28,7 @@ interface ColumnSchema {
   description?: string;
   engineVerified?: boolean | string;
   deprecated?: boolean;
+  width?: number;
 }
 
 interface TxtSchema {

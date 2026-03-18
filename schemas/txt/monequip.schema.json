@@ -1,6 +1,7 @@
 {
   "file": "monequip.txt",
   "description": "Monster equipment definitions - items, body locations, and modifiers assigned to monsters on spawn.",
+  "category": "Monsters",
   "columns": {
     "monster": {
       "type": "string",

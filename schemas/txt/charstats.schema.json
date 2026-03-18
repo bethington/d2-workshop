@@ -1,204 +1,525 @@
 {
   "file": "charstats.txt",
-  "description": "Character class base stats — starting attributes, growth rates, and default equipment.",
+  "description": "Character class base stats — starting attributes, growth rates, and default equipment. Record size 0xC4 (196 bytes).",
+  "category": "Characters",
   "columns": {
+    "class": {
+      "type": "string",
+      "description": "Character class name (key column)",
+      "engineVerified": true,
+      "recordOffset": "0x20",
+      "engineType": "key"
+    },
+    "str": {
+      "type": "integer",
+      "description": "Starting strength",
+      "engineVerified": true,
+      "recordOffset": "0x30",
+      "engineType": "byte"
+    },
+    "dex": {
+      "type": "integer",
+      "description": "Starting dexterity",
+      "engineVerified": true,
+      "recordOffset": "0x31",
+      "engineType": "byte"
+    },
+    "int": {
+      "type": "integer",
+      "description": "Starting energy",
+      "engineVerified": true,
+      "recordOffset": "0x32",
+      "engineType": "byte"
+    },
+    "vit": {
+      "type": "integer",
+      "description": "Starting vitality",
+      "engineVerified": true,
+      "recordOffset": "0x33",
+      "engineType": "byte"
+    },
+    "stamina": {
+      "type": "integer",
+      "description": "Starting stamina",
+      "engineVerified": true,
+      "recordOffset": "0x34",
+      "engineType": "byte"
+    },
+    "hpadd": {
+      "type": "integer",
+      "description": "Starting HP bonus added to base life",
+      "engineVerified": true,
+      "recordOffset": "0x35",
+      "engineType": "byte"
+    },
+    "PercentStr": {
+      "type": "integer",
+      "description": "Strength percentage modifier",
+      "engineVerified": true,
+      "recordOffset": "0x36",
+      "engineType": "byte"
+    },
+    "PercentInt": {
+      "type": "integer",
+      "description": "Energy percentage modifier",
+      "engineVerified": true,
+      "recordOffset": "0x37",
+      "engineType": "byte"
+    },
+    "PercentDex": {
+      "type": "integer",
+      "description": "Dexterity percentage modifier",
+      "engineVerified": true,
+      "recordOffset": "0x38",
+      "engineType": "byte"
+    },
+    "PercentVit": {
+      "type": "integer",
+      "description": "Vitality percentage modifier",
+      "engineVerified": true,
+      "recordOffset": "0x39",
+      "engineType": "byte"
+    },
     "ManaRegen": {
       "type": "integer",
-      "description": "Mana regeneration time (seconds per full regen)",
-      "engineVerified": true
+      "description": "Mana regeneration rate (256 = normal speed, lower is faster)",
+      "engineVerified": true,
+      "recordOffset": "0x3a",
+      "engineType": "byte"
     },
     "ToHitFactor": {
       "type": "integer",
       "description": "Starting attack rating",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x3c",
+      "engineType": "word"
     },
     "WalkVelocity": {
       "type": "integer",
       "description": "Walk movement speed",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x40",
+      "engineType": "byte"
     },
     "RunVelocity": {
       "type": "integer",
       "description": "Run movement speed",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x41",
+      "engineType": "byte"
     },
     "RunDrain": {
       "type": "integer",
       "description": "Stamina drain rate while running",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x42",
+      "engineType": "byte"
     },
     "LifePerLevel": {
       "type": "integer",
-      "description": "HP gained per level (fourths)",
-      "engineVerified": true
+      "description": "HP gained per level (fourths, e.g. 8 = 2.0 per level)",
+      "engineVerified": true,
+      "recordOffset": "0x43",
+      "engineType": "byte"
     },
     "StaminaPerLevel": {
       "type": "integer",
       "description": "Stamina gained per level (fourths)",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x44",
+      "engineType": "byte"
     },
     "ManaPerLevel": {
       "type": "integer",
       "description": "Mana gained per level (fourths)",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x45",
+      "engineType": "byte"
     },
     "LifePerVitality": {
       "type": "integer",
       "description": "HP per vitality point (fourths)",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x46",
+      "engineType": "byte"
     },
     "StaminaPerVitality": {
       "type": "integer",
       "description": "Stamina per vitality point (fourths)",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x47",
+      "engineType": "byte"
     },
     "ManaPerMagic": {
       "type": "integer",
       "description": "Mana per energy point (fourths)",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x48",
+      "engineType": "byte"
     },
     "BlockFactor": {
       "type": "integer",
       "description": "Base block percentage",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x49",
+      "engineType": "byte"
+    },
+    "basewclass": {
+      "type": "string",
+      "description": "Base weapon class for animations (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x4c",
+      "engineType": "code"
+    },
+    "StatPerLevel": {
+      "type": "integer",
+      "description": "Stat points awarded per level-up",
+      "engineVerified": true,
+      "recordOffset": "0x50",
+      "engineType": "byte"
+    },
+    "StrAllSkills": {
+      "type": "string",
+      "description": "String table key for '+X to all skills' item affix text",
+      "engineVerified": true,
+      "recordOffset": "0x52",
+      "engineType": "stringTableKey"
+    },
+    "StrSkillTab1": {
+      "type": "string",
+      "description": "String table key for skill tab 1 bonus text",
+      "engineVerified": true,
+      "recordOffset": "0x54",
+      "engineType": "stringTableKey"
+    },
+    "StrSkillTab2": {
+      "type": "string",
+      "description": "String table key for skill tab 2 bonus text",
+      "engineVerified": true,
+      "recordOffset": "0x56",
+      "engineType": "stringTableKey"
+    },
+    "StrSkillTab3": {
+      "type": "string",
+      "description": "String table key for skill tab 3 bonus text",
+      "engineVerified": true,
+      "recordOffset": "0x58",
+      "engineType": "stringTableKey"
+    },
+    "StrClassOnly": {
+      "type": "string",
+      "description": "String table key for 'class only' restriction text on items",
+      "engineVerified": true,
+      "recordOffset": "0x5a",
+      "engineType": "stringTableKey"
+    },
+    "item1": {
+      "type": "string",
+      "description": "Starting inventory item 1 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x5c",
+      "engineType": "code"
+    },
+    "item1loc": {
+      "type": "integer",
+      "description": "Body location for starting item 1",
+      "engineVerified": true,
+      "recordOffset": "0x60",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item1count": {
+      "type": "integer",
+      "description": "Stack count for starting item 1",
+      "engineVerified": true,
+      "recordOffset": "0x61",
+      "engineType": "byte"
+    },
+    "item2": {
+      "type": "string",
+      "description": "Starting inventory item 2 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x64",
+      "engineType": "code"
+    },
+    "item2loc": {
+      "type": "integer",
+      "description": "Body location for starting item 2",
+      "engineVerified": true,
+      "recordOffset": "0x68",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item2count": {
+      "type": "integer",
+      "description": "Stack count for starting item 2",
+      "engineVerified": true,
+      "recordOffset": "0x69",
+      "engineType": "byte"
+    },
+    "item3": {
+      "type": "string",
+      "description": "Starting inventory item 3 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x6c",
+      "engineType": "code"
+    },
+    "item3loc": {
+      "type": "integer",
+      "description": "Body location for starting item 3",
+      "engineVerified": true,
+      "recordOffset": "0x70",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item3count": {
+      "type": "integer",
+      "description": "Stack count for starting item 3",
+      "engineVerified": true,
+      "recordOffset": "0x71",
+      "engineType": "byte"
+    },
+    "item4": {
+      "type": "string",
+      "description": "Starting inventory item 4 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x74",
+      "engineType": "code"
+    },
+    "item4loc": {
+      "type": "integer",
+      "description": "Body location for starting item 4",
+      "engineVerified": true,
+      "recordOffset": "0x78",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item4count": {
+      "type": "integer",
+      "description": "Stack count for starting item 4",
+      "engineVerified": true,
+      "recordOffset": "0x79",
+      "engineType": "byte"
+    },
+    "item5": {
+      "type": "string",
+      "description": "Starting inventory item 5 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x7c",
+      "engineType": "code"
+    },
+    "item5loc": {
+      "type": "integer",
+      "description": "Body location for starting item 5",
+      "engineVerified": true,
+      "recordOffset": "0x80",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item5count": {
+      "type": "integer",
+      "description": "Stack count for starting item 5",
+      "engineVerified": true,
+      "recordOffset": "0x81",
+      "engineType": "byte"
+    },
+    "item6": {
+      "type": "string",
+      "description": "Starting inventory item 6 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x84",
+      "engineType": "code"
+    },
+    "item6loc": {
+      "type": "integer",
+      "description": "Body location for starting item 6",
+      "engineVerified": true,
+      "recordOffset": "0x88",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item6count": {
+      "type": "integer",
+      "description": "Stack count for starting item 6",
+      "engineVerified": true,
+      "recordOffset": "0x89",
+      "engineType": "byte"
+    },
+    "item7": {
+      "type": "string",
+      "description": "Starting inventory item 7 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x8c",
+      "engineType": "code"
+    },
+    "item7loc": {
+      "type": "integer",
+      "description": "Body location for starting item 7",
+      "engineVerified": true,
+      "recordOffset": "0x90",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item7count": {
+      "type": "integer",
+      "description": "Stack count for starting item 7",
+      "engineVerified": true,
+      "recordOffset": "0x91",
+      "engineType": "byte"
+    },
+    "item8": {
+      "type": "string",
+      "description": "Starting inventory item 8 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x94",
+      "engineType": "code"
+    },
+    "item8loc": {
+      "type": "integer",
+      "description": "Body location for starting item 8",
+      "engineVerified": true,
+      "recordOffset": "0x98",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item8count": {
+      "type": "integer",
+      "description": "Stack count for starting item 8",
+      "engineVerified": true,
+      "recordOffset": "0x99",
+      "engineType": "byte"
+    },
+    "item9": {
+      "type": "string",
+      "description": "Starting inventory item 9 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0x9c",
+      "engineType": "code"
+    },
+    "item9loc": {
+      "type": "integer",
+      "description": "Body location for starting item 9",
+      "engineVerified": true,
+      "recordOffset": "0xa0",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item9count": {
+      "type": "integer",
+      "description": "Stack count for starting item 9",
+      "engineVerified": true,
+      "recordOffset": "0xa1",
+      "engineType": "byte"
+    },
+    "item10": {
+      "type": "string",
+      "description": "Starting inventory item 10 (code lookup)",
+      "engineVerified": true,
+      "recordOffset": "0xa4",
+      "engineType": "code"
+    },
+    "item10loc": {
+      "type": "integer",
+      "description": "Body location for starting item 10",
+      "engineVerified": true,
+      "recordOffset": "0xa8",
+      "ref": "bodylocs.txt",
+      "engineType": "lookupByte"
+    },
+    "item10count": {
+      "type": "integer",
+      "description": "Stack count for starting item 10",
+      "engineVerified": true,
+      "recordOffset": "0xa9",
+      "engineType": "byte"
     },
     "StartSkill": {
       "type": "string",
       "ref": "skills.txt",
-      "description": "Default right-hand skill",
-      "engineVerified": true
-    },
-    "basewclass": {
-      "type": "string",
-      "description": "Base weapon class for animations",
-      "engineVerified": true
-    },
-    "skillcolumn": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "skillrow": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "skillpage": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "sklvl": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "ExpRatio": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StatPerLevel": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 10": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 9": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 8": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 7": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 6": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 5": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 4": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 3": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Skill 2": {
-      "type": "string",
-      "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Default right-hand skill assigned at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xac",
+      "engineType": "skillRef"
     },
     "Skill 1": {
       "type": "string",
       "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Starting skill 1 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xae",
+      "engineType": "skillRef"
     },
-    "StrClassOnly": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StrSkillTab3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StrSkillTab2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StrSkillTab1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "StrAllSkills": {
+    "Skill 2": {
       "type": "string",
       "ref": "skills.txt",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Starting skill 2 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xb0",
+      "engineType": "skillRef"
     },
-    "experience": {
+    "Skill 3": {
       "type": "string",
-      "description": "Reference to experience table for this class",
-      "engineVerified": true
+      "ref": "skills.txt",
+      "description": "Starting skill 3 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xb2",
+      "engineType": "skillRef"
     },
-    "skilldesc": {
+    "Skill 4": {
       "type": "string",
-      "ref": "skilldesc.txt",
-      "description": "Reference to skill description for this class",
-      "engineVerified": true
+      "ref": "skills.txt",
+      "description": "Starting skill 4 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xb4",
+      "engineType": "skillRef"
+    },
+    "Skill 5": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 5 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xb6",
+      "engineType": "skillRef"
+    },
+    "Skill 6": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 6 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xb8",
+      "engineType": "skillRef"
+    },
+    "Skill 7": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 7 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xba",
+      "engineType": "skillRef"
+    },
+    "Skill 8": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 8 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xbc",
+      "engineType": "skillRef"
+    },
+    "Skill 9": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 9 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xbe",
+      "engineType": "skillRef"
+    },
+    "Skill 10": {
+      "type": "string",
+      "ref": "skills.txt",
+      "description": "Starting skill 10 granted at character creation",
+      "engineVerified": true,
+      "recordOffset": "0xc0",
+      "engineType": "skillRef"
     }
   }
 }

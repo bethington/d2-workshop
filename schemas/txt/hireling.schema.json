@@ -1,6 +1,7 @@
 {
   "file": "hireling.txt",
   "description": "Hireling stat definitions - base stats, skills, equipment, and scaling per level for each hireling type and difficulty.",
+  "category": "Characters",
   "columns": {
     "version": {
       "type": "integer",

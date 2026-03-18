@@ -1,6 +1,7 @@
 {
   "file": "treasureclassex.txt",
   "description": "Treasure class definitions (expansion) - drop tables with item/sub-TC references, probability weights, pick counts, and quality factors (unique/set/rare/magic).",
+  "category": "Crafting & Drops",
   "columns": {
     "picks": {
       "type": "integer",

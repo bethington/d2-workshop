@@ -1,6 +1,7 @@
 {
   "file": "monstats2.txt",
   "description": "Monster visual and collision properties — animation components, light settings, hit testing, and display flags. Referenced by MonStatsEx column in MonStats.txt.",
+  "category": "Monsters",
   "columns": {
     "Height": {
       "type": "integer",

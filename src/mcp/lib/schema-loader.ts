@@ -13,11 +13,14 @@ export interface ColumnSchema {
   ref?: string;
   format?: string;
   deprecated?: boolean;
+  width?: number;
 }
 
 export interface TxtSchema {
   file: string;
   description: string;
+  hidden?: boolean;
+  category?: string;
   columns: Record<string, ColumnSchema>;
 }
 
@@ -66,6 +69,17 @@ export class SchemaLoader {
       }
     }
     return null;
+  }
+
+  getFileMetadata(
+    fileName: string
+  ): { hidden: boolean; category: string | null } | null {
+    const schema = this.loadSchema(fileName);
+    if (!schema) return null;
+    return {
+      hidden: schema.hidden === true,
+      category: schema.category || null,
+    };
   }
 
   listSchemas(): Array<{

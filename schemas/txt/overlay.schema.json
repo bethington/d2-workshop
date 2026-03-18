@@ -1,6 +1,7 @@
 {
   "file": "overlay.txt",
   "description": "Overlay visual effect definitions - animation files, positioning, lighting, and rendering properties for spell/aura/state visual overlays.",
+  "category": "Skills & Missiles",
   "columns": {
     "Filename": {
       "type": "string",

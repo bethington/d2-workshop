@@ -1,6 +1,8 @@
 {
   "file": "hitclass.txt",
   "description": "Hit/impact sound class code lookup table. Engine uses row index to map hit class IDs to their short codes.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

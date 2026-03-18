@@ -1,6 +1,8 @@
 {
   "file": "composit.txt",
   "description": "Character composite layer mode definitions.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "Name": {
       "type": "string",

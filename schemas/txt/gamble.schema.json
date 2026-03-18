@@ -1,6 +1,7 @@
 {
   "file": "gamble.txt",
   "description": "Gambling item pool — items available from gambling NPCs. Engine resolves each code to an item record and sorts by level.",
+  "category": "Items",
   "columns": {
     "code": {
       "type": "string",

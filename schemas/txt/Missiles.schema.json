@@ -1,6 +1,7 @@
 {
   "file": "Missiles.txt",
   "description": "Missile definitions â€” projectiles, spells, effects, and their visual/damage properties.",
+  "category": "Skills & Missiles",
   "columns": {
     "pCltDoFunc": {
       "type": "integer",

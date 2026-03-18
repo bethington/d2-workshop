@@ -1,6 +1,7 @@
 {
   "file": "levels.txt",
-  "description": "Level/area definitions â€” monster levels, density, waypoints, and act assignments.",
+  "description": "Level/area definitions -- monster levels, density, waypoints, and act assignments. Loaded by two functions: LoadLevelsTxtData (record size 0x220) and LoadLevelDefsTxt (leveldefs record size 0x9C).",
+  "category": "Levels",
   "columns": {
     "Name": {
       "type": "string",
@@ -9,1006 +10,1020 @@
       "description": "Unique level name identifier",
       "engineVerified": true
     },
-    "SizeX": {
-      "type": "integer",
-      "description": "Width in grid cells",
-      "engineVerified": true
-    },
-    "SizeY": {
-      "type": "integer",
-      "description": "Height in grid cells",
-      "engineVerified": true
-    },
-    "OffsetX": {
-      "type": "integer",
-      "description": "Horizontal placement offset",
-      "engineVerified": true
-    },
-    "OffsetY": {
-      "type": "integer",
-      "description": "Vertical placement offset",
-      "engineVerified": true
-    },
-    "Depend": {
-      "type": "integer",
-      "description": "Level dependency for non-random, non-preset levels",
-      "engineVerified": true
-    },
-    "DrlgType": {
-      "type": "integer",
-      "description": "Level generation type (1=random size, 2=preset map, 3=random with preset size)",
-      "engineVerified": true
-    },
-    "LevelType": {
-      "type": "integer",
-      "description": "Visual level type ID from lvltypes.txt",
-      "ref": "lvltypes.txt",
-      "engineVerified": true
-    },
-    "SubType": {
-      "type": "integer",
-      "description": "Sub-level type from LVLSub.txt (-1=none)",
-      "engineVerified": true
-    },
-    "SubWaypoint": {
-      "type": "integer",
-      "description": "Sub-level waypoint setting from LVLSub.txt (-1=none)",
-      "engineVerified": true
-    },
-    "SubShrine": {
-      "type": "integer",
-      "description": "Sub-level shrine setting from LVLSub.txt (-1=none)",
-      "engineVerified": true
-    },
-    "Quest": {
-      "type": "integer",
-      "description": "Associated quest ID for this level",
-      "engineVerified": true
-    },
-    "WarpDist": {
-      "type": "integer",
-      "description": "Waypoint travel distance",
-      "engineVerified": true
-    },
-    "MonLvl1": {
-      "type": "integer",
-      "description": "Normal difficulty monster level",
-      "engineVerified": true
-    },
-    "MonLvl2": {
-      "type": "integer",
-      "description": "Nightmare difficulty monster level",
-      "engineVerified": true
-    },
-    "MonLvl3": {
-      "type": "integer",
-      "description": "Hell difficulty monster level",
-      "engineVerified": true
-    },
-    "MonDen": {
-      "type": "integer",
-      "description": "Monster density multiplier",
-      "engineVerified": true
-    },
-    "SoundEnv": {
-      "type": "integer",
-      "description": "Sound environment ID from soundenviron.txt",
-      "engineVerified": true
-    },
-    "LevelName": {
-      "type": "string",
-      "description": "Display name string key",
-      "engineVerified": true
-    },
-    "LevelWarp": {
-      "type": "string",
-      "description": "Warp destination reference",
-      "engineVerified": true
-    },
-    "EntryFile": {
-      "type": "string",
-      "description": "DC6 title image file loaded when entering the level",
-      "engineVerified": true
-    },
-    "ObjGrp0": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 0",
-      "engineVerified": true
-    },
-    "ObjGrp1": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 1",
-      "engineVerified": true
-    },
-    "ObjGrp2": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 2",
-      "engineVerified": true
-    },
-    "ObjGrp3": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 3",
-      "engineVerified": true
-    },
-    "ObjGrp4": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 4",
-      "engineVerified": true
-    },
-    "ObjGrp5": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 5",
-      "engineVerified": true
-    },
-    "ObjGrp6": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 6",
-      "engineVerified": true
-    },
-    "ObjGrp7": {
-      "type": "integer",
-      "description": "Object group ID from objgroup.txt for slot 7",
-      "engineVerified": true
-    },
-    "ObjPrb0": {
-      "type": "integer",
-      "description": "Spawn probability for object group 0 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb1": {
-      "type": "integer",
-      "description": "Spawn probability for object group 1 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb2": {
-      "type": "integer",
-      "description": "Spawn probability for object group 2 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb3": {
-      "type": "integer",
-      "description": "Spawn probability for object group 3 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb4": {
-      "type": "integer",
-      "description": "Spawn probability for object group 4 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb5": {
-      "type": "integer",
-      "description": "Spawn probability for object group 5 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb6": {
-      "type": "integer",
-      "description": "Spawn probability for object group 6 (0-100)",
-      "engineVerified": true
-    },
-    "ObjPrb7": {
-      "type": "integer",
-      "description": "Spawn probability for object group 7 (0-100)",
-      "engineVerified": true
-    },
-    "SizeY(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "SizeX(H)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "SizeY(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "SizeX(N)": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "QuestFlagEx": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "FloorFilter": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cpct4": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cpct3": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cpct2": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cpct1": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "cmon4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "cmon3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "cmon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "cmon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon25": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon24": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon23": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon22": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon21": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon20": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon19": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon18": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon17": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon16": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon15": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon14": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon13": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon12": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon11": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon10": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon9": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon8": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon7": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "umon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon25": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon24": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon23": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon22": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon21": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon20": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon19": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon18": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon17": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon16": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon15": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon14": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon13": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon12": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon11": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon10": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon9": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon8": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon7": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "nmon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "rangedspawn": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "mon25": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon24": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon23": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon22": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon21": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon20": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon19": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon18": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon17": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon16": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon15": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon14": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon13": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon12": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon11": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon10": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "MonDen(H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "MonDen(N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "MonLvl3Ex": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "MonLvl2Ex": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "MonLvl1Ex": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "DrawEdges": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Teleport": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "mon1": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon2": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon3": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon4": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon5": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon6": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon7": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon8": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "mon9": {
-      "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true,
-      "ref": "monstats.txt"
-    },
-    "Act": {
-      "type": "integer",
-      "description": "Act number this level belongs to",
-      "engineVerified": true
-    },
-    "Blue": {
-      "type": "integer",
-      "description": "Blue color component for level lighting",
-      "engineVerified": true
-    },
-    "Green": {
-      "type": "integer",
-      "description": "Green color component for level lighting",
-      "engineVerified": true
-    },
     "Id": {
       "type": "integer",
-      "description": "Unique level ID number",
-      "engineVerified": true
-    },
-    "Intensity": {
-      "type": "integer",
-      "description": "Light intensity for this level",
-      "engineVerified": true
-    },
-    "IsInside": {
-      "type": "integer",
-      "description": "Whether this level is indoors",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "Layer": {
-      "type": "integer",
-      "description": "Layer number for level rendering",
+      "description": "Unique level ID number, stored as byte at record offset 0x00 in levels.txt record",
       "engineVerified": true
     },
     "Pal": {
       "type": "integer",
-      "description": "Palette index for this level",
+      "description": "Palette index for this level, stored as byte at record offset 0x04",
       "engineVerified": true
     },
-    "Position": {
+    "Act": {
       "type": "integer",
-      "description": "Position ordering within act",
+      "description": "Act number this level belongs to, stored as byte at record offset in levels.txt",
+      "engineVerified": true
+    },
+    "QuestFlag": {
+      "type": "integer",
+      "description": "Quest progression flag used by the DRLG to gate level generation. Stored as dword at leveldefs offset 0x00",
+      "engineVerified": true
+    },
+    "QuestFlagEx": {
+      "type": "integer",
+      "description": "Extended quest flag for additional quest-gated level generation logic. Stored as dword at leveldefs offset 0x04",
+      "engineVerified": true
+    },
+    "Layer": {
+      "type": "integer",
+      "description": "Level layer used for automap and rendering overlays. Stored as dword at leveldefs offset 0x08",
+      "engineVerified": true
+    },
+    "SizeX": {
+      "type": "integer",
+      "description": "Normal difficulty width in grid cells. Stored as dword at leveldefs offset 0x0C",
+      "engineVerified": true
+    },
+    "SizeY": {
+      "type": "integer",
+      "description": "Normal difficulty height in grid cells. Stored as dword at leveldefs offset 0x18",
+      "engineVerified": true
+    },
+    "SizeX(N)": {
+      "type": "integer",
+      "description": "Nightmare difficulty width in grid cells. Stored as dword at leveldefs offset 0x10",
+      "engineVerified": true
+    },
+    "SizeY(N)": {
+      "type": "integer",
+      "description": "Nightmare difficulty height in grid cells. Stored as dword at leveldefs offset 0x1C",
+      "engineVerified": true
+    },
+    "SizeX(H)": {
+      "type": "integer",
+      "description": "Hell difficulty width in grid cells. Stored as dword at leveldefs offset 0x14",
+      "engineVerified": true
+    },
+    "SizeY(H)": {
+      "type": "integer",
+      "description": "Hell difficulty height in grid cells. Stored as dword at leveldefs offset 0x20",
+      "engineVerified": true
+    },
+    "OffsetX": {
+      "type": "integer",
+      "description": "Horizontal placement offset. Stored as dword at leveldefs offset 0x24",
+      "engineVerified": true
+    },
+    "OffsetY": {
+      "type": "integer",
+      "description": "Vertical placement offset. Stored as dword at leveldefs offset 0x28",
+      "engineVerified": true
+    },
+    "Depend": {
+      "type": "integer",
+      "description": "Level dependency for non-random, non-preset levels. Stored as dword at leveldefs offset 0x2C",
+      "engineVerified": true
+    },
+    "Teleport": {
+      "type": "integer",
+      "description": "Teleport permission flag (0=not allowed, 1=allowed, 2=allowed within level only). Stored as byte in levels.txt record",
       "engineVerified": true
     },
     "Rain": {
       "type": "integer",
-      "description": "Whether rain occurs in this level",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "Red": {
-      "type": "integer",
-      "description": "Red color component for level lighting",
-      "engineVerified": true
-    },
-    "Vis0": {
-      "type": "integer",
-      "description": "Visible adjacent level 0",
-      "engineVerified": true
-    },
-    "Vis1": {
-      "type": "integer",
-      "description": "Visible adjacent level 1",
-      "engineVerified": true
-    },
-    "Vis2": {
-      "type": "integer",
-      "description": "Visible adjacent level 2",
-      "engineVerified": true
-    },
-    "Vis3": {
-      "type": "integer",
-      "description": "Visible adjacent level 3",
-      "engineVerified": true
-    },
-    "Vis4": {
-      "type": "integer",
-      "description": "Visible adjacent level 4",
-      "engineVerified": true
-    },
-    "Vis5": {
-      "type": "integer",
-      "description": "Visible adjacent level 5",
-      "engineVerified": true
-    },
-    "Vis6": {
-      "type": "integer",
-      "description": "Visible adjacent level 6",
-      "engineVerified": true
-    },
-    "Vis7": {
-      "type": "integer",
-      "description": "Visible adjacent level 7",
-      "engineVerified": true
-    },
-    "Waypoint": {
-      "type": "integer",
-      "description": "Waypoint index for this level",
-      "engineVerified": true
-    },
-    "BlankScreen": {
-      "type": "integer",
-      "description": "Whether to blank screen on level transition",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "LOSDraw": {
-      "type": "integer",
-      "description": "Whether to draw line-of-sight walls",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "MonSpcWalk": {
-      "type": "integer",
-      "description": "Whether monsters use special walk AI",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "MonUMax": {
-      "type": "integer",
-      "description": "Maximum unique monsters (Normal)",
-      "engineVerified": true
-    },
-    "MonUMax(H)": {
-      "type": "integer",
-      "description": "Maximum unique monsters (Hell)",
-      "engineVerified": true
-    },
-    "MonUMax(N)": {
-      "type": "integer",
-      "description": "Maximum unique monsters (Nightmare)",
-      "engineVerified": true
-    },
-    "MonUMin": {
-      "type": "integer",
-      "description": "Minimum unique monsters (Normal)",
-      "engineVerified": true
-    },
-    "MonUMin(H)": {
-      "type": "integer",
-      "description": "Minimum unique monsters (Hell)",
-      "engineVerified": true
-    },
-    "MonUMin(N)": {
-      "type": "integer",
-      "description": "Minimum unique monsters (Nightmare)",
-      "engineVerified": true
-    },
-    "MonWndr": {
-      "type": "integer",
-      "description": "Whether monsters wander in this level",
+      "description": "Whether rain/snow weather effects occur in this level. Stored as byte in levels.txt record",
       "engineVerified": true,
       "format": "boolean"
     },
     "Mud": {
       "type": "integer",
-      "description": "Whether mud effect is active",
+      "description": "Whether mud/slow movement effect is active in this level. Stored as byte in levels.txt record",
       "engineVerified": true,
       "format": "boolean"
     },
     "NoPer": {
       "type": "integer",
-      "description": "Whether perspective mode is disabled",
+      "description": "Whether perspective mode is disabled for this level. Stored as byte in levels.txt record",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "IsInside": {
+      "type": "integer",
+      "description": "Whether this level is indoors (affects lighting and weather). Stored as byte in levels.txt record",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "DrawEdges": {
+      "type": "integer",
+      "description": "Whether to draw black map edge borders around the level. Stored as byte in levels.txt record",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "WarpDist": {
+      "type": "integer",
+      "description": "Minimum tile distance from edge for warp placement. Stored as dword at levels.txt record offset 0x0C",
+      "engineVerified": true
+    },
+    "MonLvl1": {
+      "type": "integer",
+      "description": "Normal difficulty monster level. Stored as word at record offset 0x10",
+      "engineVerified": true
+    },
+    "MonLvl2": {
+      "type": "integer",
+      "description": "Nightmare difficulty monster level. Stored as word at record offset 0x12",
+      "engineVerified": true
+    },
+    "MonLvl3": {
+      "type": "integer",
+      "description": "Hell difficulty monster level. Stored as word at record offset 0x14",
+      "engineVerified": true
+    },
+    "MonLvl1Ex": {
+      "type": "integer",
+      "description": "Normal difficulty expansion monster level override (used for Expansion-only areas). Stored as word at record offset 0x16",
+      "engineVerified": true
+    },
+    "MonLvl2Ex": {
+      "type": "integer",
+      "description": "Nightmare difficulty expansion monster level override. Stored as word at record offset 0x18",
+      "engineVerified": true
+    },
+    "MonLvl3Ex": {
+      "type": "integer",
+      "description": "Hell difficulty expansion monster level override. Stored as word at record offset 0x1A",
+      "engineVerified": true
+    },
+    "MonDen": {
+      "type": "integer",
+      "description": "Normal difficulty monster density multiplier. Stored as dword at record offset 0x1C",
+      "engineVerified": true
+    },
+    "MonDen(N)": {
+      "type": "integer",
+      "description": "Nightmare difficulty monster density multiplier. Stored as dword at record offset 0x20",
+      "engineVerified": true
+    },
+    "MonDen(H)": {
+      "type": "integer",
+      "description": "Hell difficulty monster density multiplier. Stored as dword at record offset 0x24",
+      "engineVerified": true
+    },
+    "MonUMin": {
+      "type": "integer",
+      "description": "Minimum unique/champion monster packs in Normal. Stored as byte at record offset 0x28",
+      "engineVerified": true
+    },
+    "MonUMin(N)": {
+      "type": "integer",
+      "description": "Minimum unique/champion monster packs in Nightmare. Stored as byte at record offset 0x29",
+      "engineVerified": true
+    },
+    "MonUMin(H)": {
+      "type": "integer",
+      "description": "Minimum unique/champion monster packs in Hell. Stored as byte at record offset 0x2A",
+      "engineVerified": true
+    },
+    "MonUMax": {
+      "type": "integer",
+      "description": "Maximum unique/champion monster packs in Normal. Stored as byte at record offset 0x2B",
+      "engineVerified": true
+    },
+    "MonUMax(N)": {
+      "type": "integer",
+      "description": "Maximum unique/champion monster packs in Nightmare. Stored as byte at record offset 0x2C",
+      "engineVerified": true
+    },
+    "MonUMax(H)": {
+      "type": "integer",
+      "description": "Maximum unique/champion monster packs in Hell. Stored as byte at record offset 0x2D",
+      "engineVerified": true
+    },
+    "MonWndr": {
+      "type": "integer",
+      "description": "Whether monsters wander randomly in this level instead of staying near spawn. Stored as byte at record offset 0x2E",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "MonSpcWalk": {
+      "type": "integer",
+      "description": "Whether monsters use special walk/pathfinding behavior. Stored as byte at record offset 0x2F",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "Quest": {
+      "type": "integer",
+      "description": "Associated quest ID that this level participates in. Stored as byte at record offset 0x30",
+      "engineVerified": true
+    },
+    "rangedspawn": {
+      "type": "integer",
+      "description": "Whether ranged monsters are allowed to spawn in this level. Stored as byte at record offset 0x31",
       "engineVerified": true,
       "format": "boolean"
     },
     "NumMon": {
       "type": "integer",
-      "description": "Number of unique monster types to pick",
+      "description": "Number of different monster types to pick from the mon1-25 pool. Stored as byte at record offset 0x32",
       "engineVerified": true
     },
-    "Portal": {
-      "type": "integer",
-      "description": "Whether town portal can be used",
+    "mon1": {
+      "type": "string",
+      "description": "Normal monster type 1 from monstats.txt Id. Resolved to monstats index and stored as word at record offset 0x36. Engine counts valid entries into byte at 0x33",
       "engineVerified": true,
-      "format": "boolean"
+      "ref": "monstats.txt"
     },
-    "SaveMonsters": {
-      "type": "integer",
-      "description": "Whether monster state is saved",
+    "mon2": {
+      "type": "string",
+      "description": "Normal monster type 2 from monstats.txt Id. Stored as word at record offset 0x38",
       "engineVerified": true,
-      "format": "boolean"
+      "ref": "monstats.txt"
     },
-    "SubTheme": {
+    "mon3": {
+      "type": "string",
+      "description": "Normal monster type 3 from monstats.txt Id. Stored as word at record offset 0x3A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon4": {
+      "type": "string",
+      "description": "Normal monster type 4 from monstats.txt Id. Stored as word at record offset 0x3C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon5": {
+      "type": "string",
+      "description": "Normal monster type 5 from monstats.txt Id. Stored as word at record offset 0x3E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon6": {
+      "type": "string",
+      "description": "Normal monster type 6 from monstats.txt Id. Stored as word at record offset 0x40",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon7": {
+      "type": "string",
+      "description": "Normal monster type 7 from monstats.txt Id. Stored as word at record offset 0x42",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon8": {
+      "type": "string",
+      "description": "Normal monster type 8 from monstats.txt Id. Stored as word at record offset 0x44",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon9": {
+      "type": "string",
+      "description": "Normal monster type 9 from monstats.txt Id. Stored as word at record offset 0x46",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon10": {
+      "type": "string",
+      "description": "Normal monster type 10 from monstats.txt Id. Stored as word at record offset 0x48",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon11": {
+      "type": "string",
+      "description": "Normal monster type 11 from monstats.txt Id. Stored as word at record offset 0x4A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon12": {
+      "type": "string",
+      "description": "Normal monster type 12 from monstats.txt Id. Stored as word at record offset 0x4C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon13": {
+      "type": "string",
+      "description": "Normal monster type 13 from monstats.txt Id. Stored as word at record offset 0x4E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon14": {
+      "type": "string",
+      "description": "Normal monster type 14 from monstats.txt Id. Stored as word at record offset 0x50",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon15": {
+      "type": "string",
+      "description": "Normal monster type 15 from monstats.txt Id. Stored as word at record offset 0x52",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon16": {
+      "type": "string",
+      "description": "Normal monster type 16 from monstats.txt Id. Stored as word at record offset 0x54",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon17": {
+      "type": "string",
+      "description": "Normal monster type 17 from monstats.txt Id. Stored as word at record offset 0x56",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon18": {
+      "type": "string",
+      "description": "Normal monster type 18 from monstats.txt Id. Stored as word at record offset 0x58",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon19": {
+      "type": "string",
+      "description": "Normal monster type 19 from monstats.txt Id. Stored as word at record offset 0x5A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon20": {
+      "type": "string",
+      "description": "Normal monster type 20 from monstats.txt Id. Stored as word at record offset 0x5C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon21": {
+      "type": "string",
+      "description": "Normal monster type 21 from monstats.txt Id. Stored as word at record offset 0x5E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon22": {
+      "type": "string",
+      "description": "Normal monster type 22 from monstats.txt Id. Stored as word at record offset 0x60",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon23": {
+      "type": "string",
+      "description": "Normal monster type 23 from monstats.txt Id. Stored as word at record offset 0x62",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon24": {
+      "type": "string",
+      "description": "Normal monster type 24 from monstats.txt Id. Stored as word at record offset 0x64",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "mon25": {
+      "type": "string",
+      "description": "Normal monster type 25 from monstats.txt Id. Stored as word at record offset 0x66",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon1": {
+      "type": "string",
+      "description": "Nightmare-only monster type 1 from monstats.txt Id. Resolved and stored as word at record offset 0x68. Engine counts valid entries into byte at 0x34",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon2": {
+      "type": "string",
+      "description": "Nightmare-only monster type 2 from monstats.txt Id. Stored as word at record offset 0x6A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon3": {
+      "type": "string",
+      "description": "Nightmare-only monster type 3 from monstats.txt Id. Stored as word at record offset 0x6C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon4": {
+      "type": "string",
+      "description": "Nightmare-only monster type 4 from monstats.txt Id. Stored as word at record offset 0x6E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon5": {
+      "type": "string",
+      "description": "Nightmare-only monster type 5 from monstats.txt Id. Stored as word at record offset 0x70",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon6": {
+      "type": "string",
+      "description": "Nightmare-only monster type 6 from monstats.txt Id. Stored as word at record offset 0x72",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon7": {
+      "type": "string",
+      "description": "Nightmare-only monster type 7 from monstats.txt Id. Stored as word at record offset 0x74",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon8": {
+      "type": "string",
+      "description": "Nightmare-only monster type 8 from monstats.txt Id. Stored as word at record offset 0x76",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon9": {
+      "type": "string",
+      "description": "Nightmare-only monster type 9 from monstats.txt Id. Stored as word at record offset 0x78",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon10": {
+      "type": "string",
+      "description": "Nightmare-only monster type 10 from monstats.txt Id. Stored as word at record offset 0x7A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon11": {
+      "type": "string",
+      "description": "Nightmare-only monster type 11 from monstats.txt Id. Stored as word at record offset 0x7C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon12": {
+      "type": "string",
+      "description": "Nightmare-only monster type 12 from monstats.txt Id. Stored as word at record offset 0x7E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon13": {
+      "type": "string",
+      "description": "Nightmare-only monster type 13 from monstats.txt Id. Stored as word at record offset 0x80",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon14": {
+      "type": "string",
+      "description": "Nightmare-only monster type 14 from monstats.txt Id. Stored as word at record offset 0x82",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon15": {
+      "type": "string",
+      "description": "Nightmare-only monster type 15 from monstats.txt Id. Stored as word at record offset 0x84",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon16": {
+      "type": "string",
+      "description": "Nightmare-only monster type 16 from monstats.txt Id. Stored as word at record offset 0x86",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon17": {
+      "type": "string",
+      "description": "Nightmare-only monster type 17 from monstats.txt Id. Stored as word at record offset 0x88",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon18": {
+      "type": "string",
+      "description": "Nightmare-only monster type 18 from monstats.txt Id. Stored as word at record offset 0x8A",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon19": {
+      "type": "string",
+      "description": "Nightmare-only monster type 19 from monstats.txt Id. Stored as word at record offset 0x8C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon20": {
+      "type": "string",
+      "description": "Nightmare-only monster type 20 from monstats.txt Id. Stored as word at record offset 0x8E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon21": {
+      "type": "string",
+      "description": "Nightmare-only monster type 21 from monstats.txt Id. Stored as word at record offset 0x90",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon22": {
+      "type": "string",
+      "description": "Nightmare-only monster type 22 from monstats.txt Id. Stored as word at record offset 0x92",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon23": {
+      "type": "string",
+      "description": "Nightmare-only monster type 23 from monstats.txt Id. Stored as word at record offset 0x94",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon24": {
+      "type": "string",
+      "description": "Nightmare-only monster type 24 from monstats.txt Id. Stored as word at record offset 0x96",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "nmon25": {
+      "type": "string",
+      "description": "Nightmare-only monster type 25 from monstats.txt Id. Stored as word at record offset 0x98",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon1": {
+      "type": "string",
+      "description": "Unique/champion monster type 1 from monstats.txt Id. Resolved and stored as word at record offset 0x9A. Engine counts valid entries into byte at 0x35",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon2": {
+      "type": "string",
+      "description": "Unique/champion monster type 2 from monstats.txt Id. Stored as word at record offset 0x9C",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon3": {
+      "type": "string",
+      "description": "Unique/champion monster type 3 from monstats.txt Id. Stored as word at record offset 0x9E",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon4": {
+      "type": "string",
+      "description": "Unique/champion monster type 4 from monstats.txt Id. Stored as word at record offset 0xA0",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon5": {
+      "type": "string",
+      "description": "Unique/champion monster type 5 from monstats.txt Id. Stored as word at record offset 0xA2",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon6": {
+      "type": "string",
+      "description": "Unique/champion monster type 6 from monstats.txt Id. Stored as word at record offset 0xA4",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon7": {
+      "type": "string",
+      "description": "Unique/champion monster type 7 from monstats.txt Id. Stored as word at record offset 0xA6",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon8": {
+      "type": "string",
+      "description": "Unique/champion monster type 8 from monstats.txt Id. Stored as word at record offset 0xA8",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon9": {
+      "type": "string",
+      "description": "Unique/champion monster type 9 from monstats.txt Id. Stored as word at record offset 0xAA",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon10": {
+      "type": "string",
+      "description": "Unique/champion monster type 10 from monstats.txt Id. Stored as word at record offset 0xAC",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon11": {
+      "type": "string",
+      "description": "Unique/champion monster type 11 from monstats.txt Id. Stored as word at record offset 0xAE",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon12": {
+      "type": "string",
+      "description": "Unique/champion monster type 12 from monstats.txt Id. Stored as word at record offset 0xB0",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon13": {
+      "type": "string",
+      "description": "Unique/champion monster type 13 from monstats.txt Id. Stored as word at record offset 0xB2",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon14": {
+      "type": "string",
+      "description": "Unique/champion monster type 14 from monstats.txt Id. Stored as word at record offset 0xB4",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon15": {
+      "type": "string",
+      "description": "Unique/champion monster type 15 from monstats.txt Id. Stored as word at record offset 0xB6",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon16": {
+      "type": "string",
+      "description": "Unique/champion monster type 16 from monstats.txt Id. Stored as word at record offset 0xB8",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon17": {
+      "type": "string",
+      "description": "Unique/champion monster type 17 from monstats.txt Id. Stored as word at record offset 0xBA",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon18": {
+      "type": "string",
+      "description": "Unique/champion monster type 18 from monstats.txt Id. Stored as word at record offset 0xBC",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon19": {
+      "type": "string",
+      "description": "Unique/champion monster type 19 from monstats.txt Id. Stored as word at record offset 0xBE",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon20": {
+      "type": "string",
+      "description": "Unique/champion monster type 20 from monstats.txt Id. Stored as word at record offset 0xC0",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon21": {
+      "type": "string",
+      "description": "Unique/champion monster type 21 from monstats.txt Id. Stored as word at record offset 0xC2",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon22": {
+      "type": "string",
+      "description": "Unique/champion monster type 22 from monstats.txt Id. Stored as word at record offset 0xC4",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon23": {
+      "type": "string",
+      "description": "Unique/champion monster type 23 from monstats.txt Id. Stored as word at record offset 0xC6",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon24": {
+      "type": "string",
+      "description": "Unique/champion monster type 24 from monstats.txt Id. Stored as word at record offset 0xC8",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "umon25": {
+      "type": "string",
+      "description": "Unique/champion monster type 25 from monstats.txt Id. Stored as word at record offset 0xCA",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "cmon1": {
+      "type": "string",
+      "description": "Champion monster type 1 that can spawn as champion pack. Resolved from monstats.txt Id, stored as word at record offset 0xCC",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "cmon2": {
+      "type": "string",
+      "description": "Champion monster type 2 that can spawn as champion pack. Stored as word at record offset 0xCE",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "cmon3": {
+      "type": "string",
+      "description": "Champion monster type 3 that can spawn as champion pack. Stored as word at record offset 0xD0",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "cmon4": {
+      "type": "string",
+      "description": "Champion monster type 4 that can spawn as champion pack. Stored as word at record offset 0xD2",
+      "engineVerified": true,
+      "ref": "monstats.txt"
+    },
+    "cpct1": {
       "type": "integer",
-      "description": "Sub-theme type for visual variation",
+      "description": "Spawn chance percentage for champion monster type 1 (cmon1). Stored as word at record offset 0xD4",
       "engineVerified": true
     },
-    "Themes": {
+    "cpct2": {
       "type": "integer",
-      "description": "Number of visual themes available",
+      "description": "Spawn chance percentage for champion monster type 2 (cmon2). Stored as word at record offset 0xD6",
       "engineVerified": true
     },
-    "Warp0": {
+    "cpct3": {
       "type": "integer",
-      "description": "Warp visual 0",
+      "description": "Spawn chance percentage for champion monster type 3 (cmon3). Stored as word at record offset 0xD8",
       "engineVerified": true
     },
-    "Warp1": {
+    "cpct4": {
       "type": "integer",
-      "description": "Warp visual 1",
-      "engineVerified": true
-    },
-    "Warp2": {
-      "type": "integer",
-      "description": "Warp visual 2",
-      "engineVerified": true
-    },
-    "Warp3": {
-      "type": "integer",
-      "description": "Warp visual 3",
-      "engineVerified": true
-    },
-    "Warp4": {
-      "type": "integer",
-      "description": "Warp visual 4",
-      "engineVerified": true
-    },
-    "Warp5": {
-      "type": "integer",
-      "description": "Warp visual 5",
-      "engineVerified": true
-    },
-    "Warp6": {
-      "type": "integer",
-      "description": "Warp visual 6",
-      "engineVerified": true
-    },
-    "Warp7": {
-      "type": "integer",
-      "description": "Warp visual 7",
+      "description": "Spawn chance percentage for champion monster type 4 (cmon4). Stored as word at record offset 0xDA",
       "engineVerified": true
     },
     "camt1": {
       "type": "integer",
-      "description": "Champion monster amount 1",
+      "description": "Spawn count for champion monster type 1 (cmon1). Stored as word at record offset 0xDC",
       "engineVerified": true
     },
     "camt2": {
       "type": "integer",
-      "description": "Champion monster amount 2",
+      "description": "Spawn count for champion monster type 2 (cmon2). Stored as word at record offset 0xDE",
       "engineVerified": true
     },
     "camt3": {
       "type": "integer",
-      "description": "Champion monster amount 3",
+      "description": "Spawn count for champion monster type 3 (cmon3). Stored as word at record offset 0xE0",
       "engineVerified": true
     },
     "camt4": {
       "type": "integer",
-      "description": "Champion monster amount 4",
+      "description": "Spawn count for champion monster type 4 (cmon4). Stored as word at record offset 0xE2",
       "engineVerified": true
+    },
+    "Waypoint": {
+      "type": "integer",
+      "description": "Waypoint index assigned to this level (0xFF=none). Stored as byte at record offset 0xE4",
+      "engineVerified": true
+    },
+    "ObjGrp0": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 0. Stored as byte at record offset 0xE5",
+      "engineVerified": true
+    },
+    "ObjGrp1": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 1. Stored as byte at record offset 0xE6",
+      "engineVerified": true
+    },
+    "ObjGrp2": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 2. Stored as byte at record offset 0xE7",
+      "engineVerified": true
+    },
+    "ObjGrp3": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 3. Stored as byte at record offset 0xE8",
+      "engineVerified": true
+    },
+    "ObjGrp4": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 4. Stored as byte at record offset 0xE9",
+      "engineVerified": true
+    },
+    "ObjGrp5": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 5. Stored as byte at record offset 0xEA",
+      "engineVerified": true
+    },
+    "ObjGrp6": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 6. Stored as byte at record offset 0xEB",
+      "engineVerified": true
+    },
+    "ObjGrp7": {
+      "type": "integer",
+      "description": "Object group ID from objgroup.txt for slot 7. Stored as byte at record offset 0xEC",
+      "engineVerified": true
+    },
+    "ObjPrb0": {
+      "type": "integer",
+      "description": "Spawn probability for object group 0 (0-100). Stored as byte at record offset 0xED",
+      "engineVerified": true
+    },
+    "ObjPrb1": {
+      "type": "integer",
+      "description": "Spawn probability for object group 1 (0-100). Stored as byte at record offset 0xEE",
+      "engineVerified": true
+    },
+    "ObjPrb2": {
+      "type": "integer",
+      "description": "Spawn probability for object group 2 (0-100). Stored as byte at record offset 0xEF",
+      "engineVerified": true
+    },
+    "ObjPrb3": {
+      "type": "integer",
+      "description": "Spawn probability for object group 3 (0-100). Stored as byte at record offset 0xF0",
+      "engineVerified": true
+    },
+    "ObjPrb4": {
+      "type": "integer",
+      "description": "Spawn probability for object group 4 (0-100). Stored as byte at record offset 0xF1",
+      "engineVerified": true
+    },
+    "ObjPrb5": {
+      "type": "integer",
+      "description": "Spawn probability for object group 5 (0-100). Stored as byte at record offset 0xF2",
+      "engineVerified": true
+    },
+    "ObjPrb6": {
+      "type": "integer",
+      "description": "Spawn probability for object group 6 (0-100). Stored as byte at record offset 0xF3",
+      "engineVerified": true
+    },
+    "ObjPrb7": {
+      "type": "integer",
+      "description": "Spawn probability for object group 7 (0-100). Stored as byte at record offset 0xF4",
+      "engineVerified": true
+    },
+    "LevelName": {
+      "type": "string",
+      "description": "Display name string key used for UI. Stored as char[40] at record offset 0xF5",
+      "engineVerified": true
+    },
+    "LevelWarp": {
+      "type": "string",
+      "description": "Warp visual name string referenced for level transitions. Stored as char[40] at record offset 0x11D",
+      "engineVerified": true
+    },
+    "EntryFile": {
+      "type": "string",
+      "description": "DC6 title image file loaded when entering the level. Stored as char[40] at record offset 0x145",
+      "engineVerified": true
+    },
+    "Themes": {
+      "type": "integer",
+      "description": "Number of visual themes available for random decoration. Stored as dword at record offset 0x210",
+      "engineVerified": true
+    },
+    "FloorFilter": {
+      "type": "integer",
+      "description": "Floor tile filter type controlling which floor warps are valid. Stored as dword at record offset 0x214",
+      "engineVerified": true
+    },
+    "BlankScreen": {
+      "type": "integer",
+      "description": "Whether to show a blank/loading screen on level transition. Stored as dword at record offset 0x218",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "SoundEnv": {
+      "type": "integer",
+      "description": "Sound environment ID from soundenviron.txt. Stored as byte at record offset 0x21C",
+      "engineVerified": true
+    },
+    "DrlgType": {
+      "type": "integer",
+      "description": "Level generation type (1=random maze, 2=preset map, 3=random with outdoor tiles). Stored as dword at leveldefs offset 0x30",
+      "engineVerified": true
+    },
+    "LevelType": {
+      "type": "integer",
+      "description": "Visual level type ID controlling tileset and style. Stored as dword at leveldefs offset 0x34",
+      "ref": "lvltypes.txt",
+      "engineVerified": true
+    },
+    "SubType": {
+      "type": "integer",
+      "description": "Sub-level type from LVLSub.txt for room substitutions (-1=none). Stored as dword at leveldefs offset 0x38",
+      "engineVerified": true
+    },
+    "SubTheme": {
+      "type": "integer",
+      "description": "Sub-theme type index for visual variation within the level type. Stored as dword at leveldefs offset 0x3C",
+      "engineVerified": true
+    },
+    "SubWaypoint": {
+      "type": "integer",
+      "description": "Sub-level waypoint setting from LVLSub.txt (-1=none). Stored as dword at leveldefs offset 0x40",
+      "engineVerified": true
+    },
+    "SubShrine": {
+      "type": "integer",
+      "description": "Sub-level shrine setting from LVLSub.txt (-1=none). Stored as dword at leveldefs offset 0x44",
+      "engineVerified": true
+    },
+    "Vis0": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 0 (level connected via warp). Stored as dword at leveldefs offset 0x48",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis1": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 1. Stored as dword at leveldefs offset 0x4C",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis2": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 2. Stored as dword at leveldefs offset 0x50",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis3": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 3. Stored as dword at leveldefs offset 0x54",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis4": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 4. Stored as dword at leveldefs offset 0x58",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis5": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 5. Stored as dword at leveldefs offset 0x5C",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis6": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 6. Stored as dword at leveldefs offset 0x60",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Vis7": {
+      "type": "integer",
+      "description": "Visible adjacent level ID for slot 7. Stored as dword at leveldefs offset 0x64",
+      "engineVerified": true,
+      "ref": "levels.txt"
+    },
+    "Warp0": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 0 connecting to Vis0. Stored as dword at leveldefs offset 0x68",
+      "engineVerified": true
+    },
+    "Warp1": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 1 connecting to Vis1. Stored as dword at leveldefs offset 0x6C",
+      "engineVerified": true
+    },
+    "Warp2": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 2 connecting to Vis2. Stored as dword at leveldefs offset 0x70",
+      "engineVerified": true
+    },
+    "Warp3": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 3 connecting to Vis3. Stored as dword at leveldefs offset 0x74",
+      "engineVerified": true
+    },
+    "Warp4": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 4 connecting to Vis4. Stored as dword at leveldefs offset 0x78",
+      "engineVerified": true
+    },
+    "Warp5": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 5 connecting to Vis5. Stored as dword at leveldefs offset 0x7C",
+      "engineVerified": true
+    },
+    "Warp6": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 6 connecting to Vis6. Stored as dword at leveldefs offset 0x80",
+      "engineVerified": true
+    },
+    "Warp7": {
+      "type": "integer",
+      "description": "Warp visual ID for slot 7 connecting to Vis7. Stored as dword at leveldefs offset 0x84",
+      "engineVerified": true
+    },
+    "Intensity": {
+      "type": "integer",
+      "description": "Light intensity for this level. Stored as byte at leveldefs offset 0x88",
+      "engineVerified": true
+    },
+    "Red": {
+      "type": "integer",
+      "description": "Red color component for level ambient lighting. Stored as byte at leveldefs offset 0x89",
+      "engineVerified": true
+    },
+    "Green": {
+      "type": "integer",
+      "description": "Green color component for level ambient lighting. Stored as byte at leveldefs offset 0x8A",
+      "engineVerified": true
+    },
+    "Blue": {
+      "type": "integer",
+      "description": "Blue color component for level ambient lighting. Stored as byte at leveldefs offset 0x8B",
+      "engineVerified": true
+    },
+    "Portal": {
+      "type": "integer",
+      "description": "Whether town portal can be cast in this level. Stored as dword at leveldefs offset 0x8C",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "Position": {
+      "type": "integer",
+      "description": "Position ordering within act for level sequencing. Stored as dword at leveldefs offset 0x90",
+      "engineVerified": true
+    },
+    "SaveMonsters": {
+      "type": "integer",
+      "description": "Whether monster state is preserved when leaving and re-entering. Stored as dword at leveldefs offset 0x94",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "LOSDraw": {
+      "type": "integer",
+      "description": "Whether to draw line-of-sight blocking walls. Stored as dword at leveldefs offset 0x98",
+      "engineVerified": true,
+      "format": "boolean"
     }
   }
 }

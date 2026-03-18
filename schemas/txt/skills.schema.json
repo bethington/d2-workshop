@@ -1,6 +1,7 @@
 {
   "file": "skills.txt",
   "description": "Skill definitions - complete skill data including targeting, damage, mana cost, prerequisites, aura effects, passive bonuses, summon data, missile references, and progressive/charge-up mechanics.",
+  "category": "Skills & Missiles",
   "columns": {
     "charclass": {
       "type": "string",

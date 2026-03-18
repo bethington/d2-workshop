@@ -1,28 +1,41 @@
 {
   "file": "difficultylevels.txt",
   "description": "Difficulty scaling — resistance penalties, experience modifiers, item odds, and combat divisors per difficulty (Normal, Nightmare, Hell).",
+  "category": "Crafting & Drops",
   "columns": {
     "ResistPenalty": {
       "type": "integer",
-      "range": { "min": -200, "max": 0 },
+      "range": {
+        "min": -200,
+        "max": 0
+      },
       "description": "Resistance penalty applied to players in this difficulty",
       "engineVerified": true
     },
     "DeathExpPenalty": {
       "type": "integer",
-      "range": { "min": 0, "max": 100 },
+      "range": {
+        "min": 0,
+        "max": 100
+      },
       "description": "Experience loss percentage on death",
       "engineVerified": true
     },
     "UberCodeOddsNormal": {
       "type": "integer",
-      "range": { "min": 0, "max": 1000 },
+      "range": {
+        "min": 0,
+        "max": 1000
+      },
       "description": "Chance of exceptional item drop from normal monsters",
       "engineVerified": true
     },
     "UberCodeOddsGood": {
       "type": "integer",
-      "range": { "min": 0, "max": 1000 },
+      "range": {
+        "min": 0,
+        "max": 1000
+      },
       "description": "Chance of exceptional item drop from champion/unique monsters",
       "engineVerified": true
     },
@@ -33,43 +46,59 @@
     },
     "MonsterFreezeDivisor": {
       "type": "integer",
-      "range": { "min": 1 },
+      "range": {
+        "min": 1
+      },
       "description": "Divisor reducing freeze duration on monsters",
       "engineVerified": true
     },
     "MonsterColdDivisor": {
       "type": "integer",
-      "range": { "min": 1 },
+      "range": {
+        "min": 1
+      },
       "description": "Divisor reducing cold effect duration on monsters",
       "engineVerified": true
     },
     "AiCurseDivisor": {
       "type": "integer",
-      "range": { "min": 1 },
+      "range": {
+        "min": 1
+      },
       "description": "Divisor reducing curse duration on monsters",
       "engineVerified": true
     },
     "UltraCodeOddsNormal": {
       "type": "integer",
-      "range": { "min": 0, "max": 1000 },
+      "range": {
+        "min": 0,
+        "max": 1000
+      },
       "description": "Chance of elite item drop from normal monsters",
       "engineVerified": true
     },
     "UltraCodeOddsGood": {
       "type": "integer",
-      "range": { "min": 0, "max": 1000 },
+      "range": {
+        "min": 0,
+        "max": 1000
+      },
       "description": "Chance of elite item drop from champion/unique monsters",
       "engineVerified": true
     },
     "LifeStealDivisor": {
       "type": "integer",
-      "range": { "min": 1 },
+      "range": {
+        "min": 1
+      },
       "description": "Divisor reducing life steal effectiveness",
       "engineVerified": true
     },
     "ManaStealDivisor": {
       "type": "integer",
-      "range": { "min": 1 },
+      "range": {
+        "min": 1
+      },
       "description": "Divisor reducing mana steal effectiveness",
       "engineVerified": true
     },
@@ -95,37 +124,55 @@
     },
     "StaticFieldMin": {
       "type": "integer",
-      "range": { "min": 0, "max": 100 },
+      "range": {
+        "min": 0,
+        "max": 100
+      },
       "description": "Minimum HP percentage Static Field can reduce monsters to",
       "engineVerified": true
     },
     "GambleRare": {
       "type": "integer",
-      "range": { "min": 0, "max": 10000 },
+      "range": {
+        "min": 0,
+        "max": 10000
+      },
       "description": "Chance of gambling a rare item",
       "engineVerified": true
     },
     "GambleSet": {
       "type": "integer",
-      "range": { "min": 0, "max": 10000 },
+      "range": {
+        "min": 0,
+        "max": 10000
+      },
       "description": "Chance of gambling a set item",
       "engineVerified": true
     },
     "GambleUnique": {
       "type": "integer",
-      "range": { "min": 0, "max": 10000 },
+      "range": {
+        "min": 0,
+        "max": 10000
+      },
       "description": "Chance of gambling a unique item",
       "engineVerified": true
     },
     "GambleUber": {
       "type": "integer",
-      "range": { "min": 0, "max": 10000 },
+      "range": {
+        "min": 0,
+        "max": 10000
+      },
       "description": "Chance of gambling an exceptional item",
       "engineVerified": true
     },
     "GambleUltra": {
       "type": "integer",
-      "range": { "min": 0, "max": 10000 },
+      "range": {
+        "min": 0,
+        "max": 10000
+      },
       "description": "Chance of gambling an elite item",
       "engineVerified": true
     }

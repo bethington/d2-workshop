@@ -1,6 +1,7 @@
 {
   "file": "sounds.txt",
   "description": "Sound effect definitions — file references, volume, looping, and fade settings.",
+  "category": "UI & Sound",
   "columns": {
     "Sound": {
       "type": "string",

@@ -1,6 +1,7 @@
 {
   "file": "monitempercent.txt",
   "description": "Monster item equipment rate percentages - controls drop chances for hearts, body parts, treasure classes, and components.",
+  "category": "Monsters",
   "columns": {
     "HeartPercent": {
       "type": "integer",

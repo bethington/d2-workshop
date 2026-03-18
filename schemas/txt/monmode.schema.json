@@ -1,6 +1,8 @@
 {
   "file": "monmode.txt",
   "description": "Monster animation mode definitions - mode names, tokens, and direction counts per animation type.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "name": {
       "type": "string",

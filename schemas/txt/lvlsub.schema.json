@@ -1,6 +1,7 @@
 {
   "file": "lvlsub.txt",
   "description": "Level substitution definitions - tile replacement rules with probability, trial counts, and grid parameters.",
+  "category": "Levels",
   "columns": {
     "Name": {
       "type": "string",

@@ -1,6 +1,8 @@
 {
   "file": "weaponclass.txt",
   "description": "Weapon animation class definitions.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "Weapon Class": {
       "type": "string",

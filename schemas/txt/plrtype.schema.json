@@ -1,6 +1,8 @@
 {
   "file": "plrtype.txt",
   "description": "Player animation type definitions - maps player type names to animation tokens. Merged with plrmode.txt at load time.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "name": {
       "type": "string",

@@ -1,6 +1,7 @@
 {
   "file": "lvltypes.txt",
   "description": "Level visual type definitions â€” tileset assignments and lighting.",
+  "category": "Levels",
   "columns": {
     "Name": {
       "type": "string",

@@ -1,6 +1,7 @@
 {
   "file": "chartemplate.txt",
   "description": "Character template definitions for pre-built characters",
+  "category": "Characters",
   "columns": {
     "level": {
       "type": "integer",

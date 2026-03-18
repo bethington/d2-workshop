@@ -1,6 +1,7 @@
 {
   "file": "treasureclass.txt",
   "description": "Legacy treasure class definitions (pre-expansion).",
+  "category": "Crafting & Drops",
   "columns": {
     "Treasure Class": {
       "type": "string",

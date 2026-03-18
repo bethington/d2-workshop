@@ -1,6 +1,7 @@
 {
   "file": "itemstatcost.txt",
   "description": "Stat definitions - controls how stats are stored, transmitted, saved, displayed on items, and how they interact via operators for derived bonuses.",
+  "category": "Items",
   "columns": {
     "stat": {
       "type": "string",

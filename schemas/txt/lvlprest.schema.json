@@ -1,6 +1,7 @@
 {
   "file": "lvlprest.txt",
   "description": "Level preset definitions - pre-built map sections with tile files, sizing, and population rules.",
+  "category": "Levels",
   "columns": {
     "Def": {
       "type": "integer",

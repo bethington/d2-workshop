@@ -1,6 +1,7 @@
 {
   "file": "inventory.txt",
   "description": "Inventory panel layout definitions — grid positions for each inventory screen.",
+  "category": "UI & Sound",
   "columns": {
     "invLeft": {
       "type": "integer",
@@ -353,13 +354,13 @@
       "engineVerified": true
     },
     "gridY": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "type": "integer",
+      "description": "Number of grid rows in the inventory panel",
       "engineVerified": true
     },
     "gridX": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "type": "integer",
+      "description": "Number of grid columns in the inventory panel",
       "engineVerified": true
     }
   }

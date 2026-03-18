@@ -1,6 +1,7 @@
 {
   "file": "monseq.txt",
   "description": "Monster animation sequences — defines composite animation sequences built from frames of other animation modes. Used for special monster animations that combine multiple modes.",
+  "category": "Monsters",
   "columns": {
     "sequence": {
       "type": "string",

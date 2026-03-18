@@ -1,6 +1,7 @@
 {
   "file": "belts.txt",
   "description": "Belt inventory layout definitions — potion slot positions per belt type.",
+  "category": "Items",
   "columns": {
     "numboxes": {
       "type": "integer",

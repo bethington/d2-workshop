@@ -1,117 +1,157 @@
 {
   "file": "superuniques.txt",
-  "description": "Super unique monster definitions - named boss monsters with specific classes, modifiers, treasure classes, and spawn behavior.",
+  "description": "Super unique monster definitions — named boss monsters with specific classes, modifiers, treasure classes, and spawn behavior. Record size 0x34 (52 bytes). Max 512 entries. Builds hcIdx lookup table (max 66 slots) after load.",
+  "category": "Monsters",
   "columns": {
-    "Class": {
-      "type": "string",
-      "description": "Monster class index (references monstats.txt Id)",
-      "ref": "monstats.txt",
-      "engineVerified": true
-    },
-    "Utrans": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Utrans(N)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Utrans(H)": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "Replaceable": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "format": "boolean",
-      "engineVerified": true
-    },
-    "EClass": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "engineVerified": true
-    },
-    "AutoPos": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "format": "boolean",
-      "engineVerified": true
-    },
-    "hcIdx": {
-      "type": "integer",
-      "description": "Column read by game engine",
-      "ref": "monstats.txt",
-      "engineVerified": true
-    },
     "Superunique": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Internal identifier key for this super unique (linked to search structure)",
       "required": true,
       "unique": true,
-      "engineVerified": true
-    },
-    "MaxGrp": {
-      "type": "integer",
-      "description": "Maximum minion group size",
-      "engineVerified": true
-    },
-    "MinGrp": {
-      "type": "integer",
-      "description": "Minimum minion group size",
-      "engineVerified": true
-    },
-    "Mod1": {
-      "type": "integer",
-      "description": "Monster modifier 1",
-      "engineVerified": true
-    },
-    "Mod2": {
-      "type": "integer",
-      "description": "Monster modifier 2",
-      "engineVerified": true
-    },
-    "Mod3": {
-      "type": "integer",
-      "description": "Monster modifier 3",
-      "engineVerified": true
-    },
-    "MonSound": {
-      "type": "string",
-      "description": "Monster sound reference",
-      "ref": "monsounds.txt",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x00",
+      "engineType": "key"
     },
     "Name": {
       "type": "string",
-      "description": "Super unique name identifier",
-      "engineVerified": true
+      "description": "String table key for the displayed boss name",
+      "engineVerified": true,
+      "recordOffset": "0x02",
+      "engineType": "stringTableKey"
+    },
+    "Class": {
+      "type": "string",
+      "description": "Monster class — resolved to monstats.txt row index at load time",
+      "ref": "monstats.txt",
+      "engineVerified": true,
+      "recordOffset": "0x04",
+      "engineType": "monsterRef"
+    },
+    "hcIdx": {
+      "type": "integer",
+      "description": "Hardcoded index (0-65) mapping this super unique to engine spawn points. Used to build fast lookup table after load; engine aborts if any index 0-65 is unmapped",
+      "engineVerified": true,
+      "recordOffset": "0x08",
+      "engineType": "word"
+    },
+    "Mod1": {
+      "type": "integer",
+      "description": "Monster modifier 1 (index into monumod.txt)",
+      "engineVerified": true,
+      "recordOffset": "0x0c",
+      "engineType": "word"
+    },
+    "Mod2": {
+      "type": "integer",
+      "description": "Monster modifier 2 (index into monumod.txt)",
+      "engineVerified": true,
+      "recordOffset": "0x10",
+      "engineType": "word"
+    },
+    "Mod3": {
+      "type": "integer",
+      "description": "Monster modifier 3 (index into monumod.txt)",
+      "engineVerified": true,
+      "recordOffset": "0x14",
+      "engineType": "word"
+    },
+    "MonSound": {
+      "type": "string",
+      "description": "Monster sound profile — resolved to monsounds.txt row index at load time",
+      "ref": "monsounds.txt",
+      "engineVerified": true,
+      "recordOffset": "0x18",
+      "engineType": "monSoundRef"
+    },
+    "MinGrp": {
+      "type": "integer",
+      "description": "Minimum minion group size spawned with this boss",
+      "engineVerified": true,
+      "recordOffset": "0x1c",
+      "engineType": "word"
+    },
+    "MaxGrp": {
+      "type": "integer",
+      "description": "Maximum minion group size spawned with this boss",
+      "engineVerified": true,
+      "recordOffset": "0x20",
+      "engineType": "word"
+    },
+    "AutoPos": {
+      "type": "integer",
+      "description": "Automatically position this boss at a preset location (1 = yes)",
+      "format": "boolean",
+      "engineVerified": true,
+      "recordOffset": "0x24",
+      "engineType": "byte"
+    },
+    "EClass": {
+      "type": "integer",
+      "description": "Encounter class — controls champion/unique spawn behavior for this boss",
+      "engineVerified": true,
+      "recordOffset": "0x25",
+      "engineType": "byte"
     },
     "Stacks": {
       "type": "integer",
-      "description": "Whether modifiers can stack",
+      "description": "Whether monster modifiers can stack on this boss (1 = yes)",
       "format": "boolean",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x26",
+      "engineType": "byte"
+    },
+    "Replaceable": {
+      "type": "integer",
+      "description": "Whether this boss can be replaced by another super unique (1 = yes)",
+      "format": "boolean",
+      "engineVerified": true,
+      "recordOffset": "0x27",
+      "engineType": "byte"
+    },
+    "Utrans": {
+      "type": "integer",
+      "description": "Transform color index for Normal difficulty (palette shift)",
+      "engineVerified": true,
+      "recordOffset": "0x28",
+      "engineType": "byte"
+    },
+    "Utrans(N)": {
+      "type": "integer",
+      "description": "Transform color index for Nightmare difficulty (palette shift)",
+      "engineVerified": true,
+      "recordOffset": "0x29",
+      "engineType": "byte"
+    },
+    "Utrans(H)": {
+      "type": "integer",
+      "description": "Transform color index for Hell difficulty (palette shift)",
+      "engineVerified": true,
+      "recordOffset": "0x2a",
+      "engineType": "byte"
     },
     "TC": {
       "type": "string",
-      "description": "Treasure class (Normal)",
+      "description": "Treasure class for Normal difficulty drops",
       "ref": "treasureclassex.txt",
-      "engineVerified": true
-    },
-    "TC(H)": {
-      "type": "string",
-      "description": "Treasure class (Hell)",
-      "ref": "treasureclassex.txt",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x2c",
+      "engineType": "tcRef"
     },
     "TC(N)": {
       "type": "string",
-      "description": "Treasure class (Nightmare)",
+      "description": "Treasure class for Nightmare difficulty drops",
       "ref": "treasureclassex.txt",
-      "engineVerified": true
+      "engineVerified": true,
+      "recordOffset": "0x2e",
+      "engineType": "tcRef"
+    },
+    "TC(H)": {
+      "type": "string",
+      "description": "Treasure class for Hell difficulty drops",
+      "ref": "treasureclassex.txt",
+      "engineVerified": true,
+      "recordOffset": "0x30",
+      "engineType": "tcRef"
     }
   }
 }

@@ -1,6 +1,7 @@
 {
   "file": "colors.txt",
   "description": "Color transform definitions for character graphics.",
+  "category": "Lookup Tables",
   "columns": {
     "Transform Color": {
       "type": "string",

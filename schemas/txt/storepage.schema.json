@@ -1,6 +1,8 @@
 {
   "file": "storepage.txt",
   "description": "Store page lookup table - maps store page codes to internal indices for shop UI tab assignment.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

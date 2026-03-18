@@ -1,6 +1,7 @@
 {
   "file": "books.txt",
   "description": "Tome and book item definitions â€” scroll/book spell codes and costs.",
+  "category": "Items",
   "columns": {
     "scrollspellcode": {
       "type": "string",
@@ -27,13 +28,13 @@
     "bookskill": {
       "type": "string",
       "ref": "skills.txt",
-      "description": "Column read by game engine",
+      "description": "Skill granted by the tome/book item",
       "engineVerified": true
     },
     "scrollskill": {
       "type": "string",
       "ref": "skills.txt",
-      "description": "Column read by game engine",
+      "description": "Skill granted by the scroll item",
       "engineVerified": true
     },
     "Name": {

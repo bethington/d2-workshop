@@ -1,6 +1,8 @@
 {
   "file": "objmode.txt",
   "description": "Object animation mode definitions - maps mode names to animation tokens (e.g. Neutral->NU, Operating->OP). Merged with objtype.txt at load time.",
+  "category": "Levels",
+  "hidden": true,
   "columns": {
     "name": {
       "type": "string",

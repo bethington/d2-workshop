@@ -1,6 +1,8 @@
 {
   "file": "playerclass.txt",
   "description": "Player character class code lookup table. Engine uses row index to map class IDs to their short codes.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

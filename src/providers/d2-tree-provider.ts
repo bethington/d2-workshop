@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 import * as fs from "fs";
 import { MpqManager } from "../mpq/mpq-manager";
+import { SchemaLoader } from "../mcp/lib/schema-loader";
 
 export enum D2FileType {
   Folder = "folder",
@@ -166,10 +167,18 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
   >();
   readonly onDidChangeTreeData = this._onDidChangeTreeData.event;
 
+  private showHiddenFiles = true;
+  private schemaLoader: SchemaLoader | null = null;
+
   constructor(
     private workspaceRoot: string,
-    private readonly mpqManager: MpqManager
-  ) {}
+    private readonly mpqManager: MpqManager,
+    schemasDir?: string
+  ) {
+    if (schemasDir) {
+      this.schemaLoader = new SchemaLoader(schemasDir);
+    }
+  }
 
   setRoot(newRoot: string): void {
     this.workspaceRoot = newRoot;
@@ -180,6 +189,23 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
     this._onDidChangeTreeData.fire();
   }
 
+  toggleShowHidden(): void {
+    this.showHiddenFiles = !this.showHiddenFiles;
+    vscode.commands.executeCommand(
+      "setContext",
+      "d2workshop.showingHidden",
+      this.showHiddenFiles
+    );
+    this.refresh();
+  }
+
+  private isFileHidden(fileName: string): boolean {
+    const config = vscode.workspace.getConfiguration("d2workshop");
+    const hiddenFiles: string[] = config.get("hiddenFiles", []);
+    const lowerName = fileName.toLowerCase();
+    return hiddenFiles.some((f) => f.toLowerCase() === lowerName);
+  }
+
   getTreeItem(element: D2TreeItem): vscode.TreeItem {
     return element;
   }
@@ -188,13 +214,11 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
     if (!element.mpqName) return null;
 
     if (!element.mpqInternalPath) {
-      // This is a top-level MPQ entry, parent is the MPQ root item
       return null;
     }
 
     const parentPath = element.mpqInternalPath.replace(/[/\\][^/\\]+$/, "");
     if (!parentPath || parentPath === element.mpqInternalPath) {
-      // Parent is the MPQ root
       const mpqFilePath = path.join(this.workspaceRoot, element.mpqName);
       return new D2TreeItem(
         element.mpqName,
@@ -382,6 +406,15 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
           if (!entry.isDirectory && entry.name.toLowerCase().endsWith(".bin")) {
             return false;
           }
+          // Hide user-hidden .txt files when toggle is off
+          if (
+            !this.showHiddenFiles &&
+            !entry.isDirectory &&
+            entry.name.toLowerCase().endsWith(".txt") &&
+            this.isFileHidden(entry.name)
+          ) {
+            return false;
+          }
           return true;
         })
         .map((entry) => {
@@ -412,6 +445,18 @@ export class D2TreeProvider implements vscode.TreeDataProvider<D2TreeItem> {
             if (binFiles.has(binName)) {
               item.description = "(.bin)";
               item.tooltip = `${entry.name} — compiled .bin file present`;
+            }
+
+            // Dimmed styling for hidden files (when shown via toggle)
+            if (this.isFileHidden(entry.name)) {
+              item.contextValue = "txt_hidden";
+              item.iconPath = new vscode.ThemeIcon(
+                "table",
+                new vscode.ThemeColor("disabledForeground")
+              );
+              item.description = item.description
+                ? `${item.description} (hidden)`
+                : "(hidden)";
             }
           }
 

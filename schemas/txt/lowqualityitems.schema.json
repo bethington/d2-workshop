@@ -1,6 +1,7 @@
 {
   "file": "lowqualityitems.txt",
   "description": "Low quality item prefix definitions (Crude, Cracked, etc.). Engine resolves each name to a string table index.",
+  "category": "Items",
   "columns": {
     "Name": {
       "type": "string",

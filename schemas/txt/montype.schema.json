@@ -1,6 +1,7 @@
 {
   "file": "montype.txt",
   "description": "Monster type hierarchy — damage resistances and immunities by type.",
+  "category": "Monsters",
   "columns": {
     "type": {
       "type": "string",

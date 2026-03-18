@@ -1,6 +1,7 @@
 {
   "file": "runes.txt",
   "description": "Runeword definitions - rune combinations, required item types, and property bonuses applied when socketed in order.",
+  "category": "Items",
   "columns": {
     "rune name": {
       "type": "string",
@@ -171,22 +172,22 @@
     },
     "t1max7": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Property 7 max for tier 7",
       "engineVerified": true
     },
     "t1min7": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Property 7 min for tier 7",
       "engineVerified": true
     },
     "t1param7": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Property 7 param for tier 7",
       "engineVerified": true
     },
     "t1code7": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Runeword property 7 code",
       "engineVerified": true,
       "ref": "properties.txt"
     },

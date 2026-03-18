@@ -27,6 +27,7 @@ interface ColumnSchema {
   description?: string;
   engineVerified?: boolean | string | string[];
   deprecated?: boolean;
+  width?: number;
 }
 
 function formatVerifiedTooltip(engineVerified: boolean | string | string[]): string {
@@ -285,6 +286,85 @@ export function TableEditor() {
     return result;
   }, [schema, data]);
 
+  // Auto-fit column widths based on content
+  const autoFitWidths = useMemo(() => {
+    const CHAR_PX = 7;
+    const MIN_PX = 40;
+    const MAX_PX = 200;
+    const PADDING = 3;
+
+    return data.headers.map((header, index) => {
+      const colSchema = mergedColumnSchemas[header];
+      if (colSchema?.width) {
+        return Math.max(MIN_PX, Math.min(MAX_PX, colSchema.width * CHAR_PX + PADDING));
+      }
+      let maxLen = header.length;
+      for (const row of data.rows) {
+        const val = row[index] || "";
+        if (val.length > maxLen) maxLen = val.length;
+      }
+      return Math.max(MIN_PX, Math.min(MAX_PX, maxLen * CHAR_PX + PADDING));
+    });
+  }, [data.headers, data.rows, mergedColumnSchemas]);
+
+  // Manual column width overrides (from drag resize) — stored in a ref
+  // to avoid re-rendering columns on every mousemove, plus state for final commit
+  const [manualWidths, setManualWidths] = useState<Record<number, number>>({});
+  const manualWidthsRef = useRef<Record<number, number>>({});
+  const resizingRef = useRef<{ colIdx: number; startX: number; startWidth: number } | null>(null);
+
+  // Context menu state
+  const [headerContextMenu, setHeaderContextMenu] = useState<{ x: number; y: number; colIdx: number } | null>(null);
+
+  // Get effective width for a column (manual override or auto-fit)
+  const getColumnWidth = useCallback((colIdx: number) => {
+    return manualWidthsRef.current[colIdx] ?? autoFitWidths[colIdx] ?? 80;
+  }, [autoFitWidths]);
+
+  const startResize = useCallback((e: React.MouseEvent, colIdx: number) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const startWidth = manualWidthsRef.current[colIdx] ?? autoFitWidths[colIdx] ?? 80;
+    resizingRef.current = { colIdx, startX: e.clientX, startWidth };
+
+    const onMouseMove = (ev: MouseEvent) => {
+      if (!resizingRef.current) return;
+      const diff = ev.clientX - resizingRef.current.startX;
+      const newWidth = Math.max(40, Math.min(200, resizingRef.current.startWidth + diff));
+      manualWidthsRef.current = { ...manualWidthsRef.current, [resizingRef.current.colIdx]: newWidth };
+      // Directly update the DOM for smooth dragging
+      const th = document.querySelectorAll("table thead th")[resizingRef.current.colIdx + 1] as HTMLElement;
+      if (th) th.style.width = `${newWidth}px`;
+    };
+    const onMouseUp = () => {
+      if (resizingRef.current) {
+        // Commit to React state on mouseup
+        setManualWidths({ ...manualWidthsRef.current });
+      }
+      resizingRef.current = null;
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  }, [autoFitWidths]);
+
+  const resetColumnWidth = useCallback((colIdx: number) => {
+    const next = { ...manualWidthsRef.current };
+    delete next[colIdx];
+    manualWidthsRef.current = next;
+    setManualWidths(next);
+    setHeaderContextMenu(null);
+  }, []);
+
+  // Close context menu on click elsewhere
+  useEffect(() => {
+    if (!headerContextMenu) return;
+    const close = () => setHeaderContextMenu(null);
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, [headerContextMenu]);
+
   // Build set of duplicate values for columns marked unique
   const duplicateValues = useMemo(() => {
     const result = new Map<number, Set<string>>();
@@ -314,7 +394,7 @@ export function TableEditor() {
         const colSchema = mergedColumnSchemas[header] || getColumnSchema(schema?.columns, header);
 
         return columnHelper.accessor((row) => row[index] || "", {
-          id: header || `col_${index}`,
+          id: `${index}_${header || `col_${index}`}`,
           header: () => (
             <div className="header-cell">
               <span className="header-name">
@@ -344,10 +424,10 @@ export function TableEditor() {
               />
             );
           },
-          size: Math.max(80, Math.min(200, header.length * 9)),
+          size: autoFitWidths[index] || 80,
         });
       }),
-    [data.headers, schema, mergedColumnSchemas, duplicateValues, updateCell]
+    [data.headers, schema, mergedColumnSchemas, duplicateValues, updateCell, autoFitWidths]
   );
 
   const table = useReactTable({
@@ -428,16 +508,20 @@ export function TableEditor() {
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   <th className="row-number">#</th>
-                  {headerGroup.headers.map((header) => (
+                  {headerGroup.headers.map((header, hIdx) => (
                     <th
                       key={header.id}
                       onClick={header.column.getToggleSortingHandler()}
+                      onContextMenu={(e) => {
+                        e.preventDefault();
+                        setHeaderContextMenu({ x: e.clientX, y: e.clientY, colIdx: hIdx });
+                      }}
                       className={
                         header.column.getIsSorted()
                           ? `sorted-${header.column.getIsSorted()}`
                           : ""
                       }
-                      style={{ width: header.getSize() }}
+                      style={{ width: getColumnWidth(hIdx) }}
                     >
                       {flexRender(
                         header.column.columnDef.header,
@@ -445,6 +529,10 @@ export function TableEditor() {
                       )}
                       {header.column.getIsSorted() === "asc" && " \u25B2"}
                       {header.column.getIsSorted() === "desc" && " \u25BC"}
+                      <div
+                        className="resize-handle"
+                        onMouseDown={(e) => startResize(e, hIdx)}
+                      />
                     </th>
                   ))}
                 </tr>
@@ -484,6 +572,19 @@ export function TableEditor() {
           />
         )}
       </div>
+      {headerContextMenu && (
+        <div
+          className="header-context-menu"
+          style={{ left: headerContextMenu.x, top: headerContextMenu.y }}
+        >
+          <div
+            className="header-context-menu-item"
+            onClick={() => resetColumnWidth(headerContextMenu.colIdx)}
+          >
+            Reset to Auto Width
+          </div>
+        </div>
+      )}
     </div>
   );
 }

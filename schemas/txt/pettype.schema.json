@@ -1,6 +1,7 @@
 {
   "file": "pettype.txt",
   "description": "Pet type definitions - UI grouping, icons, summon behavior, and display properties for player-controlled pets and summons.",
+  "category": "Characters",
   "columns": {
     "pet type": {
       "type": "string",

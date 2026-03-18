@@ -1,6 +1,8 @@
 {
   "file": "skillcalc.txt",
   "description": "Skill calculation function code lookup table - maps calculation code strings to internal function indices used by skill damage and effect formulas.",
+  "category": "Skills & Missiles",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

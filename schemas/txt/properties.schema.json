@@ -1,6 +1,7 @@
 {
   "file": "properties.txt",
   "description": "Property definitions - maps property codes to up to 7 stat functions, each with a function ID, stat reference, set parameter, and value parameter.",
+  "category": "Items",
   "columns": {
     "code": {
       "type": "string",

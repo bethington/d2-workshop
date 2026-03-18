@@ -1,6 +1,8 @@
 {
   "file": "bodylocs.txt",
   "description": "Body location/equipment slot definitions.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "Body Location": {
       "type": "string",

@@ -1,6 +1,8 @@
 {
   "file": "cubetype.txt",
   "description": "Cube recipe type code definitions.",
+  "category": "Crafting & Drops",
+  "hidden": true,
   "columns": {
     "cube item class": {
       "type": "string",

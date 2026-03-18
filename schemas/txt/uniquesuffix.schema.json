@@ -1,6 +1,7 @@
 {
   "file": "uniquesuffix.txt",
   "description": "Unique monster name suffix strings for random boss name generation.",
+  "category": "Unique Names",
   "columns": {
     "Name": {
       "type": "string",

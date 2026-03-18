@@ -1,6 +1,7 @@
 {
   "file": "misc.txt",
   "description": "Miscellaneous item definitions — potions, scrolls, gems, quest items, keys, and other non-equipment items.",
+  "category": "Items",
   "columns": {
     "rarity": {
       "type": "integer",
@@ -65,23 +66,24 @@
     },
     "Transmogrify": {
       "type": "integer",
-      "description": "Can be transmogrified into another item",
+      "description": "Item can be right-click transmogrified into TMogType",
       "engineVerified": true,
       "format": "boolean"
     },
     "TMogType": {
       "type": "string",
-      "description": "Transmogrification target item code",
-      "engineVerified": true
+      "description": "Item code produced by transmogrify",
+      "engineVerified": true,
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "TMogMin": {
       "type": "integer",
-      "description": "tmog minimum value",
+      "description": "Minimum quantity created on transmogrify",
       "engineVerified": true
     },
     "TMogMax": {
       "type": "integer",
-      "description": "tmog maximum value",
+      "description": "Maximum quantity created on transmogrify",
       "engineVerified": true
     },
     "useable": {
@@ -528,15 +530,17 @@
     },
     "NightmareUpgrade": {
       "type": "integer",
-      "description": "Nightmare difficulty replacement code",
+      "description": "Nightmare difficulty upgraded item code (xxx=no upgrade)",
       "engineVerified": true,
-      "format": "boolean"
+      "format": "boolean",
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "HellUpgrade": {
       "type": "integer",
-      "description": "Hell difficulty replacement code",
+      "description": "Hell difficulty upgraded item code (xxx=no upgrade)",
       "engineVerified": true,
-      "format": "boolean"
+      "format": "boolean",
+      "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "mindam": {
       "type": "integer",
@@ -550,383 +554,391 @@
     },
     "Nameable": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Item can be personalized by Anya reward",
       "engineVerified": true,
       "format": "boolean"
     },
     "multibuy": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Allow purchasing multiple copies from NPC shops",
       "engineVerified": true,
       "format": "boolean"
     },
     "PermStoreItem": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Item is always available in NPC store inventory",
       "engineVerified": true,
       "format": "boolean"
     },
     "DrehyaMagicLvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Drehya magic stock level",
       "engineVerified": true
     },
     "DrehyaMagicMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Drehya magic stock maximum",
       "engineVerified": true
     },
     "DrehyaMagicMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Drehya magic stock minimum",
       "engineVerified": true
     },
     "DrehyaMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Drehya normal stock maximum",
       "engineVerified": true
     },
     "DrehyaMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Drehya normal stock minimum",
       "engineVerified": true
     },
     "LarzukMagicLvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Larzuk magic stock level",
       "engineVerified": true
     },
     "LarzukMagicMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Larzuk magic stock maximum",
       "engineVerified": true
     },
     "LarzukMagicMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Larzuk magic stock minimum",
       "engineVerified": true
     },
     "LarzukMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Larzuk normal stock maximum",
       "engineVerified": true
     },
     "LarzukMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Larzuk normal stock minimum",
       "engineVerified": true
     },
     "MalahMagicLvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Malah magic stock level",
       "engineVerified": true
     },
     "MalahMagicMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Malah magic stock maximum",
       "engineVerified": true
     },
     "MalahMagicMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Malah magic stock minimum",
       "engineVerified": true
     },
     "MalahMax": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Malah normal stock maximum",
       "engineVerified": true
     },
     "MalahMin": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Malah normal stock minimum",
       "engineVerified": true
     },
     "spelldesccalc": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Calc expression for spell description value substitution",
       "engineVerified": true
     },
     "spelldescstr": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "String key for item spell description tooltip",
+      "engineVerified": true,
+      "ref": "string"
     },
     "spelldesc": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Spell description display mode (0=none, 1=desc, 2=desc+calc)",
       "engineVerified": true
     },
     "calc3": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Calc expression for stat3 value",
       "engineVerified": true
     },
     "calc2": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Calc expression for stat2 value",
       "engineVerified": true
     },
     "calc1": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Calc expression for stat1 value",
       "engineVerified": true
     },
     "stat3": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Third stat applied while item is equipped",
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stat2": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Second stat applied while item is equipped",
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "stat1": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "First stat applied while item is equipped",
+      "engineVerified": true,
+      "ref": "itemstatcost.txt/Stat"
     },
     "cstate2": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "Second client-side visual state applied while equipped",
+      "engineVerified": true,
+      "ref": "states.txt/state"
     },
     "cstate1": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "First client-side visual state applied while equipped",
+      "engineVerified": true,
+      "ref": "states.txt/state"
     },
     "state": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "State applied to character while item is equipped",
+      "engineVerified": true,
+      "ref": "states.txt/state"
     },
     "pSpell": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Spell type triggered on item use (0=none, 1=skill, 2=charges)",
       "engineVerified": true
     },
     "gemsockets": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Maximum number of sockets",
       "engineVerified": true
     },
     "hasinv": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Item is socketable",
       "engineVerified": true,
       "format": "boolean"
     },
     "questdiffcheck": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Quest item only functions in the difficulty where it was found",
       "engineVerified": true,
       "format": "boolean"
     },
     "usesound": {
       "type": "string",
       "ref": "sounds.txt",
-      "description": "Column read by game engine",
+      "description": "Sound played when item is used or consumed",
       "engineVerified": true
     },
     "dropsfxframe": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Animation frame on which the drop sound plays",
       "engineVerified": true
     },
     "dropsound": {
       "type": "string",
       "ref": "sounds.txt",
-      "description": "Column read by game engine",
+      "description": "Sound played when item is dropped on ground",
       "engineVerified": true
     },
     "subtype": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Item subtype classification (e.g., 0=normal, 1=magic bow/xbow)",
       "engineVerified": true
     },
     "2handed": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Weapon requires both hand slots to equip",
       "engineVerified": true,
       "format": "boolean"
     },
     "torso": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Torso animation component layer",
       "engineVerified": true
     },
     "1or2handed": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Weapon can be used one-handed or two-handed",
       "engineVerified": true,
       "format": "boolean"
     },
     "2handedwclass": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Weapon class used for two-handed attack animations",
       "engineVerified": true,
       "ref": "weaponclass.txt/Code"
     },
     "wclass": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Weapon class used for one-handed attack animations",
       "engineVerified": true,
       "ref": "weaponclass.txt/Code"
     },
     "ultracode": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Elite quality item code",
       "engineVerified": true,
       "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "ubercode": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Exceptional quality item code",
       "engineVerified": true,
       "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "normcode": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Normal quality item code",
       "engineVerified": true,
       "ref": "armor.txt|weapons.txt|misc.txt"
     },
     "missile": {
       "type": "string",
       "ref": "Missiles.txt",
-      "description": "Column read by game engine",
+      "description": "Missile graphic used by ranged weapon projectile",
       "engineVerified": true
     },
     "durability": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Base durability value (0-255)",
       "engineVerified": true,
       "min": 0,
       "max": 255
     },
     "setinvfile": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Set quality inventory DC6 file",
       "engineVerified": true
     },
     "spawnstack": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Stack count when item spawns from drops or vendors",
       "engineVerified": true
     },
     "reqdex": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Dexterity requirement to equip",
       "engineVerified": true
     },
     "reqstr": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Strength requirement to equip",
       "engineVerified": true
     },
     "dexbonus": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Dexterity bonus percentage applied to damage",
       "engineVerified": true
     },
     "strbonus": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Strength bonus percentage applied to damage",
       "engineVerified": true
     },
     "rangeadder": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Melee range bonus added to base attack range",
       "engineVerified": true
     },
     "block": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Block chance percentage (0-75)",
       "engineVerified": true
     },
     "maxac": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Maximum defense value",
       "engineVerified": true
     },
     "minac": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Minimum defense value",
       "engineVerified": true
     },
     "maxmisdam": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Maximum throwing/missile damage",
       "engineVerified": true
     },
     "minmisdam": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Minimum throwing/missile damage",
       "engineVerified": true
     },
     "2handmaxdam": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Maximum two-handed physical damage",
       "engineVerified": true
     },
     "2handmindam": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Minimum two-handed physical damage",
       "engineVerified": true
     },
     "gamble cost": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Gold cost when gambling for this item type",
       "engineVerified": true
     },
     "auto prefix": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Automatically applied magic prefix group ID",
       "engineVerified": true
     },
     "magic lvl": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Magic level used for affix generation",
       "engineVerified": true
     },
     "levelreq": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Character level required to equip",
       "engineVerified": true
     },
     "gemapplytype": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Gem modifier category (0=weapon, 1=armor, 2=shield)",
       "engineVerified": true
     },
     "hit class": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Hit sound class played on melee impact",
       "engineVerified": true,
       "ref": "hitclass.txt"
     },
     "type2": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Secondary item type classification code",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "compactsave": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Use compact save format (only type/ID saved, no mods/durability/sockets)",
       "engineVerified": true,
       "format": "boolean"
     },
     "version": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Game version that introduced this item (0=classic, 100=expansion)",
       "engineVerified": true
     },
     "namestr": {
       "type": "string",
-      "description": "Column read by game engine",
-      "engineVerified": true
+      "description": "String table key for item display name",
+      "engineVerified": true,
+      "ref": "string"
     },
     "code": {
       "type": "string",

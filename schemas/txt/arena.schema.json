@@ -1,6 +1,7 @@
 {
   "file": "arena.txt",
   "description": "PvP arena configuration definitions.",
+  "category": "Other",
   "columns": {
     "Suicide": {
       "type": "integer",

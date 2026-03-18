@@ -1,6 +1,7 @@
 {
   "file": "gateways.txt",
   "description": "Battle.net gateway server list definitions.",
+  "category": "Other",
   "columns": {
     "[Server List Version]": {
       "type": "string",

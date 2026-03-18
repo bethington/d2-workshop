@@ -1,6 +1,8 @@
 {
   "file": "events.txt",
   "description": "Event type lookup table. Engine uses row index to map event IDs to their string identifiers.",
+  "category": "Skills & Missiles",
+  "hidden": true,
   "columns": {
     "event": {
       "type": "string",

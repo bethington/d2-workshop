@@ -1,6 +1,7 @@
 {
   "file": "setitems.txt",
   "description": "Set item definitions - individual items belonging to item sets, with base properties (prop1-9), partial set bonuses (pcode/aprop), and full set bonuses (fcode).",
+  "category": "Items",
   "columns": {
     "add func": {
       "type": "integer",
@@ -69,257 +70,257 @@
     },
     "fmax8": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 8 maximum value — record offset 0x10C",
       "engineVerified": true
     },
     "fmin8": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 8 minimum value — record offset 0x108",
       "engineVerified": true
     },
     "fparam8": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 8 parameter — parsed as skill, monster type, or state — record offset 0x104",
       "engineVerified": true
     },
     "fcode8": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 8 property code — record offset 0x100",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax7": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 7 maximum value — record offset 0xFC",
       "engineVerified": true
     },
     "fmin7": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 7 minimum value — record offset 0xF8",
       "engineVerified": true
     },
     "fparam7": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 7 parameter — parsed as skill, monster type, or state — record offset 0xF4",
       "engineVerified": true
     },
     "fcode7": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 7 property code — record offset 0xF0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax6": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 6 maximum value — record offset 0xEC",
       "engineVerified": true
     },
     "fmin6": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 6 minimum value — record offset 0xE8",
       "engineVerified": true
     },
     "fparam6": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 6 parameter — parsed as skill, monster type, or state — record offset 0xE4",
       "engineVerified": true
     },
     "fcode6": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 6 property code — record offset 0xE0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax5": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 5 maximum value — record offset 0xDC",
       "engineVerified": true
     },
     "fmin5": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 5 minimum value — record offset 0xD8",
       "engineVerified": true
     },
     "fparam5": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 5 parameter — parsed as skill, monster type, or state — record offset 0xD4",
       "engineVerified": true
     },
     "fcode5": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 5 property code — record offset 0xD0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax4": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 4 maximum value — record offset 0xCC",
       "engineVerified": true
     },
     "fmin4": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 4 minimum value — record offset 0xC8",
       "engineVerified": true
     },
     "fparam4": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 4 parameter — parsed as skill, monster type, or state — record offset 0xC4",
       "engineVerified": true
     },
     "fcode4": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 4 property code — record offset 0xC0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax3": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 3 maximum value — record offset 0xBC",
       "engineVerified": true
     },
     "fmin3": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 3 minimum value — record offset 0xB8",
       "engineVerified": true
     },
     "fparam3": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 3 parameter — parsed as skill, monster type, or state — record offset 0xB4",
       "engineVerified": true
     },
     "fcode3": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 3 property code — record offset 0xB0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax2": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 2 maximum value — record offset 0xAC",
       "engineVerified": true
     },
     "fmin2": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 2 minimum value — record offset 0xA8",
       "engineVerified": true
     },
     "fparam2": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 2 parameter — parsed as skill, monster type, or state — record offset 0xA4",
       "engineVerified": true
     },
     "fcode2": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 2 property code — record offset 0xA0",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "fmax1": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 1 maximum value — record offset 0x9C",
       "engineVerified": true
     },
     "fmin1": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 1 minimum value — record offset 0x98",
       "engineVerified": true
     },
     "fparam1": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 1 parameter — parsed as skill, monster type, or state — record offset 0x94",
       "engineVerified": true
     },
     "fcode1": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Full set bonus 1 property code — record offset 0x90",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam5b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 5b parameter — parsed as skill, monster type, or state — record offset 0x84",
       "engineVerified": true
     },
     "pcode5b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 5b property code — record offset 0x80",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam5a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 5a parameter — parsed as skill, monster type, or state — record offset 0x74",
       "engineVerified": true
     },
     "pcode5a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 5a property code — record offset 0x70",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam4b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 4b parameter — parsed as skill, monster type, or state — record offset 0x64",
       "engineVerified": true
     },
     "pcode4b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 4b property code — record offset 0x60",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam4a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 4a parameter — parsed as skill, monster type, or state — record offset 0x54",
       "engineVerified": true
     },
     "pcode4a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 4a property code — record offset 0x50",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam3b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 3b parameter — parsed as skill, monster type, or state — record offset 0x44",
       "engineVerified": true
     },
     "pcode3b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 3b property code — record offset 0x40",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam3a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 3a parameter — parsed as skill, monster type, or state — record offset 0x34",
       "engineVerified": true
     },
     "pcode3a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 3a property code — record offset 0x30",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam2b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 2b parameter — parsed as skill, monster type, or state — record offset 0x24",
       "engineVerified": true
     },
     "pcode2b": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 2b property code — record offset 0x20",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "pparam2a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 2a parameter — parsed as skill, monster type, or state — record offset 0x14",
       "engineVerified": true
     },
     "pcode2a": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Partial set bonus 2a property code — record offset 0x10",
       "engineVerified": true,
       "ref": "properties.txt"
     },
@@ -397,7 +398,7 @@
     },
     "par1": {
       "type": "string",
-      "description": "Property 1 parameter",
+      "description": "Property 1 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min1": {
@@ -418,7 +419,7 @@
     },
     "par2": {
       "type": "string",
-      "description": "Property 2 parameter",
+      "description": "Property 2 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min2": {
@@ -439,7 +440,7 @@
     },
     "par3": {
       "type": "string",
-      "description": "Property 3 parameter",
+      "description": "Property 3 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min3": {
@@ -460,7 +461,7 @@
     },
     "par4": {
       "type": "string",
-      "description": "Property 4 parameter",
+      "description": "Property 4 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min4": {
@@ -481,7 +482,7 @@
     },
     "par5": {
       "type": "string",
-      "description": "Property 5 parameter",
+      "description": "Property 5 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min5": {
@@ -502,7 +503,7 @@
     },
     "par6": {
       "type": "string",
-      "description": "Property 6 parameter",
+      "description": "Property 6 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min6": {
@@ -523,7 +524,7 @@
     },
     "par7": {
       "type": "string",
-      "description": "Property 7 parameter",
+      "description": "Property 7 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min7": {
@@ -544,7 +545,7 @@
     },
     "par8": {
       "type": "string",
-      "description": "Property 8 parameter",
+      "description": "Property 8 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min8": {
@@ -565,7 +566,7 @@
     },
     "par9": {
       "type": "string",
-      "description": "Property 9 parameter",
+      "description": "Property 9 parameter — parsed as skill, monster type, or state",
       "engineVerified": true
     },
     "min9": {
@@ -580,247 +581,247 @@
     },
     "pmin2a": {
       "type": "integer",
-      "description": "Partial set 2 bonus min (a)",
+      "description": "Partial set bonus 2a minimum value — record offset 0x18",
       "engineVerified": true
     },
     "pmax2a": {
       "type": "integer",
-      "description": "Partial set 2 bonus max (a)",
+      "description": "Partial set bonus 2a maximum value — record offset 0x1C",
       "engineVerified": true
     },
     "pmin2b": {
       "type": "integer",
-      "description": "Partial set 2 bonus min (b)",
+      "description": "Partial set bonus 2b minimum value — record offset 0x28",
       "engineVerified": true
     },
     "pmax2b": {
       "type": "integer",
-      "description": "Partial set 2 bonus max (b)",
+      "description": "Partial set bonus 2b maximum value — record offset 0x2C",
       "engineVerified": true
     },
     "pmin3a": {
       "type": "integer",
-      "description": "Partial set 3 bonus min (a)",
+      "description": "Partial set bonus 3a minimum value — record offset 0x38",
       "engineVerified": true
     },
     "pmax3a": {
       "type": "integer",
-      "description": "Partial set 3 bonus max (a)",
+      "description": "Partial set bonus 3a maximum value — record offset 0x3C",
       "engineVerified": true
     },
     "pmin3b": {
       "type": "integer",
-      "description": "Partial set 3 bonus min (b)",
+      "description": "Partial set bonus 3b minimum value — record offset 0x48",
       "engineVerified": true
     },
     "pmax3b": {
       "type": "integer",
-      "description": "Partial set 3 bonus max (b)",
+      "description": "Partial set bonus 3b maximum value — record offset 0x4C",
       "engineVerified": true
     },
     "pmin4a": {
       "type": "integer",
-      "description": "Partial set 4 bonus min (a)",
+      "description": "Partial set bonus 4a minimum value — record offset 0x58",
       "engineVerified": true
     },
     "pmax4a": {
       "type": "integer",
-      "description": "Partial set 4 bonus max (a)",
+      "description": "Partial set bonus 4a maximum value — record offset 0x5C",
       "engineVerified": true
     },
     "pmin4b": {
       "type": "integer",
-      "description": "Partial set 4 bonus min (b)",
+      "description": "Partial set bonus 4b minimum value — record offset 0x68",
       "engineVerified": true
     },
     "pmax4b": {
       "type": "integer",
-      "description": "Partial set 4 bonus max (b)",
+      "description": "Partial set bonus 4b maximum value — record offset 0x6C",
       "engineVerified": true
     },
     "pmin5a": {
       "type": "integer",
-      "description": "Partial set 5 bonus min (a)",
+      "description": "Partial set bonus 5a minimum value — record offset 0x78",
       "engineVerified": true
     },
     "pmax5a": {
       "type": "integer",
-      "description": "Partial set 5 bonus max (a)",
+      "description": "Partial set bonus 5a maximum value — record offset 0x7C",
       "engineVerified": true
     },
     "pmin5b": {
       "type": "integer",
-      "description": "Partial set 5 bonus min (b)",
+      "description": "Partial set bonus 5b minimum value — record offset 0x88",
       "engineVerified": true
     },
     "pmax5b": {
       "type": "integer",
-      "description": "Partial set 5 bonus max (b)",
+      "description": "Partial set bonus 5b maximum value — record offset 0x8C",
       "engineVerified": true
     },
     "amax1a": {
       "type": "integer",
-      "description": "amax1a",
+      "description": "Partial set (green) bonus 1a maximum value — record offset 0x124",
       "engineVerified": true
     },
     "amax1b": {
       "type": "integer",
-      "description": "amax1b",
+      "description": "Partial set (green) bonus 1b maximum value — record offset 0x134",
       "engineVerified": true
     },
     "amax2a": {
       "type": "integer",
-      "description": "amax2a",
+      "description": "Partial set (green) bonus 2a maximum value — record offset 0x144",
       "engineVerified": true
     },
     "amax2b": {
       "type": "integer",
-      "description": "amax2b",
+      "description": "Partial set (green) bonus 2b maximum value — record offset 0x154",
       "engineVerified": true
     },
     "amax3a": {
       "type": "integer",
-      "description": "amax3a",
+      "description": "Partial set (green) bonus 3a maximum value — record offset 0x164",
       "engineVerified": true
     },
     "amax3b": {
       "type": "integer",
-      "description": "amax3b",
+      "description": "Partial set (green) bonus 3b maximum value — record offset 0x174",
       "engineVerified": true
     },
     "amax4a": {
       "type": "integer",
-      "description": "amax4a",
+      "description": "Partial set (green) bonus 4a maximum value — record offset 0x184",
       "engineVerified": true
     },
     "amax4b": {
       "type": "integer",
-      "description": "amax4b",
+      "description": "Partial set (green) bonus 4b maximum value — record offset 0x194",
       "engineVerified": true
     },
     "amax5a": {
       "type": "integer",
-      "description": "amax5a",
+      "description": "Partial set (green) bonus 5a maximum value — record offset 0x1A4",
       "engineVerified": true
     },
     "amax5b": {
       "type": "integer",
-      "description": "amax5b",
+      "description": "Partial set (green) bonus 5b maximum value — record offset 0x1B4",
       "engineVerified": true
     },
     "amin1a": {
       "type": "integer",
-      "description": "amin1a",
+      "description": "Partial set (green) bonus 1a minimum value — record offset 0x120",
       "engineVerified": true
     },
     "amin1b": {
       "type": "integer",
-      "description": "amin1b",
+      "description": "Partial set (green) bonus 1b minimum value — record offset 0x130",
       "engineVerified": true
     },
     "amin2a": {
       "type": "integer",
-      "description": "amin2a",
+      "description": "Partial set (green) bonus 2a minimum value — record offset 0x140",
       "engineVerified": true
     },
     "amin2b": {
       "type": "integer",
-      "description": "amin2b",
+      "description": "Partial set (green) bonus 2b minimum value — record offset 0x150",
       "engineVerified": true
     },
     "amin3a": {
       "type": "integer",
-      "description": "amin3a",
+      "description": "Partial set (green) bonus 3a minimum value — record offset 0x160",
       "engineVerified": true
     },
     "amin3b": {
       "type": "integer",
-      "description": "amin3b",
+      "description": "Partial set (green) bonus 3b minimum value — record offset 0x170",
       "engineVerified": true
     },
     "amin4a": {
       "type": "integer",
-      "description": "amin4a",
+      "description": "Partial set (green) bonus 4a minimum value — record offset 0x180",
       "engineVerified": true
     },
     "amin4b": {
       "type": "integer",
-      "description": "amin4b",
+      "description": "Partial set (green) bonus 4b minimum value — record offset 0x190",
       "engineVerified": true
     },
     "amin5a": {
       "type": "integer",
-      "description": "amin5a",
+      "description": "Partial set (green) bonus 5a minimum value — record offset 0x1A0",
       "engineVerified": true
     },
     "amin5b": {
       "type": "integer",
-      "description": "amin5b",
+      "description": "Partial set (green) bonus 5b minimum value — record offset 0x1B0",
       "engineVerified": true
     },
     "apar1a": {
       "type": "string",
-      "description": "apar1a",
+      "description": "Partial set (green) bonus 1a parameter — parsed as skill, monster type, or state — record offset 0x11C",
       "engineVerified": true
     },
     "apar1b": {
       "type": "string",
-      "description": "apar1b",
+      "description": "Partial set (green) bonus 1b parameter — parsed as skill, monster type, or state — record offset 0x12C",
       "engineVerified": true
     },
     "apar2a": {
       "type": "string",
-      "description": "apar2a",
+      "description": "Partial set (green) bonus 2a parameter — parsed as skill, monster type, or state — record offset 0x13C",
       "engineVerified": true
     },
     "apar2b": {
       "type": "string",
-      "description": "apar2b",
+      "description": "Partial set (green) bonus 2b parameter — parsed as skill, monster type, or state — record offset 0x14C",
       "engineVerified": true
     },
     "apar3a": {
       "type": "string",
-      "description": "apar3a",
+      "description": "Partial set (green) bonus 3a parameter — parsed as skill, monster type, or state — record offset 0x15C",
       "engineVerified": true
     },
     "apar3b": {
       "type": "string",
-      "description": "apar3b",
+      "description": "Partial set (green) bonus 3b parameter — parsed as skill, monster type, or state — record offset 0x16C",
       "engineVerified": true
     },
     "apar4a": {
       "type": "string",
-      "description": "apar4a",
+      "description": "Partial set (green) bonus 4a parameter — parsed as skill, monster type, or state — record offset 0x17C",
       "engineVerified": true
     },
     "apar4b": {
       "type": "string",
-      "description": "apar4b",
+      "description": "Partial set (green) bonus 4b parameter — parsed as skill, monster type, or state — record offset 0x18C",
       "engineVerified": true
     },
     "apar5a": {
       "type": "string",
-      "description": "apar5a",
+      "description": "Partial set (green) bonus 5a parameter — parsed as skill, monster type, or state — record offset 0x19C",
       "engineVerified": true
     },
     "apar5b": {
       "type": "string",
-      "description": "apar5b",
+      "description": "Partial set (green) bonus 5b parameter — parsed as skill, monster type, or state — record offset 0x1AC",
       "engineVerified": true
     },
     "chrtransform": {
       "type": "string",
-      "description": "chrtransform",
+      "description": "Character color transform code — record offset 0x40",
       "engineVerified": true
     },
     "flippyfile": {
       "type": "string",
-      "description": "flippyfile",
+      "description": "Drop animation file — record offset 0x42",
       "engineVerified": true
     },
     "rarity": {
       "type": "integer",
-      "description": "rarity",
+      "description": "Drop rarity weight — record offset 0x34",
       "engineVerified": true
     }
   }

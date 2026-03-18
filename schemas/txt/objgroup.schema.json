@@ -1,6 +1,7 @@
 {
   "file": "objgroup.txt",
   "description": "Object group definitions - groups of up to 8 object IDs with density and probability weights, plus shrine/well flags.",
+  "category": "Levels",
   "columns": {
     "DENSITY0": {
       "type": "integer",

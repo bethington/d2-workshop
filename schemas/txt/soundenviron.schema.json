@@ -1,6 +1,7 @@
 {
   "file": "soundenviron.txt",
   "description": "Sound environment definitions - ambient sounds, music, footstep materials, and EAX reverb parameters per area type. Loaded by D2Client.dll.",
+  "category": "UI & Sound",
   "columns": {
     "Song": {
       "type": "integer",

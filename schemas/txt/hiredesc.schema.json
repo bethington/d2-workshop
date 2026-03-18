@@ -1,6 +1,8 @@
 {
   "file": "hiredesc.txt",
   "description": "Hireling description code lookup table. Engine uses row index to map hireling description IDs to their short codes.",
+  "category": "Characters",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

@@ -1,6 +1,7 @@
 {
   "file": "monstats.txt",
   "description": "Monster statistics — defines all monster types, their stats, AI, drops, and visual properties.",
+  "category": "Monsters",
   "columns": {
     "BaseId": {
       "type": "string",

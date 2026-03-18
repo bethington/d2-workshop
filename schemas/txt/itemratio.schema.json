@@ -1,6 +1,7 @@
 {
   "file": "itemratio.txt",
   "description": "Item quality ratio definitions per monster level - controls drop rates for unique, rare, set, magic, superior, and normal items.",
+  "category": "Items",
   "columns": {
     "Version": {
       "type": "integer",

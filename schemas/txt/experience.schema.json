@@ -1,6 +1,7 @@
 {
   "file": "experience.txt",
   "description": "Experience tier values per character class, used in the piecewise level-up formula.",
+  "category": "Crafting & Drops",
   "columns": {
     "Amazon": {
       "type": "integer",

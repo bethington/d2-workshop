@@ -1,17 +1,20 @@
 {
   "file": "armtype.txt",
-  "description": "Arm animation type definitions.",
+  "description": "Armor animation type lookup table — maps armor weight classes to animation tokens used by the character composit rendering system. The engine (D2Common.dll, Composit.cpp) loads this into a fixed array and accesses entries by row index (not by name). When rendering an equipped character, the engine iterates body locations (torso, legs, arms, etc.), reads a byte-sized armtype index from the item's binary data, and looks up the Token here to build the animation file path (e.g., 'lit' becomes part of paths like LITTRLITNUHTH.dcc). The engine also contains hardcoded fallback token sequences for certain monster classes that mirror this table's row order. Because references are stored as compiled row indices in .bin files, rows cannot be added, removed, or reordered without breaking all existing item and monster data. The Token column should only be changed if the corresponding DCC/DC6 animation files are also renamed to match. The Name column is a cosmetic label with no engine impact.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "Name": {
       "type": "string",
       "required": true,
       "unique": true,
-      "description": "Internal name identifier",
+      "description": "Human-readable label for this armor type (e.g., 'Light Armor', 'Medium Armor', 'Heavy Armor'). Cosmetic only — the engine does not use this value. Safe to rename without breaking anything.",
       "engineVerified": true
     },
     "Token": {
       "type": "string",
-      "description": "Animation token identifier",
+      "required": true,
+      "description": "3-character animation token (e.g., 'lit', 'med', 'hvy') used by the composit system to resolve DCC/DC6 animation file paths. Changing this value will break character rendering unless the corresponding animation files in data/global/chars/ are renamed to match.",
       "engineVerified": true
     }
   }

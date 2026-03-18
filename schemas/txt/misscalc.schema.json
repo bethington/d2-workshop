@@ -1,6 +1,8 @@
 {
   "file": "misscalc.txt",
   "description": "Missile calculation code lookup table. Engine uses row index to map missile calc IDs to their code strings.",
+  "category": "Skills & Missiles",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

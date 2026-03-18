@@ -1,6 +1,7 @@
 {
   "file": "qualityitems.txt",
   "description": "Superior (high quality) item modifier definitions - property codes, value ranges, visual effects, and item type applicability flags.",
+  "category": "Items",
   "columns": {
     "nummods": {
       "type": "integer",

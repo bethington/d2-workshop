@@ -1,6 +1,7 @@
 {
   "file": "lvlmaze.txt",
   "description": "Level maze generation parameters - room counts, dimensions, and merge behavior per level and difficulty.",
+  "category": "Levels",
   "columns": {
     "Name": {
       "type": "string",

@@ -1,6 +1,7 @@
 {
   "file": "objects.txt",
   "description": "Object definitions - static world objects with animation modes, collision, lighting, components, functions, and shrine/warp behavior.",
+  "category": "Levels",
   "columns": {
     "Token": {
       "type": "string",

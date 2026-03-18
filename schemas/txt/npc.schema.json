@@ -1,6 +1,7 @@
 {
   "file": "npc.txt",
   "description": "NPC trade inventory definitions â€” item types and quantities per NPC.",
+  "category": "Characters",
   "columns": {
     "npc": {
       "type": "string",

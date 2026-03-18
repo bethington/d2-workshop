@@ -1,6 +1,7 @@
 {
   "file": "raresuffix.txt",
   "description": "Rare item suffix name definitions with item type inclusion/exclusion rules.",
+  "category": "Items",
   "columns": {
     "name": {
       "type": "string",

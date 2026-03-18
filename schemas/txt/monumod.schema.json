@@ -1,6 +1,7 @@
 {
   "file": "monumod.txt",
   "description": "Monster unique modifier definitions - controls which modifiers can spawn on champion, unique, and super unique monsters.",
+  "category": "Monsters",
   "columns": {
     "uniquemod": {
       "type": "string",

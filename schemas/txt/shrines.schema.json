@@ -1,6 +1,7 @@
 {
   "file": "shrines.txt",
   "description": "Shrine definitions - effect codes, arguments, duration, rarity, level requirements, and display text for activatable shrines.",
+  "category": "Levels",
   "columns": {
     "Arg0": {
       "type": "integer",

@@ -2,7 +2,7 @@
   "name": "d2-workshop",
   "displayName": "D2 Workshop",
   "description": "A complete Diablo II 1.13c modding workbench — browse MPQ archives, edit game data tables, view/edit DC6 sprites, patch binaries, and share mods.",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "publisher": "xebyte",
   "author": "Ben Ethington",
   "license": "MIT",
@@ -216,6 +216,24 @@
       {
         "command": "d2workshop.browseGameDirectory",
         "title": "D2 Workshop: Set Game Directory..."
+      },
+      {
+        "command": "d2workshop.hideFile",
+        "title": "Hide File"
+      },
+      {
+        "command": "d2workshop.showFile",
+        "title": "Show File"
+      },
+      {
+        "command": "d2workshop.toggleHiddenFiles",
+        "title": "Show Hidden Files",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "d2workshop.toggleHiddenFilesOff",
+        "title": "Hide Hidden Files",
+        "icon": "$(eye-closed)"
       }
     ],
     "menus": {
@@ -229,6 +247,16 @@
           "command": "d2workshop.switchMod",
           "when": "view == d2ExplorerView",
           "group": "navigation@0"
+        },
+        {
+          "command": "d2workshop.toggleHiddenFiles",
+          "when": "view == d2ExplorerView && !d2workshop.showingHidden",
+          "group": "navigation@1"
+        },
+        {
+          "command": "d2workshop.toggleHiddenFilesOff",
+          "when": "view == d2ExplorerView && d2workshop.showingHidden",
+          "group": "navigation@1"
         },
         {
           "command": "d2workshop.publishQueue",
@@ -256,6 +284,16 @@
           "command": "d2workshop.restoreBackup",
           "when": "view == d2ExplorerView && viewItem =~ /_hasBackup$/",
           "group": "2_modification"
+        },
+        {
+          "command": "d2workshop.hideFile",
+          "when": "view == d2ExplorerView && viewItem == txt",
+          "group": "3_visibility"
+        },
+        {
+          "command": "d2workshop.showFile",
+          "when": "view == d2ExplorerView && viewItem == txt_hidden",
+          "group": "3_visibility"
         }
       ],
       "editor/title/context": [
@@ -314,6 +352,14 @@
           "type": "string",
           "default": "",
           "description": "Path to the active mod folder. Managed by the mod switcher."
+        },
+        "d2workshop.hiddenFiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": ".txt files to hide in the tree view (e.g., ['arena.txt', 'armtype.txt']). Use the eye icon in the toolbar to toggle visibility of hidden files."
         }
       }
     }

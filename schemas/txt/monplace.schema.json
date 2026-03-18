@@ -1,6 +1,8 @@
 {
   "file": "monplace.txt",
   "description": "Monster placement code lookup table. Engine uses row index to map placement IDs to their code strings.",
+  "category": "Monsters",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

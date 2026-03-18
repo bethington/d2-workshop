@@ -1,6 +1,7 @@
 {
   "file": "gems.txt",
   "description": "Gem and rune modifier definitions — weapon, armor, and shield bonuses per quality level.",
+  "category": "Items",
   "columns": {
     "transform": {
       "type": "integer",
@@ -153,47 +154,47 @@
     },
     "shieldmod3param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Shield modifier 3 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "shieldmod2param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Shield modifier 2 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "shieldmod1param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Shield modifier 1 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "helmmod3param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Helm modifier 3 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "helmmod2param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Helm modifier 2 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "helmmod1param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Helm modifier 1 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "weaponmod3param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Weapon modifier 3 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "weaponmod2param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Weapon modifier 2 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "weaponmod1param": {
       "type": "integer",
-      "description": "Column read by game engine",
+      "description": "Weapon modifier 1 parameter — skill, montype, or state ID parsed by engine",
       "engineVerified": true
     },
     "code": {

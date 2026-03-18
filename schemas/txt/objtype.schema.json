@@ -1,6 +1,8 @@
 {
   "file": "objtype.txt",
   "description": "Object type classification definitions - maps object type names to animation tokens. Merged with objmode.txt at load time.",
+  "category": "Levels",
+  "hidden": true,
   "columns": {
     "name": {
       "type": "string",

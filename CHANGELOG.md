@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.8 - 2026-03-18
+
+### Added
+
+- **Auto-fit column widths** — columns now size to fit their content instead of using fixed header-based widths; short code columns are narrow, long values expand up to 200px
+- **Draggable column resize** — drag the right edge of any column header to manually resize; right-click header to "Reset to Auto Width"
+- **File hiding** — right-click any .txt file in the Game Files tree to hide it; toggle visibility with the eye icon in the toolbar; persists via `d2workshop.hiddenFiles` setting
+- **Schema-level `width` hints** — schemas can now specify a `width` (in character count) to override auto-fit for specific columns
+- **Schema-level `hidden` flag** — schemas can mark engine-frozen files as hidden by default
+- **Schema-level `category` field** — schemas now include a category for future grouping features
+
+### Changed
+
+- **374 column descriptions upgraded** — every remaining "Column read by game engine" placeholder across 13 schema files replaced with engine-verified descriptions via Ghidra reverse engineering of D2Common.dll
+- **Engine-verified columns** — armor.txt, weapons.txt, misc.txt, levels.txt, setitems.txt, uniqueitems.txt, magicprefix.txt, magicsuffix.txt, automagic.txt, charstats.txt, superuniques.txt, gems.txt, runes.txt, books.txt, inventory.txt all fully investigated
+- **New columns discovered** — 40 new columns added to charstats.txt (item1-10, stats), `absorbs` added to armor.txt, `QuestFlag` added to levels.txt
+- **Type corrections** — fixed ~30 columns across item files (string to integer), removed incorrect refs, added missing refs to states.txt and itemstatcost.txt
+- **armtype.txt** — detailed engine documentation added from Ghidra analysis of D2Common.dll Composit.cpp
+- **Unique column IDs** — fixed duplicate React key warnings for files with repeated column names (e.g., mindam/maxdam in weapons.txt)
+
 ## 0.1.7 - 2026-03-17
 
 ### Added

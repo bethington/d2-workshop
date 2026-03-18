@@ -1,6 +1,7 @@
 {
   "file": "monpreset.txt",
   "description": "Monster preset placement definitions - maps act numbers to preset monster placement entries.",
+  "category": "Monsters",
   "columns": {
     "Act": {
       "type": "integer",

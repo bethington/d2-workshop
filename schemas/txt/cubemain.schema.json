@@ -1,6 +1,7 @@
 {
   "file": "cubemain.txt",
   "description": "Horadric Cube recipes â€” input items, output items, conditions, and property modifications.",
+  "category": "Crafting & Drops",
   "columns": {
     "enabled": {
       "type": "integer",

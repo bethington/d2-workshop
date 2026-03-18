@@ -1,6 +1,7 @@
 {
   "file": "itemtypes.txt",
   "description": "Item type hierarchy - defines equipment categories, socket rules, body locations, and class restrictions.",
+  "category": "Items",
   "columns": {
     "code": {
       "type": "string",

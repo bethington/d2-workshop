@@ -1,6 +1,7 @@
 {
   "file": "aiparms.txt",
   "description": "AI behavior parameter descriptions used by monster AI routines.",
+  "category": "Characters",
   "columns": {
     "Description of Ai Parameters": {
       "type": "string",

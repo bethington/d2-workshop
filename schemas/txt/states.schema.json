@@ -1,6 +1,7 @@
 {
   "file": "states.txt",
   "description": "State definitions - visual effects, behavioral flags, overlays, color shifts, sounds, and function IDs for unit states (buffs, debuffs, auras, curses, transforms).",
+  "category": "Skills & Missiles",
   "columns": {
     "remhit": {
       "type": "integer",

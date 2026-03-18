@@ -1,6 +1,7 @@
 {
   "file": "monsounds.txt",
   "description": "Monster sound assignments â€” maps monster sound IDs to specific sound entries in Sounds.txt for attack, hit, death, and ambient events. Referenced by MonSound/UMonSound columns in MonStats.txt.",
+  "category": "Monsters",
   "columns": {
     "DeathSound": {
       "type": "string",

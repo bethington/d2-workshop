@@ -1,6 +1,7 @@
 {
   "file": "monlvl.txt",
   "description": "Monster level scaling table - base and per-level values for AC, to-hit, HP, damage, and XP across all three difficulties.",
+  "category": "Monsters",
   "columns": {
     "Level": {
       "type": "integer",

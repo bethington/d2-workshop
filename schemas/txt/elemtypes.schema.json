@@ -1,6 +1,8 @@
 {
   "file": "elemtypes.txt",
   "description": "Elemental damage type code lookup table. Engine uses row index to map element type IDs to their short codes.",
+  "category": "Skills & Missiles",
+  "hidden": true,
   "columns": {
     "code": {
       "type": "string",

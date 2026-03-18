@@ -1,6 +1,7 @@
 {
   "file": "lvlwarp.txt",
   "description": "Level warp/transition definitions - selection areas, exit positions, offsets, and visual properties.",
+  "category": "Levels",
   "columns": {
     "Name": {
       "type": "string",

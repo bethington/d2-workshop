@@ -1,6 +1,8 @@
 {
   "file": "color.txt",
   "description": "Color definitions — maps color names to codes for use in item and UI color references.",
+  "category": "Lookup Tables",
+  "hidden": true,
   "columns": {
     "Color": {
       "type": "string",

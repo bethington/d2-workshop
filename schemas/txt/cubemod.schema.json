@@ -1,6 +1,8 @@
 {
   "file": "cubemod.txt",
   "description": "Cube recipe modifier code definitions.",
+  "category": "Crafting & Drops",
+  "hidden": true,
   "columns": {
     "cube modifier type": {
       "type": "string",

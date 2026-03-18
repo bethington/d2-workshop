@@ -1,6 +1,7 @@
 {
   "file": "monprop.txt",
   "description": "Monster property assignments — magical modifiers applied to monsters by difficulty (Normal, Nightmare, Hell). Referenced by the MonProp column in MonStats.txt.",
+  "category": "Monsters",
   "columns": {
     "Id": {
       "type": "string",

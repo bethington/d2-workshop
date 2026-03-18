@@ -1,6 +1,7 @@
 {
   "file": "sets.txt",
   "description": "Item set definitions - set names and bonus properties applied when wearing multiple set pieces (partial bonuses at 2-5 pieces, full bonuses for complete set).",
+  "category": "Items",
   "columns": {
     "index": {
       "type": "string",

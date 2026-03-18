@@ -1,232 +1,236 @@
 {
   "file": "automagic.txt",
-  "description": "Automatic magic modifier definitions applied during item generation.",
+  "description": "Automatic magic modifier definitions applied during item generation. Loaded by AFFIX_LoadMagicAffixTables alongside magicprefix.txt and magicsuffix.txt into a combined affix table. All three share the same record structure (0x90 bytes per record). Automagic affixes are applied automatically during item creation without appearing as visible prefix/suffix names.",
+  "category": "Items",
   "columns": {
-    "maxlevel": {
+    "name": {
+      "type": "string",
+      "description": "String table key for the affix display name. Stored as a 31-character buffer at record offset 0x00. After loading, the engine resolves this to a string table index stored at offset 0x20 (word). For automagic affixes this name is typically not displayed to the player.",
+      "required": true,
+      "engineVerified": true
+    },
+    "version": {
       "type": "integer",
-      "description": "Maximum level this can appear",
+      "description": "Game version flag controlling when this affix is active. Stored as a byte at record offset 0x22. The engine checks this value to filter affixes by expansion state: 0 = classic only, 1 = classic and expansion, 100 = expansion only.",
+      "engineVerified": true
+    },
+    "spawnable": {
+      "type": "integer",
+      "description": "Master flag controlling whether this affix can be selected during item generation. Stored as a dword at record offset 0x54. When 0, the affix is completely disabled and will never appear on generated items regardless of other conditions.",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "rare": {
+      "type": "integer",
+      "description": "Flag controlling whether this affix can appear on rare-quality items. Stored as a dword at record offset 0x64. When 0, the affix is excluded from the rare item affix selection pool.",
+      "engineVerified": true,
+      "format": "boolean"
+    },
+    "level": {
+      "type": "integer",
+      "description": "Internal affix level (alvl) used during affix selection. Stored as a dword at record offset 0x58. The engine compares this against the item's quality level to determine which affixes are eligible to spawn. Higher values restrict the affix to higher-level items.",
       "engineVerified": true,
       "min": 1,
       "max": 99
     },
+    "maxlevel": {
+      "type": "integer",
+      "description": "Maximum area level at which this affix can spawn. Stored as a dword at record offset 0x60. If the area level exceeds this value, the affix becomes ineligible for selection. Set to 0 or blank for no upper limit.",
+      "engineVerified": true,
+      "min": 0,
+      "max": 99
+    },
+    "levelreq": {
+      "type": "integer",
+      "description": "Minimum character level required to equip items with this affix. Stored as a byte at record offset 0x65. The engine reads this in GetItemAffixLevelRequirement and uses the highest levelreq across all affixes on an item. If the character's class matches the affix class field, classlevelreq is used instead.",
+      "engineVerified": true,
+      "min": 0,
+      "max": 99
+    },
+    "classspecific": {
+      "type": "string",
+      "description": "Restricts this affix to items usable by the specified class. Stored as a byte at record offset 0x66, looked up from playerclass.txt. When set, this affix will only appear on class-specific item types for the named class. Value 0xFF (empty) means no restriction.",
+      "engineVerified": true,
+      "ref": "playerclass.txt"
+    },
+    "class": {
+      "type": "string",
+      "description": "Character class used to determine which level requirement applies. Stored as a byte at record offset 0x67, looked up from playerclass.txt. When the equipped character's class matches this value, classlevelreq is used instead of levelreq. Value 0xFF (empty) means levelreq always applies.",
+      "engineVerified": true,
+      "ref": "playerclass.txt"
+    },
     "classlevelreq": {
       "type": "integer",
-      "description": "Class-specific level requirement",
-      "engineVerified": true
+      "description": "Alternative level requirement used when the character's class matches the class column. Stored as a byte at record offset 0x68. Typically set lower than levelreq to give the designated class earlier access to the affix.",
+      "engineVerified": true,
+      "min": 0,
+      "max": 99
     },
     "frequency": {
       "type": "integer",
-      "description": "Spawn frequency weight",
+      "description": "Relative spawn weight used during affix selection. Stored as a dword at record offset 0x82. Higher values increase the probability of this affix being chosen relative to other eligible affixes. The engine sums all eligible affix frequencies and picks randomly within that range.",
       "engineVerified": true
     },
     "group": {
       "type": "integer",
-      "description": "State group assignment",
+      "description": "Mutual exclusion group for affix selection. Stored as a dword at record offset 0x5C. Only one affix from the same group number can appear on an item. This prevents conflicting modifiers (e.g., two different fire resistance affixes) from stacking on the same item.",
       "engineVerified": true
     },
     "mod1code": {
       "type": "string",
-      "description": "Modifier 1 property code",
+      "description": "Property code for modifier slot 1. Stored as a dword index at record offset 0x24, looked up from properties.txt. Defines what stat modification this affix applies.",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "mod1param": {
       "type": "integer",
-      "description": "Modifier 1 parameter value",
+      "description": "Parameter for modifier slot 1. Stored as a dword at record offset 0x28. Parsed by DATA_ParseSkillMonTypeOrState to resolve skill IDs, monster type IDs, or state IDs depending on what the property code expects.",
       "engineVerified": true
     },
     "mod1min": {
       "type": "integer",
-      "description": "Modifier 1 minimum value",
+      "description": "Minimum value for modifier slot 1. Stored as a dword at record offset 0x2C. The engine picks a random value between mod1min and mod1max when applying this modifier.",
       "engineVerified": true
     },
     "mod1max": {
       "type": "integer",
-      "description": "Modifier 1 maximum value",
+      "description": "Maximum value for modifier slot 1. Stored as a dword at record offset 0x30. The engine picks a random value between mod1min and mod1max when applying this modifier.",
       "engineVerified": true
     },
     "mod2code": {
       "type": "string",
-      "description": "Modifier 2 property code",
+      "description": "Property code for modifier slot 2. Stored as a dword index at record offset 0x34, looked up from properties.txt.",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "mod2param": {
       "type": "integer",
-      "description": "Modifier 2 parameter value",
+      "description": "Parameter for modifier slot 2. Stored as a dword at record offset 0x38. Parsed by DATA_ParseSkillMonTypeOrState.",
       "engineVerified": true
     },
     "mod2min": {
       "type": "integer",
-      "description": "Modifier 2 minimum value",
+      "description": "Minimum value for modifier slot 2. Stored as a dword at record offset 0x3C.",
       "engineVerified": true
     },
     "mod2max": {
       "type": "integer",
-      "description": "Modifier 2 maximum value",
+      "description": "Maximum value for modifier slot 2. Stored as a dword at record offset 0x40.",
       "engineVerified": true
     },
     "mod3code": {
       "type": "string",
-      "description": "Modifier 3 property code",
+      "description": "Property code for modifier slot 3. Stored as a dword index at record offset 0x44, looked up from properties.txt.",
       "engineVerified": true,
       "ref": "properties.txt"
     },
     "mod3param": {
       "type": "integer",
-      "description": "Modifier 3 parameter value",
+      "description": "Parameter for modifier slot 3. Stored as a dword at record offset 0x48. Parsed by DATA_ParseSkillMonTypeOrState.",
       "engineVerified": true
     },
     "mod3min": {
       "type": "integer",
-      "description": "Modifier 3 minimum value",
+      "description": "Minimum value for modifier slot 3. Stored as a dword at record offset 0x4C.",
       "engineVerified": true
     },
     "mod3max": {
       "type": "integer",
-      "description": "Modifier 3 maximum value",
+      "description": "Maximum value for modifier slot 3. Stored as a dword at record offset 0x50.",
       "engineVerified": true
     },
     "transformcolor": {
       "type": "string",
-      "description": "Color transform palette index",
-      "engineVerified": true
+      "description": "Color transform applied to the item's inventory graphic when this affix is active. Stored as a byte at record offset 0x56, looked up from colors.txt. Value 0xFF (empty) means no color change. The engine uses this in GetFirstValidLinkField30 to compute a palette shift based on the item's base graphic type.",
+      "engineVerified": true,
+      "ref": "colors.txt"
     },
     "itype1": {
       "type": "string",
-      "description": "Required item type 1",
+      "description": "Included item type 1. Stored as a word at record offset 0x6A, looked up from itemtypes.txt. The affix can only spawn on items matching at least one of the itype entries. If all itype columns are empty, the affix can appear on any item type.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype2": {
       "type": "string",
-      "description": "Required item type 2",
+      "description": "Included item type 2. Stored as a word at record offset 0x6C.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype3": {
       "type": "string",
-      "description": "Required item type 3",
+      "description": "Included item type 3. Stored as a word at record offset 0x6E.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype4": {
       "type": "string",
-      "description": "Required item type 4",
+      "description": "Included item type 4. Stored as a word at record offset 0x70.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype5": {
       "type": "string",
-      "description": "Required item type 5",
+      "description": "Included item type 5. Stored as a word at record offset 0x72.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype6": {
       "type": "string",
-      "description": "Required item type 6",
+      "description": "Included item type 6. Stored as a word at record offset 0x74.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "itype7": {
       "type": "string",
-      "description": "Required item type 7",
+      "description": "Included item type 7. Stored as a word at record offset 0x76.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "etype1": {
       "type": "string",
-      "description": "Excluded item type 1",
+      "description": "Excluded item type 1. Stored as a word at record offset 0x78, looked up from itemtypes.txt. Items matching any etype entry are excluded from receiving this affix, even if they match an itype entry. This provides a way to carve out exceptions from broad itype categories.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "etype2": {
       "type": "string",
-      "description": "Excluded item type 2",
+      "description": "Excluded item type 2. Stored as a word at record offset 0x7A.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "etype3": {
       "type": "string",
-      "description": "Excluded item type 3",
-      "engineVerified": true,
-      "ref": "itemtypes.txt/code"
-    },
-    "divide": {
-      "type": "integer",
-      "description": "Division factor for calculations",
-      "engineVerified": true
-    },
-    "multiply": {
-      "type": "integer",
-      "description": "Multiplicative cost modifier",
-      "engineVerified": true
-    },
-    "etype5": {
-      "type": "string",
-      "description": "Column read by game engine",
+      "description": "Excluded item type 3. Stored as a word at record offset 0x7C.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
     "etype4": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Excluded item type 4. Stored as a word at record offset 0x7E.",
       "engineVerified": true,
       "ref": "itemtypes.txt/code"
     },
-    "classspecific": {
+    "etype5": {
       "type": "string",
-      "description": "Column read by game engine",
+      "description": "Excluded item type 5. Stored as a word at record offset 0x80.",
       "engineVerified": true,
-      "ref": "playerclass.txt"
+      "ref": "itemtypes.txt/code"
     },
-    "level": {
+    "divide": {
       "type": "integer",
-      "description": "Internal affix level",
-      "engineVerified": true,
-      "min": 1,
-      "max": 99
-    },
-    "levelreq": {
-      "type": "integer",
-      "description": "Required character level to use",
-      "engineVerified": true,
-      "min": 1,
-      "max": 99
-    },
-    "rare": {
-      "type": "integer",
-      "description": "Whether this affix can appear on rare items",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "spawnable": {
-      "type": "integer",
-      "description": "Whether this affix can spawn on items",
-      "engineVerified": true,
-      "format": "boolean"
-    },
-    "version": {
-      "type": "integer",
-      "description": "Game version this affix was introduced",
+      "description": "Cost divisor applied to the item's price calculation when this affix is present. Stored as a dword at record offset 0x84. The item cost formula applies divide, multiply, and add in sequence: cost = (cost / divide) * multiply + add.",
       "engineVerified": true
     },
-    "name": {
-      "type": "string",
-      "description": "Affix name string key",
-      "required": true,
+    "multiply": {
+      "type": "integer",
+      "description": "Cost multiplier applied to the item's price calculation when this affix is present. Stored as a dword at record offset 0x88. Applied after divide in the cost formula: cost = (cost / divide) * multiply + add.",
       "engineVerified": true
     },
     "add": {
       "type": "integer",
-      "description": "Value added to stat after multiply/divide",
+      "description": "Flat cost addition applied to the item's price calculation when this affix is present. Stored as a dword at record offset 0x8C. Applied last in the cost formula: cost = (cost / divide) * multiply + add.",
       "engineVerified": true
-    },
-    "class": {
-      "type": "string",
-      "description": "Character class restriction",
-      "engineVerified": true,
-      "ref": "playerclass.txt"
     }
   }
 }

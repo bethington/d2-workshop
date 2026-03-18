@@ -1,6 +1,7 @@
 {
   "file": "skilldesc.txt",
   "description": "Skill description definitions - UI layout (page/row/column), display strings, damage descriptions, and tooltip line formatting for skill descriptions across 3 description panels.",
+  "category": "Skills & Missiles",
   "columns": {
     "iconcel": {
       "type": "integer",
